@@ -2851,7 +2851,7 @@ input[type=number] {
     margin: 0 auto;
     padding: 50px 0 43px;
     border-radius: 40px;
-    box-shadow: 0 20px 38px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 38px 0 rgba(215, 83, 192, 0.15);
     border: 4px solid #fff;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(8px); }
@@ -3631,6 +3631,8 @@ input[type=number] {
 
 .section-education .education-slider-wrapper {
   position: relative; }
+  .section-education .education-slider-wrapper.pc .slider-navigation {
+    visibility: visible; }
   .section-education .education-slider-wrapper.pc .education-slider {
     width: calc(100% + 20px);
     margin-left: -20px;
@@ -3642,7 +3644,9 @@ input[type=number] {
       opacity: 0; }
     .section-education .education-slider-wrapper.pc .education-slider .swiper-slide.active .card-rectangle .img .title {
       opacity: 0; }
-  .section-education .education-slider-wrapper.mobile {
+  .section-education .education-slider-wrapper.mobile .slider-navigation {
+    visibility: hidden; }
+  .section-education .education-slider-wrapper.mobile .education-slider {
     display: none; }
     .section-education .education-slider-wrapper.mobile .education-slider .swiper-slide {
       width: 230px; }
@@ -3725,16 +3729,20 @@ input[type=number] {
 @media (max-width: 1300px) {
   .section-education .inner {
     padding: 80px 30px 100px; }
-  .section-education .education-slider-wrapper.pc {
-    display: none; }
-    .section-education .education-slider-wrapper.pc .education-slider {
-      width: calc(450px + 230px * 2 + 15px * 2 + 20px);
-      margin: 0 auto;
-      overflow: hidden; }
+  .section-education .education-slider-wrapper.pc .slider-navigation {
+    visibility: hidden; }
+  .section-education .education-slider-wrapper.pc .education-slider {
+    display: none;
+    width: calc(450px + 230px * 2 + 15px * 2 + 20px);
+    margin: 0 auto;
+    overflow: hidden; }
   .section-education .education-slider-wrapper.mobile {
-    display: block;
     width: calc(15px * 2 + 230px * 3);
-    margin: 0 auto; } }
+    margin: 0 auto; }
+    .section-education .education-slider-wrapper.mobile .slider-navigation {
+      visibility: visible; }
+    .section-education .education-slider-wrapper.mobile .education-slider {
+      display: block; } }
 
 @media (max-width: 940px) {
   .section-education .inner {

@@ -326,56 +326,25 @@ let pickSlider = new Swiper('.pick-slider', {
 /*
     기업맞춤교육 Slider
 * */
-// let educationSlider = new Swiper('.education-slider', {
-//     slidesPerView: 1.5,
-//     spaceBetween: 20,
-//     touchRatio: 0,
-//     observer: true,
-//     observeParents: true,
-//     navigation: {
-//         prevEl: '.education-slider-wrapper .btn-arrow-prev',
-//         nextEl: '.education-slider-wrapper .btn-arrow-next'
-//     },
-//     scrollbar: {
-//         el: '.education-slider-wrapper .swiper-scrollbar',
-//         draggable: true,
-//     },
-//     breakpoints: {
-//         //tablet
-//         940: {
-//             slidesPerView: 3,
-//             spaceBetween: 15,
-//             slidesPerGroup: 3,
-//         },
-//         // pc
-//         1300: {
-//             slidesPerView: 'auto',
-//             spaceBetween: 20,
-//             slidesPerGroup: 4,
-//         },
-//     },
-//     on: {
-//         init: function () {
-//             $('.education-slider-wrapper .current').text(Math.floor((this.realIndex + 4 ) / 4));
-//             $('.education-slider-wrapper .total').text(Math.floor(this.slides.length / 4));
-//         },
-//         slideChange: function () {
-//             $('.education-slider-wrapper .current').text(Math.floor((this.realIndex + 4 ) / 4));
-//         },
-//     }
-// });
 let pcCurrentPage = 1;
 
 let educationSliderPC = new Swiper('._educationSliderPC', {
     slidesPerView: 'auto',
     spaceBetween: 15,
     slidesPerGroup: 3,
-    // observer: true,
-    // observeParents: true,
     touchRatio: 0,
     navigation: {
         prevEl: '.education-slider-wrapper.pc .btn-arrow-prev',
         nextEl: '.education-slider-wrapper.pc .btn-arrow-next'
+    },
+    pagination: {
+        el: '.education-slider-wrapper.pc .page-num',
+        type: 'fraction',
+        currentClass: 'current',
+        totalClass: 'total',
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span><span class="' + totalClass + '"></span>';
+        },
     },
     scrollbar: {
         el: '.education-slider-wrapper.pc .swiper-scrollbar',
@@ -388,18 +357,6 @@ let educationSliderPC = new Swiper('._educationSliderPC', {
         }
     },
     on: {
-        init: function () {
-            $('.education-slider-wrapper.pc .current').text(pcCurrentPage);
-            $('.education-slider-wrapper.pc .total').text(Math.ceil($('.education-slider-wrapper.pc .swiper-slide').length / 4));
-        },
-        slideNextTransitionStart: function () {
-            pcCurrentPage = pcCurrentPage + 1;
-            $('.education-slider-wrapper.pc .current').text(pcCurrentPage);
-        },
-        slidePrevTransitionStart: function () {
-            pcCurrentPage = pcCurrentPage - 1;
-            $('.education-slider-wrapper.pc .current').text(pcCurrentPage);
-        }
     }
 })
 
