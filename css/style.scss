@@ -187,7 +187,14 @@ ul, ol {
         padding: 20px;
 
         .title {
+          font-size: 20px;
+          line-height: 24px;
           margin-bottom: 10px;
+        }
+
+        .date {
+          font-size: 14px;
+          line-height: 16px;
         }
       }
     }

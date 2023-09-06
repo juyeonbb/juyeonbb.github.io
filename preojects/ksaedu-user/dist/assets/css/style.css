@@ -2869,8 +2869,8 @@ input[type=number] {
         border-image-source: linear-gradient(to top, #1d35ad, #cf4ebe);
         border-image-slice: 1;
         background-image: linear-gradient(to bottom, #fff, #fff), linear-gradient(to top, #1d35ad, #cf4ebe);
-        background-origin: border-box;
-        background-clip: content-box, border-box; }
+        background-clip: content-box, border-box;
+        overflow: hidden; }
         .section-visual .box-search .search .form-search-layout .form-search {
           font-size: 18px;
           font-weight: normal;
