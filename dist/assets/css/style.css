@@ -1115,7 +1115,7 @@ button.swiper-pagination-bullet {
 
 .ico-menu {
   width: 17px;
-  height: 16px;
+  height: 17px;
   background-image: url(../img/common/ico-menu.png); }
 
 .ico-top-triangle {
@@ -1256,7 +1256,7 @@ button.swiper-pagination-bullet {
         padding: 0 16px;
         font-size: 14px;
         letter-spacing: -0.7px; }
-        .header .header-top .links .txt-link:nth-child(3) {
+        .header .header-top .links .txt-link:nth-child(4) {
           margin-right: 13px; }
         .header .header-top .links .txt-link::before {
           content: '';
@@ -3542,9 +3542,9 @@ input[type=number] {
           border: solid 1px #cfd2df;
           background-color: #fff;
           border-radius: 100%; }
-          .section-pick-for-u .box .heading .nav .btn-arrow:active {
+          .section-pick-for-u .box .heading .nav .btn-arrow:hover {
             background-color: #1d35ad; }
-            .section-pick-for-u .box .heading .nav .btn-arrow:active svg path {
+            .section-pick-for-u .box .heading .nav .btn-arrow:hover svg path {
               fill: #fff; }
     .section-pick-for-u .box .pick-slider-wrapper {
       width: calc(100% - 310px); }
@@ -3640,10 +3640,10 @@ input[type=number] {
     overflow: visible; }
     .section-education .education-slider-wrapper.pc .education-slider .swiper-slide:nth-child(4n-3) {
       width: 450px; }
-    .section-education .education-slider-wrapper.pc .education-slider .swiper-slide.active .card-rectangle .img .badge-wrap {
-      opacity: 0; }
-    .section-education .education-slider-wrapper.pc .education-slider .swiper-slide.active .card-rectangle .img .title {
-      opacity: 0; }
+      .section-education .education-slider-wrapper.pc .education-slider .swiper-slide:nth-child(4n-3) .card-rectangle .img .badge-wrap {
+        opacity: 0; }
+      .section-education .education-slider-wrapper.pc .education-slider .swiper-slide:nth-child(4n-3) .card-rectangle .img .title {
+        opacity: 0; }
   .section-education .education-slider-wrapper.mobile .slider-navigation {
     visibility: hidden; }
   .section-education .education-slider-wrapper.mobile .education-slider {
@@ -3737,7 +3737,7 @@ input[type=number] {
     margin: 0 auto;
     overflow: hidden; }
   .section-education .education-slider-wrapper.mobile {
-    width: calc(15px * 2 + 230px * 3);
+    width: calc(20px * 2 + 230px * 3);
     margin: 0 auto; }
     .section-education .education-slider-wrapper.mobile .slider-navigation {
       visibility: visible; }

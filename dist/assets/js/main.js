@@ -18,11 +18,6 @@ let menuSlider = new Swiper('.menu-slider', {
             slidesPerView: 8,
         },
     },
-    on: {
-        init: function () {
-            // console.log('세미나 슬라이더')
-        },
-    },
 });
 /*
     ********************************************************
@@ -31,9 +26,9 @@ let menuSlider = new Swiper('.menu-slider', {
 /*
     main > tab
 * */
-if($('.main-contents').length){
+if ($('.main-contents').length) {
     $('.tabs').each(function () {
-        $(this).on('click', 'a',function () {
+        $(this).on('click', 'a', function () {
             $(this).parent().addClass('on').siblings().removeClass('on')
         })
     })
@@ -71,7 +66,7 @@ function initializeVisualSlide() {
     setVisualSliderPaging(activeSlideIndex)
     setVisualSliderProgress()
 
-    if(visualInterval == null){
+    if (visualInterval == null) {
         visualInterval = setInterval(function () {
             if (!isStop) {
                 visualSliderNextButton.trigger('click');
@@ -272,7 +267,7 @@ let bannerSlider = new Swiper('.banner-slider', {
             progressCircle.css('--progress', `calc(1 - ${progress})`);
         },
         slideChange: function () {
-            $('.banner-slider-wrapper .view-detail a').attr('href',`${bannerLinks[this.realIndex]}`);
+            $('.banner-slider-wrapper .view-detail a').attr('href', `${bannerLinks[this.realIndex]}`);
         }
     },
 });
@@ -313,11 +308,6 @@ let pickSlider = new Swiper('.pick-slider', {
             slidesPerView: 3,
         },
     },
-    on: {
-        init: function () {
-            // console.log('Pick For U 슬라이더')
-        },
-    },
 });
 /*
     ********************************************************
@@ -326,8 +316,6 @@ let pickSlider = new Swiper('.pick-slider', {
 /*
     기업맞춤교육 Slider
 * */
-let pcCurrentPage = 1;
-
 let educationSliderPC = new Swiper('._educationSliderPC', {
     slidesPerView: 'auto',
     spaceBetween: 15,
@@ -356,43 +344,60 @@ let educationSliderPC = new Swiper('._educationSliderPC', {
             slidesPerGroup: 4,
         }
     },
-    on: {
-    }
 })
 
 $('.education-slider-wrapper.pc .education-slider .swiper-slide').each(function () {
     $(this).on('click', function () {
         let idx = $(this).index() + 1;
-        $(this).css('width', '450px');
+        const activeWidth = '450px';
+        const targetWidth = '230px';
 
-        if(((idx + 3) % 4 === 0)) {
-            $(this).next().next().next().css('width' , '230px');
-            $(this).next().next().css('width' , '230px');
-            $(this).next().css('width' , '230px');
-        } else if(((idx + 2) % 4 === 0)) {
-            $(this).next().next().css('width' , '230px');
-            $(this).next().css('width' , '230px');
-            $(this).prev().css('width' , '230px');
-        } else if(((idx + 1) % 4 === 0)) {
-            $(this).prev().prev().css('width' , '230px');
-            $(this).prev().css('width' , '230px');
-            $(this).next().css('width' , '230px');
-        } else if((idx % 4 === 0)) {
-            $(this).prev().prev().prev().css('width' , '230px');
-            $(this).prev().prev().css('width' , '230px');
-            $(this).prev().css('width' , '230px');
+        $(this).css('width', activeWidth);
+        $(this).find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '0');
+
+        if (((idx + 3) % 4 === 0)) {
+            $(this).next().next().next().css('width', targetWidth);
+            $(this).next().next().next().find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '1');
+
+            $(this).next().next().css('width', targetWidth);
+            $(this).next().next().find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '1');
+
+            $(this).next().css('width', targetWidth);
+            $(this).next().find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '1');
+        } else if (((idx + 2) % 4 === 0)) {
+            $(this).next().next().css('width', targetWidth);
+            $(this).next().next().find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '1');
+
+            $(this).next().css('width', targetWidth);
+            $(this).next().find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '1');
+
+            $(this).prev().css('width', targetWidth);
+            $(this).prev().find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '1');
+        } else if (((idx + 1) % 4 === 0)) {
+            $(this).prev().prev().css('width', targetWidth);
+            $(this).prev().prev().find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '1');
+
+            $(this).prev().css('width', targetWidth);
+            $(this).prev().find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '1');
+
+            $(this).next().css('width', targetWidth);
+            $(this).next().find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '1');
+        } else if ((idx % 4 === 0)) {
+            $(this).prev().prev().prev().css('width', targetWidth);
+            $(this).prev().prev().prev().find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '1');
+
+            $(this).prev().prev().css('width', targetWidth);
+            $(this).prev().prev().find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '1');
+
+            $(this).prev().css('width', targetWidth);
+            $(this).prev().find('.card-rectangle .badge-wrap, .card-rectangle .title').css('opacity', '1');
         }
     })
 })
 
-let mobileCurrentPage = 1;
-
 let educationSliderMobile = new Swiper('._educationSliderMobile', {
     slidesPerView: 'auto',
     spaceBetween: 20,
-    autoWidth: true,
-    observer: true,
-    observeParents: true,
     slidesPerGroup: 1,
     pagination: {
         el: '.education-slider-wrapper.mobile .page-num',
@@ -414,11 +419,63 @@ let educationSliderMobile = new Swiper('._educationSliderMobile', {
     breakpoints: {
         //tablet
         940: {
-            spaceBetween: 15,
             slidesPerGroup: 3,
         },
     },
 });
+
+function setEducationSliderMobile() {
+    educationSliderMobile = new Swiper('._educationSliderMobile', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        slidesPerGroup: 1,
+        pagination: {
+            el: '.education-slider-wrapper.mobile .page-num',
+            type: 'fraction',
+            currentClass: 'current',
+            totalClass: 'total',
+            renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '"></span><span class="' + totalClass + '"></span>';
+            },
+        },
+        navigation: {
+            prevEl: '.education-slider-wrapper.mobile .btn-arrow-prev',
+            nextEl: '.education-slider-wrapper.mobile .btn-arrow-next'
+        },
+        scrollbar: {
+            el: '.education-slider-wrapper.mobile .swiper-scrollbar',
+            draggable: true,
+        },
+        breakpoints: {
+            //tablet
+            940: {
+                slidesPerGroup: 3,
+            },
+        },
+    });
+}
+
+function init() {
+    educationSliderMobile.destroy();
+    setTimeout(setEducationSliderMobile,600)
+}
+
+window.onresize = function () {
+    let windowWidth = window.innerWidth;
+    if (prevWidth > 940) {
+        if (windowWidth < 940) {
+            prevWidth = windowWidth;
+            console.log('mobile')
+            init()
+        }
+    } else if (prevWidth < 940) {
+        if (windowWidth > 940) {
+            prevWidth = windowWidth;
+            console.log('tablet')
+            init()
+        }
+    }
+}
 
 /*
     ********************************************************
@@ -437,22 +494,17 @@ let seminarSlider = new Swiper('.seminar-slider', {
         nextEl: '.seminar-slider-wrapper .btn-arrow-next'
     },
     breakpoints: {
-    //tablet
-    940: {
-        slidesPerView: 3,
-        spaceBetween: 25,
-        slidesPerGroup: 3,
-    },
-    // pc
-    1300: {
-        slidesPerView: 4,
-        spaceBetween: 40,
-        slidesPerGroup: 4,
-    },
-},
-    on: {
-        init: function () {
-            // console.log('세미나 슬라이더')
+        //tablet
+        940: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+            slidesPerGroup: 3,
+        },
+        // pc
+        1300: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            slidesPerGroup: 4,
         },
     },
 });
