@@ -5877,8 +5877,12 @@ readers do not read off random characters that represent icons */
     font-family: 'Font Awesome 5 Brands';
     font-style: normal;
     font-weight: normal;
-    src: url("fa-brands-400.eot");
-    src: url("fa-brands-400.eot?#iefix") format("embedded-opentype"), url("fa-brands-400.woff2") format("woff2"), url("fa-brands-400.woff") format("woff"), url("fa-brands-400.ttf") format("truetype"), url("fa-brands-400.svg#fontawesome") format("svg");
+    src: url("./../webfonts/fa-brands-400.eot");
+    src: url("./../webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"),
+    url("./../webfonts/fa-brands-400.woff2") format("woff2"),
+    url("./../webfonts/fa-brands-400.woff") format("woff"),
+    url("./../webfonts/fa-brands-400.ttf") format("truetype"),
+    url("./../webfonts/fa-brands-400.svg#fontawesome") format("svg");
 }
 
 .fab {
@@ -5889,8 +5893,12 @@ readers do not read off random characters that represent icons */
     font-family: 'Font Awesome 5 Free';
     font-style: normal;
     font-weight: 400;
-    src: url("fa-regular-400.eot");
-    src: url("fa-regular-400.eot?#iefix") format("embedded-opentype"), url("fa-regular-400.woff2") format("woff2"), url("fa-regular-400.woff") format("woff"), url("fa-regular-400.ttf") format("truetype"), url("fa-regular-400.svg#fontawesome") format("svg");
+    src: url("./../webfonts/fa-regular-400.eot");
+    src: url("./../webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"),
+    url("./../webfonts/fa-regular-400.woff2") format("woff2"),
+    url("./../webfonts/fa-regular-400.woff") format("woff"),
+    url("./../webfonts/fa-regular-400.ttf") format("truetype"),
+    url("./../webfonts/fa-regular-400.svg#fontawesome") format("svg");
 }
 
 .far {
@@ -5902,8 +5910,12 @@ readers do not read off random characters that represent icons */
     font-family: 'Font Awesome 5 Free';
     font-style: normal;
     font-weight: 900;
-    src: url("fa-solid-900.eot");
-    src: url("fa-solid-900.eot?#iefix") format("embedded-opentype"), url("fa-solid-900.woff2") format("woff2"), url("fa-solid-900.woff") format("woff"), url("fa-solid-900.ttf") format("truetype"), url("fa-solid-900.svg#fontawesome") format("svg");
+    src: url("./../webfonts/fa-solid-900.eot");
+    src: url("./../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"),
+    url("./../webfonts/fa-solid-900.woff2") format("woff2"),
+    url("./../webfonts/fa-solid-900.woff") format("woff"),
+    url("./../webfonts/fa-solid-900.ttf") format("truetype"),
+    url("./../webfonts/fa-solid-900.svg#fontawesome") format("svg");
 }
 
 .fa,
@@ -5915,29 +5927,29 @@ readers do not read off random characters that represent icons */
 @font-face {
     font-family: 'NanumSquare';
     font-weight: 400;
-    src: url(NanumSquareR.eot);
-    src: url(NanumSquareR.eot?#iefix) format("embedded-opentype"), url(NanumSquareR.woff2) format("woff2"), url(NanumSquareR.woff) format("woff"), url(NanumSquareR.ttf) format("truetype");
+    src: url(./../webfonts/NanumSquareR.eot);
+    src: url(./../webfonts/NanumSquareR.eot?#iefix) format("embedded-opentype"), url(./../webfonts/NanumSquareR.woff2) format("woff2"), url(./../webfonts/NanumSquareR.woff) format("woff"), url(./../webfonts/NanumSquareR.ttf) format("truetype");
 }
 
 @font-face {
     font-family: 'NanumSquare';
     font-weight: 700;
-    src: url(NanumSquareB.eot);
-    src: url(NanumSquareB.eot?#iefix) format("embedded-opentype"), url(NanumSquareB.woff2) format("woff2"), url(NanumSquareB.woff) format("woff"), url(NanumSquareB.ttf) format("truetype");
+    src: url(./../webfonts/NanumSquareB.eot);
+    src: url(./../webfonts/NanumSquareB.eot?#iefix) format("embedded-opentype"), url(./../webfonts/NanumSquareB.woff2) format("woff2"), url(./../webfonts/NanumSquareB.woff) format("woff"), url(./../webfonts/NanumSquareB.ttf) format("truetype");
 }
 
 @font-face {
     font-family: 'NanumSquare';
     font-weight: 300;
-    src: url(NanumSquareL.eot);
-    src: url(NanumSquareL.eot?#iefix) format("embedded-opentype"), url(NanumSquareL.woff2) format("woff2"), url(NanumSquareL.woff) format("woff"), url(NanumSquareL.ttf) format("truetype");
+    src: url(./../webfonts/NanumSquareL.eot);
+    src: url(./../webfonts/NanumSquareL.eot?#iefix) format("embedded-opentype"), url(./../webfonts/NanumSquareL.woff2) format("woff2"), url(./../webfonts/NanumSquareL.woff) format("woff"), url(./../webfonts/NanumSquareL.ttf) format("truetype");
 }
 
 @font-face {
     font-family: 'NanumSquare';
     font-weight: 900;
-    src: url(NanumSquareEB.eot);
-    src: url(NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(NanumSquareEB.woff2) format("woff2"), url(NanumSquareEB.woff) format("woff"), url(NanumSquareEB.ttf) format("truetype");
+    src: url(./../webfonts/NanumSquareEB.eot);
+    src: url(./../webfonts/NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(./../webfonts/NanumSquareEB.woff2) format("woff2"), url(./../webfonts/NanumSquareEB.woff) format("woff"), url(./../webfonts/NanumSquareEB.ttf) format("truetype");
 }
 
 * {

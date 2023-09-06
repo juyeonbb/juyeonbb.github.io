@@ -313,51 +313,51 @@ template {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 400;
-  src: url(NotoSansKR-Regular.otf) format("opentype"), url(NotoSansKR-Regular.woff2) format("woff2"), url(NotoSansKR-Regular.woff) format("woff"); }
+  src: url(./../fonts/NotoSansKR/NotoSansKR-Regular.otf) format("opentype"), url(./../fonts/NotoSansKR/NotoSansKR-Regular.woff2) format("woff2"), url(./../fonts/NotoSansKR/NotoSansKR-Regular.woff) format("woff"); }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 500;
-  src: url(NotoSansKR-Medium.otf) format("opentype"), url(NotoSansKR-Medium.woff2) format("woff2"), url(NotoSansKR-Medium.woff) format("woff"); }
+  src: url(./../fonts/NotoSansKR/NotoSansKR-Medium.otf) format("opentype"), url(./../fonts/NotoSansKR/NotoSansKR-Medium.woff2) format("woff2"), url(./../fonts/NotoSansKR/NotoSansKR-Medium.woff) format("woff"); }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 700;
-  src: url(NotoSansKR-Bold.otf) format("opentype"), url(NotoSansKR-Bold.woff2) format("woff2"), url(NotoSansKR-Bold.woff) format("woff"); }
+  src: url(./../fonts/NotoSansKR/NotoSansKR-Bold.otf) format("opentype"), url(./../fonts/NotoSansKR/NotoSansKR-Bold.woff2) format("woff2"), url(./../fonts/NotoSansKR/NotoSansKR-Bold.woff) format("woff"); }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 900;
-  src: url(NotoSansKR-Black.otf) format("opentype"), url(NotoSansKR-Black.woff2) format("woff2"), url(NotoSansKR-Black.woff) format("woff"); }
+  src: url(./../fonts/NotoSansKR/NotoSansKR-Black.otf) format("opentype"), url(./../fonts/NotoSansKR/NotoSansKR-Black.woff2) format("woff2"), url(./../fonts/NotoSansKR/NotoSansKR-Black.woff) format("woff"); }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 300;
-  src: url(NotoSansKR-Thin.otf) format("opentype"), url(NotoSansKR-Light.woff2) format("woff2"), url(NotoSansKR-Light.woff) format("woff"); }
+  src: url(./../fonts/NotoSansKR/NotoSansKR-Thin.otf) format("opentype"), url(./../fonts/NotoSansKR/NotoSansKR-Light.woff2) format("woff2"), url(./../fonts/NotoSansKR/NotoSansKR-Light.woff) format("woff"); }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 400;
-  src: url(Roboto-Regular.woff2) format("woff2"), url(Roboto-Regular.woff) format("woff"), url(Roboto-Regular.ttf) format("truetype"), url(Roboto-Regular.otf) format("opentype");
+  src: url(./../fonts/Roboto/Roboto-Regular.woff2) format("woff2"), url(./../fonts/Roboto/Roboto-Regular.woff) format("woff"), url(./../fonts/Roboto/Roboto-Regular.ttf) format("truetype"), url(./../fonts/Roboto/Roboto-Regular.otf) format("opentype");
   unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+005B-0060, U+007B-007E, U+26; }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 500;
-  src: url(Roboto-Medium.woff2) format("woff2"), url(Roboto-Medium.woff) format("woff"), url(Roboto-Medium.ttf) format("truetype"), url(Roboto-Medium.otf) format("opentype");
+  src: url(./../fonts/Roboto/Roboto-Medium.woff2) format("woff2"), url(./../fonts/Roboto/Roboto-Medium.woff) format("woff"), url(./../fonts/Roboto/Roboto-Medium.ttf) format("truetype"), url(./../fonts/Roboto/Roboto-Medium.otf) format("opentype");
   unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+005B-0060, U+007B-007E, U+26; }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 700;
-  src: url(Roboto-Bold.woff2) format("woff2"), url(Roboto-Bold.woff) format("woff"), url(Roboto-Bold.ttf) format("truetype"), url(Roboto-Bold.otf) format("opentype");
+  src: url(./../fonts/Roboto/Roboto-Bold.woff2) format("woff2"), url(./../fonts/Roboto/Roboto-Bold.woff) format("woff"), url(./../fonts/Roboto/Roboto-Bold.ttf) format("truetype"), url(./../fonts/Roboto/Roboto-Bold.otf) format("opentype");
   unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+005B-0060, U+007B-007E, U+26; }
 
 /**
@@ -1101,85 +1101,85 @@ button.swiper-pagination-bullet {
 .ico-top-close-white {
   width: 15px;
   height: 15px;
-  background-image: url(ico-top-close-white.png); }
+  background-image: url(./../img/common/ico-top-close-white.png); }
 
 .ico-human {
   width: 15px;
   height: 18px;
-  background-image: url(ico-human.png); }
+  background-image: url(./../img/common/ico-human.png); }
 
 .ico-search {
   width: 17px;
   height: 17px;
-  background-image: url(ico-search.png); }
+  background-image: url(./../img/common/ico-search.png); }
 
 .ico-menu {
   width: 17px;
   height: 17px;
-  background-image: url(ico-menu.png); }
+  background-image: url(./../img/common/ico-menu.png); }
 
 .ico-top-triangle {
   width: 5px;
   height: 7px;
-  background-image: url(ico-top-triangle.png); }
+  background-image: url(./../img/common/ico-top-triangle.png); }
 
 .ico-sitemap-arrow {
   width: 6px;
   height: 9px;
-  background-image: url(ico-sitemap-arrow.png); }
+  background-image: url(./../img/common/ico-sitemap-arrow.png); }
 
 .ico-plus {
   width: 20px;
   height: 20px;
-  background-image: url(ico-plus.png); }
+  background-image: url(./../img/common/ico-plus.png); }
 
 .ico-go-blue {
   width: 29px;
   height: 11px;
-  background-image: url(ico-go-blue@2x.png); }
+  background-image: url(./../img/main/ico-go-blue@2x.png); }
 
 .ico-heart {
   width: 20px;
   height: 19px;
-  background-image: url(ico-heart.png); }
+  background-image: url(./../img/common/ico-heart.png); }
 
 .on > .ico-heart {
-  background-image: url(ico-heart-on.png); }
+  background-image: url(./../img/common/ico-heart-on.png); }
 
 .ico-slider-prev-sm {
   width: 10px;
   height: 18px;
-  background-image: url(ico-slider-prev-sm@2x.png); }
+  background-image: url(./../img/main/ico-slider-prev-sm@2x.png); }
 
 .ico-slider-next-sm {
   width: 10px;
   height: 18px;
-  background-image: url(ico-slider-next-sm@2x.png); }
+  background-image: url(./../img/main/ico-slider-next-sm@2x.png); }
 
 .ico-stop {
   width: 8px;
   height: 10px;
-  background-image: url(ico-stop.png); }
+  background-image: url(./../img/common/ico-stop.png); }
 
 .ico-arrow-down-pink {
   width: 12px;
   height: 14px;
-  background-image: url(ico-arrow-down-pink@2x.png); }
+  background-image: url(./../img/main/ico-arrow-down-pink@2x.png); }
 
 .ico-calendar {
   width: 28px;
   height: 30px;
-  background-image: url(ico-calendar@2x.png); }
+  background-image: url(./../img/main/ico-calendar@2x.png); }
 
 .ico-main-search {
   width: 31px;
   height: 30px;
-  background-image: url(ico-search@2x.png); }
+  background-image: url(./../img/main/ico-search@2x.png); }
 
 .ico-top {
   width: 12px;
   height: 7px;
-  background-image: url(ico-top.png); }
+  background-image: url(./../img/common/ico-top.png); }
 
 /* wrap */
 .wrap {
@@ -1598,7 +1598,7 @@ button.swiper-pagination-bullet {
     -webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 1px;
-    background-image: url(ico-footer-select.png);
+    background-image: url(./../img/common/ico-footer-select.png);
     background-size: 9px 5px;
     background-position: right 21px center;
     background-repeat: no-repeat; }
@@ -2249,7 +2249,6 @@ input[type=number] {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    background-image: url(../img/common/ico-search.svg);
     background-size: cover;
     background-repeat: no-repeat; }
 
@@ -2783,7 +2782,7 @@ input[type=number] {
       right: -5px;
       top: 50%;
       transform: translateY(-50%);
-      background-image: url(ico-balloon-tip@2x.png);
+      background-image: url(./../img/main/ico-balloon-tip@2x.png);
       background-size: cover;
       width: 5px;
       height: 10px; }
@@ -2840,7 +2839,7 @@ input[type=number] {
   height: 695px;
   background-size: cover;
   background-position: center;
-  background-image: url(bg-top@2x.png);
+  background-image: url(./../img/main/bg-top@2x.png);
   margin: 0 auto; }
   .section-visual .inner {
     position: relative;
@@ -2916,7 +2915,7 @@ input[type=number] {
             vertical-align: middle;
             width: 3px;
             height: 5px;
-            background-image: url(ico-triangle-xs@2x.png);
+            background-image: url(./../img/main/ico-triangle-xs@2x.png);
             background-size: cover;
             margin-left: 7px;
             margin-right: 20px; }
@@ -2981,7 +2980,7 @@ input[type=number] {
       left: 0;
       width: 100vw;
       height: 122px;
-      background-image: url(bg-menu-area@2x.png); }
+      background-image: url(./../img/main/bg-menu-area@2x.png); }
     .section-visual .menu .menu-slider {
       width: calc(100% - 143px); }
       .section-visual .menu .menu-slider .swiper-slide {
@@ -3019,7 +3018,7 @@ input[type=number] {
 
 @media (max-width: 1300px) {
   .section-visual {
-    background-image: url(bg-top-tablet@2x.png); }
+    background-image: url(./../img/main/bg-top-tablet@2x.png); }
     .section-visual .inner {
       padding: 112px 0 0; }
     .section-visual .box-search {
@@ -3034,7 +3033,7 @@ input[type=number] {
 
 @media (max-width: 940px) {
   .section-visual {
-    background-image: url(bg-top-mobile@2x.png); }
+    background-image: url(./../img/main/bg-top-mobile@2x.png); }
     .section-visual .inner {
       padding: 91px 12px 0; }
     .section-visual .box-search {
@@ -3332,7 +3331,7 @@ input[type=number] {
       .section-recommendation .banner-slider-wrapper .view-detail .ico-view-detail {
         width: 70px;
         height: 70px;
-        background-image: url(ico-view-detail.png); }
+        background-image: url(./../img/main/ico-view-detail.png); }
       .section-recommendation .banner-slider-wrapper .view-detail span {
         font-size: 16px;
         font-weight: 500;
@@ -3359,7 +3358,7 @@ input[type=number] {
     .section-recommendation .banner-slider-wrapper .view-detail .ico-view-detail {
       width: 56px;
       height: 56px;
-      background-image: url(ico-view-detail-tablet.png); } }
+      background-image: url(./../img/main/ico-view-detail-tablet.png); } }
 
 @media (max-width: 940px) {
   .section-recommendation {
@@ -3550,7 +3549,7 @@ input[type=number] {
       width: calc(100% - 310px); }
   .section-pick-for-u .deco {
     position: absolute;
-    background-image: url(img-line-green.png);
+    background-image: url(./../img/main/img-line-green.png);
     width: 97px;
     height: 97px; }
     .section-pick-for-u .deco.deco-1 {
@@ -3703,7 +3702,7 @@ input[type=number] {
         width: 40px;
         height: 40px;
         background-size: cover;
-        background-image: url(btn-go.png); }
+        background-image: url(./../img/common/btn-go.png); }
 
 .section-education .slider-navigation {
   position: absolute;
@@ -3818,19 +3817,19 @@ input[type=number] {
     .section-seminar .deco.deco-1 {
       width: 90px;
       height: 90px;
-      background-image: url(img-ellipse-1.png);
+      background-image: url(./../img/main/img-ellipse-1.png);
       top: 20px;
       right: -149px; }
     .section-seminar .deco.deco-2 {
       width: 23px;
       height: 23px;
-      background-image: url(img-ellipse-2.png);
+      background-image: url(./../img/main/img-ellipse-2.png);
       top: 102px;
       right: 150px; }
     .section-seminar .deco.deco-3 {
       width: 97px;
       height: 97px;
-      background-image: url(img-line.png);
+      background-image: url(./../img/main/img-line.png);
       bottom: -29px;
       left: -163px; }
 
