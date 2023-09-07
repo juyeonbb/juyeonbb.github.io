@@ -2864,13 +2864,11 @@ input[type=number] {
         height: 70px;
         border-radius: 20px;
         box-shadow: 2.5px 4.3px 5px 0 rgba(4, 0, 0, 0.05);
-        border-style: solid;
-        border-width: 3px;
-        border-image-source: linear-gradient(to top, #1d35ad, #cf4ebe);
-        border-image-slice: 1;
+        position: relative;
+        border: 3px solid transparent;
         background-image: linear-gradient(to bottom, #fff, #fff), linear-gradient(to top, #1d35ad, #cf4ebe);
-        background-clip: content-box, border-box;
-        overflow: hidden; }
+        background-origin: border-box;
+        background-clip: content-box, border-box; }
         .section-visual .box-search .search .form-search-layout .form-search {
           font-size: 18px;
           font-weight: normal;
