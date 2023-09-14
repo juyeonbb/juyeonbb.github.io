@@ -2994,7 +2994,9 @@ input[type=number] {
           justify-content: flex-end;
           align-items: center; }
           .section-visual .menu .menu-slider .swiper-slide a img {
-            display: block; }
+            display: block;
+            width: 36px;
+            height: 36px; }
           .section-visual .menu .menu-slider .swiper-slide a span {
             display: block;
             margin-top: 10px;

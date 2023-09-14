@@ -465,13 +465,13 @@ window.onresize = function () {
     if (prevWidth > 940) {
         if (windowWidth < 940) {
             prevWidth = windowWidth;
-            console.log('mobile')
+            // console.log('mobile')
             init()
         }
     } else if (prevWidth < 940) {
         if (windowWidth > 940) {
             prevWidth = windowWidth;
-            console.log('tablet')
+            // console.log('tablet')
             init()
         }
     }
