@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../assets/js/lib/jquery-3.4.1.min.js"></script>
+    <script src="../assets/js/lib/swiper.js"></script>
+    <script src="../assets/js/lib/twbsPagination.js"></script>
+    <script src="../assets/js/common.js" defer></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="shortcut icon" href="#">
+<!--    <link rel="shortcut icon" href="../assets/img/favicon.io">-->
+    <title>KSA EDU</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="login-contents">
+        <div class="top-heading">
+            <a class="img-logo" href="#"><img src="../assets/img/common/logo.png" alt="KSA EDU"></a>
+            <span class="txt-logo">한국표준협회</span>
+        </div>
+        <div class="contents">
+            <div class="sign-in">
+                <div class="title">회원가입</div>
+                <div class="step">
+                    <div class="item completed">
+                        <span class="num">01</span>
+                        <span class="title">약관 동의</span>
+                    </div>
+                    <div class="item completed">
+                        <span class="num">02</span>
+                        <span class="title">본인인증</span>
+                    </div>
+                    <div class="item active">
+                        <span class="num">03</span>
+                        <span class="title">회원정보 입력</span>
+                    </div>
+                    <div class="item">
+                        <span class="num">04</span>
+                        <span class="title">가입완료</span>
+                    </div>
+                </div>
+                <div class="form">
+                    <div class="form-title">
+                        <span class="title">기본정보</span>
+                        <span class="desc"><em class="color-caution">*</em> 표시는 필수 입력 사항입니다.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="id" class="label">아이디 <em class="color-caution">*</em></label>
+                        <div class="form-row">
+                            <input class="form-input" type="text" id="id" />
+                            <button class="btn btn-border-point" type="button">중복체크</button>
+                        </div>
+                        <div class="validation">사용 가능한 아이디입니다.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="label">비밀번호 <em class="color-caution">*</em></label>
+                        <div class="form-row">
+                            <input class="form-input" type="password" id="password" />
+                        </div>
+                        <div class="desc">영문 대/소문자, 숫자, 특수문자(~, `, !, @, #, $, %, \, ^, &, *, (, ), -) 중 2가지 이상으로 8~20자 입력</div>
+                        <div class="caution">비밀번호 형식이 올바르지 않습니다.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password2" class="label">비밀번호 확인 <em class="color-caution">*</em></label>
+                        <div class="form-row">
+                            <input class="form-input" type="password" id="password2" />
+                        </div>
+                        <div class="caution">비밀번호가 일치하지 않습니다.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="label">이름</label>
+                        <div class="form-row">
+                            <input class="form-input" type="text" id="name" value="홍길동" disabled />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="birth" class="label">생년월일</label>
+                        <div class="form-row">
+                            <input class="form-input" type="text" id="birth" value="1990-01-01" disabled />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="birth" class="label">성별</label>
+                        <div class="form-row">
+                            <label for="male" class="form-radio">
+                                <input type="radio" id="male" name="gender" checked />
+                                <span>사용안함</span>
+                            </label>
+                            <label for="female" class="form-radio">
+                                <input type="radio" id="female" name="gender" />
+                                <span>사용안함</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="label">휴대폰번호 <em class="color-caution">*</em></label>
+                        <div class="form-row">
+                            <input class="form-input" type="tel" id="tel" value="010-2356-4567" disabled />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="label">SMS 수신동의 <em class="color-caution">*</em></label>
+                        <div class="form-row">
+                            <label for="no" class="form-radio">
+                                <input type="radio" id="no" name="agreement" checked />
+                                <span>비동의</span>
+                            </label>
+                            <label for="yes" class="form-radio">
+                                <input type="radio" id="yes" name="agreement" />
+                                <span>동의</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel2" class="label">전화번호</label>
+                        <div class="form-row">
+                            <input class="form-input" type="tel" id="tel2" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="label">이메일 <em class="color-caution">*</em></label>
+                        <div class="form-row">
+                            <input class="form-input" type="email" id="email" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="label">이메일 수신동의 <em class="color-caution">*</em></label>
+                        <div class="form-row">
+                            <label for="no2" class="form-radio">
+                                <input type="radio" id="no2" name="agreement2" checked />
+                                <span>비동의</span>
+                            </label>
+                            <label for="yes2" class="form-radio">
+                                <input type="radio" id="yes2" name="agreement2" />
+                                <span>동의</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-title">
+                        <span class="title">교재 배송지</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="zipcode" class="label">우편번호 <em class="color-caution">*</em></label>
+                        <div class="form-row">
+                            <input class="form-input" type="text" id="zipcode" disabled value="01011" />
+                            <button class="btn btn-border-point" type="button">검색</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="label">주소 <em class="color-caution">*</em></label>
+                        <div class="form-row">
+                            <input class="form-input" type="text" id="address" disabled />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address2" class="label">상세주소 <em class="color-caution">*</em></label>
+                        <div class="form-row">
+                            <input class="form-input" type="text" id="address2" />
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button class="btn btn-lg" type="button">가입하기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="links">
+                    <a class="lg" href="#">개인정보처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">저작권정책</a>
+                    <a href="#">사이트맵</a>
+                </div>
+                <div class="copyright">© KOREAN STANDARDS ASSOCIATION. ALL RIGHTS RESERVED.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let $checkAll = $('#checkAll');
+    let $itemCheck = $(".item input[type='checkbox']");
+
+    function updateCheckAll() {
+        $checkAll.prop('checked', $itemCheck.length === $itemCheck.filter(':checked').length);
+    }
+
+    $checkAll.on('click', function () {
+        $itemCheck.prop('checked', $(this).prop('checked'));
+        updateCheckAll();
+    })
+
+    $itemCheck.on('change', function () {
+        updateCheckAll();
+    })
+</script>
+</body>
+</html>

@@ -6128,6 +6128,22 @@ a {
     padding: 28px 0 0;
 }
 
+.nav-depth-2 .btn-ia {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    padding: 0 20px;
+    height: 30px;
+    background: #00ac47;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+
 .nav-depth-2.close > * {
     display: none;
 }
@@ -6146,7 +6162,6 @@ a {
     font-size: 18px;
     font-weight: 800;
     margin-bottom: 10px;
-    /*padding-bottom: 10px;*/
     border-bottom: 1px solid #121212;
     color: #121212;
     line-height: 20px;
