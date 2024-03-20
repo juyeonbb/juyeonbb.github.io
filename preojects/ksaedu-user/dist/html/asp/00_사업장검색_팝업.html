@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/asp/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/asp/lib/swiper.js"></script>
+    <script src="../../js/front/asp/lib/twbsPagination.js"></script>
+    <script src="../../js/front/asp/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/asp/style.css">
+    <link rel="stylesheet" href="../../css/front/asp/pages.css">
+    <link rel="shortcut icon" href="../../images/front/asp/common/favicon.ico">
+    <title>💼 KSA EDU 💻</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <div class="btn-wrap">
+        <button class="btn _popupTrigger" data-trigger="popup1" type="button">팝업 1</button>
+    </div>
+</div>
+<div class="dim _dim" style="display: block"></div>
+<div class="popup popup-business-search _popup" data-popup="popup1" style="display: block">
+    <div class="popup-content">
+        <div class="popup-head">
+            <span class="title">사업장 검색</span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="content">
+                <div class="search-box">
+                    <div class="form-group">
+                        <label for="search" class="label">사업장 검색</label>
+                        <div class="form-search" style="width: 300px;">
+                            <input class="form-input" type="search" id="search" placeholder="검색어를 입력해 주세요.">
+                            <div class="btn-search show-mo"><i class="ico ico-search"></i></div>
+                        </div>
+                        <button class="btn with-icon" type="button"><i class="ico ico-search-white"></i><span>검색</span></button>
+                    </div>
+                </div>
+
+                <div class="board">
+                    <div class="board-head">
+                        <div class="desc">총 <span class="color-point font-weight-medium">40</span>건</div>
+                    </div>
+                    <div class="board-body">
+                        <div class="table-box">
+                            <div class="table table-lh-24">
+                                <table>
+                                    <colgroup>
+                                        <col width="22%">
+                                        <col width="25%">
+                                        <col width="52%">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th class="col-title"><span>회사명</span></th>
+                                        <th class="col-title"><span>사업자등록번호</span></th>
+                                        <th class="col-title"><span>주소</span></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td><span>한국표준협회</span></td>
+                                        <td><span>403-23-56789</span></td>
+                                        <td class="align-left"><span>한줄 한줄 한줄 한줄 한줄 일때, 50px임</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"><span>
+                                            등록되지 않은 사업장입니다.<br/>
+                                            아래 연락처로 사업자등록즈을 보낸 뒤 사업장 등록을 요청해주세요.<br/><br/>
+                                            <a href="tel:02-2624-0111">02-2624-0111</a> / <a href="mailto:ksaedu1@ksa.or.kr">ksaedu1@ksa.or.kr</a> / 02-6919-4029(FAX)
+                                        </span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>한국표준협회</span></td>
+                                        <td><span>403-23-56789</span></td>
+                                        <td class="align-left"><span>서울 금천구 가산디지털 1로 145, 에이스하이엔드타워 3차, 13층  한국표준협회</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>한국표준협회</span></td>
+                                        <td><span>403-23-56789</span></td>
+                                        <td class="align-left"><span>서울 금천구 가산디지털 1로 145, 에이스하이엔드타워 3차, 13층  한국표준협회</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>한국표준협회</span></td>
+                                        <td><span>403-23-56789</span></td>
+                                        <td class="align-left"><span>서울 금천구 가산디지털 1로 145, 에이스하이엔드타워 3차, 13층  한국표준협회</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>한국표준협회</span></td>
+                                        <td><span>403-23-56789</span></td>
+                                        <td class="align-left"><span>서울 금천구 가산디지털 1로 145, 에이스하이엔드타워 3차, 13층  한국표준협회</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>한국표준협회</span></td>
+                                        <td><span>403-23-56789</span></td>
+                                        <td class="align-left"><span>서울 금천구 가산디지털 1로 145, 에이스하이엔드타워 3차, 13층  한국표준협회</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <ul id="pagination" class="pagination"></ul>
+<script>
+    // https://josecebe.github.io/twbs-pagination/
+    $('#pagination').twbsPagination({
+        totalPages: 35,
+        visiblePages: 5,
+        first: `<i class="ico ico-paging-first"></i>`,
+        prev: `<i class="ico ico-paging-prev"></i>`,
+        next: `<i class="ico ico-paging-next"></i>`,
+        last: `<i class="ico ico-paging-last"></i>`,
+    });
+</script>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/asp/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/asp/lib/swiper.js"></script>
+    <script src="../../js/front/asp/lib/twbsPagination.js"></script>
+    <script src="../../js/front/asp/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/asp/style.css">
+    <link rel="stylesheet" href="../../css/front/asp/pages.css">
+    <link rel="shortcut icon" href="../../images/front/asp/common/favicon.ico">
+    <title>💼 KSA EDU 💻</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <div class="btn-wrap">
+        <button class="btn _popupTrigger" data-trigger="popup1" type="button">팝업 1</button>
+    </div>
+</div>
+<div class="dim _dim" style="display: block"></div>
+<div class="popup popup-survey _popup" data-popup="popup1" style="display: block">
+    <div class="popup-content">
+        <div class="popup-head">
+            <span class="title">설문조사</span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="classroom-contents">
+                <div class="test-box">
+                    <div class="test-head">
+                        <div class="title">설문조사 제목이 들어갑니다.</div>
+                        <div class="desc">설문조사 설명이 들어갑니다. 설문조사 설명이 들어갑니다. 설문조사 설명이 들어갑니다. 설문조사 설명이 들어갑니다. 설문조사 설명이 들어갑니다. 설문조사 설명이 들어갑니다. 설문조사 설명이 들어갑니다. 설문조사 설명이 들어갑니다. 설문조사 설명이 들어갑니다.</div>
+                    </div>
+                    <div class="test-body">
+                        <div class="item">
+                            <div class="title">1. 사이트 이용에 만족하십니까?</div>
+                            <div class="form-group">
+                                <label for="radio" class="form-radio">
+                                    <input type="radio" id="radio" name="test" checked="">
+                                    <span>아주 만족</span>
+                                </label>
+                                <label for="radio2" class="form-radio">
+                                    <input type="radio" id="radio2" name="test">
+                                    <span>만족</span>
+                                </label>
+                                <label for="radio3" class="form-radio">
+                                    <input type="radio" id="radio3" name="test">
+                                    <span>보통</span>
+                                </label>
+                                <label for="radio4" class="form-radio">
+                                    <input type="radio" id="radio4" name="test">
+                                    <span>불만족</span>
+                                </label>
+                                <label for="radio5" class="form-radio">
+                                    <input type="radio" id="radio5" name="test">
+                                    <span>아주 불만족</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">2. 사이트 이용 중 만족스러웠던 서비스를 모두 골라주세요.</div>
+                            <div class="form-group">
+                                <label for="checkbox1" class="form-check">
+                                    <input type="checkbox" id="checkbox1" name="checkGroup" checked="">
+                                    <span>1번 선택지</span>
+                                </label>
+                                <label for="checkbox2" class="form-check">
+                                    <input type="checkbox" id="checkbox2" name="checkGroup">
+                                    <span>2번 선택지</span>
+                                </label>
+                                <label for="checkbox3" class="form-check">
+                                    <input type="checkbox" id="checkbox3" name="checkGroup">
+                                    <span>3번 선택지</span>
+                                </label>
+                                <label for="checkbox4" class="form-check">
+                                    <input type="checkbox" id="checkbox4" name="checkGroup">
+                                    <span>4번 선택지</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">3. 사이트 이용 중 불편한 서비스를 말씀해주세요.</div>
+                            <div class="form-group">
+                                <input class="form-input" type="text" title="text" placeholder="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">4. 건의하실 의견을 자유롭게 작성해주세요.</div>
+                            <div class="form-group">
+                                <textarea class="form-input" type="text" title="text" placeholder="">가나다라마바사</textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="btn-wrap">
+                <button class="btn btn-border-grey _popupClose">닫기</button>
+                <button class="btn">제출하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

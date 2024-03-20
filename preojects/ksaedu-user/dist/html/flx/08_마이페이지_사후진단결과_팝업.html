@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/flx/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/flx/lib/swiper.js"></script>
+    <script src="../../js/front/flx/lib/twbsPagination.js"></script>
+    <script src="../../js/front/flx/lib/sortable.js"></script>
+    <script src="../../js/front/flx/lib/chart.js"></script>
+    <script src="../../js/front/flx/lib/chartjs-plugin-datalabels.js"></script>
+    <script src="../../js/front/flx/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/flx/style.css">
+    <link rel="stylesheet" href="../../css/front/flx/pages.css">
+    <link rel="shortcut icon" href="../../images/front/flx/common/favicon.ico">
+    <title>📌 KSA EDU 📌</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <div class="btn-wrap">
+        <button class="btn _popupTrigger" data-trigger="popup-result" type="button">팝업 1</button>
+    </div>
+</div>
+<div class="dim _dim" style="display: block"></div>
+<div class="popup popup-test-result _popup" data-popup="popup-result" style="display: block">
+    <div class="popup-content">
+        <div class="popup-head">
+            <span class="title">홍길동님 사전-사후 진단 결과</span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="charts-row">
+                <div class="col-table">
+                    <div class="label">진단 결과</div>
+                    <div class="table">
+                        <table>
+                            <colgroup>
+                                <col span="2" width="auto">
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th class="col-title"><span>사전진단일</span></th>
+                                <th class="col-title"><span>사전진단 평균값</span></th>
+                            </tr>
+                            <tr>
+                                <td><span>2023-06-01</span></td>
+                                <td><span>2.2</span></td>
+                            </tr>
+                            <tr>
+                                <th class="col-title"><span>사후진단일</span></th>
+                                <th class="col-title"><span>사후진단 평균값</span></th>
+                            </tr>
+                            <tr>
+                                <td><span>2023-12-31</span></td>
+                                <td><span>2.5</span></td>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class="col-title"><span>사전사후 차이</span></th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <span class="color-red">0.3 <i class="ico ico-up"></i></span>
+<!--                                    <span class="color-dark-grey">0.3 <i class="ico ico-down"></i></span>-->
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-chart">
+                    <div class="label">분야별 역량 진단</div>
+                    <div class="radar-chart-box">
+                        <div class="legend">
+                            <div class="item">
+                                <span class="ball color-1"></span>
+                                <span class="txt">사전</span>
+                            </div>
+                            <div class="item">
+                                <span class="ball color-2"></span>
+                                <span class="txt">사후</span>
+                            </div>
+                        </div>
+                        <div class="radar-chart">
+                            <canvas id="radarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bar-chart-row">
+                <div class="bar-chart-wrap">
+                    <div class="chart-wrap">
+                        <div class="y-axis">
+                            <div class="item">5</div>
+                            <div class="item">4</div>
+                            <div class="item">3</div>
+                            <div class="item">2</div>
+                            <div class="item">1</div>
+                            <div class="item">0</div>
+                        </div>
+                        <div class="chart">
+                            <div class="chart-inner">
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 20%"></div>
+                                        <div class="bar color-2" style="height: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 30%"></div>
+                                        <div class="bar color-2" style="height: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 90%"></div>
+                                        <div class="bar color-2" style="height: 40%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 95%"></div>
+                                        <div class="bar color-2" style="height: 10%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 50%"></div>
+                                        <div class="bar color-2" style="height: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 5%"></div>
+                                        <div class="bar color-2" style="height: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 10%"></div>
+                                        <div class="bar color-2" style="height: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 70%"></div>
+                                        <div class="bar color-2" style="height: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 20%"></div>
+                                        <div class="bar color-2" style="height: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 20%"></div>
+                                        <div class="bar color-2" style="height: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 20%"></div>
+                                        <div class="bar color-2" style="height: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 20%"></div>
+                                        <div class="bar color-2" style="height: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 20%"></div>
+                                        <div class="bar color-2" style="height: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 20%"></div>
+                                        <div class="bar color-2" style="height: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 20%"></div>
+                                        <div class="bar color-2" style="height: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 20%"></div>
+                                        <div class="bar color-2" style="height: 50%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="x-axis">
+                                <div class="item item-average">평균</div>
+                                <div class="item">문항1</div>
+                                <div class="item">문항2</div>
+                                <div class="item">문항3</div>
+                                <div class="item">문항4</div>
+                                <div class="item">문항5</div>
+                                <div class="item">문항6</div>
+                                <div class="item">문항7</div>
+                                <div class="item">문항8</div>
+                                <div class="item">문항9</div>
+                                <div class="item">문항7</div>
+                                <div class="item">문항8</div>
+                                <div class="item">문항9</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="legend">
+                        <div class="item">
+                            <span class="ball color-1"></span>
+                            <span class="txt">사전</span>
+                        </div>
+                        <div class="item">
+                            <span class="ball color-2"></span>
+                            <span class="txt">사후</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bar-chart-wrap">
+                    <div class="chart-wrap">
+                        <div class="y-axis">
+                            <div class="item">5</div>
+                            <div class="item">4</div>
+                            <div class="item">3</div>
+                            <div class="item">2</div>
+                            <div class="item">1</div>
+                            <div class="item">0</div>
+                        </div>
+                        <div class="chart">
+                            <div class="chart-inner">
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 20%"></div>
+                                        <div class="bar color-2" style="height: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 30%"></div>
+                                        <div class="bar color-2" style="height: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 90%"></div>
+                                        <div class="bar color-2" style="height: 40%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 95%"></div>
+                                        <div class="bar color-2" style="height: 10%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 50%"></div>
+                                        <div class="bar color-2" style="height: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 5%"></div>
+                                        <div class="bar color-2" style="height: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 10%"></div>
+                                        <div class="bar color-2" style="height: 80%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 70%"></div>
+                                        <div class="bar color-2" style="height: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 20%"></div>
+                                        <div class="bar color-2" style="height: 50%"></div>
+                                    </div>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-item-inner">
+                                        <div class="bar color-1" style="height: 20%"></div>
+                                        <div class="bar color-2" style="height: 50%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="x-axis">
+                                <div class="item item-average">평균</div>
+                                <div class="item">문항1</div>
+                                <div class="item">문항2</div>
+                                <div class="item">문항3</div>
+                                <div class="item">문항4</div>
+                                <div class="item">문항5</div>
+                                <div class="item">문항6</div>
+                                <div class="item">문항7</div>
+                                <div class="item">문항8</div>
+                                <div class="item">문항9</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="legend">
+                        <div class="item">
+                            <span class="ball color-1"></span>
+                            <span class="txt">사전</span>
+                        </div>
+                        <div class="item">
+                            <span class="ball color-2"></span>
+                            <span class="txt">사후</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-row">
+                <div class="label">진단 결과 상세</div>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col width="10%" />
+                            <col width="66%" />
+                            <col width="12%" />
+                            <col width="12%" />
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th class="col-title"><span>번호</span></th>
+                            <th class="col-title"><span>문항내용</span></th>
+                            <th class="col-title"><span>사전점수</span></th>
+                            <th class="col-title"><span>사후점수</span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><span class="color-dark-grey">1</span></td>
+                            <td class="align-left"><span>수강하신 HRDFLEX 과정에 대해 전반적으로 만족하십니까?</span></td>
+                            <td><span>-</span></td>
+                            <td><span>2</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="color-dark-grey">2</span></td>
+                            <td class="align-left"><span>수강하신 HRDFLEX 과정에 대해 전반적으로 만족하십니까?</span></td>
+                            <td><span>2</span></td>
+                            <td><span>2</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="color-dark-grey">3</span></td>
+                            <td class="align-left"><span>수강하신 HRDFLEX 과정에 대해 전반적으로 만족하십니까?</span></td>
+                            <td><span>1</span></td>
+                            <td><span>2</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="color-dark-grey">4</span></td>
+                            <td class="align-left"><span>수강하신 HRDFLEX 과정에 대해 전반적으로 만족하십니까?</span></td>
+                            <td><span>-</span></td>
+                            <td><span>2</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="color-dark-grey">5</span></td>
+                            <td class="align-left"><span>수강하신 HRDFLEX 과정에 대해 전반적으로 만족하십니까?</span></td>
+                            <td><span>-</span></td>
+                            <td><span>2</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="color-dark-grey">6</span></td>
+                            <td class="align-left"><span>수강하신 HRDFLEX 과정에 대해 전반적으로 만족하십니까?</span></td>
+                            <td><span>2</span></td>
+                            <td><span>2</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="color-dark-grey">7</span></td>
+                            <td class="align-left"><span>수강하신 HRDFLEX 과정에 대해 전반적으로 만족하십니까?</span></td>
+                            <td><span>2</span></td>
+                            <td><span>2</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="color-dark-grey">8</span></td>
+                            <td class="align-left"><span>수강하신 HRDFLEX 과정에 대해 전반적으로 만족하십니까?</span></td>
+                            <td><span>2</span></td>
+                            <td><span>2</span></td>
+                        </tr>
+                        <tr class="bg-yellow">
+                            <td colspan="2"><span>평균</span></td>
+                            <td><span>2.2</span></td>
+                            <td><span>2.5</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="btn-wrap">
+                <button class="btn btn-border-grey _popupClose">닫기</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let width, height, gradient;
+    function getGradient(ctx, chartArea) {
+        const chartWidth = chartArea.right - chartArea.left;
+        const chartHeight = chartArea.bottom - chartArea.top;
+        if (!gradient || width !== chartWidth || height !== chartHeight) {
+            width = chartWidth;
+            height = chartHeight;
+            gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+            gradient.addColorStop(0, '#1d35ad');
+            gradient.addColorStop(1, '#cf4ebe');
+        }
+
+        return gradient;
+    }
+
+    let radarChartTarget = document.getElementById('radarChart');
+
+    let data = {
+        labels: ['전략관리', '협업관리', '개인관리', '수행관리', '성과스킬', '소통스킬'],
+        datasets: [
+            {
+                label: '사전',
+                backgroundColor: 'transparent',
+                borderColor: function(context) {
+                    const chart = context.chart;
+                    const {ctx, chartArea} = chart;
+
+                    if (!chartArea) {
+                        return;
+                    }
+                    return getGradient(ctx, chartArea);
+                },
+                borderWidth: 2,
+                pointStyle: false,
+                data: [4, 5, 4, 3, 3, 4]
+            },
+            {
+                label: '사후',
+                borderColor: '#666666',
+                backgroundColor: 'transparent',
+                borderWidth: 2,
+                pointStyle: false,
+                data: [2, 2, 2, 2, 3, 4]
+            }
+        ]
+    };
+
+    let radarChartOption = {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            r: {
+                // angleLines: {
+                //     display: false
+                // },
+                angleLines: {
+                    color: '#dfdfdf',
+                },
+                grid: {
+                    color: '#dfdfdf'
+                },
+                pointLabels: {
+                    color: '#666666',
+                    font: {
+                        size: 14,
+                        // weight: '400',
+                        family: 'Noto Sans KR'
+                    },
+                },
+                suggestedMin: 0,
+                suggestedMax: 5,
+                ticks: {
+                    display: false,
+                    beginAtZero: true,
+                    min: 0,
+                    max: 5,
+                    stepSize: 1,
+                }
+            },
+        },
+        plugins: {
+            legend: {
+                display: false
+            },
+            tooltip: {
+                enabled: false
+            },
+        }
+    }
+
+    let radarChart = new Chart(radarChartTarget, {
+        type: 'radar',
+        data: data,
+        pointRadius: 0,
+        options: radarChartOption,
+    });
+</script>
+</body>
+</html>

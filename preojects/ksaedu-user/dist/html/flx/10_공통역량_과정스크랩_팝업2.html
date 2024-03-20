@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/flx/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/flx/lib/swiper.js"></script>
+    <script src="../../js/front/flx/lib/twbsPagination.js"></script>
+    <script src="../../js/front/flx/lib/sortable.js"></script>
+    <script src="../../js/front/flx/lib/chart.js"></script>
+    <script src="../../js/front/flx/lib/chartjs-plugin-datalabels.js"></script>
+    <script src="../../js/front/flx/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/flx/style.css">
+    <link rel="stylesheet" href="../../css/front/flx/pages.css">
+    <link rel="shortcut icon" href="../../images/front/flx/common/favicon.ico">
+    <title>📌 KSA EDU 📌</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <div class="btn-wrap">
+        <button class="btn _popupTrigger" data-trigger="popup-scrap" type="button">팝업 1</button>
+    </div>
+</div>
+<div class="dim _dim" style="display: block"></div>
+<div class="popup popup-scrap _popup" data-popup="popup-scrap" style="display: block">
+    <div class="popup-content">
+        <div class="popup-head">
+            <span class="title">과정 스크랩 <button class="btn-setting"><i class="ico ico-setting"></i></button></span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="course-scrap-list">
+                <!--
+                .btn-setting 클릭 시
+                    1. .list에 .editable 클래스 추가
+                    2. .txt 속성 contenteditable="true" 추가 (text 수정이 가능하도록)
+
+                수정 완료 시
+                    1. .list에 .editable 클래스 제거
+                    2. .txt 속성 contenteditable="false"로 변경 (text 수정이 가능하지 않도록)
+                -->
+                <ul class="list" id="sortable">
+                    <li class="item _item">
+                        <label for="checkbox1" class="form-check">
+                            <input type="checkbox" id="checkbox1" name="checkGroup" disabled="" />
+                            <span></span>
+                        </label>
+                        <span class="txt">기본 목록</span>
+                        <span class="right">
+                            <span class="time">총 34분 10초</span>
+<!--                            <button class="btn-remove"><i class="ico ico-remove"></i></button>-->
+<!--                            <button class="btn-handle _btnHandle"><i class="ico ico-handle"></i></button>-->
+                        </span>
+                    </li>
+                    <li class="item _item">
+                        <label for="checkbox2" class="form-check">
+                            <input type="checkbox" id="checkbox2" name="checkGroup" />
+                            <span></span>
+                        </label>
+                        <span class="txt">나의 관심목록</span>
+                        <span class="right">
+                                <span class="time">총 34분 10초</span>
+                        </span>
+                    </li>
+                    <li class="item _item">
+                        <label for="checkbox3" class="form-check">
+                            <input type="checkbox" id="checkbox3" name="checkGroup" />
+                            <span></span>
+                        </label>
+                        <span class="txt" contenteditable="true">관심과정 리스트</span>
+                        <span class="right">
+                                <span class="time">총 34분 10초</span>
+                        </span>
+                    </li>
+<!--                    <li class="item item-new _item">-->
+<!--                        <label for="checkbox4" class="form-check">-->
+<!--                            <input type="checkbox" id="checkbox4" name="checkGroup" />-->
+<!--                            <span></span>-->
+<!--                        </label>-->
+<!--                        <input class="form-text" type="text" title="list" placeholder="새 스크랩 목록을 입력하세요." />-->
+<!--&lt;!&ndash;                        <span class="txt" contenteditable="true">추가한 스크랩 목록</span>&ndash;&gt;-->
+<!--                    </li>-->
+                </ul>
+                <div class="btn-add-wrap">
+                    <button class="btn with-icon btn-border-point"><i class="ico ico-plus"></i><span>새 스크랩 목록</span></button>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btn">저장</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // https://github.com/SortableJS/Sortable
+    let target = document.getElementById('sortable');
+    new Sortable(target , {
+        draggable: '._item',
+        handle: '._btnHandle',
+        animation: 150
+    });
+</script>
+</body>
+</html>

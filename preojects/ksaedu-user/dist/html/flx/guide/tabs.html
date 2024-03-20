@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../../../js/front/flx/lib/jquery-3.4.1.min.js"></script>
+  <script src="../../../js/front/flx/ui_common.js" defer></script>
+  <link rel="stylesheet" href="../../../css/front/flx/style.css">
+  <link rel="stylesheet" href="../../../css/front/flx/pages.css">
+  <link rel="shortcut icon" href="#">
+<!--  <link rel="shortcut icon" href="../../images/common/favicon.io">-->
+  <title>👱📌 KSA EDU 📌‍</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <div style="border: 1px solid #dfdfdf; border-radius: 10px; padding: 20px;">
+        <div class="caution mb-10">
+            .tabs의 li는 항상 짝수로 유지 & 비활성 되어야하는 .item에 disabled 클래스 추가 (개발 처리)
+        </div>
+        <div class="caution mb-10">
+            .tabs .item.disabled => 비활성 처리 (ui_common.js)
+        </div>
+        <div class="caution mb-10">
+            .tab .item이 3개 이상일 경우 .tabs에 tabs-4 클래스 추가 (개발 처리)
+        </div>
+        <div class="caution mb-20">
+            .tab .item 마지막 전에 있는 item에 별도 클래스 처리 (ui_common.js)
+        </div>
+        <div class="tab-container _tabContainer">
+            <div class="tabs-box">
+                <ul class="tabs _tab">
+                    <li class="item on"><a href="#">신청가능목록</a></li>
+                    <li class="item"><a href="#">신청완료목록</a></li>
+                </ul>
+            </div>
+            <div class="tab-content _tabContent">
+                <div class="tab-panel on">1</div>
+                <div class="tab-panel">2</div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <div class="tab-container _tabContainer">
+            <div class="tabs-box">
+                <ul class="tabs tabs-4 _tab">
+                    <li class="item on"><a href="#">신청가능목록</a></li>
+                    <li class="item"><a href="#">신청완료목록</a></li>
+                    <li class="item"><a href="#">신청완료목록</a></li>
+                    <li class="item disabled"><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="tab-content _tabContent">
+                <div class="tab-panel on">1</div>
+                <div class="tab-panel">2</div>
+                <div class="tab-panel">3</div>
+                <div class="tab-panel">4</div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="tab-container _tabContainer">
+            <div class="tabs-box">
+                <ul class="tabs tabs-4 _tab">
+                    <li class="item on"><a href="#">신청가능목록</a></li>
+                    <li class="item"><a href="#">신청완료목록</a></li>
+                    <li class="item"><a href="#">신청완료목록</a></li>
+                    <li class="item"><a href="#">신청가능목록</a></li>
+                    <li class="item"><a href="#">신청완료목록</a></li>
+                    <li class="item"><a href="#">신청완료목록</a></li>
+                </ul>
+            </div>
+            <div class="tab-content _tabContent">
+                <div class="tab-panel on">1</div>
+                <div class="tab-panel">2</div>
+                <div class="tab-panel">3</div>
+                <div class="tab-panel">4</div>
+                <div class="tab-panel">5</div>
+                <div class="tab-panel">6</div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="tab-container _tabContainer">
+            <div class="tabs-box">
+                <ul class="pill-tabs _tab">
+                    <li class="item on"><a href="#">전체</a></li>
+                    <li class="item"><a href="#">가나다</a></li>
+                    <li class="item"><a href="#">라마바</a></li>
+                    <li class="item"><a href="#">사아자차카타파하</a></li>
+                    <li class="item"><a href="#">가나다</a></li>
+                    <li class="item"><a href="#">라마바</a></li>
+                    <li class="item"><a href="#">사아자차카타파하</a></li>
+                </ul>
+            </div>
+            <div class="tab-content _tabContent">
+                <div class="tab-panel on">1</div>
+                <div class="tab-panel">2</div>
+                <div class="tab-panel">3</div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="tab-container _tabContainer">
+            <div class="tabs-box">
+                <ul class="balloon-tabs _tab">
+                    <li class="item on"><a href="#">공지사항</a></li>
+                    <li class="item"><a href="#">자료실</a></li>
+                </ul>
+            </div>
+            <div class="tab-content _tabContent">
+                <div class="tab-panel on">1</div>
+                <div class="tab-panel">2</div>
+                <div class="tab-panel">3</div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="tab-container _tabContainer">
+            <div class="tabs-box">
+                <ul class="balloon-tabs balloon-tabs-point _tab">
+                    <li class="item on"><a href="#">집합·라이브</a></li>
+                    <li class="item"><a href="#">이러닝</a></li>
+                </ul>
+            </div>
+            <div class="tab-content _tabContent">
+                <div class="tab-panel on">1</div>
+                <div class="tab-panel">2</div>
+                <div class="tab-panel">3</div>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="tab-container _tabContainer">
+            <div class="tabs-box">
+                <ul class="radio-tabs _tab">
+                    <li class="item on"><a href="#"><i class="ico ico-check"></i><span>신용카드</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-check"></i><span>가상계좌</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-check"></i><span>실시간 계좌이체</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-check"></i><span>무통장입금</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-check"></i><span>현장카드결제</span></a></li>
+                </ul>
+            </div>
+            <div class="tab-content _tabContent">
+                <div class="tab-panel on">1</div>
+                <div class="tab-panel">2</div>
+                <div class="tab-panel">3</div>
+                <div class="tab-panel">4</div>
+                <div class="tab-panel">5</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

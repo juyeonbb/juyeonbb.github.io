@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/flx/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/flx/lib/swiper.js"></script>
+    <script src="../../js/front/flx/lib/twbsPagination.js"></script>
+    <script src="../../js/front/flx/lib/sortable.js"></script>
+    <script src="../../js/front/flx/lib/chart.js"></script>
+    <script src="../../js/front/flx/lib/chartjs-plugin-datalabels.js"></script>
+    <script src="../../js/front/flx/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/flx/style.css">
+    <link rel="stylesheet" href="../../css/front/flx/pages.css">
+    <link rel="shortcut icon" href="../../images/front/flx/common/favicon.ico">
+    <title>📌 KSA EDU 📌</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="login-contents">
+        <div class="top-heading">
+            <a class="img-logo" href="#"><img src="../../images/front/flx/common/logo.png" alt="KSA EDU"></a>
+            <span class="txt-logo">한국표준협회</span>
+        </div>
+        <div class="contents">
+            <div class="sign-in">
+                <div class="title">mOTP 본인인증</div>
+                <div class="desc">고용노동부 직업능력개발훈련 규정에 따라<br/>
+                    Flex 서비스는 1일 1회 본인인증을 하여야 학습이 가능합니다.</div>
+                <div class="desc-lg">mOTP 인증번호를 입력해주세요.</div>
+                <div class="otp-form">
+                    <div class="form-group">
+                        <div class="form-row">
+                            <input class="form-input" type="text" title="number" />
+                        </div>
+<!--                        <div class="caution">입력하신 인증번호가 올바르지 않습니다.</div>-->
+                        <div class="caution">5회 이상 인증을 실패하여 mOTP 인증이 제한되었습니다.<br/>mOTP 인증 초기화를 진행해주세요.</div>
+                    </div>
+                    <div class="btn-wrap">
+                        <button class="btn btn-lg" type="button">mOTP 인증하기</button>
+<!--                        <button class="btn btn-lg" type="button">mOTP 인증 초기화</button>-->
+                    </div>
+                    <div class="contents-info">
+                        <div class="item">mOTP 인증은 구글/애플 앱스토어에서 ‘mOTP’ 앱을 다운받아 설치 후 가능합니다.</div>
+                        <div class="item">인증에 사용하는 정보와 나의정보가 일치해야 합니다.</div>
+                    </div>
+                    <div class="btn-wrap-single">
+                        <button class="btn btn-border-grey">다른 인증수단 이용하기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="links">
+                    <a class="lg" href="#">개인정보처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">저작권정책</a>
+                    <a href="#">사이트맵</a>
+                </div>
+                <div class="copyright">© KOREAN STANDARDS ASSOCIATION. ALL RIGHTS RESERVED.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let $checkAll = $('#checkAll');
+    let $itemCheck = $(".item input[type='checkbox']");
+
+    function updateCheckAll() {
+        $checkAll.prop('checked', $itemCheck.length === $itemCheck.filter(':checked').length);
+    }
+
+    $checkAll.on('click', function () {
+        $itemCheck.prop('checked', $(this).prop('checked'));
+        updateCheckAll();
+    })
+
+    $itemCheck.on('change', function () {
+        updateCheckAll();
+    })
+</script>
+</body>
+</html>

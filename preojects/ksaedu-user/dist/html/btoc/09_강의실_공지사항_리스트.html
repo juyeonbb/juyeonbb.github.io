@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/btoc/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/btoc/lib/swiper.js"></script>
+    <script src="../../js/front/btoc/lib/twbsPagination.js"></script>
+    <script src="../../js/front/btoc/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/btoc/style.css">
+    <link rel="stylesheet" href="../../css/front/btoc/pages.css">
+    <link rel="shortcut icon" href="../../images/front/btoc/common/favicon.ico">
+    <title>👱🏻‍♀️ KSA EDU 👱🏻‍</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="classroom-contents">
+        <div class="top-heading">
+            <div class="inner">
+                <a class="mo-menu _popupTrigger" data-trigger="mo-gnb-popup" href="#"><i class="ico ico-menu"></i></a>
+                <a class="img-logo" href="#"><img src="../../images/front/btoc/common/logo.png" alt="KSA EDU" /></a>
+                <span class="heading">현장 품질 관리 체계 개선</span>
+                <a class="btn-logout" href="#"><i class="ico ico-logout"></i><span>나가기</span></a>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="lnb">
+                <ul class="classroom-menu-list">
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-1"></i><span>강의실 홈</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-2"></i><span>과정정보</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-3"></i><span>진도</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-4"></i><span>시험</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-5"></i><span>과제</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-6"></i><span>토론</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-7"></i><span>비대면</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-8"></i><span>설문</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-11"></i><span>성적확인</span></a></li>
+                    <li class="item on"><a href="#"><i class="ico ico-lnb-menu-9"></i><span>과정게시판</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-10"></i><span>학습문의</span></a></li>
+                </ul>
+                <div class="info">
+                    <div class="font-1">학습지원센터</div>
+                    <div class="font-2"><i class="ico ico-tel"></i><a href="tel:1234-5678">1234-5678</a></div>
+                    <div class="font-3">평일 09~18시<br/>점심 12~13시</div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="classroom">
+                    <div class="page-title"><span class="title">과정게시판</span></div>
+                    <div class="tab-container _tabContainer">
+                        <div class="tabs-box">
+                            <ul class="balloon-tabs _tab">
+                                <li class="item on"><a href="#">공지사항</a></li>
+                                <li class="item"><a href="#">자료실</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content _tabContent">
+                            <div class="tab-panel on">
+                                <div class="search-box">
+                                    <div class="form-group">
+                                        <label for="category" class="label">제목/내용</label>
+                                        <select class="form-select" name="select" id="category">
+                                            <option value="전체" disabled="" selected="">전체</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                        <div class="form-search" style="width: 320px;">
+                                            <input class="form-input" type="search" title="search" placeholder="검색어를 입력해 주세요.">
+                                            <button type="button" class="btn-search show-mo"><i class="ico ico-search"></i></button>
+                                        </div>
+                                        <button class="btn with-icon" type="button"><i class="ico ico-search-white"></i><span>검색</span></button>
+                                        <button class="btn-refresh ml-20" type="button"><i class="ico ico-refresh"></i><span>초기화</span></button>
+                                    </div>
+                                </div>
+                                <div class="board board-notice">
+                                    <div class="board-head">
+                                        <div class="desc">총 <span class="color-point font-weight-medium">196</span>건의 게시글이 있습니다.</div>
+                                        <div class="form-group">
+                                            <select class="form-select form-select-sm" name="select" title="order" style="width: 100px">
+                                                <option value="전체" disabled="" selected="">전체</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                            <select class="form-select form-select-sm" name="select" title="order" style="width: 120px">
+                                                <option value="20개씩 보기" selected="">20개씩 보기</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="board-body">
+                                        <div class="table">
+                                            <table>
+                                                <colgroup>
+                                                    <col width="8%">
+                                                    <col width="58%">
+                                                    <col width="10%">
+                                                    <col width="14%">
+                                                    <col width="10%">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th class="col-title"><span>No</span></th>
+                                                    <th class="col-title"><span>제목</span></th>
+                                                    <th class="col-title"><span>첨부파일</span></th>
+                                                    <th class="col-title"><span>등록일</span></th>
+                                                    <th class="col-title"><span>조회</span></th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td><i class="ico ico-volume"></i></td>
+                                                    <td class="ellipse align-left">
+                                                        <a href="#" class="ellipse-target color-black">(무료과정) "[네이버 클라우드] AI/빅데이터를 활용한 사이버 보안 개발자 양성과정" 1기 훈련생 (무료과정) "[네이버 클라우드] AI/빅데이터를 활용한 사이버 보안 개발자 양성과정" 1기 훈련생</a>
+                                                        <i class="ico ico-new"></i>
+                                                    </td>
+                                                    <td><a href="#"><i class="ico ico-file"></i></a></td>
+                                                    <td><span>2022-10-20</span></td>
+                                                    <td><span>1000</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td class="ellipse align-left">
+                                                        <a href="#" class="ellipse-target color-black">제649차 KS인증위원회 회의록 공지</a>
+                                                        <i class="ico ico-new"></i>
+                                                    </td>
+                                                    <td><a href="#"><i class="ico ico-file"></i></a></td>
+                                                    <td><span>2022-10-20</span></td>
+                                                    <td><span>1000</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td class="ellipse align-left">
+                                                        <a href="#" class="ellipse-target color-black">제649차 KS인증위원회 회의록 공지</a>
+                                                    </td>
+                                                    <td><a href="#"><i class="ico ico-file"></i></a></td>
+                                                    <td><span>2022-10-20</span></td>
+                                                    <td><span>1000</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td class="ellipse align-left">
+                                                        <a href="#" class="ellipse-target color-black">제649차 KS인증위원회 회의록 공지</a>
+                                                    </td>
+                                                    <td><a href="#"><i class="ico ico-file"></i></a></td>
+                                                    <td><span>2022-10-20</span></td>
+                                                    <td><span>1000</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td class="ellipse align-left">
+                                                        <a href="#" class="ellipse-target color-black">제649차 KS인증위원회 회의록 공지</a>
+                                                    </td>
+                                                    <td><a href="#"><i class="ico ico-file"></i></a></td>
+                                                    <td><span>2022-10-20</span></td>
+                                                    <td><span>1000</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td class="ellipse align-left">
+                                                        <a href="#" class="ellipse-target color-black">제649차 KS인증위원회 회의록 공지</a>
+                                                    </td>
+                                                    <td><a href="#"><i class="ico ico-file"></i></a></td>
+                                                    <td><span>2022-10-20</span></td>
+                                                    <td><span>1000</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td class="ellipse align-left">
+                                                        <a href="#" class="ellipse-target color-black">제649차 KS인증위원회 회의록 공지</a>
+                                                    </td>
+                                                    <td><a href="#"><i class="ico ico-file"></i></a></td>
+                                                    <td><span>2022-10-20</span></td>
+                                                    <td><span>1000</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td class="ellipse align-left">
+                                                        <a href="#" class="ellipse-target color-black">제649차 KS인증위원회 회의록 공지</a>
+                                                    </td>
+                                                    <td><a href="#"><i class="ico ico-file"></i></a></td>
+                                                    <td><span>2022-10-20</span></td>
+                                                    <td><span>1000</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td class="ellipse align-left">
+                                                        <a href="#" class="ellipse-target color-black">제649차 KS인증위원회 회의록 공지</a>
+                                                    </td>
+                                                    <td><a href="#"><i class="ico ico-file"></i></a></td>
+                                                    <td><span>2022-10-20</span></td>
+                                                    <td><span>1000</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="ellipse align-left">
+                                                        <a href="#" class="ellipse-target color-black">제649차 KS인증위원회 회의록 공지</a>
+                                                    </td>
+                                                    <td><a href="#"><i class="ico ico-file"></i></a></td>
+                                                    <td><span>2022-10-20</span></td>
+                                                    <td><span>1000</span></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="board-footer">
+                                        <ul id="pagination" class="pagination"></ul>
+<script>
+    // https://josecebe.github.io/twbs-pagination/
+    $('#pagination').twbsPagination({
+        totalPages: 35,
+        visiblePages: 5,
+        first: `<i class="ico ico-paging-first"></i>`,
+        prev: `<i class="ico ico-paging-prev"></i>`,
+        next: `<i class="ico ico-paging-next"></i>`,
+        last: `<i class="ico ico-paging-last"></i>`,
+    });
+</script>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-panel">2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dim _dim" style="display: none"></div>
+<div class="mo-classroom-gnb _popup" data-popup="mo-gnb-popup">
+    <div class="heading">
+        <span class="title">현장 품질 관리 체계 개선</span>
+        <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close-white"></i></button>
+    </div>
+    <div class="box">
+        <ul class="classroom-menu-list">
+            <li class="item on"><a href="#"><i class="ico ico-lnb-menu-1"></i><span>강의실 홈</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-2"></i><span>과정정보</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-3"></i><span>진도</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-4"></i><span>시험</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-5"></i><span>과제</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-6"></i><span>토론</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-7"></i><span>비대면</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-8"></i><span>설문</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-9"></i><span>과정게시판</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-10"></i><span>학습문의</span></a></li>
+        </ul>
+        <div class="info">
+            <div class="font-1">학습지원센터</div>
+            <div class="font-2"><i class="ico ico-tel"></i><a href="tel:1234-5678">1234-5678</a></div>
+            <div class="font-3">평일 09~18시<br/>점심 12~13시</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

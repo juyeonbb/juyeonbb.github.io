@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Isolation_Mode" data-name="Isolation Mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="13.91 6.26 13.91 4.5 10.38 4.5 9.5 4.5 9.5 8.91 11.26 8.91 11.26 7.51 13.25 9.5 14.5 8.26 12.5 6.26 13.91 6.26"/>
+  <rect class="cls-1" y="16" width="24" height="2"/>
+  <path class="cls-1" d="m20,2v10H4V2h16m2-2H2v14h20V0h0Z"/>
+</svg>

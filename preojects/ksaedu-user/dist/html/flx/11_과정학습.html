@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/flx/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/flx/lib/swiper.js"></script>
+    <script src="../../js/front/flx/lib/twbsPagination.js"></script>
+    <script src="../../js/front/flx/lib/sortable.js"></script>
+    <script src="../../js/front/flx/lib/chart.js"></script>
+    <script src="../../js/front/flx/lib/chartjs-plugin-datalabels.js"></script>
+    <script src="../../js/front/flx/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/flx/style.css">
+    <link rel="stylesheet" href="../../css/front/flx/pages.css">
+    <link rel="shortcut icon" href="../../images/front/flx/common/favicon.ico">
+    <title>📌 KSA EDU 📌</title>
+</head>
+<body class="bg-light-grey">
+<div class="wrap">
+    <div class="player-wrap">
+        <div class="player-head">
+            <div class="title">ESG 경영 9가지로 끝내기!</div>
+            <div class="option">
+                <button class="btn-txt _btnAllCourse"><i class="ico ico-menu-all"></i><span>전체차시</span></button>
+                <button class="btn-txt _btnCourseInfo"><i class="ico ico-course"></i><span>과정정보</span></button>
+            </div>
+        </div>
+        <div class="player-body">
+            <div class="player">
+                <!--            <iframe src="" frameborder="0"></iframe>-->
+                <img src="https://picsum.photos/800/450" alt="ESG 경영 9가지로 끝내기!">
+                <span class="img-dim"></span>
+                <button class="btn-play"><i class="ico ico-play-lg"></i></button>
+                <span class="progress">
+                    <em class="bar" style="width: 25%"></em>
+                </span>
+            </div>
+            <button class="btn-expand _btnExpand"><span class="line"></span><i class="ico ico-expand-up"></i><i class="ico ico-expand-down"></i></button>
+        </div>
+        <div class="player-bottom">
+            <div class="navigation">
+                <button class="btn-nav btn-prev">
+                    <svg width="11px" height="19px">
+                        <path fill="rgb(102, 102, 102)" d="M10.778,17.364 L9.364,18.778 L0.222,9.636 L0.358,9.500 L0.222,9.364 L9.364,0.222 L10.778,1.636 L2.914,9.500 L10.778,17.364 Z"/>
+                    </svg>
+                </button>
+                <span class="paging">
+                    <em class="color-point">1</em>
+                    <em>/4</em>
+                </span>
+                <button class="btn-nav btn-prev">
+                    <svg width="11px" height="19px">
+                        <path fill="rgb(102, 102, 102)" d="M10.778,9.636 L1.636,18.778 L0.222,17.364 L8.086,9.500 L0.222,1.636 L1.636,0.222 L10.778,9.364 L10.642,9.500 L10.778,9.636 Z"/>
+                    </svg>
+                </button>
+            </div>
+            <button class="btn-txt _popupTrigger" data-trigger="popup-report" type="button"><i class="ico ico-validation"></i><span>콘텐츠오류신고</span></button>
+        </div>
+        <div class="player-rnb">
+            <div class="tab-container _tabContainer">
+                <div class="tabs-box">
+                    <ul class="balloon-tabs balloon-tabs-point _tabInner">
+                        <li class="item on"><a href="#">전체차시</a></li>
+                        <li class="item"><a href="#">과정정보</a></li>
+                    </ul>
+                    <button class="btn-close _btnRightNavClose"><i class="ico ico-rnb-close"></i></button>
+                </div>
+                <div class="tab-content _tabContentInner">
+                    <div class="tab-panel on">
+                        <div class="play-list _playList">
+                            <div class="item">
+                                <div class="item-head"><span class="badge">01</span><span class="title">ESG, 신제품이 아닙니다.</span></div>
+                                <div class="item-body">
+                                    <div class="course"><i class="ico ico-course-check"></i><span class="title">1. ESG, 신제품이 아닙니다.</span></div>
+                                    <div class="course"><i class="ico ico-play-blue"></i><span class="title">2. E! 환경경영 Topic 3</span></div>
+                                    <div class="course"><span class="title">3. S! 사회가치경영 Topic 3</span></div>
+                                </div>
+                            </div>
+                            <div class="item open">
+                                <div class="item-head"><span class="badge">02</span><span class="title">E! 환경경영 Topic 3</span></div>
+                                <div class="item-body">
+                                    <div class="course"><i class="ico ico-course-check"></i><span class="title">1. ESG, 신제품이 아닙니다.</span></div>
+                                    <div class="course"><i class="ico ico-play-blue"></i><span class="title">2. E! 환경경영 Topic 3</span></div>
+                                    <div class="course"><span class="title">3. S! 사회가치경영 Topic 3</span></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-head"><span class="badge">03</span><span class="title">S! 사회가치경영 Topic 3</span></div>
+                                <div class="item-body">
+                                    <div class="course"><i class="ico ico-course-check"></i><span class="title">1. ESG, 신제품이 아닙니다.</span></div>
+                                    <div class="course"><i class="ico ico-play-blue"></i><span class="title">2. E! 환경경영 Topic 3</span></div>
+                                    <div class="course"><span class="title">3. S! 사회가치경영 Topic 3</span></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-head"><span class="badge">04</span><span class="title">G! 거버넌스 Topic 3 </span></div>
+                                <div class="item-body">
+                                    <div class="course"><i class="ico ico-course-check"></i><span class="title">1. ESG, 신제품이 아닙니다.</span></div>
+                                    <div class="course"><i class="ico ico-play-blue"></i><span class="title">2. E! 환경경영 Topic 3</span></div>
+                                    <div class="course"><span class="title">3. S! 사회가치경영 Topic 3</span></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-head"><span class="badge">05</span><span class="title">ESG 경영 실행을 위한 Q&A</span></div>
+                                <div class="item-body">
+                                    <div class="course"><i class="ico ico-course-check"></i><span class="title">1. ESG, 신제품이 아닙니다.</span></div>
+                                    <div class="course"><i class="ico ico-play-blue"></i><span class="title">2. E! 환경경영 Topic 3</span></div>
+                                    <div class="course"><span class="title">3. S! 사회가치경영 Topic 3</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-panel">
+                        <div class="course-content">
+                            <div class="course-info">
+                                <div class="tit">과정소개</div>
+                                <div class="txt">중견, 중소기업의 임직원이 반드시 알아야 할 ESG경영 Topic 30을 설명하고 있습니다. 중소, 중견기업이 ESG 경영을 바르게 이해하고
+                                    실천할 수 있도록 돕기 위해 ESG 개념, 중요이슈, 대응방법, 사례제시를 하고 있습니다.<br/>
+                                    가장 실질적으로 바로 실천할 수 있는 실천가이드를 제시합니다.</div>
+                            </div>
+                            <div class="course-review">
+                                <div class="form-review">
+                                    <textarea class="form-input" title="review" placeholder="수강후기를 입력해 주세요."></textarea>
+                                    <button class="btn btn-sm">등록</button>
+                                </div>
+                                <div class="review-list">
+                                    <div class="item">
+                                        <div class="tit">
+                                    <span class="txt">수강후기가 들어갑니다.
+                                    수강후기가 들어갑니다. 수강후기가 들어갑니다.</span>
+                                            <button class="btn-del"><i class="ico ico-delete"></i></button>
+                                        </div>
+                                        <div class="name">김나나</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tit">
+                                            <span class="txt">수강후기가 들어갑니다.</span>
+                                            <button class="btn-del"><i class="ico ico-delete"></i></button>
+                                        </div>
+                                        <div class="name">김나나</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tit"><span class="txt">수강후기가 들어갑니다.</span></div>
+                                        <div class="name">김나나</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tit"><span class="txt">수강후기가 들어갑니다.</span></div>
+                                        <div class="name">김나나</div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="tit"><span class="txt">수강후기가 들어갑니다.</span></div>
+                                        <div class="name">김나나</div>
+                                    </div>
+                                </div>
+                                <div class="empty-box">
+                                    <div class="txt">등록된 수강후기가 없습니다.</div>
+                                </div>
+                                <ul id="pagination" class="pagination"></ul>
+<script>
+    // https://josecebe.github.io/twbs-pagination/
+    $('#pagination').twbsPagination({
+        totalPages: 35,
+        visiblePages: 5,
+        first: `<i class="ico ico-paging-first"></i>`,
+        prev: `<i class="ico ico-paging-prev"></i>`,
+        next: `<i class="ico ico-paging-next"></i>`,
+        last: `<i class="ico ico-paging-last"></i>`,
+    });
+</script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dim _dim"></div>
+<div class="popup popup-form _popup" data-popup="popup-report">
+    <div class="popup-content">
+        <div class="popup-head">
+            <span class="title">콘텐츠 오류신고</span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="login-contents">
+                <div class="sign-in">
+                    <div class="form">
+                        <div class="form-group">
+                            <label class="label">차시</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="num" value="ESG, 신제품이 아닙니다." disabled />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">페이지</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="page" value="2. E! 환경경영 Topic 3" disabled />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">제목</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="title" value="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="textarea" class="label">내용</label>
+                            <textarea class="form-input" name="textarea" id="textarea" onkeyup="countChar(this,'_val')" maxlength="200" placeholder=""></textarea>
+                            <span class="txt-limit"><em class="value _val">0</em> / 200자</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">사업자 등록증 <em class="color-caution">*</em></label>
+                            <div class="form-file">
+                                <input class="input-file" id="file" type="file">
+                                <label class="btn btn-border-grey" for="file">파일선택</label>
+                                <ul class="file-list">
+                                    <li class="item"><i class="ico ico-pdf"></i><span class="name">한국표준협회 사업자등록증.pdf</span><button class="btn-delete" type="button"><i class="ico ico-delete"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button class="btn btn-border-grey _popupClose" type="button">취소</button>
+            <button class="btn" type="button">등록</button>
+        </div>
+    </div>
+</div>
+<script>
+    // RNB
+    $('._btnAllCourse').on('click', function () {
+        $('.player-rnb').addClass('show');
+
+        if(!$('._tabInner').find('.item').eq(0).hasClass('on')) {
+            $('._tabInner').find('.item').eq(0).addClass('on').siblings().removeClass('on');
+            $('._tabContentInner').find('.tab-panel').eq(0).addClass('on').siblings().removeClass('on');
+        }
+    })
+    $('._btnCourseInfo').on('click', function () {
+        $('.player-rnb').addClass('show');
+
+        if(!$('._tabInner').find('.item').eq(1).hasClass('on')) {
+            $('._tabInner').find('.item').eq(1).addClass('on').siblings().removeClass('on');
+            $('._tabContentInner').find('.tab-panel').eq(1).addClass('on').siblings().removeClass('on');
+        }
+    })
+
+    $('._btnRightNavClose').on('click', function () {
+        $('.player-rnb').removeClass('show')
+    })
+
+    // Tab
+    $('._tabInner').find('a').on('click', function () {
+        let idx = $(this).parent().index();
+        $(this).parent().addClass('on').siblings().removeClass('on');
+        $('._tabContentInner').find('.tab-panel').eq(idx).addClass('on').siblings().removeClass('on');
+    })
+
+    // expand
+    $('._btnExpand').on('click', function () {
+        if(!$(this).hasClass('expanded')) {
+            $(this).addClass('expanded');
+            $('.player-head').addClass('hide');
+            $('.player-bottom').addClass('hide');
+        } else {
+            $(this).removeClass('expanded');
+            $('.player-head').removeClass('hide');
+            $('.player-bottom').removeClass('hide');
+        }
+    })
+
+    // play list
+    $('._playList').find('.item-head').on('click', function () {
+        $(this).parent('.item').toggleClass('open')
+    })
+
+    // mobile
+    const checkMobile = window.matchMedia('(max-width: 768px)')
+    setMobile(checkMobile)
+    checkMobile.addListener(setMobile)
+
+    function setMobile (e) {
+        if (e.matches) {
+            $('._btnExpand').addClass('expanded');
+            $('.player-head').addClass('hide');
+            $('.player-bottom').addClass('hide');
+        } else {
+            $('._btnExpand').removeClass('expanded');
+            $('.player-head').removeClass('hide');
+            $('.player-bottom').removeClass('hide');
+        }
+    }
+</script>
+</body>
+</html>

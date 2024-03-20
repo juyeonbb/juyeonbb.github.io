@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/asp/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/asp/lib/swiper.js"></script>
+    <script src="../../js/front/asp/lib/twbsPagination.js"></script>
+    <script src="../../js/front/asp/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/asp/style.css">
+    <link rel="stylesheet" href="../../css/front/asp/pages.css">
+    <link rel="shortcut icon" href="../../images/front/asp/common/favicon.ico">
+    <title>💼 KSA EDU 💻</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <div class="btn-wrap">
+        <button class="btn _popupTrigger" data-trigger="popup1" type="button">팝업 1</button>
+    </div>
+</div>
+<div class="dim _dim" style="display: block"></div>
+<div class="popup popup-box-text _popup" data-popup="popup1" style="display: block">
+    <div class="popup-content">
+        <div class="popup-head">
+            <span class="title">시험 응시 안내</span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="box">
+                <div class="list">
+                    <div class="desc">시험은 <span class="font-weight-bold color-caution">단 1회만 응시 가능</span>합니다.</div>
+                    <div class="desc">답안 작성 시 답안은 자동 저장됩니다.</div>
+                    <div class="desc">시험은 시험기간 중 <span class="font-weight-bold color-caution">제한시간(60분) 이내</span>에서만 가능합니다.</div>
+                    <div class="desc">시험 중간에 시험창을 강제 종료할 경우, 또는 인터넷이나 컴퓨터가 다운 되는 현상이
+                        일어나는 경우 시험시간은 계속 진행 중이며 <span class="font-weight-bold color-caution">종료시간 이전까지는 재접속이 가능</span>합니다.</div>
+                    <div class="desc">최초 접속부터 정확히 60분 후 시험 창은 닫히므로, <span class="font-weight-bold color-caution">60분 이전에 “제출하기”</span> 버튼을
+                        눌러주십시오.</div>
+                    <div class="desc">문제를 다 푸신 다음 <span class="font-weight-bold color-caution">“제출하기”버튼을 반드시 클릭</span>하시기 바랍니다.<br/>
+                        “제출하기” 미클릭시 “0점” 처리됩니다.</div>
+                    <div class="desc">아래의 <span class="font-weight-bold color-caution">“응시하기”버튼을 클릭하면 시험이 시작</span>됩니다.</div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="btn-wrap">
+                <button class="btn _popupClose">응시하기</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

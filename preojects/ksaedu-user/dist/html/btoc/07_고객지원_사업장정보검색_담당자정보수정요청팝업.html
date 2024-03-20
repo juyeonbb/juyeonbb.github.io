@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/btoc/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/btoc/lib/swiper.js"></script>
+    <script src="../../js/front/btoc/lib/twbsPagination.js"></script>
+    <script src="../../js/front/btoc/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/btoc/style.css">
+    <link rel="stylesheet" href="../../css/front/btoc/pages.css">
+    <link rel="shortcut icon" href="../../images/front/btoc/common/favicon.ico">
+    <title>👱🏻‍♀️ KSA EDU 👱🏻‍</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <div class="btn-wrap">
+        <button class="btn _popupTrigger" data-trigger="popup1" type="button">팝업 1</button>
+    </div>
+</div>
+<div class="dim _dim" style="display: block"></div>
+<div class="popup popup-form _popup" data-popup="popup1" style="display: block">
+    <div class="popup-content">
+        <div class="popup-head">
+            <span class="title">담당자정보 수정요청</span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="login-contents">
+                <div class="sign-in">
+                    <div class="form">
+                        <div class="form-title">
+                            <span class="title">교육담당자</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="label">이름 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" id="name" value="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="part" class="label">부서 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" id="part" value="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="position" class="label">직위 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" id="position" value="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel" class="label">전화번호 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="tel" id="tel" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel2" class="label">휴대전화번호</label>
+                            <div class="form-row">
+                                <input class="form-input" type="tel" id="tel2" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fax" class="label">팩스번호</label>
+                            <div class="form-row">
+                                <input class="form-input" type="tel" id="fax" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="label">이메일 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="email" id="email" />
+                            </div>
+                        </div>
+                        <div class="form-title">
+                            <span class="title">계산서 담당자</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="label">이름 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" id="name" value="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="part" class="label">부서 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" id="part" value="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="position" class="label">직위 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" id="position" value="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel" class="label">전화번호 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="tel" id="tel" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel2" class="label">휴대전화번호</label>
+                            <div class="form-row">
+                                <input class="form-input" type="tel" id="tel2" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fax" class="label">팩스번호</label>
+                            <div class="form-row">
+                                <input class="form-input" type="tel" id="fax" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="label">이메일 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="email" id="email" />
+                            </div>
+                        </div>
+                        <div class="form-title">
+                            <span class="title">개인정보 수집동의 <em class="color-caution">*</em></span>
+                        </div>
+                        <div class="form-group">
+<!--                            <label for="email" class="label"> <em class="color-caution">*</em></label>-->
+                            <div class="form-row">
+                                <div class="terms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur delectus dolore eaque eius enim et illo ipsam maiores modi neque, non numquam odio quidem repellat saepe tempora voluptas voluptatem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aspernatur delectus dolore eaque eius enim et illo ipsam maiores modi neque, non numquam odio quidem repellat saepe tempora voluptas voluptatem!</div>
+<!--                                <textarea class="form-input" title="textarea"></textarea>-->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkbox1" class="form-check">
+                                <input type="checkbox" id="checkbox1" name="checkGroup" checked="">
+                                <span>개인정보 수집에 동의합니다.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button class="btn btn-border-grey _popupClose" type="button">취소</button>
+            <button class="btn" type="button">신청</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

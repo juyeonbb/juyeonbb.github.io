@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/btoc/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/btoc/lib/swiper.js"></script>
+    <script src="../../js/front/btoc/lib/twbsPagination.js"></script>
+    <script src="../../js/front/btoc/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/btoc/style.css">
+    <link rel="stylesheet" href="../../css/front/btoc/pages.css">
+    <link rel="shortcut icon" href="../../images/front/btoc/common/favicon.ico">
+    <title>👱🏻‍♀️ KSA EDU 👱🏻‍</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <div class="btn-wrap">
+        <button class="btn _popupTrigger" data-trigger="popup1" type="button">팝업 1</button>
+    </div>
+</div>
+<div class="dim _dim" style="display: block"></div>
+<div class="popup popup-terms _popup" data-popup="popup1" style="display: block">
+    <div class="popup-content">
+        <div class="popup-head">
+            <span class="title">개인정보처리방침</span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="form-group">
+                <select class="form-select _selectTab" name="select" title="select">
+                    <option value="tab1" selected>2023년 07월 06일 시행일자 기준</option>
+                    <option value="tab2">2022년 01월 03일 시행일자 기준</option>
+                    <option value="tab3">2021년 07월 16일 시행일자 기준</option>
+                    <option value="tab4">2020년 02월 07일 시행일자 기준</option>
+                </select>
+            </div>
+
+            <!-- s 2023년 07월 06일 -->
+            <div class="content active" data-id="tab1">
+                <div class="desc mb-20">한국표준협회 KSAEDU 홈페이지(이하 “KSAEDU 홈페이지”라 합니다)는 개인정보 보호법 제30조에 따라 정보주체의 개인정보를 보호 및 권익을 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이 개인정보 처리지침을 수립하여 공개합니다.</div>
+
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col span="3" width="auto">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th colspan="3" class="col-title"><span>주요 개인정보 처리 표시(라벨링)</span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <span class="tit">개인정보 수집</span>
+                                <span class="img"><img src="../../images/front/btoc/common/person_info_lb01.jpg" alt="개인정보 수집"/></span>
+                                <span class="des">필수 : 이름, 생년월일, 휴대폰번호 등<br/><small>※ 세부사항은 개인정보 처리방침 본문 확인</small></span>
+                            </td>
+                            <td>
+                                <span class="tit">개인정보 처리목적</span>
+                                <span class="img"><img src="../../images/front/btoc/common/person_info_lb02.jpg" alt="개인정보 처리목적"/></span>
+                                <span class="des">교육신청 등<br/><small>※ 세부사항은 개인정보 처리방침 본문 확인</small></span>
+                            </td>
+                            <td>
+                                <span class="tit">보유기간 및 파기</span>
+                                <span class="img"><img src="../../images/front/btoc/common/person_info_lb03.jpg" alt="보유기간 및 파기"/></span>
+                                <span class="des">개인정보는 탈퇴 시 파기<br/><small>* 일부 개인정보는 관련 법령에 따라 보관</small></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="tit">개인정보 처리위탁</span>
+                                <span class="img"><img src="../../images/front/btoc/common/person_info_lb04.jpg" alt="개인정보 처리위탁"/></span>
+                                <span class="des"><small>※ 세부사항은 개인정보 처리방침 본문 확인</small></span>
+                            </td>
+                            <td>
+                                <span class="tit">개인정보 열람청구 처리부서</span>
+                                <span class="img"><img src="../../images/front/btoc/common/person_info_lb05.jpg" alt="개인정보 고충처리부서"/></span>
+                                <span class="des">교육총괄센터 김상석 센터장<br/>02-2624-0110<br/>stonems@ksa.or.kr</span>
+                            </td>
+                            <td>
+<!--                                <span class="tit">개인정보 수준진단</span>-->
+<!--                                <span class="img"><img src="../../images/front/btoc/common/person_info_lb06.jpg" alt="개인정보 수준진단"/></span>-->
+<!--                                <span class="des">2022년<br/>개인정보 관리수준 진단<br/>“S등급”</span>-->
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table table-type-2">
+                    <table>
+                        <colgroup>
+                            <col span="2" width="50%" />
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th colspan="2" class="col-title"><span><strong>목차</strong><br/>국가환경교육 통합플랫폼 개인정보처리방침은 다음과 같은 내용으로 구성되어 있습니다.<br/><small>※ 목차의 조항 클릭 시 해당 조항으로 이동합니다.</small></span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><a href="#privacy_01" class="link"><img src="../../images/front/btoc/common/ic_privacy_01.png" alt="개인정보의 처리목적">제1조(개인정보의 처리목적)</a></td>
+                            <td><a href="#privacy_02" class="link"><img src="../../images/front/btoc/common/ic_privacy_03.png" alt="처리하는 개인정보 항목">제2조(처리하는 개인정보 항목)</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#privacy_03" class="link"><img src="../../images/front/btoc/common/ic_privacy_02.png" alt="개인정보의 처리 및 보유기간">제3조(개인정보의 처리 및 보유기간)</a></td>
+                            <td><a href="#privacy_04" class="link"><img src="../../images/front/btoc/common/ic_privacy_06.png" alt="개인정보의 제3자 제공">제4조(개인정보의 제3자 제공)</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#privacy_05" class="link"><img src="../../images/front/btoc/common/ic_privacy_07.png" alt="개인정보처리의 위탁">제5조(개인정보처리의 위탁)</a></td>
+                            <td><a href="#privacy_06" class="link"><img src="../../images/front/btoc/common/ic_privacy_09.png" alt="정보주체와 법정대리인의 권리·의무 및 행사방법">제6조(정보주체와 법정대리인의 권리·의무 및 행사방법)</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#privacy_07" class="link"><img src="../../images/front/btoc/common/ic_privacy_08.png" alt="개인정보의 파기">제7조(개인정보의 파기)</a></td>
+                            <td><a href="#privacy_08" class="link"><img src="../../images/front/btoc/common/ic_privacy_10.png" alt="개인정보의 안전성 확보조치">제8조(개인정보의 안전성 확보조치)</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#privacy_09" class="link"><img src="../../images/front/btoc/common/ic_privacy_13.png" alt="개인정보 보호책임자">제9조(개인정보 보호책임자)</a></td>
+                            <td><a href="#privacy_10" class="link"><img src="../../images/front/btoc/common/ic_privacy_15.png" alt="권익침해 구제방법">제10조(권익침해 구제방법)</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#privacy_11" class="link"><img src="../../images/front/btoc/common/ic_privacy_11.png" alt="개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항">제11조(개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항)</a></td>
+                            <td><a href="#privacy_12" class="link"><img src="../../images/front/btoc/common/ic_privacy_19.png" alt="개인정보 처리방침 변경">제12조(개인정보 처리방침 변경)</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="title" id="privacy_01"><img src="../../images/front/btoc/common/ic_privacy_01.png" alt="개인정보의 처리목적"/>제1조(개인정보의 처리목적)</div>
+                <div class="desc">KSAEDU 홈페이지는 개인정보를 다음 목적 이외의 용도로는 이용하지 않으며 이용 목적 등이 변경될 경우에는 동의를 받아 처리하겠습니다.</div>
+                <div class="bullet">회원관리 : 회원제 서비스 이용에 따른 본인확인, 개인식별, 가입 의사 확인, 불만처리 등 민원처리, 고지사항 전달</div>
+                <div class="bullet">서비스 제공에 관한 계약 이행 및 요금정산 : 콘텐츠 제공, 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송</div>
+                <div class="bullet">마케팅 및 광고에 활용 : 신규 서비스(제품) 개발 및 특화 , 이벤트 등 광고성 정보 전달</div>
+                <div class="bullet">고용보험 환급 교육과정 신청 시 : 고용보험 환급 교육과정에 대한 수강정보 등록 및 환급서류 제출 용도</div>
+                <div class="desc">※ 서비스 이용과정에서 IP Address, 쿠키, 방문 일시, 결제 기록, 서비스 이용 기록이 자동으로 수집될 수 있습니다.</div>
+
+                <div class="title" id="privacy_02"><img src="../../images/front/btoc/common/ic_privacy_03.png" alt="처리하는 개인정보 항목"/>제2조(처리하는 개인정보 항목)</div>
+                <div class="desc">KSAEDU 홈페이지는 다음의 개인정보 항목을 처리하고 있습니다.</div>
+                <div class="bullet">
+                    기본항목 수집방법 : 홈페이지 회원가입 및 회원정보 관리 수정<br/>
+                    필수 : 이름, 생년월일, 성별, 로그인ID, 비밀번호, 전화번호, 휴대폰번호, 이메일<br/>
+                    선택 : 닉네임, 주소, 사원번호, 직급, 직무, 부서
+                </div>
+                <div class="bullet">
+                    환급 과정 수강<br/>
+                    회원정보 관리 수정 및 고용보험 지원 과정 수강신청 시 최초 1회<br/>
+                    필수 : 주민등록번호<br/>
+                    고용보험 환급 신청 시 : 회사명, 사업자번호, 훈련생구분, 비정규직 구분<br/>
+                    ※ 근거법령 : (고용보험 수강) 근로자직업능력 개발법 시행령 제52조 2항 및 시행규칙 제7조 2항
+                </div>
+                <div class="bullet">
+                    학습자료(교재)포함 과정 수강 시<br/>
+                    필수 : 주소, 수령인, 배송연락처
+                </div>
+                <div class="bullet">
+                    온라인 상담 관련 항목 수집 방법<br/>
+                    교육안내서 신청 서비스 이용 시 수집 항목<br/>
+                    필수 : 기업명, 이름, 부서, 직책, 전화번호, 휴대폰번호, 이메일<br/>
+                    선택 : 주소<br/>
+                    기업 대량교육 신청 시 : 기업명, 이름, 휴대폰번호, 이메일
+                </div>
+                <div class="bullet">
+                    서비스 이용과정이나 사업처리 과정에서 아래의 정보들이 생성되어 수집될 수 있음<br/>
+                    서비스 이용기록, 접속로그, 크기, 접속 IP 정보, 운영체제 종류, 인터넷 브라우저 종류, 스크린 해상도, 기타 속성 값
+                </div>
+
+                <div class="title" id="privacy_03"><img src="../../images/front/btoc/common/ic_privacy_02.png" alt="개인정보의 처리 및 보유기간"/>제3조(개인정보의 처리 및 보유기간)</div>
+                <div class="desc">KSAEDU 홈페이지는 법령에 따른 개인정보 보유․이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의 받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</div>
+                <div class="bullet">회원정보 : 회원 탈퇴 시까지 또는 마지막 로그인 일로부터 3년</div>
+                <div class="bullet">웹사이트 접속 및 이용 기록 : 6개월 (통신비밀보호법)</div>
+                <div class="bullet">계약 또는 청약철회 등에 관한 기록: 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</div>
+                <div class="bullet">대금결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</div>
+                <div class="bullet">소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</div>
+                <div class="bullet">고용보험 환급 대상 주민등록번호 : 비용지원 종료 후 3년 (근로자직업능력 개발법)</div>
+
+                <div class="title" id="privacy_04"><img src="../../images/front/btoc/common/ic_privacy_06.png" alt="개인정보의 제3자 제공"/>제4조(개인정보의 제3자 제공)</div>
+                <div class="desc">KSAEDU 홈페이지는 정보주체의 개인정보를 제1조(개인정보의 처리 목적)에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 개인정보 보호법 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</div>
+                <div class="desc">KSAEDU 홈페이지는 다음과 같이 개인정보를 제3자에게 제공하고 있습니다.</div>
+                <div class="bullet">제공받는자 : (주)드림시큐리티, 코리아크레딧뷰로(주), 가입한 이동통신사(SKT, KT, LGU+, 알뜰폰)</div>
+                <div class="bullet">제공항목 : 성명, 성별, 내/외국인, 생년월일, 휴대폰번호, 아이핀ID, 비밀번호</div>
+                <div class="bullet">제공목적 : 본인인증</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div>
+                <div class="bullet">제공받는자 : 고용노동부</div>
+                <div class="bullet">제공항목 : 성명, 주민등록번호, 이메일, 휴대폰번호, 비정규직여부, 타사근로자 여부</div>
+                <div class="bullet">제공목적 : 고용보험환급(사업주에 대한 직업능력개발훈련 지원)</div>
+                <div class="bullet">보유 및 이용기간 : 3년</div>
+                <div class="bullet">제공받는자 : 산업인력관리공단</div>
+                <div class="bullet">제공항목 : 이메일, 접속로그(IP, MAC ADDRESS,HARD DISK SERIAL), 학습정보운영체제 종류, 브라우저 종류, 스크린 해상도, 기타 속성 값</div>
+                <div class="bullet">제공목적 : 고용보험환급(사업주에 대한 직업능력개발훈련 지원), 수강생 모니터링</div>
+                <div class="bullet">보유 및 이용기간 : 3년</div>
+                <div class="bullet">ACS(훈련생 수강확인 문자 발송 서비스) 시행에 따라 훈련수강과 관련된 사실 관계 확인을 위해 산업인력공단에서 문자를 발송할 수 있습니다.</div>
+                <div class="bullet">제공받는자 : 직업능력심사평가원</div>
+                <div class="bullet">제공항목 : 성명, 교육과정, 소속, 전화번호</div>
+                <div class="bullet">제공목적 : 고용노동부 직업능력개발 훈련기관 평가시 수요자 평가</div>
+                <div class="bullet">보유 및 이용기간 : 3년</div>
+
+                <div class="title" id="privacy_05"><img src="../../images/front/btoc/common/ic_privacy_07.png" alt="개인정보처리의 위탁"/>제5조(개인정보처리의 위탁)</div>
+                <div class="desc">KSAEDU 홈페이지는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.</div>
+                <div class="bullet">제공받는자 : (주)한국표준협회미디어</div>
+                <div class="bullet">제공항목 : 이름,소속,전화번호,휴대폰번호,주소</div>
+                <div class="bullet">제공목적 : 학습진행을 위한 교재 위탁 배송</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+                <div class="bullet">제공받는자 :예스이십사(주),디자인여백플러스,(주)타라티피에스 그래픽스 사업 부문,디엠도서유통(주)</div>
+                <div class="bullet">제공항목 : 이름,개강일,수강과정명,선택교재명,주소,전화번호,휴대폰번호,회사명</div>
+                <div class="bullet">제공목적 : 학습교재 발송</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+                <div class="bullet">제공받는자 : (주)캐롯솔루션즈,(주)엔이능률</div>
+                <div class="bullet">제공항목 : 전화영어 수강자의 이름,아이디,전화번호,휴대폰번호,회사명</div>
+                <div class="bullet">제공목적 : 전화영어 수강</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+                <div class="bullet">제공받는자 : (주)유밥</div>
+                <div class="bullet">제공항목 : 이름,소속,전화번호,휴대폰번호,주소</div>
+                <div class="bullet">제공목적 : 학습진행을 위한 교재 위탁 배송, 스마트러닝 수강</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+                <div class="bullet">제공받는자 :(주)휴머스온</div>
+                <div class="bullet">제공항목 : 성명,휴대전화,이메일</div>
+                <div class="bullet">제공목적 : 메시징 서비스</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+                <div class="bullet">제공받는자 : NHN한국사이버결제 주식회사</div>
+                <div class="bullet">제공항목 : 성명,휴대전화,이메일</div>
+                <div class="bullet">제공목적 : 온라인 결제대행 서비스</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+                <div class="bullet">제공받는자 : 스마트올리브</div>
+                <div class="bullet">제공항목 : 과정명,교육일자,이름,휴대폰번호</div>
+                <div class="bullet">제공목적 : 전자식권서비스</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div>
+                <div class="desc">한국표준협회는 위탁계약 시 개인정보보호 관련 법규에 따라 위탁업무 수행 목적 외 개인정보 처리금지, 기술적ㆍ관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리ㆍ감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</div>
+
+                <div class="title" id="privacy_06"><img src="../../images/front/btoc/common/ic_privacy_09.png" alt="정보주체와 법정대리인의 권리·의무 및 행사방법"/>제6조(정보주체와 법정대리인의 권리·의무 및 행사방법)</div>
+                <div class="desc">정보주체는 KSAEDU 홈페이지에 대해 언제든지 개인정보 열람ㆍ정정ㆍ삭제ㆍ처리정지 요구 등의 권리를 행사할 수 있습니다.</div>
+                <div class="bullet">KSAEDU 홈페이지에 대해 개인정보보호법 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며, KSAEDU 홈페이지는 이에 대해 지체없이 조치하겠습니다.</div>
+                <div class="bullet">정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 개인정보 보호법 시행규칙 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.</div>
+                <div class="bullet">개인정보 열람 및 처리정지 요구는 개인정보보호법 제35조 제5항, 제37조 제2항에 의하여 정보주체의 권리가 제한 될 수 있습니다.</div>
+                <div class="bullet">개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.</div>
+                <div class="bullet">KSAEDU 홈페이지는 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.</div>
+
+                <div class="title" id="privacy_07"><img src="../../images/front/btoc/common/ic_privacy_08.png" alt="개인정보의 파기"/>제7조(개인정보의 파기)</div>
+                <div class="desc">KSAEDU 홈페이지는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 다음과 같이 지체 없이 해당 개인정보를 파기합니다.</div>
+                <div class="bullet">파기절차 : 불필요한 개인정보 및 개인정보파일은 내부방침 절차에 따라 지체 없이 파기합니다.</div>
+                <div class="bullet">파기방법 : 전자적 형태의 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하며, 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.</div>
+
+                <div class="title" id="privacy_08"><img src="../../images/front/btoc/common/ic_privacy_10.png" alt="개인정보의 안전성 확보조치"/>제8조(개인정보의 안전성 확보조치)</div>
+                <div class="desc">KSAEDU 홈페이지는 「개인정보보호법」제29조에 따라 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</div>
+                <div class="bullet">관리적 조치 : 내부관리계획 수립ㆍ시행, 개인정보 담당자 대상 정기적 직원 교육 등</div>
+                <div class="bullet">기술적 조치 : 개인정보처리시스템 등의 접근권한 관리, 접근통제시스템 설치, 비밀번호 등의 암호화, 보안프로그램 설치</div>
+                <div class="bullet">물리적 조치 : 전산실, 자료보관실 등의 접근통제</div>
+
+                <div class="title" id="privacy_09"><img src="../../images/front/btoc/common/ic_privacy_13.png" alt="개인정보 보호책임자"/>제9조(개인정보 보호책임자)</div>
+                <div class="desc">KSAEDU 홈페이지는 개인정보를 보호하고 개인정보와 관련된 사항을 처리하기 위하여 아래와 같이 개인정보보호책임자, 개인정보보호담당자 및 개인정보 열람청구를 접수·처리하는 부서 및 담당자를 지정하고 있습니다.</div>
+                <div class="desc">개인정보보호책임자</div>
+                <div class="bullet">부서명 : 경영지원본부</div>
+                <div class="bullet">성명 : 이경근 본부장</div>
+                <div class="bullet">전화번호 : 02-6240-4510</div>
+                <div class="bullet">이메일 : kklee@ksa.or.kr</div>
+                <div class="desc">개인정보보호담당자</div>
+                <div class="bullet">부서명 : 지식정보실</div>
+                <div class="bullet">성명 : 권진택 위원</div>
+                <div class="bullet">전화번호 : 02-6240-4544</div>
+                <div class="bullet">이메일 : kjt12@ksa.or.kr</div>
+                <div class="desc">개인정보 열람청구 접수 및 처리부서</div>
+                <div class="bullet">부서명 : 교육총괄센터</div>
+                <div class="bullet">성명 : 김상석 센터장</div>
+                <div class="bullet">전화번호 : 02-2624-0110</div>
+                <div class="bullet">이메일 : stonems@ksa.or.kr</div>
+
+                <div class="title" id="privacy_10"><img src="../../images/front/btoc/common/ic_privacy_15.png" alt="권익침해 구제방법"/>제10조(권익침해 구제방법)</div>
+                <div class="desc">정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침해의 신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.</div>
+                <div class="bullet">개인정보 침해신고센터 (한국인터넷진흥원 운영) : (국번없이) 118 (privacy.kisa.or.kr)</div>
+                <div class="bullet">소관업무 : 개인정보 침해사실 신고, 상담 신청</div>
+                <div class="bullet">개인정보 분쟁조정위원회 :(국번없이) 118 (www.kopico.go.kr)</div>
+                <div class="bullet">소관업무 : 개인정보 분쟁조정신청, 집단분쟁조정 (민사적 해결)</div>
+                <div class="bullet">대검찰청 사이버범죄수사단 : (국번없이) 1301 (www.spo.go.kr)</div>
+                <div class="bullet">경찰청 사이버안전국 : (국번없이) 182 (cyberbureau.police.go.kr)</div>
+
+                <div class="title" id="privacy_11"><img src="../../images/front/btoc/common/ic_privacy_11.png" alt="개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항"/>제11조(개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항)</div>
+                <div class="desc">KSAEDU 홈페이지는 이용자에게 개별적인 맞춤서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용합니다. 쿠키는 웹사이트를 운영하는데 이용되는 서버(http)가 이용자의 컴퓨터 브라우저에게 보내는 소량의 정보이며 이용자들의 PC 컴퓨터내의 하드디스크에 저장되기도 합니다.</div>
+                <div class="bullet">쿠키의 사용 목적 : 이용자가 방문한 각 서비스와 웹 사이트들에 대한 방문 및 이용형태 등을 파악하여 이용자에게 최적화된 정보 제공을 위해 사용합니다.</div>
+                <div class="bullet">쿠키의 설치·운영 및 거부<br/>
+                    - 인터넷익스플로러(IE)인 경우 웹브라우저 상단의 도구>인터넷 옵션>개인정보 메뉴의 옵션 설정을 통해 쿠키 저장을 거부 할 수 있습니다.<br/>
+                    - 크롬(Chrome)인 경우 웹브라우저 오른쪽 상단의 더보기>설정>고급>개인정보 및 보안: 사이트 설정>사이트에서 쿠키 데이터를 저장하고 읽도록 허용을 차단을 통해 쿠키 저장을 거부 할 수 있습니다.</div>
+                <div class="desc">※ 다만, 쿠키의 저장을 거부할 경우에는 로그인이 필요한 팝업창 등 일부 서비스는 이용에 어려움이 있을 수 있습니다.</div>
+
+                <div class="title" id="privacy_12"><img src="../../images/front/btoc/common/ic_privacy_19.png" alt="개인정보 처리방침 변경"/>제12조(개인정보 처리방침 변경)</div>
+                <div class="desc">KSAEDU 홈페이지의 개인정보처리방침은 시행일로부터 적용되며, 변경이력 및 내용은 아래에서 확인하실 수 있습니다.</div>
+                <div class="bullet with-btn">시행일자 : 2023년 07월 06일 (제5조 변경)</div>
+                <div class="bullet with-btn">변경일자 : 2022년 01월 03일 (제5조, 제9조 변경) <a href="#" class="btn btn-sm btn-border-point">보기</a></div>
+                <div class="bullet with-btn">변경일자 : 2021년 07월 16일 (제9조 변경) <a href="#" class="btn btn-sm btn-border-point">보기</a></div>
+                <div class="bullet with-btn">변경일자 : 2020년 02월 07일 (제9조 변경) <a href="#" class="btn btn-sm btn-border-point">보기</a></div>
+            </div>
+            <!-- e 2023년 07월 06일 -->
+
+            <!-- s 2022년 01월 03일 -->
+            <div class="content" data-id="tab2">
+                <div class="desc">한국표준협회 KSAEDU 홈페이지(이하 “KSAEDU 홈페이지”라 합니다)는 개인정보 보호법 제30조에 따라 정보주체의 개인정보를 보호 및 권익을 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이 개인정보 처리지침을 수립하여 공개합니다.</div>
+
+                <div class="title">제1조(개인정보의 처리목적)</div>
+                <div class="desc">KSAEDU 홈페이지는 개인정보를 다음 목적 이외의 용도로는 이용하지 않으며 이용 목적 등이 변경될 경우에는 동의를 받아 처리하겠습니다.</div>
+                <div class="bullet">회원관리 : 회원제 서비스 이용에 따른 본인확인, 개인식별, 가입 의사 확인, 불만처리 등 민원처리, 고지사항 전달</div>
+                <div class="bullet">서비스 제공에 관한 계약 이행 및 요금정산 : 콘텐츠 제공, 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송</div>
+                <div class="bullet">마케팅 및 광고에 활용 : 신규 서비스(제품) 개발 및 특화 , 이벤트 등 광고성 정보 전달</div>
+                <div class="bullet">고용보험 환급 교육과정 신청 시 : 고용보험 환급 교육과정에 대한 수강정보 등록 및 환급서류 제출 용도</div>
+                <div class="desc">※ 서비스 이용과정에서 IP Address, 쿠키, 방문 일시, 결제 기록, 서비스 이용 기록이 자동으로 수집될 수 있습니다.</div>
+
+                <div class="title">제2조(처리하는 개인정보 항목)</div>
+                <div class="desc">KSAEDU 홈페이지는 다음의 개인정보 항목을 처리하고 있습니다.</div>
+                <div class="bullet">
+                    기본항목 수집방법 : 홈페이지 회원가입 및 회원정보 관리 수정<br/>
+                    필수 : 이름, 생년월일, 성별, 로그인ID, 비밀번호, 전화번호, 휴대폰번호, 이메일<br/>
+                    선택 : 닉네임, 주소, 사원번호, 직급, 직무, 부서
+                </div>
+                <div class="bullet">
+                    환급 과정 수강<br/>
+                    회원정보 관리 수정 및 고용보험 지원 과정 수강신청 시 최초 1회<br/>
+                    필수 : 주민등록번호<br/>
+                    고용보험 환급 신청 시 : 회사명, 사업자번호, 훈련생구분, 비정규직 구분<br/>
+                    ※ 근거법령 : (고용보험 수강) 근로자직업능력 개발법 시행령 제52조 2항 및 시행규칙 제7조 2항
+                </div>
+                <div class="bullet">
+                    학습자료(교재)포함 과정 수강 시<br/>
+                    필수 : 주소, 수령인, 배송연락처
+                </div>
+                <div class="bullet">
+                    온라인 상담 관련 항목 수집 방법<br/>
+                    교육안내서 신청 서비스 이용 시 수집 항목<br/>
+                    필수 : 기업명, 이름, 부서, 직책, 전화번호, 휴대폰번호, 이메일<br/>
+                    선택 : 주소<br/>
+                    기업 대량교육 신청 시 : 기업명, 이름, 휴대폰번호, 이메일
+                </div>
+                <div class="bullet">
+                    서비스 이용과정이나 사업처리 과정에서 아래의 정보들이 생성되어 수집될 수 있음<br/>
+                    서비스 이용기록, 접속로그, 크기, 접속 IP 정보, 운영체제 종류, 인터넷 브라우저 종류, 스크린 해상도, 기타 속성 값
+                </div>
+
+                <div class="title">제3조(개인정보의 처리 및 보유기간)</div>
+                <div class="desc">KSAEDU 홈페이지는 법령에 따른 개인정보 보유․이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의 받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</div>
+                <div class="bullet">회원정보 : 회원 탈퇴 시까지 또는 마지막 로그인 일로부터 3년</div>
+                <div class="bullet">웹사이트 접속 및 이용 기록 : 6개월 (통신비밀보호법)</div>
+                <div class="bullet">계약 또는 청약철회 등에 관한 기록: 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</div>
+                <div class="bullet">대금결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</div>
+                <div class="bullet">소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</div>
+                <div class="bullet">고용보험 환급 대상 주민등록번호 : 비용지원 종료 후 3년 (근로자직업능력 개발법)</div>
+
+                <div class="title">제4조(개인정보의 제3자 제공)</div>
+                <div class="desc">KSAEDU 홈페이지는 정보주체의 개인정보를 제1조(개인정보의 처리 목적)에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 개인정보 보호법 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</div>
+                <div class="desc">KSAEDU 홈페이지는 다음과 같이 개인정보를 제3자에게 제공하고 있습니다.</div>
+                <div class="bullet">제공받는자 : (주)드림시큐리티, 코리아크레딧뷰로(주), 가입한 이동통신사(SKT, KT, LGU+, 알뜰폰)</div>
+                <div class="bullet">제공항목 : 성명, 성별, 내/외국인, 생년월일, 휴대폰번호, 아이핀ID, 비밀번호</div>
+                <div class="bullet">제공목적 : 본인인증</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div>
+                <div class="bullet">제공받는자 : 고용노동부</div>
+                <div class="bullet">제공항목 : 성명, 주민등록번호, 이메일, 휴대폰번호, 비정규직여부, 타사근로자 여부</div>
+                <div class="bullet">제공목적 : 고용보험환급(사업주에 대한 직업능력개발훈련 지원)</div>
+                <div class="bullet">보유 및 이용기간 : 3년</div>
+                <div class="bullet">제공받는자 : 산업인력관리공단</div>
+                <div class="bullet">제공항목 : 이메일, 접속로그(IP, MAC ADDRESS,HARD DISK SERIAL), 학습정보운영체제 종류, 브라우저 종류, 스크린 해상도, 기타 속성 값</div>
+                <div class="bullet">제공목적 : 고용보험환급(사업주에 대한 직업능력개발훈련 지원), 수강생 모니터링</div>
+                <div class="bullet">보유 및 이용기간 : 3년</div>
+                <div class="bullet">ACS(훈련생 수강확인 문자 발송 서비스) 시행에 따라 훈련수강과 관련된 사실 관계 확인을 위해 산업인력공단에서 문자를 발송할 수 있습니다.</div>
+                <div class="bullet">제공받는자 : 직업능력심사평가원</div>
+                <div class="bullet">제공항목 : 성명, 교육과정, 소속, 전화번호</div>
+                <div class="bullet">제공목적 : 고용노동부 직업능력개발 훈련기관 평가시 수요자 평가</div>
+                <div class="bullet">보유 및 이용기간 : 3년</div>
+
+                <div class="title">제5조(개인정보처리의 위탁)</div>
+                <div class="desc">KSAEDU 홈페이지는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.</div>
+                <div class="bullet">제공받는자 : (주)한국표준협회미디어</div>
+                <div class="bullet">제공항목 : 이름,소속,전화번호,휴대폰번호,주소</div>
+                <div class="bullet">제공목적 : 학습진행을 위한 교재 위탁 배송</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 :예스이십사(주),디자인여백플러스</div>
+                <div class="bullet">제공항목 : 이름,개강일,수강과정명,선택교재명,주소,전화번호,휴대폰번호,회사명</div>
+                <div class="bullet">제공목적 : 학습교재 발송(우편원격교육)</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 : (주)캐롯솔루션즈,(주)엔이능률</div>
+                <div class="bullet">제공항목 : 전화영어 수강자의 이름,아이디,전화번호,휴대폰번호,회사명</div>
+                <div class="bullet">제공목적 : 전화영어 수강</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 : (주)유밥</div>
+                <div class="bullet">제공항목 : 이름,소속,전화번호,휴대폰번호,주소</div>
+                <div class="bullet">제공목적 : 학습진행을 위한 교재 위탁 배송, 스마트러닝 수강</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 :(주)휴머스온</div>
+                <div class="bullet">제공항목 : 성명,휴대전화,이메일</div>
+                <div class="bullet">제공목적 : 메시징 서비스</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 : NHN한국사이버결제 주식회사</div>
+                <div class="bullet">제공항목 : 성명,휴대전화,이메일</div>
+                <div class="bullet">제공목적 : 온라인 결제대행 서비스</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 : 스마트올리브</div>
+                <div class="bullet">제공항목 : 과정명,교육일자,이름,휴대폰번호</div>
+                <div class="bullet">제공목적 : 전자식권서비스</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div>
+                <div class="desc">한국표준협회는 위탁계약 시 개인정보보호 관련 법규에 따라 위탁업무 수행 목적 외 개인정보 처리금지, 기술적ㆍ관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리ㆍ감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</div>
+
+                <div class="title">제6조(정보주체와 법정대리인의 권리·의무 및 행사방법)</div>
+                <div class="desc">정보주체는 KSAEDU 홈페이지에 대해 언제든지 개인정보 열람ㆍ정정ㆍ삭제ㆍ처리정지 요구 등의 권리를 행사할 수 있습니다.</div>
+                <div class="bullet">KSAEDU 홈페이지에 대해 개인정보보호법 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며, KSAEDU 홈페이지는 이에 대해 지체없이 조치하겠습니다.</div>
+                <div class="bullet">정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 개인정보 보호법 시행규칙 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.</div>
+                <div class="bullet">개인정보 열람 및 처리정지 요구는 개인정보보호법 제35조 제5항, 제37조 제2항에 의하여 정보주체의 권리가 제한 될 수 있습니다.</div>
+                <div class="bullet">개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.</div>
+                <div class="bullet">KSAEDU 홈페이지는 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.</div>
+
+                <div class="title">제7조(개인정보의 파기)</div>
+                <div class="desc">KSAEDU 홈페이지는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 다음과 같이 지체 없이 해당 개인정보를 파기합니다.</div>
+                <div class="bullet">파기절차 : 불필요한 개인정보 및 개인정보파일은 내부방침 절차에 따라 지체 없이 파기합니다.</div>
+                <div class="bullet">파기방법 : 전자적 형태의 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하며, 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.</div>
+
+                <div class="title">제8조(개인정보의 안전성 확보조치)</div>
+                <div class="desc">KSAEDU 홈페이지는 「개인정보보호법」제29조에 따라 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</div>
+                <div class="bullet">관리적 조치 : 내부관리계획 수립ㆍ시행, 개인정보 담당자 대상 정기적 직원 교육 등</div>
+                <div class="bullet">기술적 조치 : 개인정보처리시스템 등의 접근권한 관리, 접근통제시스템 설치, 비밀번호 등의 암호화, 보안프로그램 설치</div>
+                <div class="bullet">물리적 조치 : 전산실, 자료보관실 등의 접근통제</div>
+
+                <div class="title">제9조(개인정보 보호책임자)</div>
+                <div class="desc">KSAEDU 홈페이지는 개인정보를 보호하고 개인정보와 관련된 사항을 처리하기 위하여 아래와 같이 개인정보보호책임자, 개인정보보호담당자 및 개인정보 열람청구를 접수·처리하는 부서 및 담당자를 지정하고 있습니다.</div>
+                <div class="desc">개인정보보호책임자</div>
+                <div class="bullet">부서명 : 경영지원본부</div>
+                <div class="bullet">성명 : 이경근 본부장</div>
+                <div class="bullet">전화번호 : 02-6240-4510</div>
+                <div class="bullet">이메일 : kklee@ksa.or.kr</div>
+                <div class="desc">개인정보보호담당자</div>
+                <div class="bullet">부서명 : 지식정보실</div>
+                <div class="bullet">성명 : 권진택 위원</div>
+                <div class="bullet">전화번호 : 02-6240-4544</div>
+                <div class="bullet">이메일 : kjt12@ksa.or.kr</div>
+                <div class="desc">개인정보 열람청구 접수 및 처리부서</div>
+                <div class="bullet">부서명 : 교육지원센터</div>
+                <div class="bullet">성명 : 우문규 센터장</div>
+                <div class="bullet">전화번호 : 02-6240-0110</div>
+                <div class="bullet">이메일 : seanwoo@ksa.or.kr</div>
+
+                <div class="title">제10조(권익침해 구제방법)</div>
+                <div class="desc">정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침해의 신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.</div>
+                <div class="bullet">개인정보 침해신고센터 (한국인터넷진흥원 운영) : (국번없이) 118 (privacy.kisa.or.kr)</div>
+                <div class="bullet">소관업무 : 개인정보 침해사실 신고, 상담 신청</div>
+                <div class="bullet">개인정보 분쟁조정위원회 :(국번없이) 118 (www.kopico.go.kr)</div>
+                <div class="bullet">소관업무 : 개인정보 분쟁조정신청, 집단분쟁조정 (민사적 해결)</div>
+                <div class="bullet">대검찰청 사이버범죄수사단 : (국번없이) 1301 (www.spo.go.kr)</div>
+                <div class="bullet">경찰청 사이버안전국 : (국번없이) 182 (cyberbureau.police.go.kr)</div>
+
+                <div class="title">제11조(개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항)</div>
+                <div class="desc">KSAEDU 홈페이지는 이용자에게 개별적인 맞춤서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용합니다. 쿠키는 웹사이트를 운영하는데 이용되는 서버(http)가 이용자의 컴퓨터 브라우저에게 보내는 소량의 정보이며 이용자들의 PC 컴퓨터내의 하드디스크에 저장되기도 합니다.</div>
+                <div class="bullet">쿠키의 사용 목적 : 이용자가 방문한 각 서비스와 웹 사이트들에 대한 방문 및 이용형태 등을 파악하여 이용자에게 최적화된 정보 제공을 위해 사용합니다.</div>
+                <div class="bullet">쿠키의 설치·운영 및 거부<br/>
+                    - 인터넷익스플로러(IE)인 경우 웹브라우저 상단의 도구>인터넷 옵션>개인정보 메뉴의 옵션 설정을 통해 쿠키 저장을 거부 할 수 있습니다.<br/>
+                    - 크롬(Chrome)인 경우 웹브라우저 오른쪽 상단의 더보기>설정>고급>개인정보 및 보안: 사이트 설정>사이트에서 쿠키 데이터를 저장하고 읽도록 허용을 차단을 통해 쿠키 저장을 거부 할 수 있습니다.</div>
+                <div class="desc">※ 다만, 쿠키의 저장을 거부할 경우에는 로그인이 필요한 팝업창 등 일부 서비스는 이용에 어려움이 있을 수 있습니다.</div>
+
+                <div class="title">제12조(개인정보 처리방침 변경)</div>
+                <div class="desc">KSAEDU 홈페이지의 개인정보처리방침은 시행일로부터 적용되며, 변경이력 및 내용은 아래에서 확인하실 수 있습니다.</div>
+                <div class="bullet with-btn">시행일자 : 2022년 01월 03일 (제5조, 제9조 변경)</div>
+                <div class="bullet with-btn">변경일자 : 2021년 07월 16일 (제9조 변경) <a href="#" class="btn btn-sm btn-border-point">보기</a></div>
+                <div class="bullet with-btn">변경일자 : 2020년 02월 07일 (제9조 변경) <a href="#" class="btn btn-sm btn-border-point">보기</a></div>
+            </div>
+            <!-- e 2022년 01월 03일 -->
+
+            <!-- s 2021년 07월 16일 -->
+            <div class="content" data-id="tab3">
+                <div class="desc">한국표준협회 KSAEDU 홈페이지(이하 “KSAEDU 홈페이지”라 합니다)는 개인정보 보호법 제30조에 따라 정보주체의 개인정보를 보호 및 권익을 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이 개인정보 처리지침을 수립하여 공개합니다.</div>
+
+                <div class="title">제1조(개인정보의 처리목적)</div>
+                <div class="desc">KSAEDU 홈페이지는 개인정보를 다음 목적 이외의 용도로는 이용하지 않으며 이용 목적 등이 변경될 경우에는 동의를 받아 처리하겠습니다.</div>
+                <div class="bullet">회원관리 : 회원제 서비스 이용에 따른 본인확인, 개인식별, 가입 의사 확인, 불만처리 등 민원처리, 고지사항 전달</div>
+                <div class="bullet">서비스 제공에 관한 계약 이행 및 요금정산 : 콘텐츠 제공, 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송</div>
+                <div class="bullet">마케팅 및 광고에 활용 : 신규 서비스(제품) 개발 및 특화 , 이벤트 등 광고성 정보 전달</div>
+                <div class="bullet">고용보험 환급 교육과정 신청 시 : 고용보험 환급 교육과정에 대한 수강정보 등록 및 환급서류 제출 용도</div>
+                <div class="desc">※ 서비스 이용과정에서 IP Address, 쿠키, 방문 일시, 결제 기록, 서비스 이용 기록이 자동으로 수집될 수 있습니다.</div>
+
+                <div class="title">제2조(처리하는 개인정보 항목)</div>
+                <div class="desc">KSAEDU 홈페이지는 다음의 개인정보 항목을 처리하고 있습니다.</div>
+                <div class="bullet">
+                    기본항목 수집방법 : 홈페이지 회원가입 및 회원정보 관리 수정<br/>
+                    필수 : 이름, 생년월일, 성별, 로그인ID, 비밀번호, 전화번호, 휴대폰번호, 이메일<br/>
+                    선택 : 닉네임, 주소, 사원번호, 직급, 직무, 부서
+                </div>
+                <div class="bullet">
+                    환급 과정 수강<br/>
+                    회원정보 관리 수정 및 고용보험 지원 과정 수강신청 시 최초 1회<br/>
+                    필수 : 주민등록번호<br/>
+                    고용보험 환급 신청 시 : 회사명, 사업자번호, 훈련생구분, 비정규직 구분<br/>
+                    ※ 근거법령 : (고용보험 수강) 근로자직업능력 개발법 시행령 제52조 2항 및 시행규칙 제7조 2항
+                </div>
+                <div class="bullet">
+                    학습자료(교재)포함 과정 수강 시<br/>
+                    필수 : 주소, 수령인, 배송연락처
+                </div>
+                <div class="bullet">
+                    온라인 상담 관련 항목 수집 방법<br/>
+                    교육안내서 신청 서비스 이용 시 수집 항목<br/>
+                    필수 : 기업명, 이름, 부서, 직책, 전화번호, 휴대폰번호, 이메일<br/>
+                    선택 : 주소<br/>
+                    기업 대량교육 신청 시 : 기업명, 이름, 휴대폰번호, 이메일
+                </div>
+                <div class="bullet">
+                    서비스 이용과정이나 사업처리 과정에서 아래의 정보들이 생성되어 수집될 수 있음<br/>
+                    서비스 이용기록, 접속로그, 크기, 접속 IP 정보, 운영체제 종류, 인터넷 브라우저 종류, 스크린 해상도, 기타 속성 값
+                </div>
+
+                <div class="title">제3조(개인정보의 처리 및 보유기간)</div>
+                <div class="desc">KSAEDU 홈페이지는 법령에 따른 개인정보 보유․이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의 받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</div>
+                <div class="bullet">회원정보 : 회원 탈퇴 시까지 또는 마지막 로그인 일로부터 3년</div>
+                <div class="bullet">웹사이트 접속 및 이용 기록 : 6개월 (통신비밀보호법)</div>
+                <div class="bullet">계약 또는 청약철회 등에 관한 기록: 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</div>
+                <div class="bullet">대금결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</div>
+                <div class="bullet">소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</div>
+                <div class="bullet">고용보험 환급 대상 주민등록번호 : 비용지원 종료 후 3년 (근로자직업능력 개발법)</div>
+
+                <div class="title">제4조(개인정보의 제3자 제공)</div>
+                <div class="desc">KSAEDU 홈페이지는 정보주체의 개인정보를 제1조(개인정보의 처리 목적)에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 개인정보 보호법 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</div>
+                <div class="desc">KSAEDU 홈페이지는 다음과 같이 개인정보를 제3자에게 제공하고 있습니다.</div>
+                <div class="bullet">제공받는자 : (주)드림시큐리티, 코리아크레딧뷰로(주), 가입한 이동통신사(SKT, KT, LGU+, 알뜰폰)</div>
+                <div class="bullet">제공항목 : 성명, 성별, 내/외국인, 생년월일, 휴대폰번호, 아이핀ID, 비밀번호</div>
+                <div class="bullet">제공목적 : 본인인증</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div>
+                <div class="bullet">제공받는자 : 고용노동부</div>
+                <div class="bullet">제공항목 : 성명, 주민등록번호, 이메일, 휴대폰번호, 비정규직여부, 타사근로자 여부</div>
+                <div class="bullet">제공목적 : 고용보험환급(사업주에 대한 직업능력개발훈련 지원)</div>
+                <div class="bullet">보유 및 이용기간 : 3년</div>
+                <div class="bullet">제공받는자 : 산업인력관리공단</div>
+                <div class="bullet">제공항목 : 이메일, 접속로그(IP, MAC ADDRESS,HARD DISK SERIAL), 학습정보운영체제 종류, 브라우저 종류, 스크린 해상도, 기타 속성 값</div>
+                <div class="bullet">제공목적 : 고용보험환급(사업주에 대한 직업능력개발훈련 지원), 수강생 모니터링</div>
+                <div class="bullet">보유 및 이용기간 : 3년</div>
+                <div class="bullet">ACS(훈련생 수강확인 문자 발송 서비스) 시행에 따라 훈련수강과 관련된 사실 관계 확인을 위해 산업인력공단에서 문자를 발송할 수 있습니다.</div>
+                <div class="bullet">제공받는자 : 직업능력심사평가원</div>
+                <div class="bullet">제공항목 : 성명, 교육과정, 소속, 전화번호</div>
+                <div class="bullet">제공목적 : 고용노동부 직업능력개발 훈련기관 평가시 수요자 평가</div>
+                <div class="bullet">보유 및 이용기간 : 3년</div>
+
+                <div class="title">제5조(개인정보처리의 위탁)</div>
+                <div class="desc">KSAEDU 홈페이지는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.</div>
+                <div class="bullet">제공받는자 : (주)한국표준협회미디어</div>
+                <div class="bullet">제공항목 : 이름,소속,전화번호,휴대폰번호,주소</div>
+                <div class="bullet">제공목적 : 학습진행을 위한 교재 위탁 배송</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 :예스이십사(주),디자인여백플러스</div>
+                <div class="bullet">제공항목 : 이름,개강일,수강과정명,선택교재명,주소,전화번호,휴대폰번호,회사명</div>
+                <div class="bullet">제공목적 : 학습교재 발송(우편원격교육)</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 : (주)캐롯솔루션즈,(주)엔이능률</div>
+                <div class="bullet">제공항목 : 전화영어 수강자의 이름,아이디,전화번호,휴대폰번호,회사명</div>
+                <div class="bullet">제공목적 : 전화영어 수강</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 : (주)유밥</div>
+                <div class="bullet">제공항목 : 이름,소속,전화번호,휴대폰번호,주소</div>
+                <div class="bullet">제공목적 : 학습진행을 위한 교재 위탁 배송, 스마트러닝 수강</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 :(주)휴머스온</div>
+                <div class="bullet">제공항목 : 성명,휴대전화,이메일</div>
+                <div class="bullet">제공목적 : 메시징 서비스</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 : NHN한국사이버결제 주식회사</div>
+                <div class="bullet">제공항목 : 성명,휴대전화,이메일</div>
+                <div class="bullet">제공목적 : 온라인 결제대행 서비스</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 : 스마트올리브</div>
+                <div class="bullet">제공항목 : 과정명,교육일자,이름,휴대폰번호</div>
+                <div class="bullet">제공목적 : 전자식권서비스</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div>
+                <div class="desc">한국표준협회는 위탁계약 시 개인정보보호 관련 법규에 따라 위탁업무 수행 목적 외 개인정보 처리금지, 기술적ㆍ관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리ㆍ감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</div>
+
+                <div class="title">제6조(정보주체와 법정대리인의 권리·의무 및 행사방법)</div>
+                <div class="desc">정보주체는 KSAEDU 홈페이지에 대해 언제든지 개인정보 열람ㆍ정정ㆍ삭제ㆍ처리정지 요구 등의 권리를 행사할 수 있습니다.</div>
+                <div class="bullet">KSAEDU 홈페이지에 대해 개인정보보호법 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며, KSAEDU 홈페이지는 이에 대해 지체없이 조치하겠습니다.</div>
+                <div class="bullet">정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 개인정보 보호법 시행규칙 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.</div>
+                <div class="bullet">개인정보 열람 및 처리정지 요구는 개인정보보호법 제35조 제5항, 제37조 제2항에 의하여 정보주체의 권리가 제한 될 수 있습니다.</div>
+                <div class="bullet">개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.</div>
+                <div class="bullet">KSAEDU 홈페이지는 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.</div>
+
+                <div class="title">제7조(개인정보의 파기)</div>
+                <div class="desc">KSAEDU 홈페이지는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 다음과 같이 지체 없이 해당 개인정보를 파기합니다.</div>
+                <div class="bullet">파기절차 : 불필요한 개인정보 및 개인정보파일은 내부방침 절차에 따라 지체 없이 파기합니다.</div>
+                <div class="bullet">파기방법 : 전자적 형태의 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하며, 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.</div>
+
+                <div class="title">제8조(개인정보의 안전성 확보조치)</div>
+                <div class="desc">KSAEDU 홈페이지는 「개인정보보호법」제29조에 따라 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</div>
+                <div class="bullet">관리적 조치 : 내부관리계획 수립ㆍ시행, 개인정보 담당자 대상 정기적 직원 교육 등</div>
+                <div class="bullet">기술적 조치 : 개인정보처리시스템 등의 접근권한 관리, 접근통제시스템 설치, 비밀번호 등의 암호화, 보안프로그램 설치</div>
+                <div class="bullet">물리적 조치 : 전산실, 자료보관실 등의 접근통제</div>
+
+                <div class="title">제9조(개인정보 보호책임자)</div>
+                <div class="desc">KSAEDU 홈페이지는 개인정보를 보호하고 개인정보와 관련된 사항을 처리하기 위하여 아래와 같이 개인정보보호책임자, 개인정보보호담당자 및 개인정보 열람청구를 접수·처리하는 부서 및 담당자를 지정하고 있습니다.</div>
+                <div class="desc">개인정보보호책임자</div>
+                <div class="bullet">부서명 : 경영지원본부</div>
+                <div class="bullet">성명 : 이경근 본부장</div>
+                <div class="bullet">전화번호 : 02-6240-4510</div>
+                <div class="bullet">이메일 : kklee@ksa.or.kr</div>
+                <div class="desc">개인정보보호담당자</div>
+                <div class="bullet">부서명 : 지식정보실</div>
+                <div class="bullet">성명 : 최재형 위원</div>
+                <div class="bullet">전화번호 : 02-6240-4541</div>
+                <div class="bullet">이메일 : cjh@ksa.or.kr</div>
+                <div class="desc">개인정보 열람청구 접수 및 처리부서</div>
+                <div class="bullet">부서명 : 교육지원센터</div>
+                <div class="bullet">성명 : 우문규 센터장</div>
+                <div class="bullet">전화번호 : 02-6240-0110</div>
+                <div class="bullet">이메일 : seanwoo@ksa.or.kr</div>
+
+                <div class="title">제10조(권익침해 구제방법)</div>
+                <div class="desc">정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침해의 신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.</div>
+                <div class="bullet">개인정보 침해신고센터 (한국인터넷진흥원 운영) : (국번없이) 118 (privacy.kisa.or.kr)</div>
+                <div class="bullet">소관업무 : 개인정보 침해사실 신고, 상담 신청</div>
+                <div class="bullet">개인정보 분쟁조정위원회 :(국번없이) 118 (www.kopico.go.kr)</div>
+                <div class="bullet">소관업무 : 개인정보 분쟁조정신청, 집단분쟁조정 (민사적 해결)</div>
+                <div class="bullet">대검찰청 사이버범죄수사단 : (국번없이) 1301 (www.spo.go.kr)</div>
+                <div class="bullet">경찰청 사이버안전국 : (국번없이) 182 (cyberbureau.police.go.kr)</div>
+
+                <div class="title">제11조(개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항)</div>
+                <div class="desc">KSAEDU 홈페이지는 이용자에게 개별적인 맞춤서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용합니다. 쿠키는 웹사이트를 운영하는데 이용되는 서버(http)가 이용자의 컴퓨터 브라우저에게 보내는 소량의 정보이며 이용자들의 PC 컴퓨터내의 하드디스크에 저장되기도 합니다.</div>
+                <div class="bullet">쿠키의 사용 목적 : 이용자가 방문한 각 서비스와 웹 사이트들에 대한 방문 및 이용형태 등을 파악하여 이용자에게 최적화된 정보 제공을 위해 사용합니다.</div>
+                <div class="bullet">쿠키의 설치·운영 및 거부<br/>
+                    - 인터넷익스플로러(IE)인 경우 웹브라우저 상단의 도구>인터넷 옵션>개인정보 메뉴의 옵션 설정을 통해 쿠키 저장을 거부 할 수 있습니다.<br/>
+                    - 크롬(Chrome)인 경우 웹브라우저 오른쪽 상단의 더보기>설정>고급>개인정보 및 보안: 사이트 설정>사이트에서 쿠키 데이터를 저장하고 읽도록 허용을 차단을 통해 쿠키 저장을 거부 할 수 있습니다.</div>
+                <div class="desc">※ 다만, 쿠키의 저장을 거부할 경우에는 로그인이 필요한 팝업창 등 일부 서비스는 이용에 어려움이 있을 수 있습니다.</div>
+
+                <div class="title">제12조(개인정보 처리방침 변경)</div>
+                <div class="desc">KSAEDU 홈페이지의 개인정보처리방침은 시행일로부터 적용되며, 변경이력 및 내용은 아래에서 확인하실 수 있습니다.</div>
+                <div class="bullet with-btn">시행일자 : 2021년 07월 16일 (제9조 변경)</div>
+                <div class="bullet with-btn">변경일자 : 2020년 02월 07일 (제9조 변경) <a href="#" class="btn btn-sm btn-border-point">보기</a></div>
+            </div>
+            <!-- e 2021년 07월 16일 -->
+
+            <!-- s 2020년 02월 07일 -->
+            <div class="content" data-id="tab4">
+                <div class="desc">한국표준협회 KSAEDU 홈페이지(이하 “KSAEDU 홈페이지”라 합니다)는 개인정보 보호법 제30조에 따라 정보주체의 개인정보를 보호 및 권익을 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이 개인정보 처리지침을 수립하여 공개합니다.</div>
+
+                <div class="title">제1조(개인정보의 처리목적)</div>
+                <div class="desc">KSAEDU 홈페이지는 개인정보를 다음 목적 이외의 용도로는 이용하지 않으며 이용 목적 등이 변경될 경우에는 동의를 받아 처리하겠습니다.</div>
+                <div class="bullet">회원관리 : 회원제 서비스 이용에 따른 본인확인, 개인식별, 가입 의사 확인, 불만처리 등 민원처리, 고지사항 전달</div>
+                <div class="bullet">서비스 제공에 관한 계약 이행 및 요금정산 : 콘텐츠 제공, 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송</div>
+                <div class="bullet">마케팅 및 광고에 활용 : 신규 서비스(제품) 개발 및 특화 , 이벤트 등 광고성 정보 전달</div>
+                <div class="bullet">고용보험 환급 교육과정 신청 시 : 고용보험 환급 교육과정에 대한 수강정보 등록 및 환급서류 제출 용도</div>
+                <div class="desc">※ 서비스 이용과정에서 IP Address, 쿠키, 방문 일시, 결제 기록, 서비스 이용 기록이 자동으로 수집될 수 있습니다.</div>
+
+                <div class="title">제2조(처리하는 개인정보 항목)</div>
+                <div class="desc">KSAEDU 홈페이지는 다음의 개인정보 항목을 처리하고 있습니다.</div>
+                <div class="bullet">
+                    기본항목 수집방법 : 홈페이지 회원가입 및 회원정보 관리 수정<br/>
+                    필수 : 이름, 생년월일, 성별, 로그인ID, 비밀번호, 전화번호, 휴대폰번호, 이메일<br/>
+                    선택 : 닉네임, 주소, 사원번호, 직급, 직무, 부서
+                </div>
+                <div class="bullet">
+                    환급 과정 수강<br/>
+                    회원정보 관리 수정 및 고용보험 지원 과정 수강신청 시 최초 1회<br/>
+                    필수 : 주민등록번호<br/>
+                    고용보험 환급 신청 시 : 회사명, 사업자번호, 훈련생구분, 비정규직 구분<br/>
+                    ※ 근거법령 : (고용보험 수강) 근로자직업능력 개발법 시행령 제52조 2항 및 시행규칙 제7조 2항
+                </div>
+                <div class="bullet">
+                    학습자료(교재)포함 과정 수강 시<br/>
+                    필수 : 주소, 수령인, 배송연락처
+                </div>
+                <div class="bullet">
+                    온라인 상담 관련 항목 수집 방법<br/>
+                    교육안내서 신청 서비스 이용 시 수집 항목<br/>
+                    필수 : 기업명, 이름, 부서, 직책, 전화번호, 휴대폰번호, 이메일<br/>
+                    선택 : 주소<br/>
+                    기업 대량교육 신청 시 : 기업명, 이름, 휴대폰번호, 이메일
+                </div>
+                <div class="bullet">
+                    서비스 이용과정이나 사업처리 과정에서 아래의 정보들이 생성되어 수집될 수 있음<br/>
+                    서비스 이용기록, 접속로그, 크기, 접속 IP 정보, 운영체제 종류, 인터넷 브라우저 종류, 스크린 해상도, 기타 속성 값
+                </div>
+
+                <div class="title">제3조(개인정보의 처리 및 보유기간)</div>
+                <div class="desc">KSAEDU 홈페이지는 법령에 따른 개인정보 보유․이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의 받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</div>
+                <div class="bullet">회원정보 : 회원 탈퇴 시까지 또는 마지막 로그인 일로부터 3년</div>
+                <div class="bullet">웹사이트 접속 및 이용 기록 : 6개월 (통신비밀보호법)</div>
+                <div class="bullet">계약 또는 청약철회 등에 관한 기록: 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</div>
+                <div class="bullet">대금결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</div>
+                <div class="bullet">소비자의 불만 또는 분쟁처리에 관한 기록 : 3년 (전자상거래 등에서의 소비자보호에 관한 법률)</div>
+                <div class="bullet">고용보험 환급 대상 주민등록번호 : 비용지원 종료 후 3년 (근로자직업능력 개발법)</div>
+
+                <div class="title">제4조(개인정보의 제3자 제공)</div>
+                <div class="desc">KSAEDU 홈페이지는 정보주체의 개인정보를 제1조(개인정보의 처리 목적)에서 명시한 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 개인정보 보호법 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</div>
+                <div class="desc">KSAEDU 홈페이지는 다음과 같이 개인정보를 제3자에게 제공하고 있습니다.</div>
+                <div class="bullet">제공받는자 : (주)드림시큐리티, 코리아크레딧뷰로(주), 가입한 이동통신사(SKT, KT, LGU+, 알뜰폰)</div>
+                <div class="bullet">제공항목 : 성명, 성별, 내/외국인, 생년월일, 휴대폰번호, 아이핀ID, 비밀번호</div>
+                <div class="bullet">제공목적 : 본인인증</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div>
+                <div class="bullet">제공받는자 : 고용노동부</div>
+                <div class="bullet">제공항목 : 성명, 주민등록번호, 이메일, 휴대폰번호, 비정규직여부, 타사근로자 여부</div>
+                <div class="bullet">제공목적 : 고용보험환급(사업주에 대한 직업능력개발훈련 지원)</div>
+                <div class="bullet">보유 및 이용기간 : 3년</div>
+                <div class="bullet">제공받는자 : 산업인력관리공단</div>
+                <div class="bullet">제공항목 : 이메일, 접속로그(IP, MAC ADDRESS,HARD DISK SERIAL), 학습정보운영체제 종류, 브라우저 종류, 스크린 해상도, 기타 속성 값</div>
+                <div class="bullet">제공목적 : 고용보험환급(사업주에 대한 직업능력개발훈련 지원), 수강생 모니터링</div>
+                <div class="bullet">보유 및 이용기간 : 3년</div>
+                <div class="bullet">ACS(훈련생 수강확인 문자 발송 서비스) 시행에 따라 훈련수강과 관련된 사실 관계 확인을 위해 산업인력공단에서 문자를 발송할 수 있습니다.</div>
+                <div class="bullet">제공받는자 : 직업능력심사평가원</div>
+                <div class="bullet">제공항목 : 성명, 교육과정, 소속, 전화번호</div>
+                <div class="bullet">제공목적 : 고용노동부 직업능력개발 훈련기관 평가시 수요자 평가</div>
+                <div class="bullet">보유 및 이용기간 : 3년</div>
+
+                <div class="title">제5조(개인정보처리의 위탁)</div>
+                <div class="desc">KSAEDU 홈페이지는 원활한 개인정보 업무처리를 위하여 다음과 같이 개인정보 처리업무를 위탁하고 있습니다.</div>
+                <div class="bullet">제공받는자 : (주)한국표준협회미디어</div>
+                <div class="bullet">제공항목 : 이름,소속,전화번호,휴대폰번호,주소</div>
+                <div class="bullet">제공목적 : 학습진행을 위한 교재 위탁 배송</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 :예스이십사(주),디자인여백플러스</div>
+                <div class="bullet">제공항목 : 이름,개강일,수강과정명,선택교재명,주소,전화번호,휴대폰번호,회사명</div>
+                <div class="bullet">제공목적 : 학습교재 발송(우편원격교육)</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 : (주)캐롯솔루션즈,(주)엔이능률</div>
+                <div class="bullet">제공항목 : 전화영어 수강자의 이름,아이디,전화번호,휴대폰번호,회사명</div>
+                <div class="bullet">제공목적 : 전화영어 수강</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 : (주)유밥</div>
+                <div class="bullet">제공항목 : 이름,소속,전화번호,휴대폰번호,주소</div>
+                <div class="bullet">제공목적 : 학습진행을 위한 교재 위탁 배송, 스마트러닝 수강</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 :(주)휴머스온</div>
+                <div class="bullet">제공항목 : 성명,휴대전화,이메일</div>
+                <div class="bullet">제공목적 : 메시징 서비스</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 : NHN한국사이버결제 주식회사</div>
+                <div class="bullet">제공항목 : 성명,휴대전화,이메일</div>
+                <div class="bullet">제공목적 : 온라인 결제대행 서비스</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div><br/>
+
+                <div class="bullet">제공받는자 : 스마트올리브</div>
+                <div class="bullet">제공항목 : 과정명,교육일자,이름,휴대폰번호</div>
+                <div class="bullet">제공목적 : 전자식권서비스</div>
+                <div class="bullet">보유 및 이용기간 : 이용목적 달성 시까지</div>
+                <div class="desc">한국표준협회는 위탁계약 시 개인정보보호 관련 법규에 따라 위탁업무 수행 목적 외 개인정보 처리금지, 기술적ㆍ관리적 보호조치, 재위탁 제한, 수탁자에 대한 관리ㆍ감독, 손해배상 등 책임에 관한 사항을 계약서 등 문서에 명시하고, 수탁자가 개인정보를 안전하게 처리하는지를 감독하고 있습니다.</div>
+
+                <div class="title">제6조(정보주체와 법정대리인의 권리·의무 및 행사방법)</div>
+                <div class="desc">정보주체는 KSAEDU 홈페이지에 대해 언제든지 개인정보 열람ㆍ정정ㆍ삭제ㆍ처리정지 요구 등의 권리를 행사할 수 있습니다.</div>
+                <div class="bullet">KSAEDU 홈페이지에 대해 개인정보보호법 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며, KSAEDU 홈페이지는 이에 대해 지체없이 조치하겠습니다.</div>
+                <div class="bullet">정보주체의 법정대리인이나 위임을 받은 자 등 대리인을 통하여 하실 수 있습니다. 이 경우 개인정보 보호법 시행규칙 별지 제11호 서식에 따른 위임장을 제출하셔야 합니다.</div>
+                <div class="bullet">개인정보 열람 및 처리정지 요구는 개인정보보호법 제35조 제5항, 제37조 제2항에 의하여 정보주체의 권리가 제한 될 수 있습니다.</div>
+                <div class="bullet">개인정보의 정정 및 삭제 요구는 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.</div>
+                <div class="bullet">KSAEDU 홈페이지는 정보주체 권리에 따른 열람의 요구, 정정·삭제의 요구, 처리정지의 요구 시 열람 등 요구를 한 자가 본인이거나 정당한 대리인인지를 확인합니다.</div>
+
+                <div class="title">제7조(개인정보의 파기)</div>
+                <div class="desc">KSAEDU 홈페이지는 개인정보 보유기간의 경과, 처리목적 달성 등 개인정보가 불필요하게 되었을 때에는 다음과 같이 지체 없이 해당 개인정보를 파기합니다.</div>
+                <div class="bullet">파기절차 : 불필요한 개인정보 및 개인정보파일은 내부방침 절차에 따라 지체 없이 파기합니다.</div>
+                <div class="bullet">파기방법 : 전자적 형태의 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하며, 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기합니다.</div>
+
+                <div class="title">제8조(개인정보의 안전성 확보조치)</div>
+                <div class="desc">KSAEDU 홈페이지는 「개인정보보호법」제29조에 따라 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</div>
+                <div class="bullet">관리적 조치 : 내부관리계획 수립ㆍ시행, 개인정보 담당자 대상 정기적 직원 교육 등</div>
+                <div class="bullet">기술적 조치 : 개인정보처리시스템 등의 접근권한 관리, 접근통제시스템 설치, 비밀번호 등의 암호화, 보안프로그램 설치</div>
+                <div class="bullet">물리적 조치 : 전산실, 자료보관실 등의 접근통제</div>
+
+                <div class="title">제9조(개인정보 보호책임자)</div>
+                <div class="desc">KSAEDU 홈페이지는 개인정보를 보호하고 개인정보와 관련된 사항을 처리하기 위하여 아래와 같이 개인정보보호책임자, 개인정보보호담당자 및 개인정보 열람청구를 접수·처리하는 부서 및 담당자를 지정하고 있습니다.</div>
+                <div class="desc">개인정보보호책임자</div>
+                <div class="bullet">부서명 : 경영지원본부</div>
+                <div class="bullet">성명 : 배이열 본부장</div>
+                <div class="bullet">전화번호 : 02-6240-4510</div>
+                <div class="bullet">이메일 : yybae@ksa.or.kr</div>
+                <div class="desc">개인정보보호담당자</div>
+                <div class="bullet">부서명 : 지식정보실</div>
+                <div class="bullet">성명 : 최재형 위원</div>
+                <div class="bullet">전화번호 : 02-6240-4541</div>
+                <div class="bullet">이메일 : cjh@ksa.or.kr</div>
+                <div class="desc">개인정보 열람청구 접수 및 처리부서</div>
+                <div class="bullet">부서명 : 교육지원센터</div>
+                <div class="bullet">성명 : 우문규 센터장</div>
+                <div class="bullet">전화번호 : 02-6240-0110</div>
+                <div class="bullet">이메일 : seanwoo@ksa.or.kr</div>
+
+                <div class="title">제10조(권익침해 구제방법)</div>
+                <div class="desc">정보주체는 개인정보침해로 인한 구제를 받기 위하여 개인정보분쟁조정위원회, 한국인터넷진흥원 개인정보침해신고센터 등에 분쟁해결이나 상담 등을 신청할 수 있습니다. 이 밖에 기타 개인정보침해의 신고, 상담에 대하여는 아래의 기관에 문의하시기 바랍니다.</div>
+                <div class="bullet">개인정보 침해신고센터 (한국인터넷진흥원 운영) : (국번없이) 118 (privacy.kisa.or.kr)</div>
+                <div class="bullet">소관업무 : 개인정보 침해사실 신고, 상담 신청</div>
+                <div class="bullet">개인정보 분쟁조정위원회 :(국번없이) 118 (www.kopico.go.kr)</div>
+                <div class="bullet">소관업무 : 개인정보 분쟁조정신청, 집단분쟁조정 (민사적 해결)</div>
+                <div class="bullet">대검찰청 사이버범죄수사단 : (국번없이) 1301 (www.spo.go.kr)</div>
+                <div class="bullet">경찰청 사이버안전국 : (국번없이) 182 (cyberbureau.police.go.kr)</div>
+
+                <div class="title">제11조(개인정보 자동 수집 장치의 설치·운영 및 거부에 관한 사항)</div>
+                <div class="desc">KSAEDU 홈페이지는 이용자에게 개별적인 맞춤서비스를 제공하기 위해 이용정보를 저장하고 수시로 불러오는 ‘쿠키(cookie)’를 사용합니다. 쿠키는 웹사이트를 운영하는데 이용되는 서버(http)가 이용자의 컴퓨터 브라우저에게 보내는 소량의 정보이며 이용자들의 PC 컴퓨터내의 하드디스크에 저장되기도 합니다.</div>
+                <div class="bullet">쿠키의 사용 목적 : 이용자가 방문한 각 서비스와 웹 사이트들에 대한 방문 및 이용형태 등을 파악하여 이용자에게 최적화된 정보 제공을 위해 사용합니다.</div>
+                <div class="bullet">쿠키의 설치·운영 및 거부<br/>
+                    - 인터넷익스플로러(IE)인 경우 웹브라우저 상단의 도구>인터넷 옵션>개인정보 메뉴의 옵션 설정을 통해 쿠키 저장을 거부 할 수 있습니다.<br/>
+                    - 크롬(Chrome)인 경우 웹브라우저 오른쪽 상단의 더보기>설정>고급>개인정보 및 보안: 사이트 설정>사이트에서 쿠키 데이터를 저장하고 읽도록 허용을 차단을 통해 쿠키 저장을 거부 할 수 있습니다.</div>
+                <div class="desc">※ 다만, 쿠키의 저장을 거부할 경우에는 로그인이 필요한 팝업창 등 일부 서비스는 이용에 어려움이 있을 수 있습니다.</div>
+
+                <div class="title">제12조(개인정보 처리방침 변경)</div>
+                <div class="desc">KSAEDU 홈페이지의 개인정보처리방침은 시행일로부터 적용되며, 변경이력 및 내용은 아래에서 확인하실 수 있습니다.</div>
+                <div class="bullet with-btn">시행일자 : 2020년 02월 07일</div>
+            </div>
+            <!-- e 2020년 02월 07일 -->
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        showTab($('._selectTab').val());
+
+        $('._selectTab').change(function() {
+            showTab($(this).val());
+            console.log($(this).val())
+        });
+
+        function showTab(tabId) {
+            $('.popup-terms .content').removeClass('active');
+            $(`[data-id=${tabId}`).addClass('active');
+        }
+    });
+</script>
+</body>
+</html>

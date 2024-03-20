@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/btoc/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/btoc/lib/swiper.js"></script>
+    <script src="../../js/front/btoc/lib/twbsPagination.js"></script>
+    <script src="../../js/front/btoc/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/btoc/style.css">
+    <link rel="stylesheet" href="../../css/front/btoc/pages.css">
+    <link rel="shortcut icon" href="../../images/front/btoc/common/favicon.ico">
+    <title>👱🏻‍♀️ KSA EDU 👱🏻‍</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <div class="btn-wrap">
+        <button class="btn _popupTrigger" data-trigger="popup-edit-info" type="button">신청정보 수정 팝업</button>
+    </div>
+</div>
+<div class="dim _dim" style="display: block"></div>
+<div class="popup popup-form _popup" data-popup="popup-edit-info" style="display: block">
+    <div class="popup-content popup-content-dim">
+        <div class="popup-head">
+            <span class="title">신청정보 수정</span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="login-contents">
+                <div class="sign-in">
+                    <div class="form">
+                        <div class="form-title">
+                            <span class="title">신청정보 수정</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">성명 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="name" value="홍길동" disabled />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">외국인 여부 <em class="color-caution">*</em></label>
+                            <div class="form-radio-group">
+                                <label for="radio" class="form-radio">
+                                    <input type="radio" id="radio" name="test" checked="" />
+                                    <span>내국인</span>
+                                </label>
+                                <label for="radio2" class="form-radio">
+                                    <input type="radio" id="radio2" name="test" />
+                                    <span>외국인</span>
+                                </label>
+                                <select class="form-select" name="select" title="select" disabled>
+                                    <option value="선택">선택</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">생년월일 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="date" value="2000-01-01" disabled />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">성별 <em class="color-caution">*</em></label>
+                            <div class="form-radio-group">
+                                <label for="male" class="form-radio">
+                                    <input type="radio" id="male" name="gender" checked="" />
+                                    <span>남자</span>
+                                </label>
+                                <label for="radio2" class="form-radio">
+                                    <input type="radio" id="female" name="gender" />
+                                    <span>여자</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">부서 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="text" placeholder="사업기획팀" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">직위 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="text" placeholder="과장" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">휴대전화번호 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="text" placeholder="010-1111-1111" inputmode="numeric" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">전화번호</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="text" inputmode="numeric" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">이메일 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="email" title="email" inputmode="email" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">교육참가형태 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <select class="form-select" name="select" title="select">
+                                    <option value="선택">선택</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+<!--                                <input class="form-input" type="text" title="text" />-->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">신청일</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="text" value="2023-01-01" disabled />
+                            </div>
+                        </div>
+                        <div class="form-title">
+                            <span class="title">교육 담당자 정보</span>
+                            <label for="checkbox1" class="form-check">
+                                <input type="checkbox" id="checkbox1" name="checkGroup2">
+                                <span>신청자와 동일</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">성명</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="text" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">부서</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="text" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">전화번호</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="text" inputmode="numeric" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">이메일</label>
+                            <div class="form-row">
+                                <input class="form-input" type="email" title="email2" inputmode="email" />
+                            </div>
+                        </div>
+                        <div class="form-title">
+                            <span class="title">계산서 담당자 정보</span>
+                            <div class="labels">
+                                <label for="checkbox2" class="form-check">
+                                    <input type="checkbox" id="checkbox2" name="checkGroup3" />
+                                    <span>신청자와 동일</span>
+                                </label>
+                                <label for="checkbox3" class="form-check">
+                                    <input type="checkbox" id="checkbox3" name="checkGroup3" />
+                                    <span>교육 담당자와 동일</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">성명</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="text" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">부서</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="text" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">전화번호</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="text" inputmode="numeric" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">이메일</label>
+                            <div class="form-row">
+                                <input class="form-input" type="email" title="email3" inputmode="email" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button class="btn btn-border-grey _popupClose" type="button">취소</button>
+            <button class="btn" type="button">수정</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

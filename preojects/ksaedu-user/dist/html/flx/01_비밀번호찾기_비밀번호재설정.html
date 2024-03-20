@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/flx/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/flx/lib/swiper.js"></script>
+    <script src="../../js/front/flx/lib/twbsPagination.js"></script>
+    <script src="../../js/front/flx/lib/sortable.js"></script>
+    <script src="../../js/front/flx/lib/chart.js"></script>
+    <script src="../../js/front/flx/lib/chartjs-plugin-datalabels.js"></script>
+    <script src="../../js/front/flx/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/flx/style.css">
+    <link rel="stylesheet" href="../../css/front/flx/pages.css">
+    <link rel="shortcut icon" href="../../images/front/flx/common/favicon.ico">
+    <title>📌 KSA EDU 📌</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="login-contents">
+        <div class="top-heading">
+            <a class="img-logo" href="#"><img src="../../images/front/flx/common/logo.png" alt="KSA EDU"></a>
+            <span class="txt-logo">한국표준협회</span>
+        </div>
+        <div class="contents">
+            <div class="login-box login-box-lg">
+                <div class="tab-container _tabContainer">
+                    <div class="tabs-box">
+                        <ul class="tabs _tab">
+                            <li class="item"><a href="#">아이디 찾기</a></li>
+                            <li class="item on"><a href="#">비밀번호 찾기</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content _tabContent">
+                        <div class="tab-panel">
+                            <div class="find-box">
+                                <div class="title">아이디 찾기</div>
+                                <div class="desc">
+                                    아이디를 찾기 위해 가입 시 입력하신 이름과 휴대전화번호를 입력하고 인증번호 발송을 눌러<br/>
+                                    휴대전화로 수신된 인증번호를 입력한 뒤 인증하기를 눌러주세요.
+                                </div>
+                                <div class="form">
+                                    <div class="form-group">
+                                        <label for="name" class="label">이름 <span class="color-caution">*</span></label>
+                                        <input class="form-input" type="text" id="name" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tel" class="label">휴대폰전화번호 <span class="color-caution">*</span></label>
+                                        <div class="form-col">
+                                            <input class="form-input" type="tel" id="tel" style="width: 62%" />
+                                            <button class="btn">인증번호 발송</button>
+                                        </div>
+                                        <div class="caution">입력하신 휴대전화번호로 인증번호가 발송되었습니다. 발송까지 최대 1분정도 소요될 수 있습니다.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="number" class="label">인증번호 입력</label>
+                                        <div class="form-col">
+                                            <input class="form-input" type="tel" id="number" style="width: 70%" />
+                                            <button class="btn">인증하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-panel on">
+                            <div class="find-box">
+                                <div class="title">비밀번호 재설정</div>
+                                <div class="desc">
+                                    비밀번호를 재설정 하기 위해 가입 시 입력하신 이름과 휴대전화번호를 입력하고 인증번호 발송을 눌러<br/>
+                                    휴대전화로 수신된 인증번호를 입력한 뒤 인증하기를 눌러주세요.
+                                </div>
+                                <div class="form">
+                                    <div class="form-group">
+                                        <label for="id" class="label">아이디 <span class="color-caution">*</span></label>
+                                        <input class="form-input" type="text" id="id" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name2" class="label">이름 <span class="color-caution">*</span></label>
+                                        <input class="form-input" type="text" id="name2" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tel2" class="label">휴대폰전화번호 <span class="color-caution">*</span></label>
+                                        <div class="form-col">
+                                            <input class="form-input" type="tel" id="tel2" style="width: 62%" />
+                                            <button class="btn">인증번호 발송</button>
+                                        </div>
+                                        <div class="caution">입력하신 휴대전화번호로 인증번호가 발송되었습니다. 발송까지 최대 1분정도 소요될 수 있습니다.</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="number2" class="label">인증번호 입력</label>
+                                        <div class="form-col">
+                                            <input class="form-input" type="tel" id="number2" style="width: 70%" />
+                                            <button class="btn">인증하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="links">
+                <a class="lg" href="#">개인정보처리방침</a>
+                <a href="#">이용약관</a>
+                <a href="#">저작권정책</a>
+                <a href="#">사이트맵</a>
+            </div>
+            <div class="copyright">© KOREAN STANDARDS ASSOCIATION. ALL RIGHTS RESERVED.</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

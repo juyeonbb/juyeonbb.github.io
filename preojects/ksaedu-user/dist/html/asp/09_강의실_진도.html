@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/asp/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/asp/lib/swiper.js"></script>
+    <script src="../../js/front/asp/lib/twbsPagination.js"></script>
+    <script src="../../js/front/asp/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/asp/style.css">
+    <link rel="stylesheet" href="../../css/front/asp/pages.css">
+    <link rel="shortcut icon" href="../../images/front/asp/common/favicon.ico">
+    <title>💼 KSA EDU 💻</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="classroom-contents">
+        <div class="top-heading">
+            <div class="inner">
+                <a class="mo-menu _popupTrigger" data-trigger="mo-gnb-popup" href="#"><i class="ico ico-menu"></i></a>
+                <a class="img-logo" href="#"><img src="../../images/front/asp/common/logo.png" alt="KSA EDU" /></a>
+                <span class="heading">현장 품질 관리 체계 개선</span>
+                <a class="btn-logout" href="#"><i class="ico ico-logout"></i><span>나가기</span></a>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="lnb">
+                <ul class="classroom-menu-list">
+                    <li class="item on"><a href="#"><i class="ico ico-lnb-menu-1"></i><span>강의실 홈</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-2"></i><span>과정정보</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-3"></i><span>진도</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-4"></i><span>시험</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-5"></i><span>과제</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-6"></i><span>토론</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-7"></i><span>비대면</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-8"></i><span>설문</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-11"></i><span>성적확인</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-9"></i><span>과정게시판</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-10"></i><span>학습문의</span></a></li>
+                </ul>
+                <div class="info">
+                    <div class="font-1">학습지원센터</div>
+                    <div class="font-2"><i class="ico ico-tel"></i><a href="tel:1234-5678">1234-5678</a></div>
+                    <div class="font-3">평일 09~18시<br/>점심 12~13시</div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="classroom">
+                    <div class="page-title">
+                        <span class="title">진도 현황</span>
+                        <button class="btn-more collapse _allAccTrigger" type="button"><span>전체 열기</span><i class="ico ico-acc-down"></i></button>
+                    </div>
+                    <div class="progress-table-box">
+                        <div class="acc-table-head">
+                            <div class="row">
+                                <div class="col">차시</div>
+                                <div class="col">학습목차</div>
+                                <div class="col">진도율</div>
+                                <div class="col">학습횟수</div>
+                                <div class="col">최종학습일시</div>
+                                <div class="col">학습시간</div>
+                                <div class="col">학습하기</div>
+                            </div>
+                        </div>
+                        <div class="acc-table-body">
+                            <div class="acc-item show">
+                                <div class="acc-head">
+                                    <div class="row">
+                                        <div class="col">1차시</div>
+                                        <div class="col"><button class="btn-acc-trigger _accTrigger"><span>생산 운영 전략</span><i class="ico ico-acc-down"></i></button></div>
+                                        <div class="col"></div>
+                                        <div class="col"></div>
+                                        <div class="col"></div>
+                                        <div class="col">0:00:00</div>
+                                        <div class="col">완료</div>
+                                    </div>
+                                </div>
+                                <div class="acc-body">
+                                    <div class="row">
+                                        <div class="col">01. 인트로</div>
+                                        <div class="col">100%</div>
+                                        <div class="col">2</div>
+                                        <div class="col">2023-01-01 12:00:00</div>
+                                        <div class="col">0:00:00</div>
+                                        <div class="col"><button class="btn with-icon" type="button"><i class="ico ico-play"></i><span>학습하기</span></button></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">01. 인트로</div>
+                                        <div class="col">100%</div>
+                                        <div class="col">2</div>
+                                        <div class="col">2023-01-01 12:00:00</div>
+                                        <div class="col">0:00:00</div>
+                                        <div class="col"><button class="btn with-icon" type="button"><i class="ico ico-play"></i><span>학습하기</span></button></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc-item">
+                                <div class="acc-head">
+                                    <div class="row">
+                                        <div class="col">1차시</div>
+                                        <div class="col"><button class="btn-acc-trigger _accTrigger"><span>생산 운영 전략</span><i class="ico ico-acc-down"></i></button></div>
+                                        <div class="col"></div>
+                                        <div class="col"></div>
+                                        <div class="col"></div>
+                                        <div class="col">0:00:00</div>
+                                        <div class="col">완료</div>
+                                    </div>
+                                </div>
+                                <div class="acc-body">
+                                    <div class="row">
+                                        <div class="col">01. 인트로</div>
+                                        <div class="col">100%</div>
+                                        <div class="col">2</div>
+                                        <div class="col">2023-01-01 12:00:00</div>
+                                        <div class="col">0:00:00</div>
+                                        <div class="col"><button class="btn with-icon" type="button"><i class="ico ico-play"></i><span>학습하기</span></button></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">01. 인트로</div>
+                                        <div class="col">100%</div>
+                                        <div class="col">2</div>
+                                        <div class="col">2023-01-01 12:00:00</div>
+                                        <div class="col">0:00:00</div>
+                                        <div class="col"><button class="btn with-icon" type="button"><i class="ico ico-play"></i><span>학습하기</span></button></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="acc-item">
+                                <div class="acc-head">
+                                    <div class="row">
+                                        <div class="col">1차시</div>
+                                        <div class="col"><button class="btn-acc-trigger _accTrigger"><span>생산 운영 전략</span><i class="ico ico-acc-down"></i></button></div>
+                                        <div class="col"></div>
+                                        <div class="col"></div>
+                                        <div class="col"></div>
+                                        <div class="col">0:00:00</div>
+                                        <div class="col">완료</div>
+                                    </div>
+                                </div>
+                                <div class="acc-body">
+                                    <div class="row">
+                                        <div class="col">01. 인트로</div>
+                                        <div class="col">100%</div>
+                                        <div class="col">2</div>
+                                        <div class="col">2023-01-01 12:00:00</div>
+                                        <div class="col">0:00:00</div>
+                                        <div class="col"><button class="btn with-icon" type="button"><i class="ico ico-play"></i><span>학습하기</span></button></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">01. 인트로</div>
+                                        <div class="col">100%</div>
+                                        <div class="col">2</div>
+                                        <div class="col">2023-01-01 12:00:00</div>
+                                        <div class="col">0:00:00</div>
+                                        <div class="col"><button class="btn with-icon" type="button"><i class="ico ico-play"></i><span>학습하기</span></button></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">01. 인트로</div>
+                                        <div class="col">100%</div>
+                                        <div class="col">2</div>
+                                        <div class="col">2023-01-01 12:00:00</div>
+                                        <div class="col">0:00:00</div>
+                                        <div class="col"><button class="btn with-icon" type="button"><i class="ico ico-play"></i><span>학습하기</span></button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dim _dim" style="display: none"></div>
+<div class="mo-classroom-gnb _popup" data-popup="mo-gnb-popup">
+    <div class="heading">
+        <span class="title">현장 품질 관리 체계 개선</span>
+        <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close-white"></i></button>
+    </div>
+    <div class="box">
+        <ul class="classroom-menu-list">
+            <li class="item on"><a href="#"><i class="ico ico-lnb-menu-1"></i><span>강의실 홈</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-2"></i><span>과정정보</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-3"></i><span>진도</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-4"></i><span>시험</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-5"></i><span>과제</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-6"></i><span>토론</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-7"></i><span>비대면</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-8"></i><span>설문</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-9"></i><span>과정게시판</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-10"></i><span>학습문의</span></a></li>
+        </ul>
+        <div class="info">
+            <div class="font-1">학습지원센터</div>
+            <div class="font-2"><i class="ico ico-tel"></i><a href="tel:1234-5678">1234-5678</a></div>
+            <div class="font-3">평일 09~18시<br/>점심 12~13시</div>
+        </div>
+    </div>
+</div>
+<script>
+    // 개별 acc-item 이벤트
+    $('._accTrigger').on('click', function() {
+        let accItem = $(this).closest('.acc-item');
+
+        if (accItem.hasClass('show')) {
+            accItem.removeClass('show');
+        } else {
+            $('.acc-item.show').removeClass('show');
+            accItem.addClass('show');
+        }
+    });
+
+    // 전체 열기 이벤트
+    $('._allAccTrigger').on('click', function() {
+        if ($(this).hasClass('collapse')) {
+            $('.acc-item').addClass('show');
+            $(this).removeClass('collapse').find('span').text('전체 닫기');
+        } else {
+            $('.acc-item').removeClass('show');
+            $(this).addClass('collapse').find('span').text('전체 열기');
+        }
+    });
+</script>
+</body>
+</html>

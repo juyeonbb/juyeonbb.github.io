@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/flx/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/flx/lib/swiper.js"></script>
+    <script src="../../js/front/flx/lib/twbsPagination.js"></script>
+    <script src="../../js/front/flx/lib/sortable.js"></script>
+    <script src="../../js/front/flx/lib/chart.js"></script>
+    <script src="../../js/front/flx/lib/chartjs-plugin-datalabels.js"></script>
+    <script src="../../js/front/flx/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/flx/style.css">
+    <link rel="stylesheet" href="../../css/front/flx/pages.css">
+    <link rel="shortcut icon" href="../../images/front/flx/common/favicon.ico">
+    <title>📌 KSA EDU 📌</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <div class="btn-wrap">
+        <button class="btn _popupTrigger" data-trigger="popup-information-setting" type="button">팝업 1</button>
+    </div>
+</div>
+<div class="dim _dim" style="display: block"></div>
+<div class="popup popup-information-setting _popup" data-popup="popup-information-setting" style="display: block">
+    <div class="popup-content">
+        <div class="popup-head">
+            <span class="title">맞춤정보설정</span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="desc">
+                학습자님의 관심분야를 선택해주세요. (<span class="color-black font-weight-medium">최소 3개 이상</span> 선택)<br/>
+                선택된 정보를 바탕으로 <span class="color-black font-weight-medium">메인 Pick For U 영역에서 맞춤과정을 추천</span>해드립니다.
+            </div>
+            <div class="forms">
+                <div class="item">
+                    <label class="label">공통역량</label>
+                    <div class="form-check-group">
+                        <label for="checkbox1-1" class="form-check">
+                            <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                            <span>분류분류분류</span>
+                        </label>
+                        <label for="checkbox1-2" class="form-check">
+                            <input type="checkbox" id="checkbox1-2" name="checkGroup" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox1-3" class="form-check">
+                            <input type="checkbox" id="checkbox1-3" name="checkGroup" />
+                            <span>분류분류</span>
+                        </label>
+                        <label for="checkbox1-4" class="form-check">
+                            <input type="checkbox" id="checkbox1-4" name="checkGroup" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox1-5" class="form-check">
+                            <input type="checkbox" id="checkbox1-5" name="checkGroup" />
+                            <span>분류분류분류분류</span>
+                        </label>
+                        <label for="checkbox1-6" class="form-check">
+                            <input type="checkbox" id="checkbox1-6" name="checkGroup" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox1-7" class="form-check">
+                            <input type="checkbox" id="checkbox1-7" name="checkGroup" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox1-8" class="form-check">
+                            <input type="checkbox" id="checkbox1-8" name="checkGroup" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox1-9" class="form-check">
+                            <input type="checkbox" id="checkbox1-9" name="checkGroup" />
+                            <span>HRD</span>
+                        </label>
+                        <label for="checkbox1-10" class="form-check">
+                            <input type="checkbox" id="checkbox1-10" name="checkGroup" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox1-11" class="form-check">
+                            <input type="checkbox" id="checkbox1-11" name="checkGroup" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox1-12" class="form-check">
+                            <input type="checkbox" id="checkbox1-12" name="checkGroup" />
+                            <span>분류</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">직무역량</label>
+                    <div class="form-check-group">
+                        <label for="checkbox2-1" class="form-check">
+                            <input type="checkbox" id="checkbox2-1" name="checkGroup2" checked="">
+                            <span>CS</span>
+                        </label>
+                        <label for="checkbox2-2" class="form-check">
+                            <input type="checkbox" id="checkbox2-2" name="checkGroup2" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox2-3" class="form-check">
+                            <input type="checkbox" id="checkbox2-3" name="checkGroup2" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox2-4" class="form-check">
+                            <input type="checkbox" id="checkbox2-4" name="checkGroup2" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox2-5" class="form-check">
+                            <input type="checkbox" id="checkbox2-5" name="checkGroup2" />
+                            <span>HRM</span>
+                        </label>
+                        <label for="checkbox2-6" class="form-check">
+                            <input type="checkbox" id="checkbox2-6" name="checkGroup2" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox2-7" class="form-check">
+                            <input type="checkbox" id="checkbox2-7" name="checkGroup2" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox2-8" class="form-check">
+                            <input type="checkbox" id="checkbox2-8" name="checkGroup2" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox2-9" class="form-check">
+                            <input type="checkbox" id="checkbox2-9" name="checkGroup2" />
+                            <span>HRD</span>
+                        </label>
+                        <label for="checkbox2-10" class="form-check">
+                            <input type="checkbox" id="checkbox2-10" name="checkGroup2" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox2-11" class="form-check">
+                            <input type="checkbox" id="checkbox2-11" name="checkGroup2" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox2-12" class="form-check">
+                            <input type="checkbox" id="checkbox2-12" name="checkGroup2" />
+                            <span>분류</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="item">
+                    <label class="label">리더십</label>
+                    <div class="form-check-group">
+                        <label for="checkbox2-1" class="form-check">
+                            <input type="checkbox" id="checkbox3-1" name="checkGroup3" checked="">
+                            <span>CS</span>
+                        </label>
+                        <label for="checkbox3-2" class="form-check">
+                            <input type="checkbox" id="checkbox3-2" name="checkGroup3" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox3-3" class="form-check">
+                            <input type="checkbox" id="checkbox3-3" name="checkGroup3" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox3-4" class="form-check">
+                            <input type="checkbox" id="checkbox3-4" name="checkGroup3" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox3-5" class="form-check">
+                            <input type="checkbox" id="checkbox3-5" name="checkGroup3" />
+                            <span>HRM</span>
+                        </label>
+                        <label for="checkbox3-6" class="form-check">
+                            <input type="checkbox" id="checkbox3-6" name="checkGroup3" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox3-7" class="form-check">
+                            <input type="checkbox" id="checkbox3-7" name="checkGroup3" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox3-8" class="form-check">
+                            <input type="checkbox" id="checkbox3-8" name="checkGroup3" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox3-9" class="form-check">
+                            <input type="checkbox" id="checkbox3-9" name="checkGroup3" />
+                            <span>HRD</span>
+                        </label>
+                        <label for="checkbox3-10" class="form-check">
+                            <input type="checkbox" id="checkbox3-10" name="checkGroup3" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox3-11" class="form-check">
+                            <input type="checkbox" id="checkbox3-11" name="checkGroup3" />
+                            <span>분류</span>
+                        </label>
+                        <label for="checkbox3-12" class="form-check">
+                            <input type="checkbox" id="checkbox3-12" name="checkGroup3" />
+                            <span>분류</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button class="btn" type="button">저장</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

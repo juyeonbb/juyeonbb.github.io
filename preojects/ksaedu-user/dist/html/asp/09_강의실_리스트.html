@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/asp/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/asp/lib/swiper.js"></script>
+    <script src="../../js/front/asp/lib/twbsPagination.js"></script>
+    <script src="../../js/front/asp/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/asp/style.css">
+    <link rel="stylesheet" href="../../css/front/asp/pages.css">
+    <link rel="shortcut icon" href="../../images/front/asp/common/favicon.ico">
+    <title>💼 KSA EDU 💻</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="classroom-contents">
+        <div class="top-heading">
+            <div class="inner">
+                <a class="mo-menu _popupTrigger" data-trigger="mo-gnb-popup" href="#"><i class="ico ico-menu"></i></a>
+                <a class="img-logo" href="#"><img src="../../images/front/btoc/common/logo.png" alt="KSA EDU" /></a>
+                <span class="heading">현장 품질 관리 체계 개선</span>
+                <a class="btn-logout" href="#"><i class="ico ico-logout"></i><span>나가기</span></a>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="lnb">
+                <ul class="classroom-menu-list">
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-1"></i><span>강의실 홈</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-2"></i><span>과정정보</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-3"></i><span>진도</span></a></li>
+                    <li class="item on"><a href="#"><i class="ico ico-lnb-menu-4"></i><span>시험</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-5"></i><span>과제</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-6"></i><span>토론</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-7"></i><span>비대면</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-8"></i><span>설문</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-11"></i><span>성적확인</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-9"></i><span>과정게시판</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-10"></i><span>학습문의</span></a></li>
+                </ul>
+                <div class="info">
+                    <div class="font-1">학습지원센터</div>
+                    <div class="font-2"><i class="ico ico-tel"></i><a href="tel:1234-5678">1234-5678</a></div>
+                    <div class="font-3">평일 09~18시<br/>점심 12~13시</div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="classroom">
+                    <div class="page-title"><span class="title">시험</span><button class="btn btn-border-grey _popupTrigger" data-trigger="popup1" type="button">유의사항 및 베낀 답안 규정</button></div>
+                    <div class="test-list">
+                        <ul class="list">
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge badge-red">미응시</span></div>
+                                <div class="category">형성평가</div>
+                                <div class="title">형성평가 시험명이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응시기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                    <div class="info"><em class="tit">획득점수</em><em class="val">-</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg with-icon" type="button"><i class="ico ico-pen"></i><span class="font-weight-medium">응시하기</span></button></div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge badge-green">응시완료</span></div>
+                                <div class="category">형성평가</div>
+                                <div class="title">형성평가 시험명이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응시기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                    <div class="info"><em class="tit">획득점수</em><em class="val">채점 전</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg btn-light-blue with-icon" type="button"><i class="ico ico-pen-blue"></i><span>결과확인</span></button></div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge">합격</span></div>
+                                <div class="category">형성평가</div>
+                                <div class="title">형성평가 시험명이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응시기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                    <div class="info"><em class="tit">획득점수</em><em class="val"><em class="color-blue font-weight-medium">70</em> / 100 점</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg btn-grey with-icon" type="button"><i class="ico ico-pen-grey"></i><span>기간종료</span></button></div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge badge-grey">불합격</span></div>
+                                <div class="category">형성평가</div>
+                                <div class="title">형성평가 시험명이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응시기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                    <div class="info"><em class="tit">획득점수</em><em class="val">-</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg with-icon" type="button"><i class="ico ico-pen"></i><span class="font-weight-medium">재응시</span></button></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="page-title"><span class="title">과제</span></div>
+                    <div class="test-list">
+                        <ul class="list">
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge badge-red">미제출</span></div>
+                                <div class="category">과제</div>
+                                <div class="title">과제명이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응시기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                    <div class="info"><em class="tit">획득점수</em><em class="val">-</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg with-icon" type="button"><i class="ico ico-book"></i><span class="font-weight-medium">제출하기</span></button></div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge badge-green">제출완료</span></div>
+                                <div class="category">과제</div>
+                                <div class="title">과제명이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응시기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                    <div class="info"><em class="tit">획득점수</em><em class="val">채점 전</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg btn-light-blue with-icon" type="button"><i class="ico ico-book-blue"></i><span class="font-weight-medium">결과확인</span></button></div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge">합격</span></div>
+                                <div class="category">과제</div>
+                                <div class="title">과제명이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응시기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                    <div class="info"><em class="tit">획득점수</em><em class="val"><em class="color-blue font-weight-medium">70</em> / 100 점</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg btn-grey with-icon" type="button"><i class="ico ico-book-grey"></i><span>기간종료</span></button></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="page-title"><span class="title">토론</span></div>
+                    <div class="test-list">
+                        <ul class="list">
+                            <li class="item">
+                                <div class="category">찬반토론</div>
+                                <div class="title">토론주제가 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응시기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                    <div class="info"><em class="tit">참여현황</em><em class="val">게시글 0 <em class="color-grey-ddd">|</em> 댓글 0</em></div>
+                                    <div class="info"><em class="tit">획득점수</em><em class="val">-</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg with-icon" type="button"><i class="ico ico-speech-balloon"></i><span class="font-weight-medium">참여하기</span></button></div>
+                            </li>
+                            <li class="item">
+                                <div class="category">일반토의</div>
+                                <div class="title">토론주제가 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응시기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                    <div class="info"><em class="tit">참여현황</em><em class="val">게시글 0 <em class="color-grey-ddd">|</em> 댓글 0</em></div>
+                                    <div class="info"><em class="tit">획득점수</em><em class="val">채점 전</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg btn-light-blue with-icon" type="button"><i class="ico ico-speech-balloon-blue"></i><span class="font-weight-medium">결과확인</span></button></div>
+                            </li>
+                            <li class="item">
+                                <div class="category">찬반토론</div>
+                                <div class="title">토론주제가 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응시기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                    <div class="info"><em class="tit">참여현황</em><em class="val">게시글 0 <em class="color-grey-ddd">|</em> 댓글 0</em></div>
+                                    <div class="info"><em class="tit">획득점수</em><em class="val"><em class="color-blue font-weight-medium">70</em> / 100 점</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg btn-light-blue with-icon" type="button"><i class="ico ico-speech-balloon-blue"></i><span class="font-weight-medium">결과확인</span></button></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="page-title"><span class="title">비대면</span></div>
+                    <div class="test-list">
+                        <ul class="list">
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge badge-red">진행전</span></div>
+                                <div class="category">비대면</div>
+                                <div class="title">비대면 제목이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="val">2023-01-01 12:00</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg btn-grey with-icon" type="button"><i class="ico ico-talk-grey"></i><span>참석하기</span></button></div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge badge-green">평가전</span></div>
+                                <div class="category">비대면</div>
+                                <div class="title">비대면 제목이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="val">2023-01-01 12:00</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg with-icon" type="button"><i class="ico ico-talk"></i><span class="font-weight-medium">참석하기</span></button></div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge">평가완료</span></div>
+                                <div class="category">비대면</div>
+                                <div class="title">비대면 제목이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="val">2023-01-01 12:00</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg with-icon" type="button"><i class="ico ico-talk"></i><span class="font-weight-medium">참석하기</span></button></div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge badge-black">미참석</span></div>
+                                <div class="category">비대면</div>
+                                <div class="title">비대면 제목이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="val">2023-01-01 12:00</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg with-icon" type="button"><i class="ico ico-talk"></i><span class="font-weight-medium">참석하기</span></button></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="page-title"><span class="title">설문</span></div>
+                    <div class="test-list">
+                        <ul class="list">
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge badge-red">미응답</span></div>
+                                <div class="category">만족도조사</div>
+                                <div class="title">설문 제목이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응답기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg with-icon" type="button"><i class="ico ico-review"></i><span class="font-weight-medium">응답하기</span></button></div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge badge-green">응답완료</span></div>
+                                <div class="category">만족도조사</div>
+                                <div class="title">설문 제목이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응답기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg btn-light-blue with-icon" type="button"><i class="ico ico-review-blue"></i><span class="font-weight-medium">설문확인</span></button></div>
+                            </li>
+                            <li class="item">
+                                <div class="badge-wrap"><span class="badge badge-green">응답완료</span></div>
+                                <div class="category">만족도조사</div>
+                                <div class="title">설문 제목이 들어갑니다..</div>
+                                <div class="infos">
+                                    <div class="info"><em class="tit">응답기간</em><em class="val">2023-01-01 ~ 2023-01-10</em></div>
+                                </div>
+                                <div class="btn-wrap"><button class="btn btn-lg btn-grey with-icon" type="button"><i class="ico ico-review-grey"></i><span>기간종료</span></button></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="page-title"><span class="title">환급과정 시험규정 안내</span></div>
+                    <div class="test-info">
+                        <div class="item"><span class="num">①</span> <span class="color-caution">시험시간은 제한시간(60분) 이내</span>에서만 가능하며, <span class="color-caution">제한시간이 초과되지 않은 경우만 재접속</span>이 가능합니다.</div>
+                        <div class="item"><span class="num">②</span> 일단 시험응시가 시작되면 시험지 창 종료(접속단절) 및 시스템다운과 관계없이 시험시간은 계속 경과되며, 최초접속부터 정확히 60분 후 시험 창은 자동으로 닫힙니다. <span class="color-caution">60분 이전에 “제출하기” 버튼을 반드시 눌러 주십시오.</span> (미 클릭 시 “0”점 처리됩니다.)</div>
+                        <div class="item-desc">예) 시험지 최초접속 시간이 3시 일 경우 정확히 4시에 자동제출 되며, 시험 중 접속을 중단하거나, 시스템이 다운되더라도 4시에 자동제출 됩니다.</div>
+                        <div class="item"><span class="num">③</span> 답안 작성 시 답안은 자동 저장됩니다.</div>
+                        <div class="item"><span class="num">④</span> 시험시작 전에 실행중인 모든 프로그램(인터넷, 메신저 등)을 반드시 종료후 응시하셔야 합니다.</div>
+                        <div class="item"><span class="num">⑤</span> 시험중 시험 외의 다른 창(인터넷, 워드, 채팅 등)으로 이동할 경우 시험은 0점으로 자동제출됩니다.</div>
+                        <div class="item"><span class="num">⑥</span> <span class="color-caution">시험, 과제 응시기회는 1회</span>입니다.</div>
+                        <div class="item"><span class="num">⑦</span> 2022 개정된 사업주훈련규정에 따라, 이러닝 환급 과정의 경우 <span class="color-caution">학습종료일 다음날부터 일주일 간 재응시가 허용</span>됩니다.</div>
+                        <div class="item-desc">
+                            1. 진행단계평가, 과제, 최종평가 등을 제출하였으나, 수료 기준 점수가 미달된 경우 재응시 대상(미제출 시 재응시 불가)<br/>
+                            2. 전체 진도율 50% 이상, 차시별 50% 이상 학습 완료한 경우만 가능<br/>
+                            3. 재응시 기간 : 학습종료일 이후 일주일(7일 간)<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;ex. 학습기간: 1.16~2.15 ⇒ 재응시 기간: 2.16~2.22<br/>
+                            4. 수료기준 충족시까지 재응시 가능합니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dim _dim"></div>
+<div class="popup popup-box-text _popup" data-popup="popup1">
+    <div class="popup-content">
+        <div class="popup-head">
+            <span class="title">유의사항 및 베낀 답안 규정</span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="box">
+                <div class="sub-text">목적</div>
+                <div class="list">
+                    <div class="desc">[사업주 직업능력개발 훈련 지원규정]에 의거하여, 베낀 답안 방지 대책 및 베낀 답안
+                        발생시 처리기준을 수립하고 학습자에게 공지하도록 되어 있습니다.</div>
+                </div>
+                <div class="sub-text">베낀 답안에 대한 정의</div>
+                <div class="list">
+                    <div class="desc"><span class="font-weight-bold color-caution">학습자가 제출한 과제 및 토론 등의 내용</span>을 원본 그대로 도용(동일답안)하거나, 유사하게
+                        제출(유사답안)하여 튜터나 운영자가 베낀 답안으로 판단하는 경우를 베낀 답안으로
+                        정의합니다.</div>
+                    <div class="desc"><span class="font-weight-bold color-caution">인터넷 상에 게시된 글</span>을 원본 그대로 도용하거나 문구 일부를 수정하여 제출하여 튜터나
+                        운영자가 베낀 답안으로 판단하는 경우를 베낀 답안으로 정의합니다.</div>
+                    <div class="desc"><span class="font-weight-bold color-caution">참고자료 활용 시에는 반드시 출처를 밝히고 활용</span>해야 합니다.</div>
+                </div>
+                <div class="sub-text">베낀 답안 제출시 처리기준</div>
+                <div class="list">
+                    <div class="desc">평가 규정에 따라 <span class="font-weight-bold color-caution">베낀 답안 제출 시 베낀 답안 제공자와 제출자 모두 0점 처리하여
+                        미수료 처리</span>됩니다. 학습자 상호간에 불이익이 없도록 각별히 유의해주시길 부탁
+                        드립니다.</div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="btn-wrap">
+                <button class="btn _popupClose">확인</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dim _dim" style="display: none"></div>
+<div class="mo-classroom-gnb _popup" data-popup="mo-gnb-popup">
+    <div class="heading">
+        <span class="title">현장 품질 관리 체계 개선</span>
+        <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close-white"></i></button>
+    </div>
+    <div class="box">
+        <ul class="classroom-menu-list">
+            <li class="item on"><a href="#"><i class="ico ico-lnb-menu-1"></i><span>강의실 홈</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-2"></i><span>과정정보</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-3"></i><span>진도</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-4"></i><span>시험</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-5"></i><span>과제</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-6"></i><span>토론</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-7"></i><span>비대면</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-8"></i><span>설문</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-9"></i><span>과정게시판</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-10"></i><span>학습문의</span></a></li>
+        </ul>
+        <div class="info">
+            <div class="font-1">학습지원센터</div>
+            <div class="font-2"><i class="ico ico-tel"></i><a href="tel:1234-5678">1234-5678</a></div>
+            <div class="font-3">평일 09~18시<br/>점심 12~13시</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/asp/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/asp/lib/swiper.js"></script>
+    <script src="../../js/front/asp/lib/twbsPagination.js"></script>
+    <script src="../../js/front/asp/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/asp/style.css">
+    <link rel="stylesheet" href="../../css/front/asp/pages.css">
+    <link rel="shortcut icon" href="../../images/front/asp/common/favicon.ico">
+    <title>💼 KSA EDU 💻</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="classroom-contents">
+        <div class="top-heading">
+            <div class="inner">
+                <a class="mo-menu _popupTrigger" data-trigger="mo-gnb-popup" href="#"><i class="ico ico-menu"></i></a>
+                <a class="img-logo" href="#"><img src="../../images/front/asp/common/logo.png" alt="KSA EDU" /></a>
+                <span class="heading">현장 품질 관리 체계 개선</span>
+                <a class="btn-logout" href="#"><i class="ico ico-logout"></i><span>나가기</span></a>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="lnb">
+                <ul class="classroom-menu-list">
+                    <li class="item on"><a href="#"><i class="ico ico-lnb-menu-1"></i><span>강의실 홈</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-2"></i><span>과정정보</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-3"></i><span>진도</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-4"></i><span>시험</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-5"></i><span>과제</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-6"></i><span>토론</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-7"></i><span>비대면</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-8"></i><span>설문</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-11"></i><span>성적확인</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-9"></i><span>과정게시판</span></a></li>
+                    <li class="item"><a href="#"><i class="ico ico-lnb-menu-10"></i><span>학습문의</span></a></li>
+                </ul>
+                <div class="info">
+                    <div class="font-1">학습지원센터</div>
+                    <div class="font-2"><i class="ico ico-tel"></i><a href="tel:1234-5678">1234-5678</a></div>
+                    <div class="font-3">평일 09~18시<br/>점심 12~13시</div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="classroom">
+                    <div class="page-title"><span class="title">학습문의</span></div>
+                    <div class="tab-container _tabContainer">
+                        <div class="tabs-box">
+                            <ul class="balloon-tabs _tab">
+                                <li class="item on"><a href="#">문의사항</a></li>
+                                <li class="item"><a href="#">콘텐츠 오류신고</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content _tabContent">
+                            <div class="tab-panel on">
+                                <div class="table v-table v-table-input">
+                                    <table>
+                                        <colgroup>
+                                            <col width="140px">
+                                            <col width="auto">
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <th class="col-title"><span>문의분야</span></th>
+                                            <td>
+                                                <select class="form-select" name="select" title="category">
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="col-title"><span>제목</span></th>
+                                            <td>
+                                                <input class="form-input" type="text" title="title" placeholder="제목을 입력해주세요.">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="col-title"><span>내용</span></th>
+                                            <td class="align-left">
+                                                <textarea style="height: 238px" class="form-input" type="text" title="content" placeholder="내용을 입력해주세요."></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="col-title"><span>첨부파일</span></th>
+                                            <td class="align-left">
+                                                <div class="form-file">
+                                                    <input class="input-file" id="file" type="file">
+                                                    <label class="btn btn-border-grey" for="file">파일선택</label>
+                                                    <ul class="file-list">
+                                                        <li class="item"><i class="ico ico-img"></i><span class="name">한국표준협회 사업자등록증.pdf</span><button class="btn-delete" type="button"><i class="ico ico-delete"></i></button></li>
+                                                        <li class="item"><i class="ico ico-pdf"></i><span class="name">한국표준협회 사업자등록증.pdf</span><button class="btn-delete" type="button"><i class="ico ico-delete"></i></button></li>
+                                                        <li class="item"><i class="ico ico-excel"></i><span class="name">한국표준협회 사업자등록증.pdf</span><button class="btn-delete" type="button"><i class="ico ico-delete"></i></button></li>
+                                                        <li class="item"><i class="ico ico-hwp"></i><span class="name">한국표준협회 사업자등록증.pdf</span><button class="btn-delete" type="button"><i class="ico ico-delete"></i></button></li>
+                                                        <li class="item"><i class="ico ico-ppt"></i><span class="name">한국표준협회 사업자등록증.pdf</span><button class="btn-delete" type="button"><i class="ico ico-delete"></i></button></li>
+                                                        <li class="item"><i class="ico ico-zip"></i><span class="name">한국표준협회 사업자등록증.pdf</span><button class="btn-delete" type="button"><i class="ico ico-delete"></i></button></li>
+                                                        <li class="item"><i class="ico ico-doc"></i><span class="name">한국표준협회 사업자등록증.pdf</span><button class="btn-delete" type="button"><i class="ico ico-delete"></i></button></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="btn-wrap mt-30">
+                                    <button class="btn btn-border-grey">취소</button>
+                                    <button class="btn">등록</button>
+                                </div>
+                            </div>
+                            <div class="tab-panel">2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dim _dim" style="display: none"></div>
+<div class="mo-classroom-gnb _popup" data-popup="mo-gnb-popup">
+    <div class="heading">
+        <span class="title">현장 품질 관리 체계 개선</span>
+        <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close-white"></i></button>
+    </div>
+    <div class="box">
+        <ul class="classroom-menu-list">
+            <li class="item on"><a href="#"><i class="ico ico-lnb-menu-1"></i><span>강의실 홈</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-2"></i><span>과정정보</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-3"></i><span>진도</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-4"></i><span>시험</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-5"></i><span>과제</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-6"></i><span>토론</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-7"></i><span>비대면</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-8"></i><span>설문</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-9"></i><span>과정게시판</span></a></li>
+            <li class="item"><a href="#"><i class="ico ico-lnb-menu-10"></i><span>학습문의</span></a></li>
+        </ul>
+        <div class="info">
+            <div class="font-1">학습지원센터</div>
+            <div class="font-2"><i class="ico ico-tel"></i><a href="tel:1234-5678">1234-5678</a></div>
+            <div class="font-3">평일 09~18시<br/>점심 12~13시</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

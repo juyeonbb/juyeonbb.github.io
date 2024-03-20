@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/asp/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/asp/lib/swiper.js"></script>
+    <script src="../../js/front/asp/lib/twbsPagination.js"></script>
+    <script src="../../js/front/asp/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/asp/style.css">
+    <link rel="stylesheet" href="../../css/front/asp/pages.css">
+    <link rel="shortcut icon" href="../../images/front/asp/common/favicon.ico">
+    <title>💼 KSA EDU 💻</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="login-contents">
+        <div class="top-heading">
+            <a class="img-logo" href="#"><img src="../../images/front/asp/common/logo.png" alt="KSA EDU"></a>
+            <span class="txt-logo">한국표준협회</span>
+        </div>
+        <div class="contents">
+            <div class="sign-in">
+                <div class="title">회원가입</div>
+                <div class="step">
+                    <div class="item completed">
+                        <span class="num">01</span>
+                        <span class="title">약관 동의</span>
+                    </div>
+                    <div class="item active">
+                        <span class="num">02</span>
+                        <span class="title">본인인증</span>
+                    </div>
+                    <div class="item">
+                        <span class="num">03</span>
+                        <span class="title">회원정보 입력</span>
+                    </div>
+                    <div class="item">
+                        <span class="num">04</span>
+                        <span class="title">가입완료</span>
+                    </div>
+                </div>
+                <div class="certification-step">
+                    <div class="item">
+                        <div class="img"><img src="../../images/front/asp/login/img-c-step-1.svg" alt="휴대폰 인증"></div>
+                        <div class="title">휴대폰 인증</div>
+                        <div class="desc">
+                            실명인증을 통해<br>
+                            회원님의 정보를 확인하고자 하시면<br>
+                            아래 ‘<span class="color-point font-weight-medium">인증하기</span>’ 버튼을 클릭해주세요.
+                        </div>
+                        <div class="btn-wrap">
+                            <button type="button" class="btn">인증하기</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img"><img src="../../images/front/asp/login/img-c-step-2.svg" alt="아이핀 인증"></div>
+                        <div class="title">아이핀 인증</div>
+                        <div class="desc">
+                            실명인증을 통해<br>
+                            회원님의 정보를 확인하고자 하시면<br>
+                            아래 ‘<span class="color-point font-weight-medium">인증하기</span>’ 버튼을 클릭해주세요.
+                        </div>
+                        <div class="btn-wrap">
+                            <button type="button" class="btn">인증하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="links">
+                    <a class="lg" href="#">개인정보처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">저작권정책</a>
+                    <a href="#">사이트맵</a>
+                </div>
+                <div class="copyright">© KOREAN STANDARDS ASSOCIATION. ALL RIGHTS RESERVED.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let $checkAll = $('#checkAll');
+    let $itemCheck = $(".item input[type='checkbox']");
+
+    function updateCheckAll() {
+        $checkAll.prop('checked', $itemCheck.length === $itemCheck.filter(':checked').length);
+    }
+
+    $checkAll.on('click', function () {
+        $itemCheck.prop('checked', $(this).prop('checked'));
+        updateCheckAll();
+    })
+
+    $itemCheck.on('change', function () {
+        updateCheckAll();
+    })
+</script>
+</body>
+</html>

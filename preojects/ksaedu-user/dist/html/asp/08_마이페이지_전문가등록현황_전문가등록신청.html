@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/asp/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/asp/lib/swiper.js"></script>
+    <script src="../../js/front/asp/lib/twbsPagination.js"></script>
+    <script src="../../js/front/asp/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/asp/style.css">
+    <link rel="stylesheet" href="../../css/front/asp/pages.css">
+    <link rel="shortcut icon" href="../../images/front/asp/common/favicon.ico">
+    <title>💼 KSA EDU 💻</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="top-notice">
+    <div class="inner">
+        <a href="#">2023년 6·7월 공개교육 일정 안내 <i class="ico ico-top-triangle"></i></a>
+        <button type="button" class="btn-top-close"><i class="ico ico-top-close-white"><span class="sr-only">닫기 버튼</span></i></button>
+    </div>
+</div>
+<div class="header asp _header">
+    <div class="header-bottom _headerBottom">
+        <div class="inner">
+            <h1 class="brand-logo"><a href="#"><img src="../../images/front/asp/common/logo.png" alt="KSA EDU"></a></h1>
+            <ul class="menus">
+                <li class="item on"><a href="#">집합·라이브</a></li>
+                <li class="item"><a href="#">이러닝</a></li>
+                <li class="item"><a href="#">교육안내</a></li>
+                <li class="item"><a href="#">고객지원</a></li>
+                <li class="item"><a href="#">마이페이지</a></li>
+            </ul>
+            <div class="links">
+                <div class="btn-search _btnTopSearch">
+                    <span class="sr-only">검색 버튼</span><i class="ico ico-search"></i>
+                    <div class="box-header-search">
+                        <div class="form-search">
+                            <input type="search" title="search" placeholder="검색어를 입력해 주세요." />
+                            <button class="btn-go-search"><i class="ico ico-search"></i></button>
+                        </div>
+                        <div class="search-list">
+                            <div class="col">
+                                <div class="title"><span class="color-point">최근</span> 검색어</div>
+                                <ul class="list">
+                                    <li class="item"><span class="txt">ESG</span><button class="btn-del"><i class="ico ico-delete"></i></button></li>
+                                    <li class="item"><span class="txt">비즈니스</span><button class="btn-del"><i class="ico ico-delete"></i></button></li>
+                                    <li class="item"><span class="txt">ISO경영시스템</span><button class="btn-del"><i class="ico ico-delete"></i></button></li>
+                                    <li class="item"><span class="txt">스마트워크</span><button class="btn-del"><i class="ico ico-delete"></i></button></li>
+                                    <li class="item"><span class="txt">안전직무</span><button class="btn-del"><i class="ico ico-delete"></i></button></li>
+                                    <li class="item"><span class="txt">디지털전환</span><button class="btn-del"><i class="ico ico-delete"></i></button></li>
+                                    <li class="item"><span class="txt">생산관리</span><button class="btn-del"><i class="ico ico-delete"></i></button></li>
+                                    <li class="item"><span class="txt">리더십</span><button class="btn-del"><i class="ico ico-delete"></i></button></li>
+                                    <li class="item"><span class="txt">마케팅</span><button class="btn-del"><i class="ico ico-delete"></i></button></li>
+                                    <li class="item"><span class="txt">인사</span><button class="btn-del"><i class="ico ico-delete"></i></button></li>
+                                </ul>
+                                <div class="align-right"><button class="btn-txt">전체삭제</button></div>
+                            </div>
+                            <div class="col">
+                                <div class="title"><span class="color-point">인기</span> 검색어</div>
+                                <ul class="list list-rank">
+                                    <li class="item"><span class="num color-caution">01</span><span class="txt">ESG</span></li>
+                                    <li class="item"><span class="num color-caution">02</span><span class="txt">비즈니스</span></li>
+                                    <li class="item"><span class="num color-caution">03</span><span class="txt">ISO경영시스템</span></li>
+                                    <li class="item"><span class="num">04</span><span class="txt">안전직무</span></li>
+                                    <li class="item"><span class="num">05</span><span class="txt">디지털전환</span></li>
+                                    <li class="item"><span class="num">06</span><span class="txt">생산관리</span></li>
+                                    <li class="item"><span class="num">07</span><span class="txt">리더십</span></li>
+                                    <li class="item"><span class="num">08</span><span class="txt">마케팅</span></li>
+                                    <li class="item"><span class="num">09</span><span class="txt">인사</span></li>
+                                    <li class="item"><span class="num">10</span><span class="txt">스마트워크</span></li>
+                                </ul>
+                                <div class="align-right"><button class="btn-txt _closeThisBox">닫기</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="txt-link" href="#">회원가입</a>
+                <a class="txt-link" href="#">로그인</a>
+                <a class="btn-top" href="#">FLEX 사이트</a>
+                <a class="btn-my" href="#"><i class="ico ico-human"></i></a>
+                <button class="btn-menu _btnGnbMenu" type="button">
+                    <span></span><span></span><span></span>
+<!--                    <span class="sr-only">메뉴 버튼</span><i class="ico ico-menu"></i>-->
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="gnb _gnb">
+        <div class="tab-container _tabContainer">
+            <div class="tabs-box">
+                <ul class="tabs _tab">
+                    <li class="item on"><a href="#">카테고리 전체보기</a></li>
+                    <li class="item"><a href="#">서비스 전체보기</a></li>
+                </ul>
+            </div>
+            <div class="tab-content _tabContent">
+                <div class="tab-panel with-tab on">
+                    <div class="tab-container _tabContainerInner">
+                        <div class="tabs-box">
+                            <ul class="balloon-tabs balloon-tabs-point _tabInner">
+                                <li class="item on"><a href="#">집합·라이브</a></li>
+                                <li class="item"><a href="#">이러닝</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content _tabContentInner">
+                            <div class="tab-panel on">
+                                <div class="menu-box col-4">
+                                    <ul class="list">
+                                        <li class="item item-lg">ESG/DX</li>
+                                        <li class="item"><a href="#">ESG</a></li>
+                                        <li class="item"><a href="#">디지털전환(DX)</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">계층/리더십</li>
+                                        <li class="item"><a href="#">계층/리더십</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">Biz스킬/OA</li>
+                                        <li class="item"><a href="#">비즈니스 공통</a></li>
+                                        <li class="item"><a href="#">스마트워크(OA)</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">기획/인사/회계</li>
+                                        <li class="item"><a href="#">전략/기획</a></li>
+                                        <li class="item"><a href="#">인사/노무/총무</a></li>
+                                        <li class="item"><a href="#">재무/회계/원가</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">영업/마케팅/글로벌Biz</li>
+                                        <li class="item"><a href="#">영업/마케팅</a></li>
+                                        <li class="item"><a href="#">무역/글로벌Biz</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">ISO경영시스템</li>
+                                        <li class="item"><a href="#">ISO경영시스템</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">R&D/품질</li>
+                                        <li class="item"><a href="#">R&D</a></li>
+                                        <li class="item"><a href="#">품질/신뢰성</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">구매/생산/TPM</li>
+                                        <li class="item"><a href="#">공급관리</a></li>
+                                        <li class="item"><a href="#">생산관리</a></li>
+                                        <li class="item"><a href="#">TPM/생산기술</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">안전</li>
+                                        <li class="item"><a href="#">안전직무</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">KS인증/JIS인증/단체표준</li>
+                                        <li class="item"><a href="#">KS인증/단체표준</a></li>
+                                        <li class="item"><a href="#">JIS인증</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">CEO/진흥</li>
+                                        <li class="item"><a href="#">경영자</a></li>
+                                        <li class="item"><a href="#">국가품질상</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-panel">
+                                <div class="menu-box col-5">
+                                    <ul class="list">
+                                        <li class="item item-lg">ESG</li>
+                                        <li class="item"><a href="#">ESG</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">디지털전환(DX)</li>
+                                        <li class="item"><a href="#">디지털전환(DX)</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">계층/리더십</li>
+                                        <li class="item"><a href="#">계층/리더십</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">Biz스킬/OA</li>
+                                        <li class="item"><a href="#">비즈니스 공통</a></li>
+                                        <li class="item"><a href="#">스마트워크(OA)</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">기획/인사/회계</li>
+                                        <li class="item"><a href="#">전략/기획</a></li>
+                                        <li class="item"><a href="#">인사/노무</a></li>
+                                        <li class="item"><a href="#">총무/법무</a></li>
+                                        <li class="item"><a href="#">재무/회계/원가</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">영업/마케팅/글로벌Biz</li>
+                                        <li class="item"><a href="#">영업/마케팅</a></li>
+                                        <li class="item"><a href="#">무역/글로벌Biz</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">ISO경영시스템</li>
+                                        <li class="item"><a href="#">ISO경영시스템</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">R&D/품질</li>
+                                        <li class="item"><a href="#">R&D</a></li>
+                                        <li class="item"><a href="#">품질/신뢰성</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">구매/생산/TPM</li>
+                                        <li class="item"><a href="#">공급관리</a></li>
+                                        <li class="item"><a href="#">생산관리</a></li>
+                                        <li class="item"><a href="#">TPM/생산기술</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">표준/KS인증</li>
+                                        <li class="item"><a href="#">KS인증교육</a></li>
+                                        <li class="item"><a href="#">표준</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">산업특화</li>
+                                        <li class="item"><a href="#">에너지</a></li>
+                                        <li class="item"><a href="#">금융/부동산</a></li>
+                                        <li class="item"><a href="#">안전관리</a></li>
+                                        <li class="item"><a href="#">의료/제약</a></li>
+                                        <li class="item"><a href="#">식품</a></li>
+                                        <li class="item"><a href="#">기타</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">외국어</li>
+                                        <li class="item"><a href="#">영어</a></li>
+                                        <li class="item"><a href="#">일본어</a></li>
+                                        <li class="item"><a href="#">중국어</a></li>
+                                        <li class="item"><a href="#">기타외국어</a></li>
+                                        <li class="item"><a href="#">전화외국어</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">인문교양</li>
+                                        <li class="item"><a href="#">문학/예술/미술</a></li>
+                                        <li class="item"><a href="#">여행/건강/취미</a></li>
+                                        <li class="item"><a href="#">은퇴/창업</a></li>
+                                        <li class="item"><a href="#">자기계발/재테크</a></li>
+                                        <li class="item"><a href="#">정치/경제/사회</a></li>
+                                        <li class="item"><a href="#">종교/문화/역사/철학</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">자격증</li>
+                                        <li class="item"><a href="#">기사/산업기사</a></li>
+                                        <li class="item"><a href="#">기술사/지도사/기능사</a></li>
+                                        <li class="item"><a href="#">유통관리사/물류관리사</a></li>
+                                        <li class="item"><a href="#">공인중개사/주택관리사</a></li>
+                                        <li class="item"><a href="#">기타 자격증</a></li>
+                                    </ul>
+                                    <ul class="list">
+                                        <li class="item item-lg">법정필수교육</li>
+                                        <li class="item"><a href="#">법정필수교육</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel">
+                    <div class="menu-box col-5">
+                        <ul class="list">
+                            <li class="item item-lg">집합·라이브</li>
+                            <li class="item"><a href="#">과정검색</a></li>
+                        </ul>
+                        <ul class="list">
+                            <li class="item item-lg">이러닝</li>
+                            <li class="item"><a href="#">과정검색</a></li>
+                        </ul>
+                        <ul class="list">
+                            <li class="item item-lg">교육안내</li>
+                            <li class="item"><a href="#">교육안내</a></li>
+                            <li class="item"><a href="#">학습진행방법</a></li>
+                        </ul>
+                        <ul class="list">
+                            <li class="item item-lg">고객지원</li>
+                            <li class="item"><a href="#">공지사항</a></li>
+                            <li class="item"><a href="#">자료실</a></li>
+                            <li class="item"><a href="#">FAQ</a></li>
+                        </ul>
+                        <ul class="list">
+                            <li class="item item-lg">마이페이지</li>
+                            <li class="item"><a href="#">대시보드(홈)</a></li>
+                            <li class="item"><a href="#">학습현황</a></li>
+                            <li class="item"><a href="#">학습누적시간 관리</a></li>
+                            <li class="item"><a href="#">법정의무교육 이수현황</a></li>
+                            <li class="item"><a href="#">관심과정</a></li>
+                            <li class="item"><a href="#">설문</a></li>
+                            <li class="item"><a href="#">역량진단</a></li>
+                            <li class="item"><a href="#">문의내역</a></li>
+                            <li class="item"><a href="#">내정보</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mo-bottom-menu">
+            <div class="btn-wrap">
+                <button class="btn btn-sm btn-border-point">회원가입</button>
+                <button class="btn btn-sm">로그인</button>
+            </div>
+            <div class="btn-wrap">
+                <a href="#" class="btn-top">FLEX사이트</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="sub-contents">
+        <div class="inner">
+            <div class="lnb _lnb">
+                <div class="lnb-title">마이페이지</div>
+                <ul>
+                    <li class="menu">
+                        <a class="title" href="#"><span>홈</span></a>
+                    </li>
+                    <li class="menu">
+                        <a class="title" href="#"><span>학습현                                                                                       황</span></a>
+                    </li>
+                    <li class="menu">
+                        <a class="title" href="#"><span>자격증</span></a>
+                    </li>
+                    <li class="menu">
+                        <a class="title" href="#"><span>관심과정</span></a>
+                    </li>
+                    <li class="menu">
+                        <a class="title" href="#"><span>설문</span></a>
+                    </li>
+                    <li class="menu">
+                        <a class="title" href="#"><span>역량진단</span></a>
+                    </li>
+                    <li class="menu on">
+                        <a class="title" href="#"><span>전문가등록현황</span></a>
+                    </li>
+                    <li class="menu">
+                        <a class="title" href="#"><span>문의내역</span></a>
+                    </li>
+                    <li class="menu">
+                        <a class="title" href="#"><span>내정보</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contents">
+                <div class="breadcrumb">
+                    <ul>
+                        <li class="item"><a href="#">home</a></li>
+                        <li class="item"><a href="#">서비스 소개</a></li>
+                        <li class="item"><a href="#">전문가 등록 신청</a></li>
+                    </ul>
+                </div>
+                <div class="contents-title"><span class="title">전문가 등록 신청</span></div>
+                <div class="expert-registration">
+                    <div class="service-contents">
+                        <div class="step">
+                            <div class="item completed">
+                                <span class="num"><em>01</em></span>
+                                <span class="title">약관동의</span>
+                            </div>
+                            <div class="item active">
+                                <span class="num"><em>02</em></span>
+                                <span class="title">전문가 정보 입력</span>
+                            </div>
+                            <div class="item">
+                                <span class="num"><em>03</em></span>
+                                <span class="title">신청완료</span>
+                            </div>
+                        </div>
+                        <div class="sub-title">
+                            <div class="title">신청 분야</div>
+                        </div>
+                        <div class="check-list">
+                            <div class="item on">
+                                <label for="checkbox1" class="form-check">
+                                    <input type="checkbox" id="checkbox1" checked="" />
+                                    <span>전문위원 신청</span>
+                                </label>
+                            </div>
+                            <div class="item">
+                                <label for="checkbox2" class="form-check">
+                                    <input type="checkbox" id="checkbox2" />
+                                    <span>첨삭강사 신청</span>
+                                </label>
+                            </div>
+                            <div class="item disabled on">
+                                <label for="checkbox3" class="form-check">
+                                    <input type="checkbox" id="checkbox3" disabled checked />
+                                    <span>전문위원 신청</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <div class="sub-title">
+                                <div class="title">강사정보</div>
+                                <div class="tip"><span class="color-caution">*</span> 표시는 필수 입력 사항입니다.</div>
+                            </div>
+                            <div class="info-box info-border-box">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="name" class="label">이름</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="name" value="홍길동" disabled="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="birth" class="label">생년월일</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="birth" value="1993-09-19" disabled="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="birth" class="label">성별</label>
+                                            <div class="col-form">
+                                                <label for="male" class="form-radio">
+                                                    <input type="radio" id="male" name="gender" checked="">
+                                                    <span>남성</span>
+                                                </label>
+                                                <label for="female" class="form-radio">
+                                                    <input type="radio" id="female" name="gender">
+                                                    <span>여성</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="tel" class="label">휴대폰번호</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="tel" id="tel" value="010-1234-5678" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="tel2" class="label">전화번호</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="tel" id="tel2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="email" class="label">이메일 <em class="color-caution">*</em></label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="email" id="email" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="zipcode" class="label">우편번호</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="zipcode" disabled="" />
+                                                <button class="btn btn-border-point">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col empty"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="address" class="label">주소</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="address" disabled="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="address2" class="label">상세주소</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="address2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="address" class="label">프로필 사진</label>
+                                            <div class="col-form">
+                                                <div class="form-file d-flex gap-10">
+                                                    <input class="form-input" id="file" type="file">
+                                                    <label class="btn btn-border-grey" for="file">파일선택</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="homepage" class="label">홈페이지</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="homepage" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="bank" class="label">은행명 <em class="color-caution">*</em></label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="bank" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="account" class="label">계좌번호 <em class="color-caution">*</em></label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="account" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <div class="sub-title">
+                                <div class="title">회사정보</div>
+                            </div>
+                            <div class="info-box">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="name2" class="label">사업장명 <em class="color-caution">*</em></label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="name2" />
+                                                <button class="btn btn-border-point">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="c-number" class="label">사번 <em class="color-caution">*</em></label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="c-number" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="position" class="label">직급 <em class="color-caution">*</em></label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="position" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="tel2" class="label">전화번호 <em class="color-caution">*</em></label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="tel" id="tel2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="zipcode2" class="label">우편번호</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="zipcode2" disabled />
+                                                <button class="btn btn-border-point">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col empty"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="address3" class="label">주소</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="address3" disabled />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="address4" class="label">상세주소</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="address4" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <div class="sub-title">
+                                <div class="title">배송지 주소</div>
+                            </div>
+                            <div class="info-box info-border-box">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="phone" class="label">우편번호</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="phone" disabled />
+                                                <button class="btn btn-border-point">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col empty"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="address5" class="label">주소</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="address5" disabled />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="address6" class="label">상세주소</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="address6" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <div class="sub-title">
+                                <div class="title">강사 경력사항</div>
+                            </div>
+                            <div class="info-box">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="name2" class="label">최종학력</label>
+                                            <div class="col-form">
+                                                <select class="form-select" id="select">
+                                                    <option value="선택" disabled selected>선택</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="school" class="label">출신학교 입력</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="school" placeholder="예) 한국대학교 대학원" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="major" class="label">전공</label>
+                                            <div class="col-form">
+                                                <input class="form-input" type="text" id="major" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="select2" class="label">강의경력</label>
+                                            <div class="col-form">
+                                                <select class="form-select" id="select2">
+                                                    <option value="선택" disabled selected>선택</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="select3" class="label">경력기간</label>
+                                            <div class="col-form">
+                                                <select class="form-select" id="select3">
+                                                    <option value="선택" disabled selected>선택</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col empty"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="textarea" class="label">강사 경력사항</label>
+                                            <div class="col-form">
+                                                <textarea class="form-input" id="textarea"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="textarea2" class="label">자격증</label>
+                                            <div class="col-form">
+                                                <textarea class="form-input" id="textarea2"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="textarea3" class="label">강사 경력사항</label>
+                                            <div class="col-form">
+                                                <textarea class="form-input" id="textarea3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="textarea4" class="label">강의분야</label>
+                                            <div class="col-form">
+                                                <textarea class="form-input" id="textarea4"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="textarea5" class="label">도서출판</label>
+                                            <div class="col-form">
+                                                <textarea class="form-input" id="textarea5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="textarea5" class="label">강사분류</label>
+                                            <div class="col-form">
+                                                <div class="checkbox-form">
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                    <label for="checkbox1" class="form-check">
+                                                        <input type="checkbox" id="checkbox1-1" name="checkGroup" checked="">
+                                                        <span>체크</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="category" class="label">강의분야</label>
+                                            <div class="col-form">
+                                                <select class="form-select" id="category">
+                                                    <option value="선택" disabled selected>선택</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="category" class="label">자격증</label>
+                                            <div class="col-form">
+                                                <div class="form-file d-flex gap-10">
+                                                    <input class="form-input" id="file2" type="file">
+                                                    <label class="btn btn-border-grey" for="file2">파일선택</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="category" class="label pt-0">경력 및<br/>재직증명서</label>
+                                            <div class="col-form">
+                                                <div class="form-file d-flex gap-10">
+                                                    <input class="form-input" id="file3" type="file">
+                                                    <label class="btn btn-border-grey" for="file3">파일선택</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label for="category" class="label">학위증명서</label>
+                                            <div class="col-form">
+                                                <div class="form-file d-flex gap-10">
+                                                    <input class="form-input" id="file4" type="file">
+                                                    <label class="btn btn-border-grey" for="file4">파일선택</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-wrap">
+                            <button class="btn btn-border-grey">이전</button>
+                            <button class="btn">신청</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notice-bar bg-light-grey">
+    <div class="inner">
+        <div class="row">
+            <div class="col">
+                <span class="title">공지사항 <a href="#"><i class="ico ico-plus"></i></a></span>
+                <a class="link" href="#">6~7월 공개교육 일정 안내</a>
+                <a class="btn-more" href="#">더보기 <i class="ico ico-plus"></i></a>
+            </div>
+            <div class="col">
+                <span class="title">교육일정변경 <a href="#"><i class="ico ico-plus"></i></a></span>
+                <a class="link" href="#">6월 개강확정 · 취소 안내</a>
+                <a class="btn-more" href="#">더보기 <i class="ico ico-plus"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="quick-menu asp">
+    <div class="menu">
+        <a href="#" class="item"><img src="../../images/front/asp/main/ico-quick-1@2x.png" width="34" height="38" alt="입금계좌"><span>학습진행안내</span></a>
+        <a href="#" class="item"><img src="../../images/front/asp/main/ico-quick-2@2x.png" width="38" height="36" alt="1:1문의"><span>1:1문의</span></a>
+        <a href="#" class="item"><img src="../../images/front/asp/main/ico-quick-3@2x.png" width="38" height="33" alt="플레이리스트"><span>플레이리스트</span></a>
+        <a href="#" class="item"><img src="../../images/front/asp/main/ico-quick-4@2x.png" width="38" height="32" alt="전자도서관"><span>전자도서관</span></a>
+    </div>
+    <button class="btn-top" type="button" onclick="scrollGoTop()"><i class="ico ico-top"></i><span>TOP</span></button>
+</div>
+    <div class="footer">
+    <div class="inner">
+        <div class="left">
+            <div class="logo"><a class="brand-logo" href="#"><img src="../../images/front/asp/common/footer-logo.png" alt="KSA 한국표준협회"></a></div>
+            <div class="links">
+                <a href="#">협회소개</a>
+                <a href="#">보도자료</a>
+                <a class="font-weight-bold underline color-point" href="#">개인정보처리방침</a>
+                <a href="#">이용약관</a>
+                <a href="#">사업자등록증 · 계좌 안내</a>
+            </div>
+            <div class="info">
+                <span class="font-weight-regular">한국표준협회</span> : 서울 금천구 가산디지털1로 145(가산동,에이스하이엔드타워3차)<span class="division"></span>문의 : <a class="font-weight-regular" href="tel:02-2624-0111">02-2624-0111</a><br/>
+                <span class="font-weight-regular">한국표준협회 원격평생교육시설</span> : 서울 강남구 테헤란로 69길 5 (삼성동,DT센터)<span class="division"></span>문의 : <a class="font-weight-regular" href="tel:02-6240-4800">02-6240-4800</a><br/>
+                대표 : 강명수<span class="division"></span>사업자번호 : 119-82-06809(가산),105-82-00617(삼성)<span class="division"></span>통신판매업 신고번호 : 제2020-서울강남-00623호<span class="division"></span>직업정보 제공사업 등록번호 : J1206020190007
+            </div>
+            <div class="copyright">© KOREAN STANDARDS ASSOCIATION. ALL RIGHTS RESERVED</div>
+        </div>
+        <div class="right">
+            <div class="select-box">
+                <select class="form-select" name="related-institutions" title="관련기관 바로가기" onchange="window.open(value,'_blank');">
+                    <option value>관련기관 바로가기</option>
+                    <option value="https://www.google.com/">구글</option>
+                    <option value="https://www.google.com/">구글</option>
+                    <option value="https://www.google.com/">구글</option>
+                    <option value="https://www.google.com/">구글</option>
+                </select>
+            </div>
+            <div class="certification">
+                <a class="mark-f" href="#"><img src="../../images/front/asp/common/mark-f.png" alt="인적자원개발우수기관"><span>인적자원개발우수기관</span></a>
+                <a class="mark-gei" href="#"><img src="../../images/front/asp/common/mark-gei.png" alt="e러닝전문기관 인증"><span>e러닝전문기관 인증</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer mo-footer">
+    <div class="inner">
+        <div class="links">
+            <a href="#">협회소개</a>
+            <a href="#">보도자료</a>
+            <a class="font-weight-bold underline color-point" href="#">개인정보처리방침</a>
+            <a href="#">이용약관</a>
+            <a href="#">사업자등록증 · 계좌 안내</a>
+        </div>
+        <div class="select-box">
+            <select class="form-select" name="related-institutions" title="관련기관 바로가기" onchange="window.open(value,'_blank');">
+                <option value>관련기관 바로가기</option>
+                <option value="https://www.google.com/">구글</option>
+                <option value="https://www.google.com/">구글</option>
+                <option value="https://www.google.com/">구글</option>
+                <option value="https://www.google.com/">구글</option>
+            </select>
+        </div>
+        <div class="certification">
+            <a class="mark-f" href="#"><img src="../../images/front/asp/common/mark-f.png" alt="인적자원개발우수기관"><span>인적자원개발우수기관</span></a>
+            <a class="mark-gei" href="#"><img src="../../images/front/asp/common/mark-gei.png" alt="e러닝전문기관 인증"><span>e러닝전문기관 인증</span></a>
+        </div>
+        <div class="info">
+            <div class="item">
+                <span class="font-weight-medium">한국표준협회</span><br/>
+                서울 금천구 가산디지털1로 145 (가산동,에이스하이엔드타워3차) <br/>
+                문의 : <a class="font-weight-regular" href="tel:02-2624-0111">02-2624-0111</a>
+            </div>
+            <div class="item">
+                <span class="font-weight-regular">한국표준협회 원격평생교육시설</span><br/>
+                서울 강남구 테헤란로 69길 5 (삼성동,DT센터)<span class="division"></span><br/>
+                문의 : <a class="font-weight-regular" href="tel:02-6240-4800">02-6240-4800</a>
+            </div>
+            <div class="item">
+                대표 : 강명수<br/>
+                사업자번호119-82-06809(가산),105-82-00617(삼성)<br/>
+                통신판매업 신고번호 : 제2020-서울강남-00623호<br/>
+                직업정보 제공사업 등록번호 : J1206020190007
+            </div>
+        </div>
+        <div class="logo"><a class="brand-logo" href="#"><img src="../../images/front/asp/common/footer-logo.png" alt="KSA 한국표준협회"></a></div>
+        <div class="copyright">© KOREAN STANDARDS ASSOCIATION. ALL RIGHTS RESERVED</div>
+    </div>
+</div>
+</div>
+<script>
+    $('.form-check input').on('change', function () {
+        let thisParent = $(this).closest('.item');
+        if ($(this).prop('checked')) {
+            thisParent.addClass('on');
+        } else {
+            thisParent.removeClass('on');
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/btoc/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/btoc/lib/swiper.js"></script>
+    <script src="../../js/front/btoc/lib/twbsPagination.js"></script>
+    <script src="../../js/front/btoc/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/btoc/style.css">
+    <link rel="stylesheet" href="../../css/front/btoc/pages.css">
+    <link rel="shortcut icon" href="../../images/front/btoc/common/favicon.ico">
+    <title>👱🏻‍♀️ KSA EDU 👱🏻‍</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="login-contents">
+        <div class="top-heading">
+            <a class="img-logo" href="#"><img src="../../images/front/btoc/common/logo.png" alt="KSA EDU"></a>
+            <span class="txt-logo">한국표준협회</span>
+        </div>
+        <div class="contents">
+            <div class="sign-in">
+                <div class="title">회원가입</div>
+                <div class="step">
+                    <div class="item completed">
+                        <span class="num">01</span>
+                        <span class="title">약관 동의</span>
+                    </div>
+                    <div class="item completed">
+                        <span class="num">02</span>
+                        <span class="title">본인인증</span>
+                    </div>
+                    <div class="item completed">
+                        <span class="num">03</span>
+                        <span class="title">회원정보 입력</span>
+                    </div>
+                    <div class="item active">
+                        <span class="num">04</span>
+                        <span class="title">가입완료</span>
+                    </div>
+                </div>
+                <div class="registration-completed">
+                    <div class="img"><img src="../../images/front/btoc/login/img-completed@2x.png" alt="회원가입이 완료 되었습니다!"></div>
+                    <div class="txt">회원가입이 완료 되었습니다!</div>
+                    <div class="txt-sm">로그인을 하시면 모든 서비스 이용이 가능합니다.</div>
+                    <div class="btn-wrap">
+                        <button class="btn btn-lg btn-border-point" type="button">메인으로</button>
+                        <button class="btn btn-lg" type="button">로그인</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="links">
+                    <a class="lg" href="#">개인정보처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">저작권정책</a>
+                    <a href="#">사이트맵</a>
+                </div>
+                <div class="copyright">© KOREAN STANDARDS ASSOCIATION. ALL RIGHTS RESERVED.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let $checkAll = $('#checkAll');
+    let $itemCheck = $(".item input[type='checkbox']");
+
+    function updateCheckAll() {
+        $checkAll.prop('checked', $itemCheck.length === $itemCheck.filter(':checked').length);
+    }
+
+    $checkAll.on('click', function () {
+        $itemCheck.prop('checked', $(this).prop('checked'));
+        updateCheckAll();
+    })
+
+    $itemCheck.on('change', function () {
+        updateCheckAll();
+    })
+</script>
+</body>
+</html>

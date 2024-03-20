@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/btoc/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/btoc/lib/swiper.js"></script>
+    <script src="../../js/front/btoc/lib/twbsPagination.js"></script>
+    <script src="../../js/front/btoc/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/btoc/style.css">
+    <link rel="stylesheet" href="../../css/front/btoc/pages.css">
+    <link rel="shortcut icon" href="../../images/front/btoc/common/favicon.ico">
+    <title>👱🏻‍♀️ KSA EDU 👱🏻‍</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <div class="btn-wrap">
+        <button class="btn _popupTrigger" data-trigger="popup1" type="button">팝업 1</button>
+    </div>
+</div>
+<div class="dim _dim" style="display: block"></div>
+<div class="popup popup-form _popup" data-popup="popup1" style="display: block">
+    <div class="popup-content">
+        <div class="popup-head">
+            <span class="title">자격증 재발급 신청</span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="validation mt-0">품질관리담당자 자격 외 자격증(ISO, 식스시그마, 지도사 등)은 유선으로 신청 바랍니다.(02-2624-0111)</div>
+            <div class="login-contents">
+                <div class="sign-in">
+                    <div class="form">
+                        <div class="form-title">
+                            <span class="title">재발급 신청정보</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel" class="label">휴대전화번호 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="tel" id="tel" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="label">이메일</label>
+                            <div class="form-row">
+                                <input class="form-input" type="email" id="email" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="label">사진</label>
+                            <div class="form-row">
+                                <div class="form-file">
+                                    <div class="d-flex gap-5">
+                                        <input class="form-input" id="file2" type="file">
+                                        <label class="btn btn-border-grey" for="file2">파일선택</label>
+                                    </div>
+                                    <ul class="file-list">
+                                        <li class="item"><i class="ico ico-img"></i><span class="name">한국표준협회 사업자등록증.img</span><button class="btn-delete" type="button"><i class="ico ico-delete"></i></button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="validation">기 등록된 사진의 변경을 원하시는 경우에만 첨부해주세요.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address" class="label">수령지 우편번호 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" id="address" value="">
+                                <button class="btn btn-border-grey">검색</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address2" class="label">수령지 주소 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" id="address2" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address3" class="label">상세주소 <em class="color-caution">*</em></label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" id="address3" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="memo" class="label">재발급 사유</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" id="memo" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-title">
+                            <span class="title">재발급 수수료(품질관리담당자 자격증)</span>
+                        </div>
+
+                        <div class="table v-table mt-20 mb-30">
+                            <table>
+                                <colgroup>
+                                    <col width="26%">
+                                    <col width="auto">
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                    <th class="col-title"><span>수수료</span></th>
+                                    <td class="align-left"><span>10,000원</span></td>
+                                </tr>
+                                <tr>
+                                    <th class="col-title"><span>계좌번호</span></th>
+                                    <td class="align-left"><span>기업은행 449-008125-04-016(한국표준협회)</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="form-title">
+                            <span class="title">개인정보 수집동의</span>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="terms">
+                                    <strong>수집목적</strong> : 자격증 재발급 신청<br/>
+                                    <strong>수집항목</strong> : 휴대전화, 이메일, 사진, 주소<br/>
+                                    <strong>이용기간</strong> : 개인정보 수집 및 이용 목적이 달성된 후 지체없이 정보를 파기합니다.<br/>
+                                    개인정보보호법에 따라 동의를 거부할 수 있으며, 이 경우 자격증 재발급 서비스 이용에 자약이 있습니다.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkbox1" class="form-check">
+                                <input type="checkbox" id="checkbox1" name="checkGroup" checked="">
+                                <span>개인정보 수집에 동의합니다.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button class="btn btn-border-grey _popupClose" type="button">취소</button>
+            <button class="btn" type="button">신청</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

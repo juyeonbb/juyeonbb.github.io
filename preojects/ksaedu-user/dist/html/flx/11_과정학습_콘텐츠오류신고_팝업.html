@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/flx/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/flx/lib/swiper.js"></script>
+    <script src="../../js/front/flx/lib/twbsPagination.js"></script>
+    <script src="../../js/front/flx/lib/sortable.js"></script>
+    <script src="../../js/front/flx/lib/chart.js"></script>
+    <script src="../../js/front/flx/lib/chartjs-plugin-datalabels.js"></script>
+    <script src="../../js/front/flx/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/flx/style.css">
+    <link rel="stylesheet" href="../../css/front/flx/pages.css">
+    <link rel="shortcut icon" href="../../images/front/flx/common/favicon.ico">
+    <title>📌 KSA EDU 📌</title>
+</head>
+<body>
+<div style="padding: 20px">
+    <div class="btn-wrap">
+        <button class="btn _popupTrigger" data-trigger="popup-report" type="button">팝업 1</button>
+    </div>
+</div>
+<div class="dim _dim" style="display: block"></div>
+<div class="popup popup-form _popup" data-popup="popup-report" style="display: block">
+    <div class="popup-content">
+        <div class="popup-head">
+            <span class="title">콘텐츠 오류신고</span>
+            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
+        </div>
+        <div class="popup-body">
+            <div class="login-contents">
+                <div class="sign-in">
+                    <div class="form">
+                        <div class="form-group">
+                            <label class="label">차시</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="num" value="ESG, 신제품이 아닙니다." disabled />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">페이지</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="page" value="2. E! 환경경영 Topic 3" disabled />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">제목</label>
+                            <div class="form-row">
+                                <input class="form-input" type="text" title="title" value="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="textarea" class="label">내용</label>
+                            <textarea class="form-input" name="textarea" id="textarea" onkeyup="countChar(this,'_val')" maxlength="200" placeholder=""></textarea>
+                            <span class="txt-limit"><em class="value _val">0</em> / 200자</span>
+                        </div>
+                        <div class="form-group">
+                            <label class="label">사업자 등록증 <em class="color-caution">*</em></label>
+                            <div class="form-file">
+                                <input class="input-file" id="file" type="file">
+                                <label class="btn btn-border-grey" for="file">파일선택</label>
+                                <ul class="file-list">
+                                    <li class="item"><i class="ico ico-pdf"></i><span class="name">한국표준협회 사업자등록증.pdf</span><button class="btn-delete" type="button"><i class="ico ico-delete"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button class="btn btn-border-grey _popupClose" type="button">취소</button>
+            <button class="btn" type="button">등록</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
