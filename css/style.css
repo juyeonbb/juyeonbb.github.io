@@ -53,6 +53,8 @@ ul, ol {
 
 .projects-list {
   padding-bottom: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 .projects-list .list {
   display: flex;

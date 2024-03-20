@@ -71,6 +71,8 @@ ul, ol {
 
 .projects-list {
   padding-bottom: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
 
   .list {
     display: flex;
@@ -157,6 +159,7 @@ ul, ol {
     }
   }
 }
+
 @media (max-width: 1050px) {
   .projects-list {
     .item {
