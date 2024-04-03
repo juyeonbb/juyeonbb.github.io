@@ -11325,6 +11325,8 @@ body.scrOff {
     margin-top: 5px; }
   .table .table-txt {
     line-height: 20px; }
+  .table .btn + .btn {
+    margin-left: 5px; }
 
 .table-content {
   overflow-x: auto; }
