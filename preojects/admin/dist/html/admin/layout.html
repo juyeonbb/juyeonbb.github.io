@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/admin/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/admin/lib/swiper.js"></script>
+    <script src="../../js/front/admin/lib/twbsPagination.js"></script>
+    <script src="../../js/front/admin/lib/jquery.mCustomScrollbar.js"></script>
+    <script src="../../js/front/admin/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/admin/style.css">
+    <link rel="stylesheet" href="../../css/front/admin/pages.css">
+    <link rel="shortcut icon" href="../../images/front/admin/common/favicon.ico">
+    <title>📌 관리자 페이지 📌</title>
+</head>
+<body>
+<div class="wrap">
+    <header class="header _header">
+    <div class="inner">
+        <button class="btn-menu"><i class="fa-solid fa-bars"></i></button>
+        <h1 class="brand-logo"><a href="javascript:void(0)"><img src="../../images/front/admin/common/logo.png" alt="관리자 페이지"></a></h1>
+        <button class="btn-more"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+    </div>
+</header>
+    <main>
+        <div id="container">
+            <div id="content" class="contents">
+                <div class="inner">
+                    <div class="breadcrumb">
+                        <ul>
+                            <li class="item"><a href="javascript:void(0)"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="item"><a href="javascript:void(0)">메뉴1</a></li>
+                            <li class="item"><a href="javascript:void(0)">소메뉴1</a></li>
+                            <li class="item"><a href="javascript:void(0)">소소메뉴2</a></li>
+                            <li class="item"><a href="javascript:void(0)">소소소메뉴3</a></li>
+                        </ul>
+                    </div>
+                    <div class="page-title"><div class="title">이것은 메인 타이틀</div></div>
+                    <div class="tab-container _tabContainer">
+                        <div class="tabs-box">
+                            <ul class="tabs _tab">
+                                <li class="item on"><a href="javascript:void(0)">큰 탭 1</a></li>
+                                <li class="item"><a href="javascript:void(0)">큰 탭 2</a></li>
+                                <li class="item"><a href="javascript:void(0)">큰 탭 3</a></li>
+                                <li class="item"><a href="javascript:void(0)">큰 탭 4</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content _tabContent">
+                            <div class="tab-panel on">
+                                <div class="card">
+                                    <div class="page-subtitle">
+                                        <div class="title">이것은 카드안에 들어가는 서브 타이틀</div>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta facilis, reiciendis. Aliquid, dolor inventore ipsam laborum quasi reprehenderit sunt? A accusantium animi blanditiis consequatur cumque dignissimos distinctio dolor dolore dolorum excepturi facere fuga fugit hic illo iste libero, nam nobis numquam obcaecati pariatur quaerat rem repellat tenetur, voluptatibus voluptatum! Aliquam cumque delectus error magni nulla? Animi cum dolorum esse incidunt quasi, sapiente similique sit tempora vero voluptatem. Aliquid consequatur dolor est ex explicabo ipsum nam quaerat reprehenderit sapiente tenetur! A adipisci aspernatur consequuntur deserunt dolore enim, eos expedita magnam modi nemo porro praesentium provident rem sunt ullam vel veniam vitae.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta facilis, reiciendis. Aliquid, dolor inventore ipsam laborum quasi reprehenderit sunt? A accusantium animi blanditiis consequatur cumque dignissimos distinctio dolor dolore dolorum excepturi facere fuga fugit hic illo iste libero, nam nobis numquam obcaecati pariatur quaerat rem repellat tenetur, voluptatibus voluptatum! Aliquam cumque delectus error magni nulla? Animi cum dolorum esse incidunt quasi, sapiente similique sit tempora vero voluptatem. Aliquid consequatur dolor est ex explicabo ipsum nam quaerat reprehenderit sapiente tenetur! A adipisci aspernatur consequuntur deserunt dolore enim, eos expedita magnam modi nemo porro praesentium provident rem sunt ullam vel veniam vitae.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta facilis, reiciendis. Aliquid, dolor inventore ipsam laborum quasi reprehenderit sunt? A accusantium animi blanditiis consequatur cumque dignissimos distinctio dolor dolore dolorum excepturi facere fuga fugit hic illo iste libero, nam nobis numquam obcaecati pariatur quaerat rem repellat tenetur, voluptatibus voluptatum! Aliquam cumque delectus error magni nulla? Animi cum dolorum esse incidunt quasi, sapiente similique sit tempora vero voluptatem. Aliquid consequatur dolor est ex explicabo ipsum nam quaerat reprehenderit sapiente tenetur! A adipisci aspernatur consequuntur deserunt dolore enim, eos expedita magnam modi nemo porro praesentium provident rem sunt ullam vel veniam vitae.
+                                    </p>
+                                </div>
+                                <div class="card">
+                                    <div class="page-subtitle">
+                                        <div class="title">이것은 카드안에 들어가는 서브 타이틀 + 버튼들이랑</div>
+                                        <div class="btn-wrap">
+                                            <button type="button" class="btn btn-sm btn-grey">버튼 하나</button>
+                                            <button type="button" class="btn btn-sm">버튼 둘</button>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta facilis, reiciendis. Aliquid, dolor inventore ipsam laborum quasi reprehenderit sunt? A accusantium animi blanditiis consequatur cumque dignissimos distinctio dolor dolore dolorum excepturi facere fuga fugit hic illo iste libero, nam nobis numquam obcaecati pariatur quaerat rem repellat tenetur, voluptatibus voluptatum! Aliquam cumque delectus error magni nulla? Animi cum dolorum esse incidunt quasi, sapiente similique sit tempora vero voluptatem. Aliquid consequatur dolor est ex explicabo ipsum nam quaerat reprehenderit sapiente tenetur! A adipisci aspernatur consequuntur deserunt dolore enim, eos expedita magnam modi nemo porro praesentium provident rem sunt ullam vel veniam vitae.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta facilis, reiciendis. Aliquid, dolor inventore ipsam laborum quasi reprehenderit sunt? A accusantium animi blanditiis consequatur cumque dignissimos distinctio dolor dolore dolorum excepturi facere fuga fugit hic illo iste libero, nam nobis numquam obcaecati pariatur quaerat rem repellat tenetur, voluptatibus voluptatum! Aliquam cumque delectus error magni nulla? Animi cum dolorum esse incidunt quasi, sapiente similique sit tempora vero voluptatem. Aliquid consequatur dolor est ex explicabo ipsum nam quaerat reprehenderit sapiente tenetur! A adipisci aspernatur consequuntur deserunt dolore enim, eos expedita magnam modi nemo porro praesentium provident rem sunt ullam vel veniam vitae.
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta facilis, reiciendis. Aliquid, dolor inventore ipsam laborum quasi reprehenderit sunt? A accusantium animi blanditiis consequatur cumque dignissimos distinctio dolor dolore dolorum excepturi facere fuga fugit hic illo iste libero, nam nobis numquam obcaecati pariatur quaerat rem repellat tenetur, voluptatibus voluptatum! Aliquam cumque delectus error magni nulla? Animi cum dolorum esse incidunt quasi, sapiente similique sit tempora vero voluptatem. Aliquid consequatur dolor est ex explicabo ipsum nam quaerat reprehenderit sapiente tenetur! A adipisci aspernatur consequuntur deserunt dolore enim, eos expedita magnam modi nemo porro praesentium provident rem sunt ullam vel veniam vitae.
+                                    </p>
+                                </div>
+                                <div class="card">
+                                    <div class="page-subtitle">
+                                        <div class="title">이것은 카드안에 들어가는 서브 타이틀 + FORM</div>
+                                    </div>
+                                    <div class="ui-form">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">아이디 <span class="required">*</span></label>
+                                                    <div class="input-box">
+                                                        <input class="form-input" type="text" title="id" placeholder="아이디를 입력해주세요." required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">카테고리</label>
+                                                    <select class="form-select" name="select" title="select">
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">카테고리</label>
+                                                    <div class="form-radio-group">
+                                                        <label for="radio" class="form-radio">
+                                                            <input type="radio" id="radio" name="use" checked="">
+                                                            <span>사용</span>
+                                                        </label>
+                                                        <label for="radio2" class="form-radio">
+                                                            <input type="radio" id="radio2" name="use">
+                                                            <span>사용안함</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">카테고리</label>
+                                                    <div class="form-date">
+                                                        <input class="form-input" type="date" title="startDate" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">아이디</label>
+                                                    <div class="input-box">
+                                                        <input class="form-input" type="text" title="id" placeholder="아이디를 입력해주세요.">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">카테고리</label>
+                                                    <select class="form-select" name="select" title="select">
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">카테고리</label>
+                                                    <div class="form-check-group">
+                                                        <label for="checkbox1" class="form-check">
+                                                            <input type="checkbox" id="checkbox1" name="checkGroup" checked="">
+                                                            <span>체크</span>
+                                                        </label>
+                                                        <label for="checkbox2" class="form-check">
+                                                            <input type="checkbox" id="checkbox2" name="checkGroup">
+                                                            <span>체크</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">카테고리</label>
+                                                    <div class="form-switch">
+                                                        <label class="ui-switch">
+                                                            <input class="checkbox" type="checkbox" checked>
+                                                            <span class="switch"></span>
+                                                            <span class="label">SWITCH</span>
+                                                        </label>
+                                                        <label class="ui-switch">
+                                                            <input class="checkbox" type="checkbox">
+                                                            <span class="switch"></span>
+                                                            <span class="label">SWITCH 2</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">시간</label>
+                                                    <div class="form-time">
+                                                        <input class="form-input" type="time" title="startTime">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">카테고리</label>
+                                                    <select class="form-select" name="select" title="select">
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">버튼이랑</label>
+                                                    <div class="input-box">
+                                                        <input class="form-input" type="text" title="id" placeholder="아이디를 입력해주세요.">
+                                                        <button class="btn">버튼</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">버튼이랑</label>
+                                                    <div class="input-box">
+                                                        <input class="form-input" type="text" title="id" placeholder="아이디를 입력해주세요.">
+                                                        <button class="btn">버튼버튼버튼버튼</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">비고</label>
+                                                    <div class="input-box">
+                                                        <textarea class="form-input" title="textarea">테스트 테스트 테스트 테스트 테스트 테스트 테스트 테스트 테스트 테스트 </textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">파일선택해라</label>
+                                                    <div class="form-file">
+                                                        <input class="input-file" id="file" type="file">
+                                                        <label class="btn btn-border-grey" for="file">파일선택</label>
+                                                        <ul class="file-list">
+                                                            <li class="item"><span class="name">file.img</span><button class="btn-delete" type="button"><i class="fa-solid fa-xmark"></i></button></li>
+                                                            <li class="item"><span class="name">file.pdf</span><button class="btn-delete" type="button"><i class="fa-solid fa-xmark"></i></button></li>
+                                                            <li class="item"><span class="name">file.csv</span><button class="btn-delete" type="button"><i class="fa-solid fa-xmark"></i></button></li>
+                                                            <li class="item"><span class="name">file.hwp</span><button class="btn-delete" type="button"><i class="fa-solid fa-xmark"></i></button></li>
+                                                            <li class="item"><span class="name">file.ppt</span><button class="btn-delete" type="button"><i class="fa-solid fa-xmark"></i></button></li>
+                                                            <li class="item"><span class="name">file.zip</span><button class="btn-delete" type="button"><i class="fa-solid fa-xmark"></i></button></li>
+                                                            <li class="item"><span class="name">file.doc</span><button class="btn-delete" type="button"><i class="fa-solid fa-xmark"></i></button></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">아무거나</label>
+                                                    <div class="form-date">
+                                                        <input class="form-input" type="date" title="startDate" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">아무노래</label>
+                                                    <div class="form-date">
+                                                        <input class="form-input" type="date" title="startDate" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-group">
+                                                    <label class="label">아무생각</label>
+                                                    <div class="form-date">
+                                                        <input class="form-input" type="date" title="startDate" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <button class="btn btn-grey" type="button">취소</button>
+                                            <button class="btn" type="button">검색</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="page-subtitle">
+                                        <div class="title">이것은 카드안에 들어가는 서브 타이틀 + FORM</div>
+                                    </div>
+                                    <div class="btn-top-wrap">
+                                        <button class="btn" type="button">위에도 버튼</button>
+                                        <button class="btn btn-grey" type="button">삭제</button>
+                                    </div>
+                                    <div class="table table-schedule">
+                                        <table>
+                                            <caption>테이블</caption>
+                                            <colgroup>
+                                                <col span="6" style="width: auto">
+                                            </colgroup>
+                                            <thead>
+                                            <tr>
+                                                <th class="col-title"><span>이름</span></th>
+                                                <th class="col-title"><span>회사명</span></th>
+                                                <th class="col-title"><span>부서</span></th>
+                                                <th class="col-title"><span>가입일</span></th>
+                                                <th class="col-title"><span>지정일</span></th>
+                                                <th class="col-title"><span>권한관리</span></th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td><span>이주연</span></td>
+                                                <td><span>제이니컴퍼니</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>2025.05.05</span></td>
+                                                <td><span>2025.05.05</span></td>
+                                                <td><button class="btn btn-sm" type="button">버튼</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>이주연</span></td>
+                                                <td><span>제이니컴퍼니</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>2025.05.05</span></td>
+                                                <td><span>2025.05.05</span></td>
+                                                <td><button class="btn btn-sm" type="button">버튼</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>이주연</span></td>
+                                                <td><span>제이니컴퍼니</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>2025.05.05</span></td>
+                                                <td><span>2025.05.05</span></td>
+                                                <td><button class="btn btn-sm" type="button">버튼</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>이주연</span></td>
+                                                <td><span>제이니컴퍼니</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>2025.05.05</span></td>
+                                                <td><span>2025.05.05</span></td>
+                                                <td><button class="btn btn-sm" type="button">버튼</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>이주연</span></td>
+                                                <td><span>제이니컴퍼니</span></td>
+                                                <td><span>-</span></td>
+                                                <td><span>2025.05.05</span></td>
+                                                <td><span>2025.05.05</span></td>
+                                                <td><button class="btn btn-sm" type="button">버튼</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="6" class="empty"><span>데이터가 없을 경우</span></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="btn-bottom-wrap">
+                                        <button class="btn" type="button">아래에도 버튼</button>
+                                        <button class="btn btn-grey" type="button">삭제</button>
+                                    </div>
+                                    <ul id="pagination" class="pagination"></ul>
+<script>
+    // https://josecebe.github.io/twbs-pagination/
+    $('#pagination').twbsPagination({
+        totalPages: 35,
+        visiblePages: 5,
+        first: `<i class="fa-solid fa-angles-left"></i><span class="sr-only">처음 페이지</span>`,
+        prev: `<i class="fa-solid fa-angle-left"></i><span class="sr-only">이전 페이지</span>`,
+        next: `<i class="fa-solid fa-angle-right"></i><span class="sr-only">다음 페이지</span>`,
+        last: `<i class="fa-solid fa-angles-right"></i><span class="sr-only">마지막 페이지</span>`,
+    });
+</script>
+                                </div>
+                                <div class="card">
+                                    <div class="page-subtitle">
+                                        <div class="title">이것은 카드안에 들어가는 서브 타이틀 + 내부 탭</div>
+                                    </div>
+                                    <div class="tab-container _tabContainerInner">
+                                        <div class="tabs-box">
+                                            <ul class="pill-tabs _tabInner">
+                                                <li class="item on"><a href="javascript:void(0)">전체</a></li>
+                                                <li class="item"><a href="javascript:void(0)">가나다</a></li>
+                                                <li class="item"><a href="javascript:void(0)">라마바</a></li>
+                                                <li class="item"><a href="javascript:void(0)">사아자차카타파하</a></li>
+                                                <li class="item"><a href="javascript:void(0)">가나다</a></li>
+                                                <li class="item"><a href="javascript:void(0)">라마바</a></li>
+                                                <li class="item"><a href="javascript:void(0)">사아자차카타파하</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content _tabContentInner">
+                                            <div class="tab-panel on">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta facilis, reiciendis. Aliquid, dolor inventore ipsam laborum quasi reprehenderit sunt? A accusantium animi blanditiis consequatur cumque dignissimos distinctio dolor dolore dolorum excepturi facere fuga fugit hic illo iste libero, nam nobis numquam obcaecati pariatur quaerat rem repellat tenetur, voluptatibus voluptatum! Aliquam cumque delectus error magni nulla? Animi cum dolorum esse incidunt quasi, sapiente similique sit tempora vero voluptatem. Aliquid consequatur dolor est ex explicabo ipsum nam quaerat reprehenderit sapiente tenetur! A adipisci aspernatur consequuntur deserunt dolore enim, eos expedita magnam modi nemo porro praesentium provident rem sunt ullam vel veniam vitae.
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta facilis, reiciendis. Aliquid, dolor inventore ipsam laborum quasi reprehenderit sunt? A accusantium animi blanditiis consequatur cumque dignissimos distinctio dolor dolore dolorum excepturi facere fuga fugit hic illo iste libero, nam nobis numquam obcaecati pariatur quaerat rem repellat tenetur, voluptatibus voluptatum! Aliquam cumque delectus error magni nulla? Animi cum dolorum esse incidunt quasi, sapiente similique sit tempora vero voluptatem. Aliquid consequatur dolor est ex explicabo ipsum nam quaerat reprehenderit sapiente tenetur! A adipisci aspernatur consequuntur deserunt dolore enim, eos expedita magnam modi nemo porro praesentium provident rem sunt ullam vel veniam vitae.
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta facilis, reiciendis. Aliquid, dolor inventore ipsam laborum quasi reprehenderit sunt? A accusantium animi blanditiis consequatur cumque dignissimos distinctio dolor dolore dolorum excepturi facere fuga fugit hic illo iste libero, nam nobis numquam obcaecati pariatur quaerat rem repellat tenetur, voluptatibus voluptatum! Aliquam cumque delectus error magni nulla? Animi cum dolorum esse incidunt quasi, sapiente similique sit tempora vero voluptatem. Aliquid consequatur dolor est ex explicabo ipsum nam quaerat reprehenderit sapiente tenetur! A adipisci aspernatur consequuntur deserunt dolore enim, eos expedita magnam modi nemo porro praesentium provident rem sunt ullam vel veniam vitae.
+                                                </p>
+                                            </div>
+                                            <div class="tab-panel">2</div>
+                                            <div class="tab-panel">3</div>
+                                            <div class="tab-panel">4</div>
+                                            <div class="tab-panel">5</div>
+                                            <div class="tab-panel">6</div>
+                                            <div class="tab-panel">7</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-panel">2</div>
+                            <div class="tab-panel">3</div>
+                            <div class="tab-panel">4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="inner">
+        <div class="left">
+            <div class="logo"><a class="brand-logo" href="javascript:void(0)"><img src="../../images/front/admin/common/logo.png" alt="관리자 페이지"></a></div>
+            <div class="links">
+                <a href="javascript:void(0)">협회소개</a>
+                <a href="javascript:void(0)">보도자료</a>
+                <a href="javascript:void(0)">개인정보처리방침</a>
+                <a href="javascript:void(0)">이용약관</a>
+                <a href="javascript:void(0)">사업자등록증 · 계좌 안내</a>
+            </div>
+            <div class="info">
+                <span class="font-weight-regular">주소</span> : 서울 서대문구 거북골로 84<span class="division"></span>문의 : <a class="font-weight-regular" href="tel:02-1234-5678">02-1234-5678</a><br/>
+                <span class="font-weight-regular">대표</span> : 이주연<span class="division"></span>사업자번호 : 111-11-11111<span class="division"></span>통신판매업 신고번호 : 제2024-서울서대문-00000호<span class="division"></span>직업정보 제공사업 등록번호 : J0000000000000
+            </div>
+            <div class="copyright">© ALL RIGHTS RESERVED</div>
+        </div>
+        <div class="right">
+            <div class="select-box">
+                <select class="form-select" name="related-institutions" title="관련기관 바로가기" onchange="window.open(value,'_blank');">
+                    <option value>관련기관 바로가기</option>
+                    <option value="https://www.google.com/">구글</option>
+                    <option value="https://www.google.com/">구글</option>
+                    <option value="https://www.google.com/">구글</option>
+                    <option value="https://www.google.com/">구글</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</body>
+</html>
