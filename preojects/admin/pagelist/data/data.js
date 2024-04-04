@@ -60,6 +60,11 @@ data.common = {
     },
     {
       stateClass: 'complete',
+      url: '00_calendar',
+      page: '캘린더'
+    },
+    {
+      stateClass: 'complete',
       url: '00_에러페이지',
       page: '에러페이지'
     },

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/admin/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/admin/lib/swiper.js"></script>
+    <script src="../../js/front/admin/lib/twbsPagination.js"></script>
+    <script src="../../js/front/admin/lib/jquery.mCustomScrollbar.js"></script>
+    <script src="../../js/front/admin/lib/moment.js"></script>
+    <script src="../../js/front/admin/lib/fullcalendar.js"></script>
+    <script src="../../js/front/admin/lib/locale-all.js"></script>
+    <script src="../../js/front/admin/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/admin/style.css">
+    <link rel="stylesheet" href="../../css/front/admin/pages.css">
+    <link rel="shortcut icon" href="../../images/front/admin/common/favicon.ico">
+    <title>📌 관리자 페이지 📌</title>
+</head>
+<body>
+<div class="wrap">
+    <header class="header _header">
+    <div class="inner">
+        <button class="btn-menu"><i class="fa-solid fa-bars"></i></button>
+        <h1 class="brand-logo"><a href="javascript:void(0)"><img src="../../images/front/admin/common/logo.png" alt="관리자 페이지"></a></h1>
+        <button class="btn-more"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+    </div>
+</header>
+    <main>
+        <div id="container">
+            <div class="main-menu _mainMenu">
+    <ul>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+            <div id="content" class="contents">
+                <div class="page-head">
+                    <div class="page-title"><div class="title">캘린더</div></div>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li class="item"><a href="javascript:void(0)"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="item"><a href="javascript:void(0)">메뉴1</a></li>
+                            <li class="item"><a href="javascript:void(0)">소메뉴1</a></li>
+                            <li class="item"><a href="javascript:void(0)">소소메뉴2</a></li>
+                            <li class="item"><a href="javascript:void(0)">소소소메뉴3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page-body">
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="inner">
+        <div class="logo"><a class="brand-logo" href="javascript:void(0)"><img src="../../images/front/admin/common/logo.png" alt="관리자 페이지"></a></div>
+        <div class="links">
+            <a href="javascript:void(0)">협회소개</a>
+            <a href="javascript:void(0)">보도자료</a>
+            <a href="javascript:void(0)">개인정보처리방침</a>
+            <a href="javascript:void(0)">이용약관</a>
+            <a href="javascript:void(0)">사업자등록증 · 계좌 안내</a>
+        </div>
+        <div class="info">
+            <span class="font-weight-regular">주소</span> : 서울 서대문구 거북골로 84<span class="division"></span>문의 : <a class="font-weight-regular" href="tel:02-1234-5678">02-1234-5678</a><br/>
+            <span class="font-weight-regular">대표</span> : 이주연<span class="division"></span>사업자번호 : 111-11-11111<span class="division"></span>통신판매업 신고번호 : 제2024-서울서대문-00000호<span class="division"></span>직업정보 제공사업 등록번호 : J0000000000000
+        </div>
+        <div class="copyright">© ALL RIGHTS RESERVED</div>
+    </div>
+</footer>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let calendarEl = document.getElementById('calendar');
+        let calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView : 'dayGridMonth',
+            headerToolbar : {
+                start : 'prev next today',
+                center : 'title',
+                end : 'dayGridMonth,dayGridWeek,dayGridDay'
+            },
+            titleFormat : function(date) {
+                return date.date.year + '년 ' + (parseInt(date.date.month) + 1) + '월';
+            },
+            //initialDate: '2024-04-04',
+            locale: 'ko',
+            events: [
+                {
+                    id: 'a',
+                    title: '이벤트',
+                    start: '2024-04-30'
+                },
+                {
+                    id: 'b',
+                    title: '이벤트 이벤트',
+                    start: '2024-04-05',
+                    end: '2024-04-10',
+                    borderColor: '#FFB64D',
+                    backgroundColor: '#FFB64D',
+                    color: '#d8d6d6'
+                },
+                {
+                    id: 'b',
+                    title: '이벤트!!!',
+                    start: '2024-04-18',
+                    end: '2024-04-20',
+                    borderColor: '#f96167',
+                    backgroundColor: '#f96167',
+                    color: '#fff'
+                },
+            ]
+        });
+        calendar.render();
+    });
+</script>
+</body>
+</html>
