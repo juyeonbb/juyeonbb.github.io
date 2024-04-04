@@ -10407,7 +10407,8 @@ yx-axis
   max-width: none !important; }
 
 .contents {
-  padding: 100px 50px 100px 250px; }
+  padding: 100px 50px 100px 250px;
+  transition: padding .2s; }
 
 .page-head {
   display: flex;
@@ -10447,8 +10448,6 @@ yx-axis
   margin: 0 5px; }
 
 @media (max-width: 1280px) {
-  .contents {
-    padding: 100px 20px; }
   .page-head {
     flex-direction: column;
     margin: 20px 0 40px;
@@ -10483,10 +10482,19 @@ yx-axis
         width: 100%;
         height: 100%; }
 
+@media (max-width: 1280px) {
+  .contents {
+    padding: 100px 20px 100px 220px; } }
+
+@media (max-width: 768px) {
+  .contents {
+    padding: 100px 20px; } }
+
 /* footer */
 .footer {
   border-top: 1px solid #e5e5e5;
-  padding: 50px 50px 50px 250px; }
+  padding: 50px 50px 50px 250px;
+  transition: padding .2s; }
   .footer .logo {
     width: 200px;
     height: auto;
@@ -10579,7 +10587,11 @@ yx-axis
 
 @media (max-width: 1280px) {
   .footer {
-    padding: 50px 20px; } }
+    padding: 50px 20px 50px 220px; } }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 20px; } }
 
 .main-menu {
   position: fixed;
@@ -10592,41 +10604,53 @@ yx-axis
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1); }
   .main-menu a {
     display: block; }
-  .main-menu > ul > li {
-    border-bottom: 1px solid #dcdcdc; }
-    .main-menu > ul > li > a {
-      display: block;
-      padding: 14px 35px 14px 15px;
-      color: inherit;
-      font-size: 14px;
-      background-image: url(../../../images/front/admin/common/ico-minus.svg);
-      background-image: url(../../../images/front/admin/common/ico-plus.svg);
-      background-repeat: no-repeat;
-      background-size: 10px 10px;
-      background-position: right 10px center; }
-    .main-menu > ul > li.on > a {
-      color: #f96167;
-      background-image: url(../../../images/front/admin/common/ico-minus.svg); }
-    .main-menu > ul > li ul {
-      display: none; }
-    .main-menu > ul > li > ul > li > a {
-      padding: 10px 15px;
-      font-size: 14px;
-      background-image: url(../../../images/front/admin/common/ico-chevron-right.svg);
-      background-repeat: no-repeat;
-      background-size: 5px 8px;
-      background-position: right 13px center; }
-    .main-menu > ul > li > ul > li.on > a {
-      color: #f96167; }
-    .main-menu > ul > li > ul li ul {
-      display: none;
-      padding-bottom: 8px; }
-      .main-menu > ul > li > ul li ul a {
-        padding: 10px 10px;
-        color: #1d1e1f;
-        font-size: 12px; }
-  .main-menu > ul li.no-depth a {
-    background-image: none !important; }
+  .main-menu > ul > li > a {
+    display: block;
+    padding: 14px 35px 14px 15px;
+    color: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    background-image: url(../../../images/front/admin/common/ico-minus.svg);
+    background-image: url(../../../images/front/admin/common/ico-plus.svg);
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: right 10px center; }
+  .main-menu > ul > li.on > a {
+    color: #f96167;
+    background-image: url(../../../images/front/admin/common/ico-minus.svg); }
+  .main-menu > ul > li ul {
+    display: none; }
+  .main-menu > ul > li > ul > li > a {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 14px; }
+    .main-menu > ul > li > ul > li > a::after {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 8px;
+      right: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-size: cover;
+      background-image: url(../../../images/front/admin/common/ico-chevron-right.svg); }
+  .main-menu > ul > li > ul > li.on > a {
+    color: #f96167; }
+    .main-menu > ul > li > ul > li.on > a::after {
+      transition: .2s;
+      transform: translateY(-50%) rotate(90deg); }
+  .main-menu > ul > li > ul li ul {
+    display: none;
+    padding-bottom: 8px; }
+    .main-menu > ul > li > ul li ul a {
+      padding: 10px 10px 10px 30px;
+      font-size: 14px; }
+  .main-menu > ul li.no-depth a::after {
+    content: none; }
+
+@media (max-width: 768px) {
+  .main-menu {
+    display: none; } }
 
 * {
   margin: 0;
