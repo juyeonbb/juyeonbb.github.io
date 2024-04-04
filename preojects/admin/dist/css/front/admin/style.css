@@ -13470,7 +13470,11 @@ thead.thead-hidden {
       display: flex;
       gap: 10px; }
       .ui-form .row .col.col-half .form-group {
-        flex: 1; }
+        flex: 1;
+        width: calc(50% - 10px); }
+  .ui-form .row.row-half .col {
+    width: calc(50% - 10px);
+    flex: none; }
 
 .ui-form .form-radio-group, .ui-form .form-check-group {
   display: flex;
@@ -13485,12 +13489,18 @@ thead.thead-hidden {
 .ui-form .input-box {
   display: inline-flex;
   width: 100%;
-  align-items: center; }
+  align-items: center;
+  gap: 5px; }
   .ui-form .input-box .form-input {
     flex: 1; }
-  .ui-form .input-box .btn {
-    white-space: nowrap;
-    margin-left: 5px; }
+  .ui-form .input-box .form-select {
+    flex: 1; }
+  .ui-form .input-box .btns {
+    display: flex;
+    align-items: center;
+    gap: 5px; }
+    .ui-form .input-box .btns .btn {
+      white-space: nowrap; }
 
 .ui-form .btn-wrap {
   margin-top: 20px;
@@ -13531,7 +13541,6 @@ a, button {
 
 .btn {
   display: inline-block;
-  min-width: 80px;
   height: 38px;
   padding: 0 20px;
   border-radius: 5px;
@@ -13567,7 +13576,6 @@ a, button {
     .btn.with-icon.btn-border-point:hover::before {
       content: none; }
   .btn.btn-lg {
-    min-width: 123px;
     border-radius: 8px;
     height: 54px;
     line-height: 52px;
@@ -13576,7 +13584,6 @@ a, button {
     .btn.btn-lg:hover:before {
       transform: skewX(-45deg) translateX(26em); }
   .btn.btn-md {
-    min-width: 120px;
     border-radius: 8px;
     height: 48px;
     line-height: 46px;
@@ -13589,7 +13596,6 @@ a, button {
     .btn.btn-md:hover:before {
       transform: skewX(-45deg) translateX(26em); }
   .btn.btn-sm {
-    min-width: 60px;
     border-radius: 3px;
     height: 30px;
     line-height: 27px;
