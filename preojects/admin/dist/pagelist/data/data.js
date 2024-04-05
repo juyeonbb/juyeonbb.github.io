@@ -100,7 +100,7 @@ data.common = {
     },
   ]
 }
-data.common = {
+data.calenadar = {
   title: 'Calendar',
   list: [
     {
@@ -111,7 +111,7 @@ data.common = {
   ]
 }
 data.charts = {
-  title: 'Chart',
+  title: 'Charts',
   list: [
     {
       stateClass: 'complete',
