@@ -53,15 +53,10 @@ data.coponents = {
       url: 'guide/badge',
       page: 'badges'
     },
-    {
-      stateClass: 'complete',
-      url: '00_에러페이지',
-      page: '에러페이지'
-    },
   ]
 }
 data.popup = {
-  title: 'popup',
+  title: 'Popup',
   list: [
     {
       stateClass: 'complete',
