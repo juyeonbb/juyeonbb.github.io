@@ -84,7 +84,7 @@
 </div>
             <div id="content" class="contents">
                 <div class="page-head">
-                    <div class="page-title"><div class="title">캘린더</div></div>
+                    <div class="page-title"><div class="title">이것은 메인 타이틀</div></div>
                     <div class="breadcrumb">
                         <ul>
                             <li class="item"><a href="javascript:void(0)"><i class="fa-solid fa-house"></i></a></li>
@@ -96,7 +96,11 @@
                     </div>
                 </div>
                 <div class="page-body">
-                    <div id="calendar"></div>
+                    <div class="progress-bar">
+                        <span class="bar" style="width: 50%; background-color: #f66867"><em class="percent">50%</em></span>
+                        <span class="bar" style="width: 20%; background-color: #0d6efd"><em class="percent">20%</em></span>
+                        <span class="bar" style="width: 30%; background-color: #ffd84c"><em class="percent">30%</em></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,49 +123,35 @@
     </div>
 </footer>
 </div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        let calendarEl = document.getElementById('calendar');
-        let calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView : 'dayGridMonth',
-            headerToolbar : {
-                start : 'prev next today',
-                center : 'title',
-                end : 'dayGridMonth,dayGridWeek,dayGridDay'
-            },
-            titleFormat : function(date) {
-                return date.date.year + '년 ' + (parseInt(date.date.month) + 1) + '월';
-            },
-            //initialDate: '2024-04-04',
-            locale: 'ko',
-            events: [
-                {
-                    id: 'a',
-                    title: '이벤트',
-                    start: '2024-04-30'
-                },
-                {
-                    id: 'b',
-                    title: '이벤트 이벤트',
-                    start: '2024-04-05',
-                    end: '2024-04-10',
-                    borderColor: '#FFB64D',
-                    backgroundColor: '#FFB64D',
-                    color: '#d8d6d6'
-                },
-                {
-                    id: 'b',
-                    title: '이벤트!!!',
-                    start: '2024-04-18',
-                    end: '2024-04-20',
-                    borderColor: '#f96167',
-                    backgroundColor: '#f96167',
-                    color: '#fff'
-                },
-            ]
-        });
-        calendar.render();
-    });
-</script>
+<style>
+    .progress-bar {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        background-color: #dfdfdf;
+        overflow: hidden;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .progress-bar .bar {
+        position: relative;
+        transition: .3s;
+        height: 100%;
+    }
+
+    .progress-bar .percent {
+        position: absolute;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+        left: 50%;
+        top: 50%;
+        font-style: normal;
+        transform: translate(-50%, -50%);
+    }
+</style>
 </body>
 </html>

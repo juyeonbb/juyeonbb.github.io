@@ -84,7 +84,7 @@
 </div>
             <div id="content" class="contents">
                 <div class="page-head">
-                    <div class="page-title"><div class="title">캘린더</div></div>
+                    <div class="page-title"><div class="title">이것은 메인 타이틀</div></div>
                     <div class="breadcrumb">
                         <ul>
                             <li class="item"><a href="javascript:void(0)"><i class="fa-solid fa-house"></i></a></li>
@@ -96,7 +96,9 @@
                     </div>
                 </div>
                 <div class="page-body">
-                    <div id="calendar"></div>
+                    <div class="line-chart">
+                        <canvas id="lineChart"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,49 +121,52 @@
     </div>
 </footer>
 </div>
+<style>
+    .line-chart {
+        width: 1200px;
+        height: 400px;
+        margin: 0 auto;
+    }
+</style>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        let calendarEl = document.getElementById('calendar');
-        let calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView : 'dayGridMonth',
-            headerToolbar : {
-                start : 'prev next today',
-                center : 'title',
-                end : 'dayGridMonth,dayGridWeek,dayGridDay'
-            },
-            titleFormat : function(date) {
-                return date.date.year + '년 ' + (parseInt(date.date.month) + 1) + '월';
-            },
-            //initialDate: '2024-04-04',
-            locale: 'ko',
-            events: [
+    // https://www.chartjs.org/docs/latest/charts/line.html
+    let lineChart = document.getElementById('lineChart').getContext('2d');
+
+    new Chart(lineChart, {
+        type: 'line',
+        data: {
+            labels: ['가', '나', '다', '라', '마', '바', '사', '아', '자', '차'],
+            datasets: [
                 {
-                    id: 'a',
-                    title: '이벤트',
-                    start: '2024-04-30'
-                },
-                {
-                    id: 'b',
-                    title: '이벤트 이벤트',
-                    start: '2024-04-05',
-                    end: '2024-04-10',
-                    borderColor: '#FFB64D',
-                    backgroundColor: '#FFB64D',
-                    color: '#d8d6d6'
-                },
-                {
-                    id: 'b',
-                    title: '이벤트!!!',
-                    start: '2024-04-18',
-                    end: '2024-04-20',
+                    label: 'label',
+                    data: [12000, 50, 2424, 1404, 14141, 4111, 4544, 47, 5555, 1000],
+                    fill: false,
                     borderColor: '#f96167',
                     backgroundColor: '#f96167',
-                    color: '#fff'
+                    borderWidth: 2
                 },
-            ]
-        });
-        calendar.render();
-    });
+                {
+                    label: 'label',
+                    data: [3000, 9000, 8000, 10000, 500, 600, 3000, 6000, 8000, 5000],
+                    fill: false,
+                    borderColor: 'skyblue',
+                    backgroundColor: 'skyblue',
+                    borderWidth: 2
+                },
+            ]},
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    enabled: false
+                },
+            }
+        }
+    })
 </script>
 </body>
 </html>

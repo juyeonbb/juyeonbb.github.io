@@ -100,3 +100,68 @@ data.common = {
     },
   ]
 }
+data.common = {
+  title: 'Calendar',
+  list: [
+    {
+      stateClass: 'complete',
+      url: '00_calendar',
+      page: '캘린더'
+    },
+  ]
+}
+data.charts = {
+  title: 'Chart',
+  list: [
+    {
+      stateClass: 'complete',
+      url: '00_chart-1',
+      page: '막대 차트 1'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_chart-2',
+      page: '막대 차트 2 (multi)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_chart-3',
+      page: '막대 차트 3 (vertical)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_chart-4',
+      page: '막대 차트 4 (stacked)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_chart-5',
+      page: '막대 차트 5 (progress)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_chart-6',
+      page: '막대 차트 6 (vertical stacked)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_chart-7',
+      page: '라인 차트 1'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_chart-8',
+      page: '라인 차트 2 (multi)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_chart-9',
+      page: '파이 차트'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_chart-10',
+      page: '도넛 차트'
+    },
+  ]
+}

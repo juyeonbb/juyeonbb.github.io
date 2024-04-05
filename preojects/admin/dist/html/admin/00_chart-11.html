@@ -84,7 +84,7 @@
 </div>
             <div id="content" class="contents">
                 <div class="page-head">
-                    <div class="page-title"><div class="title">캘린더</div></div>
+                    <div class="page-title"><div class="title">이것은 메인 타이틀</div></div>
                     <div class="breadcrumb">
                         <ul>
                             <li class="item"><a href="javascript:void(0)"><i class="fa-solid fa-house"></i></a></li>
@@ -96,7 +96,9 @@
                     </div>
                 </div>
                 <div class="page-body">
-                    <div id="calendar"></div>
+                    <div class="pie-chart">
+                        <canvas id="pieChart"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,48 +121,62 @@
     </div>
 </footer>
 </div>
+<style>
+    .pie-chart {
+        width: 600px;
+        height: 600px;
+        margin: 0 auto;
+    }
+</style>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        let calendarEl = document.getElementById('calendar');
-        let calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView : 'dayGridMonth',
-            headerToolbar : {
-                start : 'prev next today',
-                center : 'title',
-                end : 'dayGridMonth,dayGridWeek,dayGridDay'
+    Chart.register(ChartDataLabels);
+    let pieChart = document.getElementById('pieChart');
+    let pieChartData = [20, 30, 10, 15, 25];
+    let pieChartOption = {
+        plugins: {
+            legend: {
+                display: false
             },
-            titleFormat : function(date) {
-                return date.date.year + '년 ' + (parseInt(date.date.month) + 1) + '월';
+            tooltip: {
+                enabled: false
             },
-            //initialDate: '2024-04-04',
-            locale: 'ko',
-            events: [
-                {
-                    id: 'a',
-                    title: '이벤트',
-                    start: '2024-04-30'
+            datalabels: {
+                color: '#fff',
+                font: {
+                    size: 20,
+                    weight: 'bold'
                 },
-                {
-                    id: 'b',
-                    title: '이벤트 이벤트',
-                    start: '2024-04-05',
-                    end: '2024-04-10',
-                    borderColor: '#FFB64D',
-                    backgroundColor: '#FFB64D',
-                    color: '#d8d6d6'
-                },
-                {
-                    id: 'b',
-                    title: '이벤트!!!',
-                    start: '2024-04-18',
-                    end: '2024-04-20',
-                    borderColor: '#f96167',
-                    backgroundColor: '#f96167',
-                    color: '#fff'
-                },
-            ]
-        });
-        calendar.render();
+                formatter: function(value, context) {
+                    return value + '%';
+                }
+            }
+        },
+    }
+    let pieData = {
+        datasets: [
+            {
+                data: pieChartData,
+                backgroundColor: [
+                    '#f96167',
+                    '#63FF84',
+                    'orange',
+                    '#8463FF',
+                    '#6384FF'
+                ],
+                hoverBackgroundColor: [
+                    '#f96167',
+                    '#63FF84',
+                    'orange',
+                    '#8463FF',
+                    '#6384FF'
+                ]
+            }]
+    };
+
+    new Chart(pieChart, {
+        type: 'pie',
+        data: pieData,
+        options: pieChartOption,
     });
 </script>
 </body>

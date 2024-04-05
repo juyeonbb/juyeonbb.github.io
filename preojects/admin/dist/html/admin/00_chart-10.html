@@ -84,7 +84,7 @@
 </div>
             <div id="content" class="contents">
                 <div class="page-head">
-                    <div class="page-title"><div class="title">캘린더</div></div>
+                    <div class="page-title"><div class="title">이것은 메인 타이틀</div></div>
                     <div class="breadcrumb">
                         <ul>
                             <li class="item"><a href="javascript:void(0)"><i class="fa-solid fa-house"></i></a></li>
@@ -96,7 +96,15 @@
                     </div>
                 </div>
                 <div class="page-body">
-                    <div id="calendar"></div>
+                    <div class="doughnut-chart">
+                        <canvas id="doughnutChart"></canvas>
+                    </div>
+                    <div class="doughnut-chart">
+                        <canvas id="doughnutChart2"></canvas>
+                    </div>
+                    <div class="doughnut-chart">
+                        <canvas id="doughnutChart3"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,48 +127,141 @@
     </div>
 </footer>
 </div>
+<style>
+    .doughnut-chart {
+        width: 150px;
+        height: 150px;
+    }
+</style>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        let calendarEl = document.getElementById('calendar');
-        let calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView : 'dayGridMonth',
-            headerToolbar : {
-                start : 'prev next today',
-                center : 'title',
-                end : 'dayGridMonth,dayGridWeek,dayGridDay'
+    // doughnutChart UI
+    Chart.register(ChartDataLabels);
+
+    let doughnutChart = document.getElementById('doughnutChart').getContext('2d');
+    let doughnutChart2 = document.getElementById('doughnutChart2').getContext('2d');
+    let doughnutChart3 = document.getElementById('doughnutChart3').getContext('2d');
+
+    let doughnutChartData = [40, 30, 15, 9, 6];
+    let doughnutChartData2 = [40, 30, 15, 9, 6];
+    let doughnutChartData3 = [40, 30, 15, 9, 6];
+
+    let doughnutChartOption = {
+        cutout: 22,
+        layout: {
+            padding: 25
+        },
+        borderWidth: 0,
+        plugins: {
+            legend: {
+                display: false
             },
-            titleFormat : function(date) {
-                return date.date.year + '년 ' + (parseInt(date.date.month) + 1) + '월';
+            tooltip: {
+                enabled: false
             },
-            //initialDate: '2024-04-04',
-            locale: 'ko',
-            events: [
-                {
-                    id: 'a',
-                    title: '이벤트',
-                    start: '2024-04-30'
+            datalabels: {
+                color: function(context) {
+                    let value = context.dataset.data[context.dataIndex];
+                    return value <= 7 ? [ '#5669c8', '#cf4a01', '#008081', '#c94875', '#666666'] : '#fff';
                 },
-                {
-                    id: 'b',
-                    title: '이벤트 이벤트',
-                    start: '2024-04-05',
-                    end: '2024-04-10',
-                    borderColor: '#FFB64D',
-                    backgroundColor: '#FFB64D',
-                    color: '#d8d6d6'
+                font: {
+                    size: 14,
+                    weight: '700',
+                    family: 'Roboto'
                 },
-                {
-                    id: 'b',
-                    title: '이벤트!!!',
-                    start: '2024-04-18',
-                    end: '2024-04-20',
-                    borderColor: '#f96167',
-                    backgroundColor: '#f96167',
-                    color: '#fff'
+                align: function(context) {
+                    return context.dataset.data[context.dataIndex] <= 7 ? 'end' : 'center';
                 },
-            ]
-        });
-        calendar.render();
+                offset: function(context) {
+                    return context.dataset.data[context.dataIndex] <= 7 ? 10 : 0;
+                },
+                textStrokeWidth: 1,
+                textStrokeColor: function(context) {
+                    let value = context.dataset.data[context.dataIndex];
+                    return value <= 7 ? 'transparent' : ['#5669c8', '#cf4a01', '#008081', '#c94875', '#666666'];
+                },
+                formatter: function(value, context) {
+                    return value + '%';
+                }
+            },
+        },
+    }
+
+    let drawDoughnutChart = new Chart( doughnutChart, {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    data: doughnutChartData2,
+                    backgroundColor: [
+                        '#5669c8',
+                        '#ff9648',
+                        '#00b3b5',
+                        '#f46396',
+                        '#dfdfdf',
+                    ],
+                    hoverBackgroundColor: [
+                        '#5669c8',
+                        '#ff9648',
+                        '#00b3b5',
+                        '#f46396',
+                        '#dfdfdf',
+                    ]
+                }]
+
+        },
+        options: doughnutChartOption,
+    });
+
+    let drawDoughnutChart2 = new Chart( doughnutChart2, {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    data: doughnutChartData3,
+                    backgroundColor: [
+                        '#5669c8',
+                        '#ff9648',
+                        '#00b3b5',
+                        '#f46396',
+                        '#dfdfdf',
+                    ],
+                    hoverBackgroundColor: [
+                        '#5669c8',
+                        '#ff9648',
+                        '#00b3b5',
+                        '#f46396',
+                        '#dfdfdf',
+                    ]
+                }]
+
+        },
+        options: doughnutChartOption,
+    });
+
+    let drawDoughnutChart3 = new Chart( doughnutChart3, {
+        type: 'doughnut',
+        data: {
+            datasets: [
+                {
+                    data: doughnutChartData,
+                    backgroundColor: [
+                        '#5669c8',
+                        '#ff9648',
+                        '#00b3b5',
+                        '#f46396',
+                        '#dfdfdf',
+                    ],
+                    hoverBackgroundColor: [
+                        '#5669c8',
+                        '#ff9648',
+                        '#00b3b5',
+                        '#f46396',
+                        '#dfdfdf',
+                    ]
+                }]
+
+        },
+        options: doughnutChartOption,
     });
 </script>
 </body>
