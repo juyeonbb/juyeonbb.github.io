@@ -1,7 +1,7 @@
 const data = {}
 
-data.common = {
-  title: '공통',
+data.coponents = {
+  title: 'Components',
   list: [
     {
       stateClass: 'complete',
@@ -17,11 +17,6 @@ data.common = {
       stateClass: 'complete',
       url: 'guide/fonts',
       page: 'fonts'
-    },
-    {
-      stateClass: 'complete',
-      url: 'guide/popup',
-      page: 'popup'
     },
     {
       stateClass: 'complete',
@@ -60,38 +55,18 @@ data.common = {
     },
     {
       stateClass: 'complete',
-      url: '00_calendar',
-      page: '캘린더'
-    },
-    {
-      stateClass: 'complete',
       url: '00_에러페이지',
       page: '에러페이지'
     },
+  ]
+}
+data.popup = {
+  title: 'popup',
+  list: [
     {
       stateClass: 'complete',
-      url: '00_에러_팝업',
-      page: '서비스 일시 중지 안내 팝업 1'
-    },
-    {
-      stateClass: 'complete',
-      url: '00_에러_팝업_2',
-      page: '서비스 일시 중지 안내 팝업 2 (모달 형)'
-    },
-    {
-      stateClass: 'complete',
-      url: '00_에러_팝업_5',
-      page: '서비스 일시 중지 안내 팝업 2 (페이지 형)'
-    },
-    {
-      stateClass: 'complete',
-      url: '00_에러_팝업_4',
-      page: '서비스 일시 중지 안내 팝업 3 (모달 형)'
-    },
-    {
-      stateClass: 'complete',
-      url: '00_에러_팝업_3',
-      page: '서비스 일시 중지 안내 팝업 3 (페이지 형)'
+      url: 'guide/popup',
+      page: 'popup'
     },
     {
       stateClass: 'complete',
@@ -162,6 +137,41 @@ data.charts = {
       stateClass: 'complete',
       url: '00_chart-10',
       page: '도넛 차트'
+    },
+  ]
+}
+data.error = {
+  title: 'Error Case',
+  list: [
+    {
+      stateClass: 'complete',
+      url: '00_에러페이지',
+      page: '에러페이지'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_에러_팝업',
+      page: '서비스 일시 중지 안내 팝업 1'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_에러_팝업_2',
+      page: '서비스 일시 중지 안내 팝업 2 (모달 형)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_에러_팝업_5',
+      page: '서비스 일시 중지 안내 팝업 2 (페이지 형)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_에러_팝업_4',
+      page: '서비스 일시 중지 안내 팝업 3 (모달 형)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_에러_팝업_3',
+      page: '서비스 일시 중지 안내 팝업 3 (페이지 형)'
     },
   ]
 }

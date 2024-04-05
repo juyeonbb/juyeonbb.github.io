@@ -100,9 +100,11 @@
   let template = Handlebars.compile(source);
 
   $('.wrap-scroll')
-  .append(template(data.common))
+  .append(template(data.coponents))
+  .append(template(data.popup))
   .append(template(data.calenadar))
   .append(template(data.charts))
+  .append(template(data.error))
 </script>
 <script>
   $('.link').on('click', function () {
