@@ -170,3 +170,13 @@ data.error = {
     },
   ]
 }
+data.case = {
+  title: 'Case',
+  list: [
+    {
+      stateClass: 'complete',
+      url: '00_case',
+      page: '...'
+    },
+  ]
+}

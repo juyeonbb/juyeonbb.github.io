@@ -11860,7 +11860,8 @@ A VERTICAL event
 
 .contents {
   padding: 100px 50px 100px 250px;
-  transition: padding .2s; }
+  transition: padding .2s;
+  height: calc(100vh - 100px - 196px); }
 
 .page-head {
   display: flex;
