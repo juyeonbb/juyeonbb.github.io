@@ -110,7 +110,10 @@ function countChar(val,target) {
  * ******************************************************************
  * */
 
-let lnbUI = {
+/**
+ * GNB
+ * */
+let $gnb = {
   click : function (target, speed) {
     let _self = this,
         $target = $(target);
@@ -157,5 +160,18 @@ let lnbUI = {
 };
 
 $(function(){
-  lnbUI.click('._mainMenu', 300)
+  $gnb.click('._mainMenu', 300)
 });
+/**
+ * ******************************************************************
+ * */
+
+/**
+ * select2
+ * */
+$('._select2').each(function () {
+  $(this).select2();
+})
+/**
+ * ******************************************************************
+ * */

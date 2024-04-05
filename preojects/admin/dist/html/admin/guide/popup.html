@@ -8,6 +8,12 @@
   <script src="../../../js/front/admin/lib/swiper.js"></script>
   <script src="../../../js/front/admin/lib/twbsPagination.js"></script>
   <script src="../../../js/front/admin/lib/jquery.mCustomScrollbar.js"></script>
+  <script src="../../../js/front/admin/lib/moment.js"></script>
+  <script src="../../../js/front/admin/lib/fullcalendar.js"></script>
+  <script src="../../../js/front/admin/lib/locale-all.js"></script>
+  <script src="../../../js/front/admin/lib/chart.js"></script>
+  <script src="../../../js/front/admin/lib/chartjs-plugin-datalabels.js"></script>
+  <script src="../../../js/front/admin/lib/select2.js"></script>
   <script src="../../../js/front/admin/ui_common.js" defer></script>
   <link rel="stylesheet" href="../../../css/front/admin/style.css">
   <link rel="stylesheet" href="../../../css/front/admin/pages.css">
@@ -19,51 +25,17 @@
 <div style="padding: 20px">
     <div class="btn-wrap">
         <button class="btn _popupTrigger" data-trigger="popup1" type="button">팝업 1</button>
-<!--        <button class="btn _popupTrigger" data-trigger="popup2" type="button">팝업 2</button>-->
     </div>
 </div>
 <div class="dim _dim"></div>
 <div class="popup _popup" data-popup="popup1">
-    <div class="popup-content">
-        <div class="popup-head">
-            <span class="title">회사정보 수정요청</span>
-            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i></button>
-        </div>
-        <div class="popup-body">
-            <div class="content">
-                <div class="form-group">
-                    <label class="label">사업자 등록증 <em class="color-caution">*</em></label>
-                    <div class="form-file">
-                        <input class="input-file" id="file" type="file" />
-                        <label class="btn btn-border-grey" for="file">파일선택</label>
-                        <ul class="file-list">
-                            <li class="item"><i class="ico ico-pdf"></i><span class="name">한국표준협회 사업자등록증.pdf</span><button class="btn-delete" type="button"><i class="fa-solid fa-xmark"></i></button></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="textarea" class="label">사업자 등록증 <em class="color-caution">*</em></label>
-                    <textarea class="form-input" name="textarea" id="textarea" onkeyup="countChar(this,'_val')" maxlength="200" placeholder="수정요청 신청사유를 입력해주세요."></textarea>
-                    <span class="txt-limit"><em class="value _val">0</em> / 200자</span>
-                </div>
-            </div>
-        </div>
-        <div class="popup-footer">
-            <button class="btn btn-border-grey _popupClose" type="button">취소</button>
-            <button class="btn" type="button">신청</button>
-        </div>
+    <div class="popup-body">
+        <div class="text">둘러보기를 종료할까요?</div>
+    </div>
+    <div class="popup-footer">
+        <button class="btn btn-grey" onclick="closePopup(this)" type="button">닫기</button>
+        <button class="btn _popupClose" type="button">확인</button>
     </div>
 </div>
-<!--<div class="popup _popup" data-popup="popup2">-->
-<!--    <div class="popup-body">-->
-<!--        <div class="text">-->
-<!--            <p>둘러보기를 종료할까요?</p>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="popup-footer">-->
-<!--        <button class="popup-btn popup-btn-grey" onclick="closePopup(this)" type="button">그만 보기</button>-->
-<!--        <button class="popup-btn _popupClose" type="button">더 볼래요!</button>-->
-<!--    </div>-->
-<!--</div>-->
 </body>
 </html>

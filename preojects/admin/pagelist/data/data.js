@@ -53,8 +53,14 @@ data.coponents = {
       url: 'guide/badge',
       page: 'badges'
     },
+    {
+      stateClass: 'complete',
+      url: 'guide/etc',
+      page: 'etc'
+    },
   ]
 }
+
 data.popup = {
   title: 'Popup',
   list: [
@@ -70,6 +76,7 @@ data.popup = {
     },
   ]
 }
+
 data.calenadar = {
   title: 'Calendar',
   list: [
@@ -80,6 +87,7 @@ data.calenadar = {
     },
   ]
 }
+
 data.charts = {
   title: 'Charts',
   list: [
@@ -135,6 +143,7 @@ data.charts = {
     },
   ]
 }
+
 data.error = {
   title: 'Error Case',
   list: [
@@ -170,6 +179,7 @@ data.error = {
     },
   ]
 }
+
 data.case = {
   title: 'Case',
   list: [
