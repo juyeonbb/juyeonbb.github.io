@@ -160,13 +160,13 @@
         autowidth: true,
         cmTemplate: {sortable: false, resizable: false},
         // height:'220',
-        // width:'810'
+        width:'810'
     });
 
     let newWidth = $('#list_cnt').width() + $('#list_stand').outerWidth(true);
 
     $('#list').jqGrid('setLabel', 'cnt', '<div>수량 / 단위</div>', '', {
-        style: 'width: ' +  newWidth + 'px;',
+        style: 'width: ' +  newWidth  - 3 + 'px;',
         colspan: '2'
     });
 
@@ -174,10 +174,12 @@
 
     $(window).on('resize.jqGrid', function () {
         let newWidth = $('#list_cnt').width() + $('#list_stand').outerWidth(true);
-        jQuery("#list").jqGrid('setGridWidth', $("#jqGrid_container").width())
+        // console.log(newWidth)
+
+        $("#list").jqGrid('setGridWidth', $("#jqGrid_container").width())
 
         $('#list').jqGrid('setLabel', 'cnt', '<div>수량 / 단위</div>', '', {
-            style: 'width: ' + newWidth + 'px;',
+            style: 'width: ' +  newWidth  - 3 + 'px;',
             colspan: '2'
         });
     })
