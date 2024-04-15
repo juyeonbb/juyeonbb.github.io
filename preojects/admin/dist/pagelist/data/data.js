@@ -190,3 +190,24 @@ data.case = {
     },
   ]
 }
+
+data.jqgrid = {
+  title: 'jq grid',
+  list: [
+    {
+      stateClass: 'complete',
+      url: '00_jqgrid',
+      page: '00_jqgrid'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_jqgrid2',
+      page: '00_jqgrid (colspan)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_jqgrid2',
+      page: '00_jqgrid(rowspan)'
+    },
+  ]
+}

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/admin/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/admin/lib/jquery-ui.js"></script>
+    <script src="../../js/front/admin/lib/swiper.js"></script>
+    <script src="../../js/front/admin/lib/twbsPagination.js"></script>
+    <script src="../../js/front/admin/lib/jquery.mCustomScrollbar.js"></script>
+    <script src="../../js/front/admin/lib/moment.js"></script>
+    <script src="../../js/front/admin/lib/fullcalendar.js"></script>
+    <script src="../../js/front/admin/lib/locale-all.js"></script>
+    <script src="../../js/front/admin/lib/chart.js"></script>
+    <script src="../../js/front/admin/lib/chartjs-plugin-datalabels.js"></script>
+    <script src="../../js/front/admin/lib/select2.js"></script>
+    <script src="../../js/front/admin/lib/jstree.js"></script>
+    <script src="../../js/front/admin/lib/jqgrid.js"></script>
+    <script src="../../js/front/admin/lib/grid.base.js"></script>
+    <script src="../../js/front/admin/lib/grid.grouping.js"></script>
+    <script src="../../js/front/admin/lib/grid.locale-kr.js"></script>
+    <script src="../../js/front/admin/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/admin/style.css">
+    <link rel="stylesheet" href="../../css/front/admin/pages.css">
+    <link rel="shortcut icon" href="../../images/front/admin/common/favicon.ico">
+    <title>📌 관리자 페이지 📌</title>
+</head>
+<body>
+<div class="wrap">
+    <header class="header _header">
+    <div class="inner">
+        <button class="btn-menu"><i class="fa-solid fa-bars"></i></button>
+        <h1 class="brand-logo"><a href="javascript:void(0)"><img src="../../images/front/admin/common/logo.png" alt="관리자 페이지"></a></h1>
+        <button class="btn-more"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+    </div>
+</header>
+    <main>
+        <div id="container">
+            <div class="main-menu _mainMenu">
+    <ul>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+            <div id="content" class="contents">
+                <div class="page-head">
+                    <div class="page-title"><div class="title">jqgrid</div></div>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li class="item"><a href="javascript:void(0)"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="item"><a href="javascript:void(0)">메뉴1</a></li>
+                            <li class="item"><a href="javascript:void(0)">소메뉴1</a></li>
+                            <li class="item"><a href="javascript:void(0)">소소메뉴2</a></li>
+                            <li class="item"><a href="javascript:void(0)">소소소메뉴3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page-body">
+                    <table id="list"></table>
+                    <div id="pager"></div>
+                    <br/><br/><br/><br/><br/>
+                    <div class="jq-container" id="jqGrid_container">
+                        <table id="list2"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="inner">
+        <div class="logo"><a class="brand-logo" href="javascript:void(0)"><img src="../../images/front/admin/common/logo.png" alt="관리자 페이지"></a></div>
+        <div class="links">
+            <a href="javascript:void(0)">협회소개</a>
+            <a href="javascript:void(0)">보도자료</a>
+            <a href="javascript:void(0)">개인정보처리방침</a>
+            <a href="javascript:void(0)">이용약관</a>
+            <a href="javascript:void(0)">사업자등록증 · 계좌 안내</a>
+        </div>
+        <div class="info">
+            <span class="font-weight-regular">주소</span> : 서울 서대문구 거북골로 84<span class="division"></span>문의 : <a class="font-weight-regular" href="tel:02-1234-5678">02-1234-5678</a><br/>
+            <span class="font-weight-regular">대표</span> : 이주연<span class="division"></span>사업자번호 : 111-11-11111<span class="division"></span>통신판매업 신고번호 : 제2024-서울서대문-00000호<span class="division"></span>직업정보 제공사업 등록번호 : J0000000000000
+        </div>
+        <div class="copyright">© ALL RIGHTS RESERVED</div>
+    </div>
+</footer>
+</div>
+<script>
+    let colNameGrid = ['No.', '제목', '영문', '수량', '단위', '순서'];
+    let data = [
+        {idx: '01', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '02', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '03', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '04', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '05', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '06', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '07', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '08', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '09', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '10', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '11', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '12', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '13', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '14', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '15', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '16', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '17', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '18', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '19', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+        {idx: '20', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: '<button class="btn btn-grey btn-sm _btnUp">▲</button><span>&nbsp;</span><button class="btn btn-grey btn-sm _btnDown">▼</button>'},
+    ];
+
+    let colModelGrid = [
+        {name: 'idx', index: 'idx', width: '5%', align: 'center'},
+        {name: 'kr', index: 'kr', width: '20%', align: 'center'},
+        {name: 'en', index: 'en', width: '20%', align: 'center'},
+        {name: 'cnt', index: 'cnt', width: '15%', align: 'center'},
+        {name: 'stand', index: 'stand', width: '20%', align: 'center'},
+        {name: 'etc', index: 'etc', width: '20%', align: 'center'}
+    ];
+
+    $("#list").jqGrid({
+        datatype: 'local',
+        data: data,
+        colNames : colNameGrid,
+        colModel : colModelGrid,
+        pager:'#pager',
+        rowNum: 10,
+        rownumbers: false,
+        rowList: [10, 20, 50],
+        autowidth: true,
+        reorderRows: true,
+        height:'225',
+        // width:'500',
+        // cellEdit: true, // 셀 수정 기능
+        // cellurl:'/', // 셀 수정 후 submit url
+        loadComplete : function () {
+            updateOrder()
+
+            // $('#gview_list .ui-jqgrid-bdiv').mCustomScrollbar({
+            //     theme: 'dark'
+            // });
+        },
+    });
+
+    $('#list').on('click', '._btnUp', function(){
+        let $row = $(this).closest('tr');
+        let index = $row.index(); // 클릭된 행의 인덱스
+
+        if (index > 0) {
+            let temp = data[index];
+            data[index] = data[index - 1];
+            data[index - 1] = temp;
+
+            $row.insertBefore($row.prev());
+            updateOrder();
+        }
+    });
+
+    $('#list').on('click', '._btnDown', function(){
+        let $row = $(this).closest('tr');
+        let index = $row.index();
+
+        if (index < data.length - 1) {
+            let temp = data[index];
+            data[index] = data[index + 1];
+            data[index + 1] = temp;
+
+            $row.insertAfter($row.next());
+            updateOrder();
+        }
+    });
+
+    function updateOrder() {
+        $('#list tr').each(function(index) {
+            let $row = $(this);
+            let isFirstRow = index === 1;
+            let isLastRow = index === $('#list tr').length - 1;
+
+            $row.find('._btnUp').toggle(!isFirstRow);
+            $row.find('._btnDown').toggle(!isLastRow);
+        });
+    }
+
+    $('#pager .ui-pg-button').on('click', updateOrder);
+    $('#gview_list .ui-th-column').on('click', updateOrder);
+
+    /* ---------------------------------------------------------------------------- */
+    let data2 = [
+        {idx: '01', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '02', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '03', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '04', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '05', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '06', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '07', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '08', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '09', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '10', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '11', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '12', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '13', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '14', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '15', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '16', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '17', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '18', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '19', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {idx: '20', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+    ];
+
+    let colNameGrid2 = ['No.', '가나다', '라마바', '아자차', '타파하', '비고'];
+
+    let colModelGrid2 = [
+        {name: 'idx', index: 'idx', width: '4%', align: 'center'},
+        {name: 'kr', index: 'kr', width: '16%', align: 'center', sortable: false},
+        {name: 'en', index: 'en', width: '20%', align: 'center', sortable: false},
+        {name: 'cnt', index: 'cnt', width: '15%', align: 'center', sortable: false},
+        {name: 'stand', index: 'stand', width: '20%', align: 'center', sortable: false},
+        {name: 'etc', index: 'etc', width: '20%', align: 'center', sortable: false}
+    ];
+
+    $('#list2').jqGrid({
+        datatype: 'local',
+        data: data2,
+        cmTemplate: {resizable: false},
+        colNames: colNameGrid2,
+        colModel: colModelGrid2,
+        reorderRows: true,
+        height: '305',
+        autowidth: true,
+        multiselect: true,
+    });
+
+    $(window).on('resize.jqGrid', function () {
+        jQuery("#list2").jqGrid( 'setGridWidth', $("#jqGrid_container").width())
+    })
+</script>
+</body>
+</html>

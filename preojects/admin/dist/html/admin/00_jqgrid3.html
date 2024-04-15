@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/admin/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/admin/lib/jquery-ui.js"></script>
+    <script src="../../js/front/admin/lib/swiper.js"></script>
+    <script src="../../js/front/admin/lib/twbsPagination.js"></script>
+    <script src="../../js/front/admin/lib/jquery.mCustomScrollbar.js"></script>
+    <script src="../../js/front/admin/lib/moment.js"></script>
+    <script src="../../js/front/admin/lib/fullcalendar.js"></script>
+    <script src="../../js/front/admin/lib/locale-all.js"></script>
+    <script src="../../js/front/admin/lib/chart.js"></script>
+    <script src="../../js/front/admin/lib/chartjs-plugin-datalabels.js"></script>
+    <script src="../../js/front/admin/lib/select2.js"></script>
+    <script src="../../js/front/admin/lib/jstree.js"></script>
+    <script src="../../js/front/admin/lib/jqgrid.js"></script>
+    <script src="../../js/front/admin/lib/grid.base.js"></script>
+    <script src="../../js/front/admin/lib/grid.grouping.js"></script>
+    <script src="../../js/front/admin/lib/grid.locale-kr.js"></script>
+    <script src="../../js/front/admin/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/admin/style.css">
+    <link rel="stylesheet" href="../../css/front/admin/pages.css">
+    <link rel="shortcut icon" href="../../images/front/admin/common/favicon.ico">
+    <title>📌 관리자 페이지 📌</title>
+</head>
+<body>
+<div class="wrap">
+    <header class="header _header">
+    <div class="inner">
+        <button class="btn-menu"><i class="fa-solid fa-bars"></i></button>
+        <h1 class="brand-logo"><a href="javascript:void(0)"><img src="../../images/front/admin/common/logo.png" alt="관리자 페이지"></a></h1>
+        <button class="btn-more"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+    </div>
+</header>
+    <main>
+        <div id="container">
+            <div class="main-menu _mainMenu">
+    <ul>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+            <div id="content" class="contents">
+                <div class="page-head">
+                    <div class="page-title"><div class="title">jqgrid</div></div>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li class="item"><a href="javascript:void(0)"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="item"><a href="javascript:void(0)">메뉴1</a></li>
+                            <li class="item"><a href="javascript:void(0)">소메뉴1</a></li>
+                            <li class="item"><a href="javascript:void(0)">소소메뉴2</a></li>
+                            <li class="item"><a href="javascript:void(0)">소소소메뉴3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page-body">
+                    <div class="jq-container jqgrid-1" id="jqGrid_container">
+                        <table id="list"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="inner">
+        <div class="logo"><a class="brand-logo" href="javascript:void(0)"><img src="../../images/front/admin/common/logo.png" alt="관리자 페이지"></a></div>
+        <div class="links">
+            <a href="javascript:void(0)">협회소개</a>
+            <a href="javascript:void(0)">보도자료</a>
+            <a href="javascript:void(0)">개인정보처리방침</a>
+            <a href="javascript:void(0)">이용약관</a>
+            <a href="javascript:void(0)">사업자등록증 · 계좌 안내</a>
+        </div>
+        <div class="info">
+            <span class="font-weight-regular">주소</span> : 서울 서대문구 거북골로 84<span class="division"></span>문의 : <a class="font-weight-regular" href="tel:02-1234-5678">02-1234-5678</a><br/>
+            <span class="font-weight-regular">대표</span> : 이주연<span class="division"></span>사업자번호 : 111-11-11111<span class="division"></span>통신판매업 신고번호 : 제2024-서울서대문-00000호<span class="division"></span>직업정보 제공사업 등록번호 : J0000000000000
+        </div>
+        <div class="copyright">© ALL RIGHTS RESERVED</div>
+    </div>
+</footer>
+</div>
+<script>
+    let data = [
+            { id: "1", country: "USA", state: "Texas",      city: "Houston",       attraction: "NASA",               zip: "77058", attr: {country: {rowspan: "5"},    state: {rowspan: "5"}} },
+            { id: "2", country: "USA", state: "Texas",      city: "Austin",        attraction: "6th street",         zip: "78704", attr: {country: {display: "none"}, state: {display: "none"}} },
+            { id: "3", country: "USA", state: "Texas",      city: "Arlinton",      attraction: "Cowboys Stadium",    zip: "76011", attr: {country: {display: "none"}, state: {display: "none"}} },
+            { id: "4", country: "USA", state: "Texas",      city: "Plano",         attraction: "XYZ place",          zip: "54643", attr: {country: {display: "none"}, state: {display: "none"}} },
+            { id: "5", country: "USA", state: "Texas",      city: "Dallas",        attraction: "Reunion tower",      zip: "12323", attr: {country: {display: "none"}, state: {display: "none"}} },
+            { id: "6", country: "USA", state: "California", city: "Los Angeles",   attraction: "Hollywood",          zip: "65456", attr: {country: {rowspan: "4"},    state: {rowspan: "4"}} },
+            { id: "7", country: "USA", state: "California", city: "San Francisco", attraction: "Golden Gate bridge", zip: "94129", attr: {country: {display: "none"}, state: {display: "none"}} },
+            { id: "8", country: "USA", state: "California", city: "San Diego",     attraction: "See world",          zip: "56653", attr: {country: {display: "none"}, state: {display: "none"}} },
+            { id: "9", country: "USA", state: "California", city: "Anaheim",       attraction: "Disneyworld",        zip: "92802", attr: {country: {display: "none"}, state: {display: "none"}} }
+        ],
+        arrtSetting = function (rowId, val, rawObject, cm) {
+            let attr = rawObject.attr[cm.name], result;
+            if (attr.rowspan) {
+                result = ' rowspan=' + '"' + attr.rowspan + '"';
+            } else if (attr.display) {
+                result = ' style="display:' + attr.display + '"';
+            }
+            return result;
+        };
+
+    $("#list").jqGrid({
+        datatype: 'local',
+        data: data,
+        colNames: ['Country', 'State', 'City', 'Attraction', 'Zip code'],
+        colModel: [
+            {name: 'country', width: '15%', align: 'center', cellattr: arrtSetting},
+            {name: 'state', width: '15%', align: 'center', cellattr: arrtSetting},
+            {name: 'city', width: '20%'},
+            {name: 'attraction', width: '35%'},
+            {name: 'zip', index: 'tax', width: '15%', align: 'right'}
+        ],
+        cmTemplate: {sortable: false, resizable: false},
+        rowNum: 100,
+        gridview: true,
+        hoverrows: false,
+        // autoencode: true,
+        // ignoreCase: true,
+        // viewrecords: true,
+        autowidth: true,
+        height: '100%',
+        beforeSelectRow: function () {
+            return false;
+        }
+    });
+
+    $("#list").jqGrid( 'setGridWidth', $("#jqGrid_container").width())
+
+    $(window).on('resize.jqGrid', function () {
+        $("#list").jqGrid( 'setGridWidth', $("#jqGrid_container").width())
+    })
+</script>
+</body>
+</html>
