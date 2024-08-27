@@ -89,7 +89,7 @@
 </div>
             <div id="content" class="contents">
                 <div class="page-head">
-                    <div class="page-title"><div class="title">이것은 메인 타이틀</div></div>
+                    <div class="page-title"><div class="title">jqgrid</div></div>
                     <div class="breadcrumb">
                         <ul>
                             <li class="item"><a href="javascript:void(0)"><i class="fa-solid fa-house"></i></a></li>
@@ -100,7 +100,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="page-body"></div>
+                <div class="page-body">
+                    <div class="jq-container" id="jqGrid_container">
+                        <table id="list"></table>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -122,5 +126,94 @@
     </div>
 </footer>
 </div>
+<script>
+    /* ---------------------------------------------------------------------------- */
+    let data = [
+        {multiselect: true, idx: '01', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '02', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '03', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '04', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '05', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '06', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '07', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '08', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '09', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '10', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '11', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '12', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '13', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '14', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '15', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '16', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+        {multiselect: true, idx: '17', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test'},
+    ];
+
+    let colNameGrid = [`<label for="all" class="form-check"><input type="checkbox" id="all" /><span></span></label>`, 'No.', '가나다', '라마바', '아자차', '타파하', '비고'];
+
+    let colModelGrid = [
+        {name: 'multiselect', width: '30', sortable: false, formatter: customMultiselect },
+        {name: 'idx', index: 'idx', width: '90', align: 'center'},
+        {name: 'kr', index: 'kr', width: '100', align: 'center', sortable: false},
+        {name: 'en', index: 'en', width: '80', align: 'center', sortable: false},
+        {name: 'cnt', index: 'cnt', width: '60', align: 'center', sortable: false},
+        {name: 'stand', index: 'stand', width: '150', align: 'center', sortable: false},
+        {name: 'etc', index: 'etc', width: '60', align: 'center', sortable: false},
+    ];
+
+    $('#list').jqGrid({
+        datatype: 'local',
+        data: data,
+        cmTemplate: {resizable: false},
+        colNames: colNameGrid,
+        colModel: colModelGrid,
+        reorderRows: true,
+        height: '305',
+        autowidth: true,
+        loadComplete: function(data) {
+            $('.custom-checkbox').on('click', function() {
+                let rowId = $(this).closest('tr').attr('id');
+                $('#list').jqGrid('setSelection', rowId);
+            });
+        }
+    });
+
+    function customMultiselect(cellValue, options, rowObject) {
+        let idx = rowObject.idx;
+        return `<label for="${idx}" class="form-check"><input type="checkbox" id="${idx}" name="checkGroup" /><span></span></label>`;
+    }
+
+    $(window).on('resize.jqGrid', function () {
+        $("#list").jqGrid( 'setGridWidth', $("#jqGrid_container").width())
+    })
+
+    $('#all').on('click', function() {
+        console.log('click')
+        let isChecked = $(this).prop('checked');
+        $('input[name="checkGroup"]').prop('checked', isChecked);
+    });
+
+    $('input[name="checkGroup"]').on('click', function() {
+        let allChecked = true;
+        $('input[name="checkGroup"]').each(function() {
+            if (!$(this).prop('checked')) {
+                allChecked = false;
+                return false;
+            }
+        });
+        $('#all').prop('checked', allChecked);
+    });
+
+
+    $(document).ready(function() {
+        let allChecked = true;
+        $('input[name="checkGroup"]').each(function() {
+            if (!$(this).prop('checked')) {
+                allChecked = false;
+                return false;
+            }
+        });
+        $('#all').prop('checked', allChecked);
+    });
+</script>
 </body>
 </html>

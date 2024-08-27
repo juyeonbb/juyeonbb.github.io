@@ -104,10 +104,6 @@
                     <div class="jq-container" id="jqGrid_container">
                         <table id="list"></table>
                     </div>
-                    <br/><br/><br/>
-                    <div class="jq-container" id="jqGrid_container2">
-                        <table id="list2"></table>
-                    </div>
                 </div>
             </div>
         </div>
@@ -131,101 +127,64 @@
 </footer>
 </div>
 <script>
+    /* ---------------------------------------------------------------------------- */
     let data = [
-            { id: "1", country: "USA", state: "Texas",      city: "Houston",       attraction: "NASA",               zip: "77058", attr: {country: {rowspan: "5"},    state: {rowspan: "5"}} },
-            { id: "2", country: "USA", state: "Texas",      city: "Austin",        attraction: "6th street",         zip: "78704", attr: {country: {display: "none"}, state: {display: "none"}} },
-            { id: "3", country: "USA", state: "Texas",      city: "Arlinton",      attraction: "Cowboys Stadium",    zip: "76011", attr: {country: {display: "none"}, state: {display: "none"}} },
-            { id: "4", country: "USA", state: "Texas",      city: "Plano",         attraction: "XYZ place",          zip: "54643", attr: {country: {display: "none"}, state: {display: "none"}} },
-            { id: "5", country: "USA", state: "Texas",      city: "Dallas",        attraction: "Reunion tower",      zip: "12323", attr: {country: {display: "none"}, state: {display: "none"}} },
-            { id: "6", country: "USA", state: "California", city: "Los Angeles",   attraction: "Hollywood",          zip: "65456", attr: {country: {rowspan: "4"},    state: {rowspan: "4"}} },
-            { id: "7", country: "USA", state: "California", city: "San Francisco", attraction: "Golden Gate bridge", zip: "94129", attr: {country: {display: "none"}, state: {display: "none"}} },
-            { id: "8", country: "USA", state: "California", city: "San Diego",     attraction: "See world",          zip: "56653", attr: {country: {display: "none"}, state: {display: "none"}} },
-            { id: "9", country: "USA", state: "California", city: "Anaheim",       attraction: "Disneyworld",        zip: "92802", attr: {country: {display: "none"}, state: {display: "none"}} },
-            { id: "10", country: "Korea", state: "Seoul", city: "Seoul", attraction: "Nothing", zip: "94129", attr: {country: {display: "table-cell"}, state: {display: "table-cell"}} },
-            // { id: "11", country: "Japan", state: "California", city: "San Diego",     attraction: "See world",          zip: "56653"},
-            // { id: "12", country: "China", state: "California", city: "Anaheim",       attraction: "Disneyworld",        zip: "92802"}
-        ],
-        arrtSetting = function (rowId, val, rawObject, cm) {
-            let attr = rawObject.attr[cm.name], result;
-            if (attr.rowspan) {
-                result = ' rowspan=' + '"' + attr.rowspan + '"';
-            } else if (attr.display) {
-                result = ' style="display:' + attr.display + '"';
-            }
-            return result;
-        };
+        {idx: '01', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '02', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '03', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '04', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '05', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '06', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '07', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '08', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '09', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '10', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '11', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '12', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '13', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '14', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '15', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+    ];
 
-    $("#list").jqGrid({
+    let colNameGrid = ['No.', '가나다', '라마바', '아자차', '타파하', '비고','No.', '가나다', '라마바', '아자차', '타파하', '비고','No.', '가나다', '라마바', '아자차', '타파하', '비고'];
+
+    let colModelGrid = [
+        {name: 'idx', index: 'idx', width: '40', align: 'center'},
+        {name: 'kr', index: 'kr', width: '160', align: 'center', sortable: false},
+        {name: 'en', index: 'en', width: '200', align: 'center', sortable: false},
+        {name: 'cnt', index: 'cnt', width: '150', align: 'center', sortable: false},
+        {name: 'stand', index: 'stand', width: '200', align: 'center', sortable: false},
+        {name: 'etc', index: 'etc', width: '200', align: 'center', sortable: false},
+        {name: 'idx2', index: 'idx', width: '40', align: 'center', sortable: false},
+        {name: 'kr2', index: 'kr', width: '160', align: 'center', sortable: false},
+        {name: 'en2', index: 'en', width: '200', align: 'center', sortable: false},
+        {name: 'cnt2', index: 'cnt', width: '150', align: 'center', sortable: false},
+        {name: 'stand2', index: 'stand', width: '200', align: 'center', sortable: false},
+        {name: 'etc2', index: 'etc', width: '200', align: 'center', sortable: false},
+        {name: 'idx3', index: 'idx', width: '40', align: 'center', sortable: false},
+        {name: 'kr3', index: 'kr', width: '160', align: 'center', sortable: false},
+        {name: 'en3', index: 'en', width: '200', align: 'center', sortable: false},
+        {name: 'cnt3', index: 'cnt', width: '150', align: 'center', sortable: false},
+        {name: 'stand3', index: 'stand', width: '200', align: 'center', sortable: false},
+        {name: 'etc3', index: 'etc', width: '200', align: 'center', sortable: false}
+    ];
+
+    $('#list').jqGrid({
         datatype: 'local',
         data: data,
-        colNames: ['Country', 'State', 'City', 'Attraction', 'Zip code'],
-        colModel: [
-            {name: 'country', width: '15%', align: 'center', cellattr: arrtSetting},
-            {name: 'state', width: '15%', align: 'center', cellattr: arrtSetting},
-            {name: 'city', width: '20%'},
-            {name: 'attraction', width: '35%'},
-            {name: 'zip', index: 'tax', width: '15%', align: 'right'}
-        ],
         cmTemplate: {
-            sortable: false,
             resizable: false
         },
-        rowNum: 100,
-        gridview: true,
-        hoverrows: false,
+        colNames: colNameGrid,
+        colModel: colModelGrid,
+        reorderRows: true,
+        height: '305',
         autowidth: true,
-        height: '100%',
-        beforeSelectRow: function () {
-            return false;
-        }
+        shrinkToFit: false,
     });
 
     $(window).on('resize.jqGrid', function () {
         $("#list").jqGrid( 'setGridWidth', $("#jqGrid_container").width())
-    })
-    /* ---------------------------------------------------------------------------- */
-
-    $("#list2").jqGrid({
-        datatype: 'local',
-        data: data,
-        colNames :  [ '날짜' ,  '고객' ,  '금액' ,  '세금' ,  '총액' ,  '종료' ,  '배송 경로' ,  '메모' ] ,
-        colModel: [
-            {name: 'invdate', index: 'invdate', width: 80, align: 'center', sorttype: 'date', formatter: 'date', formatoptions: {newformat: 'd-M-Y'}, datefmt: 'd-M-Y'},
-            {name: 'name', index: 'name', width: 70 },
-            {name: 'amount', index: 'amount', width: 75, formatter: 'number', sorttype: 'number', align: 'right'},
-            {name: 'tax', index: 'tax', width: 75, formatter: 'number', sorttype: 'number', align: 'right'},
-            {name: 'total', index: 'total', width: 75, formatter: 'number', sorttype: 'number', align: 'right'},
-            {name: 'closed', index: 'closed', width: 75, align: 'center', formatter: 'checkbox', edittype: 'checkbox', editoptions: {value: 'Yes:No', defaultValue: 'Yes'}},
-            {name: 'ship_via', index: 'ship_via', width: 100, align: 'center', formatter: 'select', edittype: 'select', editoptions: {value: 'FE:FedEx;TN:TNT;IN:Intim', defaultValue: 'Intime'}},
-            {name: 'note', index: 'note', width: 70, sortable: false}
-        ],
-        cmTemplate: {
-            sortable: false,
-            resizable: false
-        },
-        rowNum: 10,
-        rowList: [5, 10, 20],
-        gridview: true,
-        hoverrows: false,
-        autowidth: true,
-        height: '100%',
-        beforeSelectRow: function () {
-            return false;
-        }
-    });
-
-    $('#list2').jqGrid('setGroupHeaders', {
-        useColSpanStyle: true,
-        groupHeaders:[
-            {startColumnName: 'amount', numberOfColumns: 3, titleText: '<em>Price</em>'},
-            {startColumnName: 'closed', numberOfColumns: 2, titleText: 'Shiping'}
-        ]
-    });
-
-    // $('#list2').jqGrid('destroyGroupHeader', false);
-
-    $(window).on('resize.jqGrid', function () {
-        $("#list2").jqGrid( 'setGridWidth', $("#jqGrid_container2").width())
     })
 </script>
 </body>

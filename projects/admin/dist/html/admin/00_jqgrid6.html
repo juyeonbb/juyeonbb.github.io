@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/front/admin/lib/jquery-3.4.1.min.js"></script>
+    <script src="../../js/front/admin/lib/jquery-ui.js"></script>
+    <script src="../../js/front/admin/lib/swiper.js"></script>
+    <script src="../../js/front/admin/lib/twbsPagination.js"></script>
+    <script src="../../js/front/admin/lib/jquery.mCustomScrollbar.js"></script>
+    <script src="../../js/front/admin/lib/fullcalendar/moment.js"></script>
+    <script src="../../js/front/admin/lib/fullcalendar/fullcalendar.js"></script>
+    <script src="../../js/front/admin/lib/fullcalendar/locale-all.js"></script>
+    <script src="../../js/front/admin/lib/chart.js"></script>
+    <script src="../../js/front/admin/lib/chartjs-plugin-datalabels.js"></script>
+    <script src="../../js/front/admin/lib/select2.js"></script>
+    <script src="../../js/front/admin/lib/jstree.js"></script>
+    <script src="../../js/front/admin/lib/jqgrid/grid.locale-en.js"></script>
+    <script src="../../js/front/admin/lib/jqgrid/jqgrid.js"></script>
+    <script src="../../js/front/admin/ui_common.js" defer></script>
+    <link rel="stylesheet" href="../../css/front/admin/style.css">
+    <link rel="stylesheet" href="../../css/front/admin/pages.css">
+    <link rel="shortcut icon" href="../../images/front/admin/common/favicon.ico">
+    <title>📌 관리자 페이지 📌</title>
+</head>
+<body>
+<div class="wrap">
+    <header class="header _header">
+    <div class="inner">
+        <button class="btn-menu"><i class="fa-solid fa-bars"></i></button>
+        <h1 class="brand-logo"><a href="javascript:void(0)"><img src="../../images/front/admin/common/logo.png" alt="관리자 페이지"></a></h1>
+        <button class="btn-more"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+    </div>
+</header>
+    <main>
+        <div id="container">
+            <div class="main-menu _mainMenu">
+    <ul>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+                <li><a href="javascript:void(0);">2Depth</a>
+                    <ul>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                        <li><a href="javascript:void(0);">3Depth</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0);">1Depth</a>
+            <ul>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+                <li class="no-depth"><a href="javascript:void(0);">2Depth</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+            <div id="content" class="contents">
+                <div class="page-head">
+                    <div class="page-title"><div class="title">jqgrid</div></div>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li class="item"><a href="javascript:void(0)"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="item"><a href="javascript:void(0)">메뉴1</a></li>
+                            <li class="item"><a href="javascript:void(0)">소메뉴1</a></li>
+                            <li class="item"><a href="javascript:void(0)">소소메뉴2</a></li>
+                            <li class="item"><a href="javascript:void(0)">소소소메뉴3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page-body">
+                    <div class="jq-container" id="jqGrid_container">
+                        <table id="list"></table>
+                        <div id="pager"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+    <div class="inner">
+        <div class="logo"><a class="brand-logo" href="javascript:void(0)"><img src="../../images/front/admin/common/logo.png" alt="관리자 페이지"></a></div>
+        <div class="links">
+            <a href="javascript:void(0)">협회소개</a>
+            <a href="javascript:void(0)">보도자료</a>
+            <a href="javascript:void(0)">개인정보처리방침</a>
+            <a href="javascript:void(0)">이용약관</a>
+            <a href="javascript:void(0)">사업자등록증 · 계좌 안내</a>
+        </div>
+        <div class="info">
+            <span class="font-weight-regular">주소</span> : 서울 서대문구 거북골로 84<span class="division"></span>문의 : <a class="font-weight-regular" href="tel:02-1234-5678">02-1234-5678</a><br/>
+            <span class="font-weight-regular">대표</span> : 이주연<span class="division"></span>사업자번호 : 111-11-11111<span class="division"></span>통신판매업 신고번호 : 제2024-서울서대문-00000호<span class="division"></span>직업정보 제공사업 등록번호 : J0000000000000
+        </div>
+        <div class="copyright">© ALL RIGHTS RESERVED</div>
+    </div>
+</footer>
+</div>
+<script>
+    /* ---------------------------------------------------------------------------- */
+    let data = [
+        {idx: '01', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '02', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '03', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '04', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '05', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '06', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '07', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '08', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '09', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '10', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '11', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '12', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '13', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '14', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+        {idx: '15', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test', idx2: '01', kr2: '타이틀', en2: 'TitleTitleTitleTitleTitleTitle', cnt2: '3', stand2: '123', etc2: 'test', idx3: '01', kr3: '타이틀', en3: 'Title', cnt3: '3', stand3: '123', etc3: 'test'},
+    ];
+
+    let colNameGrid = [ 'Action', 'No.', '가나다', '라마바', '아자차', '타파하', '비고','No.', '가나다', '라마바', '아자차', '타파하', '비고','No.', '가나다', '라마바', '아자차', '타파하', '비고'];
+
+    let colModelGrid = [
+        {name: 'act', index: 'act', width: 75, sortable: false},
+        {name: 'idx', index: 'idx', width: '40', align: 'center'},
+        {name: 'kr', index: 'kr', width: '160', align: 'center', sortable: false, editable :true},
+        {name: 'en', index: 'en', width: '200', align: 'center', sortable: false, editable :true},
+        {name: 'cnt', index: 'cnt', width: '150', align: 'center', sortable: false, editable :true},
+        {name: 'stand', index: 'stand', width: '200', align: 'center', sortable: false, editable :true},
+        {name: 'etc', index: 'etc', width: '200', align: 'center', sortable: false, editable :true},
+        {name: 'idx2', index: 'idx', width: '40', align: 'center', sortable: false, editable :true},
+        {name: 'kr2', index: 'kr', width: '160', align: 'center', sortable: false, editable :true},
+        {name: 'en2', index: 'en', width: '200', align: 'center', sortable: false, editable :true},
+        {name: 'cnt2', index: 'cnt', width: '150', align: 'center', sortable: false, editable :true},
+        {name: 'stand2', index: 'stand', width: '200', align: 'center', sortable: false, editable :true},
+        {name: 'etc2', index: 'etc', width: '200', align: 'center', sortable: false, editable :true},
+        {name: 'idx3', index: 'idx', width: '40', align: 'center', sortable: false, editable :true},
+        {name: 'kr3', index: 'kr', width: '160', align: 'center', sortable: false, editable :true},
+        {name: 'en3', index: 'en', width: '200', align: 'center', sortable: false, editable :true},
+        {name: 'cnt3', index: 'cnt', width: '150', align: 'center', sortable: false, editable :true},
+        {name: 'stand3', index: 'stand', width: '200', align: 'center', sortable: false, editable :true},
+        {name: 'etc3', index: 'etc', width: '200', align: 'center', sortable: false, editable :true},
+    ];
+
+    $('#list').jqGrid({
+        // url:'server.php?q=3',
+        // datatype: "json",
+        datatype: 'local',
+        data: data,
+        cmTemplate: {
+            resizable: false
+        },
+        colNames: colNameGrid,
+        colModel: colModelGrid,
+        reorderRows: true,
+        height: '305',
+        autowidth: true,
+        shrinkToFit: false,
+        pager: '#pager',
+        gridComplete: function(){
+            let ids = jQuery("#list").jqGrid('getDataIDs');
+            for (let i = 0; i < ids.length; i++) {
+                let cl = ids[i];
+                be = "<input style='height:22px;width:20px;' type='button' value='E' onclick=\"$('#list').editRow('" + cl + "');\"  />";
+                se = "<input style='height:22px;width:20px;' type='button' value='S' onclick=\"$('#list').saveRow('" + cl + "');\"  />";
+                ce = "<input style='height:22px;width:20px;' type='button' value='C' onclick=\"$('#list').restoreRow('" + cl + "');\" />";
+                $("#list").jqGrid('setRowData', ids[i], {act: be + se + ce});
+            }
+        },
+        // editurl: "server.php",
+    });
+
+    // $("#list").jqGrid('navGrid', "#list", {edit: false, add: false, del: false});
+
+    $(window).on('resize.jqGrid', function () {
+        $("#list").jqGrid( 'setGridWidth', $("#jqGrid_container").width())
+    })
+</script>
+</body>
+</html>

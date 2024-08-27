@@ -206,8 +206,28 @@ data.jqgrid = {
     },
     {
       stateClass: 'complete',
-      url: '00_jqgrid2',
+      url: '00_jqgrid3',
       page: '00_jqgrid(rowspan)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_jqgrid4',
+      page: '00_jqgrid(checkbox custom)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_jqgrid5',
+      page: '00_jqgrid(scrollbar)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_jqgrid6',
+      page: '00_jqgrid (editable)'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_jqgrid7',
+      page: '00_jqgrid (sortable)'
     },
   ]
 }

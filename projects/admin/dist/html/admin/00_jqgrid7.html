@@ -89,7 +89,7 @@
 </div>
             <div id="content" class="contents">
                 <div class="page-head">
-                    <div class="page-title"><div class="title">이것은 메인 타이틀</div></div>
+                    <div class="page-title"><div class="title">jqgrid</div></div>
                     <div class="breadcrumb">
                         <ul>
                             <li class="item"><a href="javascript:void(0)"><i class="fa-solid fa-house"></i></a></li>
@@ -100,7 +100,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="page-body"></div>
+                <div class="page-body">
+                    <div class="jq-container" id="jqGrid_container">
+                        <table id="list"><tr><td></td></tr></table>
+                        <div id="psortrows"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -122,5 +127,64 @@
     </div>
 </footer>
 </div>
+<script>
+    let data = [
+        {idx: '01', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '02', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '03', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '04', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '05', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '06', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '07', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '08', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '09', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '10', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '11', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '12', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '13', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '14', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '15', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '16', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '17', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '18', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '19', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+        {idx: '20', kr: '타이틀', en: 'Title', cnt: '3', stand: '123', etc: 'test',},
+    ];
+
+    let colNameGrid = ['No.', '가나다', '라마바', '아자차', '타파하', '비고'];
+
+    let colModelGrid = [
+        {name: 'idx', index: 'idx', width: '40', align: 'center'},
+        {name: 'kr', index: 'kr', width: '160', align: 'center', sortable: false},
+        {name: 'en', index: 'en', width: '200', align: 'center', sortable: false},
+        {name: 'cnt', index: 'cnt', width: '150', align: 'center', sortable: false},
+        {name: 'stand', index: 'stand', width: '200', align: 'center', sortable: false},
+        {name: 'etc', index: 'etc', width: '200', align: 'center', sortable: false},
+    ];
+
+    $('#list').jqGrid({
+        datatype: 'local',
+        data: data,
+        cmTemplate: {
+            resizable: false
+        },
+        colNames: colNameGrid,
+        colModel: colModelGrid,
+        reorderRows: true,
+        height: '305',
+        autowidth: true,
+        shrinkToFit: true,
+        viewrecords: true,
+        sortname: 'number',
+        altRows:true
+    });
+
+    $(window).on('resize.jqGrid', function () {
+        $('#list').jqGrid('setGridWidth', $('#jqGrid_container').width())
+    })
+
+    $("#list").sortableRows();
+    // $("#list").jqGrid('gridDnD');
+</script>
 </body>
 </html>
