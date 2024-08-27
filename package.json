@@ -1,0 +1,11 @@
+{
+  "name": "juyeonbb.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "npx sass --watch css/style.scss css/style.css"
+  },
+  "author": "JUYEON LEE",
+  "license": "ISC"
+}

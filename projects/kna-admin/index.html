@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+      :root {
+        --black: #000;
+        --cuGreen: green;
+        --white: #fff;
+        --blue: #87CEFAFF;
+        --gray2: #666;
+        --lblue: lightblue;
+      }
+
+      /* Reset */
+      body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, form, fieldset, p, input, textarea, i, u, em, strong, b, a, button, th, td, code {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1, h2, h3, h4, h5, strong, b {
+        font-weight: 700;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-size: inherit;
+      }
+
+      *, *:before, *:after {
+        box-sizing: border-box;
+      }
+
+      img, fieldset, iframe, button {
+        border: 0;
+      }
+
+      ul, li {
+        list-style: none
+      }
+
+      input:not([type="radio"]), input:not([type="checkbox"]) {
+      }
+
+      input[type="search"]::-webkit-search-decoration,
+      input[type="search"]::-webkit-search-cancel-button,
+      input[type="search"]::-webkit-search-results-button,
+      input[type="search"]::-webkit-search-results-decoration {
+        display: none;
+      }
+
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+
+      input, select, button, label, textarea, a {
+      }
+
+      input, textarea, button {
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+        line-height: inherit;
+      }
+
+      input[type="password"] {
+        font-family: inherit;
+      }
+
+      select {
+        font-size: inherit;
+        color: inherit;
+        line-height: inherit;
+        font-family: inherit;
+      }
+
+      input:disabled, select:disabled, button:disabled, label:disabled, a:disabled, textarea:disabled {
+        cursor: default;
+      }
+
+      textarea {
+        resize: none;
+      }
+
+      label, button, select, a {
+        cursor: pointer;
+      }
+
+      table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+        table-layout: auto;
+      }
+
+      legend {
+        overflow: hidden;
+        visibility: hidden;
+        font-size: 0.1rem;
+        text-indent: -999rem;
+        margin-top: -0.1rem;
+        width: 0.1rem;
+        height: 0.1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus {
+        text-decoration: none;
+      }
+
+      button {
+        background: none;
+        font-family: inherit;
+        overflow: visible;
+        text-align: inherit;
+        font-weight: inherit;
+      }
+
+      em {
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      i {
+        font-style: normal;
+      }
+
+      code {
+        display: inline;
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+      }
+
+      pre {
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        margin: 0;
+      }
+
+      table caption {
+        position: absolute;
+        text-indent: -999rem;
+        width: 0;
+        height: 0;
+        left: 0;
+        top: 0;
+      }
+
+      html {
+        -webkit-text-size-adjust: none;
+        font-size: 62.5%;
+      }
+
+      body {
+        word-break: keep-all;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        font-family: 'Noto Sans Kr';
+        font-weight: 400;
+        color: var(--black);
+        letter-spacing: -0.06rem;
+      }
+
+      .index-content {
+        padding: 20px 10px 50px;
+        min-width: 0;
+      }
+
+      h1 {
+        font-size: 26px;
+        line-height: 40px;
+        font-weight: 400;
+      }
+
+      .tabpanel h2 {
+        padding-top: 6rem;
+      }
+
+      .page-count {
+        margin-top: 20px;
+      }
+
+      .page-count:after {
+        display: block;
+        content: '';
+        clear: both;
+      }
+
+      .page-count ul {
+        float: right;
+        text-align: right;
+        font-size: 14px;
+      }
+
+      .status {
+        margin-top: 20px;
+      }
+
+      .status:after {
+        display: block;
+        content: '';
+        clear: both;
+      }
+
+      .status ul {
+        font-size: 0;
+        float: right;
+      }
+
+      .status ul li {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 14px;
+      }
+
+      [class^="label"] {
+        position: relative;
+        padding-left: 20px;
+      }
+
+      [class^="label"]:after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 14px;
+        height: 14px;
+      }
+
+      .label01:after {
+        background: #999;
+      }
+
+      .label02:after {
+        background: #53b100;
+      }
+
+      .label03:after {
+        background: #0142b3;
+      }
+
+      .label04:after {
+        background: #e30101;
+        animation: over_a both linear infinite 1.3s;
+      }
+
+      @keyframes over_a {
+        0% {
+          opacity: 1;
+        }
+        40% {
+          opacity: 0.2;
+        }
+        60% {
+          opacity: 0.2;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes over_b {
+        0% {
+          background-color: var(--cuGreen);
+        }
+        90% {
+          background-color: var(--cuGreen);
+        }
+        100% {
+          background-color: var(--white);
+        }
+      }
+
+      .col-table {
+        margin-top: 20px;
+      }
+
+      .col-table .link {
+        text-decoration: underline;
+      }
+
+      .col-table [class*="label"] {
+        display: inline-block;
+        padding-left: 0;
+      }
+
+      .col-table [class*="label"]:after {
+        position: static;
+      }
+
+      .col-table {
+        border-top: 2px solid #070B25;
+        margin: 10px 0;
+      }
+
+      .col-table table {
+        table-layout: fixed;
+      }
+
+      .col-table thead th {
+        border-bottom: 0.1rem solid #D5D5D5;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        padding: 7px 5px;
+        background-color: #F2F2F2;
+      }
+
+      .col-table thead th ~ th {
+        border-left: 0.1rem solid #D5D5D5;
+      }
+
+      .col-table thead tr:last-child th {
+        border-bottom: 0.1rem solid #070B25;
+      }
+
+      .col-table tbody td {
+        position: relative;
+        border-bottom: 0.1rem solid #E5E5E5;
+        font-size: 13px;
+        text-align: left;
+        padding: 7px 10px;
+        background-color: var(--white);
+      }
+
+      .col-table tbody td:nth-child(6), .col-table tbody td:nth-child(7) {
+        text-align: center;
+      }
+
+      .col-table tbody td ~ td {
+        border-left: 0.1rem solid #EBEBEB;
+      }
+
+      .col-table tbody tr:nth-child(even) td {
+        background-color: #F9F9F9;
+      }
+
+      .col-table tbody td.al {
+        padding-left: 20px;
+      }
+
+      .col-table tbody td.ar {
+        padding-right: 20px;
+      }
+
+      .col-table tbody tr.popup td:not(:empty) {
+        background-color: #f5ebff;
+      }
+
+      /* .col-table tbody tr.del td {text-decoration:line-through;} */
+      .col-table tbody tr:hover td {
+        background-color: var(--blue) !important;
+        color: var(--white);
+      }
+
+      .col-table .link {
+        text-decoration: underline;
+        text-align: left;
+      }
+
+      .col-table .tr td {
+        border-top: 0.1rem solid #aaa;
+      }
+
+      .col-table .tr.active td {
+        animation: over_b both linear 1.3s;
+      }
+
+      .top-sticky {
+        position: sticky;
+        top: 0;
+        background-color: var(--black);
+        z-index: 1000;
+        color: var(--white);
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 10px;
+        background-color: #fff;
+      }
+
+      .top-sticky .tab {
+        height: 40px;
+        display: flex;
+        align-items: center;
+      }
+
+      .top-sticky .tab ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .top-sticky .tab ul li {
+        margin-left: 10px;
+      }
+
+      .top-sticky .tab ul li a {
+        display: block;
+        font-size: 2rem;
+        line-height: 20px;
+        color: var(--gray2);
+        padding: 1.7rem 0.5rem;
+        border-bottom: 0.5rem solid var(--black);
+      }
+
+      .top-sticky .tab ul li.active a {
+        color: var(--lblue);
+        border-color: var(--lblue);
+      }
+
+      .scrollTop {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        width: 40px;
+        height: 40px;
+        background-color: var(--black);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      table tbody td a.vscodepath {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -10px;
+        margin-right: 10px;
+        display: inline-block;
+        background: #53b100;
+        width: 20px;
+        height: 20px;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkFEOTc2RDhBRTAxMTFFQkE0NDhCQjBDRUJFRkVDQjgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkFEOTc2RDlBRTAxMTFFQkE0NDhCQjBDRUJFRkVDQjgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCQUQ5NzZENkFFMDExMUVCQTQ0OEJCMENFQkVGRUNCOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCQUQ5NzZEN0FFMDExMUVCQTQ0OEJCMENFQkVGRUNCOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pu9291YAABD6SURBVHja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) center center no-repeat #333;
+        border-radius: 5px;
+        background-size: 15px;
+        font-size: 0
+      }
+
+      .tabpanel {
+        display: none;
+      }
+
+      .tabpanel.active {
+        display: block;
+      }
+
+      table tr.end td:nth-child(7) {
+        color: #53b100
+      }
+
+      table tr.modify td:nth-child(7) {
+        color: #e30101
+      }
+
+      table tr.modify td:nth-child(8) {
+        color: #e30101
+      }
+
+      table tr.hold td:nth-child(7) {
+        color: #ccc
+      }
+
+      table tr.del {
+        color: #ccc;
+      }
+
+      table tr.del a {
+        color: inherit !important;
+      }
+
+      /* td:empty */
+      table tr.first td:before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #333;
+        z-index: 10;
+      }
+
+      table h4 {
+        display: inline;
+      }
+
+      @media screen and (max-width: 1024px) {
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .top-sticky .tab ul li a {
+          font-size: 1.4rem;
+        }
+
+        table tbody td a.vscodepath {
+          display: none;
+        }
+
+        table tr > *:last-child {
+          display: none;
+        }
+      }
+    </style>
+</head>
+<body style="min-width:0;">
+<div class="top-sticky d-flex a-center">
+    <h1><a href="#"><strong>표준협회 관리자</strong></a></h1>
+</div>
+<div class="index-content">
+    <!--		<div class="status">-->
+    <!--			<ul>-->
+    <!--				<li><div class="label01">대기</div></li>-->
+    <!--				<li><div class="label02">완료</div></li>-->
+    <!--				<li><div class="label03">진행중</div></li>-->
+    <!--				<li><div class="label04">수정</div></li>-->
+    <!--			</ul>-->
+    <!--		</div>-->
+    <h2>Layout</h2>
+    <div class="col-table">
+        <table style="table-layout:auto;width:100%;word-break:break-all;">
+            <colgroup class="pc-only">
+                <col style="width:10%;">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col>
+                <col style="width:100px">
+                <col style="width:60px;">
+                <col>
+            </colgroup>
+            <thead>
+            <tr class="">
+                <th>1Depth</th>
+                <th>2Depth</th>
+                <th>3Depth</th>
+                <th>4Depth</th>
+                <th>링크</th>
+                <th>완료예정일</th>
+                <th>상태</th>
+                <th>비고</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="first ">
+                <td>LAYOUT</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="./page/layout.html" class="link" target="_blank">layout</a>
+                </td>
+                <td>2023.09.06</td>
+                <td>완료</td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h2>PC</h2>
+    <div class="col-table">
+        <table style="table-layout:auto;width:100%;word-break:break-all;">
+            <colgroup class="pc-only">
+                <col style="width:10%;">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col style="width:10%">
+                <col>
+                <col style="width:100px">
+                <col style="width:60px;">
+                <col>
+            </colgroup>
+            <thead>
+            <tr class="">
+                <th>1Depth</th>
+                <th>2Depth</th>
+                <th>3Depth</th>
+                <th>4Depth</th>
+                <th>링크</th>
+                <th>완료예정일</th>
+                <th>상태</th>
+                <th>비고</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--시스템 관리 시작-->
+            <tr class="first ">
+                <td>시스템 관리</td>
+                <td>역할 관리</td>
+                <td>관리자역할관리</td>
+                <td></td>
+                <td>
+                    <a href="./page/UI-A-1-01-001.html" class="link" target="_blank">UI-A-1-01-001</a>
+                </td>
+                <td>2024.08.28</td>
+                <td>완료</td>
+                <td></td>
+            </tr>
+            <tr class="">
+                <td></td>
+                <td></td>
+                <td>사용자역할관리</td>
+                <td></td>
+                <td>
+                    <a href="./page/UI-A-1-02-001.html" class="link" target="_blank">UI-A-1-02-001</a>
+                </td>
+                <td>2024.08.28</td>
+                <td>완료</td>
+                <td></td>
+            </tr>
+            <tr class="">
+                <td></td>
+                <td>프로그램 관리</td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="./page/UI-A-1-03-001.html" class="link" target="_blank">UI-A-1-03-001</a>
+                </td>
+                <td>2024.08.28</td>
+                <td>완료</td>
+                <td></td>
+            </tr>
+            <tr class="">
+                <td></td>
+                <td>메뉴 관리</td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="./page/UI-A-1-04-001.html" class="link" target="_blank">UI-A-1-04-001</a>
+                </td>
+                <td>2024.08.28</td>
+                <td>완료</td>
+                <td></td>
+            </tr>
+            <tr class="">
+                <td></td>
+                <td>코드 관리</td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="./page/UI-A-1-05-001.html" class="link" target="_blank">UI-A-1-05-001</a>
+                </td>
+                <td>2024.08.28</td>
+                <td>완료</td>
+                <td></td>
+            </tr>
+            <tr class="">
+                <td></td>
+                <td>사이트관리</td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="./page/UI-A-1-06-001.html" class="link" target="_blank">UI-A-1-06-001</a>
+                </td>
+                <td>2024.08.28</td>
+                <td>완료</td>
+                <td></td>
+            </tr>
+            <tr class="">
+                <td></td>
+                <td>게시판 관리</td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="./page/UI-A-1-07-001.html" class="link" target="_blank">UI-A-1-07-001</a>
+                </td>
+                <td>2024.08.28</td>
+                <td>완료</td>
+                <td></td>
+            </tr>
+            <tr class="">
+                <td></td>
+                <td>게시물 관리</td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="./page/UI-A-1-08-001.html" class="link" target="_blank">UI-A-1-08-001</a>
+                </td>
+                <td>2024.08.28</td>
+                <td>완료</td>
+                <td></td>
+            </tr>
+            <tr class="">
+                <td></td>
+                <td>FAQ 분류 관리</td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="./page/UI-A-1-09-001.html" class="link" target="_blank">UI-A-1-09-001</a>
+                </td>
+                <td>2024.08.28</td>
+                <td>완료</td>
+                <td></td>
+            </tr>
+            <tr class="">
+                <td></td>
+                <td>스케줄링관리</td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="./page/UI-A-1-10-001.html" class="link" target="_blank">UI-A-1-10-001</a>
+                </td>
+                <td>2024.08.28</td>
+                <td>완료</td>
+                <td></td>
+            </tr>
+            <!--시스템 관리 종료-->
+            </tbody>
+        </table>
+    </div>
+</div>
+<a href="#" class="scrollTop">Top</a>
+<script type="text/javascript" src="../files/bower_components/jquery/dist/jquery.min.js"></script>
+<script>
+    $(function () {
+        var filePathVsCode = function () {
+            var current_pathAll = window.location.href;
+            var current_path = window.location.pathname;
+            var indexurl = current_path.split('/').pop();
+            current_path = current_path.slice(0, current_path.indexOf(indexurl));
+            var tdurl = $('tr td a');
+            var vsCode = '';
+            tdurl.each(function () {
+                var url = $(this).attr('href');
+                if ($(this).text().length) {
+                    if ($(this).hasClass('link')) {
+                        if (current_pathAll.indexOf('http://127.0.0.1:5500') === 0) { //vscode liveServer port
+                            vsCode = "vscode://file///C:/KEEP_HTML/"; //source file 경로
+                            var vsCodeHref = '<a class="vscodepath" href=' + '"' + vsCode + current_path + url + '"></a>';
+                            $(this).after(vsCodeHref);
+                        }
+
+                    }
+                }
+
+            })
+            if (current_pathAll.indexOf('http://127.0.0.1:5500') === 0) { //vscode liveServer port
+                var link = document.querySelector("link[rel~='icon']");
+                if (!link) {
+                    link = document.createElement('link');
+                    link.rel = 'icon';
+                    document.getElementsByTagName('head')[0].appendChild(link);
+                }
+                link.href = 'images/front/favicon/favicon-local.png';
+            }
+            if (current_pathAll.indexOf('http://192.168.0.6:9008/') === 0) { //vscode liveServer port
+                document.title = "환경교육포털 SERVER"
+            }
+        }();
+        // tabContent.init();
+    });
+</script>
+</body>
+</html>
