@@ -88,6 +88,17 @@ data.calenadar = {
   ]
 }
 
+data.jstree = {
+  title: 'jstree',
+  list: [
+    {
+      stateClass: 'complete',
+      url: '00_file_tree',
+      page: '파일 구조'
+    },
+  ]
+}
+
 data.charts = {
   title: 'Charts',
   list: [
