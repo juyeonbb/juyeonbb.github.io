@@ -682,7 +682,7 @@ function prependGridTotalCount(gridContainer,pagenationContainer,totalCount){
 			}*/
 		}
 
-		let el = '<select class="sizeNum form-select form-control" style="width: auto; display: initial; font-size: 0.8rem;">';
+		let el = '<select class="sizeNum form-select" style="width: auto; display: initial; font-size: 0.8rem;">';
         el += '<option value="10">10</option>';
         el += '<option value="20">20</option>';
         el += '<option value="30">30</option>';

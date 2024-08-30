@@ -132,10 +132,9 @@ $(document).ready(function() {
             $(".main-search").removeClass('open');
         }, 300);
     });
-    $('#mobile-collapse i').addClass('icon-toggle-right');
+    // $('#mobile-collapse i').addClass('icon-toggle-right'); // kna 변경 -- 2024.08.28
     $('#mobile-collapse').on('click', function() {
-        $('#mobile-collapse i').toggleClass('icon-toggle-right');
-        $('#mobile-collapse i').toggleClass('icon-toggle-left');
+        $('#mobile-collapse').toggleClass('hide'); // kna 변경 -- 2024.08.28
     });
 });
 $(document).ready(function() {
