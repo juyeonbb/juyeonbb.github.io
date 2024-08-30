@@ -1540,7 +1540,7 @@ textarea.form-control {
   height: 36px;
   color: #2D2D2D;
   background-color: #fff;
-  background-image: url(/images/mng/kna/ico-chevron-down.svg);
+  background-image: url(../../../images/mng/kna/ico-chevron-down.svg);
   background-repeat: no-repeat;
   background-position: right 16px center;
   background-size: 12px;
