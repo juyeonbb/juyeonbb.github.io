@@ -736,14 +736,6 @@ div.box-desc-list:before {
 }
 /* pagination */
 /* 설문지 관리 */
-.sub-title {
-  margin-bottom: 20px;
-}
-
-.border-checkbox-section .border-checkbox-group .border-checkbox:checked + .border-checkbox-label:after {
-  border-color: #5365c3;
-}
-
 .pcoded-navbar .ico {
   display: inline-block;
   background-size: cover;
@@ -833,14 +825,6 @@ div.box-desc-list:before {
   font-weight: bold;
   margin-bottom: 10px;
   text-align: left;
-}
-
-.color-red {
-  color: #ff0f30;
-}
-
-.color-point {
-  color: #5365c3 !important;
 }
 
 @media (max-width: 800px) {
@@ -1923,6 +1907,13 @@ div.dataTables_wrapper div.dataTables_paginate .pagination .first .page-link i, 
 
 .border-top, .border-bottom, .border-start, .border-end {
   border-color: #DDDDDD !important;
+}
+
+.blank {
+  padding: 40px;
+  background-color: #F8F8F8;
+  border: 1px solid #DDDDDD;
+  border-radius: 3px;
 }
 
 /* tab */

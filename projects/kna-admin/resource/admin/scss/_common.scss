@@ -278,3 +278,10 @@ div.dataTables_wrapper div.dataTables_paginate {
 .border-top, .border-bottom, .border-start, .border-end {
   border-color: $gray4 !important;
 }
+
+.blank {
+  padding: 40px;
+  background-color: $gray1;
+  border: 1px solid $gray4;
+  border-radius: 3px;
+}
