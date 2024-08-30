@@ -1678,7 +1678,7 @@ td .border-checkbox-section .border-checkbox-group:only-child .border-checkbox-l
   display: none;
 }
 
-@media (max-width: 996px) {
+@media (max-width: 1200px) {
   .row > * + * {
     margin-top: 20px;
   }
