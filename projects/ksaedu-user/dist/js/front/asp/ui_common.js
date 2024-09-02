@@ -230,15 +230,15 @@ $(window).resize(function() {
   handleHeaderBehavior();
 });
 
-// search button event
+// search button event  ---- 2024.08.02 수정
 $('._btnTopSearch').on('click', function(e) {
   e.stopPropagation();
-  $(this).addClass('show');
+  $('._headerTop .box-header-search').addClass('show');
 });
 
 $('._closeThisBox').on('click', function(e) {
   e.stopPropagation();
-  $('._btnTopSearch').removeClass('show');
+  $('._headerTop .box-header-search').removeClass('show');
 });
 
 // gnb event
@@ -258,6 +258,18 @@ $('._btnGnbMenu').on('click', function () {
     }
   }
 })
+
+// search area ---- 2024.08.02 추가
+let searchInput = $('._headerTop ._search');
+let searchArea = $('._headerTop .search-area');
+
+searchInput.on('focus', function() {
+  searchArea.addClass('focusing');
+});
+
+searchInput.on('blur', function() {
+  searchArea.removeClass('focusing');
+});
 /**
  * ******************************************************************
  * */

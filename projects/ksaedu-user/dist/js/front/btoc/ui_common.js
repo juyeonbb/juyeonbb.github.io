@@ -75,8 +75,10 @@ popupClose.on('click', function () {
 function openPopup(target) {
   const thisPopup = $(`._popup[data-popup=${target}]`);
   dim.fadeIn(200, function () {
-    thisPopup.fadeIn(200);
-    $('body').addClass('scrOff');
+    thisPopup.fadeIn(200, function () {
+      thisPopup.find('.btn-popup-close').focus();
+      $('body').addClass('scrOff');
+    });
   });
 }
 
@@ -152,7 +154,7 @@ function isMobile (e) {
 /**
  * LNB
  * */
-$('._lnb .has-depth .title').on('click', function () {
+$('._lnb .has-depth ._menuToggle').on('click', function () {
   let $parentMenu = $(this).closest('.menu');
 
   if ($parentMenu.hasClass('show')) {
@@ -258,6 +260,57 @@ $('._btnGnbMenu').on('click', function () {
     }
   }
 })
+/**
+ * ******************************************************************
+ * */
+/**
+ * Main Tooltip UI
+ * */
+$('._help').on('click', function () {
+  $('body').addClass('dimmed')
+  $('.info-dim').addClass('open')
+
+  let quickMenuHeight = $('.quick-menu .menu').outerHeight(true) + 10
+  $('.quick-tooltip-info').css('height',`${quickMenuHeight}px`);
+})
+
+$('._helpClose').on('click', function () {
+  $('body').removeClass('dimmed')
+  $('.info-dim').removeClass('open')
+})
+/**
+ * ******************************************************************
+ * */
+/**
+ * Skip Navigation UI
+ * */
+let $header = $('._header');
+let $skipLink = $('#skip a');
+let $headerHeight = $header.outerHeight();
+
+$skipLink.on('click', function () {
+  if($('.main-contents').length) {
+    let linkHash = this.hash;
+    let dummyHeight = '';
+    dummyHeight = $('#content').offset().top - $headerHeight;
+    $('html, body').animate({scrollTop: dummyHeight}, 300);
+    setTimeout( function(){ $('._boxSearch .form-search').focus();}, 50 );
+  } else {
+    setTimeout( function(){ $('.breadcrumb .item:first-child a').focus();}, 50 );
+  }
+})
+/**
+ * ******************************************************************
+ * */
+/**
+ * form check, form radio
+ * */
+$('.form-check, .form-radio').on('keydown', function(event) {
+  if (event.key === 'Enter') {
+    const input = $(this).find('input');
+    input.prop('checked', !input.prop('checked'));
+  }
+});
 /**
  * ******************************************************************
  * */

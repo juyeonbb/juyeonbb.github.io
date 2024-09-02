@@ -9,18 +9,18 @@
     <script type="text/javascript" src="../../../pagelist/js/lib/handlebars.js"></script>
     <link rel="stylesheet" href="../../../pagelist/css/style.css">
     <script type="text/javascript" src="../../../pagelist/data/dataFlex.js"></script>
-    <link rel="shortcut icon" href="#">
+    <link rel="shortcut icon" href="javascript:void(0)">
 </head>
 <body>
 <div class="nav">
-    <a href="#" class="btn-open-depths">
+    <a href="javascript:void(0)" class="btn-open-depths">
         <i class="fas fa-chevron-left"></i>
     </a>
 </div>
 <div class="nav-depth-2">
     <div class="title">
         <h2>Page List</h2>
-        <a class="btn-control-all close" href="#"></a>
+        <a class="btn-control-all close" href="javascript:void(0)"></a>
         <a class="btn-ia" href="https://docs.google.com/spreadsheets/d/1lcjfW7vKcZbIIhxB6yWYPLL6z9ENNJKbEsMl__DstLk/edit#gid=732504945" target="_blank">IA 문서보기</a>
     </div>
     <div class="wrap-scroll"></div>
@@ -31,12 +31,12 @@
 
 <script id="list-template" type="text/x-handlebars-template">
     <div class="title-page-category">
-        <h3><span>{{title}}</span> <a class="icon-dropdown close" href="#"><i class="fas fa-angle-down"></i></a></h3>
+        <h3><span>{{title}}</span> <a class="icon-dropdown close" href="javascript:void(0)"><i class="fas fa-angle-down"></i></a></h3>
         <ul class="list-wrap close">
             {{#each list}}
                 {{#fnStateClass}}
                     <li>
-                        <a href="#" class="link " data-file="{{url}}.html">
+                        <a href="javascript:void(0)" class="link " data-file="{{url}}.html">
                             <span class="state {{stateClass}}">{{state}}</span><span class="depths-2-filename"> {{page}}</span>
                             <span class="tooltip">{{url}}.html</span>
                         </a>

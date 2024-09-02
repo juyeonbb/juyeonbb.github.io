@@ -33,7 +33,7 @@
                         <label for="search" class="label">사업장 검색</label>
                         <div class="form-search" style="width: 300px;">
                             <input class="form-input" type="search" id="search" placeholder="검색어를 입력해 주세요.">
-                            <div class="btn-search show-mo"><i class="ico ico-search"></i></div>
+                            <button type="button" class="btn-search show-mo"><i class="ico ico-search"></i></button>
                         </div>
                         <button class="btn with-icon" type="button"><i class="ico ico-search-white"></i><span>검색</span></button>
                     </div>
@@ -47,10 +47,11 @@
                         <div class="table-box">
                             <div class="table table-lh-24">
                                 <table>
+                                    <caption>사업장 검색</caption>
                                     <colgroup>
-                                        <col width="22%">
-                                        <col width="25%">
-                                        <col width="52%">
+                                        <col style="width: 22%">
+                                        <col style="width: 25%">
+                                        <col style="width: 52%">
                                     </colgroup>
                                     <thead>
                                     <tr>
@@ -112,10 +113,10 @@
     $('#pagination').twbsPagination({
         totalPages: 35,
         visiblePages: 5,
-        first: `<i class="ico ico-paging-first"></i>`,
-        prev: `<i class="ico ico-paging-prev"></i>`,
-        next: `<i class="ico ico-paging-next"></i>`,
-        last: `<i class="ico ico-paging-last"></i>`,
+        first: `<i class="ico ico-paging-first"></i><span class="sr-only">처음 페이지</span>`,
+        prev: `<i class="ico ico-paging-prev"></i><span class="sr-only">이전 페이지</span>`,
+        next: `<i class="ico ico-paging-next"></i><span class="sr-only">다음 페이지</span>`,
+        last: `<i class="ico ico-paging-last"></i><span class="sr-only">마지막 페이지</span>`,
     });
 </script>
         </div>

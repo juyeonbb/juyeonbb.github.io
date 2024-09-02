@@ -399,6 +399,11 @@ data.mypage = {
     },
     {
       stateClass: 'complete',
+      url: '08_마이페이지_달성엠블럼_팝업',
+      page: '달성 엠블럼 팝업'
+    },
+    {
+      stateClass: 'complete',
       url: '08_마이페이지_법정의무교육이수현황',
       page: '법정 의무교육 이수현황'
     },
@@ -485,12 +490,12 @@ data.info = {
   list: [
     {
       stateClass: 'waiting',
-      url: '04_교육안내',
+      url: '06_교육안내',
       page: '교육안내'
     },
     {
-      stateClass: 'waiting',
-      url: '04_학습진행방법',
+      stateClass: 'complete',
+      url: '06_교육안내_학습진행방법',
       page: '학습진행방법'
     },
   ]

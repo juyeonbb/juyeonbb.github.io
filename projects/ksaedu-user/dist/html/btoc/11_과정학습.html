@@ -19,19 +19,24 @@
         <div class="player-head">
             <div class="title">ESG 경영 9가지로 끝내기!</div>
             <div class="option">
+                <button class="btn-txt" onclick="loadContents(1);"><i class="ico"></i><span>콘텐츠1</span></button>
+                <button class="btn-txt" onclick="loadContents(2);"><i class="ico"></i><span>콘텐츠2</span></button>
+                <button class="btn-txt" onclick="loadContents(3);"><i class="ico"></i><span>콘텐츠3</span></button>
                 <button class="btn-txt _btnAllCourse"><i class="ico ico-menu-all"></i><span>전체차시</span></button>
                 <button class="btn-txt _btnCourseInfo"><i class="ico ico-course"></i><span>과정정보</span></button>
             </div>
         </div>
         <div class="player-body">
             <div class="player">
-                <!--            <iframe src="" frameborder="0"></iframe>-->
+                <iframe id="playerFrame" name="playerFrame" src="" frameborder="0"></iframe>
+                <!--
                 <img src="https://picsum.photos/800/450" alt="ESG 경영 9가지로 끝내기!">
                 <span class="img-dim"></span>
                 <button class="btn-play"><i class="ico ico-play-lg"></i></button>
                 <span class="progress">
                     <em class="bar" style="width: 25%"></em>
                 </span>
+                -->
             </div>
             <button class="btn-expand _btnExpand"><span class="line"></span><i class="ico ico-expand-up"></i><i class="ico ico-expand-down"></i></button>
         </div>
@@ -276,21 +281,35 @@
     })
 
     // mobile
-    const checkMobile = window.matchMedia('(max-width: 768px)')
-    setMobile(checkMobile)
-    checkMobile.addListener(setMobile)
-
-    function setMobile (e) {
-        if (e.matches) {
-            $('._btnExpand').addClass('expanded');
-            $('.player-head').addClass('hide');
-            $('.player-bottom').addClass('hide');
-        } else {
-            $('._btnExpand').removeClass('expanded');
-            $('.player-head').removeClass('hide');
-            $('.player-bottom').removeClass('hide');
-        }
-    }
+    // const checkMobile = window.matchMedia('(max-width: 768px)')
+    // setMobile(checkMobile)
+    // checkMobile.addListener(setMobile)
+    //
+    // function setMobile (e) {
+    //     if (e.matches) {
+    //         $('._btnExpand').addClass('expanded');
+    //         $('.player-head').addClass('hide');
+    //         $('.player-bottom').addClass('hide');
+    //     } else {
+    //         $('._btnExpand').removeClass('expanded');
+    //         $('.player-head').removeClass('hide');
+    //         $('.player-bottom').removeClass('hide');
+    //     }
+    // }
+    //
+    // function loadContents(num) {
+    //     let path = '../../contents/contents/';
+    //     if(num == 1) {
+    //         path += '21/resources/01/1001.html'
+    //     } else if(num == 2) {
+    //         path += '121/resources/01/F001.htm'
+    //     } else if(num == 3) {
+    //         path += '162/resources/01/001.htm'
+    //     }
+    //     $('#playerFrame').on('load', function() {
+    //     });
+    //     $('#playerFrame').prop('src', path);
+    // }
 </script>
 </body>
 </html>

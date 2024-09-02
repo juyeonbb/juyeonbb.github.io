@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    <script src="../../js/front/btoc/lib/jquery-3.4.1.min.js"></script>-->
+<!--    <script src="../../js/front/btoc/lib/swiper.js"></script>-->
+<!--    <script src="../../js/front/btoc/lib/twbsPagination.js"></script>-->
+<!--    <script src="../../js/front/btoc/ui_common.js" defer></script>-->
+<!--    <link rel="stylesheet" href="../../css/front/btoc/style.css">-->
+<!--    <link rel="stylesheet" href="../../css/front/btoc/pages.css">-->
+    <style>
+      @font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;
+        font-weight: 300;
+        src: url(../../fonts/NotoSansKR/NotoSansKR-Light.otf) format("opentype"), url(../../fonts/NotoSansKR/NotoSansKR-Light.woff2) format("woff2"), url(../../fonts/NotoSansKR/NotoSansKR-Light.woff) format("woff");
+      }
+
+      @font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;
+        font-weight: 400;
+        src: url(../../fonts/NotoSansKR/NotoSansKR-Regular.otf) format("opentype"), url(../../fonts/NotoSansKR/NotoSansKR-Regular.woff2) format("woff2"), url(../../fonts/NotoSansKR/NotoSansKR-Regular.woff) format("woff");
+      }
+
+      @font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;
+        font-weight: 500;
+        src: url(../../fonts/NotoSansKR/NotoSansKR-Medium.otf) format("opentype"), url(../../fonts/NotoSansKR/NotoSansKR-Medium.woff2) format("woff2"), url(../../fonts/NotoSansKR/NotoSansKR-Medium.woff) format("woff");
+      }
+
+      @font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;
+        font-weight: 700;
+        src: url(../../fonts/NotoSansKR/NotoSansKR-Bold.otf) format("opentype"), url(../../fonts/NotoSansKR/NotoSansKR-Bold.woff2) format("woff2"), url(../../fonts/NotoSansKR/NotoSansKR-Bold.woff) format("woff");
+      }
+
+      @font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;
+        font-weight: 900;
+        src: url(../../fonts/NotoSansKR/NotoSansKR-Black.otf) format("opentype"), url(../../fonts/NotoSansKR/NotoSansKR-Black.woff2) format("woff2"), url(../../fonts/NotoSansKR/NotoSansKR-Black.woff) format("woff");
+      }
+
+      @font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;
+        font-weight: 400;
+        src: url(../../fonts/Roboto/Roboto-Regular.woff2) format("woff2"), url(../../fonts/Roboto/Roboto-Regular.woff) format("woff"), url(../../fonts/Roboto/Roboto-Regular.ttf) format("truetype"), url(../../fonts/Roboto/Roboto-Regular.otf) format("opentype");
+        unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+005B-0060, U+007B-007E, U+26;
+      }
+
+      @font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;
+        font-weight: 500;
+        src: url(../../fonts/Roboto/Roboto-Medium.woff2) format("woff2"), url(../../fonts/Roboto/Roboto-Medium.woff) format("woff"), url(../../fonts/Roboto/Roboto-Medium.ttf) format("truetype"), url(../../fonts/Roboto/Roboto-Medium.otf) format("opentype");
+        unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+005B-0060, U+007B-007E, U+26;
+      }
+
+      @font-face {
+        font-family: 'Noto Sans KR';
+        font-style: normal;
+        font-weight: 700;
+        src: url(../../fonts/Roboto/Roboto-Bold.woff2) format("woff2"), url(../../fonts/Roboto/Roboto-Bold.woff) format("woff"), url(../../fonts/Roboto/Roboto-Bold.ttf) format("truetype"), url(../../fonts/Roboto/Roboto-Bold.otf) format("opentype");
+        unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+005B-0060, U+007B-007E, U+26;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Noto Sans KR';
+      }
+      
+      .font-weight-medium {
+        font-weight: 500 !important;
+      }
+      
+      .color-black {
+        color: #333 !important;
+      }
+
+      .login-contents .top-heading {
+        width: 100%;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 45px;
+        background-color: #fff;
+        border-bottom: 1px solid rgba(29, 49, 97, 0.1);
+      }
+
+      .login-contents .top-heading .img-logo {
+        display: block;
+        width: 134px;
+        max-width: 134px;
+        height: auto;
+        margin: 0 auto 14px;
+      }
+
+      .login-contents .top-heading .img-logo img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .login-contents .top-heading .txt-logo {
+        position: relative;
+        display: inline-block;
+        font-size: 24px;
+        line-height: 26px;
+        letter-spacing: -0.6px;
+        text-align: center;
+        color: #333;
+      }
+
+      .login-contents .top-heading .txt-logo::after {
+        content: '';
+        width: 130px;
+        position: absolute;
+        bottom: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        background-image: linear-gradient(90deg, #1d35ad, #cf4ebe);
+      }
+
+      .error-page {
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      .error-page .img {
+        max-width: 350px;
+        margin: 80px auto 50px;
+      }
+
+      .error-page .img img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .error-page .img.img-2 {
+        max-width: 387px;
+        margin: 80px auto 38px;
+      }
+
+      .error-page .title {
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: -1.5px;
+        text-align: center;
+        color: #000;
+        margin-bottom: 23px;
+      }
+
+      .error-page .desc {
+        font-size: 15px;
+        letter-spacing: -0.75px;
+        line-height: 24px;
+        text-align: center;
+        color: #666;
+        margin-bottom: 26px;
+      }
+
+      .error-page .box {
+        padding: 13px 20px 16px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      .error-page .box .txt-lg {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -.8px;
+        margin-bottom: 4px;
+      }
+
+      .error-page .box .txt {
+        font-weight: 500;
+        color: #1d35ad;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -.9px;
+      }
+
+      .login-contents .bottom {
+        margin-top: 97px;
+        text-align: center;
+        padding-bottom: 150px;
+      }
+
+      .login-contents .bottom .copyright {
+        font-size: 14px;
+        font-weight: 300;
+        color: #666;
+      }
+    </style>
+    <link rel="shortcut icon" href="../../images/front/btoc/common/favicon.ico">
+    <title>👱🏻‍♀️ KSA EDU 👱🏻‍</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="login-contents">
+        <div class="top-heading">
+            <a class="img-logo" href="javascript:void(0)"><img src="../../images/front/btoc/common/logo.png" alt="KSA EDU"></a>
+            <span class="txt-logo">한국표준협회</span>
+        </div>
+        <div class="contents">
+            <div class="error-page">
+                <div class="img img-2"><img src="../../images/front/btoc/common/img-error.png" alt="서비스 점검 안내"></div>
+                <div class="title">서비스 점검 안내</div>
+                <div class="desc">
+                    시스템 점검으로 작업기간 동안 <span class="color-black font-weight-medium">웹사이트 접속 및 서비스가 제한</span>됩니다.<br/>
+                    더 나은 서비스를 위한 조치이오니 양해 부탁드립니다.
+                </div>
+                <div class="box">
+                    <div class="txt-lg">점검 일시</div>
+                    <div class="txt">2023년 1월 24일(화요일)<br/>
+                        07:00 ~ 19:00
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="copyright">© KOREAN STANDARDS ASSOCIATION. ALL RIGHTS RESERVED.</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

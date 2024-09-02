@@ -70,6 +70,11 @@ data.common = {
     },
     {
       stateClass: 'complete',
+      url: '00_에러페이지2',
+      page: '에러페이지2'
+    },
+    {
+      stateClass: 'complete',
       url: '00_에러_팝업',
       page: '서비스 일시 중지 안내 팝업 1'
     },
@@ -112,6 +117,36 @@ data.common = {
       stateClass: 'complete',
       url: '00_위탁계약서양식_다운로드_팝업',
       page: '위탁계약서 양식 다운로드 팝업'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_환불정보입력_팝업',
+      page: '환불 정보입력 팝업'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_이메일폼_01',
+      page: '이메일 폼 - 입과환영'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_이메일폼_02',
+      page: '이메일 폼 - 온라인교육학습독려'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_이메일폼_03',
+      page: '이메일 폼 - 임시비밀번호 발급'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_이메일폼_04',
+      page: '이메일 폼 - 수동발송템플릿'
+    },
+    {
+      stateClass: 'complete',
+      url: '00_이메일폼_05',
+      page: '이메일 폼 - 집합교육 참가안내'
     },
   ]
 }
@@ -357,6 +392,11 @@ data.service = {
       page: '기업맞춤교육 > 신청방법안내'
     },
     {
+      stateClass: 'complete',
+      url: '04_기업맞춤교육_기업맞춤교육소개',
+      page: '기업맞춤교육 > 기업맞춤교육소개'
+    },
+    {
       stateClass: 'waiting',
       url: '06_서비스소개_정부지원무료교육',
       page: '정부지원무료교육'
@@ -390,6 +430,11 @@ data.service = {
       stateClass: 'complete',
       url: '06_서비스소개_학습진행방법_교육신청방법',
       page: '학습진행 방법 > 교육신청방법'
+    },
+    {
+      stateClass: 'complete',
+      url: '06_서비스소개_학습진행방법_교육수강방법',
+      page: '학습진행 방법 > 교육수강방법'
     },
     {
       stateClass: 'complete',
@@ -603,6 +648,21 @@ data.notice = {
       url: '07_고객지원_담당자연락처',
       page: '담당자 연락처'
     },
+    {
+      stateClass: 'complete',
+      url: '07_고객지원_커뮤니티',
+      page: '커뮤니티'
+    },
+    {
+      stateClass: 'complete',
+      url: '07_고객지원_커뮤니티_상세',
+      page: '커뮤니티 > 상세'
+    },
+    {
+      stateClass: 'complete',
+      url: '07_고객지원_커뮤니티_쓰기',
+      page: '커뮤니티 > 글쓰기'
+    },
   ]
 }
 
@@ -633,6 +693,11 @@ data.mypage = {
       stateClass: 'complete',
       url: '08_마이페이지_학습현황_환급과정_본인인증팝업',
       page: '학습현황 > 이러닝 환급과정 본인인증'
+    },
+    {
+      stateClass: 'complete',
+      url: '08_마이페이지_학습현황_환급과정_환급과정본인인증',
+      page: '학습현황 > 환급과정 본인인증'
     },
     {
       stateClass: 'complete',

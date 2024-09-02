@@ -5,6 +5,8 @@ let mainSlider = new Swiper('._mainSlider', {
     centeredSlides: true,
     effect: 'fade',
     loop: true,
+    observer: true,
+    observeParents: true,
     autoplay: {
         delay: 3000,
         disableOnInteraction: false
@@ -147,3 +149,29 @@ if(recentSliderSlides > 5) {
     let recentSlider = new Swiper('.recent-slider', options);
     recentSlider.slideTo(2)
 }
+
+/* 오늘의 추천 slider 추가 -- 2024.04.12 */
+let thumbnailSlider = new Swiper('._thumbnailSlider', {
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    },
+    navigation: {
+        prevEl: '.section-recommendation .btn-arrow-prev',
+        nextEl: '.section-recommendation .btn-arrow-next'
+    },
+    breakpoints: {
+        //tablet
+        940: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+        },
+        // pc
+        1300: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+        },
+    },
+});
