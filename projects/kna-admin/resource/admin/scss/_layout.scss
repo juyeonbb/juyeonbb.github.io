@@ -422,6 +422,21 @@ body {
   color: $blue1 !important;
 }
 
+.pcoded .pcoded-navbar[navbar-theme="theme1"] .pcoded-item>li.active>a {
+  background-color: transparent;
+  color: $black1;
+  font-weight: 400;
+}
+
+.pcoded .pcoded-navbar[navbar-theme="theme1"] .pcoded-item>li.pcoded-trigger.active>a {
+  background-color: transparent;
+}
+
+.pcoded .pcoded-navbar[active-item-theme="theme1"] .pcoded-item>li.pcoded-trigger>a:before, .pcoded .pcoded-navbar[active-item-theme="theme1"] .pcoded-item>li.active>a:before {
+  border-left-color: transparent !important;
+  height: auto;
+}
+
 /* 즐겨찾기 */
 .pcoded-navbar .main-favorite-menu {
   padding: 4px 16px 0;
