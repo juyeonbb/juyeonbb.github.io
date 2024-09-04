@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('include/head.html', {title : '시스템 관리', subtitle: '코드 관리'})
+<body class="small">
+<!-- Pre-loader start -->
+@@include('include/themeLoader.html')
+<!-- Pre-loader end -->
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        @@include('include/header.html')
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                @@include('include/lnb.html')
+                <div class="pcoded-content">
+                    <div class="pcoded-inner-content">
+                        <!-- Main-body start -->
+                        <div class="main-body">
+                            <!-- 회원관리 sm 버전 -->
+                            <div class="page-wrapper">
+                                <!-- Page-header start -->
+                                @@include('include/pageHeader.html', {category : '시스템 관리', pageTitle: '공통코드 관리'})
+                                <!-- Page-header end -->
+                                <!-- Page-body start -->
+                                <div class="page-body">
+                                    <div class="card">
+                                        <div class="card-block-small">
+                                            <div class="row row-search">
+                                                <div class="col col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>키워드</strong></div>
+                                                        <div class="input-group">
+                                                            <div class="category-group">
+                                                                <select name="filterKeywordSelect" title="select" class="form-select">
+                                                                    <option value="opt1">primary</option>
+                                                                    <option value="opt2">Type 2</option>
+                                                                    <option value="opt3">Type 3</option>
+                                                                    <option value="opt4">Type 4</option>
+                                                                    <option value="opt5">Type 5</option>
+                                                                    <option value="opt6">Type 6</option>
+                                                                    <option value="opt7">Type 7</option>
+                                                                    <option value="opt8">Type 8</option>
+                                                                </select>
+                                                                <input type="text" class="form-control" aria-label="Text input with dropdown button" name="filterKeywordInput" id="filterKeywordInput">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="button-group">
+                                                <button class="btn btn-inverse"><i class="fa-solid fa-rotate-right"></i>초기화</button>
+                                                <button class="btn btn-primary">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="contentPanel">
+                                        <div class="card">
+                                            <div class="card-block-small">
+                                                <div class="row">
+                                                    <div class="col-xl-3">
+                                                        <div class="card-title">
+                                                            <h5>
+                                                                <strong>코드그룹 목록</strong>
+                                                            </h5>
+                                                            <div class="btn-group">
+                                                                <button class="btn btn-sm btn-primary"><i class="fa-solid fa-plus"></i>등록</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-block-small">
+                                                                <!-- jsgrid -->
+                                                                <div class="blank" style="height: 500px"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3">
+                                                        <div class="card-title">
+                                                            <h5>
+                                                                <strong>코드그룹 정보</strong>
+                                                            </h5>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-block-small">
+                                                                <div class="form-group">
+                                                                    <label class="label" for="codeGroupID"><strong>코드그룹ID</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="codeGroupID" id="codeGroupID" placeholder="23" value="23" readonly=""/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="codeGroupName"><strong>코드그룹명</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="codeGroupName" id="codeGroupName" placeholder="23" value="23"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="codeGroupDesc"><strong>코드그룹설명</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="codeGroupDesc" id="codeGroupDesc" placeholder="23"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="option1"><strong>옵션1</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="option1" id="option1" placeholder="23"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="option2"><strong>옵션2</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="option2" id="option2" placeholder="23"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="updater"><strong>수정자</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="updater" id="updater" placeholder="23" readonly/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="updater"><strong>코드그룹 사용</strong></label>
+                                                                    <div class="input-group">
+                                                                        <div class="form-inline-group">
+                                                                            <div class="switch-item">
+                                                                                <input type="hidden" class="js-single"/>
+                                                                                <input type="checkbox" class="js-single-small" name="codeGroupUse" id="codeGroupUse" checked/>
+                                                                                <label for="codeGroupUse" class="v-middle"></label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="button-group">
+                                                                    <button class="btn btn-primary">저장</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3">
+                                                        <div class="card-title">
+                                                            <h5>
+                                                                <strong>코드 구조</strong>
+                                                            </h5>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-block-small">
+                                                                <!-- dynatree -->
+                                                                <div class="blank" style="height: 500px"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-3">
+                                                        <div class="card-title">
+                                                            <h5>
+                                                                <strong>코드 정보</strong>
+                                                            </h5>
+                                                        </div>
+                                                        <div class="card">
+                                                            <div class="card-block-small">
+                                                                <div class="form-group">
+                                                                    <label class="label" for="codeID"><strong>코드</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="codeID" id="codeID" placeholder="23" value="23" readonly=""/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="codeName"><strong>코드명</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="codeName" id="codeName" placeholder="23" value="23"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="codeDesc"><strong>코드설명</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="codeDesc" id="codeDesc" placeholder="23"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="codeGroupID1"><strong>코드그룹ID</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="codeGroupID1" id="codeGroupID1" placeholder="23" readonly/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="precedCode"><strong>상위코드</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="precedCode" id="precedCode" placeholder="23" readonly/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="option11"><strong>옵션1</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="option11" id="option11" placeholder="23"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="option21"><strong>옵션2</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="option21" id="option21" placeholder="23"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="option31"><strong>옵션2</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="option31" id="option31" placeholder="23"/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="updater1"><strong>수정자</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" name="updater1" id="updater1" placeholder="23" readonly/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="label" for="updater"><strong>코드 사용</strong></label>
+                                                                    <div class="input-group">
+                                                                        <div class="form-inline-group">
+                                                                            <div class="switch-item">
+                                                                                <input type="hidden" class="js-single"/>
+                                                                                <input type="checkbox" class="js-single-small" name="codeUse" id="codeUse" checked/>
+                                                                                <label for="codeUse" class="v-middle"></label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="button-group">
+                                                                    <button class="btn btn-primary">저장</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+<!--                                    <div class="card"></div>-->
+<!--                                    <div class="card"></div>-->
+                                </div>
+                                <!-- Page-body end -->
+                            </div>
+                            <!-- //회원관리 sm 버전 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main-body end -->
+@@include('include/bottomScript.html')
+</body>
+</html>

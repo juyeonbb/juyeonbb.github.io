@@ -1,0 +1,91 @@
+<!-- Required Jquery -->
+<script type="text/javascript" src="../files/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/common/jquery/jquery.form.js"></script>
+<script type="text/javascript" src="../js/common/jquery/jquery.layout-1.3.0.rc30.80.js"></script>
+<script type="text/javascript" src="../js/common/dynatree/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/common/dynatree/jquery.dynatree.js"></script>
+<script type="text/javascript" src="../js/common/dynatree/jquery.contextMenu-custom.js"></script>
+<script type="text/javascript" src="../js/common/fileDownload/jquery.fileDownload.js"></script>
+<script type="text/javascript" src="../js/common/common_mng.js"></script>
+<script type="text/javascript" src="../resource/js/common.js"></script>
+<script type="text/javascript" src="../js/common/common_util.js"></script>
+<script type="text/javascript" src="../js/common/common_searchForm.js"></script>
+<script type="text/javascript" src="../js/common/jsgrid-master/dist/jsgrid.min.js"></script>
+<script type="text/javascript" src="../js/common/jsgrid/jsgrid.helper.js"></script>
+<script type="text/javascript" src="../js/common/validator/jquery.validate.js"></script>
+<script type="text/javascript" src="../js/common/validator/jquery.validate.add.js"></script>
+<script type="text/javascript" src="../js/common/validator/jquery.validate.setting.js"></script>
+<script type="text/javascript" src="../js/mng/popup/commonPopup.js"></script>
+
+<script type="text/javascript" src="../files/bower_components/popper.js/dist/umd/popper.min.js"></script>
+<script type="text/javascript" src="../files/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="../files/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="../files/bower_components/modernizr/modernizr.js"></script>
+<script type="text/javascript" src="../files/bower_components/modernizr/feature-detects/css-scrollbars.js"></script>
+<!-- Accordion js -->
+<script type="text/javascript" src="../files/assets/pages/accordion/accordion.js"></script>
+<!-- i18next.min.js -->
+<script type="text/javascript" src="../files/bower_components/i18next/i18next.min.js"></script>
+<script type="text/javascript" src="../files/bower_components/i18next-xhr-backend/i18nextXHRBackend.min.js"></script>
+<script type="text/javascript" src="../files/bower_components/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript" src="../files/bower_components/jquery-i18next/jquery-i18next.min.js"></script>
+<!-- Switch component js -->
+<script type="text/javascript" src="../files/bower_components/switchery/dist/switchery.min.js"></script>
+<!-- Select 2 js -->
+<script type="text/javascript" src="../files/bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- Multiselect js -->
+<script type="text/javascript" src="../files/bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect.js"></script>
+<script type="text/javascript" src="../files/bower_components/multiselect/js/jquery.multi-select.js"></script>
+<script type="text/javascript" src="../files/assets/js/jquery.quicksearch.js"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="../files/assets/pages/advance-elements/swithces.js"></script>
+<script type="text/javascript" src="../files/assets/pages/advance-elements/select2-custom.js"></script>
+<script src="../files/assets/js/pcoded.min.js"></script>
+<script src="../files/assets/js/vartical-layout.min.js"></script>
+<script src="../files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        setTimeout(() => {
+            var clickedMenu = $("#mCSB_1_container").children("ul").children(".active");
+            if(!clickedMenu || clickedMenu.length == 0) return false;
+            var offsetTop = (-Number($(clickedMenu).offset().top -250))
+            var menuzoneHeight = $("#mCSB_1_container").height();
+            $("#mCSB_1_container").css({"top":(offsetTop<-250)?offsetTop: 0});
+        }, 100);
+
+        $(' .pcoded-navigatio-lavel').on('click', function () {
+            if(!$(this).hasClass('active')) {
+                //1dpth 메뉴만 오픈 되고 나머지는 닫힘
+                //$(this).addClass('active').siblings('.pcoded-navigatio-lavel').removeClass('active');
+                //1dpth 메뉴만 열림,닫힘
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        })
+    })
+
+    function goMenu(url, cmkey){
+        jQuery("#form_menu").attr("action",url);
+        jQuery("#form_menu input[id=cmkey]").val(cmkey);
+        jQuery("#form_menu")[0].submit();
+    }
+    function goMenuNewWin(url, cmkey){
+        jQuery("#form_menu").attr("action",url);
+        jQuery("#form_menu").attr("target","_blank");
+        jQuery("#form_menu input[id=cmkey]").val(cmkey);
+        jQuery("#form_menu")[0].submit();
+        jQuery("#form_menu").attr("target","");
+    }
+    function goMenuPop(url, cmkey, width, height){
+        Center_Fixed_Popup2("", cmkey, width, height, "no");
+        jQuery("#form_menu").attr("action",url);
+        jQuery("#form_menu").attr("target",cmkey);
+        jQuery("#form_menu input[id=cmkey]").val(cmkey);
+        jQuery("#form_menu")[0].submit();
+        jQuery("#form_menu").attr("target","");
+    }
+</script>
+<script type="text/javascript" src="../files/assets/js/script.js"></script>
