@@ -1,0 +1,2147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>관리자 시스템 관리 - 역할 관리</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="description" content="#">
+    <meta name="keywords" content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="#">
+    <!-- Favicon icon -->
+    <link rel="icon" href="../images/mng/kna/favicon.ico" type="image/x-icon">
+    <!-- Required Framework -->
+    <link rel="stylesheet" type="text/css" href="../files/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href="../files/assets/icon/themify-icons/themify-icons.css">
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href="../files/assets/icon/icofont/css/icofont.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="../resource/fonts/fontawesome/css/fontawesome.css"> <!-- kna 변경 / font awesome 변경  -->
+    <!-- feather Awesome -->
+    <link rel="stylesheet" type="text/css" href="../files/assets/icon/feather/css/feather.css">
+    <link rel="stylesheet" type="text/css" href="../files/bower_components/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../files/assets/pages/data-table/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../files/bower_components/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css">
+
+    <!-- Select 2 css -->
+    <link rel="stylesheet" href="../files/bower_components/select2/dist/css/select2.min.css"/>
+    <!-- Multi Select css -->
+    <link rel="stylesheet" type="text/css" href="../files/bower_components/bootstrap-multiselect/dist/css/bootstrap-multiselect.css"/>
+    <link rel="stylesheet" type="text/css" href="../files/bower_components/multiselect/css/multi-select.css"/>
+    <!-- Switch component css -->
+    <link rel="stylesheet" type="text/css" href="../files/bower_components/switchery/dist/switchery.min.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="../files/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../files/assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/mngs/dynatree/ui.dynatree.css">
+    <link rel="stylesheet" type="text/css" href="../css/mngs/dynatree/jquery.contextMenu.css">
+    <link rel="stylesheet" type="text/css" href="../js/common/jsgrid-master/dist/jsgrid.min.css">
+    <link rel="stylesheet" type="text/css" href="../js/common/jsgrid-master/dist/jsgrid-theme.css">
+    <link rel="stylesheet" type="text/css" href="../css/mngs/jgrid/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="../css/mngs/jgrid/jquery-ui.structure.css">
+    <link rel="stylesheet" type="text/css" href="../css/mngs/jgrid/jquery-ui.theme.css">
+    <!-- 관리자 임의 추가 css -->
+    <link rel="stylesheet" type="text/css" href="../resource/css/mng/admin.common.css">
+
+    <!-- JS -->
+    <script type="text/javascript" src="../files/bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body class="small">
+<!-- Pre-loader start -->
+<div class="theme-loader">
+    <div class="ball-scale">
+        <div class="contain">
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+            <div class="ring">
+                <div class="frame"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pre-loader end -->
+<div id="pcoded" class="pcoded">
+    <div class="pcoded-overlay-box"></div>
+    <div class="pcoded-container navbar-wrapper">
+        <nav class="navbar header-navbar pcoded-header">
+    <div class="navbar-wrapper">
+        <div class="navbar-logo">
+            <a class="mobile-menu" href="#!" id="mobile-collapse">
+                <i class="fa-solid fa-chevron-up"></i>
+            </a>
+            <a href="index.html">
+                <img class="img-fluid" src="../images/mng/kna/logo.png" width="157" height="36" alt="KNA 에듀센터"/>
+            </a>
+            <a class="mobile-options">
+                <i class="feather icon-more-horizontal"></i>
+            </a>
+        </div>
+        <div class="navbar-container">
+            <ul class="nav-left">
+                <li>
+                    <a href="#!" onclick="javascript:toggleFullScreen()" class="waves-effect waves-light">
+                        <i class="fa-solid fa-expand"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav-right">
+                <li>
+                    <div class="name">
+                        <b>홍길동</b>
+                        <span>님</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <select name="select" class="form-select" title="select">
+                            <option value="opt1">시스템관리자</option>
+                            <option value="opt2">Type 2</option>
+                            <option value="opt3">Type 3</option>
+                            <option value="opt4">Type 4</option>
+                            <option value="opt5">Type 5</option>
+                            <option value="opt6">Type 6</option>
+                            <option value="opt7">Type 7</option>
+                            <option value="opt8">Type 8</option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="btn-login">
+                        <span>로그아웃</span>
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </a>
+                </li>
+<!--                <li class="user-profile header-notification">-->
+<!--                    <div class="dropdown-primary dropdown">-->
+<!--                        <div class="dropdown-toggle" data-bs-toggle="dropdown">-->
+<!--                            <img src="../files/assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">-->
+<!--                            <span>John Doe</span>-->
+<!--                            <i class="feather icon-chevron-down"></i>-->
+<!--                        </div>-->
+<!--                        <ul class="show-notification profile-notification dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">-->
+<!--                            <li>-->
+<!--                                <a href="auth-normal-sign-in.html">-->
+<!--                                    <i class="feather icon-log-out"></i> Logout-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+
+<!--                    </div>-->
+<!--                </li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+        <div class="pcoded-main-container">
+            <div class="pcoded-wrapper">
+                <nav class="pcoded-navbar">
+    <ul class="nav nav-tabs tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#tab-1" role="tab"><i class="fa-solid fa-bars"></i> 메뉴</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2" role="tab"><i class="fa-regular fa-star"></i> 즐겨찾기</a>
+        </li>
+    </ul>
+    <div class="tab-content tabs">
+        <div class="tab-pane active" id="tab-1" role="tabpanel">
+            <div class="pcoded-inner-navbar main-menu">
+                <div class="pcoded-navigatio-lavel"><i class="fa-regular fa-user"></i><span>고객관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu active">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-user"></i></span><span class="pcoded-mtext">사용자관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">휴면계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">엑셀 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">첨부파일 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 열람 기록</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 파기 대장</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">기업관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">기업관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">EP마스터관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">협력기업관리</span></a>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-solid fa-display"></i><span>서비스관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"><i class="feather feather icon-film"></i></span><span class="pcoded-mtext">저작콘텐츠관리</span></a>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"><i class="feather feather icon-grid"></i></span><span class="pcoded-mtext">게시판관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">게시판관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">게시물관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">팝업공지사항관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"><i class="feather feather icon-info"></i></span><span class="pcoded-mtext">공지사항관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">공지사항관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">강사공지사항관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">팝업공지사항 템플릿</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">팝업공지사항</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu ">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"><i class="feather feather icon-message-square"></i></span><span class="pcoded-mtext">FAQ관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">FAQ관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">FAQ 분류 관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu ">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather icon-help-circle"></i></span><span class="pcoded-mtext">문의 및 요청</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="pcoded-hasmenu ">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">1:1문의</span></a>
+                                <ul class="pcoded-submenu">
+                                    <li class=""><a href="javascript:void(0)"><span class="pcoded-mtext">담당자 관리</span></a></li>
+                                    <li class=""><a href="javascript:void(0)"><span class="pcoded-mtext">답변 관리</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">강사문의답변관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">기업담당자문의</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">교육상담신청</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">전화상담</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">대량신청대행관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">업무요청게시판</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">고객정보변경요청</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"><i class="feather feather icon-loader"></i></span><span class="pcoded-mtext">이벤트관리</span></a>
+                    </li>
+                    <li class="pcoded-hasmenu ">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-check-square"></i></span><span class="pcoded-mtext">사이트 설문 관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">설문지 관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">설문관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">설문결과관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"><i class="feather feather icon-search"></i></span><span class="pcoded-mtext">검색어 관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">인기검색어 관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">추천검색어 관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu ">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"><i class="feather feather icon-layout"></i></span><span class="pcoded-mtext">플렉스</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">플렉스 서비스</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">플렉스 과정분류</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu ">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"><i class="feather feather icon-list"></i></span><span class="pcoded-mtext">플렉스 설문관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">설문지 관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">설문운영관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">설문 결과 관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu ">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather icon-hash"></i></span><span
+                                class="pcoded-mtext">단체할인관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">단체할인 신청</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu ">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-globe"></i></span><span
+                                class="pcoded-mtext">사이트 관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">사이트관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)">
+                                    <span class="pcoded-mtext">배너관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-regular fa-file-lines"></i><span>교육자원관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-user"></i></span><span class="pcoded-mtext">사용자관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">휴면계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">엑셀 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">첨부파일 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 열람 기록</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 파기 대장</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">기업관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">기업관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">EP마스터관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">협력기업관리</span></a>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-solid fa-table-cells-large"></i><span>콘텐츠관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-user"></i></span><span class="pcoded-mtext">사용자관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">휴면계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">엑셀 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">첨부파일 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 열람 기록</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 파기 대장</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">기업관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">기업관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">EP마스터관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">협력기업관리</span></a>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-regular fa-pen-to-square"></i><span>과정관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-user"></i></span><span class="pcoded-mtext">사용자관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">휴면계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">엑셀 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">첨부파일 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 열람 기록</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 파기 대장</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">기업관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">기업관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">EP마스터관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">협력기업관리</span></a>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-regular fa-folder-closed"></i><span>교육운영관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-user"></i></span><span class="pcoded-mtext">사용자관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">휴면계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">엑셀 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">첨부파일 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 열람 기록</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 파기 대장</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">기업관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">기업관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">EP마스터관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">협력기업관리</span></a>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-solid fa-layer-group"></i><span>학습활동관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-user"></i></span><span class="pcoded-mtext">사용자관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">휴면계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">엑셀 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">첨부파일 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 열람 기록</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 파기 대장</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">기업관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">기업관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">EP마스터관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">협력기업관리</span></a>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-solid fa-won-sign"></i><span>정산관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-user"></i></span><span class="pcoded-mtext">사용자관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">휴면계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">엑셀 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">첨부파일 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 열람 기록</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 파기 대장</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">기업관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">기업관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">EP마스터관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">협력기업관리</span></a>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-regular fa-circle-user"></i><span>강사관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-user"></i></span><span class="pcoded-mtext">사용자관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">휴면계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">엑셀 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">첨부파일 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 열람 기록</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 파기 대장</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">기업관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">기업관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">EP마스터관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">협력기업관리</span></a>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-regular fa-id-card"></i><span>자격증관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-user"></i></span><span class="pcoded-mtext">사용자관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">휴면계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">엑셀 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">첨부파일 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 열람 기록</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 파기 대장</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">기업관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">기업관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">EP마스터관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">협력기업관리</span></a>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-regular fa-bell"></i><span>알림·문의 관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-user"></i></span><span class="pcoded-mtext">사용자관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">휴면계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">엑셀 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">첨부파일 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 열람 기록</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 파기 대장</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">기업관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">기업관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">EP마스터관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">협력기업관리</span></a>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-solid fa-location-dot"></i><span>현장교육관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-user"></i></span><span class="pcoded-mtext">사용자관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">휴면계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">엑셀 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">첨부파일 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 열람 기록</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 파기 대장</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">기업관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">기업관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">EP마스터관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">협력기업관리</span></a>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-solid fa-chart-line"></i><span>통계관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)">
+                            <span class="pcoded-micon"><i class="feather feather icon-user"></i></span><span class="pcoded-mtext">사용자관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">휴면계정관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">엑셀 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">첨부파일 다운로드 사유</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 열람 기록</span></a>
+                            </li>
+                            <li class="">
+                                <a href="#"><span class="pcoded-mtext">개인정보 파기 대장</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="pcoded-hasmenu">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">기업관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">기업관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:void(0)"><span class="pcoded-mtext">EP마스터관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"></span><span class="pcoded-mtext">협력기업관리</span></a>
+                    </li>
+                </ul>
+                <div class="pcoded-navigatio-lavel"><i class="fa-solid fa-gear"></i><span>시스템관리</span></div>
+                <ul class="pcoded-item pcoded-left-item">
+                    <li class="">
+                        <a href="javascript:goMenu('')"><span class="pcoded-micon"><i class="feather icon-airplay"></i></span><span class="pcoded-mtext">프로그램 관리</span></a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:goMenu('')"><span class="pcoded-micon"><i class="feather icon-list"></i></span><span class="pcoded-mtext">메뉴관리</span></a>
+                    </li>
+                    <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+                        <a href="javascript:goMenu('')"><span class="pcoded-micon"><i class="feather icon-user-check"></i></span><span class="pcoded-mtext">역할관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:goMenu('')"><span class="pcoded-mtext">관리자역할관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:goMenu('')"><span class="pcoded-mtext">사용자역할관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:goMenu('')">
+                            <span class="pcoded-micon"><i class="feather icon-share-2"></i></span><span class="pcoded-mtext">공통코드관리</span></a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:goMenu('')">
+                            <span class="pcoded-micon"><i class="feather icon-target"></i></span><span class="pcoded-mtext">관리자 접근이력</span></a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:goMenu('')"><span class="pcoded-micon"><i class="feather icon-wifi"></i></span><span class="pcoded-mtext">관리자 IP 관리</span></a>
+                    </li>
+                    <li class="pcoded-hasmenu" dropdown-icon="style1" subitem-icon="style1">
+                        <a href="javascript:void(0)"><span class="pcoded-micon"><i class="feather icon-clipboard"></i></span><span class="pcoded-mtext">게시판관리</span></a>
+                        <ul class="first-depth-submenu pcoded-submenu">
+                            <li class="">
+                                <a href="javascript:goMenu('')"><span class="pcoded-mtext">게시판관리</span></a>
+                            </li>
+                            <li class="">
+                                <a href="javascript:goMenu('')"><span class="pcoded-mtext">게시물관리</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="javascript:goMenu('')"><span class="pcoded-micon"><i class="feather icon-refresh-ccw"></i></span><span class="pcoded-mtext">메모리DB관리</span></a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:goMenu('')"><span class="pcoded-micon"><i class="feather icon-share"></i></span><span class="pcoded-mtext">운영메시지관리</span></a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:goMenu('')"><span class="pcoded-micon"><i class="feather feather icon-folder"></i></span><span class="pcoded-mtext">운영메세지 그룹 관리 </span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-pane" id="tab-2" role="tabpanel">
+            <div class="pcoded-inner-navbar main-favorite-menu">
+                <ul>
+                    <li class="item">
+                        <div class="title">
+                            <button class="btn-menu-remove _btnMenuRemove" type="button"><i class="fa-solid fa-xmark"></i></button>
+                            <a href="#">메뉴 이름 1</a>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn-menu-up _btnMenuUp" type="button"><i class="fa-solid fa-caret-up"></i></button>
+                            <button class="btn-menu-down _btnMenuDown" type="button"><i class="fa-solid fa-caret-down"></i></button>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="title">
+                            <button class="btn-menu-remove _btnMenuRemove" type="button"><i class="fa-solid fa-xmark"></i></button>
+                            <a href="#">메뉴 이름 1</a>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn-menu-up _btnMenuUp" type="button"><i class="fa-solid fa-caret-up"></i></button>
+                            <button class="btn-menu-down _btnMenuDown" type="button"><i class="fa-solid fa-caret-down"></i></button>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="title">
+                            <button class="btn-menu-remove _btnMenuRemove" type="button"><i class="fa-solid fa-xmark"></i></button>
+                            <a href="#">협력기업관리협력기업관리협력기업관리협력기업관리</a>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn-menu-up _btnMenuUp" type="button"><i class="fa-solid fa-caret-up"></i></button>
+                            <button class="btn-menu-down _btnMenuDown" type="button"><i class="fa-solid fa-caret-down"></i></button>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="title">
+                            <button class="btn-menu-remove _btnMenuRemove" type="button"><i class="fa-solid fa-xmark"></i></button>
+                            <a href="#">메뉴 이름 1</a>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn-menu-up _btnMenuUp" type="button"><i class="fa-solid fa-caret-up"></i></button>
+                            <button class="btn-menu-down _btnMenuDown" type="button"><i class="fa-solid fa-caret-down"></i></button>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="title">
+                            <button class="btn-menu-remove _btnMenuRemove" type="button"><i class="fa-solid fa-xmark"></i></button>
+                            <a href="#">메뉴 이름 1</a>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn-menu-up _btnMenuUp" type="button"><i class="fa-solid fa-caret-up"></i></button>
+                            <button class="btn-menu-down _btnMenuDown" type="button"><i class="fa-solid fa-caret-down"></i></button>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="title">
+                            <button class="btn-menu-remove _btnMenuRemove" type="button"><i class="fa-solid fa-xmark"></i></button>
+                            <a href="#">메뉴 이름 1</a>
+                        </div>
+                        <div class="buttons">
+                            <button class="btn-menu-up _btnMenuUp" type="button"><i class="fa-solid fa-caret-up"></i></button>
+                            <button class="btn-menu-down _btnMenuDown" type="button"><i class="fa-solid fa-caret-down"></i></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+                <div class="pcoded-content">
+                    <div class="pcoded-inner-content">
+                        <!-- Main-body start -->
+                        <div class="main-body">
+                            <div class="page-wrapper">
+                                <!-- Page-header start -->
+                                <div class="page-header">
+    <div class="page-header-title">
+        <h4>이러닝과정</h4>
+        <button type="button" class="btn-star active" data-bs-toggle="button"><i class="fa-regular fa-star"></i></button>
+    </div>
+    <div class="page-header-breadcrumb">
+        <ul class="breadcrumb-title">
+            <li class="breadcrumb-item"><a href="#!"><i class="fa-solid fa-house"></i></a></li>
+            <li class="breadcrumb-item"><a href="#!">과정관리</a></li>
+            <li class="breadcrumb-item"><a href="#!">이러닝과정</a></li>
+        </ul>
+    </div>
+</div>
+                                <!-- Page-header end -->
+                                <!-- Page-body start -->
+                                <div class="page-body">
+                                    <div class="card">
+                                        <div class="card">
+                                            <div class="row">
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>키워드</strong></div>
+                                                        <div class="input-group">
+                                                            <div class="category-group">
+                                                                <select name="select" class="form-select" title="select">
+                                                                    <option value="opt1">primary</option>
+                                                                    <option value="opt2">Type 2</option>
+                                                                    <option value="opt3">Type 3</option>
+                                                                    <option value="opt4">Type 4</option>
+                                                                    <option value="opt5">Type 5</option>
+                                                                    <option value="opt6">Type 6</option>
+                                                                    <option value="opt7">Type 7</option>
+                                                                    <option value="opt8">Type 8</option>
+                                                                </select>
+                                                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>개발년도</strong></div>
+                                                        <div class="input-group">
+                                                            <select name="filterBoardSelect" class="form-select" title="select">
+                                                                <option value="opt1">Select One Value Only</option>
+                                                                <option value="opt2">Type 2</option>
+                                                                <option value="opt3">Type 3</option>
+                                                                <option value="opt4">Type 4</option>
+                                                                <option value="opt5">Type 5</option>
+                                                                <option value="opt6">Type 6</option>
+                                                                <option value="opt7">Type 7</option>
+                                                                <option value="opt8">Type 8</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>등록일</strong></div>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>고용보험여부</strong></div>
+                                                        <div class="input-group">
+                                                            <select name="filterBoardSelect" class="form-select" title="select">
+                                                                <option value="opt1">Select One Value Only</option>
+                                                                <option value="opt2">Type 2</option>
+                                                                <option value="opt3">Type 3</option>
+                                                                <option value="opt4">Type 4</option>
+                                                                <option value="opt5">Type 5</option>
+                                                                <option value="opt6">Type 6</option>
+                                                                <option value="opt7">Type 7</option>
+                                                                <option value="opt8">Type 8</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>콘텐츠출처</strong></div>
+                                                        <div class="input-group">
+                                                            <select name="filterBoardSelect" class="form-select" title="select">
+                                                                <option value="opt1">Select One Value Only</option>
+                                                                <option value="opt2">Type 2</option>
+                                                                <option value="opt3">Type 3</option>
+                                                                <option value="opt4">Type 4</option>
+                                                                <option value="opt5">Type 5</option>
+                                                                <option value="opt6">Type 6</option>
+                                                                <option value="opt7">Type 7</option>
+                                                                <option value="opt8">Type 8</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>유효여부</strong></div>
+                                                        <div class="input-group">
+                                                            <select name="filterBoardSelect" class="form-select" title="select">
+                                                                <option value="opt1">Select One Value Only</option>
+                                                                <option value="opt2">Type 2</option>
+                                                                <option value="opt3">Type 3</option>
+                                                                <option value="opt4">Type 4</option>
+                                                                <option value="opt5">Type 5</option>
+                                                                <option value="opt6">Type 6</option>
+                                                                <option value="opt7">Type 7</option>
+                                                                <option value="opt8">Type 8</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>CP사</strong></div>
+                                                        <div class="input-group">
+                                                            <select class="js-example-basic-single" title="select">
+                                                                <optgroup label="Developer">
+                                                                    <option value="AL">Alabama</option>
+                                                                    <option value="WY">Wyoming</option>
+                                                                </optgroup>
+                                                                <optgroup label="Designer">
+                                                                    <option value="WY">Peter</option>
+                                                                    <option value="WY">Hanry Die</option>
+                                                                    <option value="WY">John Doe</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>부서선택</strong></div>
+                                                        <div class="input-group">
+                                                            <select class="js-example-basic-single" title="select">
+                                                                <optgroup label="Developer">
+                                                                    <option value="AL">Alabama</option>
+                                                                    <option value="WY">Wyoming</option>
+                                                                </optgroup>
+                                                                <optgroup label="Designer">
+                                                                    <option value="WY">Peter</option>
+                                                                    <option value="WY">Hanry Die</option>
+                                                                    <option value="WY">John Doe</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>독서과정여부</strong></div>
+                                                        <div class="input-group">
+                                                            <select name="filterBoardSelect" class="form-select" title="select">
+                                                                <option value="opt1">Select One Value Only</option>
+                                                                <option value="opt2">Type 2</option>
+                                                                <option value="opt3">Type 3</option>
+                                                                <option value="opt4">Type 4</option>
+                                                                <option value="opt5">Type 5</option>
+                                                                <option value="opt6">Type 6</option>
+                                                                <option value="opt7">Type 7</option>
+                                                                <option value="opt8">Type 8</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>과정상태</strong></div>
+                                                        <div class="input-group">
+                                                            <select name="filterBoardSelect" class="form-select" title="select">
+                                                                <option value="opt1">Select One Value Only</option>
+                                                                <option value="opt2">Type 2</option>
+                                                                <option value="opt3">Type 3</option>
+                                                                <option value="opt4">Type 4</option>
+                                                                <option value="opt5">Type 5</option>
+                                                                <option value="opt6">Type 6</option>
+                                                                <option value="opt7">Type 7</option>
+                                                                <option value="opt8">Type 8</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>배정강사</strong></div>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>배정강사</strong></div>
+                                                        <div class="input-group">
+                                                            <div class="form-inline-group">
+                                                                <div class="switch-item">
+                                                                    <input type="checkbox" class="js-single-small" name="notLoginFileDownloadStatus" id="switch" checked/>
+                                                                    <label for="switch" class="v-middle">스위치 1</label>
+                                                                </div>
+                                                                <div class="switch-item">
+                                                                    <input type="checkbox" class="js-single-small" name="notLoginFileDownloadStatus" id="switch2" checked/>
+                                                                    <label for="switch2" class="v-middle">스위치 2</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>라벨</strong></div>
+                                                        <div class="input-group">
+                                                            <div class="form-inline-group form-inline-sm-group">
+                                                                <button type="button" class="btn btn-sm btn-primary">지난주</button>
+                                                                <button type="button" class="btn btn-sm btn-primary">이번주</button>
+                                                                <button type="button" class="btn btn-sm btn-primary">다음주</button>
+                                                                <button type="button" class="btn btn-sm btn-primary">이번달</button>
+                                                                <button type="button" class="btn btn-sm btn-primary">다음달</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>라벨</strong></div>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" aria-label="Text input with dropdown button" name="fileMaxSize" id="fileMaxSize">
+                                                            <div class="input-group-text">MB</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-3">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>라벨</strong></div>
+                                                        <div class="input-group">
+                                                            <div class="category-group">
+                                                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                                                <button type="button" class="btn btn-gray-blue">검색</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xl-6">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>라벨</strong></div>
+                                                        <div class="input-group">
+                                                            <div class="form-inline-group form-inline-sm-group">
+                                                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                                                <div class="txt">일 후</div>
+                                                                <input type="time" class="form-control" aria-label="Text input with dropdown button">
+                                                                <div class="txt">시 부터</div>
+                                                                <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                                                <div class="txt">일 후</div>
+                                                                <input type="time" class="form-control" aria-label="Text input with dropdown button">
+                                                                <div class="txt">시 까지</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <div class="form-group form-search-group">
+                                                        <div class="label"><strong>라벨</strong></div>
+                                                        <div class="input-group">
+                                                            <div class="form-inline-group form-inline-sm-group">
+                                                                <select name="filterBoardSelect" class="form-select" title="select">
+                                                                    <option value="opt1">All</option>
+                                                                    <option value="opt2">Type 2</option>
+                                                                    <option value="opt3">Type 3</option>
+                                                                    <option value="opt4">Type 4</option>
+                                                                    <option value="opt5">Type 5</option>
+                                                                    <option value="opt6">Type 6</option>
+                                                                    <option value="opt7">Type 7</option>
+                                                                    <option value="opt8">Type 8</option>
+                                                                </select>
+                                                                <select name="filterBoardSelect" class="form-select" title="select">
+                                                                    <option value="opt1">All</option>
+                                                                    <option value="opt2">Type 2</option>
+                                                                    <option value="opt3">Type 3</option>
+                                                                    <option value="opt4">Type 4</option>
+                                                                    <option value="opt5">Type 5</option>
+                                                                    <option value="opt6">Type 6</option>
+                                                                    <option value="opt7">Type 7</option>
+                                                                    <option value="opt8">Type 8</option>
+                                                                </select>
+                                                                <div class="txt">~</div>
+                                                                <select name="filterBoardSelect" class="form-select" title="select">
+                                                                    <option value="opt1">All</option>
+                                                                    <option value="opt2">Type 2</option>
+                                                                    <option value="opt3">Type 3</option>
+                                                                    <option value="opt4">Type 4</option>
+                                                                    <option value="opt5">Type 5</option>
+                                                                    <option value="opt6">Type 6</option>
+                                                                    <option value="opt7">Type 7</option>
+                                                                    <option value="opt8">Type 8</option>
+                                                                </select>
+                                                                <select name="filterBoardSelect" class="form-select" title="select">
+                                                                    <option value="opt1">All</option>
+                                                                    <option value="opt2">Type 2</option>
+                                                                    <option value="opt3">Type 3</option>
+                                                                    <option value="opt4">Type 4</option>
+                                                                    <option value="opt5">Type 5</option>
+                                                                    <option value="opt6">Type 6</option>
+                                                                    <option value="opt7">Type 7</option>
+                                                                    <option value="opt8">Type 8</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="button-group">
+                                                <button type="button" class="btn btn-inverse"><i class="fa-solid fa-rotate-right"></i>초기화</button>
+                                                <button type="button" class="btn btn-primary">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-title">
+                                            <h5><strong>사이트 검색결과</strong></h5>
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-primary">과정정보 일괄등록</button>
+                                                <button type="button" class="btn btn-sm btn-primary">과정등록</button>
+                                                <button type="button" class="btn btn-sm btn-primary">엑셀다운로드</button>
+                                                <button type="button" class="btn btn-sm btn-primary">인정코드일괄수정</button>
+                                            </div>
+                                        </div>
+                                        <div class="card-block-small">
+                                            <div class="_jsGrid"></div>
+<script>
+    $(function() {
+        $("._jsGrid").each(function(index, element) {
+            $(element).jsGrid({
+                width: "100%",
+                height: "auto",
+                filtering: false,
+                editing: false,
+                sorting: true,
+                paging: false,
+                data: data,
+                fields: [
+                    { name: "Name", type: "text", width: 100 },
+                    { name: "Age", type: "number", width: 50, align: 'center' },
+                    { name: "Amount", type: "number", width: 40, align: 'center'},
+                    { name: "Content", type: "text", width: 100, align: 'left' }
+                ]
+            });
+        });
+    })
+
+    let data = [
+        {
+            Name: "Ada Lovelace",
+            Age: 36,
+            Amount: 3,
+            Content: 'Mango is cute',
+        },
+        {
+            Name: "Grace Hopper",
+            Age: 85,
+            Amount: 1,
+            Content: 'Mango is cute',
+        },
+        {
+            Name: "Alan Turing",
+            Age: 41,
+            Amount: 3,
+            Content: 'Mango is cute',
+        },
+        {
+            Name: "Miguel Alcubierre",
+            Age: 53,
+            Amount: 5,
+            Content: 'Mango is cute',
+        },
+        {
+            Name: "Ada Lovelace",
+            Age: 36,
+            Amount: 3,
+            Content: 'Mango is cute',
+        },
+        {
+            Name: "Grace Hopper",
+            Age: 85,
+            Amount: 1,
+            Content: 'Mango is cute',
+        },
+        {
+            Name: "Alan Turing",
+            Age: 41,
+            Amount: 3,
+            Content: 'Mango is cute',
+        },
+        {
+            Name: "Miguel Alcubierre",
+            Age: 53,
+            Amount: 5,
+            Content: 'Mango is cute',
+        },
+        {
+            Name: "Ada Lovelace",
+            Age: 36,
+            Amount: 3,
+            Content: 'Mango is cute',
+        },
+        {
+            Name: "Grace Hopper",
+            Age: 85,
+            Amount: 1,
+            Content: 'Mango is cute',
+        },
+        {
+            Name: "Alan Turing",
+            Age: 41,
+            Amount: 3,
+            Content: 'Mango is cute',
+        },
+        {
+            Name: "Miguel Alcubierre",
+            Age: 53,
+            Amount: 5,
+            Content: 'Mango is cute',
+        }
+    ];
+</script>
+                                            <div id="listPager" class="text-center jsgrid-pager-container" style="display: block;">
+    <div class="grid-total" style="float:left;padding:7px;"><span style="font-weight:600;">33</span>건</div>
+    <div class="jsgrid-pager">
+        <span class="jsgrid-pager-nav-button jsgrid-pager-nav-inactive-button"><a href="javascript:void(0);"><i class="fa-solid fa-angles-left"></i></a></span>
+        <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);"><i class="fa-solid fa-chevron-left"></i></a></span>
+        <span class="jsgrid-pager-page"><a href="javascript:void(0);">1</a></span>
+        <span class="jsgrid-pager-page jsgrid-pager-current-page">2</span>
+        <span class="jsgrid-pager-page"><a href="javascript:void(0);">3</a></span>
+        <span class="jsgrid-pager-page"><a href="javascript:void(0);">4</a></span>
+        <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);"><i class="fa-solid fa-chevron-right"></i></a></span>
+        <span class="jsgrid-pager-nav-button"><a href="javascript:void(0);"><i class="fa-solid fa-angles-right"></i></a></span>
+    </div>
+    <select class="sizeNum form-select form-control" style="width: auto; display: initial; font-size: 0.8rem;">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+        <option value="2000">2000</option>
+        <option value="3000">3000</option>
+        <option value="4000">4000</option>
+        <option value="5000">5000</option>
+        <option value="6000">6000</option>
+    </select>
+</div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="tab-content tabs">
+                                            <div class="tab-pane active" id="roleJudge" role="tabpanel">
+                                                <div class="card-tab">
+                                                    <ul class="nav nav-tabs" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" data-bs-toggle="tab" href="#tab1" role="tab"><strong>역할정의</strong></a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-bs-toggle="tab" href="#tab2" role="tab"><strong>사용자 매핑</strong></a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-bs-toggle="tab" href="#tab3" role="tab"><strong>메뉴권한설정</strong></a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-bs-toggle="tab" href="#tab4" role="tab"><strong>기관권한설정</strong></a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" data-bs-toggle="tab" href="#tab5" role="tab"><strong>지역권한설정</strong></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="tab-content tabs">
+                                                    <div class="tab-pane active" id="tab1" role="tabpanel">
+                                                        <div class="card-title">
+                                                            <h5><strong>기본정보</strong></h5>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group">
+                                                                    <div class="label"><strong>라벨</strong></div>
+                                                                    <div class="input-group">
+                                                                        <select class="js-example-basic-single" title="select">
+                                                                            <optgroup label="Developer">
+                                                                                <option value="AL">Alabama</option>
+                                                                                <option value="WY">Wyoming</option>
+                                                                            </optgroup>
+                                                                            <optgroup label="Designer">
+                                                                                <option value="WY">Peter</option>
+                                                                                <option value="WY">Hanry Die</option>
+                                                                                <option value="WY">John Doe</option>
+                                                                            </optgroup>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group required">
+                                                                    <label class="label" for="siteNm"><strong>라벨</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" id="siteNm" name="siteNm" value="" maxlength="20">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group required">
+                                                                    <div class="label"><strong>라벨</strong></div>
+                                                                    <div class="input-group">
+                                                                        <select name="" class="form-select" title="select">
+                                                                            <option value="" disabled="" selected="">-선택-</option>
+                                                                            <option value="opt1">Type 1</option>
+                                                                            <option value="opt2">Type 2</option>
+                                                                            <option value="opt3">Type 3</option>
+                                                                            <option value="opt4">Type 4</option>
+                                                                            <option value="opt5">Type 5</option>
+                                                                            <option value="opt6">Type 6</option>
+                                                                            <option value="opt7">Type 7</option>
+                                                                            <option value="opt8">Type 8</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group required">
+                                                                    <div class="label"><strong>라벨</strong></div>
+                                                                    <div class="input-group">
+                                                                        <select name="" class="form-select" title="select">
+                                                                            <option value="" disabled="" selected="">-선택-</option>
+                                                                            <option value="opt1">Type 1</option>
+                                                                            <option value="opt2">Type 2</option>
+                                                                            <option value="opt3">Type 3</option>
+                                                                            <option value="opt4">Type 4</option>
+                                                                            <option value="opt5">Type 5</option>
+                                                                            <option value="opt6">Type 6</option>
+                                                                            <option value="opt7">Type 7</option>
+                                                                            <option value="opt8">Type 8</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group required">
+                                                                    <label class="label"><strong>라벨</strong></label>
+                                                                    <div class="input-group">
+                                                                        <div class="form-inline-group">
+                                                                            <div class="switch-item">
+                                                                                <input type="hidden" class="js-single"/>
+                                                                                <input type="checkbox" class="js-single-small" name="siteOperationStatus" id="siteOperationStatus" checked/>
+                                                                                <label for="siteOperationStatus" class="v-middle">독서과정여부</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group">
+                                                                    <div class="label"><strong>라벨</strong></div>
+                                                                    <div class="input-group">
+                                                                        <div class="form-inline-group">
+                                                                            <div class="switch-item">
+                                                                                <input type="checkbox" class="js-single-small" name="notLoginFileDownloadStatus" id="categoryUse" checked/>
+                                                                                <label for="categoryUse" class="v-middle">분류사용</label>
+                                                                            </div>
+                                                                            <div class="switch-item">
+                                                                                <input type="checkbox" class="js-single-small" name="notLoginFileDownloadStatus" id="replyUse" checked/>
+                                                                                <label for="replyUse" class="v-middle">답글사용</label>
+                                                                            </div>
+                                                                            <div class="switch-item">
+                                                                                <input type="checkbox" class="js-single-small" name="notLoginFileDownloadStatus" id="commentUse" checked/>
+                                                                                <label for="commentUse" class="v-middle">댓글사용</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label class="label"><strong>라벨</strong></label>
+                                                                    <div class="input-group">
+                                                                        <div class="border-checkbox-section">
+                                                                            <div class="border-checkbox-group">
+                                                                                <input type="checkbox" class="border-checkbox" id="stlmmnCds1" name="stlmmnCds" value="220100" data-cd-name="가상 계좌" checked><label class="border-checkbox-label" for="stlmmnCds1">가상 계좌</label>
+                                                                            </div>
+                                                                            <div class="border-checkbox-group">
+                                                                                <input type="checkbox" class="border-checkbox" id="stlmmnCds2" name="stlmmnCds" value="220101" data-cd-name="무통장(KSA계좌)" disabled><label class="border-checkbox-label" for="stlmmnCds2">무통장(KSA계좌)</label>
+                                                                            </div>
+                                                                            <div class="border-checkbox-group">
+                                                                                <input type="checkbox" class="border-checkbox" id="stlmmnCds3" name="stlmmnCds" value="220102" data-cd-name="실시간 계좌이체" disabled checked><label class="border-checkbox-label" for="stlmmnCds3">실시간 계좌이체</label>
+                                                                            </div>
+                                                                            <div class="border-checkbox-group">
+                                                                                <input type="checkbox" class="border-checkbox" id="stlmmnCds4" name="stlmmnCds" value="220103" data-cd-name="신용카드"><label class="border-checkbox-label" for="stlmmnCds4">신용카드</label>
+                                                                            </div>
+                                                                            <div class="border-checkbox-group">
+                                                                                <input type="checkbox" class="border-checkbox" id="stlmmnCds5" name="stlmmnCds" value="220104" data-cd-name="현장카드결제"><label class="border-checkbox-label" for="stlmmnCds5">현장카드결제</label>
+                                                                            </div>
+                                                                            <div class="border-checkbox-group">
+                                                                                <input type="checkbox" class="border-checkbox" id="stlmmnCds6" name="stlmmnCds" value="220105" data-cd-name="무료수강권"><label class="border-checkbox-label" for="stlmmnCds6">무료수강권</label>
+                                                                            </div>
+                                                                            <div class="border-checkbox-group">
+                                                                                <input type="checkbox" class="border-checkbox " id="stlmmnCds7" name="stlmmnCds" value="220106" data-cd-name="무료"><label class=border-checkbox-label for="stlmmnCds7">무료</label>
+                                                                            </div>
+                                                                            <div class="border-checkbox-group">
+                                                                                <input type="checkbox" class="border-checkbox " id="stlmmnCds8" name="stlmmnCds" value="220107" data-cd-name="기업단체"><label class="border-checkbox-label" for="stlmmnCds8">기업단체</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label class="label"><strong>라벨</strong></label>
+                                                                    <div class="input-group">
+                                                                        <div class="form-inline-group">
+                                                                            <label class="form-radio">
+                                                                                <input type="radio" name="roleCategory" checked="checked">
+                                                                                <i class="helper"></i>총괄관리자
+                                                                            </label>
+                                                                            <label class="form-radio">
+                                                                                <input type="radio" name="roleCategory">
+                                                                                <i class="helper"></i>일반관리자
+                                                                            </label>
+                                                                            <label class="form-radio">
+                                                                                <input type="radio" name="roleCategory">
+                                                                                <i class="helper"></i>기관관리자
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group">
+                                                                    <div class="label"><strong>로고선택</strong></div>
+                                                                    <div class="input-group">
+                                                                        <div class="form-inline-group align-items-start">
+                                                                            <div class="logo-img">
+                                                                                <img src="../files/assets/images/avatar-2.jpg" alt="Generic placeholder image">
+                                                                            </div>
+                                                                            <div class="img-file">
+                                                                                <input type="file" class="form-control" id="input01">
+                                                                                <div class="form-tip">관리자:150px X 30px, 사용자:180px X 45px</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group required">
+                                                                    <div class="label"><strong>라벨</strong></div>
+                                                                    <div class="input-group">
+                                                                        <div class="input-group-dropdown">
+                                                                            <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="내용을 입력하세요.">
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn-count btn-minus disabled" disabled=""><i class="fa-solid fa-minus"></i></button>
+                                                                                <button type="button" class="btn-count btn-minus"><i class="fa-solid fa-plus"></i></button>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="input-group-dropdown">
+                                                                            <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="내용을 입력하세요.">
+                                                                            <div class="btn-group">
+                                                                                <button type="button" class="btn-count btn-minus"><i class="fa-solid fa-minus"></i></button>
+                                                                                <button type="button" class="btn-count btn-minus"><i class="fa-solid fa-plus"></i></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group">
+                                                                    <div class="label"><strong>라벨</strong></div>
+                                                                    <div class="input-group">
+                                                                        <div class="form-inline-group">
+                                                                            <div class="text-group">
+                                                                                <div class="input-group-text">
+                                                                                    <span>px</span>
+                                                                                </div>
+                                                                                <input type="text" class="form-control" title="text">
+                                                                            </div>
+                                                                            <div class="text-group">
+                                                                                <div class="input-group-text">
+                                                                                    <span>px</span>
+                                                                                </div>
+                                                                                <input type="text" class="form-control" title="text">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group">
+                                                                    <label class="label" for="fileMaxSize"><strong>파일최대크기</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" aria-label="Text input with dropdown button" name="fileMaxSize" id="fileMaxSize">
+                                                                        <div class="input-group-text">MB</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="label"><strong>첨부파일</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="file" class="form-control">
+                                                                        <div class="label-group">
+                                                                <span class="label">
+                                                                    sampleFile.pptx <a href="javascript:void(0)" class="close"><i class="fa-solid fa-xmark"></i></a>
+                                                                </span>
+                                                                            <span class="label">
+                                                                    sampleFile.pptx <a href="javascript:void(0)" class="close"><i class="fa-solid fa-xmark"></i></a>
+                                                                </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label class="label" for="fixNoticeEndDate"><strong>고정공지 종료일</strong></label>
+                                                                    <div class="input-group">
+                                                                        <input type="date" class="form-control" name="fixNoticeEndDate" id="fixNoticeEndDate" placeholder="Text Input Validation">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr class="divider">
+                                                        <div class="card-title">
+                                                            <h5><strong>교육정보</strong></h5>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group">
+                                                                    <label class="label"><strong>라벨</strong></label>
+                                                                    <div class="input-group">
+                                                                        <div id="crsImgFileContainer" class="file-uploader-wrapper">
+                                                                            <label class="btn btn-gray-blue" for="file">파일 선택</label>
+                                                                            <div class="file-uploader-list"><span class="no-file-msg">파일이 존재하지 않습니다.</span>
+                                                                                <div class="btn-group file-uploader-list-item">
+                                                                                    <button class="file-uploader-download-btn" type="button"><i class="icofont icofont-paper-clip"></i><span class="file-uploader-filename-param" style="text-transform: none;">logo@2x.png</span>
+                                                                                        (<span class="file-uploader-filesize-param">5.21 KB</span>)
+                                                                                    </button>
+                                                                                    <button class="file-uploader-delete-btn" type="button"><i class="icofont icofont-ui-delete"></i></button>
+                                                                                </div>
+                                                                                <div class="btn-group file-uploader-list-item">
+                                                                                    <button class="file-uploader-download-btn" type="button"><i class="icofont icofont-paper-clip"></i><span class="file-uploader-filename-param" style="text-transform: none;">logo@2x.png</span>
+                                                                                        (<span class="file-uploader-filesize-param">5.21 KB</span>)
+                                                                                    </button>
+                                                                                    <button class="file-uploader-delete-btn" type="button"><i class="icofont icofont-ui-delete"></i></button>
+                                                                                </div>
+                                                                                <div class="btn-group file-uploader-list-item">
+                                                                                    <button class="file-uploader-download-btn" type="button"><i class="icofont icofont-paper-clip"></i><span class="file-uploader-filename-param" style="text-transform: none;">logo@2x.png</span>
+                                                                                        (<span class="file-uploader-filesize-param">5.21 KB</span>)
+                                                                                    </button>
+                                                                                    <button class="file-uploader-delete-btn" type="button"><i class="icofont icofont-ui-delete"></i></button>
+                                                                                </div>
+                                                                            </div>
+                                                                            <input type="file" id="file" accept="*"><input type="hidden" name="crsImgFileid" value="3004"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group">
+                                                                    <label class="label"><strong>라벨</strong></label>
+                                                                    <div class="input-group">
+                                                                        <div class="file-uploader-wrapper">
+                                                                            <button type="button" class="btn btn-gray-blue">파일 선택</button>
+                                                                            <div class="file-uploader-list"><span class="no-file-msg" style="display: block">파일이 존재하지 않습니다.</span></div>
+                                                                            <input type="file" accept="*"><input type="hidden" name="crsImgFileid" value="3004"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group">
+                                                                    <div class="label"><strong>라벨</strong></div>
+                                                                    <div class="input-group">
+                                                                        <div class="category-group">
+                                                                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                                                            <button type="button" class="btn btn-gray-blue">검색</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group">
+                                                                    <div class="label"><strong>라벨</strong></div>
+                                                                    <div class="input-group">
+                                                                        <div class="category-group">
+                                                                            <select name="select" class="form-select" title="select">
+                                                                                <option value="opt1">primary</option>
+                                                                                <option value="opt2">Type 2</option>
+                                                                                <option value="opt3">Type 3</option>
+                                                                                <option value="opt4">Type 4</option>
+                                                                                <option value="opt5">Type 5</option>
+                                                                                <option value="opt6">Type 6</option>
+                                                                                <option value="opt7">Type 7</option>
+                                                                                <option value="opt8">Type 8</option>
+                                                                            </select>
+                                                                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group">
+                                                                    <div class="label"><strong>라벨</strong></div>
+                                                                    <div class="input-group">
+                                                                        <div class="category-group">
+                                                                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                                                                            <button type="button" class="btn btn-gray-blue">교재검색</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6">
+                                                                <div class="form-group">
+                                                                    <div class="label"><strong>내용전문가</strong></div>
+                                                                    <div class="input-group">
+                                                                        <div class="label-group-wrap">
+                                                                            <button type="button" class="btn btn-gray-blue">첨삭강사 검색</button>
+                                                                            <div class="label-group">
+                                                                                <span class="label">
+                                                                                    sampleFile.pptx <a href="javascript:void(0)" class="close"><i class="fa-solid fa-xmark"></i></a>
+                                                                                </span>
+                                                                                <span class="label">
+                                                                                    sampleFile.pptx <a href="javascript:void(0)" class="close"><i class="fa-solid fa-xmark"></i></a>
+                                                                                </span>
+                                                                                <span class="label">
+                                                                                    test.png <a href="javascript:void(0)" class="close"><i class="fa-solid fa-xmark"></i></a>
+                                                                                </span>
+                                                                                <span class="label">
+                                                                                    망고.pdf <a href="javascript:void(0)" class="close"><i class="fa-solid fa-xmark"></i></a>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-xl-6"></div>
+                                                            <div class="col-xl-6"></div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group required">
+                                                                    <label class="label" for="copyrights"><strong>라벨</strong></label>
+                                                                    <div class="input-group">
+                                                                        <textarea style="height: 120px" class="form-control" placeholder="Default textarea" id="copyrights" name="copyrights"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="tab2" role="tabpanel">2</div>
+                                                    <div class="tab-pane" id="tab3" role="tabpanel">3</div>
+                                                    <div class="tab-pane" id="tab4" role="tabpanel">4</div>
+                                                    <div class="tab-pane" id="tab5" role="tabpanel">5</div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane" id="userMapping" role="tabpanel">2</div>
+                                            <div class="tab-pane" id="menuAuthSetting" role="tabpanel">3</div>
+                                            <div class="tab-pane" id="agencyAuthSetting" role="tabpanel">4</div>
+                                            <div class="tab-pane" id="regionalPermissionSetting" role="tabpanel">5</div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th colspan="3" class="text-center v-middle col-bg">항목</th>
+                                                    <th class="text-center v-middle col-bg">반영비율(%)</th>
+                                                    <th class="text-center v-middle col-bg">항목별수료기준(100점기준)</th>
+                                                    <th class="text-center v-middle col-bg">총점수료기준</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr role="row">
+                                                    <td class="text-center" colspan="3">진도율</td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control form-control-sm score100" max="100" name="rtPrgsrt" id="rtPrgsrt" value="0" readonly="">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>%</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="number" name="crtrPrgsrt" id="crtrPrgsrt" class="form-control form-control-sm score100" max="100" value="0" readonly="">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>점 이상</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td rowspan="6">
+                                                        <div class="input-group">
+                                                            <input type="number" name="crtrTscr" id="crtrTscr" class="form-control form-control-sm score100" max="100" value="80">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>점 이상</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row">
+                                                    <td class="text-center" rowspan="5">평가</td>
+                                                    <td>형성평가</td>
+                                                    <td>
+                                                        <div class="switch-item">
+                                                            <input type="checkbox" class="js-single-small" name="notLoginFileDownloadStatus" id="categoryUse3" checked/>
+                                                            <label for="categoryUse3" class="v-middle">분류사용</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control form-control-sm score100" max="100" name="rtFmtvevl" id="rtFmtvevl" value="" readonly="">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>%</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control form-control-sm score100" max="100" name="crtrFmtvevl" id="crtrFmtvevl" value="" readonly="readonly">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>점 이상</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row">
+                                                    <td>진행평가</td>
+                                                    <td>
+                                                        <div class="switch-item">
+                                                            <input type="checkbox" class="js-single-small" name="notLoginFileDownloadStatus" id="categoryUse2" checked/>
+                                                            <label for="categoryUse2" class="v-middle">분류사용</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control form-control-sm score100" max="100" name="rtPrgrsevl" id="rtPrgrsevl" value="" readonly="">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>%</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control form-control-sm score100" max="100" name="crtrPrgrsevl" id="crtrPrgrsevl" value="" readonly="readonly">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>점 이상</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row">
+                                                    <td>최종평가</td>
+                                                    <td>
+                                                        <div class="switch-item">
+                                                            <input type="checkbox" class="js-single-small" name="notLoginFileDownloadStatus" id="categoryUse" checked/>
+                                                            <label for="categoryUse" class="v-middle">분류사용</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control form-control-sm score100" max="100" name="rtLastevl" id="rtLastevl" value="100">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>%</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control form-control-sm score100" max="100" name="crtrLastevl" id="crtrLastevl" value="80">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>점 이상</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row">
+                                                    <td>과제</td>
+                                                    <td>
+                                                        <div class="switch-item">
+                                                            <input type="checkbox" class="js-single-small" name="notLoginFileDownloadStatus" id="categoryUse" checked/>
+                                                            <label for="categoryUse" class="v-middle">분류사용</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control form-control-sm score100" max="100" name="rtTask" id="rtTask" value="" readonly="">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>%</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control form-control-sm score100" max="100" name="crtrTask" id="crtrTask" value="" readonly="readonly">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>점 이상</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr role="row">
+                                                    <td>토론</td>
+                                                    <td>
+                                                        <div class="switch-item">
+                                                            <input type="checkbox" class="js-single-small" name="notLoginFileDownloadStatus" id="categoryUse" checked/>
+                                                            <label for="categoryUse" class="v-middle">분류사용</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control form-control-sm score100" max="100" name="rtDscsn" id="rtDscsn" value="" readonly="">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>%</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control form-control-sm score100" max="100" name="crtrDscsn" id="crtrDscsn" value="" readonly="readonly">
+                                                            <div class="input-group-text bg-gray">
+                                                                <span>점 이상</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Page-body end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main-body end -->
+<!-- Warning Section Ends -->
+<!-- Required Jquery -->
+<script type="text/javascript" src="../files/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../js/common/jquery/jquery.form.js"></script>
+<script type="text/javascript" src="../js/common/jquery/jquery.layout-1.3.0.rc30.80.js"></script>
+<script type="text/javascript" src="../js/common/dynatree/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/common/dynatree/jquery.dynatree.js"></script>
+<script type="text/javascript" src="../js/common/dynatree/jquery.contextMenu-custom.js"></script>
+<script type="text/javascript" src="../js/common/fileDownload/jquery.fileDownload.js"></script>
+<script type="text/javascript" src="../js/common/common_mng.js"></script>
+<script type="text/javascript" src="../resource/js/common.js"></script>
+<script type="text/javascript" src="../js/common/common_util.js"></script>
+<script type="text/javascript" src="../js/common/common_searchForm.js"></script>
+<script type="text/javascript" src="../js/common/jsgrid-master/dist/jsgrid.min.js"></script>
+<script type="text/javascript" src="../js/common/jsgrid/jsgrid.helper.js"></script>
+<script type="text/javascript" src="../js/common/validator/jquery.validate.js"></script>
+<script type="text/javascript" src="../js/common/validator/jquery.validate.add.js"></script>
+<script type="text/javascript" src="../js/common/validator/jquery.validate.setting.js"></script>
+<script type="text/javascript" src="../js/mng/popup/commonPopup.js"></script>
+
+<script type="text/javascript" src="../files/bower_components/popper.js/dist/umd/popper.min.js"></script>
+<script type="text/javascript" src="../files/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- jquery slimscroll js -->
+<script type="text/javascript" src="../files/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+<!-- modernizr js -->
+<script type="text/javascript" src="../files/bower_components/modernizr/modernizr.js"></script>
+<script type="text/javascript" src="../files/bower_components/modernizr/feature-detects/css-scrollbars.js"></script>
+<!-- Accordion js -->
+<script type="text/javascript" src="../files/assets/pages/accordion/accordion.js"></script>
+<!-- i18next.min.js -->
+<script type="text/javascript" src="../files/bower_components/i18next/i18next.min.js"></script>
+<script type="text/javascript" src="../files/bower_components/i18next-xhr-backend/i18nextXHRBackend.min.js"></script>
+<script type="text/javascript" src="../files/bower_components/i18next-browser-languagedetector/i18nextBrowserLanguageDetector.min.js"></script>
+<script type="text/javascript" src="../files/bower_components/jquery-i18next/jquery-i18next.min.js"></script>
+<!-- Switch component js -->
+<script type="text/javascript" src="../files/bower_components/switchery/dist/switchery.min.js"></script>
+<!-- Select 2 js -->
+<script type="text/javascript" src="../files/bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- Multiselect js -->
+<script type="text/javascript" src="../files/bower_components/bootstrap-multiselect/dist/js/bootstrap-multiselect.js"></script>
+<script type="text/javascript" src="../files/bower_components/multiselect/js/jquery.multi-select.js"></script>
+<script type="text/javascript" src="../files/assets/js/jquery.quicksearch.js"></script>
+<!-- Custom js -->
+<script type="text/javascript" src="../files/assets/pages/advance-elements/swithces.js"></script>
+<script type="text/javascript" src="../files/assets/pages/advance-elements/select2-custom.js"></script>
+<script src="../files/assets/js/pcoded.min.js"></script>
+<script src="../files/assets/js/vartical-layout.min.js"></script>
+<script src="../files/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        setTimeout(() => {
+            var clickedMenu = $("#mCSB_1_container").children("ul").children(".active");
+            if(!clickedMenu || clickedMenu.length == 0) return false;
+            var offsetTop = (-Number($(clickedMenu).offset().top -250))
+            var menuzoneHeight = $("#mCSB_1_container").height();
+            $("#mCSB_1_container").css({"top":(offsetTop<-250)?offsetTop: 0});
+        }, 100);
+
+        $(' .pcoded-navigatio-lavel').on('click', function () {
+            if(!$(this).hasClass('active')) {
+                //1dpth 메뉴만 오픈 되고 나머지는 닫힘
+                //$(this).addClass('active').siblings('.pcoded-navigatio-lavel').removeClass('active');
+                //1dpth 메뉴만 열림,닫힘
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        })
+    })
+
+    function goMenu(url, cmkey){
+        jQuery("#form_menu").attr("action",url);
+        jQuery("#form_menu input[id=cmkey]").val(cmkey);
+        jQuery("#form_menu")[0].submit();
+    }
+    function goMenuNewWin(url, cmkey){
+        jQuery("#form_menu").attr("action",url);
+        jQuery("#form_menu").attr("target","_blank");
+        jQuery("#form_menu input[id=cmkey]").val(cmkey);
+        jQuery("#form_menu")[0].submit();
+        jQuery("#form_menu").attr("target","");
+    }
+    function goMenuPop(url, cmkey, width, height){
+        Center_Fixed_Popup2("", cmkey, width, height, "no");
+        jQuery("#form_menu").attr("action",url);
+        jQuery("#form_menu").attr("target",cmkey);
+        jQuery("#form_menu input[id=cmkey]").val(cmkey);
+        jQuery("#form_menu")[0].submit();
+        jQuery("#form_menu").attr("target","");
+    }
+</script>
+<script type="text/javascript" src="../files/assets/js/script.js"></script>
+</body>
+</html>
