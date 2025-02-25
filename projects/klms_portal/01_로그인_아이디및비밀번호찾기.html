@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KBRAIN 온라인연수원 | 아이디 및 비밀번호 찾기</title>
+    <meta name="keywords" content="KBRAIN 이러닝센터" />
+    <meta name="description" content="KBRAIN 이러닝센터" />
+    <meta name="author" content="KBRAIN 이러닝센터" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no" />
+    <script src="./resources/home/js/jquery.min.js"></script>
+    <script src="./resources/home/js/swiper.min.js"></script>
+    <script src="./resources/home/js/twbsPagination.js"></script>
+    <script src="./resources/home/js/aos.js"></script>
+    <script src="./resources/home/js/common.js" defer></script>
+    <link rel="stylesheet" href="./resources/home/css/swiper.min.css">
+    <link rel="stylesheet" href="./resources/home/css/aos.css">
+    <link rel="stylesheet" href="./resources/home/css/fontawesome.css">
+    <link href="./resources/home/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<main class="wrap">
+  <div class="container">
+    <!-- s contents -->
+    <div class="login-contents">
+      <div class="log-head">
+        <a class="img-logo" href="javascript:void(0)"><img src="resources/home/img/common/logo.png" alt="KBRAIN 온라인 연수원"></a>
+      </div>
+      <div class="log-content">
+        <div class="log-title">아이디 및 비밀번호 찾기</div>
+        <div class="log-desc">회원님의 아이디 찾기 결과입니다.</div>
+        <!-- 결과가 있을 경우 -->
+        <div class="log-result">
+          <div class="find-table">
+            <table>
+              <caption>아이디 및 비밀번호 찾기</caption>
+              <colgroup>
+                <col style="width: 15%" />
+                <col style="width: 25%" />
+                <col style="width: 60%" />
+              </colgroup>
+              <thead>
+              <tr>
+                <th>선택</th>
+                <th>아이디</th>
+                <th>이용 사이트</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <label for="radio1-1" class="form-radio">
+                    <input type="radio" id="radio1-1" name="radio1" checked />
+                    <span></span>
+                  </label>
+                </td>
+                <td>test111</td>
+                <td>한국표준협회(https://www.ksaedu.or.kr)</td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="radio1-2" class="form-radio">
+                    <input type="radio" id="radio1-2" name="radio1" />
+                    <span></span>
+                  </label>
+                </td>
+                <td>test111</td>
+                <td>한국표준협회(https://www.ksaedu.or.kr)</td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="radio1-3" class="form-radio">
+                    <input type="radio" id="radio1-3" name="radio1" />
+                    <span></span>
+                  </label>
+                </td>
+                <td>test111</td>
+                <td>한국표준협회(https://www.ksaedu.or.kr)</td>
+              </tr>
+              </tbody>
+            </table>
+            <script>
+              $(document).ready(function() {
+                $('.form-radio input[type="radio"]').change(function() {
+                  $('tbody tr').removeClass('highlight');
+                  $('.form-radio input[type="radio"]:checked').closest('tr').addClass('highlight');
+                });
+
+                $('.form-radio input[type="radio"]:checked').closest('tr').addClass('highlight');
+              });
+            </script>
+          </div>
+          <div class="button-group">
+            <button class="btn btn-border-gray" type="button">비밀번호 찾기</button>
+            <button class="btn" type="button">로그인</button>
+          </div>
+        </div>
+
+        <br/><br/><br/><br/>
+
+        <!-- 결과가 없을 경우 -->
+        <div class="log-result">
+          <div class="find-table">
+            <div class="empty">
+              <div class="img"><img src="resources/home/img/common/img-empty.png" alt="아이디 및 비밀번호 찾기"/></div>
+              <div class="desc">입력하신 정보로 가입된 아이디가 없습니다.</div>
+              <div class="button-group">
+                <button class="btn btn-border-gray" type="button">메인으로</button>
+                <button class="btn" type="button">회원가입</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="log-foot">
+        <div class="links">
+          <a class="lg" href="javascript:void(0)">개인정보처리방침</a>
+          <a href="javascript:void(0)">이용약관</a>
+        </div>
+        <div class="copyright">© K·BRAIN training institute. ALL RIGHTS RESERVED.</div>
+      </div>
+    </div>
+    <!-- e contents -->
+  </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KBRAIN 이러닝센터 퍼블리싱 리스트</title>
+    <script type="text/javascript" src="./pagelist/js/lib/jquery.js"></script>
+    <script type="text/javascript" src="./pagelist/js/lib/handlebars.js"></script>
+    <link rel="stylesheet" href="./pagelist/css/style.css">
+    <script type="text/javascript" src="./pagelist/data/data.js"></script>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+<div class="nav">
+    <a href="#" class="btn-open-depths">
+        <i class="fas fa-chevron-left"></i>
+    </a>
+</div>
+<div class="nav-depth-2">
+    <div class="title">
+        <h2>Page List</h2>
+        <a href="#" class="btn-control-all close"></a>
+    </div>
+    <div class="wrap-scroll"></div>
+</div>
+<div class="content">
+    <iframe src="./pagelist/html/home/home.html" frameborder="0"></iframe>
+</div>
+
+<script id="list-template" type="text/x-handlebars-template">
+    <div class="title-page-category">
+        <h3><span>{{title}}</span> <a class="icon-dropdown close" href="#"><i class="fas fa-angle-down"></i></a></h3>
+        <ul class="list-wrap close">
+            {{#each list}}
+                {{#fnStateClass}}
+                    <li>
+                        <a href="#" class="link " data-file="./{{url}}.html">
+                            <span class="state {{stateClass}}">{{state}}</span><span class="depths-2-filename"> {{page}}</span>
+                            <span class="tooltip">{{url}}.html</span>
+                        </a>
+                        <a class="fas fa-external-link-alt"
+                           href="./{{url}}.html" target="_blank"
+                           title="새창으로 보기">
+                        </a>
+                    </li>
+                {{else}}
+                    <li>
+                <span class="unlink " data-file="">
+                    <span class="state {{stateClass}}">{{state}}</span><span class="depths-2-filename"> {{page}}</span>
+                    <span class="tooltip">{{url}}.html</span>
+                </span>
+                    </li>
+                {{/fnStateClass}}
+            {{/each}}
+        </ul>
+    </div>
+</script>
+<script>
+  Handlebars.registerHelper('fnStateClass', function (options) {
+    // console.log(options)
+    if (options.data.root.list[options.data.index].stateClass == 'waiting') {
+      return options.inverse(this)
+    } else {
+      return options.fn(this)
+    }
+  })
+
+  function countState() {
+    for(let index in data) {
+      // console.log(data[index]);
+      let list = data[index].list;
+      let countWaiting = 0;
+      let countWorking = 0;
+      let countComplete = 0;
+      for(let key in list) {
+        // console.log(list[key])
+        if (list[key].stateClass == "waiting") {
+          countWaiting++;
+        }
+        if (list[key].stateClass == "working") {
+          countWorking++;
+        }
+        if (list[key].stateClass == "complete") {
+          countComplete++;
+        }
+      }
+      data[index].countWaiting = countWaiting;
+      data[index].countWorking = countWorking;
+      data[index].countComplete = countComplete;
+      data[index].countCompletePercent =  Math.floor (countComplete/ (countWaiting+countWorking+countComplete) *100)
+    }
+
+  countState();  }
+
+
+  let source = $('#list-template').html();
+  let template = Handlebars.compile(source);
+  $('.wrap-scroll')
+      .append(template(data.common))
+      .append(template(data.page01))
+      .append(template(data.page02))
+      .append(template(data.page03))
+      .append(template(data.page04))
+      .append(template(data.page05))
+      .append(template(data.page06))
+      .append(template(data.page07))
+</script>
+<script>
+  $('.link').on('click', function () {
+    let filename = $(this).data('file');
+    $('iframe').attr('src', filename);
+  })
+
+  $('.title-page-category .link').on('click', function () {
+    $('.title-page-category .link').removeClass('focus')
+    if ($(this).hasClass('focus')) {
+      $(this).removeClass('focus');
+    } else {
+      $(this).addClass('focus');
+    }
+  })
+
+  $('.nav .btn-open-depths').on('click', function () {
+    if ($(this).hasClass('close')) {
+      $(this).removeClass('close');
+      $(this).children('i').attr('class', 'fas fa-chevron-left');
+    } else {
+      $(this).addClass('close');
+      $(this).children('i').attr('class', 'fas fa-chevron-right');
+    }
+    if ($('.nav-depth-2').hasClass('close')) {
+      $('.nav-depth-2').removeClass('close');
+    } else {
+      $('.nav-depth-2').addClass('close');
+    }
+  })
+
+  $('.icon-dropdown').on('click', function () {
+    if ($(this).parent().siblings('.list-wrap').hasClass('close')) {
+      $(this).removeClass('close')
+      $(this).children('i').attr('class', 'fas fa-angle-up')
+      $(this).parent().siblings('.list-wrap').removeClass('close')
+    } else {
+      $(this).addClass('close')
+      $(this).children('i').attr('class', 'fas fa-angle-down')
+      $(this).parent().siblings('.list-wrap').addClass('close')
+    }
+  })
+
+  $('.btn-control-all').on('click',function (){
+    if($(this).hasClass('close')) {
+      // 열렸을 때
+      $(this).removeClass('close');
+      $('.title-page-category .icon-dropdown').removeClass('close');
+      $('.title-page-category .fas').addClass('fa-angle-up').removeClass('fa-angle-down');
+      $('.list-wrap').removeClass('close');
+    } else {
+      // 닫혔을 때
+      $(this).addClass('close');
+      $('.title-page-category .icon-dropdown').addClass('close');
+      $('.title-page-category .fas').addClass('fa-angle-down').removeClass('fa-angle-up');
+      $('.list-wrap').addClass('close');
+    }
+  })
+
+  let sum = 0;
+  let comp = 0;
+
+  $.each(data, function (key, data) {
+    // console.log(data.list.length);
+    sum = sum + data.list.length
+    $.each(data.list, function (key, data) {
+      if (data.stateClass === 'complete') {
+        comp++
+      }
+    })
+  })
+
+  // sum = sum - 20;
+  let total = (comp / sum) * 100;
+  $('.nav-depth-2 .title h2').html('KBRAIN 이러닝센터')
+  // .html('페이지 목록 : 완료' + total.toFixed(0) + '%')
+
+  // 모두 열기가 default일 경우
+  $('.btn-control-all').trigger('click')
+</script>
+</body>
+</html>
