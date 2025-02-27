@@ -1,0 +1,164 @@
+/* css version v.1.0 */
+/*
+  variables
+*/
+.ui-form .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.ui-form .row + .row {
+  margin-top: 20px;
+}
+.ui-form .row .col {
+  flex: 1;
+  width: calc(25% - 10px);
+}
+.ui-form .row .col.col-half {
+  display: flex;
+  gap: 20px;
+}
+.ui-form .row .col.col-half .form-group {
+  flex: 1;
+  width: calc(50% - 10px);
+}
+.ui-form .row .col.col-half .form-group + .form-group {
+  margin-top: 0;
+}
+.ui-form .row.row-half .col {
+  width: calc(50% - 10px);
+  flex: none;
+}
+.ui-form .form-radio-group, .ui-form .form-check-group {
+  display: flex;
+  height: 38px;
+  align-items: center;
+  gap: 20px;
+}
+.ui-form .form-switch {
+  display: flex;
+}
+.ui-form .input-box {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  gap: 5px;
+}
+.ui-form .input-box + .input-box {
+  margin-top: 10px;
+}
+.ui-form .input-box .form-input {
+  flex: 1;
+}
+.ui-form .input-box .form-select {
+  flex: 1;
+}
+.ui-form .input-box .btns {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.ui-form .input-box .btns .btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 1280px) {
+  .ui-form .row {
+    gap: 20px 10px;
+  }
+  .ui-form .row .col {
+    flex: none;
+    width: 100%;
+  }
+  .ui-form .row.row-half {
+    flex-direction: column;
+  }
+  .ui-form .row.row-half .col {
+    width: 100%;
+    flex: 1;
+  }
+  .ui-form .form-radio-group, .ui-form .form-check-group {
+    height: 48px;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .ui-form .row .col {
+    width: 100%;
+  }
+}
+.ui-grid {
+  display: grid;
+  grid-gap: 10px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.ui-grid .form-radio-group, .ui-grid .form-check-group {
+  display: flex;
+  height: 38px;
+  align-items: center;
+  gap: 20px;
+}
+.ui-grid .input-box {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  gap: 5px;
+}
+.ui-grid .form-switch {
+  display: flex;
+}
+.ui-grid .input-box {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  gap: 5px;
+}
+.ui-grid .input-box + .input-box {
+  margin-top: 10px;
+}
+.ui-grid .input-box .form-input {
+  flex: 1;
+}
+.ui-grid .input-box .form-select {
+  flex: 1;
+}
+.ui-grid .input-box .btns {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.ui-grid .input-box .btns .btn {
+  white-space: nowrap;
+}
+.ui-grid .cell-half {
+  grid-column: span 2;
+}
+.ui-grid .email-group {
+  width: 100%;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.ui-grid .email-group .form-input, .ui-grid .email-group .form-select {
+  flex: 1;
+}
+.ui-grid .form-inline-group {
+  gap: 4px;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.btn-wrap {
+  margin-top: 20px;
+  border-top: 1px solid #EEE;
+  padding-top: 20px;
+}
+
+@media (max-width: 1180px) {
+  .ui-grid {
+    grid-template-columns: 1fr;
+  }
+  .ui-grid .cell-half {
+    grid-column: span 1;
+  }
+}

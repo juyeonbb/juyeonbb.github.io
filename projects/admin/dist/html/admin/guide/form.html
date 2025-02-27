@@ -103,7 +103,7 @@
         <br/>
         <br/>
 
-        <div class="form-inline">
+        <div class="form-inline-group">
             <label for="radio4" class="form-radio">
                 <input type="radio" id="radio4" name="group" checked />
                 <span>사용</span>
@@ -142,7 +142,7 @@
         <br/>
         <br/>
 
-        <div class="form-inline">
+        <div class="form-inline-group">
             <label for="checkbox4" class="form-check">
                 <input type="checkbox" id="checkbox4" name="checkGroup" checked/>
                 <span>체크</span>
@@ -193,7 +193,7 @@
 
         <div class="form-file-list">
             <input class="input-file" id="file" type="file" />
-            <label class="btn btn-border-grey" for="file">파일선택</label>
+            <label class="btn btn-border-gray" for="file">파일선택</label>
             <ul class="file-list">
                 <li class="item"><span class="name">file.img</span><button class="btn-delete" type="button"><i class="fa-solid fa-xmark"></i></button></li>
                 <li class="item"><span class="name">file.pdf</span><button class="btn-delete" type="button"><i class="fa-solid fa-xmark"></i></button></li>
@@ -221,37 +221,39 @@
             <label class="label">파일 첨부</label>
             <div class="form-file">
                 <input class="form-input" id="file2" type="file">
-                <label class="btn btn-border-grey" for="file2">파일선택</label>
-            </div>
-            <br/>
-            <div class="form-file disabled">
-                <input class="form-input" id="file3" type="file" disabled="disabled" />
-                <label class="btn btn-border-grey" for="file3">파일선택</label>
+                <label class="btn btn-border-gray" for="file2">파일선택</label>
             </div>
         </div>
 
         <br/>
+
+        <div class="form-group">
+            <div class="form-file disabled">
+                <input class="form-input" id="file3" type="file" disabled="disabled" />
+                <label class="btn btn-border-gray" for="file3">파일선택</label>
+            </div>
+        </div>
+
         <br/>
 
         <div class="form-unit">
             <input type="text" class="form-input" title="text">
             <span class="unit">%</span>
         </div>
+
         <br/>
+
         <div class="form-unit">
             <input type="text" class="form-input" title="text">
             <span class="unit">점 이상</span>
         </div>
 
         <br/>
-        <br/>
 
         <div class="form-keyword">
             <select class="form-select" title="select">
                 <option value="제목순">제목순</option>
-                <option value="제목순">제목순</option>
-                <option value="제목순">제목순</option>
-                <option value="제목순">제목순</option>
+                <option value="내용순">내용순</option>
             </select>
             <input class="form-input" type="text" title="text" placeholder="키워드를 입력해주세요."/>
         </div>
