@@ -15,33 +15,13 @@ data.common = {
     },
     {
       stateClass: 'complete',
-      url: '00_tabs',
-      page: 'TABS'
-    },
-    {
-      stateClass: 'complete',
       url: '00_tables',
       page: 'TABLE'
     },
     {
       stateClass: 'complete',
-      url: '00_pagination',
-      page: 'PAGINATION'
-    },
-    {
-      stateClass: 'complete',
-      url: '00_badges',
-      page: '00_badges'
-    },
-    {
-      stateClass: 'complete',
       url: '00_popup',
       page: 'POPUP'
-    },
-    {
-      stateClass: 'complete',
-      url: '01_이용약관_팝업',
-      page: '01_이용약관_팝업'
     },
   ]
 }
@@ -51,284 +31,163 @@ data.page01 = {
   list: [
     {
       stateClass: 'complete',
-      url: '00_메인',
-      page: '00_메인'
+      url: '01_홈',
+      page: '01_홈'
     },
   ]
 }
 
 data.page02 = {
-  title: '로그인',
+  title: '회원가입/로그인',
   list: [
     {
       stateClass: 'complete',
-      url: '01_로그인',
-      page: '01_로그인'
+      url: '02_회원가입_약관동의',
+      page: '02_회원가입_약관동의'
     },
     {
       stateClass: 'complete',
-      url: '01_로그인_휴면계정안내',
-      page: '01_로그인_휴면계정안내'
+      url: '02_회원가입_이메일인증',
+      page: '02_회원가입_이메일인증'
     },
     {
       stateClass: 'complete',
-      url: '01_로그인_아이디및비밀번호찾기_인증',
-      page: '01_로그인_아이디및비밀번호찾기_인증'
+      url: '02_회원가입_회원정보',
+      page: '02_회원가입_회원정보'
     },
     {
       stateClass: 'complete',
-      url: '01_로그인_아이디및비밀번호찾기',
-      page: '01_로그인_아이디및비밀번호찾기'
+      url: '02_이용약관_팝업',
+      page: '02_이용약관_팝업'
     },
     {
       stateClass: 'complete',
-      url: '01_로그인_비밀번호변경하기',
-      page: '01_로그인_비밀번호변경하기'
+      url: '02_개인정보수집이용제공동의_팝업',
+      page: '02_개인정보수집이용제공동의_팝업'
     },
     {
       stateClass: 'complete',
-      url: '01_로그인_약관동의및개인정보등록',
-      page: '01_로그인_약관동의및개인정보등록'
+      url: '02_개인정보제3자제공동의_팝업',
+      page: '02_개인정보제3자제공동의_팝업'
+    },
+    {
+      stateClass: 'complete',
+      url: '02_비밀번호변경하기',
+      page: '02_비밀번호변경하기'
+    },
+    {
+      stateClass: 'complete',
+      url: '02_비밀번호찾기',
+      page: '02_비밀번호찾기'
+    },
+    {
+      stateClass: 'complete',
+      url: '02_아이디찾기',
+      page: '02_아이디찾기'
+    },
+    {
+      stateClass: 'complete',
+      url: '02_아이디찾기2',
+      page: '02_아이디찾기2'
+    },
+    {
+      stateClass: 'complete',
+      url: '02_회원탈퇴',
+      page: '02_회원탈퇴'
+    },
+    {
+      stateClass: 'complete',
+      url: '02_이용약관',
+      page: '02_이용약관'
+    },
+    {
+      stateClass: 'complete',
+      url: '02_개인정보처리방침',
+      page: '02_개인정보처리방침'
     },
   ]
 }
 
 data.page03 = {
-  title: '회원가입',
+  title: '교육수강신청',
   list: [
     {
       stateClass: 'complete',
-      url: '01_회원가입_약관동의',
-      page: '02_회원가입_약관동의'
+      url: '03_강의리스트',
+      page: '03_강의리스트'
     },
     {
       stateClass: 'complete',
-      url: '01_회원가입_본인인증',
-      page: '01_회원가입_본인인증'
+      url: '03_강좌상세',
+      page: '03_강좌상세'
     },
     {
       stateClass: 'complete',
-      url: '01_회원가입_회원정보입력',
-      page: '01_회원가입_회원정보입력'
-    },
-    {
-      stateClass: 'complete',
-      url: '01_회원가입_가입완료',
-      page: '01_회원가입_가입완료'
-    },
-  ]
-}
-
-data.page04 = {
-  title: '강의리스트/수강신청',
-  list: [
-    {
-      stateClass: 'complete',
-      url: '03_강의리스트_썸네일형',
-      page: '03_강의리스트_썸네일형'
-    },
-    {
-      stateClass: 'complete',
-      url: '03_강의리스트_리스트형',
-      page: '03_강의리스트_리스트형'
-    },
-    {
-      stateClass: 'complete',
-      url: '03_강의리스트_상세',
-      page: '03_강의리스트_상세'
-    },
-    {
-      stateClass: 'complete',
-      url: '03_수강신청',
-      page: '03_수강신청'
-    },
-    {
-      stateClass: 'complete',
-      url: '03_수강신청_완료',
-      page: '03_수강신청_완료'
-    },
-  ]
-}
-
-data.page05 = {
-  title: '마이페이지',
-  list: [
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_홈',
-      page: '04_마이페이지_홈'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_학습현황',
-      page: '04_마이페이지_학습현황'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_본인인증_팝업',
-      page: '04_마이페이지_본인인증_팝업'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_휴대폰인증_팝업',
-      page: '04_마이페이지_휴대폰인증_팝업'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_결제내역',
-      page: '04_마이페이지_결제내역'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_환불정보입력_팝업',
-      page: '04_마이페이지_환불정보입력_팝업'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_관심과정',
-      page: '04_마이페이지_관심과정'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_설문내역',
-      page: '04_마이페이지_설문내역'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_설문조사_팝업',
-      page: '04_마이페이지_설문조사_팝업'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_문의내역',
-      page: '04_마이페이지_문의내역'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_문의하기',
-      page: '04_마이페이지_문의하기'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_문의내역_상세',
-      page: '04_마이페이지_문의내역_상세'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_내정보관리',
-      page: '04_마이페이지_내정보관리'
-    },
-    {
-      stateClass: 'complete',
-      url: '04_마이페이지_내정보관리2',
-      page: '04_마이페이지_내정보관리2'
+      url: '03_수강신청완료_팝업',
+      page: '03_수강신청완료_팝업'
     },
   ]
 }
 
 data.page06 = {
-  title: '고객지원',
+  title: '교육안내',
   list: [
     {
       stateClass: 'complete',
-      url: '05_고객지원_공지사항',
-      page: '05_고객지원_공지사항'
-    },
-    {
-      stateClass: 'complete',
-      url: '05_고객지원_공지사항_보기',
-      page: '05_고객지원_공지사항_보기'
+      url: '03_교육사업소개',
+      page: '03_교육사업소개'
     },
   ]
 }
 
-data.page07 = {
-  title: '강의실',
+data.page04 = {
+  title: '나의강의실',
   list: [
     {
       stateClass: 'complete',
-      url: '06_강의실_홈',
-      page: '06_강의실_홈'
+      url: '05_학습현황',
+      page: '05_학습현황'
     },
     {
       stateClass: 'complete',
-      url: '06_강의실_과정정보',
-      page: '06_강의실_과정정보'
+      url: '02_개인정보관리',
+      page: '02_개인정보관리'
     },
     {
       stateClass: 'complete',
-      url: '06_강의실_진도',
-      page: '06_강의실_진도'
+      url: '02_회원탈퇴',
+      page: '02_회원탈퇴'
+    },
+  ]
+}
+
+data.page05= {
+  title: '소통공간',
+  list: [
+    {
+      stateClass: 'complete',
+      url: '04_공지사항',
+      page: '공지사항/자료실'
     },
     {
       stateClass: 'complete',
-      url: '06_강의실_본인인증_팝업',
-      page: '06_강의실_본인인증_팝업'
+      url: '04_공지사항_보기',
+      page: '공지사항/자료실 (상세)'
     },
     {
       stateClass: 'complete',
-      url: '06_강의실_시험',
-      page: '06_강의실_시험'
+      url: '04_자주묻는질문',
+      page: '자주묻는 질문'
     },
     {
       stateClass: 'complete',
-      url: '06_강의실_시험응시_팝업',
-      page: '06_강의실_시험응시_팝업'
+      url: '04_문의',
+      page: '1:1 문의 (목록)'
     },
     {
       stateClass: 'complete',
-      url: '06_강의실_시험_팝업',
-      page: '06_강의실_시험_팝업'
-    },
-    {
-      stateClass: 'complete',
-      url: '06_강의실_시험_결과확인_팝업',
-      page: '06_강의실_시험_결과확인_팝업'
-    },
-    {
-      stateClass: 'complete',
-      url: '06_강의실_과제',
-      page: '06_강의실_과제'
-    },
-    {
-      stateClass: 'complete',
-      url: '06_강의실_과제_팝업',
-      page: '06_강의실_과제_팝업'
-    },
-    {
-      stateClass: 'complete',
-      url: '06_강의실_과제확인_팝업',
-      page: '06_강의실_과제확인_팝업'
-    },
-    {
-      stateClass: 'complete',
-      url: '06_강의실_유의사항_팝업',
-      page: '06_강의실_유의사항_팝업'
-    },
-    {
-      stateClass: 'complete',
-      url: '06_강의실_설문',
-      page: '06_강의실_설문'
-    },
-    {
-      stateClass: 'complete',
-      url: '06_강의실_성적확인',
-      page: '06_강의실_성적확인'
-    },
-    {
-      stateClass: 'complete',
-      url: '06_강의실_과정게시판',
-      page: '06_강의실_과정게시판'
-    },
-    {
-      stateClass: 'complete',
-      url: '06_강의실_학습문의',
-      page: '06_강의실_학습문의'
-    },
-    {
-      stateClass: 'complete',
-      url: '06_강의실_학습문의_보기',
-      page: '06_강의실_학습문의_보기'
+      url: '04_문의보기',
+      page: '1:1 문의 (상세)'
     },
   ]
 }

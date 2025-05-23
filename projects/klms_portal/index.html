@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KBRAIN 이러닝센터 퍼블리싱 리스트</title>
+    <title>이러닝센터 퍼블리싱 리스트</title>
     <script type="text/javascript" src="./pagelist/js/lib/jquery.js"></script>
     <script type="text/javascript" src="./pagelist/js/lib/handlebars.js"></script>
     <link rel="stylesheet" href="./pagelist/css/style.css">
@@ -90,9 +90,9 @@
       data[index].countComplete = countComplete;
       data[index].countCompletePercent =  Math.floor (countComplete/ (countWaiting+countWorking+countComplete) *100)
     }
+  }
 
-  countState();  }
-
+  countState();
 
   let source = $('#list-template').html();
   let template = Handlebars.compile(source);
@@ -100,11 +100,10 @@
       .append(template(data.common))
       .append(template(data.page01))
       .append(template(data.page02))
+      .append(template(data.page06))
       .append(template(data.page03))
       .append(template(data.page04))
       .append(template(data.page05))
-      .append(template(data.page06))
-      .append(template(data.page07))
 </script>
 <script>
   $('.link').on('click', function () {
@@ -179,7 +178,7 @@
 
   // sum = sum - 20;
   let total = (comp / sum) * 100;
-  $('.nav-depth-2 .title h2').html('KBRAIN 이러닝센터')
+  $('.nav-depth-2 .title h2').html('이러닝센터')
   // .html('페이지 목록 : 완료' + total.toFixed(0) + '%')
 
   // 모두 열기가 default일 경우
