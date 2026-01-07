@@ -4317,7 +4317,7 @@ div.pswp__img--placeholder,
   gap: 20px;
 }
 .pswp-gallery a {
-  width: calc(50% - 10px);
+  max-width: 200px;
 }
 .pswp-gallery img {
   display: block;
