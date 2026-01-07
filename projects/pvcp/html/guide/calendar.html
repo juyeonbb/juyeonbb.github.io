@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/swiper.js"></script>
+    <script src="../../js/twbsPagination.js"></script>
+    <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <script src="../../js/popper.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="shortcut icon" href="../../images/common/favicon.ico">
+    <title>보훈문화종합포털</title>
+</head>
+<body>
+<div class="guide-container">
+    <div class="guide-content">
+        <div class="guide-heading">Calendar</div>
+        <div id="calendar"></div>
+    </div>
+</div>
+<script>
+    var isMobile = window.innerWidth < 768;
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            initialDate: '2025-10-01',
+            locale: 'ko',
+            handleWindowResize: true,
+            windowResizeDelay: 100,
+            windowResize: function(arg) {
+                if (window.innerWidth < 768) {
+                    calendar.setOption('height', 'auto');
+                    calendar.setOption('aspectRatio', 0.8);
+                } else {
+                    calendar.setOption('height', 800);
+                    calendar.setOption('aspectRatio', 1.35);
+                }
+            },
+            height: isMobile ? 'auto' : 800,
+            aspectRatio: isMobile ? 0.8 : 1.35,
+            headerToolbar: {
+                left: 'prev',
+                center: 'title',
+                right: 'next'
+            },
+            titleFormat: function(date) {
+                const year = date.date.year;
+                const month = (date.date.month + 1).toString().padStart(2, '0');
+                return `${year}. ${month}`;
+            },
+            dayCellContent: function(info) {
+                var number = info.dayNumberText.replace('일', '');
+                if (number.length < 2) {
+                    number = '0' + number;
+                }
+                return number;
+            },
+            dayHeaderFormat: { weekday: 'short' },
+            fixedWeekCount: false,
+            events: [
+                { title: '개천절', start: '2025-10-03', color: 'transparent', textColor: '#ff0000' },
+                { title: '추석', start: '2025-10-07', color: 'transparent', textColor: '#ff0000' },
+                {
+                    title: '호국보훈의달',
+                    start: '2025-10-11',
+                    url: 'https://www.example.com/event1',
+                    className: 'custom-event'
+                },
+                {
+                    start: '2025-10-24',
+                    display: 'background',
+                    backgroundColor: '#e9ebf5'
+                },
+                {
+                    title: '호국체험 기념',
+                    start: '2025-10-24',
+                    url: 'https://www.example.com/event1',
+                    className: 'custom-event'
+                },
+                {
+                    title: '호국보훈의달',
+                    start: '2025-10-15',
+                    url: 'https://www.example.com/event1',
+                    className: 'custom-event'
+                },
+                {
+                    title: '호국체육 기념',
+                    start: '2025-10-15',
+                    url: 'https://www.example.com/event1',
+                    className: 'custom-event'
+                },
+                {
+                    title: '호국보훈의달',
+                    start: '2025-10-24',
+                    url: 'https://www.example.com/event2',
+                    className: 'custom-event'
+                },
+                {
+                    title: '❤️',
+                    start: '2025-10-25',
+                    className: 'custom-event'
+                }
+            ],
+            dayMaxEvents: true,
+        });
+        calendar.render();
+    });
+</script>
+</body>
+</html>
