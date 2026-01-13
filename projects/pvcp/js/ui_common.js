@@ -6,14 +6,35 @@ let front = (function () {
     let $dim, $body, lastFocusedElement = null;
 
     event.commonHandlers = function () {
+        // 접근성 Events
         $(document).on('keydown', '.form-radio, .form-check', handleFormAccessibility); // 웹접근성 - INPUT (RADIO & CHECKBOX)
+
         $(document).on('click', '._skip a', skipNav); // SKIP NAV
 
-        $(document).on('click', '._btnLike', toggleLike); // 좋아요 버튼
+        $(document).on('click', '.section-filter[role="radiogroup"] [role="radio"]', function (e) {
+            const $radio = $(e.currentTarget);
+            if ($radio.attr('aria-checked') === 'true') return;
 
-        initTooltip(); // tooltip
+            const $group = $radio.closest('.section-filter[role="radiogroup"]');
 
-        // footer - 관련사이트
+            $group.find('[role="radio"]')
+                .attr('aria-checked', 'false')
+                .closest('.item')
+                .removeClass('on');
+
+            $radio
+                .attr('aria-checked', 'true')
+                .closest('.item')
+                .addClass('on');
+        });
+
+        // 좋아요 버튼
+        $(document).on('click', '._btnLike', toggleLike);
+
+        // tooltip
+        initTooltip();
+
+        // footer (관련사이트)
         $('._footerDropdownButton').on('click', function (e) {
             e.stopPropagation();
             $('._footerDropdown').addClass('active');

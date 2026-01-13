@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/swiper.js"></script>
+    <script src="../../js/twbsPagination.js"></script>
+    <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <script src="../../js/popper.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="shortcut icon" href="../../images/common/favicon.ico">
+    <title>보훈문화종합포털</title>
+</head>
+<body>
+<div class="guide-container">
+    <div class="guide-content">
+        <div class="guide-heading">board</div>
+        <div class="board">
+            <div class="board-head">
+                <div class="total">총 <span class="num">60</span>건</div>
+                <div class="sorting">
+                    <div class="form-group">
+                        <select class="form-select" name="select" title="order">
+                            <option value="전체" disabled="" selected="">전체</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <div class="form-search">
+                            <input type="text" title="search" class="form-input" placeholder="검색어를 입력하세요." />
+                            <button type="button" class="btn-search"><i class="ico ico-search"></i><span>검색하기</span></button>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="btn btn-border-black with-icon"><i class="ico ico-refresh"></i><span class="font-weight-bold">초기화</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="board-body">
+                <div class="table table-notice">
+                    <table>
+                        <caption>공지사항</caption>
+                        <colgroup>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th class="col-title"><span>No</span></th>
+                            <th class="col-title"><span>제목</span></th>
+                            <th class="col-title"><span>첨부</span></th>
+                            <th class="col-title"><span>작성자</span></th>
+                            <th class="col-title"><span>등록일</span></th>
+                            <th class="col-title"><span>조회수</span></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="with-icon-row highlight">
+                            <td><i class="ico ico-speaker"></i><span class="sr-only">공지사항</span></td>
+                            <td class="align-left">
+                                <a href="javascript:void(0)" class="ellipse-target color-darkblue font-weight-medium">간호연수교육원 주요사업 및 시설소개</a>
+                                <i class="ico ico-new"></i><span class="sr-only">NEW</span>
+                            </td>
+                            <td>
+                                <a class="btn-file" href="javascript:void(0)"><i class="ico ico-file"></i><span class="sr-only">첨부파일 있음</span></a>
+                            </td>
+                            <td><span>대한간호협회</span></td>
+                            <td><span>2022-10-20</span></td>
+                            <td><span>1000</span></td>
+                        </tr>
+                        <tr class="with-icon-row highlight">
+                            <td><i class="ico ico-speaker"></i><span class="sr-only">공지사항</span></td>
+                            <td class="align-left">
+                                <a href="javascript:void(0)" class="ellipse-target color-darkblue font-weight-medium">면허미신고자 행정처분 안내</a>
+                                <i class="ico ico-new"></i><span class="sr-only">NEW</span>
+                            </td>
+                            <td>
+                                <a class="btn-file" href="javascript:void(0)"><i class="ico ico-file"></i><span class="sr-only">첨부파일 있음</span></a>
+                            </td>
+                            <td><span>대한간호협회</span></td>
+                            <td><span>2022-10-20</span></td>
+                            <td><span>1000</span></td>
+                        </tr>
+                        <tr class="with-icon-row highlight">
+                            <td><i class="ico ico-speaker"></i><span class="sr-only">공지사항</span></td>
+                            <td class="align-left">
+                                <a href="javascript:void(0)" class="ellipse-target color-darkblue font-weight-medium">대한간호협회 온라인 보수교육 프로그램 안내(25. 1. 31. 기준)</a>
+                            </td>
+                            <td></td>
+                            <td><span>대한간호협회</span></td>
+                            <td><span>2022-10-20</span></td>
+                            <td><span>1000</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>7</span></td>
+                            <td class="align-left">
+                                <a href="javascript:void(0)" class="ellipse-target color-black font-weight-medium">2025년 4월 시뮬레이션을 활용한 보수교육 개최 안내</a>
+                            </td>
+                            <td>
+                                <a class="btn-file" href="javascript:void(0)"><i class="ico ico-file"></i><span class="sr-only">첨부파일 있음</span></a>
+                            </td>
+                            <td><span>대한간호협회</span></td>
+                            <td><span>2022-10-20</span></td>
+                            <td><span>1000</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>6</span></td>
+                            <td class="align-left">
+                                <a href="javascript:void(0)" class="ellipse-target color-black font-weight-medium">「임상간호사가 알아야 할 노무정보와 근로환경」 보수교육 개최 안내</a>
+                            </td>
+                            <td>
+                                <a class="btn-file" href="javascript:void(0)"><i class="ico ico-file"></i><span class="sr-only">첨부파일 있음</span></a>
+                            </td>
+                            <td><span>대한간호협회</span></td>
+                            <td><span>2022-10-20</span></td>
+                            <td><span>1000</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>5</span></td>
+                            <td class="align-left">
+                                <a href="javascript:void(0)" class="ellipse-target color-black font-weight-medium">KNA 에듀센터 새이름 공모 결과발표</a>
+                            </td>
+                            <td>
+                                <a class="btn-file" href="javascript:void(0)"><i class="ico ico-file"></i><span class="sr-only">첨부파일 있음</span></a>
+                            </td>
+                            <td><span>대한간호협회</span></td>
+                            <td><span>2022-10-20</span></td>
+                            <td><span>1000</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>4</span></td>
+                            <td class="align-left">
+                                <a href="javascript:void(0)" class="ellipse-target color-black font-weight-medium">「장기요양기관 간호사를 위한 노인학대 예방 교육」 보수교육 개최 안내</a><i class="ico ico-new"></i><span class="sr-only">NEW</span>
+                            </td>
+                            <td></td>
+                            <td><span>대한간호협회</span></td>
+                            <td><span>2022-10-20</span></td>
+                            <td><span>1000</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>4</span></td>
+                            <td class="align-left"><a href="javascript:void(0)" class="ellipse-target color-black font-weight-medium">「장기요양기관 간호사를 위한 노인학대 예방 교육」 보수교육 개최 안내</a></td>
+                            <td></td>
+                            <td><span>대한간호협회</span></td>
+                            <td><span>2022-10-20</span></td>
+                            <td><span>1000</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>4</span></td>
+                            <td class="align-left">
+                                <a href="javascript:void(0)" class="ellipse-target color-black font-weight-medium">「장기요양기관 간호사를 위한 노인학대 예방 교육」 보수교육 개최 안내</a><i class="ico ico-new"></i><span class="sr-only">NEW</span>
+                            </td>
+                            <td>
+                                <a class="btn-file" href="javascript:void(0)"><i class="ico ico-file"></i><span class="sr-only">첨부파일 있음</span></a>
+                            </td>
+                            <td><span>대한간호협회</span></td>
+                            <td><span>2022-10-20</span></td>
+                            <td><span>1000</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>3</span></td>
+                            <td class="align-left">
+                                <a href="javascript:void(0)" class="ellipse-target color-black font-weight-medium">「중환자 섬망 간호」보수교육 개최 안내</a>
+                            </td>
+                            <td>
+                                <a class="btn-file" href="javascript:void(0)"><i class="ico ico-file"></i><span class="sr-only">첨부파일 있음</span></a>
+                            </td>
+                            <td><span>대한간호협회</span></td>
+                            <td><span>2022-10-20</span></td>
+                            <td><span>1000</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>2</span></td>
+                            <td class="align-left">
+                                <a href="javascript:void(0)" class="ellipse-target color-black font-weight-medium">간호연수교육원 주요사업 및 시설소개</a>
+                            </td>
+                            <td>
+                                <a class="btn-file" href="javascript:void(0)"><i class="ico ico-file"></i><span class="sr-only">첨부파일 있음</span></a>
+                            </td>
+                            <td><span>대한간호협회</span></td>
+                            <td><span>2022-10-20</span></td>
+                            <td><span>1000</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>1</span></td>
+                            <td class="align-left">
+                                <a href="javascript:void(0)" class="ellipse-target color-black font-weight-medium">온라인 무료 교육 프로그램 신규 탑재 안내</a>
+                            </td>
+                            <td>
+                                <a class="btn-file" href="javascript:void(0)"><i class="ico ico-file"></i><span class="sr-only">첨부파일 있음</span></a>
+                            </td>
+                            <td><span>대한간호협회</span></td>
+                            <td><span>2022-10-20</span></td>
+                            <td><span>1000</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="board-foot">
+                <ul id="pagination" class="pagination"></ul>
+<script>
+    // https://josecebe.github.io/twbs-pagination/
+    const TOTAL_PAGES = 35;
+    const BREAKPOINT = 1280;
+
+    function getVisiblePages() {
+        return window.innerWidth <= BREAKPOINT ? 5 : 10;
+    }
+
+    function initPagination() {
+        const $pagination = $('#pagination');
+
+        $pagination.twbsPagination('destroy');
+
+        $pagination.twbsPagination({
+            totalPages: TOTAL_PAGES,
+            visiblePages: getVisiblePages(),
+            first: `<i class="ico ico-paging-first"></i><span class="sr-only">처음 페이지</span>`,
+            prev: `<i class="ico ico-paging-prev"></i><span class="sr-only">이전 페이지</span>`,
+            next: `<i class="ico ico-paging-next"></i><span class="sr-only">다음 페이지</span>`,
+            last: `<i class="ico ico-paging-last"></i><span class="sr-only">마지막 페이지</span>`
+        });
+    }
+
+    initPagination();
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            initPagination();
+        }, 150);
+    });
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

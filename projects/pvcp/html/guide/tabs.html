@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/swiper.js"></script>
+    <script src="../../js/twbsPagination.js"></script>
+    <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <script src="../../js/popper.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="shortcut icon" href="../../images/common/favicon.ico">
+    <title>보훈문화종합포털</title>
+</head>
+<body>
+<div class="guide-container">
+    <div class="guide-content">
+        <div class="guide-heading">Tab</div>
+        <div class="tab-container _tabContainer">
+            <div class="tabs-box">
+                <ul class="tabs _tab" role="tablist">
+                    <li class="item on">
+                        <button class="tab-button" type="button" role="tab" id="tab-apply" aria-selected="true" aria-controls="panel-apply">신청가능목록</button>
+                    </li>
+                    <li class="item">
+                        <button class="tab-button" type="button" role="tab" id="tab-done" aria-selected="false" aria-controls="panel-done">신청완료목록</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content _tabContent">
+                <div class="tab-panel on" role="tabpanel" id="panel-apply" aria-labelledby="tab-apply">1</div>
+                <div class="tab-panel" role="tabpanel" id="panel-done" aria-labelledby="tab-done" hidden>2</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

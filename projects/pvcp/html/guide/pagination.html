@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/swiper.js"></script>
+    <script src="../../js/twbsPagination.js"></script>
+    <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <script src="../../js/popper.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="shortcut icon" href="../../images/common/favicon.ico">
+    <title>보훈문화종합포털</title>
+</head>
+<body>
+<div class="guide-container">
+    <div class="guide-content">
+        <div class="guide-heading">pagination</div>
+        <ul id="pagination" class="pagination"></ul>
+        <script>
+            // https://josecebe.github.io/twbs-pagination/
+            const TOTAL_PAGES = 35;
+            const BREAKPOINT = 1280;
+
+            function getVisiblePages() {
+                return window.innerWidth <= BREAKPOINT ? 5 : 10;
+            }
+
+            function initPagination() {
+                const $pagination = $('#pagination');
+
+                $pagination.twbsPagination('destroy');
+
+                $pagination.twbsPagination({
+                    totalPages: TOTAL_PAGES,
+                    visiblePages: getVisiblePages(),
+                    first: `<i class="ico ico-paging-first"></i><span class="sr-only">처음 페이지</span>`,
+                    prev: `<i class="ico ico-paging-prev"></i><span class="sr-only">이전 페이지</span>`,
+                    next: `<i class="ico ico-paging-next"></i><span class="sr-only">다음 페이지</span>`,
+                    last: `<i class="ico ico-paging-last"></i><span class="sr-only">마지막 페이지</span>`
+                });
+            }
+
+            initPagination();
+
+            let resizeTimer;
+            window.addEventListener('resize', () => {``
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    initPagination();
+                }, 150);
+            });
+        </script>
+    </div>
+</div>
+</body>
+</html>
