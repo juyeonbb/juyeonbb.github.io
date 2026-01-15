@@ -1104,6 +1104,9 @@
 }
 
 @media (max-width: 1280px) {
+  .search-contents .search-tabs {
+    margin-bottom: 30px;
+  }
   .search-contents .search-head .search-global {
     max-width: calc(100% - 30px);
   }
@@ -1118,6 +1121,16 @@
   }
   .search-contents .search-body .search-filter {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .search-contents .featured-result {
+    padding: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .search-results .featured-result .featured-result-inner {
+    flex-direction: column-reverse;
   }
 }
 .keyword-chip-list {
