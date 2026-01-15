@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/swiper.js"></script>
+    <script src="../../js/twbsPagination.js"></script>
+    <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <script src="../../js/popper.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="shortcut icon" href="../../images/common/favicon.ico">
+    <title>보훈문화종합포털</title>
+</head>
+<body>
+<!-- 본문 바로가기 영역  -->
+<div class="skip-nav" id="skip">
+    <a class="view-content" href="#content">본문 바로가기</a>
+</div>
+<!-- // 본문 바로가기 영역  -->
+
+<!-- 상단 배너영역 -->
+<div class="mast-head">
+    <div class="inner">
+        <span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+    </div>
+</div>
+<!-- // 상단 배너영역 -->
+
+<header class="header _header">
+    <div class="header-pc">
+        <div class="inner">
+            <div class="utility">
+                <ul class="list">
+                    <li class="item">
+                        <div class="drop-wrap _zoomDropdown _dropdown">
+                            <button type="button" class="drop-btn _btnZoom _dropdownBtn" aria-controls="zoomMenu" aria-expanded="false">
+                                <span>화면크기</span><i class="ico ico-toggle" aria-hidden="true"></i></button>
+                            <div class="drop-menu _dropdownMenu" id="zoomMenu" hidden>
+                                <div class="drop-in">
+                                    <ul class="drop-list">
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="0.9"><span class="ex-zoom">가</span>작게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1"><span class="ex-zoom">가</span>보통</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem on" data-zoom="1.1"><span class="ex-zoom">가</span>조금 크게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1.2"><span class="ex-zoom">가</span>크게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1.3"><span class="ex-zoom">가</span>가장 크게</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!--                    <li class="item">-->
+                    <!--                        <div class="drop-wrap _zoomDropdown _dropdown">-->
+                    <!--                            <button type="button" class="drop-btn _dropdownBtn" aria-haspopup="menu" aria-expanded="false"><span>Language</span><i class="ico ico-toggle" aria-hidden="true"></i></button>-->
+                    <!--                            <div class="drop-menu _dropdownMenu" role="menu" aria-hidden="true" hidden>-->
+                    <!--                                <div class="drop-in">-->
+                    <!--                                    <ul class="drop-list">-->
+                    <!--                                        <li class="drop-item"><a href="javascript:void(0);" class="item-link _dropdownItem" target="_blank" title="새창열림">English <i class="ico ico-go"></i></a></li>-->
+                    <!--                                        <li class="drop-item"><a href="javascript:void(0);" class="item-link _dropdownItem" target="_blank" title="새창열림">中文 <i class="ico ico-go"></i></a></li>-->
+                    <!--                                        <li class="drop-item"><a href="javascript:void(0);" class="item-link _dropdownItem" target="_blank" title="새창열림">日本 <i class="ico ico-go"></i></a></li>-->
+                    <!--                                        <li class="drop-item"><a href="javascript:void(0);" class="item-link _dropdownItem" target="_blank" title="새창열림">Tiếng Việt <i class="ico ico-go"></i></a></li>-->
+                    <!--                                    </ul>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                    </li>-->
+                    <!--                    <li class="item"><a class="item-link" href="javascript:void(0);" target="_blank" title="새 창 열기">누리집 소통망(SNS)</a></li>-->
+                </ul>
+            </div>
+            <div class="branding">
+                <h1 class="logo">
+                    <a href="javascript:void(0);">
+                        <img src="../../images/common/logo.png" alt="보훈문화종합포털">
+                    </a>
+                </h1>
+                <nav class="main-menu">
+                    <ul class="gnb-menu">
+                        <li class="menu-item"><a href="javascript:void(0);" class="menu-link">보훈자료</a></li>
+                        <li class="menu-item"><a href="javascript:void(0);" class="menu-link">행사·전시</a></li>
+                        <li class="menu-item"><a href="javascript:void(0);" class="menu-link">체험·교육</a></li>
+                        <li class="menu-item"><a href="javascript:void(0);" class="menu-link">종합포털소개</a></li>
+                    </ul>
+                </nav>
+                <ul class="actions">
+                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">로그인</a></li>
+                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">회원가입</a></li>
+                    <li class="action-item"><a href="javascript:void(0);" class="btn-search" title="통합 검색"><i class="ico ico-search"></i><em class="show-mo">통합 검색</em></a></li>
+                    <li class="action-item show-pc"><button type="button" class="btn-menu" title="전체메뉴"><span></span><span></span><span></span></button></li>
+                    <li class="action-item show-mo"><button type="button" class="btn-menu" title="전체메뉴"><span></span><span></span><span></span><em>전체메뉴</em></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-mo"></div>
+</header>
+<main class="wrap" id="content">
+    <div class="container">
+        <!-- s contents -->
+        <div class="search-contents">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="ico ico-home"></i>홈</a></li>
+                    <li class="breadcrumb-item" aria-current="page">통합검색</li>
+                </ol>
+            </nav>
+            <div class="search-head">
+                <div class="search-global">
+                    <input class="form-input" type="search"  aria-label="통합검색" placeholder="검색어를 입력하세요" />
+                    <button type="button" class="btn-search"><i class="ico ico-search-main"></i><span class="sr-only">검색하기</span></button>
+                </div>
+                <div class="search-tabs" aria-label="search tabs">
+                    <div class="swiper search-tabs-swiper">
+                        <ul class="search-tab-list swiper-wrapper" role="tablist">
+                            <li class="search-tab-item swiper-slide">
+                                <button type="button" class="search-tab on" role="tab" aria-selected="true">종합</button>
+                            </li>
+                            <li class="search-tab-item swiper-slide">
+                                <button type="button" class="search-tab" role="tab" aria-selected="false">인물</button>
+                            </li>
+                            <li class="search-tab-item swiper-slide">
+                                <button type="button" class="search-tab" role="tab" aria-selected="false">역사</button>
+                            </li>
+                            <li class="search-tab-item swiper-slide">
+                                <button type="button" class="search-tab" role="tab" aria-selected="false">동영상</button>
+                            </li>
+                            <li class="search-tab-item swiper-slide">
+                                <button type="button" class="search-tab" role="tab" aria-selected="false">교육</button>
+                            </li>
+                            <li class="search-tab-item swiper-slide">
+                                <button type="button" class="search-tab" role="tab" aria-selected="false">유물</button>
+                            </li>
+                            <li class="search-tab-item swiper-slide">
+                                <button type="button" class="search-tab" role="tab" aria-selected="false">사료</button>
+                            </li>
+                            <li class="search-tab-item swiper-slide">
+                                <button type="button" class="search-tab" role="tab" aria-selected="false">도서</button>
+                            </li>
+                            <li class="search-tab-item swiper-slide">
+                                <button type="button" class="search-tab" role="tab" aria-selected="false">현충시설</button>
+                            </li>
+                            <li class="search-tab-item swiper-slide">
+                                <button type="button" class="search-tab" role="tab" aria-selected="false">행사전시</button>
+                            </li>
+                            <li class="search-tab-item swiper-slide">
+                                <button type="button" class="search-tab" role="tab" aria-selected="false">체험교육</button>
+                            </li>
+                            <li class="search-tab-item swiper-slide">
+                                <button type="button" class="search-tab" role="tab" aria-selected="false">배움자료실</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <script>
+                    const tabsSwiper = new Swiper('.search-tabs-swiper', {
+                        slidesPerView: 'auto',
+                        spaceBetween: 3,
+                        freeMode: true,
+                        watchOverflow: true,
+                        slideToClickedSlide: true,
+                    });
+
+                    function setActiveSearchTab(btn) {
+                        const $btn = $(btn);
+                        const $wrap = $btn.closest('.search-tabs');
+                        const $tabs = $wrap.find('.search-tab');
+
+                        $tabs.removeClass('on').attr({ 'aria-selected': 'false' });
+                        $btn.addClass('on').attr({ 'aria-selected': 'true' });
+
+                        const slideEl = $btn.closest('.swiper-slide')[0];
+                        if (slideEl && tabsSwiper) {
+                            const idx = $(slideEl).index();
+                            tabsSwiper.slideTo(idx);
+                        }
+                    }
+
+                    $(document).on('click', '.search-tabs .search-tab', function () {
+                        setActiveSearchTab(this);
+                    });
+
+                    $(document).on('keydown', '.search-tabs .search-tab', function (e) {
+                        const KEY_LEFT = 37, KEY_RIGHT = 39, KEY_HOME = 36, KEY_END = 35;
+                        const $tabs = $(this).closest('.search-tabs').find('.search-tab');
+                        const current = $tabs.index(this);
+
+                        let next = null;
+
+                        if (e.which === KEY_LEFT) next = Math.max(0, current - 1);
+                        if (e.which === KEY_RIGHT) next = Math.min($tabs.length - 1, current + 1);
+                        if (e.which === KEY_HOME) next = 0;
+                        if (e.which === KEY_END) next = $tabs.length - 1;
+
+                        if (next !== null) {
+                            e.preventDefault();
+                            const target = $tabs.get(next);
+                            setActiveSearchTab(target);
+                            target.focus();
+                        }
+                    });
+                </script>
+            </div>
+            <div class="search-body">
+                <div class="inner">
+                    <div class="search-results">
+                        <h2 class="sr-only">검색 결과 목록</h2>
+                        <!-- 인물 detail -->
+                        <div class="featured-result">
+                            <div class="featured-result-inner">
+                                <div class="featured-result-content">
+                                    <div class="featured-info">
+                                        <h3 class="title">가평지구 전투 전적비</h3>
+                                        <i class="ico ico-verified"><span class="sr-only">인증됨</span></i>
+                                    </div>
+                                    <dl class="featured-meta">
+                                        <div class="row">
+                                            <dt class="term">시설</dt>
+                                            <dd class="desc">비석</dd>
+                                        </div>
+                                        <div class="row">
+                                            <dt class="term">사건연도</dt>
+                                            <dd class="desc">1951년</dd>
+                                        </div>
+                                        <div class="row">
+                                            <dt class="term">주제</dt>
+                                            <dd class="desc">6·25전쟁</dd>
+                                        </div>
+                                        <div class="row">
+                                            <dt class="term">지역</dt>
+                                            <dd class="desc">경기도 가평군</dd>
+                                        </div>
+                                    </dl>
+                                    <div class="featured-actions">
+                                        <a href="javascript:void(0)" class="btn btn-border-gray with-icon"><span>상세정보</span><i class="ico ico-external"></i></a>
+                                        <a href="javascript:void(0)" class="btn btn-border-gray with-icon"><span>현충시설</span><i class="ico ico-external"></i></a>
+                                    </div>
+                                </div>
+                                <div class="featured-result-media">
+                                    <div class="img img-vertical">
+                                        <img src="../../images/@temp/history-1.png" alt="가평지구 전투 전적비"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 현충시설 -->
+                        <div class="result-group">
+                            <div class="result-group-head">
+                                <h3 class="title">현충시설</h3>
+                                <span class="count">(6)</span>
+                                <a href="javascript:void(0)" class="btn-more">검색결과 더보기</a>
+                            </div>
+                            <div class="result-group-body">
+                                <ul class="history-list">
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/history-1.png" alt="가평의병 3.1항일운동 기념비"/>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">가평의병 3.1항일운동 기념비</div>
+                                            <dl class="meta">
+                                                <div class="col">
+                                                    <dt class="meta-term">시설</dt>
+                                                    <dd class="meta-desc">비석</dd>
+                                                </div>
+                                                <div class="col">
+                                                    <dt class="meta-term">지역</dt>
+                                                    <dd class="meta-desc">경기도 가평군</dd>
+                                                </div>
+                                                <div class="col">
+                                                    <dt class="meta-term">사건연도</dt>
+                                                    <dd class="meta-desc">1919년</dd>
+                                                </div>
+                                                <div class="col">
+                                                    <dt class="meta-term">주제</dt>
+                                                    <dd class="meta-desc">3.1운동</dd>
+                                                </div>
+                                            </dl>
+                                            <p class="desc">1895년 10월 명성황후 시해 사건과 그 해 말 단발령에 항거하여 가평에서는 북면을 근거지로 의병이
+                                                봉기하였다. 가평 지역의 의병들은 강원도 의병들과 연합하여 격렬히 전투하다가 이충응(李忠應,
+                                                1856~1896)…</p>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/history-1.png" alt="가평의병 3.1항일운동 기념비"/>
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">가평의병 3.1항일운동 기념비</div>
+                                            <dl class="meta">
+                                                <div class="col">
+                                                    <dt class="meta-term">시설</dt>
+                                                    <dd class="meta-desc">비석</dd>
+                                                </div>
+                                                <div class="col">
+                                                    <dt class="meta-term">지역</dt>
+                                                    <dd class="meta-desc">경기도 가평군</dd>
+                                                </div>
+                                                <div class="col">
+                                                    <dt class="meta-term">사건연도</dt>
+                                                    <dd class="meta-desc">1919년</dd>
+                                                </div>
+                                                <div class="col">
+                                                    <dt class="meta-term">주제</dt>
+                                                    <dd class="meta-desc">3.1운동</dd>
+                                                </div>
+                                            </dl>
+                                            <p class="desc">1895년 10월 명성황후 시해 사건과 그 해 말 단발령에 항거하여 가평에서는 북면을 근거지로 의병이
+                                                봉기하였다. 가평 지역의 의병들은 강원도 의병들과 연합하여 격렬히 전투하다가 이충응(李忠應,
+                                                1856~1896)…</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 교육 -->
+                        <div class="result-group">
+                            <div class="result-group-head">
+                                <h3 class="title">교육</h3>
+                                <span class="count">(48)</span>
+                                <a href="javascript:void(0)" class="btn-more">검색결과 더보기</a>
+                            </div>
+                            <div class="result-group-body">
+                                <ul class="photo-list">
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-1.png" alt="판결문(경성공소원, 1911.9.4)">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">판결문(경성공소원, 1911.9.4)</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-2.png" alt="105인사건으로 압송되는 신민...">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">105인사건으로 압송되는 신민...</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-3.png" alt="대한민국 임시정부 직원 일동(19...">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">대한민국 임시정부 직원 일동(19...</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-4.png" alt="대한민국3년 임시정부와 임시의...">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">대한민국3년 임시정부와 임시의...</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-1.png" alt="판결문(경성공소원, 1911.9.4)">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">판결문(경성공소원, 1911.9.4)</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-2.png" alt="105인사건으로 압송되는 신민...">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">105인사건으로 압송되는 신민...</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-3.png" alt="대한민국 임시정부 직원 일동(19...">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">대한민국 임시정부 직원 일동(19...</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-4.png" alt="대한민국3년 임시정부와 임시의...">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title">대한민국3년 임시정부와 임시의...</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 유물 -->
+                        <div class="result-group">
+                            <div class="result-group-head">
+                                <h3 class="title">유물</h3>
+                                <span class="count">(0)</span>
+                                <!--                                <a href="javascript:void(0)" class="btn-more">검색결과 더보기</a>-->
+                            </div>
+                            <div class="result-group-body">
+                                <div class="no-data">
+                                    <div class="txt">“<span class="color-black font-weight-medium">가평</span>”과 관련한 검색결과가 존재하지 않습니다.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="search-filter">
+                        <!-- 내가 찾은 검색어 -->
+                        <div class="keyword-recent">
+                            <h2 class="keyword-title">내가 찾은 검색어</h2>
+                            <ul class="keyword-chip-list">
+                                <li class="item">
+                                    <span class="txt">이달의 독립운동</span>
+                                    <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
+                                </li>
+                                <li class="item">
+                                    <span class="txt">안중근</span>
+                                    <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
+                                </li>
+                                <li class="item">
+                                    <span class="txt">김구</span>
+                                    <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
+                                </li>
+                                <li class="item">
+                                    <span class="txt">현충일</span>
+                                    <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
+                                </li>
+                                <li class="item">
+                                    <span class="txt">6.25 전쟁</span>
+                                    <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- 인기 검색어 -->
+                        <div class="keyword-popular">
+                            <h2 class="keyword-title">인기 검색어</h2>
+                            <ol class="keyword-rank-list">
+                                <li class="item item-top">
+                                    <a href="javascript:void(0)" class="link">
+                                        <span class="num">01</span>
+                                        <span class="txt">김구</span>
+                                    </a>
+                                </li>
+                                <li class="item item-top">
+                                    <a href="javascript:void(0)" class="link">
+                                        <span class="num">02</span>
+                                        <span class="txt">대한민국 임시정부</span>
+                                    </a>
+                                </li>
+                                <li class="item item-top">
+                                    <a href="javascript:void(0)" class="link">
+                                        <span class="num">03</span>
+                                        <span class="txt">이달의 독립운동</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="link">
+                                        <span class="num">04</span>
+                                        <span class="txt">안중근</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="link">
+                                        <span class="num">05</span>
+                                        <span class="txt">5.18민주화운동</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="link">
+                                        <span class="num">06</span>
+                                        <span class="txt">3.1운동</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="link">
+                                        <span class="num">07</span>
+                                        <span class="txt">6.25전쟁</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="link">
+                                        <span class="num">08</span>
+                                        <span class="txt">봉오동전투</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="link">
+                                        <span class="num">09</span>
+                                        <span class="txt">청산리전투</span>
+                                    </a>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="link">
+                                        <span class="num">10</span>
+                                        <span class="txt">8.15광복</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <!-- e contents -->
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer-info">
+        <div class="inner">
+            <div class="f-info">
+                <div class="logo">
+                    <a href="javascript:void(0)"><img src="../../images/common/footer-logo.png" alt="KNA 에듀센터"></a>
+                </div>
+                <div class="info-cs">
+                    <div class="address">(30113) 세종특별자치시 도움4로 9 정부세종청사 9동</div>
+                    <div class="key-info"><b>대표전화&nbsp;</b><b>1577-0606</b><span>&nbsp;(상담시간 : 평일 09:00 ~ 18:00, 점심시간 : 12:00 ~ 13:00, 매주 월요일 휴무)</span></div>
+                </div>
+            </div>
+            <div class="f-link">
+                <div class="footer-dropdown _footerDropdown">
+                    <button type="button" class="btn-select _footerDropdownButton" title="관련사이트 바로가기">관련사이트 바로가기</button>
+                    <ul class="dropdown-list">
+                        <li><a href="https://www.nhis.or.kr/" title="새 창 열기" target="_blank" rel="noopener noreferrer" ><span>국민건강보험</span></a></li>
+                        <li><a href="https://www.nmkpg.go.kr/" title="새 창 열기" target="_blank" rel="noopener noreferrer"><span>국립대한민국임시정부기념관</span></a></li>
+                    </ul>
+                    <button type="button" class="btn-select-close _footerDropdownCloseButton" title="관련사이트 닫기">관련사이트 바로가기</button>
+                </div>
+                <div class="links">
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="새 창 열기">이용안내</a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="새 창 열기">찾아오시는 길</a>
+                </div>
+                <div class="sns-links">
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="네이버 블로그 공유하기"><img src=../../images/common/ico-naver.svg alt="네이버 블로그 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="유투브 공유하기"><img src=../../images/common/ico-youtube.svg alt="유투브 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="인스타그램 공유하기"><img src=../../images/common/ico-instagram.svg alt="인스타그램 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="x 공유하기"><img src=../../images/common/ico-x.svg alt="x 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="페이스북 공유하기"><img src=../../images/common/ico-facebook.svg alt="페이스북 공유하기"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-links">
+        <div class="inner">
+            <div class="link-content">
+                <div class="info-links">
+                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">이용약관</a>
+                    <a class="link link-highlight" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">저작권정책</a>
+                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">자주하는질문</a>
+                </div>
+            </div>
+            <div class="copyright">© Ministry of Patriots and Veterans Affairs. All Rights Reserved.</div>
+            <div class="nuri"><img src="../../images/common/ico-footer-nuri.png" alt="국가보훈부"/><span>이 누리집은 국가보훈부 산하기관 누리집입니다.</span></div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
