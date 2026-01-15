@@ -198,7 +198,7 @@
 }
 .main-contents .section-visual .box-banner {
   position: relative;
-  width: 50%;
+  width: 740px;
   height: fit-content;
 }
 .main-contents .section-visual .box-banner .banner-slider {
@@ -267,8 +267,9 @@
 .main-contents .section-visual .box-search {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  padding-left: 50px;
+  flex: 1;
+  width: calc(100% - 740px);
+  padding-left: 45px;
   padding-right: 30px;
   padding-top: 5px;
 }
