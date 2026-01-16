@@ -1495,12 +1495,27 @@ button.swiper-pagination-bullet {
   align-items: center;
 }
 .header .branding .gnb-menu .menu-link {
+  position: relative;
   font-size: 24px;
   font-weight: bold;
   transition: 0.2s;
 }
+.header .branding .gnb-menu .menu-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 4px;
+  bottom: -6px;
+  left: 0;
+  transition: 0.2s;
+  background-color: transparent;
+}
 .header .branding .gnb-menu .menu-link:hover {
-  color: #003675;
+  color: #2462D6;
+}
+.header .branding .gnb-menu .menu-link:hover::after {
+  width: 100%;
+  background-color: #2462D6;
 }
 .header .branding .main-menu {
   margin-left: auto;
@@ -6143,6 +6158,7 @@ div.pswp__img--placeholder,
   width: 2px;
   height: 30px;
   background-color: #fff;
+  transition: 0.4s;
 }
 .result-group .person-list .item .card .info {
   margin-top: 4px;
@@ -6160,6 +6176,9 @@ div.pswp__img--placeholder,
 }
 .result-group .person-list .item .card:hover .thumb .overlay {
   transform: translateY(0);
+}
+.result-group .person-list .item .card:hover .thumb .overlay .desc::before {
+  transform: translateX(-50%) rotate(360deg);
 }
 .result-group .history-list {
   display: flex;
