@@ -4024,6 +4024,8 @@ input::-webkit-search-results-decoration {
 }
 .search-global .form-input:focus {
   outline-offset: 4px;
+  outline-width: 3px;
+  outline-style: dashed;
   background-color: #fff;
 }
 .search-global .form-input::placeholder {
@@ -4065,6 +4067,15 @@ input::-webkit-search-results-decoration {
   gap: 5px;
   align-items: center;
   vertical-align: middle;
+  text-decoration: underline;
+  padding: 0 4px;
+  border-radius: 6px;
+}
+.breadcrumb .breadcrumb-item a:hover {
+  background-color: #EEF2F7;
+}
+.breadcrumb .breadcrumb-item a:active {
+  background-color: #D6E0EB;
 }
 .breadcrumb .breadcrumb-item + .breadcrumb-item {
   margin-left: 30px;
@@ -7265,7 +7276,7 @@ div.pswp__img--placeholder,
   display: flex;
   align-items: center;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: #eff2f7;
   padding: 26px 0;
   margin: 120px auto 0;

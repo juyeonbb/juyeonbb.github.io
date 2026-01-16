@@ -198,105 +198,185 @@
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb-list">
                     <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="ico ico-home"></i>홈</a></li>
-                    <li class="breadcrumb-item" aria-current="page">통합검색</li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">통합검색</a></li>
                 </ol>
             </nav>
             <div class="search-head">
-                <div class="search-global">
-                    <input class="form-input" type="search"  aria-label="통합검색" placeholder="검색어를 입력하세요" />
-                    <button type="button" class="btn-search"><i class="ico ico-search-main"></i><span class="sr-only">검색하기</span></button>
-                </div>
-                <div class="search-tabs" aria-label="search tabs">
-                    <div class="swiper search-tabs-swiper">
-                        <ul class="search-tab-list swiper-wrapper" role="tablist">
-                            <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab on" role="tab" aria-selected="true">종합</button>
-                            </li>
-                            <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab" role="tab" aria-selected="false">인물</button>
-                            </li>
-                            <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab" role="tab" aria-selected="false">역사</button>
-                            </li>
-                            <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab" role="tab" aria-selected="false">동영상</button>
-                            </li>
-                            <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab" role="tab" aria-selected="false">사진/필름</button>
-                            </li>
-                            <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab" role="tab" aria-selected="false">유물</button>
-                            </li>
-                            <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab" role="tab" aria-selected="false">사료</button>
-                            </li>
-                            <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab" role="tab" aria-selected="false">도서</button>
-                            </li>
-                            <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab" role="tab" aria-selected="false">현충시설</button>
-                            </li>
-                            <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab" role="tab" aria-selected="false">행사전시</button>
-                            </li>
-                            <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab" role="tab" aria-selected="false">체험교육</button>
-                            </li>
-                            <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab" role="tab" aria-selected="false">배움자료실</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <script>
-                    const tabsSwiper = new Swiper('.search-tabs-swiper', {
-                        slidesPerView: 'auto',
-                        spaceBetween: 3,
-                        freeMode: true,
-                        watchOverflow: true,
-                        slideToClickedSlide: true,
-                    });
+    <div class="search-global">
+        <input class="form-input" type="search"  aria-label="통합검색" placeholder="검색어를 입력하세요" />
+        <button type="button" class="btn-search"><i class="ico ico-search-main"></i><span class="sr-only">검색하기</span></button>
+    </div>
+    <div class="search-tabs" aria-label="search tabs">
+        <div class="swiper search-tabs-swiper">
+            <ul class="search-tab-list swiper-wrapper" role="tablist">
+                <li class="search-tab-item swiper-slide">
+                    <button type="button" class="search-tab on" role="tab" aria-selected="true">종합</button>
+                </li>
+                <li class="search-tab-item swiper-slide">
+                    <button type="button" class="search-tab" role="tab" aria-selected="false">인물</button>
+                </li>
+                <li class="search-tab-item swiper-slide">
+                    <button type="button" class="search-tab" role="tab" aria-selected="false">역사</button>
+                </li>
+                <li class="search-tab-item swiper-slide">
+                    <button type="button" class="search-tab" role="tab" aria-selected="false">동영상</button>
+                </li>
+                <li class="search-tab-item swiper-slide">
+                    <button type="button" class="search-tab" role="tab" aria-selected="false">사진/필름</button>
+                </li>
+                <li class="search-tab-item swiper-slide">
+                    <button type="button" class="search-tab" role="tab" aria-selected="false">유물</button>
+                </li>
+                <li class="search-tab-item swiper-slide">
+                    <button type="button" class="search-tab" role="tab" aria-selected="false">사료</button>
+                </li>
+                <li class="search-tab-item swiper-slide">
+                    <button type="button" class="search-tab" role="tab" aria-selected="false">도서</button>
+                </li>
+                <li class="search-tab-item swiper-slide">
+                    <button type="button" class="search-tab" role="tab" aria-selected="false">현충시설</button>
+                </li>
+                <li class="search-tab-item swiper-slide">
+                    <button type="button" class="search-tab" role="tab" aria-selected="false">행사전시</button>
+                </li>
+                <li class="search-tab-item swiper-slide">
+                    <button type="button" class="search-tab" role="tab" aria-selected="false">체험교육</button>
+                </li>
+                <li class="search-tab-item swiper-slide">
+                    <button type="button" class="search-tab" role="tab" aria-selected="false">배움자료실</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        (function () {
+            let tabsSwiper = null;
+            let rszT = null;
 
-                    function setActiveSearchTab(btn) {
-                        const $btn = $(btn);
-                        const $wrap = $btn.closest('.search-tabs');
-                        const $tabs = $wrap.find('.search-tab');
+            const MQ_MOBILE = '(max-width: 1280px)';
+            let lastMode = null;
 
-                        $tabs.removeClass('on').attr({ 'aria-selected': 'false' });
-                        $btn.addClass('on').attr({ 'aria-selected': 'true' });
+            function getMode() {
+                return window.matchMedia(MQ_MOBILE).matches ? 'm' : 'p';
+            }
 
-                        const slideEl = $btn.closest('.swiper-slide')[0];
-                        if (slideEl && tabsSwiper) {
-                            const idx = $(slideEl).index();
-                            tabsSwiper.slideTo(idx);
-                        }
+            function initTabsSwiper() {
+                if (tabsSwiper) return;
+
+                const el = document.querySelector('.search-tabs-swiper');
+                if (!el) return;
+
+                tabsSwiper = new Swiper(el, {
+                    slidesPerView: 'auto',
+                    spaceBetween: 3,
+                    freeMode: true,
+                    watchOverflow: true,
+                    slideToClickedSlide: true,
+                    observer: true,
+                    observeParents: true,
+                    updateOnWindowResize: true
+                });
+            }
+
+            function updateTabsSwiper() {
+                if (!tabsSwiper) return;
+
+                tabsSwiper.updateSize();
+                tabsSwiper.updateSlides();
+                tabsSwiper.updateProgress();
+                tabsSwiper.updateSlidesClasses();
+
+                const $on = $('.search-tabs .search-tab.on').closest('.swiper-slide');
+                if ($on.length) {
+                    tabsSwiper.slideTo($on.index(), 0);
+                }
+            }
+
+            function rebuildTabsSwiper() {
+                if (tabsSwiper) {
+                    tabsSwiper.destroy(true, true);
+                    tabsSwiper = null;
+                }
+                initTabsSwiper();
+                updateTabsSwiper();
+            }
+
+            function checkModeAndSync() {
+                const mode = getMode();
+
+                if (!lastMode) {
+                    lastMode = mode;
+                    initTabsSwiper();
+                    updateTabsSwiper();
+                    return;
+                }
+
+                if (mode !== lastMode) {
+                    lastMode = mode;
+                    rebuildTabsSwiper();
+                } else {
+                    initTabsSwiper();
+                    if (tabsSwiper) tabsSwiper.emit('resize');
+                    updateTabsSwiper();
+                }
+            }
+
+            function setActiveSearchTab(btn) {
+                const $btn = $(btn);
+                const $wrap = $btn.closest('.search-tabs');
+                const $tabs = $wrap.find('.search-tab');
+
+                $tabs.removeClass('on').attr({ 'aria-selected': 'false' });
+                $btn.addClass('on').attr({ 'aria-selected': 'true' });
+
+                const slideEl = $btn.closest('.swiper-slide')[0];
+                if (slideEl && tabsSwiper) {
+                    const idx = $(slideEl).index();
+                    tabsSwiper.slideTo(idx);
+                }
+            }
+
+            $(function () {
+                checkModeAndSync();
+
+                $(document).on('click', '.search-tabs .search-tab', function () {
+                    setActiveSearchTab(this);
+                });
+
+                $(document).on('keydown', '.search-tabs .search-tab', function (e) {
+                    const KEY_LEFT = 37, KEY_RIGHT = 39, KEY_HOME = 36, KEY_END = 35;
+
+                    const $tabs = $(this).closest('.search-tabs').find('.search-tab');
+                    const current = $tabs.index(this);
+                    let next = null;
+
+                    if (e.which === KEY_LEFT) next = Math.max(0, current - 1);
+                    if (e.which === KEY_RIGHT) next = Math.min($tabs.length - 1, current + 1);
+                    if (e.which === KEY_HOME) next = 0;
+                    if (e.which === KEY_END) next = $tabs.length - 1;
+
+                    if (next !== null) {
+                        e.preventDefault();
+                        const target = $tabs.get(next);
+                        setActiveSearchTab(target);
+                        target.focus();
                     }
+                });
 
-                    $(document).on('click', '.search-tabs .search-tab', function () {
-                        setActiveSearchTab(this);
-                    });
+                $(window).on('resize', function () {
+                    clearTimeout(rszT);
+                    rszT = setTimeout(checkModeAndSync, 120);
+                });
+            });
 
-                    $(document).on('keydown', '.search-tabs .search-tab', function (e) {
-                        const KEY_LEFT = 37, KEY_RIGHT = 39, KEY_HOME = 36, KEY_END = 35;
-                        const $tabs = $(this).closest('.search-tabs').find('.search-tab');
-                        const current = $tabs.index(this);
-
-                        let next = null;
-
-                        if (e.which === KEY_LEFT) next = Math.max(0, current - 1);
-                        if (e.which === KEY_RIGHT) next = Math.min($tabs.length - 1, current + 1);
-                        if (e.which === KEY_HOME) next = 0;
-                        if (e.which === KEY_END) next = $tabs.length - 1;
-
-                        if (next !== null) {
-                            e.preventDefault();
-                            const target = $tabs.get(next);
-                            setActiveSearchTab(target);
-                            target.focus();
-                        }
-                    });
-                </script>
-            </div>
+            window.__searchTabsSwiperRefresh = function () {
+                initTabsSwiper();
+                if (tabsSwiper) tabsSwiper.emit('resize');
+                updateTabsSwiper();
+            };
+        })();
+    </script>
+</div>
             <div class="search-body">
                 <div class="inner">
                     <div class="search-results">
@@ -604,100 +684,100 @@
                         </div>
                     </div>
                     <aside class="search-filter">
-                        <!-- 내가 찾은 검색어 -->
-                        <div class="keyword-recent">
-                            <h2 class="keyword-title">내가 찾은 검색어</h2>
-                            <ul class="keyword-chip-list">
-                                <li class="item">
-                                    <span class="txt">이달의 독립운동</span>
-                                    <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
-                                </li>
-                                <li class="item">
-                                    <span class="txt">안중근</span>
-                                    <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
-                                </li>
-                                <li class="item">
-                                    <span class="txt">김구</span>
-                                    <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
-                                </li>
-                                <li class="item">
-                                    <span class="txt">현충일</span>
-                                    <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
-                                </li>
-                                <li class="item">
-                                    <span class="txt">6.25 전쟁</span>
-                                    <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
-                                </li>
-                            </ul>
-                        </div>
+    <!-- 내가 찾은 검색어 -->
+    <div class="keyword-recent">
+        <h2 class="keyword-title">내가 찾은 검색어</h2>
+        <ul class="keyword-chip-list">
+            <li class="item">
+                <span class="txt">이달의 독립운동</span>
+                <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
+            </li>
+            <li class="item">
+                <span class="txt">안중근</span>
+                <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
+            </li>
+            <li class="item">
+                <span class="txt">김구</span>
+                <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
+            </li>
+            <li class="item">
+                <span class="txt">현충일</span>
+                <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
+            </li>
+            <li class="item">
+                <span class="txt">6.25 전쟁</span>
+                <button type="button" class="del" aria-label="삭제"><i class="ico ico-del"></i></button>
+            </li>
+        </ul>
+    </div>
 
-                        <!-- 인기 검색어 -->
-                        <div class="keyword-popular">
-                            <h2 class="keyword-title">인기 검색어</h2>
-                            <ol class="keyword-rank-list">
-                                <li class="item item-top">
-                                    <a href="javascript:void(0)" class="link">
-                                        <span class="num">1</span>
-                                        <span class="txt">김구</span>
-                                    </a>
-                                </li>
-                                <li class="item item-top">
-                                    <a href="javascript:void(0)" class="link">
-                                        <span class="num">2</span>
-                                        <span class="txt">대한민국 임시정부</span>
-                                    </a>
-                                </li>
-                                <li class="item item-top">
-                                    <a href="javascript:void(0)" class="link">
-                                        <span class="num">3</span>
-                                        <span class="txt">이달의 독립운동</span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link">
-                                        <span class="num">4</span>
-                                        <span class="txt">안중근</span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link">
-                                        <span class="num">5</span>
-                                        <span class="txt">5.18민주화운동</span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link">
-                                        <span class="num">6</span>
-                                        <span class="txt">3.1운동</span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link">
-                                        <span class="num">7</span>
-                                        <span class="txt">6.25전쟁</span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link">
-                                        <span class="num">8</span>
-                                        <span class="txt">봉오동전투</span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link">
-                                        <span class="num">9</span>
-                                        <span class="txt">청산리전투</span>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link">
-                                        <span class="num">10</span>
-                                        <span class="txt">8.15광복</span>
-                                    </a>
-                                </li>
-                            </ol>
-                        </div>
-                    </aside>
+    <!-- 인기 검색어 -->
+    <div class="keyword-popular">
+        <h2 class="keyword-title">인기 검색어</h2>
+        <ol class="keyword-rank-list">
+            <li class="item item-top">
+                <a href="javascript:void(0)" class="link">
+                    <span class="num">1</span>
+                    <span class="txt">김구</span>
+                </a>
+            </li>
+            <li class="item item-top">
+                <a href="javascript:void(0)" class="link">
+                    <span class="num">2</span>
+                    <span class="txt">대한민국 임시정부</span>
+                </a>
+            </li>
+            <li class="item item-top">
+                <a href="javascript:void(0)" class="link">
+                    <span class="num">3</span>
+                    <span class="txt">이달의 독립운동</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="javascript:void(0)" class="link">
+                    <span class="num">4</span>
+                    <span class="txt">안중근</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="javascript:void(0)" class="link">
+                    <span class="num">5</span>
+                    <span class="txt">5.18민주화운동</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="javascript:void(0)" class="link">
+                    <span class="num">6</span>
+                    <span class="txt">3.1운동</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="javascript:void(0)" class="link">
+                    <span class="num">7</span>
+                    <span class="txt">6.25전쟁</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="javascript:void(0)" class="link">
+                    <span class="num">8</span>
+                    <span class="txt">봉오동전투</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="javascript:void(0)" class="link">
+                    <span class="num">9</span>
+                    <span class="txt">청산리전투</span>
+                </a>
+            </li>
+            <li class="item">
+                <a href="javascript:void(0)" class="link">
+                    <span class="num">10</span>
+                    <span class="txt">8.15광복</span>
+                </a>
+            </li>
+        </ol>
+    </div>
+</aside>
                 </div>
             </div>
         </div>
