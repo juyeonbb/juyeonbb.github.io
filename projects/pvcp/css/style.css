@@ -5822,9 +5822,21 @@ div.pswp__img--placeholder,
   gap: 20px;
 }
 .card-list-wrap .card-list .card-item .card-thumb {
+  position: relative;
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
+}
+.card-list-wrap .card-list .card-item .card-thumb::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 .card-list-wrap .card-list .card-item .card-thumb img {
   display: block;
@@ -5838,6 +5850,7 @@ div.pswp__img--placeholder,
 }
 .card-list-wrap .card-list .card-item .card-category .badge {
   height: 34px;
+  min-width: 80px;
   padding: 0 15px;
   border-radius: 2px;
   font-size: 16px;
@@ -5856,7 +5869,6 @@ div.pswp__img--placeholder,
 .card-list-wrap .card-list .card-item .card-category .detail {
   display: flex;
   align-items: center;
-  line-height: 34px;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: -0.8px;
@@ -5872,7 +5884,6 @@ div.pswp__img--placeholder,
 .card-list-wrap .card-list .card-item .card-title {
   font-size: 20px;
   font-weight: bold;
-  line-height: 26px;
   letter-spacing: -1px;
   margin-bottom: 10px;
 }
@@ -5885,7 +5896,6 @@ div.pswp__img--placeholder,
   display: flex;
   align-items: flex-start;
   font-size: 15px;
-  line-height: 20px;
   gap: 5px 10px;
 }
 .card-list-wrap .card-list .card-item .card-meta dt {
@@ -5893,7 +5903,6 @@ div.pswp__img--placeholder,
   color: #222;
 }
 .card-list-wrap .card-list .card-item .card-meta dd {
-  line-height: 20px;
   color: #444;
 }
 .card-list-wrap.card-thumb-list-wrap .btn-circle-prev, .card-list-wrap.card-thumb-list-wrap .btn-circle-next {
@@ -5909,7 +5918,6 @@ div.pswp__img--placeholder,
   font-size: 17px;
   font-weight: 500;
   letter-spacing: -0.85px;
-  line-height: 24px;
   margin-bottom: 0;
 }
 .card-list-wrap.card-thumb-list-wrap .card-list .card-item .card-thumb {
@@ -5977,7 +5985,6 @@ div.pswp__img--placeholder,
 .result-group .result-group-head .btn-more {
   margin-left: auto;
   font-size: 15px;
-  line-height: 16px;
   border-bottom: 1px solid #666;
   font-weight: 500;
   color: #666;
@@ -5990,6 +5997,7 @@ div.pswp__img--placeholder,
   height: 30px;
   line-height: 30px;
   padding: 0 8px;
+  min-width: auto;
 }
 .result-group .card-list-wrap .card-item .card-category .detail {
   font-size: 15px;
@@ -6001,7 +6009,6 @@ div.pswp__img--placeholder,
 }
 .result-group .card-list-wrap .card-item .card-title {
   font-size: 20px;
-  line-height: 26px;
   letter-spacing: -1.1px;
 }
 .result-group .card-list-wrap .card-item .card-meta div {
@@ -6105,7 +6112,6 @@ div.pswp__img--placeholder,
 .result-group .person-list .item .card .overlay .desc {
   position: relative;
   font-size: 15px;
-  line-height: 20px;
   margin-top: 50px;
 }
 .result-group .person-list .item .card .overlay .desc::before {
@@ -6171,15 +6177,14 @@ div.pswp__img--placeholder,
 }
 .result-group .history-list .item .info .title {
   font-size: 20px;
-  line-height: 24px;
   font-weight: bold;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 }
 .result-group .history-list .item .info .meta {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px 5px;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 }
 .result-group .history-list .item .info .meta .col {
   position: relative;
@@ -6197,13 +6202,11 @@ div.pswp__img--placeholder,
 .result-group .history-list .item .info .meta .meta-term {
   font-size: 15px;
   font-weight: 500;
-  line-height: 14px;
   color: #666;
 }
 .result-group .history-list .item .info .meta .meta-desc {
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
   margin-top: 4px;
 }
 .result-group .history-list .item .info .desc {
@@ -6213,7 +6216,6 @@ div.pswp__img--placeholder,
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   font-size: 16px;
-  line-height: 24px;
   letter-spacing: -0.8px;
   color: #444;
 }
@@ -6280,13 +6282,11 @@ div.pswp__img--placeholder,
 .result-group .video-list.video-vertical-list .item .title {
   font-size: 20px;
   font-weight: bold;
-  line-height: 24px;
   margin-bottom: 8px;
   padding-top: 8px;
 }
 .result-group .video-list.video-vertical-list .item .desc {
   font-size: 16px;
-  line-height: 24px;
   font-weight: 400;
   color: #444;
   margin-bottom: 5px;
@@ -6295,7 +6295,6 @@ div.pswp__img--placeholder,
   display: flex;
   flex-wrap: wrap;
   font-size: 16px;
-  line-height: 24px;
   font-weight: 500;
   color: #1d56bc;
   gap: 10px;
@@ -6371,7 +6370,6 @@ div.pswp__img--placeholder,
 .result-group .record-list .item .info .title {
   font-size: 20px;
   font-weight: bold;
-  line-height: 24px;
   margin-bottom: 7px;
 }
 .result-group .book-list {
@@ -6412,7 +6410,7 @@ div.pswp__img--placeholder,
 .result-group .book-list .item .info .title {
   font-size: 20px;
   font-weight: bold;
-  line-height: 24px;
+  letter-spacing: -0.8px;
   margin-bottom: 6px;
 }
 .result-group .book-list .item .info .category {
