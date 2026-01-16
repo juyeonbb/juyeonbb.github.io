@@ -944,6 +944,8 @@
 .search-contents .search-global {
   max-width: 920px;
   margin: 0 auto 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px 0 rgba(36, 98, 214, 0.2);
 }
 .search-contents .search-tabs {
   display: flex;
