@@ -4022,6 +4022,10 @@ input::-webkit-search-results-decoration {
   font-size: 20px;
   letter-spacing: -1px;
 }
+.search-global .form-input:focus {
+  outline-offset: 4px;
+  background-color: #fff;
+}
 .search-global .form-input::placeholder {
   color: #666;
 }
