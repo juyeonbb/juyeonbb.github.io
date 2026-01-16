@@ -1547,7 +1547,7 @@ button.swiper-pagination-bullet {
   }
   .mast-head .nuri-txt {
     gap: 4px;
-    font-size: 14px;
+    font-size: 15px;
   }
   .header .utility {
     display: none;
@@ -1581,7 +1581,7 @@ button.swiper-pagination-bullet {
   }
   .header .btn-search em {
     display: inline-flex;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
     font-weight: 500;
     white-space: nowrap;
@@ -1596,7 +1596,7 @@ button.swiper-pagination-bullet {
   }
   .header .btn-menu em {
     display: inline-flex;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
     font-weight: 500;
     color: #444;
@@ -1679,7 +1679,7 @@ button.swiper-pagination-bullet {
   display: block;
   padding: 8px 10px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 15px;
   border-bottom: 1px solid #EEE;
   transition: color 0.2s;
 }
@@ -1935,7 +1935,7 @@ button.swiper-pagination-bullet {
   text-align: center;
 }
 .btn-chatbot .txt {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 14px;
   letter-spacing: -0.7px;
@@ -2242,7 +2242,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fffcf4;
 }
 .contents-tip .item {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 24px;
   color: #666;
 }
@@ -2390,7 +2390,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 14px;
 }
 .search-keyword .keyword .txt {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 28px;
   letter-spacing: -0.35px;
@@ -2681,7 +2681,7 @@ table {
   margin-top: 20px;
 }
 .table-head .tip {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: -0.35px;
   text-align: right;
   color: #666;
@@ -3410,7 +3410,7 @@ a, button {
   background-color: #2462D6;
 }
 .btn-check .form-check input + span {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 28px;
   letter-spacing: -0.35px;
@@ -3457,19 +3457,19 @@ a, button {
   color: #999;
 }
 .form-group .tip {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 20px;
   letter-spacing: -0.7px;
   color: #666;
 }
 .form-group .validation {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 20px;
   letter-spacing: -0.75px;
   color: #2462D6;
 }
 .form-group .caution {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 20px;
   letter-spacing: -0.75px;
   color: #da2576;
@@ -3989,7 +3989,7 @@ input::-webkit-search-results-decoration {
 }
 .breadcrumb .breadcrumb-item {
   position: relative;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 20px;
   letter-spacing: -0.7px;
   color: #444;
@@ -4803,7 +4803,7 @@ div.pswp__img--placeholder,
 }
 .popup.popup-terms .table small {
   display: block;
-  font-size: 12px;
+  font-size: 15px;
   color: #5669C8;
 }
 .popup.popup-terms .table.table-type-2 td {
@@ -4813,7 +4813,7 @@ div.pswp__img--placeholder,
   display: flex;
   align-items: center;
   text-align: left;
-  font-size: 14px;
+  font-size: 15px;
 }
 .popup.popup-terms .table.table-type-2 td .link img {
   width: 35px;
@@ -5638,7 +5638,7 @@ div.pswp__img--placeholder,
   border: 0;
   background-color: transparent;
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   color: #222;
 }
 
@@ -5665,7 +5665,7 @@ div.pswp__img--placeholder,
   font-weight: 500;
 }
 .ui-datepicker th {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: #666;
 }
@@ -5711,7 +5711,7 @@ div.pswp__img--placeholder,
   align-items: center;
   justify-content: center;
   padding: 0 5px;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Pretendard";
   background-image: none;
 }
@@ -5728,7 +5728,7 @@ div.pswp__img--placeholder,
   align-items: center;
   justify-content: center;
   padding: 0 5px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   font-family: "Pretendard";
   background-color: #F2F2F2;
@@ -5976,7 +5976,7 @@ div.pswp__img--placeholder,
 }
 .result-group .result-group-head .btn-more {
   margin-left: auto;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 16px;
   border-bottom: 1px solid #666;
   font-weight: 500;
@@ -5992,7 +5992,7 @@ div.pswp__img--placeholder,
   padding: 0 8px;
 }
 .result-group .card-list-wrap .card-item .card-category .detail {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: -1.5px;
   white-space: nowrap;
 }
@@ -6005,13 +6005,13 @@ div.pswp__img--placeholder,
   letter-spacing: -1.1px;
 }
 .result-group .card-list-wrap .card-item .card-meta div {
-  font-size: 14px;
+  font-size: 15px;
 }
 .result-group .sub-info {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: -0.7px;
   color: #666;
 }
@@ -6104,7 +6104,7 @@ div.pswp__img--placeholder,
 }
 .result-group .person-list .item .card .overlay .desc {
   position: relative;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 20px;
   margin-top: 50px;
 }
@@ -6195,7 +6195,7 @@ div.pswp__img--placeholder,
   background: #222;
 }
 .result-group .history-list .item .info .meta .meta-term {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 14px;
   color: #666;
@@ -7210,7 +7210,7 @@ div.pswp__img--placeholder,
   color: #1778fb;
 }
 .cs-service-info .col-call .time {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.7px;
