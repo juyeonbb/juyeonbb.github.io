@@ -62,22 +62,7 @@
                             </div>
                         </div>
                     </li>
-                    <!--                    <li class="item">-->
-                    <!--                        <div class="drop-wrap _zoomDropdown _dropdown">-->
-                    <!--                            <button type="button" class="drop-btn _dropdownBtn" aria-haspopup="menu" aria-expanded="false"><span>Language</span><i class="ico ico-toggle" aria-hidden="true"></i></button>-->
-                    <!--                            <div class="drop-menu _dropdownMenu" role="menu" aria-hidden="true" hidden>-->
-                    <!--                                <div class="drop-in">-->
-                    <!--                                    <ul class="drop-list">-->
-                    <!--                                        <li class="drop-item"><a href="javascript:void(0);" class="item-link _dropdownItem" target="_blank" title="새창열림">English <i class="ico ico-go"></i></a></li>-->
-                    <!--                                        <li class="drop-item"><a href="javascript:void(0);" class="item-link _dropdownItem" target="_blank" title="새창열림">中文 <i class="ico ico-go"></i></a></li>-->
-                    <!--                                        <li class="drop-item"><a href="javascript:void(0);" class="item-link _dropdownItem" target="_blank" title="새창열림">日本 <i class="ico ico-go"></i></a></li>-->
-                    <!--                                        <li class="drop-item"><a href="javascript:void(0);" class="item-link _dropdownItem" target="_blank" title="새창열림">Tiếng Việt <i class="ico ico-go"></i></a></li>-->
-                    <!--                                    </ul>-->
-                    <!--                                </div>-->
-                    <!--                            </div>-->
-                    <!--                        </div>-->
-                    <!--                    </li>-->
-                    <!--                    <li class="item"><a class="item-link" href="javascript:void(0);" target="_blank" title="새 창 열기">누리집 소통망(SNS)</a></li>-->
+                    <li class="item"><a class="item-link" href="javascript:void(0);" target="_blank" title="새 창 열기">누리집 소통망(SNS)</a></li>
                 </ul>
             </div>
             <div class="branding">
@@ -86,9 +71,43 @@
                         <img src="../../images/common/logo.png" alt="보훈문화종합포털">
                     </a>
                 </h1>
-                <nav class="main-menu">
+                <nav class="main-menu" aria-label="주요 메뉴">
                     <ul class="gnb-menu">
-                        <li class="menu-item"><a href="javascript:void(0);" class="menu-link">보훈자료</a></li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link" aria-haspopup="true" aria-expanded="false">보훈자료</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈자료</a>
+                                        <div class="depth3-menu" hidden>
+                                            <ul class="depth3">
+                                                <li><a href="javascript:void(0);">인물</a></li>
+                                                <li><a href="javascript:void(0);">역사</a></li>
+                                                <li><a href="javascript:void(0);">사진/필름</a></li>
+                                                <li><a href="javascript:void(0);">유물</a></li>
+                                                <li><a href="javascript:void(0);">사료</a></li>
+                                                <li><a href="javascript:void(0);">도서</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈콘텐츠</a>
+                                        <div class="depth3-menu" hidden>
+                                            <ul class="depth3">
+                                                <li><a href="javascript:void(0);">신규</a></li>
+                                                <li><a href="javascript:void(0);">청소년 추천</a></li>
+                                                <li><a href="javascript:void(0);">독립의 길</a></li>
+                                                <li><a href="javascript:void(0);">호국의 혼</a></li>
+                                                <li><a href="javascript:void(0);">민주의 봄</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">현충시설</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
                         <li class="menu-item"><a href="javascript:void(0);" class="menu-link">행사·전시</a></li>
                         <li class="menu-item"><a href="javascript:void(0);" class="menu-link">체험·교육</a></li>
                         <li class="menu-item"><a href="javascript:void(0);" class="menu-link">종합포털소개</a></li>
@@ -137,7 +156,7 @@
                                 <button type="button" class="search-tab" role="tab" aria-selected="false">동영상</button>
                             </li>
                             <li class="search-tab-item swiper-slide">
-                                <button type="button" class="search-tab" role="tab" aria-selected="false">교육</button>
+                                <button type="button" class="search-tab" role="tab" aria-selected="false">사진/필름</button>
                             </li>
                             <li class="search-tab-item swiper-slide">
                                 <button type="button" class="search-tab" role="tab" aria-selected="false">유물</button>
@@ -326,10 +345,10 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- 교육 -->
+                        <!-- 사진/필름 -->
                         <div class="result-group">
                             <div class="result-group-head">
-                                <h3 class="title">교육</h3>
+                                <h3 class="title">사진/필름</h3>
                                 <span class="count">(48)</span>
                                 <a href="javascript:void(0)" class="btn-more">검색결과 더보기</a>
                             </div>
