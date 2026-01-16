@@ -184,10 +184,7 @@
   gap: 0;
 }
 .main-contents .card-list-wrap .card-list .card-item {
-  display: flex;
   flex: none;
-  flex-direction: column;
-  gap: 20px;
 }
 .main-contents .section-visual {
   padding: 50px 0;

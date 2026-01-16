@@ -1474,33 +1474,33 @@ button.swiper-pagination-bullet {
   align-items: center;
   padding-bottom: 16px;
 }
-.header .branding .logo {
+.header .logo {
   flex-shrink: 0;
   width: 246px;
   height: 46px;
   margin-right: 110px;
 }
-.header .branding .logo a {
+.header .logo a {
   display: block;
   width: 100%;
   height: 100%;
 }
-.header .branding .logo a img {
+.header .logo a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.header .branding .gnb-menu {
+.header .gnb-menu {
   display: flex;
   align-items: center;
 }
-.header .branding .gnb-menu .menu-link {
+.header .gnb-menu .menu-link {
   position: relative;
   font-size: 24px;
   font-weight: bold;
   transition: 0.2s;
 }
-.header .branding .gnb-menu .menu-link::after {
+.header .gnb-menu .menu-link::after {
   content: "";
   position: absolute;
   width: 0;
@@ -1510,33 +1510,79 @@ button.swiper-pagination-bullet {
   transition: 0.2s;
   background-color: transparent;
 }
-.header .branding .gnb-menu .menu-link:hover {
+.header .gnb-menu .menu-link:hover {
   color: #2462D6;
 }
-.header .branding .gnb-menu .menu-link:hover::after {
+.header .gnb-menu .menu-link:hover::after {
   width: 100%;
   background-color: #2462D6;
 }
-.header .branding .main-menu {
+.header .main-menu {
   margin-left: auto;
 }
-.header .branding .main-menu .gnb-menu {
+.header .main-menu .gnb-menu {
   display: flex;
   align-items: center;
   gap: 80px;
 }
-.header .branding .main-menu .gnb-menu .menu-link {
+.header .main-menu .gnb-menu .menu-item {
+  position: relative;
+}
+.header .main-menu .gnb-menu .menu-link {
   font-size: 24px;
   white-space: nowrap;
   font-weight: bold;
 }
-.header .branding .actions {
+.header .main-menu .sub-menu {
+  position: fixed;
+  top: 135px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+  border-bottom: 1px solid #d8d8d8;
+}
+.header .main-menu .sub-menu .depth2 {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.header .main-menu .sub-menu .depth2 .depth2-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 10px 16px;
+}
+.header .main-menu .sub-menu .depth2 .depth2-item .depth2-link {
+  white-space: nowrap;
+}
+.header .main-menu .sub-menu .depth2 .depth2-item.is-active .depth2-link {
+  color: #2462D6;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.header .main-menu .sub-menu .depth3-menu {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.header .main-menu .sub-menu .depth3-menu .depth3 {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+.header .main-menu .sub-menu .depth3-menu .depth3 a {
+  white-space: nowrap;
+}
+.header .actions {
   display: flex;
   align-items: center;
   gap: 16px;
   margin-left: 110px;
 }
-.header .branding .actions .action-item {
+.header .actions .action-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1544,13 +1590,13 @@ button.swiper-pagination-bullet {
   border-radius: 6px;
   padding: 2px;
 }
-.header .branding .actions .action-item:hover {
+.header .actions .action-item:hover {
   background-color: #EDF1F5;
 }
-.header .branding .actions .action-item:active {
+.header .actions .action-item:active {
   background-color: #CDD7E4;
 }
-.header .branding .actions .txt-link {
+.header .actions .txt-link {
   font-size: 16px;
   font-weight: 500;
   color: #444;
@@ -1572,15 +1618,15 @@ button.swiper-pagination-bullet {
     padding-bottom: 0;
     gap: 10px;
   }
-  .header .branding .logo {
+  .header .logo {
     width: 172px;
     height: 32.3px;
     margin-right: 0;
   }
-  .header .branding .main-menu {
+  .header .main-menu {
     display: none;
   }
-  .header .branding .actions {
+  .header .actions {
     margin-left: auto;
     gap: 10px;
   }
@@ -1622,7 +1668,7 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width: 360px) {
-  .header .branding .actions {
+  .header .actions {
     gap: 10px;
   }
   .header .btn-search em {
@@ -5938,6 +5984,9 @@ div.pswp__img--placeholder,
 .card-list-wrap.card-thumb-list-wrap .btn-circle-next {
   right: -25px;
 }
+.card-list-wrap.card-thumb-list-wrap .card-list .card-item {
+  gap: 15px;
+}
 .card-list-wrap.card-thumb-list-wrap .card-list .card-item .card-title {
   font-size: 17px;
   font-weight: 500;
@@ -6178,7 +6227,7 @@ div.pswp__img--placeholder,
   transform: translateY(0);
 }
 .result-group .person-list .item .card:hover .thumb .overlay .desc::before {
-  transform: translateX(-50%) rotate(360deg);
+  transform: translateX(-50%) rotate(1800deg);
 }
 .result-group .history-list {
   display: flex;
