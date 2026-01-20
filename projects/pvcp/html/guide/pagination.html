@@ -8,6 +8,7 @@
     <script src="../../js/swiper.js"></script>
     <script src="../../js/twbsPagination.js"></script>
     <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_gnb.js"></script>
     <script src="../../js/ui_common.js"></script>
     <script src="../../js/popper.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
@@ -37,10 +38,10 @@
                 $pagination.twbsPagination({
                     totalPages: TOTAL_PAGES,
                     visiblePages: getVisiblePages(),
-                    first: `<i class="ico ico-paging-first"></i><span class="sr-only">처음 페이지</span>`,
-                    prev: `<i class="ico ico-paging-prev"></i><span class="sr-only">이전 페이지</span>`,
-                    next: `<i class="ico ico-paging-next"></i><span class="sr-only">다음 페이지</span>`,
-                    last: `<i class="ico ico-paging-last"></i><span class="sr-only">마지막 페이지</span>`
+                    first: false,
+                    prev: `<i class="ico ico-paging-prev"></i><span class="">이전</span>`,
+                    next: `<span class="">다음</span><i class="ico ico-paging-next"></i>`,
+                    last: false
                 });
             }
 

@@ -8,6 +8,7 @@
     <script src="../../js/swiper.js"></script>
     <script src="../../js/twbsPagination.js"></script>
     <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_gnb.js"></script>
     <script src="../../js/ui_common.js"></script>
     <script src="../../js/popper.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
@@ -19,8 +20,159 @@
 <div class="guide-container">
     <div class="guide-content">
         <div class="guide-heading">form</div>
+        <div class="search-detail-box">
+            <div class="search-bar">
+                <div class="form-keyword">
+                    <select class="form-select" title="검색 분류">
+                        <option value="person" selected>인물</option>
+                        <option value="place">장소</option>
+                    </select>
+                    <span class="divider"></span>
+                    <input class="form-input" type="search" title="검색어" placeholder="검색어를 입력하세요" />
+                </div>
+                <div class="form-submit">
+                    <button type="button" class="btn btn-detail">
+                        <i class="ico ico-magnify"></i>
+                        <span>검색</span>
+                    </button>
+                    <button type="button" class="btn btn-border-blue btn-detail _btnSearchDetail" aria-expanded="false" aria-controls="search-detail">
+                        <i class="ico ico-magnify-plus"></i>
+                        <span>상세검색</span>
+                    </button>
+                </div>
+            </div>
+            <div class="search-detail" hidden>
+                <div class="search-detail-inner">
+                    <div class="search-detail-title">인물검색</div>
+                    <div class="search-detail-form">
+                        <div class="search-detail-grid">
+                            <div class="form-group">
+                                <label class="label">인물명</label>
+                                <div class="form-keyword">
+                                    <select class="form-select" title="인물명 언어">
+                                        <option value="ko" selected>한글</option>
+                                        <option value="en">영어</option>
+                                    </select>
+                                    <input class="form-input" type="text" title="인물명" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">이명</label>
+                                <input class="form-input" type="text" title="이명" />
+                            </div>
+                            <div class="form-group">
+                                <label class="label">본적</label>
+                                <div class="form-category">
+                                    <select class="form-select" title="본적 1차">
+                                        <option value="" selected disabled>선택</option>
+                                        <option value="seoul">서울</option>
+                                    </select>
+                                    <select class="form-select" title="본적 2차">
+                                        <option value="" selected disabled>선택</option>
+                                        <option value="mapo">마포</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">성별</label>
+                                <select class="form-select" title="성별">
+                                    <option value="" selected>전체</option>
+                                    <option value="m">남</option>
+                                    <option value="f">여</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">대상구분</label>
+                                <select class="form-select" title="대상구분">
+                                    <option value="" selected>전체</option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">운동계열</label>
+                                <select class="form-select" title="운동계열">
+                                    <option value="" selected>전체</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">포상훈격</label>
+                                <select class="form-select" title="포상훈격">
+                                    <option value="" selected>전체</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">포상년도</label>
+                                <div class="form-period">
+                                    <input class="form-input" type="text" title="포상년도 시작" inputmode="numeric" />
+                                    <span>~</span>
+                                    <input class="form-input" type="text" title="포상년도 종료" inputmode="numeric" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">생년월일</label>
+                                <div class="form-period">
+                                    <select class="form-select" title="출생연도 시작">
+                                        <option value="" selected disabled>출생연도</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2025">2025</option>
+                                    </select>
+                                    <span>~</span>
+                                    <select class="form-select" title="출생연도 종료">
+                                        <option value="" selected disabled>선택</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2025">2025</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">사망년월일</label>
+                                <div class="form-period">
+                                    <select class="form-select" title="사망연도 시작">
+                                        <option value="" selected disabled>사망연도</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2025">2025</option>
+                                    </select>
+                                    <span>~</span>
+                                    <select class="form-select" title="사망연도 종료">
+                                        <option value="" selected disabled>선택</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2025">2025</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">인명색인</label>
+                                <select class="form-select" title="인명색인">
+                                    <option value="" selected>전체</option>
+                                    <option value="y">있음</option>
+                                    <option value="n">없음</option>
+                                </select>
+                            </div>
+                            <div class="search-detail-actions">
+                                <button type="button" class="btn with-icon">
+                                    <i class="ico ico-magnify"></i>
+                                    <span>검색</span>
+                                </button>
+                                <button type="button" class="btn btn-outline-gray with-icon">
+                                    <i class="ico ico-refresh"></i>
+                                    <span>초기화</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br/><br/>
+
         <div class="form-group">
-            <label class="label">아이디</label>
+            <label class="label">인물명</label>
             <input class="form-input" type="text" title="text" placeholder="아이디를 입력해주세요."/>
         </div>
 
@@ -162,20 +314,6 @@
         <br/>
         <br/>
 
-        <div class="form-date">
-            <input class="form-input" type="date" title="startDate" placeholder="">
-        </div>
-
-        <br/>
-        <br/>
-
-        <div class="form-time">
-            <input class="form-input" type="time" title="startTime">
-        </div>
-
-        <br/>
-        <br/>
-
         <label class="form-switch">
             <input class="switch-checkbox" type="checkbox" checked>
             <span class="switch-toggle" aria-hidden="true"></span>
@@ -222,12 +360,56 @@
 
         <br/>
 
-        <div class="form-keyword">
-            <select class="form-select" title="select">
-                <option value="제목순">제목순</option>
-                <option value="내용순">내용순</option>
-            </select>
-            <input class="form-input" type="text" title="text" placeholder="키워드를 입력해주세요."/>
+        <div class="form-group">
+            <label class="label">인물명</label>
+            <div class="form-keyword">
+                <select class="form-select" title="select">
+                    <option value="한글">한글</option>
+                    <option value="영어">영어</option>
+                </select>
+                <input class="form-input" type="text" title="text" placeholder=""/>
+            </div>
+        </div>
+
+        <br/>
+
+        <div class="form-group">
+            <label class="label">생년월일</label>
+            <div class="form-period">
+                <select class="form-select" title="select">
+                    <option value="출생연도" selected disabled>출생연도</option>
+                    <option value="2026">2026</option>
+                    <option value="2025">2025</option>
+                    <option value="2024">2024</option>
+                </select>
+                <span>~</span>
+                <select class="form-select" title="select">
+                    <option value="선택" selected disabled>선택</option>
+                    <option value="1월">1월</option>
+                    <option value="2월">2월</option>
+                    <option value="3월">3월</option>
+                </select>
+            </div>
+        </div>
+
+        <br/>
+
+        <div class="form-group">
+            <label class="label">인물명</label>
+            <div class="form-category">
+                <select class="form-select" title="select">
+                    <option value="출생연도" selected disabled>선택</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+                <select class="form-select" title="select">
+                    <option value="선택" selected disabled>선택</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
         </div>
     </div>
 </div>

@@ -121,6 +121,18 @@ let front = (function () {
                 fn.zoom.apply(current);
             }, 200));
         })();
+
+        // 상세검색 토글
+        $(document).on('click', '._btnSearchDetail', function () {
+            const $btn = $(this);
+            const target = $btn.attr('aria-controls');
+            const $panel = $('.' + target);
+
+            const isOpen = $btn.attr('aria-expanded') === 'true';
+
+            $btn.attr('aria-expanded', String(!isOpen));
+            $panel.prop('hidden', isOpen);
+        });
     };
 
     function handleFormAccessibility(e) {

@@ -936,6 +936,18 @@
   }
 }
 /*
+  서브페이지 공통
+*/
+.sub-contents {
+  padding-top: 54px;
+}
+
+@media (max-width: 1280px) {
+  .sub-contents {
+    padding-top: 0;
+  }
+}
+/*
   통합검색
 */
 .search-contents .search-global {
@@ -1190,5 +1202,35 @@
   align-items: center;
   color: #444;
   font-weight: 500;
+}
+
+/*
+  보훈자료
+*/
+.archive-container .search-detail-box {
+  margin-bottom: 60px;
+}
+.archive-container .result-group .person-list {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.archive-container .pagination {
+  margin-top: 60px;
+}
+
+@media (max-width: 1280px) {
+  .archive-container .search-detail-box {
+    margin-bottom: 40px;
+  }
+  .archive-container .result-group .person-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .archive-container .pagination {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 360px) {
+  .archive-container .result-group .person-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 /*# sourceMappingURL=pages.css.map */

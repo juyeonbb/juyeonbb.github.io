@@ -8,6 +8,7 @@
     <script src="../../js/swiper.js"></script>
     <script src="../../js/twbsPagination.js"></script>
     <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_gnb.js"></script>
     <script src="../../js/ui_common.js"></script>
     <script src="../../js/popper.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
@@ -26,7 +27,7 @@
         <span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
     </div>
 </div>
-<!-- Header (디자인 진행중) -->
+<!-- Header // 디자인 대기중 -->
 <header class="header _header">
     <div class="header-pc">
         <div class="inner">
@@ -35,7 +36,8 @@
                     <li class="item">
                         <div class="drop-wrap _zoomDropdown _dropdown">
                             <button type="button" class="drop-btn _btnZoom _dropdownBtn" aria-controls="zoomMenu" aria-expanded="false">
-                                <span>화면크기</span><i class="ico ico-toggle" aria-hidden="true"></i></button>
+                                <span>화면크기</span><i class="ico ico-toggle" aria-hidden="true"></i>
+                            </button>
                             <div class="drop-menu _dropdownMenu" id="zoomMenu" hidden>
                                 <div class="drop-in">
                                     <ul class="drop-list">
@@ -70,20 +72,20 @@
                 </h1>
                 <nav class="main-menu">
                     <ul class="gnb-menu">
-                        <li class="menu-item">
+                        <li class="menu-item"> <!-- 서브페이지에서 gnb 고정일 경우, is-pinned 클래스 추가 -->
                             <a href="javascript:void(0);" class="menu-link" aria-haspopup="true" aria-expanded="false">보훈자료</a>
                             <div class="sub-menu" hidden>
                                 <ul class="depth2" role="list">
                                     <li class="depth2-item is-active">
-                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈자료</a>
-                                        <div class="depth3-menu" hidden>
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true">보훈자료</a>
+                                        <div class="depth3-menu">
                                             <ul class="depth3">
-                                                <li><a href="javascript:void(0);">인물</a></li>
-                                                <li><a href="javascript:void(0);">역사</a></li>
-                                                <li><a href="javascript:void(0);">사진/필름</a></li>
-                                                <li><a href="javascript:void(0);">유물</a></li>
-                                                <li><a href="javascript:void(0);">사료</a></li>
-                                                <li><a href="javascript:void(0);">도서</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">인물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">역사</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">사진/필름</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">유물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">사료</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">도서</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -91,11 +93,11 @@
                                         <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈콘텐츠</a>
                                         <div class="depth3-menu" hidden>
                                             <ul class="depth3">
-                                                <li><a href="javascript:void(0);">신규</a></li>
-                                                <li><a href="javascript:void(0);">청소년 추천</a></li>
-                                                <li><a href="javascript:void(0);">독립의 길</a></li>
-                                                <li><a href="javascript:void(0);">호국의 혼</a></li>
-                                                <li><a href="javascript:void(0);">민주의 봄</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">신규</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">청소년 추천</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">독립의 길</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">호국의 혼</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">민주의 봄</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -115,7 +117,7 @@
                             <a href="javascript:void(0);" class="menu-link">행사·전시</a>
                             <div class="sub-menu" hidden>
                                 <ul class="depth2" role="list">
-                                    <li class="depth2-item">
+                                    <li class="depth2-item is-active">
                                         <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">기념행사</a>
                                     </li>
                                     <li class="depth2-item">
