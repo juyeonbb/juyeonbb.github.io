@@ -1322,8 +1322,8 @@ button.swiper-pagination-bullet {
 .ico-magnify-plus {
   width: 20px;
   height: 20px;
-  background-image: url(../images/common/ico-magnify-minus.png);
-  background-image: url(../images/common/ico-magnify-plus.png);
+  background-image: url(../images/archive/ico-magnify-minus.png);
+  background-image: url(../images/archive/ico-magnify-plus.png);
 }
 
 .ico-refresh {
@@ -2830,7 +2830,7 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: 4px;
 }
 .search-detail-box .search-bar .btn-detail[aria-expanded=true] .ico-magnify-plus {
-  background-image: url(../images/common/ico-magnify-minus.png);
+  background-image: url(../images/archive/ico-magnify-minus.png);
 }
 .search-detail-box .search-detail-inner {
   display: flex;
