@@ -148,5 +148,15 @@ data.archive = {
             url: 'pvData/보훈자료_인물',
             page: '보훈자료 > 인물'
         },
+        {
+            stateClass: 'complete',
+            url: 'pvData/보훈자료_역사',
+            page: '보훈자료 > 역사'
+        },
+        // {
+        //     stateClass: 'complete',
+        //     url: 'pvData/보훈자료_사진필름',
+        //     page: '보훈자료 > 사진/필름'
+        // },
     ]
 }
