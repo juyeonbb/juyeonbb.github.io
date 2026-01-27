@@ -1322,8 +1322,8 @@ button.swiper-pagination-bullet {
 .ico-magnify-plus {
   width: 20px;
   height: 20px;
-  background-image: url(../images/archive/ico-magnify-minus.png);
-  background-image: url(../images/archive/ico-magnify-plus.png);
+  background-image: url(../images/common/ico-magnify-minus.png);
+  background-image: url(../images/common/ico-magnify-plus.png);
 }
 
 .ico-refresh {
@@ -2830,34 +2830,34 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: 4px;
 }
 .search-detail-box .search-bar .btn-detail[aria-expanded=true] .ico-magnify-plus {
-  background-image: url(../images/archive/ico-magnify-minus.png);
+  background-image: url(../images/common/ico-magnify-minus.png);
 }
-.search-detail-box .search-detail-inner {
+.search-detail-inner {
   display: flex;
   border-top: 1px dashed #dfdfdf;
   margin-top: 35px;
   padding-top: 20px;
 }
-.search-detail-box .search-detail-inner .search-detail-title {
+.search-detail-title {
   flex: 0 0 140px;
   font-size: 19px;
   font-weight: bold;
   letter-spacing: -0.95px;
 }
-.search-detail-box .search-detail-inner .search-detail-grid {
+.search-detail-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px 30px;
 }
-.search-detail-box .search-detail-inner .search-detail-grid .form-group {
+.search-detail-grid .form-group {
   min-width: 0;
 }
-.search-detail-box .search-detail-inner .search-detail-actions {
+.search-detail-actions {
   display: flex;
   gap: 5px;
   align-items: flex-end;
 }
-.search-detail-box .search-detail-inner .search-detail-actions .btn .ico-magnify {
+.search-detail-actions .btn .ico-magnify {
   width: 17px;
   height: 17px;
 }
@@ -2867,14 +2867,14 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     border-radius: 10px;
   }
-  .search-detail-box .search-detail-inner {
+  .search-detail-inner {
     flex-direction: column;
   }
-  .search-detail-box .search-detail-inner .search-detail-title {
+  .search-detail-title {
     flex: none;
     margin-bottom: 20px;
   }
-  .search-detail-box .search-detail-inner .search-detail-grid {
+  .search-detail-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
@@ -2883,8 +2883,11 @@ h1, h2, h3, h4, h5, h6 {
   .search-detail-box .search-bar {
     flex-direction: column;
   }
-  .search-detail-box .search-detail-inner .search-detail-grid {
+  .search-detail-grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .search-detail-actions {
+    justify-content: center;
   }
 }
 /*
