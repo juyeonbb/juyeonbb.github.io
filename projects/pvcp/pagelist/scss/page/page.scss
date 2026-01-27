@@ -1,0 +1,390 @@
+.nav {
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background-color: $background-color_1;
+  color: $color_1;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 100;
+
+  a {
+    display: block;
+    text-align: center;
+
+    img {
+      width: 40px;
+      display: inline-block;
+    }
+
+    &:not(.link-home) {
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-size: 12px;
+      color: $color_1;
+      display: block;
+    }
+  }
+
+  .logo {
+    padding: 30px 0;
+    display: inline-block;
+
+    a {
+      color: $color_2;
+      display: block;
+      margin-top: 0;
+
+      img {
+        width: 40px;
+      }
+
+      .link {
+        display: block;
+        position: relative;
+      }
+    }
+  }
+
+  .btn-open-depths {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 292px;
+    top: 30px;
+    border-radius: 50%;
+    background-color: $btn-fold-bg;
+    color: $btn-fold-color-bg;
+    background-size: 28px;
+    cursor: pointer;
+
+    i {
+      margin-top: 10px;
+    }
+
+    &.close {
+      left: 23px;
+    }
+  }
+}
+
+.nav-depth-2 {
+  position: absolute;
+  left: 10px;
+  z-index: 90;
+  width: 300px;
+  height: 100%;
+  background: $background-color_nav;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  padding: 10px 10px 0;
+
+  .btn-ia {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    padding: 0 20px;
+    height: 30px;
+    background: #00ac47;
+    color: $color_2;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .title {
+    position: relative;
+    margin-bottom: 10px;
+    padding-right: 15px;
+
+    h2 {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #121212;
+      color: $color_1;
+      line-height: 20px;
+    }
+
+    .btn-control-all {
+      position: relative;
+      right: 0;
+      top: 0;
+      width: 61px;
+      height: 30px;
+      display: block;
+      background: $btn-close-bg;
+      color: $color_2;
+      line-height: 30px;
+      text-align: center;
+      cursor: pointer;
+
+      &::after {
+        content: '모두 닫기';
+        font-size: 12px;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 30px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .btn-control-all.close {
+      &::after {
+        content: '모두 열기';
+      }
+    }
+
+    p {
+      text-align: right;
+
+      a {
+        color: $color_1;
+        cursor: pointer;
+        font-size: 14px;
+
+        .fa-check-square {
+          display: none;
+        }
+      }
+
+      a.mobile {
+        margin-right: 10px;
+      }
+
+      a.checked {
+        .fa-square {
+          display: none;
+        }
+
+        .fa-check-square {
+          display: inline-block;
+        }
+      }
+    }
+
+    i {
+      font-size: 13px;
+    }
+  }
+
+  .complete-percentage {
+    display: block;
+    line-height: 14px;
+    font-size: 13px;
+  }
+
+  &.close {
+    width: 30px;
+    padding: 28px 0 0;
+
+    > * {
+      display: none;
+    }
+
+    + {
+      .content {
+        margin-left: 42px;
+      }
+    }
+  }
+}
+
+.wrap-scroll {
+  overflow: scroll;
+  height: calc(100% - 120px);
+  width: 100%;
+  overflow-x: hidden;
+
+  .title-page-category {
+    position: relative;
+
+    li {
+      &:hover {
+        background-color: $background-color_3;
+        color: $color_1;
+      }
+    }
+
+    > h3 {
+      font-size: 15px;
+      height: 31px;
+      line-height: 31px;
+      position: relative;
+      padding-bottom: 0;
+      padding-left: 5px;
+      color: $color_1;
+      background-color: $background-color_3;
+
+      span {
+        font-weight: 900;
+      }
+    }
+
+    ul {
+      padding-bottom: 10px;
+
+      span {
+        color: $color_1;
+      }
+
+      .depths-2-filename {
+        font-weight: 900;
+        font-size: 12px;
+      }
+
+      .tooltip {
+        font-size: 11px;
+      }
+
+      .fas {
+        position: absolute;
+        right: 3px;
+        top: 10px;
+        color: $color_1;
+      }
+    }
+
+    .ing {
+      font-size: 14px;
+      width: 100%;
+      display: block;
+      padding-bottom: 10px;
+      padding-top: 5px;
+
+      i {
+        color: $color_3;
+        font-size: 16px;
+        display: inline-block;
+        margin-left: 5px;
+      }
+
+      span {
+        position: relative;
+        width: 23%;
+        display: inline-block;
+        text-align: right;
+      }
+
+      strong {
+        color: $color_1;
+      }
+
+      strong.percent {
+        color: $color_1;
+        font-size: 16px;
+      }
+
+      em {
+        position: relative;
+        top: -3px;
+        display: inline-block;
+        background-color: $background-color_4;
+        font-size: 10px;
+        color: $color_2;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        font-style: normal;
+        text-align: center;
+        margin-top: -3px;
+        line-height: 16px;
+      }
+
+      .circle_waiting {
+        background-color: $background-color_2;
+      }
+
+      .circle_working {
+        background-color: $background-color_1;
+      }
+
+      .circle_complete {
+        background-color: $background-color_5;
+      }
+    }
+  }
+
+  ul {
+    li {
+      position: relative;
+      margin-bottom: 5px;
+      font-size: 16px;
+
+      .link {
+        position: relative;
+        display: block;
+        padding: 5px 18px 5px 58px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .unlink {
+        position: relative;
+        display: block;
+        padding: 5px 18px 5px 58px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .link {
+        &.focus {
+          background-color: $background-color_2;
+        }
+      }
+
+      .unlink {
+        &.focus {
+          background-color: $background-color_2;
+        }
+      }
+
+      &:hover {
+        background-color: $background-color_3;
+      }
+
+      &.nav-depth-2 {
+        .link {
+          &.focus {
+            background-color: $background-color_3;
+          }
+        }
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ffd84c;
+  }
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  margin-left: 312px;
+  background-color: $background-color_6;
+
+  iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+}

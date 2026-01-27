@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/swiper.js"></script>
+    <script src="../../js/twbsPagination.js"></script>
+    <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_gnb.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <script src="../../js/popper.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="shortcut icon" href="../../images/common/favicon.ico">
+    <title>보훈문화종합포털</title>
+</head>
+<body>
+<!-- 본문 바로가기 -->
+<div class="skip-nav" id="skip">
+    <a class="view-content" href="#content">본문 바로가기</a>
+</div>
+<!-- 전자정부 누리집 -->
+<div class="mast-head">
+    <div class="inner">
+        <span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+    </div>
+</div>
+<!-- Header // 디자인 대기중 -->
+<header class="header _header">
+    <div class="header-pc">
+        <div class="inner">
+            <div class="utility">
+                <ul class="list">
+                    <li class="item">
+                        <div class="drop-wrap _zoomDropdown _dropdown">
+                            <button type="button" class="drop-btn _btnZoom _dropdownBtn" aria-controls="zoomMenu" aria-expanded="false">
+                                <span>화면크기</span><i class="ico ico-toggle" aria-hidden="true"></i>
+                            </button>
+                            <div class="drop-menu _dropdownMenu" id="zoomMenu" hidden>
+                                <div class="drop-in">
+                                    <ul class="drop-list">
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="0.9"><span class="ex-zoom">가</span>작게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1"><span class="ex-zoom">가</span>보통</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem on" data-zoom="1.1"><span class="ex-zoom">가</span>조금 크게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1.2"><span class="ex-zoom">가</span>크게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1.3"><span class="ex-zoom">가</span>가장 크게</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item"><a class="item-link" href="javascript:void(0);" target="_blank" title="새 창 열기">누리집 소통망(SNS)</a></li>
+                </ul>
+            </div>
+            <div class="branding">
+                <h1 class="logo">
+                    <a href="javascript:void(0);">
+                        <img src="../../images/common/logo.png" alt="보훈문화종합포털">
+                    </a>
+                </h1>
+                <nav class="main-menu">
+                    <ul class="gnb-menu">
+                        <li class="menu-item"> <!-- 서브페이지에서 gnb 고정일 경우, is-pinned 클래스 추가 -->
+                            <a href="javascript:void(0);" class="menu-link" aria-haspopup="true" aria-expanded="false">보훈자료</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item is-active">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true">보훈자료</a>
+                                        <div class="depth3-menu">
+                                            <ul class="depth3">
+                                                <li class="depth3-item"><a href="javascript:void(0);">인물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">역사</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">교육</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">유물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">사료</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">도서</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈콘텐츠</a>
+                                        <div class="depth3-menu" hidden>
+                                            <ul class="depth3">
+                                                <li class="depth3-item"><a href="javascript:void(0);">신규</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">청소년 추천</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">독립의 길</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">호국의 혼</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">민주의 봄</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">현충시설</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">연표검색</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">지도검색</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">행사·전시</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item is-active">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true">기념행사</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">특별 전시</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">상설 전시</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">디지털·VR 전시</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">체험·교육</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">문화·체험 행사</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">온 · 오프라인 교육</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">배움 자료실</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈e북</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">이달의 영웅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">이달의 역사</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">종합포털소개</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">포털  소개</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈의 개념</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈 문화통계</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">공지사항</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보도자료</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="actions">
+<!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">로그인</a></li>-->
+<!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">회원가입</a></li>-->
+                    <li class="action-item"><a href="javascript:void(0);" class="btn-search" title="통합 검색"><i class="ico ico-search"></i><em class="show-mo">통합 검색</em></a></li>
+                    <li class="action-item show-pc"><button type="button" class="btn-menu" title="전체메뉴"><span></span><span></span><span></span></button></li>
+                    <li class="action-item show-mo"><button type="button" class="btn-menu" title="전체메뉴"><span></span><span></span><span></span><em>전체메뉴</em></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-mo"></div>
+</header>
+<main class="wrap" id="content">
+    <div class="container">
+        <!-- s contents -->
+        <div class="main-contents">
+            <!-- s 보훈 문화 통합검색 서비스 -->
+            <div class="section-visual">
+                <div class="inner">
+                    <div class="row">
+                        <div class="box-banner">
+                            <div class="slider-wrapper">
+                                <div class="swiper banner-slider _bannerSlider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a class="link" href="javascript:void(0);">
+                                                <img src="../../images/@temp/visual-1.png" alt="1945년 8월 15일 그 날을 기억하겠습니다."/>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="link" href="javascript:void(0);">
+                                                <img src="../../images/@temp/banner-1.png" alt="한국광복군 그리고 국군"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-controls">
+                                <button class="btn-arrow-prev" type="button"><i class="ico ico-prev-white"></i><span class="sr-only">이전</span></button>
+                                <div class="page-num"></div>
+                                <button class="btn-arrow-next" type="button"><i class="ico ico-next-white"></i><span class="sr-only">다음</span></button>
+                            </div>
+                            <button class="btn-slide-state _btnVisualSlideState" type="button"><i class="ico ico-slider-paused-white"></i><span class="sr-only">멈춤</span></button>
+                        </div>
+                        <div class="box-search">
+                            <div class="search-header">
+                                <div class="txt-box">
+                                    <div class="txt">모두가 함께하는 일상 속 살아있는 보훈</div>
+                                    <div class="txt-lg">보훈 문화 통합검색 서비스</div>
+                                </div>
+                                <img src="../../images/main/img-char.png" alt="보보"/>
+                            </div>
+                            <div class="search-global">
+                                <input class="form-input" type="search"  aria-label="통합검색" placeholder="검색어를 입력하세요" />
+                                <button type="button" class="btn-search"><i class="ico ico-search-main"></i><span class="sr-only">검색하기</span></button>
+                            </div>
+                            <div class="tag-list">
+                                <a class="tag" href="javascript:void(0);">광복절행사</a>
+                                <a class="tag" href="javascript:void(0);">광복80주년</a>
+                                <a class="tag" href="javascript:void(0);">광복절행사</a>
+                            </div>
+                            <div class="desc">국가보훈부는 보훈문화 콘텐츠에 대한 역사적사실과 전문가의 검증을 통해
+                                국민의 올바른 보훈의식 형성을  위해 노력하고 있습니다.</div>
+                            <div class="partner-list">
+                                <a href="https://www.museum.go.kr/MUSEUM/main/index.do" target="_blank" class="partner"><img src="../../images/main/img-partner-1.png" alt="문화체육관광부 국립중앙박물관"/></a>
+                                <a href="https://www.nmkpg.go.kr/" target="_blank" class="partner"><img src="../../images/main/img-partner-2.png" alt="국립대한민국임시정부기념관"/></a>
+                                <a href="https://e-gonghun.mpva.go.kr/user/index.do;jsessionid=aZ2OlTFdrwx_SSPkWgbMolIl-canrFqDrm8AxCRJ.rems10" target="_blank" class="partner"><img src="../../images/main/img-partner-3.png" alt="공훈전자사료관"/></a>
+                                <a href="https://i815.or.kr/" target="_blank" class="partner"><img src="../../images/main/img-partner-4.png" alt="독립기념관"/></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                let bannerSlider = new Swiper('._bannerSlider', {
+                    centeredSlides: true,
+                    effect: 'fade',
+                    loop: true,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false
+                    },
+                    pagination: {
+                        el: '.section-visual .page-num',
+                        type: 'fraction',
+                        currentClass: 'current',
+                        totalClass: 'total',
+                        renderFraction: function (currentClass, totalClass) {
+                            return '<span class="' + currentClass + '"></span><span class="' + totalClass + '"></span>';
+                        },
+                    },
+                    navigation: {
+                        prevEl: '.section-visual .btn-arrow-prev',
+                        nextEl: '.section-visual .btn-arrow-next'
+                    },
+                });
+
+                $('.section-visual ._btnVisualSlideState').on('click', function () {
+                    if (!$(this).hasClass('paused')) {
+                        bannerSlider.autoplay.pause();
+                        $(this).addClass('paused').html(`<i class="ico ico-slider-play-white"></i><span class="sr-only">재생</span>`);
+                    } else {
+                        bannerSlider.autoplay.resume();
+                        $(this).removeClass('paused').html(`<i class="ico ico-slider-paused-white"></i><span class="sr-only">멈춤</span>`);
+                    }
+                })
+            </script>
+            <!-- e 보훈 문화 통합검색 서비스 -->
+
+            <!-- s 추천 콘텐츠 -->
+            <section class="section-recommend">
+                <div class="inner">
+                    <div class="section-header">
+                        <h2 class="section-title">추천 콘텐츠</h2>
+                        <ul class="section-filter" role="radiogroup" aria-label="추천 콘텐츠 필터">
+                            <li class="item on"><button type="button" role="radio" aria-checked="true">신규 콘텐츠</button></li>
+                            <li class="item"><button type="button" role="radio" aria-checked="false">독립의 길</button></li>
+                            <li class="item"><button type="button" role="radio" aria-checked="false">호국의 혼</button></li>
+                            <li class="item"><button type="button" role="radio" aria-checked="false">민주의 혼</button></li>
+                        </ul>
+                        <a href="javascript:void(0)" class="btn-more"><span>더보기</span><i class="ico ico-plus"></i></a>
+                    </div>
+                    <div class="section-body">
+                        <div class="slider-wrapper card-list-wrap card-thumb-list-wrap">
+                            <button type="button" class="btn-circle-prev"><i class="ico ico-slider-prev"></i><span class="sr-only">이전</span></button>
+                            <div class="swiper _recommendSlider">
+                                <div class="swiper-wrapper card-list">
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/h-thum-1.png" alt="2025 턴투워드부산(Turn Toward Busan) UN참전용사 국제 추모식"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">2025 턴투워드부산(Turn Toward Busan) UN참전용사 국제 추모식</div>
+                                            <dl class="card-meta"></dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/h-thum-2.png" alt="또 하나의 국가대표 | 제복근무자 감사캠페인"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">또 하나의 국가대표 | 제복근무자 감사캠페인</div>
+                                            <dl class="card-meta"></dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/h-thum-3.png" alt="만해 한용운 KR"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">만해 한용운 KR</div>
+                                            <dl class="card-meta"></dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/h-thum-4.png" alt="마지막 증언 '이름없는 청춘, 학생독립운동가'"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">마지막 증언 '이름없는 청춘, 학생독립운동가'</div>
+                                            <dl class="card-meta"></dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/h-thum-1.png" alt="2025 턴투워드부산(Turn Toward Busan) UN참전용사 국제 추모식"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-title">2025 턴투워드부산(Turn Toward Busan) UN참전용사 국제 추모식</div>
+                                            <dl class="card-meta"></dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-circle-next"><i class="ico ico-slider-next"></i><span class="sr-only">다음</span></button>
+                            <button class="btn-square-more" type="button">더보기</button> <!-- 태블릿 이하에서만 show -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                // 1280 이상 디바이스는 slider 형식
+                // 1280 이하 디바이스는 block 형식
+                (function () {
+                    const SECTION_SELECTOR = '.section-recommend';
+                    const SWIPER_SELECTOR = '._recommendSlider';
+                    const MQ = window.matchMedia('(min-width: 1280px)');
+
+                    const STEP = 2;
+                    let recommendSlider = null;
+
+                    const root = document.querySelector(SECTION_SELECTOR);
+                    if (!root) return;
+
+                    const moreBtn = root.querySelector('.btn-square-more');
+
+                    function getItems() {
+                        return Array.from(root.querySelectorAll('.card-item'));
+                    }
+
+                    function setMoreBtnVisible(isVisible) {
+                        if (!moreBtn) return;
+                        moreBtn.style.display = isVisible ? 'flex' : 'none';
+                    }
+
+                    function applyInitialMobileState() {
+                        const items = getItems();
+                        items.forEach((el, idx) => {
+                            el.classList.toggle('is-hidden', idx >= STEP);
+                        });
+
+                        const hasHidden = items.some(el => el.classList.contains('is-hidden'));
+                        setMoreBtnVisible(hasHidden);
+                    }
+
+                    function revealNextOnMobile() {
+                        const items = getItems();
+                        const hidden = items.filter(el => el.classList.contains('is-hidden'));
+                        hidden.slice(0, STEP).forEach(el => el.classList.remove('is-hidden'));
+
+                        const hasHidden = items.some(el => el.classList.contains('is-hidden'));
+                        setMoreBtnVisible(hasHidden);
+                    }
+
+                    function initRecommendSlider() {
+                        if (recommendSlider) return;
+
+                        getItems().forEach(el => el.classList.remove('is-hidden'));
+
+                        recommendSlider = new Swiper(SWIPER_SELECTOR, {
+                            slidesPerView: 4,
+                            spaceBetween: 50,
+                            autoHeight: true,
+                            navigation: {
+                                prevEl: `${SECTION_SELECTOR} .btn-circle-prev`,
+                                nextEl: `${SECTION_SELECTOR} .btn-circle-next`
+                            },
+                        });
+
+                        setMoreBtnVisible(false);
+                    }
+
+                    function destroyRecommendSlider() {
+                        if (!recommendSlider) return;
+
+                        recommendSlider.destroy(true, true);
+                        recommendSlider = null;
+
+                        const el = root.querySelector(SWIPER_SELECTOR);
+                        const wrapper = el && el.querySelector('.swiper-wrapper');
+                        if (el) el.removeAttribute('style');
+                        if (wrapper) wrapper.removeAttribute('style');
+                    }
+
+                    function handleRecommend() {
+                        if (MQ.matches) {
+                            destroyRecommendSlider();
+                            initRecommendSlider();
+                        } else {
+                            destroyRecommendSlider();
+                            applyInitialMobileState();
+                        }
+                    }
+
+                    if (moreBtn) {
+                        moreBtn.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            if (MQ.matches) return;
+                            revealNextOnMobile();
+                        });
+                    }
+
+                    handleRecommend();
+
+                    if (MQ.addEventListener) MQ.addEventListener('change', handleRecommend);
+                    else MQ.addListener(handleRecommend);
+                })();
+            </script>
+            <!-- e 추천 콘텐츠 -->
+
+            <!-- s 보훈 전시·행사 -->
+            <section class="section-exhibition">
+                <div class="inner">
+                    <div class="section-header">
+                        <h2 class="section-title">보훈 전시·행사</h2>
+                        <ul class="section-filter" role="radiogroup" aria-label="보훈 전시·행사 콘텐츠 필터">
+                            <li class="item on"><button type="button" role="radio" aria-checked="true">전체</button></li>
+                            <li class="item"><button type="button" role="radio" aria-checked="false">대한민국임시정부기념관</button></li>
+                            <li class="item"><button type="button" role="radio" aria-checked="false">독립기관관</button></li>
+                            <li class="item"><button type="button" role="radio" aria-checked="false">기타</button></li>
+                        </ul>
+                        <a href="javascript:void(0)" class="btn-more"><span>더보기</span><i class="ico ico-plus"></i></a>
+                    </div>
+                    <div class="section-body">
+                        <div class="slider-wrapper card-list-wrap">
+                            <button type="button" class="btn-circle-prev"><i class="ico ico-slider-prev"></i><span class="sr-only">이전</span></button>
+                            <div class="swiper _exhibitionSlider">
+                                <div class="swiper-wrapper card-list">
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-1.png" alt="독립의 여정, 오늘로 이어지다 포스터"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge current">현재행사</div>
+                                                <div class="detail">행사</div>
+                                            </div>
+                                            <div class="card-title">독립의 여정, 오늘로 이어지다</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>기념관 1층 복합문화공간</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-2.png" alt="« Le Voyage vers la Paix », 평화를 향한 여정 포스터"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge current">현재전시</div>
+                                                <div class="detail">교류전시</div>
+                                            </div>
+                                            <div class="card-title">« Le Voyage vers la Paix »,
+                                                평화를 향한 여정</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>주프랑스한국문화원 Centre Culturel
+                                                        Coréen à Paris 1층</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-3.png" alt="임시의정원에서 국회로 포스터"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge current">현재전시</div>
+                                                <div class="detail">특별전시</div>
+                                            </div>
+                                            <div class="card-title">임시의정원에서 국회로</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>1층 특별전시실</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-4.png" alt="광복80년 특별강연 <대일선전포고 84주년 기념 강연과 대담> 포스터"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge upcoming">예정행사</div>
+                                                <div class="detail">행사</div>
+                                            </div>
+                                            <div class="card-title">광복80년 특별강연 &lt;대일선전포고 84주년 기념 강연과 대담&gt;</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>기념관 지하1층 의정원홀</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-1.png" alt="독립의 여정, 오늘로 이어지다 포스터"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge current">현재행사</div>
+                                                <div class="detail">행사</div>
+                                            </div>
+                                            <div class="card-title">독립의 여정, 오늘로 이어지다</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>기념관 1층 복합문화공간</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-2.png" alt="« Le Voyage vers la Paix », 평화를 향한 여정 포스터"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge current">현재전시</div>
+                                                <div class="detail">교류전시</div>
+                                            </div>
+                                            <div class="card-title">« Le Voyage vers la Paix »,
+                                                평화를 향한 여정</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>주프랑스한국문화원 Centre Culturel
+                                                        Coréen à Paris 1층</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-3.png" alt="임시의정원에서 국회로 포스터"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge current">현재전시</div>
+                                                <div class="detail">특별전시</div>
+                                            </div>
+                                            <div class="card-title">임시의정원에서 국회로</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>1층 특별전시실</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-4.png" alt="광복80년 특별강연 <대일선전포고 84주년 기념 강연과 대담> 포스터"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge upcoming">예정행사</div>
+                                                <div class="detail">행사</div>
+                                            </div>
+                                            <div class="card-title">광복80년 특별강연 &lt;대일선전포고 84주년 기념 강연과 대담&gt;</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>기념관 지하1층 의정원홀</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-circle-next"><i class="ico ico-slider-next"></i><span class="sr-only">다음</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                let exhibitionSlider = new Swiper('._exhibitionSlider', {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    autoHeight: true,
+                    // loop: true,
+                    // autoplay: {
+                    //     delay: 4000,
+                    //     disableOnInteraction: false
+                    // },
+                    navigation: {
+                        prevEl: '.section-exhibition .btn-circle-prev',
+                        nextEl: '.section-exhibition .btn-circle-next'
+                    },
+                    breakpoints: {
+                        1280: {
+                            slidesPerView: 4,
+                            spaceBetween: 50,
+                        },
+                    }
+                });
+            </script>
+            <!-- e 보훈 전시·행사 -->
+
+            <!-- s 교육 -->
+            <section class="section-education">
+                <div class="inner">
+                    <div class="section-header">
+                        <h2 class="section-title">교육</h2>
+                        <ul class="section-filter" role="radiogroup" aria-label="교육 콘텐츠 필터">
+                            <li class="item on"><button type="button" role="radio" aria-checked="true">전체</button></li>
+                            <li class="item"><button type="button" role="radio" aria-checked="false">독립</button></li>
+                            <li class="item"><button type="button" role="radio" aria-checked="false">호국</button></li>
+                            <li class="item"><button type="button" role="radio" aria-checked="false">보훈</button></li>
+                            <li class="item"><button type="button" role="radio" aria-checked="false">기타</button></li>
+                        </ul>
+                        <a href="javascript:void(0)" class="btn-more"><span>더보기</span><i class="ico ico-plus"></i></a>
+                    </div>
+                    <div class="section-body">
+                        <div class="slider-wrapper card-list-wrap">
+                            <button type="button" class="btn-circle-prev"><i class="ico ico-slider-prev"></i><span class="sr-only">이전</span></button>
+                            <div class="swiper _educationSlider">
+                                <div class="swiper-wrapper card-list">
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-5.png" alt="궁금해! 빛나는 배지 속 한국광복군"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge done">교육종료</div>
+                                                <div class="detail">어린이·청소년</div>
+                                            </div>
+                                            <div class="card-title">궁금해! 빛나는 배지 속 한국광복군</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>대한민국임시정부기념관
+                                                        각 교실 (ZOOM)</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-6.png" alt="독립유공자 후손 가족캠프 1박2일"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge current">신청중</div>
+                                                <div class="detail">어린이·청소년</div>
+                                            </div>
+                                            <div class="card-title">독립유공자 후손 가족캠프 1박2일</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>독립기념관내</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-7.png" alt="독립기념관 토요 나들이"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge current">교육중</div>
+                                                <div class="detail">일반인</div>
+                                            </div>
+                                            <div class="card-title">독립기념관 토요 나들이</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>1층 특별전시실</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-8.png" alt="WELCOME! 대한민국 임시정부"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge current">교육중</div>
+                                                <div class="detail">외국인</div>
+                                            </div>
+                                            <div class="card-title">WELCOME! 대한민국 임시정부</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>기념관 지하1층 의정원홀</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-5.png" alt="궁금해! 빛나는 배지 속 한국광복군"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge done">교육종료</div>
+                                                <div class="detail">어린이·청소년</div>
+                                            </div>
+                                            <div class="card-title">궁금해! 빛나는 배지 속 한국광복군</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>대한민국임시정부기념관
+                                                        각 교실 (ZOOM)</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-6.png" alt="독립유공자 후손 가족캠프 1박2일"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge current">신청중</div>
+                                                <div class="detail">어린이·청소년</div>
+                                            </div>
+                                            <div class="card-title">독립유공자 후손 가족캠프 1박2일</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>독립기념관내</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-7.png" alt="독립기념관 토요 나들이"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge current">교육중</div>
+                                                <div class="detail">일반인</div>
+                                            </div>
+                                            <div class="card-title">독립기념관 토요 나들이</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>1층 특별전시실</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide card-item">
+                                        <a href="javascript:void(0);" class="card-link"><span class="sr-only">새창 열림</span></a>
+                                        <div class="card-thumb">
+                                            <img src="../../images/@temp/v-thum-8.png" alt="WELCOME! 대한민국 임시정부"/>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-category">
+                                                <div class="badge current">교육중</div>
+                                                <div class="detail">외국인</div>
+                                            </div>
+                                            <div class="card-title">WELCOME! 대한민국 임시정부</div>
+                                            <dl class="card-meta">
+                                                <div>
+                                                    <dt>행사기간</dt>
+                                                    <dd>2025-11-18 ~ 2026-01-25</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>행사장소</dt>
+                                                    <dd>기념관 지하1층 의정원홀</dd>
+                                                </div>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-circle-next"><i class="ico ico-slider-next"></i><span class="sr-only">다음</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                let educationSlider = new Swiper('._educationSlider', {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    autoHeight: true,
+                    // loop: true,
+                    // autoplay: {
+                    //     delay: 4000,
+                    //     disableOnInteraction: false
+                    // },
+                    navigation: {
+                        prevEl: '.section-education .btn-circle-prev',
+                        nextEl: '.section-education .btn-circle-next'
+                    },
+                    breakpoints: {
+                        1280: {
+                            slidesPerView: 4,
+                            spaceBetween: 50,
+                        },
+                    }
+                });
+            </script>
+            <!-- e 교육 -->
+
+            <!-- s 보훈메타월드 -->
+            <section class="section-meta">
+                <div class="inner">
+                    <div class="row">
+                        <div class="box-map">
+                            <h2 class="section-title">보훈메타월드</h2>
+                            <div class="map">
+                                <img src="../../images/main/meta-map.png" alt="보훈메타월드 맵"/>
+                                <a href="javascript:void(0);" class="btn-marker location-1 on" data-slide="0">이어온</a>
+                                <a href="javascript:void(0);" class="btn-marker location-2" data-slide="1">디지털 독립기념관</a>
+                                <a href="javascript:void(0);" class="btn-marker location-3" data-slide="2">독립기념관 특별전시</a>
+                                <a href="javascript:void(0);" class="btn-marker location-4" data-slide="3">국립대한민국임시정부기념관 온라인전시관</a>
+                                <a href="javascript:void(0);" class="btn-marker location-5" data-slide="4">디지털웹진 독립신문</a>
+                                <a href="javascript:void(0);" class="btn-marker location-6" data-slide="5">국외 사이버 전시관</a>
+                            </div>
+                        </div>
+                        <div class="box-meta">
+                            <div class="slider-wrapper card-list-wrap">
+                                <button type="button" class="btn-circle-prev"><i class="ico ico-slider-prev"></i><span class="sr-only">이전</span></button>
+                                <div class="swiper meta-slider _metaInfoSlider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="title">확장 가상 세계 e어온</div>
+                                            <div class="desc">
+                                                가상공간에서 만나는 대한민국임시정부!<br/>
+                                                임시정부와 독립운동을 문제해결 과정을 통해 알아가는 게임형 가상 체험 공간 '<b class="color-darkblue">독립로</b>', 다양한 정보와 소통의 가상공간 '<b class="color-darkblue">독립광장</b>', 국립 대한민국임시정부기념관을 옮긴 '<b class="color-darkblue">가상기념관</b>'으로 구성하였습니다.
+                                            </div>
+                                            <a class="link" href="https://www.nmkpg.go.kr/meta/main" target="_blank">
+                                                <img src="../../images/@temp/e.png" alt="이어온"/>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="title">디지털 독립기념관</div>
+                                            <div class="desc">
+                                                다양한 콘텐츠가 있는 디지털 기념관.<br/>
+                                                독립기념관의 전시, AI 미디어, 체험, 미디어 아트 등의 다양한 콘텐츠를 디지털 기념관에서 만나보세요!
+                                            </div>
+                                            <a class="link" href="https://cyber.i815.or.kr/digitalHall/" target="_blank">
+                                                <img src="../../images/@temp/e.png" alt="디지털 독립기념관"/>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="title">독립기념관 특별전시</div>
+                                            <div class="desc">
+                                                한국 독립운동과 관련한 다양한 분야의 활동을 주제로 독립기념관에서 기획한 특별 전시활동을 소개합니다.
+                                            </div>
+                                            <a class="link" href="https://i815.or.kr/2018/exhibit/special.do" target="_blank">
+                                                <img src="../../images/@temp/e.png" alt="독립기념관 특별전시"/>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="title">대한민국임시정부기념관 온라인전시관</div>
+                                            <div class="desc">
+                                                일제 강점시대.<br/>
+                                                국내 활동이 어려워지자 국외로 나가 다양한 분야에서 의병활동 및 애국계몽운동을 펼친 보훈의 역사를 사이버 전시관을 통해 확인하실 수 있습니다.
+                                            </div>
+                                            <a class="link" href="https://www.nmkpg.go.kr/main/exhibit/exhibit_online_list.do" target="_blank">
+                                                <img src="https://www.nmkpg.go.kr/upfilePath/exhibit//EXHIBIT_202508280241326182.jpg" alt="국립대한민국임시정부기념관 온라인전시관"/>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="title">디지털웹진 독립신문</div>
+                                            <div class="desc">
+                                                독립신문은 국립대한민국임시정부기념관이 발행하는 공식 디지털 웹진으로, 임시정부와 관련된 역사, 기념관의 최신 소식, 그리고 독립운동의 의미를 다양한 특집과 연재 형식으로 제공합니다.
+                                            </div>
+                                            <a class="link" href="http://oversea.i815.or.kr/sub.php?code=030300" target="_blank">
+                                                <img src="../../images/@temp/e.png" alt="디지털웹진 독립신문"/>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="title">국외 사이버 전시관</div>
+                                            <div class="desc">일제 강점시대.<br/>
+                                                국내 활동이 어려워지자 국외로 나가 다양한 분야에서 의병활동 및 애국계몽운동을 펼친 보훈의 역사를 사이버 전시관을 통해 확인하실 수 있습니다.
+                                            </div>
+                                            <a class="link" href="https://i815.or.kr/2018/exhibit/oversea.do?pageIndex=2" target="_blank">
+                                                <img src="../../images/@temp/e.png" alt="국외 사이버 전시관"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-circle-next"><i class="ico ico-slider-next"></i><span class="sr-only">다음</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                const $markers = $('.section-meta .btn-marker');
+
+                const metaInfoSlider = new Swiper('._metaInfoSlider', {
+                    centeredSlides: true,
+                    effect: 'fade',
+                    autoHeight: true,
+                    fadeEffect: {
+                        crossFade: true,
+                    },
+                    slidesPerView: 1,
+                    navigation: {
+                        prevEl: '.section-meta .btn-circle-prev',
+                        nextEl: '.section-meta .btn-circle-next'
+                    },
+                    on: {
+                        slideChange: function () {
+                            const idx = this.realIndex;
+
+                            $markers.removeClass('on')
+                                .filter(function () {
+                                    return $(this).data('slide') === idx;
+                                })
+                                .addClass('on');
+                        }
+                    }
+                });
+
+                $markers.each(function () {
+                    const m = this.className.match(/location-(\d+)/);
+                    if (!m) return;
+                    $(this).data('slide', Number(m[1]) - 1);
+                });
+
+                $(document).on('click', '.section-meta .btn-marker', function (e) {
+                    e.preventDefault();
+
+                    const idx = $(this).data('slide');
+                    if (idx === undefined) return;
+
+                    metaInfoSlider.slideTo(idx, 200);
+
+                    $markers.removeClass('on');
+                    $(this).addClass('on');
+                });
+
+                metaInfoSlider.emit('slideChange');
+            </script>
+            <!-- e 보훈메타월드 -->
+
+            <!-- s 알림 & 보도자료 & 보훈행사 / 이벤트 -->
+            <section class="section-notice">
+                <div class="inner">
+                    <div class="row">
+                        <div class="box-notice">
+                            <div class="tab-container _tabContainer">
+                                <div class="tabs-box">
+                                    <ul class="tabs _tab" role="tablist">
+                                        <li class="item on">
+                                            <button class="tab-button" type="button" role="tab" id="tab-alert" aria-selected="true" aria-controls="panel-alert">알림</button>
+                                        </li>
+                                        <li class="item">
+                                            <button class="tab-button" type="button" role="tab" id="tab-data" aria-selected="false" aria-controls="panel-data">보도자료</button>
+                                        </li>
+                                        <li class="item">
+                                            <button class="tab-button" type="button" role="tab" id="tab-event" aria-selected="false" aria-controls="panel-event">보훈행사</button>
+                                        </li>
+                                    </ul>
+                                    <div class="btns">
+                                        <a href="javascript:void(0)" class="btn-more"><span>더보기</span><i class="ico ico-plus"></i></a>
+                                    </div>
+                                </div>
+                                <div class="tab-content _tabContent">
+                                    <div class="tab-panel on" role="tabpanel" id="panel-alert" aria-labelledby="tab-alert">
+                                        <ul class="alert-list">
+                                            <li class="item"><a href="javascript:void(0);"><span class="badge">일반</span><span class="txt">See U 2105 광복 80 피날레 드론 라이트쇼 안내</span><span class="date">2025.12.02</span></a></li>
+                                            <li class="item"><a href="javascript:void(0);"><span class="badge">일반</span><span class="txt">One-Minute 아카이브 숏폼 공모전 연장공고</span><span class="date">2025.12.02</span></a></li>
+                                            <li class="item"><a href="javascript:void(0);"><span class="badge urgent">긴급</span><span class="txt">국립묘지시설사업 실시계획 변경 고시(국립대전현충원고시 제2025-3호)</span><span class="date">2025.12.02</span></a></li>
+                                            <li class="item"><a href="javascript:void(0);"><span class="badge">일반</span><span class="txt">국립대한민국임시정부기념관 2025년 제5차 공개구입 예정 자료 목록 공개국립대한민국임시정부기념관 2025년 제5차 공개구입 예정 자료 목록 공개</span><span class="date">2025.12.02</span></a></li>
+                                            <li class="item"><a href="javascript:void(0);"><span class="badge">일반</span><span class="txt">2026년 「민간단체 주관 보훈기념행사」 사업 공모 시행 공고</span><span class="date">2025.12.02</span></a></li>
+                                        </ul>
+                                        <div class="button-group show-mo"> <!-- 태블릿 이하 디바이스에서만 show -->
+                                            <a class="btn-square-more" href="javascript:void(0);" target="_blank">더보기</a>
+                                        </div>
+                                    </div>
+                                    <div class="tab-panel" role="tabpanel" id="panel-data" aria-labelledby="tab-data" hidden="">
+                                        <div class="no-data">
+                                            <p class="txt">보도자료가 없습니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tab-panel" role="tabpanel" id="panel-event" aria-labelledby="tab-event" hidden="">
+                                        <div class="no-data">
+                                            <p class="txt">보훈행사가 없습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-event">
+                            <div class="title-head">
+                                <h2 class="section-title">이벤트</h2>
+                                <div class="slider-navigation">
+                                    <button type="button" class="btn-arrow-prev"><i class="ico ico-slider-prev-sm"></i><span class="sr-only">이전</span></button>
+                                    <div class="page-num"></div>
+                                    <button type="button" class="btn-arrow-next"><i class="ico ico-slider-next-sm"></i><span class="sr-only">다음</span></button>
+                                    <div class="progress">
+                                        <div class="bar">
+                                            <svg class="rolling" viewBox="0 0 48 48">
+                                                <circle cx="24" cy="24" r="20"></circle>
+                                            </svg>
+                                            <svg class="track" viewBox="0 0 48 48">
+                                                <circle cx="24" cy="24" r="20"></circle>
+                                            </svg>
+                                            <button class="btn-slide-state _btnEventSlideState" type="button"><i class="ico ico-slider-paused"></i><span class="sr-only">멈춤</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-wrapper">
+                                <div class="swiper event-slider _eventSlider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a class="link" href="javascript:void(0);">
+                                                <img src="../../images/@temp/banner-1.png" alt="한국광복군 그리고 국군"/>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="link" href="javascript:void(0);">
+                                                <img src="../../images/@temp/banner-1.png" alt="한국광복군 그리고 국군"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                const progressCircle = $('.section-notice .progress .rolling');
+
+                let eventSlider = new Swiper('._eventSlider', {
+                    centeredSlides: true,
+                    effect: 'fade',
+                    loop: true,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false
+                    },
+                    pagination: {
+                        el: '.section-notice .page-num',
+                        type: 'fraction',
+                        currentClass: 'current',
+                        totalClass: 'total',
+                        renderFraction: function (currentClass, totalClass) {
+                            return '<span class="' + currentClass + '"></span><span class="' + totalClass + '"></span>';
+                        },
+                    },
+                    navigation: {
+                        prevEl: '.box-event .btn-arrow-prev',
+                        nextEl: '.box-event .btn-arrow-next'
+                    },
+                    on: {
+                        autoplayTimeLeft(s, time, progress) {
+                            progressCircle.css('--progress', `calc(1 - ${progress})`);
+                        },
+                    },
+                });
+
+                $('.section-notice ._btnEventSlideState').on('click', function () {
+                    if (!$(this).hasClass('paused')) {
+                        eventSlider.autoplay.pause();
+                        $(this).addClass('paused').html(`<i class="ico ico-slider-play"></i><span class="sr-only">재생</span>`);
+                    } else {
+                        eventSlider.autoplay.resume();
+                        $(this).removeClass('paused').html(`<i class="ico ico-slider-paused"></i><span class="sr-only">멈춤</span>`);
+                    }
+                })
+            </script>
+            <!-- e 알림 & 보도자료 & 보훈행사 / 이벤트 -->
+        </div>
+        <!-- e contents -->
+    </div>
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-info">
+        <div class="inner">
+            <div class="f-info">
+                <div class="logo">
+                    <a href="javascript:void(0)"><img src="../../images/common/footer-logo.png" alt="KNA 에듀센터"></a>
+                </div>
+                <div class="info-cs">
+                    <div class="address">(30113) 세종특별자치시 도움4로 9 정부세종청사 9동</div>
+                    <div class="key-info"><b>대표전화&nbsp;</b><b>1577-0606</b><span>&nbsp;(상담시간 : 평일 09:00 ~ 18:00, 점심시간 : 12:00 ~ 13:00, 매주 월요일 휴무)</span></div>
+                </div>
+            </div>
+            <div class="f-link">
+                <div class="footer-dropdown _footerDropdown">
+                    <button type="button" class="btn-select _footerDropdownButton" title="관련사이트 바로가기">관련사이트 바로가기</button>
+                    <ul class="dropdown-list">
+                        <li><a href="https://www.nhis.or.kr/" title="새 창 열기" target="_blank" rel="noopener noreferrer" ><span>국민건강보험</span></a></li>
+                        <li><a href="https://www.nmkpg.go.kr/" title="새 창 열기" target="_blank" rel="noopener noreferrer"><span>국립대한민국임시정부기념관</span></a></li>
+                    </ul>
+                    <button type="button" class="btn-select-close _footerDropdownCloseButton" title="관련사이트 닫기">관련사이트 바로가기</button>
+                </div>
+                <div class="links">
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="새 창 열기">이용안내</a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="새 창 열기">찾아오시는 길</a>
+                </div>
+                <div class="sns-links">
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="네이버 블로그 공유하기"><img src=../../images/common/ico-naver.svg alt="네이버 블로그 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="유투브 공유하기"><img src=../../images/common/ico-youtube.svg alt="유투브 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="인스타그램 공유하기"><img src=../../images/common/ico-instagram.svg alt="인스타그램 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="x 공유하기"><img src=../../images/common/ico-x.svg alt="x 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="페이스북 공유하기"><img src=../../images/common/ico-facebook.svg alt="페이스북 공유하기"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-links">
+        <div class="inner">
+            <div class="link-content">
+                <div class="info-links">
+                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">이용약관</a>
+                    <a class="link link-highlight" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">저작권정책</a>
+                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">자주하는질문</a>
+                </div>
+            </div>
+            <div class="copyright">© Ministry of Patriots and Veterans Affairs. All Rights Reserved.</div>
+            <div class="nuri"><img src="../../images/common/ico-footer-nuri.png" alt="국가보훈부"/><span>이 누리집은 국가보훈부 산하기관 누리집입니다.</span></div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
