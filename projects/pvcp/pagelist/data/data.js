@@ -149,7 +149,7 @@ data.archive = {
             page: '보훈자료 > 인물'
         },
         {
-            stateClass: 'complete',
+            stateClass: 'working',
             url: 'pvData/보훈자료_역사',
             page: '보훈자료 > 역사'
         },
