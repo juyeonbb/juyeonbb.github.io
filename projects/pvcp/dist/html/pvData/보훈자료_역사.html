@@ -201,7 +201,7 @@
                 <ol class="breadcrumb-list">
                     <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="ico ico-home"></i>홈</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0)">보훈자료</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">인물</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">역사</a></li>
                 </ol>
             </nav>
             <div class="archive-container">
@@ -210,7 +210,7 @@
                         <div class="search-bar">
                             <div class="form-keyword">
                                 <select class="form-select" title="검색 분류">
-                                    <option value="person" selected>인물</option>
+                                    <option value="person" selected>역사</option>
                                     <option value="place">장소</option>
                                 </select>
                                 <span class="divider"></span>
@@ -229,115 +229,39 @@
                         </div>
                         <div class="search-detail" hidden>
                             <div class="search-detail-inner">
-                                <div class="search-detail-title">인물검색</div>
+                                <div class="search-detail-title">역사검색</div>
                                 <div class="search-detail-form">
-                                    <div class="search-detail-grid">
+                                    <div class="search-detail-grid search-detail-grid-lg">
                                         <div class="form-group">
-                                            <label class="label">인물명</label>
-                                            <div class="form-keyword">
-                                                <select class="form-select" title="인물명 언어">
-                                                    <option value="ko" selected>한글</option>
-                                                    <option value="en">영어</option>
-                                                </select>
-                                                <input class="form-input" type="text" title="인물명" />
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label">이명</label>
-                                            <input class="form-input" type="text" title="이명" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label">본적</label>
-                                            <div class="form-category">
-                                                <select class="form-select" title="본적 1차">
-                                                    <option value="" selected disabled>선택</option>
-                                                    <option value="seoul">서울</option>
-                                                </select>
-                                                <select class="form-select" title="본적 2차">
-                                                    <option value="" selected disabled>선택</option>
-                                                    <option value="mapo">마포</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label">성별</label>
-                                            <select class="form-select" title="성별">
-                                                <option value="" selected>전체</option>
-                                                <option value="m">남</option>
-                                                <option value="f">여</option>
+                                            <label class="label">보훈분류</label>
+                                            <select class="form-select" title="보훈분류">
+                                                <option value="0" selected>전체</option>
+                                                <option value="1">독립</option>
+                                                <option value="2">호국</option>
+                                                <option value="3">민주</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label class="label">대상구분</label>
-                                            <select class="form-select" title="대상구분">
-                                                <option value="" selected>전체</option>
-                                                <option value="a">A</option>
-                                                <option value="b">B</option>
+                                            <label class="label">역사타입</label>
+                                            <select class="form-select" title="역사타입">
+                                                <option value="0" selected>전체</option>
+                                                <option value="1">의병</option>
+                                                <option value="2">3.1운동</option>
+                                                <option value="3">국내항일</option>
+                                                <option value="4">학생운동</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <label class="label">운동계열</label>
-                                            <select class="form-select" title="운동계열">
-                                                <option value="" selected>전체</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label">포상훈격</label>
-                                            <select class="form-select" title="포상훈격">
-                                                <option value="" selected>전체</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label">포상년도</label>
+                                            <label class="label">연도</label>
                                             <div class="form-period">
-                                                <input class="form-input" type="text" title="포상년도 시작" inputmode="numeric" />
+                                                <input class="form-input" type="text" title="시작" inputmode="numeric" />
                                                 <span>~</span>
-                                                <input class="form-input" type="text" title="포상년도 종료" inputmode="numeric" />
+                                                <input class="form-input" type="text" title="종료" inputmode="numeric" />
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="label">생년월일</label>
-                                            <div class="form-period">
-                                                <select class="form-select" title="출생연도 시작">
-                                                    <option value="" selected disabled>출생연도</option>
-                                                    <option value="2026">2026</option>
-                                                    <option value="2025">2025</option>
-                                                </select>
-                                                <span>~</span>
-                                                <select class="form-select" title="출생연도 종료">
-                                                    <option value="" selected disabled>선택</option>
-                                                    <option value="2026">2026</option>
-                                                    <option value="2025">2025</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label">사망년월일</label>
-                                            <div class="form-period">
-                                                <select class="form-select" title="사망연도 시작">
-                                                    <option value="" selected disabled>사망연도</option>
-                                                    <option value="2026">2026</option>
-                                                    <option value="2025">2025</option>
-                                                </select>
-                                                <span>~</span>
-                                                <select class="form-select" title="사망연도 종료">
-                                                    <option value="" selected disabled>선택</option>
-                                                    <option value="2026">2026</option>
-                                                    <option value="2025">2025</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label">인명색인</label>
-                                            <select class="form-select" title="인명색인">
-                                                <option value="" selected>전체</option>
-                                                <option value="y">있음</option>
-                                                <option value="n">없음</option>
-                                            </select>
+                                            <label class="label">검색어</label>
+                                            <input class="form-input" type="text" title="검색어" />
                                         </div>
                                         <div class="search-detail-actions">
                                             <button type="button" class="btn with-icon">
@@ -356,178 +280,146 @@
                     </div>
                     <div class="result-group">
                         <div class="result-group-head">
-                            <h3 class="title">인물</h3>
-                            <span class="count">(<span class="font-weight-medium">130</span>)</span>
+                            <h3 class="title">역사</h3>
+                            <span class="count">(<span class="color-point font-weight-bold">1000</span>)</span>
                         </div>
                         <div class="result-group-body">
-                            <ul class="person-list">
+                            <ul class="history-list">
                                 <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-2.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
+                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                    <div class="thumb">
+                                        <img src="../../images/@temp/history-1.png" alt="3.1운동">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">3.1운동</div>
+                                        <dl class="meta">
+                                            <div class="col">
+                                                <dt class="meta-term">사건연도</dt>
+                                                <dd class="meta-desc">1919년 6월 10일</dd>
                                             </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
+                                        </dl>
+                                        <p class="desc">일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한 독립정신과 희생정신을 계승 일제의 강제병합과
+                                            식민지배에 항거한 순국선열의 숭고한 독립정신과 …</p>
+                                    </div>
                                 </li>
                                 <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-3.png" alt="이갑성 사진">
-                                            <div class="overlay">
-                                                <div class="name">이갑성</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
+                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                    <div class="thumb">
+                                        <img src="../../images/@temp/history-2.png" alt="6.10만세운동 관련 사진">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">6.10만세운동</div>
+                                        <dl class="meta">
+                                            <div class="col">
+                                                <dt class="meta-term">사건연도</dt>
+                                                <dd class="meta-desc">1919년 6월 10일</dd>
                                             </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">이갑성</span>
-                                        </div>
-                                    </a>
+                                        </dl>
+                                        <p class="desc">일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한 독립정신과 희생정신을 계승 일제의 강제병합과
+                                            식민지배에 항거한 순국선열의 숭고한 독립정신과 …</p>
+                                    </div>
                                 </li>
                                 <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/common/img-default-v.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
+                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                    <div class="thumb">
+                                        <img src="../../images/@temp/history-1.png" alt="3.1운동">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">3.1운동</div>
+                                        <dl class="meta">
+                                            <div class="col">
+                                                <dt class="meta-term">사건연도</dt>
+                                                <dd class="meta-desc">1919년 6월 10일</dd>
                                             </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
+                                        </dl>
+                                        <p class="desc">일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한 독립정신과 희생정신을 계승 일제의 강제병합과
+                                            식민지배에 항거한 순국선열의 숭고한 독립정신과 …</p>
+                                    </div>
                                 </li>
                                 <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-4.png" alt="전도선 사진">
-                                            <div class="overlay">
-                                                <div class="name">전도선</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
+                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                    <div class="thumb">
+                                        <img src="../../images/@temp/history-2.png" alt="6.10만세운동 관련 사진">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">6.10만세운동</div>
+                                        <dl class="meta">
+                                            <div class="col">
+                                                <dt class="meta-term">사건연도</dt>
+                                                <dd class="meta-desc">1919년 6월 10일</dd>
                                             </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">전도선</span>
-                                        </div>
-                                    </a>
+                                        </dl>
+                                        <p class="desc">일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한 독립정신과 희생정신을 계승 일제의 강제병합과
+                                            식민지배에 항거한 순국선열의 숭고한 독립정신과 …</p>
+                                    </div>
                                 </li>
                                 <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-2.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
+                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                    <div class="thumb">
+                                        <img src="../../images/@temp/history-1.png" alt="3.1운동">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">3.1운동</div>
+                                        <dl class="meta">
+                                            <div class="col">
+                                                <dt class="meta-term">사건연도</dt>
+                                                <dd class="meta-desc">1919년 6월 10일</dd>
                                             </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
+                                        </dl>
+                                        <p class="desc">일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한 독립정신과 희생정신을 계승 일제의 강제병합과
+                                            식민지배에 항거한 순국선열의 숭고한 독립정신과 …</p>
+                                    </div>
                                 </li>
                                 <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-2.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
+                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                    <div class="thumb">
+                                        <img src="../../images/@temp/history-2.png" alt="6.10만세운동 관련 사진">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">6.10만세운동</div>
+                                        <dl class="meta">
+                                            <div class="col">
+                                                <dt class="meta-term">사건연도</dt>
+                                                <dd class="meta-desc">1919년 6월 10일</dd>
                                             </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
+                                        </dl>
+                                        <p class="desc">일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한 독립정신과 희생정신을 계승 일제의 강제병합과
+                                            식민지배에 항거한 순국선열의 숭고한 독립정신과 …</p>
+                                    </div>
                                 </li>
                                 <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/common/img-default-v.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
+                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                    <div class="thumb">
+                                        <img src="../../images/@temp/history-1.png" alt="3.1운동">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">3.1운동</div>
+                                        <dl class="meta">
+                                            <div class="col">
+                                                <dt class="meta-term">사건연도</dt>
+                                                <dd class="meta-desc">1919년 6월 10일</dd>
                                             </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
+                                        </dl>
+                                        <p class="desc">일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한 독립정신과 희생정신을 계승 일제의 강제병합과
+                                            식민지배에 항거한 순국선열의 숭고한 독립정신과 …</p>
+                                    </div>
                                 </li>
                                 <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-2.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
+                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                    <div class="thumb">
+                                        <img src="../../images/@temp/history-2.png" alt="6.10만세운동 관련 사진">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">6.10만세운동</div>
+                                        <dl class="meta">
+                                            <div class="col">
+                                                <dt class="meta-term">사건연도</dt>
+                                                <dd class="meta-desc">1919년 6월 10일</dd>
                                             </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/common/img-default-v.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-3.png" alt="이갑성 사진">
-                                            <div class="overlay">
-                                                <div class="name">이갑성</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">이갑성</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/common/img-default-v.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-3.png" alt="이갑성 사진">
-                                            <div class="overlay">
-                                                <div class="name">이갑성</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">이갑성</span>
-                                        </div>
-                                    </a>
+                                        </dl>
+                                        <p class="desc">일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한 독립정신과 희생정신을 계승 일제의 강제병합과
+                                            식민지배에 항거한 순국선열의 숭고한 독립정신과 …</p>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
