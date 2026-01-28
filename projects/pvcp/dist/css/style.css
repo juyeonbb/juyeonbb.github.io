@@ -1350,6 +1350,24 @@ button.swiper-pagination-bullet {
   background-image: url(../images/archive/ico-nav-next.png);
 }
 
+.ico-print {
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/common/ico-print.png);
+}
+
+.ico-share {
+  width: 16px;
+  height: 20px;
+  background-image: url(../images/common/ico-share.png);
+}
+
+.ico-out {
+  width: 14px;
+  height: 14px;
+  background-image: url(../images/common/ico-out.png);
+}
+
 /*
   Layout
 */
@@ -2982,6 +3000,15 @@ h1, h2, h3, h4, h5, h6 {
     flex: 1;
   }
 }
+@media (max-width: 360px) {
+  .tab-container .tabs-box .tabs .item .tab-button {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+  .tab-container .tabs-box .tabs .item.on .tab-button {
+    font-size: 20px;
+  }
+}
 .section-filter {
   display: flex;
   flex-wrap: wrap;
@@ -3737,6 +3764,9 @@ a, button {
 .btn.btn-border-point:hover {
   background-color: #e8f2ff;
 }
+.btn.btn-border-point:active {
+  background-color: #d6e8ff;
+}
 .btn.btn-border-blue {
   color: #0a4dcb;
   border-color: #4381f4;
@@ -4337,7 +4367,7 @@ input::-webkit-search-results-decoration {
 */
 .breadcrumb {
   max-width: 1280px;
-  margin: 16px auto 30px;
+  margin: 20px auto 30px;
 }
 .breadcrumb .breadcrumb-list {
   display: flex;
@@ -6411,6 +6441,27 @@ div.pswp__img--placeholder,
   font-weight: bold;
   color: #fff;
   background-color: #2462D6;
+}
+.result-group .result-group-head .util {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  gap: 16px;
+}
+.result-group .result-group-head .util .btn-print, .result-group .result-group-head .util .btn-share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 2px 4px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+.result-group .result-group-head .util .btn-print:hover, .result-group .result-group-head .util .btn-share:hover {
+  background-color: #EEF2F7;
+}
+.result-group .result-group-head .util .btn-print:active, .result-group .result-group-head .util .btn-share:active {
+  background-color: #D6E0EB;
 }
 .result-group .card-list-wrap {
   padding-right: 0;

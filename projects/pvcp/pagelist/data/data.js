@@ -158,6 +158,11 @@ data.archive = {
             url: 'pvCntnts/보훈자료_현충시설',
             page: '보훈자료 > 현충시설'
         },
+        {
+            stateClass: 'complete',
+            url: 'pvCntnts/보훈자료_현충시설_상세정보',
+            page: '보훈자료 > 현충시설 > 상세'
+        },
         // {
         //     stateClass: 'complete',
         //     url: 'pvData/보훈자료_사진필름',
