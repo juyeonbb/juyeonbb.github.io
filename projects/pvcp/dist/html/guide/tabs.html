@@ -24,18 +24,32 @@
             <div class="tabs-box">
                 <ul class="tabs _tab" role="tablist">
                     <li class="item on">
-                        <button class="tab-button" type="button" role="tab" id="tab-apply" aria-selected="true" aria-controls="panel-apply">신청가능목록</button>
+                        <button class="tab-button" type="button" role="tab" id="tab-1" aria-selected="true" aria-controls="panel-1">기본정보</button>
                     </li>
                     <li class="item">
-                        <button class="tab-button" type="button" role="tab" id="tab-done" aria-selected="false" aria-controls="panel-done">신청완료목록</button>
+                        <button class="tab-button" type="button" role="tab" id="tab-2" aria-selected="false" aria-controls="panel-2">건립취지</button>
+                    </li>
+                    <li class="item">
+                        <button class="tab-button" type="button" role="tab" id="tab-3" aria-selected="false" aria-controls="panel-3">위치지도</button>
                     </li>
                 </ul>
             </div>
             <div class="tab-content _tabContent">
-                <div class="tab-panel on" role="tabpanel" id="panel-apply" aria-labelledby="tab-apply">1</div>
-                <div class="tab-panel" role="tabpanel" id="panel-done" aria-labelledby="tab-done" hidden>2</div>
+                <div class="tab-panel on" role="tabpanel" id="panel-1" aria-labelledby="tab-1">1 page</div>
+                <div class="tab-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>2 page</div>
+                <div class="tab-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>3 page</div>
             </div>
         </div>
+
+        <br/>
+        <br/>
+
+        <ul class="section-filter" role="radiogroup" aria-label="추천 콘텐츠 필터">
+            <li class="item on"><button type="button" role="radio" aria-checked="true">신규 콘텐츠</button></li>
+            <li class="item"><button type="button" role="radio" aria-checked="false">독립의 길</button></li>
+            <li class="item"><button type="button" role="radio" aria-checked="false">호국의 혼</button></li>
+            <li class="item"><button type="button" role="radio" aria-checked="false">민주의 혼</button></li>
+        </ul>
     </div>
 </div>
 </body>

@@ -143,34 +143,6 @@
   align-items: center;
   margin-bottom: 20px;
 }
-.main-contents .section-filter {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-}
-.main-contents .section-filter .item {
-  position: relative;
-  font-size: 24px;
-  letter-spacing: -1.2px;
-  color: #444;
-}
-.main-contents .section-filter .item.on > * {
-  font-weight: bold;
-  color: #222;
-}
-.main-contents .section-filter .item.on::before {
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 6px;
-  height: 6px;
-  border-radius: 100%;
-  background-color: #e4022e;
-}
 .main-contents .no-data {
   display: flex;
   flex-direction: column;
@@ -541,28 +513,6 @@
 .main-contents .section-notice .row {
   display: flex;
 }
-.main-contents .section-notice .tab-container .tabs-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-  margin-bottom: 28px;
-}
-.main-contents .section-notice .tab-container .tabs-box .tabs .item {
-  height: 82px;
-}
-.main-contents .section-notice .tab-container .tabs-box .tabs .item .tab-button {
-  font-size: 24px;
-  letter-spacing: -1.3px;
-  font-weight: 500;
-  padding: 0 25px;
-  transform-origin: center;
-}
-.main-contents .section-notice .tab-container .tabs-box .tabs .item.on .tab-button {
-  font-weight: bold;
-  letter-spacing: -1.5px;
-  font-size: 32px;
-}
 .main-contents .section-notice .btns {
   flex: 1;
   display: flex;
@@ -570,6 +520,21 @@
   align-items: center;
   height: 82px;
   border-bottom: 2px solid #ccc;
+}
+.main-contents .section-notice .tab-container .tabs-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.main-contents .section-notice .tab-container .tabs-box .tabs .item {
+  height: 82px;
+}
+.main-contents .section-notice .tab-container .tabs-box .tabs .item .tab-button {
+  font-size: 24px;
+}
+.main-contents .section-notice .tab-container .tabs-box .tabs .item.on .tab-button {
+  font-size: 32px;
 }
 .main-contents .section-notice .alert-list .item + .item {
   margin-top: 10px;
@@ -669,14 +634,6 @@
   }
   .main-contents .section-header .section-filter {
     margin-top: 23px;
-  }
-  .main-contents .section-filter {
-    gap: 10px 20px;
-    width: 100%;
-    justify-content: center;
-  }
-  .main-contents .section-filter .item {
-    font-size: 18px;
   }
   .main-contents .btn-slide-state {
     padding-top: 0;
@@ -832,26 +789,19 @@
   .main-contents .section-notice .row {
     flex-direction: column;
   }
+  .main-contents .section-notice .tab-container .tabs-box .tabs .item {
+    height: 64px;
+  }
+  .main-contents .section-notice .tab-container .tabs-box .tabs .item .tab-button {
+    font-size: 19px;
+  }
+  .main-contents .section-notice .tab-container .tabs-box .tabs .item.on .tab-button {
+    font-size: 24px;
+  }
   .main-contents .section-notice .box-notice {
     width: 100%;
     border-bottom: 0;
     margin-bottom: 38px;
-  }
-  .main-contents .section-notice .box-notice .tab-container .tabs-box {
-    width: 100%;
-    margin-bottom: 18px;
-  }
-  .main-contents .section-notice .box-notice .tab-container .tabs-box .tabs {
-    flex: 1;
-  }
-  .main-contents .section-notice .box-notice .tab-container .tabs-box .tabs .item {
-    height: 67px;
-  }
-  .main-contents .section-notice .box-notice .tab-container .tabs-box .tabs .item .tab-button {
-    font-size: 20px;
-  }
-  .main-contents .section-notice .box-notice .tab-container .tabs-box .tabs .item.on .tab-button {
-    font-size: 26px;
   }
   .main-contents .section-notice .box-notice .alert-list {
     margin-bottom: 18px;
@@ -1380,13 +1330,11 @@
 }
 .archive-container .result-group .person-list {
   grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin-bottom: 60px;
 }
 .archive-container .result-group .video-list {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 30px 60px;
-}
-.archive-container .pagination {
-  margin-top: 60px;
 }
 
 @media (max-width: 1280px) {
@@ -1399,9 +1347,6 @@
   .archive-container .result-group .video-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px 20px;
-  }
-  .archive-container .pagination {
-    margin-top: 40px;
   }
 }
 @media (max-width: 768px) {
