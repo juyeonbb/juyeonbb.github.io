@@ -1339,6 +1339,9 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 30px 60px;
 }
+.archive-container .result-group .history-list {
+  margin-bottom: 30px;
+}
 .archive-container .detail-content .title-area {
   display: flex;
   align-items: center;
@@ -1373,7 +1376,7 @@
 }
 .archive-container .detail-content .photo-slider-wrapper .photo-slider {
   position: relative;
-  padding: 10px 30px;
+  padding: 20px 30px;
   border-radius: 20px;
   border: solid 1px #ddebf5;
   background-color: #f3f9fe;

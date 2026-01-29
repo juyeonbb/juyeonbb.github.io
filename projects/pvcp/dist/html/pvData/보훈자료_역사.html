@@ -231,7 +231,7 @@
                             <div class="search-detail-inner">
                                 <div class="search-detail-title">역사검색</div>
                                 <div class="search-detail-form">
-                                    <div class="search-detail-grid search-detail-grid-lg">
+                                    <div class="search-detail-grid">
                                         <div class="form-group">
                                             <label class="label">보훈분류</label>
                                             <select class="form-select" title="보훈분류">
@@ -254,12 +254,24 @@
                                         <div class="form-group">
                                             <label class="label">연도</label>
                                             <div class="form-period">
-                                                <input class="form-input" type="text" title="시작" inputmode="numeric" />
+                                                <select class="form-select" title="연도 시작">
+                                                    <option value="0" selected>선택</option>
+                                                    <option value="1">2025</option>
+                                                    <option value="2">2024</option>
+                                                    <option value="3">2023</option>
+                                                    <option value="4">2022</option>
+                                                </select>
                                                 <span>~</span>
-                                                <input class="form-input" type="text" title="종료" inputmode="numeric" />
+                                                <select class="form-select" title="연도 끝">
+                                                    <option value="0" selected>선택</option>
+                                                    <option value="1">2025</option>
+                                                    <option value="2">2024</option>
+                                                    <option value="3">2023</option>
+                                                    <option value="4">2022</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group span-3">
                                             <label class="label">검색어</label>
                                             <input class="form-input" type="text" title="검색어" />
                                         </div>

@@ -2874,6 +2874,9 @@ h1, h2, h3, h4, h5, h6 {
 .search-detail-grid-lg {
   grid-template-columns: repeat(3, 1fr);
 }
+.search-detail-grid .span-2 {
+  grid-column: 1/span 2;
+}
 .search-detail-grid .span-3 {
   grid-column: 1/span 3;
 }
