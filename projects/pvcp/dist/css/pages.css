@@ -1333,25 +1333,27 @@
 .archive-container .search-detail-box {
   margin-bottom: 60px;
 }
+.archive-container .result-group-wrapper .result-group .person-list {
+  margin-bottom: 60px;
+}
+.archive-container .result-group-wrapper .result-group .history-list {
+  margin-bottom: 30px;
+}
+.archive-container .result-group-wrapper .result-group .history-list.history-list-map {
+  margin-bottom: 0;
+}
+.archive-container .result-group-wrapper .result-group .photo-list {
+  padding-bottom: 40px;
+}
+.archive-container .result-group-wrapper .result-group .book-list {
+  padding-bottom: 40px;
+}
 .archive-container .result-group .person-list {
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  margin-bottom: 60px;
 }
 .archive-container .result-group .video-list {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 30px 60px;
-}
-.archive-container .result-group .history-list {
-  margin-bottom: 30px;
-}
-.archive-container .result-group .history-list.history-list-map {
-  margin-bottom: 0;
-}
-.archive-container .result-group .photo-list {
-  padding-bottom: 40px;
-}
-.archive-container .result-group .book-list {
-  padding-bottom: 40px;
 }
 .archive-container .detail-content .memorial-detail-content {
   display: flex;
