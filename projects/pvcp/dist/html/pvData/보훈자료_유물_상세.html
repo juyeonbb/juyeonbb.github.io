@@ -201,212 +201,109 @@
                 <ol class="breadcrumb-list">
                     <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="ico ico-home"></i>홈</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0)">보훈자료</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">역사</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">유물</a></li>
                 </ol>
             </nav>
             <div class="archive-container">
                 <div class="inner">
-                    <div class="search-detail-box">
-                        <div class="search-bar">
-                            <div class="form-keyword">
-                                <select class="form-select" title="검색 분류">
-                                    <option value="person" selected>역사</option>
-                                    <option value="place">장소</option>
-                                </select>
-                                <span class="divider"></span>
-                                <input class="form-input" type="search" title="검색어" placeholder="검색어를 입력하세요" />
-                            </div>
-                            <div class="form-submit">
-                                <button type="button" class="btn btn-detail">
-                                    <i class="ico ico-magnify"></i>
-                                    <span>검색</span>
-                                </button>
-                                <button type="button" class="btn btn-border-blue btn-detail _btnSearchDetail" aria-expanded="false" aria-controls="search-detail">
-                                    <i class="ico ico-magnify-plus"></i>
-                                    <span>상세검색</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="search-detail" hidden>
-                            <div class="search-detail-inner">
-                                <div class="search-detail-title">역사검색</div>
-                                <div class="search-detail-form">
-                                    <div class="search-detail-grid">
-                                        <div class="form-group">
-                                            <label class="label">보훈분류</label>
-                                            <select class="form-select" title="보훈분류">
-                                                <option value="0" selected>전체</option>
-                                                <option value="1">독립</option>
-                                                <option value="2">호국</option>
-                                                <option value="3">민주</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label">역사타입</label>
-                                            <select class="form-select" title="역사타입">
-                                                <option value="0" selected>전체</option>
-                                                <option value="1">의병</option>
-                                                <option value="2">3.1운동</option>
-                                                <option value="3">국내항일</option>
-                                                <option value="4">학생운동</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label">연도</label>
-                                            <div class="form-period">
-                                                <select class="form-select" title="연도 시작">
-                                                    <option value="0" selected>선택</option>
-                                                    <option value="1">2025</option>
-                                                    <option value="2">2024</option>
-                                                    <option value="3">2023</option>
-                                                    <option value="4">2022</option>
-                                                </select>
-                                                <span>~</span>
-                                                <select class="form-select" title="연도 끝">
-                                                    <option value="0" selected>선택</option>
-                                                    <option value="1">2025</option>
-                                                    <option value="2">2024</option>
-                                                    <option value="3">2023</option>
-                                                    <option value="4">2022</option>
-                                                </select>
+                    <div class="detail-content">
+                        <!-- heading -->
+                        <div class="result-group">
+                            <div class="result-group-head">
+                                <h3 class="title">유물 상세정보</h3>
+                                <div class="util">
+                                    <button type="button" class="btn-print"><i class="ico ico-print"></i><span class="sr-only">프린트하기</span></button>
+                                    <div class="drop-wrap _dropdown">
+                                        <button type="button" class="btn-share _dropdownBtn" aria-controls="shareMenu" aria-expanded="false">
+                                            <i class="ico ico-share"></i><span class="sr-only">공유하기</span>
+                                        </button>
+                                        <div class="drop-menu _dropdownMenu" id="shareMenu" hidden="">
+                                            <div class="drop-in">
+                                                <ul class="drop-list">
+                                                    <li class="drop-item">
+                                                        <a href="javascript:void(0);" class="item-link _dropdownItem">카카오톡</a>
+                                                    </li>
+                                                    <li class="drop-item">
+                                                        <a href="javascript:void(0);" class="item-link _dropdownItem">페이스북</a>
+                                                    </li>
+                                                    <li class="drop-item">
+                                                        <a href="javascript:void(0);" class="item-link _dropdownItem">X</a>
+                                                    </li>
+                                                    <li class="drop-item">
+                                                        <a href="javascript:void(0);" class="item-link _dropdownItem">URL 복사</a>
+                                                    </li>
+                                                </ul>
                                             </div>
-                                        </div>
-                                        <div class="form-group span-3">
-                                            <label class="label">검색어</label>
-                                            <input class="form-input" type="text" title="검색어" />
-                                        </div>
-                                        <div class="search-detail-actions">
-                                            <button type="button" class="btn with-icon">
-                                                <i class="ico ico-magnify"></i>
-                                                <span>검색</span>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-gray with-icon">
-                                                <i class="ico ico-refresh"></i>
-                                                <span>초기화</span>
-                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="result-group">
-                        <div class="result-group-head">
-                            <h3 class="title">역사</h3>
-                            <span class="count">(<span class="color-point font-weight-bold">1,000</span>)</span>
+
+                        <!-- 유물 -->
+                        <div class="relics-view-wrapper">
+                            <div class="img-viewer-wrapper">
+                                <div class="img-viewer">
+                                    <img src="../../images/@temp/img-viewer-sample.png" alt="독립신문"/>
+                                </div>
+                            </div>
+                            <div class="button-group">
+                                <button type="button" class="btn btn-border-gray with-icon"><span>바로가기</span><i class="ico ico-arrow-right"></i></button>
+                                <button type="button" class="btn btn-border-gray with-icon"><span>내려받기</span><i class="ico ico-download"></i></button>
+                            </div>
                         </div>
-                        <div class="result-group-body">
-                            <ul class="history-thumb-list">
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                    <div class="thumb">
-                                        <img src="../../images/@temp/photo-9.png" alt="13도창의군 결성">
+
+                        <!-- 상세정보 -->
+                        <div class="memorial-detail-content">
+                            <div class="info-list-wrap">
+                                <div class="title-area">
+                                    <div class="title">독립신문</div>
+                                </div>
+                                <dl class="info-list">
+                                    <div class="row">
+                                        <dt>다른명칭</dt>
+                                        <dd>다른명칭</dd>
                                     </div>
-                                    <div class="info">
-                                        <div class="title"><span class="badge badge-green">의병</span> 13도창의군 결성 13도창의군 결성 13도창의군 결성 13도창의군 결성</div>
+                                    <div class="row">
+                                        <dt>국적/시대</dt>
+                                        <dd>한국 • 대한민국</dd>
                                     </div>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                    <div class="thumb">
-                                        <img src="../../images/@temp/photo-10.png" alt="2.8 독립선언">
+                                    <div class="row">
+                                        <dt>재질</dt>
+                                        <dd>한국 • 대한민국</dd>
                                     </div>
-                                    <div class="info">
-                                        <div class="title"><span class="badge badge-pink">3.1운동</span> 2.8 독립선언</div>
+                                    <div class="row">
+                                        <dt>분류</dt>
+                                        <dd>한국 • 대한민국</dd>
                                     </div>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                    <div class="thumb">
-                                        <img src="../../images/@temp/photo-10.png" alt="3.1운동">
+                                    <div class="row">
+                                        <dt>크기</dt>
+                                        <dd>한국 • 대한민국</dd>
                                     </div>
-                                    <div class="info">
-                                        <div class="title"><span class="badge badge-pink">3.1운동</span> 3.1운동</div>
+                                    <div class="row">
+                                        <dt>소장품번호</dt>
+                                        <dd>한국 • 대한민국</dd>
                                     </div>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                    <div class="thumb">
-                                        <img src="../../images/@temp/history-1.png" alt="6.10 만세운동">
+                                </dl>
+                            </div>
+                            <div class="history-content">
+                                <div class="h-item">
+                                    <div class="h-item-desc">독립신문은 미국에서 귀국한 서재필이 1896년 4월 7일 창간하였고, 우리나라 최초의 순 한글신문이다. 처음에는 가로
+                                        22cm, 세로 33cm의 국배판 정도 크기로 4면 가운데 3면은 한글전용 ‘독립신문’ 으로 편집하고, 마지막 1면은 영문판
+                                        ‘The Independent’로 편집하였다. 독립신문 제호에는 항상 태극기가 함께 인쇄되어 있다. 이 신문은 1899년 5월 16일자로
+                                        제4권 108호이다.</div>
+                                    <div class="h-item-mark">
+                                        <img src="../../images/common/img-open.png" alt="공공저작물 자유이용허락"/>
                                     </div>
-                                    <div class="info">
-                                        <div class="title"><span class="badge badge-yellow">국내항일</span> 6.10 만세운동</div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                    <div class="thumb">
-                                        <img src="../../images/@temp/photo-9.png" alt="13도창의군 결성">
-                                    </div>
-                                    <div class="info">
-                                        <div class="title"><span class="badge badge-green">의병</span> 13도창의군 결성</div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                    <div class="thumb">
-                                        <img src="../../images/@temp/photo-10.png" alt="2.8 독립선언">
-                                    </div>
-                                    <div class="info">
-                                        <div class="title"><span class="badge badge-pink">3.1운동</span> 2.8 독립선언</div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                    <div class="thumb">
-                                        <img src="../../images/@temp/photo-10.png" alt="3.1운동">
-                                    </div>
-                                    <div class="info">
-                                        <div class="title"><span class="badge badge-pink">3.1운동</span> 3.1운동</div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                    <div class="thumb">
-                                        <img src="../../images/@temp/history-1.png" alt="6.10 만세운동">
-                                    </div>
-                                    <div class="info">
-                                        <div class="title"><span class="badge badge-yellow">국내항일</span> 6.10 만세운동</div>
-                                    </div>
-                                </li>
-                            </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- button group -->
+                        <div class="btn-group-outline">
+                            <button class="btn btn-lg btn-border-gray" type="button">목록</button>
                         </div>
                     </div>
-                    <ul id="pagination" class="pagination"></ul>
-<script>
-    // https://josecebe.github.io/twbs-pagination/
-    const TOTAL_PAGES = 35;
-    const BREAKPOINT = 1280;
-
-    function getVisiblePages() {
-        return window.innerWidth <= BREAKPOINT ? 5 : 10;
-    }
-
-    function initPagination() {
-        const $pagination = $('#pagination');
-
-        $pagination.twbsPagination('destroy');
-
-        $pagination.twbsPagination({
-            totalPages: TOTAL_PAGES,
-            visiblePages: getVisiblePages(),
-            first: false,
-            prev: `<i class="ico ico-paging-prev"></i><span class="">이전</span>`,
-            next: `<span class="">다음</span><i class="ico ico-paging-next"></i>`,
-            last: false
-        });
-    }
-
-    initPagination();
-
-    let resizeTimer;
-    window.addEventListener('resize', () => {``
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            initPagination();
-        }, 150);
-    });
-</script>
                 </div>
             </div>
         </div>
