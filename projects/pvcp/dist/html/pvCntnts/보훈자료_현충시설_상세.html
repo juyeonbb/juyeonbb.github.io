@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/swiper.js"></script>
+    <script src="../../js/twbsPagination.js"></script>
+    <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_gnb.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <script src="../../js/popper.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="shortcut icon" href="../../images/common/favicon.ico">
+    <title>보훈문화종합포털</title>
+</head>
+<body>
+<!-- 본문 바로가기 -->
+<div class="skip-nav" id="skip">
+    <a class="view-content" href="#content">본문 바로가기</a>
+</div>
+<!-- 전자정부 누리집 -->
+<div class="mast-head">
+    <div class="inner">
+        <span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+    </div>
+</div>
+<!-- Header // 디자인 대기중 -->
+<header class="header _header">
+    <div class="header-pc">
+        <div class="inner">
+            <div class="utility">
+                <ul class="list">
+                    <li class="item">
+                        <div class="drop-wrap _zoomDropdown _dropdown">
+                            <button type="button" class="drop-btn _btnZoom _dropdownBtn" aria-controls="zoomMenu" aria-expanded="false">
+                                <span>화면크기</span><i class="ico ico-toggle" aria-hidden="true"></i>
+                            </button>
+                            <div class="drop-menu _dropdownMenu" id="zoomMenu" hidden>
+                                <div class="drop-in">
+                                    <ul class="drop-list">
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="0.9"><span class="ex-zoom">가</span>작게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1"><span class="ex-zoom">가</span>보통</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem on" data-zoom="1.1"><span class="ex-zoom">가</span>조금 크게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1.2"><span class="ex-zoom">가</span>크게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1.3"><span class="ex-zoom">가</span>가장 크게</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item"><a class="item-link" href="javascript:void(0);" target="_blank" title="새 창 열기">누리집 소통망(SNS)</a></li>
+                </ul>
+            </div>
+            <div class="branding">
+                <h1 class="logo">
+                    <a href="javascript:void(0);">
+                        <img src="../../images/common/logo.png" alt="보훈문화종합포털">
+                    </a>
+                </h1>
+                <nav class="main-menu">
+                    <ul class="gnb-menu">
+                        <li class="menu-item is-pinned"> <!-- 서브페이지에서 gnb 고정일 경우, is-pinned 클래스 추가 -->
+                            <a href="javascript:void(0);" class="menu-link" aria-haspopup="true" aria-expanded="false">보훈자료</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item is-active">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true">보훈자료</a>
+                                        <div class="depth3-menu">
+                                            <ul class="depth3">
+                                                <li class="depth3-item"><a href="javascript:void(0);" aria-current="page">인물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">역사</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">사진/필름</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">유물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">사료</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">도서</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈콘텐츠</a>
+                                        <div class="depth3-menu" hidden>
+                                            <ul class="depth3">
+                                                <li class="depth3-item"><a href="javascript:void(0);">신규</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">청소년 추천</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">독립의 길</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">호국의 혼</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">민주의 봄</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">현충시설</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">연표검색</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">지도검색</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">행사·전시</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item is-active">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true">기념행사</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">특별 전시</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">상설 전시</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">디지털·VR 전시</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">체험·교육</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">문화·체험 행사</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">온 · 오프라인 교육</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">배움 자료실</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈e북</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">이달의 영웅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">이달의 역사</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">종합포털소개</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">포털  소개</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈의 개념</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈 문화통계</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">공지사항</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보도자료</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="actions">
+<!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">로그인</a></li>-->
+<!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">회원가입</a></li>-->
+                    <li class="action-item"><a href="javascript:void(0);" class="btn-search" title="통합 검색"><i class="ico ico-search"></i><em class="show-mo">통합 검색</em></a></li>
+                    <li class="action-item show-pc"><button type="button" class="btn-menu" title="전체메뉴"><span></span><span></span><span></span></button></li>
+                    <li class="action-item show-mo"><button type="button" class="btn-menu" title="전체메뉴"><span></span><span></span><span></span><em>전체메뉴</em></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-mo"></div>
+</header>
+<main class="wrap" id="content">
+    <div class="container">
+        <!-- s contents -->
+        <div class="sub-contents">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="ico ico-home"></i>홈</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">보훈자료</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">현충시설</a></li>
+                </ol>
+            </nav>
+            <div class="archive-container">
+                <div class="inner">
+                    <div class="detail-content">
+                        <!-- heading -->
+                        <div class="result-group">
+                            <div class="result-group-head">
+                                <h3 class="title">현충시설 상세정보</h3>
+                                <div class="util">
+                                    <button type="button" class="btn-print"><i class="ico ico-print"></i><span class="sr-only">프린트하기</span></button>
+                                    <div class="drop-wrap _dropdown">
+                                        <button type="button" class="btn-share _dropdownBtn" aria-controls="shareMenu" aria-expanded="false">
+                                            <i class="ico ico-share"></i><span class="sr-only">공유하기</span>
+                                        </button>
+                                        <div class="drop-menu _dropdownMenu" id="shareMenu" hidden="">
+                                            <div class="drop-in">
+                                                <ul class="drop-list">
+                                                    <li class="drop-item">
+                                                        <a href="javascript:void(0);" class="item-link _dropdownItem">카카오톡</a>
+                                                    </li>
+                                                    <li class="drop-item">
+                                                        <a href="javascript:void(0);" class="item-link _dropdownItem">페이스북</a>
+                                                    </li>
+                                                    <li class="drop-item">
+                                                        <a href="javascript:void(0);" class="item-link _dropdownItem">X</a>
+                                                    </li>
+                                                    <li class="drop-item">
+                                                        <a href="javascript:void(0);" class="item-link _dropdownItem">URL 복사</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title-area">
+                            <div class="title">가평의병 3.1항일운동 기념비</div>
+                            <div class="detail-actions">
+                                <a href="javascript:void(0)" class="btn btn-border-point with-icon" target="_blank"><span>관련링크</span><i class="ico-out"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- slider -->
+                        <div class="photo-slider-wrapper">
+                            <div class="photo-slider">
+                                <button type="button" class="btn-nav btn-nav-prev"><i class="ico ico-arc-nav-prev"></i><span class="sr-only">이전</span></button>
+                                <div class="swiper _photoSlider">
+                                    <div class="swiper-wrapper" id="gallery">
+                                        <div class="swiper-slide">
+                                            <a class="img" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg" data-pswp-width="1875" data-pswp-height="2500" target="_blank">
+                                                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="img" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank">
+                                                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="img" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank">
+                                                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="img" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg" data-pswp-width="1875" data-pswp-height="2500" target="_blank">
+                                                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="img" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank">
+                                                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="img" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank">
+                                                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="img" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg" data-pswp-width="1875" data-pswp-height="2500" target="_blank">
+                                                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="img" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank">
+                                                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a class="img" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank">
+                                                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-nav btn-nav-next"><i class="ico ico-arc-nav-next"></i><span class="sr-only">다음</span></button>
+                            </div>
+                        </div>
+                        <script>
+                            let photoSlider = new Swiper('._photoSlider', {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                                autoHeight: true,
+                                // loop: true,
+                                // autoplay: {
+                                //     delay: 4000,
+                                //     disableOnInteraction: false
+                                // },
+                                navigation: {
+                                    prevEl: '.photo-slider-wrapper .btn-nav-prev',
+                                    nextEl: '.photo-slider-wrapper .btn-nav-next'
+                                },
+                                breakpoints: {
+                                    1280: {
+                                        slidesPerView: 5,
+                                    },
+                                    768: {
+                                        slidesPerView: 3,
+                                    },
+                                    360: {
+                                        slidesPerView: 2,
+                                    },
+                                }
+                            });
+                        </script>
+                        <script type="module">
+                            import PhotoSwipeLightbox from '../../js/photoswipe-lightbox.js';
+                            import PhotoSwipeDeepZoom from '../../js/photoswipe-deep-zoom-plugin.js';
+
+                            const imageData = [
+                                {
+                                    title: "대한민국 임시정부 요인",
+                                    desc: "1919년 4월 11일 중국 상하이에서 설립된 대한민국 최초의 정부입니다. 1919년 4월 11일 중국 상하이에서 설립된 대한민국 최초의 정부입니다. 1919년 4월 11일 중국 상하이에서 설립된 대한민국 최초의 정부입니다.",
+                                    tags: [
+                                        { label: "독립", type: "blue" },
+                                        { label: "임시정부", type: "green" }
+                                    ]
+                                },
+                                {
+                                    title: "3.1 운동 상해",
+                                    desc: "상해에서 진행된 3.1 운동의 기록 사진입니다.",
+                                    tags: [
+                                        { label: "3.1운동", type: "blue" },
+                                        { label: "상해", type: "green" }
+                                    ]
+                                },
+                                {
+                                    title: "3.1 만세운동 현장",
+                                    desc: "전국적으로 퍼져나간 만세 운동의 역사적 현장입니다.",
+                                    tags: [
+                                        { label: "만세운동", type: "gray" },
+                                        { label: "역사", type: "red" }
+                                    ]
+                                }
+                            ];
+
+                            const TAG_TYPE_CLASS = {
+                                blue:  'tag-blue',
+                                green: 'tag-green',
+                                red:   'tag-red',
+                                gray:  'tag-gray',
+                            };
+
+                            const DEFAULT_TAG_CLASS = 'tag-default';
+
+                            const BASE_PADDING = { top: 60, bottom: 40, left: 100, right: 100 };
+
+                            const lightbox = new PhotoSwipeLightbox({
+                                gallery: '#gallery',
+                                children: 'a',
+                                bgOpacity: 0.6,
+                                showHideAnimationType: 'fade',
+                                padding: (viewportSize) => ({
+                                    top: BASE_PADDING.top,
+                                    left: BASE_PADDING.left,
+                                    right: BASE_PADDING.right,
+                                    bottom: BASE_PADDING.bottom
+                                }),
+                                closeTitle: '닫기',
+                                zoomTitle: 'Zoom the photo',
+                                arrowPrevTitle: '',
+                                arrowNextTitle: '',
+                                allowPanToNext: false,
+                                allowMouseDrag: true,
+                                wheelToZoom: true,
+                                zoom: false,
+                                maxZoomLevel: 2,
+                                pinchToClose: false,
+                                pswpModule: () => import('../../js/photoswipe.js'),
+                            });
+
+                            const deepZoomPlugin = new PhotoSwipeDeepZoom(lightbox, {
+                                tileSize: 256
+                            });
+
+                            lightbox.on('uiRegister', function () {
+                                // Top bar
+                                lightbox.pswp.ui.registerElement({
+                                    name: 'popup-title',
+                                    order: 0,
+                                    appendTo: 'wrapper',
+                                    onInit: (el, pswp) => {
+                                        el.classList.add('pswp__popup-title');
+                                        el.textContent = '대한민국 임시정부 요인';
+                                        el.addEventListener('wheel', (e) => {
+                                            e.preventDefault();
+                                            e.stopPropagation();
+                                        }, { passive: false });
+                                    }
+                                });
+
+                                // Top bar (Block pinch)
+                                lightbox.pswp.on('pointerDown', (e) => {
+                                    const target = e.originalEvent?.target;
+                                    if (target && target.closest && target.closest('.pswp__popup-title')) {
+                                        e.preventDefault();
+                                    }
+                                });
+
+                                // Close Button
+                                lightbox.pswp.ui.registerElement({
+                                    name: 'custom-close',
+                                    order: 10,
+                                    isButton: true,
+                                    tagName: 'button',
+                                    html: {
+                                        isCustomSVG: true,
+                                        inner: `
+      <path d="M24 10l-2-2-6 6-6-6-2 2
+               6 6-6 6 2 2 6-6
+               6 6 2-2-6-6z"
+            id="pswp__icn-close-custom"/>
+    `,
+                                        outlineID: 'pswp__icn-close-custom'
+                                    },
+                                    onInit: (el, pswp) => {
+                                        el.classList.add('pswp__button', 'pswp__button--custom-close');
+                                        el.setAttribute('type', 'button');
+                                        el.setAttribute('aria-label', '닫기');
+                                        el.setAttribute('title', '닫기');
+
+                                        el.addEventListener('click', () => {
+                                            pswp.close();
+                                        });
+                                    }
+                                });
+
+                                // Download Button
+                                lightbox.pswp.ui.registerElement({
+                                    name: 'download-button',
+                                    order: 8,
+                                    isButton: true,
+                                    tagName: 'a',
+                                    html: {
+                                        isCustomSVG: true,
+                                        inner: '<path d="M20.5 14.3 17.1 18V10h-2.2v7.9l-3.4-3.6L10 16l6 6.1 6-6.1ZM23 23H9v2h14Z" id="pswp__icn-download"/>',
+                                        outlineID: 'pswp__icn-download'
+                                    },
+                                    onInit: (el, pswp) => {
+                                        el.classList.add('pswp__button', 'pswp__button--download');
+                                        el.setAttribute('download', '');
+                                        el.setAttribute('target', '_blank');
+                                        el.setAttribute('rel', 'noopener');
+                                        el.setAttribute('aria-label', '이미지 다운로드');
+                                        el.setAttribute('title', '이미지 다운로드');
+
+                                        const update = () => {
+                                            const slide = pswp.currSlide;
+                                            if (!slide) return;
+
+                                            const src = slide.data?.src;
+
+                                            const data = imageData[pswp.currIndex];
+                                            if (data?.title) el.setAttribute('download', `${data.title}.png`);
+
+                                            el.href = src || '';
+                                            el.toggleAttribute('data-disabled', !src);
+                                        };
+
+                                        pswp.on('change', update);
+                                        update();
+                                    }
+                                });
+
+                                // Zoom Indicator
+                                // lightbox.pswp.ui.registerElement({
+                                //     name: 'zoom-level-indicator',
+                                //     order: 9,
+                                //     onInit: (el, pswp) => {
+                                //         pswp.on('zoomPanUpdate', (e) => {
+                                //             if (e.slide === pswp.currSlide) {
+                                //                 el.innerText = Math.round(pswp.currSlide.currZoomLevel * 100) + '%';
+                                //             }
+                                //         });
+                                //     }
+                                // });
+
+                                // Bottom Info
+                                lightbox.pswp.ui.registerElement({
+                                    name: 'bottom-info',
+                                    order: 9,
+                                    appendTo: 'wrapper',
+                                    onInit: (el, pswp) => {
+                                        el.classList.add('pswp__bottom-info');
+
+                                        let isUpdating = false;
+                                        let lastBottom = null;
+                                        let rafId = null;
+
+                                        const renderInfo = () => {
+                                            const data = imageData[pswp.currIndex] || {};
+                                            const tags = Array.isArray(data.tags) ? data.tags : [];
+
+                                            const tagsHtml = tags.map((t) => {
+                                                // 문자열도 허용하려면 fallback 포함
+                                                const label = typeof t === 'string' ? t : (t?.label ?? '');
+                                                const type  = typeof t === 'string' ? '' : (t?.type ?? '');
+
+                                                const cls = TAG_TYPE_CLASS[type] || DEFAULT_TAG_CLASS;
+
+                                                return `
+                                <span class="tag ${cls}"
+                                      data-tag="${type}"
+                                      aria-label="${label}">
+                                  ${label}
+                                </span>
+                              `;
+                                            }).join('');
+
+                                            el.innerHTML = `
+                                    <div class="pswp__custom-info">
+                                      <div class="tags">${tagsHtml}</div>
+                                      <h2 class="title">${data.title ?? ''}</h2>
+                                      <p class="desc">${data.desc ?? ''}</p>
+                                    </div>
+                                  `;
+                                        };
+
+                                        const measureBottom = () => Math.ceil(el.getBoundingClientRect().height) + BASE_PADDING.bottom;
+
+                                        const applyPaddingIfNeeded = () => {
+                                            if (isUpdating) return;
+
+                                            const bottom = measureBottom();
+                                            if (bottom === lastBottom) return;
+
+                                            lastBottom = bottom;
+                                            isUpdating = true;
+
+                                            pswp.options.padding = {
+                                                top: BASE_PADDING.top,
+                                                left: BASE_PADDING.left,
+                                                right: BASE_PADDING.right,
+                                                bottom
+                                            };
+
+                                            pswp.updateSize(true);
+
+                                            isUpdating = false;
+                                        };
+
+                                        const scheduleApply = () => {
+                                            if (rafId) cancelAnimationFrame(rafId);
+                                            rafId = requestAnimationFrame(() => {
+                                                rafId = null;
+                                                applyPaddingIfNeeded();
+                                            });
+                                        };
+
+                                        const updateAll = () => {
+                                            renderInfo();
+                                            scheduleApply();
+                                        };
+
+                                        pswp.on('change', updateAll);
+                                        pswp.on('resize', scheduleApply);
+
+                                        updateAll();
+                                    }
+                                });
+
+                                // Bottom Info (Block pinch)
+                                lightbox.pswp.on('pointerDown', (e) => {
+                                    const target = e.originalEvent?.target;
+                                    if (target && target.closest && target.closest('.pswp__bottom-info')) {
+                                        e.preventDefault();
+                                    }
+                                });
+
+                                // Prev Label
+                                lightbox.pswp.ui.registerElement({
+                                    name: 'prev-label',
+                                    appendTo: 'wrapper',
+                                    onInit: (el, pswp) => {
+                                        el.classList.add('pswp__arrow-label', 'pswp__arrow-label--prev');
+                                        el.setAttribute('role', 'tooltip');
+
+                                        const tid = 'pswpPrevTip';
+                                        el.id = tid;
+
+                                        const mount = () => {
+                                            const prevBtn = pswp.element.querySelector('.pswp__button--arrow--prev');
+                                            if (prevBtn && !prevBtn.contains(el)) {
+                                                prevBtn.appendChild(el);
+                                                prevBtn.setAttribute('aria-describedby', tid);
+                                            }
+                                        };
+
+                                        const total = imageData.length;
+
+                                        const update = () => {
+                                            const prevIndex = (pswp.currIndex - 1 + total) % total;
+                                            const prevData = imageData[prevIndex];
+
+                                            el.textContent = prevData.title;
+                                            el.removeAttribute('data-empty');
+                                            mount();
+                                        };
+
+                                        pswp.on('change', update);
+                                        update();
+                                    }
+                                });
+
+                                // Next Label
+                                lightbox.pswp.ui.registerElement({
+                                    name: 'next-label',
+                                    appendTo: 'wrapper',
+                                    onInit: (el, pswp) => {
+                                        el.classList.add('pswp__arrow-label', 'pswp__arrow-label--next');
+                                        el.setAttribute('role', 'tooltip');
+
+                                        const tid = 'pswpNextTip';
+                                        el.id = tid;
+
+                                        const mount = () => {
+                                            const nextBtn = pswp.element.querySelector('.pswp__button--arrow--next');
+                                            if (nextBtn && !nextBtn.contains(el)) {
+                                                nextBtn.appendChild(el);
+                                                nextBtn.setAttribute('aria-describedby', tid);
+                                            }
+                                        };
+
+                                        const total = imageData.length;
+
+                                        const update = () => {
+                                            const nextIndex = (pswp.currIndex + 1) % total;
+                                            const nextData = imageData[nextIndex];
+
+                                            el.textContent = nextData.title;
+                                            el.removeAttribute('data-empty');
+                                            mount();
+                                        };
+
+                                        pswp.on('change', update);
+                                        update();
+                                    }
+                                });
+                            });
+
+                            lightbox.init();
+                        </script>
+
+                        <!-- tabs -->
+                        <div class="tab-container _tabContainer">
+                            <div class="tabs-box">
+                                <ul class="tabs _tab" role="tablist">
+                                    <li class="item on">
+                                        <button class="tab-button" type="button" role="tab" id="tab-1" aria-selected="true" aria-controls="panel-1">기본정보</button>
+                                    </li>
+                                    <li class="item">
+                                        <button class="tab-button" type="button" role="tab" id="tab-2" aria-selected="false" aria-controls="panel-2">건립취지</button>
+                                    </li>
+                                    <li class="item">
+                                        <button class="tab-button" type="button" role="tab" id="tab-3" aria-selected="false" aria-controls="panel-3">위치지도</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content _tabContent">
+                                <div class="tab-panel on" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+                                    <div class="info-list-wrap">
+                                        <dl class="info-list">
+                                            <div class="row">
+                                                <dt>시설명</dt>
+                                                <dd>가평의병 3.1항일운동 기념비</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt>주제</dt>
+                                                <dd>독립운동</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt>종류</dt>
+                                                <dd>비석</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt>주제분류</dt>
+                                                <dd>3.1운동</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt>소재지</dt>
+                                                <dd>경기도 가평군 북면 목동리 986-11</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt>관할지청</dt>
+                                                <dd>경기북부보훈지청</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt>관리자</dt>
+                                                <dd>가평군청</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt>사건연도</dt>
+                                                <dd>가평군청</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt>시설규모</dt>
+                                                <dd></dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt>시설건립일</dt>
+                                                <dd>1994-03-15</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+                                    <div class="history-content">
+                                        <p>1895년 10월 명성황후시해 사건과 그 해말 단발령에 항거하여 가평에서는 북면을 근거지로 의병이 봉기하였다. 가평 지역의 의병들은 강원도 의병들과 연합하여 격렬히 전투하다가 이충응(李忠應,
+                                            1856~1896), 신재가(申在嘉, 1850~1895), 정문위(鄭文緯, 1851~1896) 등이 의병장으로 참여하여 순국하였다. 1905년 11월 을사늑약에 항거하여 일어난 중기의병과 1907년 고종강제퇴위와
+                                            군대해산에 항거하여 일어난 후기의병에도 강귀손(姜貴孫, 미상 ~1909), 강윤희(姜允熙, 1868~1909), 김석하(金錫夏, 미상~1908), 김춘쇠(金春釗, 미상~1908), 나봉산(羅奉山, 1860~1910),
+                                            박내병(朴來秉, 미상~1908), 박내봉(朴來鳳, 미상~1908), 하상태(河相泰, 1868~1909), 홍난우(洪鸞祐, 미상~1908) 등이 참가하여 순국하였다.<br/><br/>
+
+                                            3·1독립운동이 한창 전국으로 확산되어 가던 1919년 3월 15, 16일 이윤석(李胤錫, 1894~ 1953)·정흥교(鄭興敎, 1900~1965) 등의 주도로 북면사무소 앞에서 수백명이 태극기를 흔들며 독립만세를
+                                            외치는 시위가 시작되어 가평읍 군청앞으로 행진하여 이를 진압하려는 군경과 대치하였다. 이 시위로 체포된 사람이 70여명이었으며, 이 가운데 28명이 재판을 받고 옥고를 치르거나 태형에 처해졌다
+                                            이들을 기리기 위해서 1991년 비를 세웠다.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
+                                    <div class="map-area">
+                                        <!-- 지도 API 삽입 영역 -->
+                                        <div id="facilityMap" class="map">
+                                            <img src="../../images/@temp/sample-map-lg.png" alt=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- button group -->
+                        <div class="btn-group-outline">
+                            <button class="btn btn-lg btn-border-gray" type="button">목록</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e contents -->
+    </div>
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-info">
+        <div class="inner">
+            <div class="f-info">
+                <div class="logo">
+                    <a href="javascript:void(0)"><img src="../../images/common/footer-logo.png" alt="KNA 에듀센터"></a>
+                </div>
+                <div class="info-cs">
+                    <div class="address">(30113) 세종특별자치시 도움4로 9 정부세종청사 9동</div>
+                    <div class="key-info"><b>대표전화&nbsp;</b><b>1577-0606</b><span>&nbsp;(상담시간 : 평일 09:00 ~ 18:00, 점심시간 : 12:00 ~ 13:00, 매주 월요일 휴무)</span></div>
+                </div>
+            </div>
+            <div class="f-link">
+                <div class="footer-dropdown _footerDropdown">
+                    <button type="button" class="btn-select _footerDropdownButton" title="관련사이트 바로가기">관련사이트 바로가기</button>
+                    <ul class="dropdown-list">
+                        <li><a href="https://www.nhis.or.kr/" title="새 창 열기" target="_blank" rel="noopener noreferrer" ><span>국민건강보험</span></a></li>
+                        <li><a href="https://www.nmkpg.go.kr/" title="새 창 열기" target="_blank" rel="noopener noreferrer"><span>국립대한민국임시정부기념관</span></a></li>
+                    </ul>
+                    <button type="button" class="btn-select-close _footerDropdownCloseButton" title="관련사이트 닫기">관련사이트 바로가기</button>
+                </div>
+                <div class="links">
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="새 창 열기">이용안내</a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="새 창 열기">찾아오시는 길</a>
+                </div>
+                <div class="sns-links">
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="네이버 블로그 공유하기"><img src=../../images/common/ico-naver.svg alt="네이버 블로그 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="유투브 공유하기"><img src=../../images/common/ico-youtube.svg alt="유투브 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="인스타그램 공유하기"><img src=../../images/common/ico-instagram.svg alt="인스타그램 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="x 공유하기"><img src=../../images/common/ico-x.svg alt="x 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="페이스북 공유하기"><img src=../../images/common/ico-facebook.svg alt="페이스북 공유하기"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-links">
+        <div class="inner">
+            <div class="link-content">
+                <div class="info-links">
+                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">이용약관</a>
+                    <a class="link link-highlight" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">저작권정책</a>
+                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">자주하는질문</a>
+                </div>
+            </div>
+            <div class="copyright">© Ministry of Patriots and Veterans Affairs. All Rights Reserved.</div>
+            <div class="nuri"><img src="../../images/common/ico-footer-nuri.png" alt="국가보훈부"/><span>이 누리집은 국가보훈부 산하기관 누리집입니다.</span></div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

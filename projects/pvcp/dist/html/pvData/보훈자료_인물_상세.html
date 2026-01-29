@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/swiper.js"></script>
+    <script src="../../js/twbsPagination.js"></script>
+    <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_gnb.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <script src="../../js/popper.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="shortcut icon" href="../../images/common/favicon.ico">
+    <title>보훈문화종합포털</title>
+</head>
+<body>
+<!-- 본문 바로가기 -->
+<div class="skip-nav" id="skip">
+    <a class="view-content" href="#content">본문 바로가기</a>
+</div>
+<!-- 전자정부 누리집 -->
+<div class="mast-head">
+    <div class="inner">
+        <span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+    </div>
+</div>
+<!-- Header // 디자인 대기중 -->
+<header class="header _header">
+    <div class="header-pc">
+        <div class="inner">
+            <div class="utility">
+                <ul class="list">
+                    <li class="item">
+                        <div class="drop-wrap _zoomDropdown _dropdown">
+                            <button type="button" class="drop-btn _btnZoom _dropdownBtn" aria-controls="zoomMenu" aria-expanded="false">
+                                <span>화면크기</span><i class="ico ico-toggle" aria-hidden="true"></i>
+                            </button>
+                            <div class="drop-menu _dropdownMenu" id="zoomMenu" hidden>
+                                <div class="drop-in">
+                                    <ul class="drop-list">
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="0.9"><span class="ex-zoom">가</span>작게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1"><span class="ex-zoom">가</span>보통</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem on" data-zoom="1.1"><span class="ex-zoom">가</span>조금 크게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1.2"><span class="ex-zoom">가</span>크게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1.3"><span class="ex-zoom">가</span>가장 크게</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item"><a class="item-link" href="javascript:void(0);" target="_blank" title="새 창 열기">누리집 소통망(SNS)</a></li>
+                </ul>
+            </div>
+            <div class="branding">
+                <h1 class="logo">
+                    <a href="javascript:void(0);">
+                        <img src="../../images/common/logo.png" alt="보훈문화종합포털">
+                    </a>
+                </h1>
+                <nav class="main-menu">
+                    <ul class="gnb-menu">
+                        <li class="menu-item is-pinned"> <!-- 서브페이지에서 gnb 고정일 경우, is-pinned 클래스 추가 -->
+                            <a href="javascript:void(0);" class="menu-link" aria-haspopup="true" aria-expanded="false">보훈자료</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item is-active">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true">보훈자료</a>
+                                        <div class="depth3-menu">
+                                            <ul class="depth3">
+                                                <li class="depth3-item"><a href="javascript:void(0);" aria-current="page">인물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">역사</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">사진/필름</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">유물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">사료</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">도서</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈콘텐츠</a>
+                                        <div class="depth3-menu" hidden>
+                                            <ul class="depth3">
+                                                <li class="depth3-item"><a href="javascript:void(0);">신규</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">청소년 추천</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">독립의 길</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">호국의 혼</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">민주의 봄</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">현충시설</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">연표검색</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">지도검색</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">행사·전시</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item is-active">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true">기념행사</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">특별 전시</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">상설 전시</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">디지털·VR 전시</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">체험·교육</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">문화·체험 행사</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">온 · 오프라인 교육</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">배움 자료실</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈e북</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">이달의 영웅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">이달의 역사</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">종합포털소개</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">포털  소개</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈의 개념</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈 문화통계</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">공지사항</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보도자료</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="actions">
+<!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">로그인</a></li>-->
+<!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">회원가입</a></li>-->
+                    <li class="action-item"><a href="javascript:void(0);" class="btn-search" title="통합 검색"><i class="ico ico-search"></i><em class="show-mo">통합 검색</em></a></li>
+                    <li class="action-item show-pc"><button type="button" class="btn-menu" title="전체메뉴"><span></span><span></span><span></span></button></li>
+                    <li class="action-item show-mo"><button type="button" class="btn-menu" title="전체메뉴"><span></span><span></span><span></span><em>전체메뉴</em></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-mo"></div>
+</header>
+<main class="wrap" id="content">
+    <div class="container">
+        <!-- s contents -->
+        <div class="sub-contents">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="ico ico-home"></i>홈</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">보훈자료</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">인물</a></li>
+                </ol>
+            </nav>
+            <div class="archive-container">
+                <div class="inner">
+                    <div class="detail-content">
+                        <div class="section-content">
+                            <div class="result-group">
+                                <div class="result-group-head">
+                                    <h3 class="title">인물 상세정보</h3>
+                                    <div class="util">
+                                        <button type="button" class="btn-print"><i class="ico ico-print"></i><span class="sr-only">프린트하기</span></button>
+                                        <div class="drop-wrap _dropdown">
+                                            <button type="button" class="btn-share _dropdownBtn" aria-controls="shareMenu" aria-expanded="false">
+                                                <i class="ico ico-share"></i><span class="sr-only">공유하기</span>
+                                            </button>
+                                            <div class="drop-menu _dropdownMenu" id="shareMenu" hidden="">
+                                                <div class="drop-in">
+                                                    <ul class="drop-list">
+                                                        <li class="drop-item">
+                                                            <a href="javascript:void(0);" class="item-link _dropdownItem"><i class="ico ico-kakao"></i>카카오톡</a>
+                                                        </li>
+                                                        <li class="drop-item">
+                                                            <a href="javascript:void(0);" class="item-link _dropdownItem"><i class="ico ico-facebook"></i> 페이스북</a>
+                                                        </li>
+                                                        <li class="drop-item">
+                                                            <a href="javascript:void(0);" class="item-link _dropdownItem"><i class="ico ico-x"></i> X</a>
+                                                        </li>
+                                                        <li class="drop-item">
+                                                            <a href="javascript:void(0);" class="item-link _dropdownItem"><i class="ico ico-url"></i>URL 복사</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="featured-result">
+                                <div class="featured-result-inner">
+                                    <div class="featured-result-media">
+                                        <div class="img">
+                                            <img src="../../images/@temp/feature-5.png" alt="김구 사진">
+                                        </div>
+                                    </div>
+                                    <div class="featured-result-content">
+                                        <div class="featured-info">
+                                            <h3 class="title">김구</h3>
+                                            <span class="sub-title">金九</span>
+                                        </div>
+                                        <dl class="featured-meta">
+                                            <div class="row">
+                                                <dt class="term">이명</dt>
+                                                <dd class="desc">金龜, 金昌洙</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">성별</dt>
+                                                <dd class="desc">남자</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">출생일</dt>
+                                                <dd class="desc">1876-08-29</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">사망일</dt>
+                                                <dd class="desc">1949-06-26</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">본적지</dt>
+                                                <dd class="desc">황해도 백성</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">본관</dt>
+                                                <dd class="desc">안동(安東)</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">대상구분</dt>
+                                                <dd class="desc">애국지사</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">운동계열</dt>
+                                                <dd class="desc">임시정부</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">관련단체</dt>
+                                                <dd class="desc">신민회, 임시정부, 한국노병회,
+                                                    한인애국단, 한국국민당, 한국독립당,
+                                                    비상국민회의, 민주의원</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">관련사건</dt>
+                                                <dd class="desc">치하포 사건, 안명근 사건, 만주사변,
+                                                    이봉창 의거, 상하이 사변, 윤봉길 의거,
+                                                    난징회담, 태평양전쟁, 카이로회담</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">포상훈격(연도)</dt>
+                                                <dd class="desc">대한민국장 (1962)</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div class="featured-info-box">
+                                <div class="featured-info">
+                                    <div class="title">활동정보</div>
+                                    <div class="info">
+                                        <dl class="meta">
+                                            <div class="row">
+                                                <dt class="term">개요</dt>
+                                                <dd class="desc">1894년 동학농민운동에 황해도 팔봉 접주로 참가</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">조직</dt>
+                                                <dd class="desc">대한민국임시정부</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">사건</dt>
+                                                <dd class="desc">3.1 운동</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">주요활동</dt>
+                                                <dd class="desc">1894년 동학농민운동에 황해도 팔봉 접주로 참가, 1895년 만주 삼도구의 김이언 의병부대 참가, 1896년 치하포에서 일제 밀정 처단,
+                                                    1910년 신민회 황해도 총감, 애국계몽운동 황해도 지도자, 1919년 임시정부 경무국장·내무총장·국무령에 취임, 1931년 한인애국단을
+                                                    조직하여 이봉창 의사의 동경 일왕에게 투탄(1932.1.8.), 윤봉길 의사의 상하이 홍구공원 의거(1932.4.29.) 지도, 1933년 장제스와
+                                                    난징회담에서 낙양군관학교 한인훈련반 설치 합의, 1940년 충칭시기 임시정부 주석, 1940년 한국광복군 창군, 임시정부의
+                                                    좌·우연합정부로의 개편, 1943년 미·영·중 연합국 대표의 카이로회담에서 한국독립 약속받는 외교활동, 1947년 광복 후 신탁통치
+                                                    반대운동, 비상국민회의 조직, 민주의원 조직 총리 취임, 1948년 남북협상을 통한 통일대한민국 추구</dd>
+                                            </div>
+                                            <div class="row">
+                                                <dt class="term">본문</dt>
+                                                <dd class="desc">1876년 8월 29일 황해도 해주군(海州郡) 백운방(白雲坊) 텃골(基洞)에서 아버지 김순영(金淳永)과 어머니 곽낙원(郭樂園)의 외아들로
+                                                    태어났다. 본관은 안동(安東)이며 자는 연상(蓮上), 초호는 연하(蓮下), 활동기 이후의 호는 백범(白凡)이다. 아명은 창암(昌巖)이었다가 동학
+                                                    입도 후에 창수(昌洙), 그 후 구(龜, 九)로 개명하였다. 불교 입교 시기 법명은 원종(圓宗)이었다가, 환속 후 유랑기에는 잠시 김두래(金斗來)
+                                                    라는 이름을 썼다. 어려서부터 의협심이 강하고 공부를 좋아하였으나, 집이 가난하여 일급 서당에 가지 못하였다. 9세부터 서당 공부를
+                                                    시작하여 아버지의 열성으로 집안에 차린 서당과 이웃 동네 서당에서 항상 일등을 차지하였다. 14세에 평민 출신인 훈장 정문재(鄭文哉)의
+                                                    서당에서 대고풍십팔구(大古風十八句)·한당시(漢唐詩)·대학(大學)·자치통감(資治通鑑)을 비롯하여 과거 초시시험 공부를 하였다.</dd>
+                                            </div>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="featured-info">
+                                    <div class="title">참고문헌</div>
+                                    <div class="info">
+                                        <ul class="dot-list">
+                                            <li class="dot-list-item">엄항섭, 『김구선생혈투사』, 국제문화협회, 1947</li>
+                                            <li class="dot-list-item">오소백, 『인간 김구』, 국제문화사, 1949</li>
+                                            <li class="dot-list-item">심재원, 『백범 김구』, 대한기독교계명협회, 1968</li>
+                                            <li class="dot-list-item">선우진, 『백범 김구』, 태극출판사, 1975</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div class="result-group">
+                                <div class="result-group-head">
+                                    <h3 class="title">사진</h3>
+                                    <span class="count">(<span class="color-point font-weight-bold">1,000</span>)</span>
+                                    <a href="javascript:void(0)" class="btn-more">더보기</a>
+                                </div>
+                                <div class="result-group-body">
+                                    <ul class="photo-list">
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/photo-1.png" alt="판결문(경성공소원, 1911.9.4)">
+                                            </div>
+                                            <div class="info">
+                                                <div class="title">판결문(경성공소원, 1911.9.4)</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/photo-2.png" alt="105인사건으로 압송되는 신민...">
+                                            </div>
+                                            <div class="info">
+                                                <div class="title">105인사건으로 압송되는 신민...</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/photo-3.png" alt="대한민국 임시정부 직원 일동(19...">
+                                            </div>
+                                            <div class="info">
+                                                <div class="title">대한민국 임시정부 직원 일동(19...</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/photo-4.png" alt="대한민국3년 임시정부와 임시의...">
+                                            </div>
+                                            <div class="info">
+                                                <div class="title">대한민국3년 임시정부와 임시의...</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/photo-1.png" alt="판결문(경성공소원, 1911.9.4)">
+                                            </div>
+                                            <div class="info">
+                                                <div class="title">판결문(경성공소원, 1911.9.4)</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/photo-2.png" alt="105인사건으로 압송되는 신민...">
+                                            </div>
+                                            <div class="info">
+                                                <div class="title">105인사건으로 압송되는 신민...</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/photo-3.png" alt="대한민국 임시정부 직원 일동(19...">
+                                            </div>
+                                            <div class="info">
+                                                <div class="title">대한민국 임시정부 직원 일동(19...</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/photo-4.png" alt="대한민국3년 임시정부와 임시의...">
+                                            </div>
+                                            <div class="info">
+                                                <div class="title">대한민국3년 임시정부와 임시의...</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/photo-3.png" alt="대한민국 임시정부 직원 일동(19...">
+                                            </div>
+                                            <div class="info">
+                                                <div class="title">대한민국 임시정부 직원 일동(19...</div>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/photo-4.png" alt="대한민국3년 임시정부와 임시의...">
+                                            </div>
+                                            <div class="info">
+                                                <div class="title">대한민국3년 임시정부와 임시의...</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-block-group">
+                                        <button type="button" class="btn-more-plus"><i class="ico ico-more-plus"></i><span class="sr-only">더보기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-content">
+                            <div class="result-group">
+                                <div class="result-group-head">
+                                    <h3 class="title">동영상</h3>
+                                    <span class="count">(<span class="color-point font-weight-bold">1,000</span>)</span>
+                                    <a href="javascript:void(0)" class="btn-more">더보기</a>
+                                </div>
+                                <div class="result-group-body">
+                                    <ul class="video-list">
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/video-1.png" alt="안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...">
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/video-2.png" alt="영상한국사 | 138 일본에서 상영된 안중근 ...">
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/video-3.png" alt="116년 만에 되살아난 안중근 의사 유리건판...">
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/video-1.png" alt="안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...">
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/video-2.png" alt="영상한국사 | 138 일본에서 상영된 안중근 ...">
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                            <div class="thumb">
+                                                <img src="../../images/@temp/video-3.png" alt="116년 만에 되살아난 안중근 의사 유리건판...">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-block-group">
+                                        <button type="button" class="btn-more-plus"><i class="ico ico-more-plus"></i><span class="sr-only">더보기</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group-outline">
+                            <button class="btn btn-lg btn-border-gray" type="button">목록</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e contents -->
+    </div>
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-info">
+        <div class="inner">
+            <div class="f-info">
+                <div class="logo">
+                    <a href="javascript:void(0)"><img src="../../images/common/footer-logo.png" alt="KNA 에듀센터"></a>
+                </div>
+                <div class="info-cs">
+                    <div class="address">(30113) 세종특별자치시 도움4로 9 정부세종청사 9동</div>
+                    <div class="key-info"><b>대표전화&nbsp;</b><b>1577-0606</b><span>&nbsp;(상담시간 : 평일 09:00 ~ 18:00, 점심시간 : 12:00 ~ 13:00, 매주 월요일 휴무)</span></div>
+                </div>
+            </div>
+            <div class="f-link">
+                <div class="footer-dropdown _footerDropdown">
+                    <button type="button" class="btn-select _footerDropdownButton" title="관련사이트 바로가기">관련사이트 바로가기</button>
+                    <ul class="dropdown-list">
+                        <li><a href="https://www.nhis.or.kr/" title="새 창 열기" target="_blank" rel="noopener noreferrer" ><span>국민건강보험</span></a></li>
+                        <li><a href="https://www.nmkpg.go.kr/" title="새 창 열기" target="_blank" rel="noopener noreferrer"><span>국립대한민국임시정부기념관</span></a></li>
+                    </ul>
+                    <button type="button" class="btn-select-close _footerDropdownCloseButton" title="관련사이트 닫기">관련사이트 바로가기</button>
+                </div>
+                <div class="links">
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="새 창 열기">이용안내</a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="새 창 열기">찾아오시는 길</a>
+                </div>
+                <div class="sns-links">
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="네이버 블로그 공유하기"><img src=../../images/common/ico-naver.svg alt="네이버 블로그 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="유투브 공유하기"><img src=../../images/common/ico-youtube.svg alt="유투브 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="인스타그램 공유하기"><img src=../../images/common/ico-instagram.svg alt="인스타그램 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="x 공유하기"><img src=../../images/common/ico-x.svg alt="x 공유하기"/></a>
+                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="페이스북 공유하기"><img src=../../images/common/ico-facebook.svg alt="페이스북 공유하기"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-links">
+        <div class="inner">
+            <div class="link-content">
+                <div class="info-links">
+                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">이용약관</a>
+                    <a class="link link-highlight" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">저작권정책</a>
+                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">자주하는질문</a>
+                </div>
+            </div>
+            <div class="copyright">© Ministry of Patriots and Veterans Affairs. All Rights Reserved.</div>
+            <div class="nuri"><img src="../../images/common/ico-footer-nuri.png" alt="국가보훈부"/><span>이 누리집은 국가보훈부 산하기관 누리집입니다.</span></div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

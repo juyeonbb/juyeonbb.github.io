@@ -8,21 +8,21 @@ data.guide = {
         //     url: 'guide/accordion',
         //     page: 'accordion'
         // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'guide/badge',
-        //     page: 'badges'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'guide/badge',
+            page: 'badges'
+        },
         {
             stateClass: 'complete',
             url: 'guide/breadcrumb',
             page: 'breadcrumb'
         },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'guide/buttons',
-        //     page: 'buttons'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'guide/buttons',
+            page: 'buttons'
+        },
         // {
         //     stateClass: 'complete',
         //     url: 'guide/form',
@@ -43,11 +43,11 @@ data.guide = {
         //     url: 'guide/table',
         //     page: 'table'
         // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'guide/tabs',
-        //     page: 'tabs'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'guide/tabs',
+            page: 'tabs'
+        },
         // {
         //     stateClass: 'complete',
         //     url: 'guide/tooltip',
@@ -148,11 +148,16 @@ data.archive = {
             url: 'pvData/보훈자료_인물',
             page: '보훈자료 > 보훈자료 > 인물'
         },
-        // {
-        //     stateClass: 'working',
-        //     url: 'pvData/보훈자료_역사',
-        //     page: '보훈자료 > 보훈자료 > 역사'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'pvData/보훈자료_인물',
+            page: '보훈자료 > 보훈자료 > 인물 > 상세'
+        },
+        {
+            stateClass: 'working',
+            url: 'pvData/보훈자료_역사',
+            page: '보훈자료 > 보훈자료 > 역사'
+        },
         {
             stateClass: 'complete',
             url: 'pvCntnts/보훈자료_현충시설',
@@ -160,7 +165,7 @@ data.archive = {
         },
         {
             stateClass: 'complete',
-            url: 'pvCntnts/보훈자료_현충시설_상세정보',
+            url: 'pvCntnts/보훈자료_현충시설_상세',
             page: '보훈자료 > 현충시설 > 상세'
         },
         // {
