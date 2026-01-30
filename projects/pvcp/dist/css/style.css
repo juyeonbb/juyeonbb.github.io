@@ -3018,6 +3018,12 @@ h1, h2, h3, h4, h5, h6 {
   .search-detail-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+  .search-detail-grid .span-2 {
+    grid-column: auto;
+  }
+  .search-detail-grid .span-3 {
+    grid-column: auto;
+  }
   .search-detail-actions {
     justify-content: center;
   }
