@@ -1314,14 +1314,14 @@ button.swiper-pagination-bullet {
 }
 
 .ico-magnify {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   background-image: url(../images/common/ico-magnify.png);
 }
 
 .ico-magnify-plus {
-  width: 20px;
-  height: 20px;
+  width: 19px;
+  height: 19px;
   background-image: url(../images/common/ico-magnify-minus.png);
   background-image: url(../images/common/ico-magnify-plus.png);
 }
@@ -1357,7 +1357,7 @@ button.swiper-pagination-bullet {
 }
 
 .ico-share {
-  width: 16px;
+  width: 17px;
   height: 20px;
   background-image: url(../images/common/ico-share.png);
 }
@@ -2940,6 +2940,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 50px;
   border-radius: 6px;
   box-shadow: 0 3px 5px 0 rgba(36, 98, 214, 0.15);
+  transition: 0.2s;
+}
+.search-detail-box .search-bar .btn-detail:hover {
+  background-color: #D2E4FF;
 }
 .search-detail-box .search-bar .btn-detail .ico {
   flex-shrink: 0;
@@ -3871,7 +3875,7 @@ a, button {
   color: #003675;
 }
 .btn.btn-border-point:hover {
-  background-color: #e8f2ff;
+  background-color: #D2E4FF;
 }
 .btn.btn-border-point:active {
   background-color: #d6e8ff;

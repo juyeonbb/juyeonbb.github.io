@@ -1574,6 +1574,7 @@
   flex-shrink: 0;
 }
 .archive-container .detail-content .featured-info-box .featured-info .meta .row .desc {
+  min-width: 0;
   flex: 1;
   font-size: 17px;
   letter-spacing: -0.68px;
