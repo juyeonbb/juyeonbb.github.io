@@ -3870,11 +3870,11 @@ a, button {
   background-color: #dc2347;
 }
 .btn.btn-border-point {
-  background-color: #fff;
+  background-color: #ecf4fe;
   color: #003675;
 }
 .btn.btn-border-point:hover {
-  background-color: #D2E4FF;
+  background-color: #d2e4ff;
 }
 .btn.btn-border-point:active {
   background-color: #d6e8ff;
