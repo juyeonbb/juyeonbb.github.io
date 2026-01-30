@@ -7119,6 +7119,12 @@ div.pswp__img--placeholder,
     width: auto;
     gap: 10px;
   }
+  .result-group .result-group-head .util .drop-wrap .drop-menu {
+    transform: translateX(calc(-50% - 55px));
+  }
+  .result-group .result-group-head .util .drop-wrap .drop-menu::before {
+    transform: translateX(calc(-50% + 55px));
+  }
   .result-group .card-list-wrap {
     padding-left: 0;
   }
