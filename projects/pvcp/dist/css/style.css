@@ -1184,9 +1184,9 @@ button.swiper-pagination-bullet {
 }
 
 .ico-search {
-  width: 19px;
-  height: 19px;
-  background-image: url(../images/common/ico-search.png);
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/common/ico-search.svg);
 }
 
 .ico-toggle {
@@ -1302,34 +1302,34 @@ button.swiper-pagination-bullet {
 }
 
 .ico-paging-prev {
-  width: 8px;
-  height: 14px;
+  width: 10.5px;
+  height: 16px;
   background-image: url(../images/common/ico-paging-prev.png);
 }
 
 .ico-paging-next {
-  width: 8px;
-  height: 14px;
+  width: 10.5px;
+  height: 16px;
   background-image: url(../images/common/ico-paging-next.png);
 }
 
 .ico-magnify {
-  width: 19px;
-  height: 19px;
-  background-image: url(../images/common/ico-magnify.png);
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/common/ico-magnify.svg);
 }
 
 .ico-magnify-plus {
   width: 19px;
   height: 19px;
-  background-image: url(../images/common/ico-magnify-minus.png);
-  background-image: url(../images/common/ico-magnify-plus.png);
+  background-image: url(../images/common/ico-magnify-minus.svg);
+  background-image: url(../images/common/ico-magnify-plus.svg);
 }
 
 .ico-refresh {
   width: 15px;
   height: 17px;
-  background-image: url(../images/common/ico-refresh.png);
+  background-image: url(../images/common/ico-refresh.svg);
 }
 
 .ico-magnify-arc {
@@ -1610,7 +1610,7 @@ button.swiper-pagination-bullet {
 }
 .header .logo {
   flex-shrink: 0;
-  width: 246px;
+  width: 247px;
   height: 46px;
   margin-right: 110px;
 }
@@ -1978,9 +1978,9 @@ button.swiper-pagination-bullet {
 .footer .footer-dropdown .btn-select::after {
   content: "";
   display: block;
-  width: 13px;
-  height: 7px;
-  background: url(../images/common/footer-select.png) no-repeat center;
+  width: 14px;
+  height: 9px;
+  background: url(../images/common/footer-select.svg) no-repeat center;
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -2055,8 +2055,7 @@ button.swiper-pagination-bullet {
   padding-bottom: 40px;
 }
 .footer .footer-info .logo {
-  width: 246px;
-  height: 40px;
+  width: 247px;
   margin-bottom: 37px;
 }
 .footer .footer-info .logo a {
@@ -2153,8 +2152,8 @@ button.swiper-pagination-bullet {
   font-size: 15px;
 }
 .footer .footer-links .nuri img {
-  width: 74px;
-  height: 24px;
+  width: 80px;
+  height: 21px;
 }
 
 @media (max-width: 1280px) {
@@ -2942,7 +2941,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 3px 5px 0 rgba(36, 98, 214, 0.15);
   transition: 0.2s;
 }
-.search-detail-box .search-bar .btn-detail:hover {
+.search-detail-box .search-bar .btn-detail.btn-border-blue:hover {
   background-color: #d2e4ff;
 }
 .search-detail-box .search-bar .btn-detail .ico {
@@ -2952,7 +2951,7 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: 4px;
 }
 .search-detail-box .search-bar .btn-detail[aria-expanded=true] .ico-magnify-plus {
-  background-image: url(../images/common/ico-magnify-minus.png);
+  background-image: url(../images/common/ico-magnify-minus.svg);
 }
 .search-detail-inner {
   display: flex;
@@ -4052,10 +4051,10 @@ textarea.form-input:disabled {
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
-  background-size: 12px 7px;
+  background-size: 12px 8px;
   background-position: right 10px center;
   background-repeat: no-repeat;
-  background-image: url(../images/common/ico-dropdown.png);
+  background-image: url(../images/common/ico-dropdown.svg);
   cursor: pointer;
 }
 .form-select:disabled {
@@ -4521,8 +4520,8 @@ input::-webkit-search-results-decoration {
   top: 5px;
   display: inline-block;
   width: 7px;
-  height: 11px;
-  background-image: url(../images/common/ico-breadcrumb.png);
+  height: 10px;
+  background-image: url(../images/common/ico-breadcrumb.svg);
   background-size: cover;
 }
 
@@ -5930,14 +5929,14 @@ div.pswp__img--placeholder,
 }
 
 .ui-icon-circle-triangle-w {
-  width: 6px;
-  height: 11px;
+  width: 10.5px;
+  height: 16px;
   background-image: url(../images/common/ico-paging-prev.png);
 }
 
 .ui-icon-circle-triangle-e {
-  width: 6px;
-  height: 11px;
+  width: 10.5px;
+  height: 16px;
   background-image: url(../images/common/ico-paging-next.png);
 }
 

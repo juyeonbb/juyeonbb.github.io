@@ -4,6 +4,7 @@
     var DESKTOP_WIDTH = 1280;
     var MENU_CLOSE_DELAY = 1500;
     var closeTimer = null;
+    var wasDesktop = isDesktop();
 
     function isDesktop() {
         return window.innerWidth >= DESKTOP_WIDTH;
@@ -96,6 +97,22 @@
 
             e.preventDefault();
             this.scrollLeft += e.originalEvent.deltaY;
+        });
+    }
+
+    function resetMenuStateForMobile() {
+        $('.main-menu .gnb-menu > .menu-item > .menu-link')
+            .attr('aria-expanded', 'false');
+
+        $('.main-menu .gnb-menu > .menu-item > .sub-menu')
+            .prop('hidden', true);
+
+        $('.main-menu .depth2-item').each(function () {
+            var $li = $(this);
+            var $depth3 = $li.find('> .depth3-menu');
+            if ($depth3.length) $depth3.prop('hidden', true);
+
+            $li.find('> .depth2-link').attr('aria-expanded', 'false');
         });
     }
     // -------------------------------------------------
@@ -203,8 +220,21 @@
     // 리사이즈로 desktop/mobile 전환 시 상태 재정렬
     $(window).on('resize', function () {
         clearTimeout(closeTimer);
-        initPinnedState();
+
+        var nowDesktop = isDesktop();
+
+        if (wasDesktop && !nowDesktop) {
+            resetMenuStateForMobile();
+        }
+
+        if (!wasDesktop && nowDesktop) {
+            initPinnedState();
+        } else {
+            initPinnedState();
+        }
+
         bindHorizontalWheel();
+        wasDesktop = nowDesktop;
     });
 
 })(jQuery);
