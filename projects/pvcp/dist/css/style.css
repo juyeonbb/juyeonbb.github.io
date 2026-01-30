@@ -2943,7 +2943,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.2s;
 }
 .search-detail-box .search-bar .btn-detail:hover {
-  background-color: #D2E4FF;
+  background-color: #d2e4ff;
 }
 .search-detail-box .search-bar .btn-detail .ico {
   flex-shrink: 0;
