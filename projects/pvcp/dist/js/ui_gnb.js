@@ -29,7 +29,6 @@
         });
     }
 
-
     function closeSubMenu($item) {
         if (!$item || !$item.length) return;
         if ($item.hasClass('is-pinned')) return;
@@ -46,7 +45,6 @@
             if (hasDepth3) $depth3.prop('hidden', !$li.hasClass('is-active'));
         });
     }
-
 
     function closeAllExcept($keepItem) {
         $('.main-menu .gnb-menu > .menu-item').each(function () {
@@ -88,6 +86,18 @@
         }
     }
 
+    function bindHorizontalWheel() {
+        var $el = $('.main-menu .gnb-menu .menu-item.is-pinned .sub-menu');
+        if (!$el.length) return;
+
+        $el.off('wheel.horizontal').on('wheel.horizontal', function (e) {
+            if (window.innerWidth >= DESKTOP_WIDTH) return;
+            if (this.scrollWidth <= this.clientWidth) return;
+
+            e.preventDefault();
+            this.scrollLeft += e.originalEvent.deltaY;
+        });
+    }
     // -------------------------------------------------
     // Events
     // -------------------------------------------------
@@ -186,6 +196,7 @@
 
     // 초기 진입 시 pinned 메뉴 열기
     $(function () {
+        bindHorizontalWheel();
         initPinnedState();
     });
 
@@ -193,6 +204,7 @@
     $(window).on('resize', function () {
         clearTimeout(closeTimer);
         initPinnedState();
+        bindHorizontalWheel();
     });
 
 })(jQuery);

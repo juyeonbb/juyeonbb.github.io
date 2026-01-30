@@ -895,11 +895,6 @@
   padding-top: 54px;
 }
 
-@media (max-width: 1280px) {
-  .sub-contents {
-    padding-top: 0;
-  }
-}
 /*
   통합검색
 */
