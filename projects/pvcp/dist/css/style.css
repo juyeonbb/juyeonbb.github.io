@@ -3010,6 +3010,9 @@ h1, h2, h3, h4, h5, h6 {
     gap: 15px;
     padding-right: 0;
   }
+  .search-detail-grid .span-3 {
+    grid-column: auto;
+  }
 }
 @media (max-width: 768px) {
   .search-detail-box .search-bar {
@@ -3019,9 +3022,6 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(1, 1fr);
   }
   .search-detail-grid .span-2 {
-    grid-column: auto;
-  }
-  .search-detail-grid .span-3 {
     grid-column: auto;
   }
   .search-detail-actions {
