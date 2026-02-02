@@ -20,100 +20,131 @@
 <div class="guide-container">
     <div class="guide-content">
         <div class="guide-heading">popup</div>
+        <b>📌 popup Size</b><br/>
+        Small Size : 400px<br/>
+        Regular Size : 560px<br/>
+        Large Size : 760px<br/>
+        Xlarge Size : 1000px<br/><br/>
+
+        <b>📌 popup 닫는 방법</b><br/>
+        방법 1. onclick="front.fn.closePopup()"<br/>
+        방법 2. class에 _popupClose 추가<br/><br/>
+
+        <b>📌 popup 여는 방법</b><br/>
+        방법 1. 버튼에 _popupTrigger 클래스 추가 / data-trigger 추가<br/>
+        방법 2. front.fn.openPopup('data-trigger 요소 ex : popup1')
         <div class="button-group">
+            <button class="btn _popupTrigger" data-trigger="popup2" type="button">팝업 S</button>
             <button class="btn _popupTrigger" data-trigger="popup1" type="button">팝업 R</button>
-            <button class="btn _popupTrigger" data-trigger="popup2" type="button">팝업 SM</button>
             <button class="btn _popupTrigger" data-trigger="popup3" type="button">팝업 L</button>
             <button class="btn _popupTrigger" data-trigger="popup4" type="button">팝업 XL</button>
         </div>
     </div>
 </div>
 <div class="dim _dim"></div>
-<div class="popup _popup" data-popup="popup1" role="dialog" aria-labelledby="popup1Title" aria-modal="true">
-    <div class="popup-content">
-        <div class="popup-head">
-            <span class="title" id="popup1Title">회사정보 수정요청</span>
-            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
-        </div>
-        <div class="popup-body">
-            <div class="text">둘러보기를 종료할까요?</div>
-        </div>
-        <!--
-            popup 닫는 방법
-            1. onclick="front.fn.closePopup()"
-            2. class에 _popupClose 추가
-        -->
-        <div class="popup-footer">
-            <button class="btn btn-border-gray" onclick="front.fn.closePopup()" type="button">닫기</button>
-            <button class="btn _popupClose" type="button">확인</button>
+<div class="popup-wrap _popup" data-popup="popup2" role="dialog" aria-labelledby="popup2Title" aria-modal="true">
+    <div class="popup popup-sm">
+        <div class="popup-content">
+            <div class="popup-head">
+                <span class="title" id="popup2Title">팝업 제목</span>
+                <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
+            </div>
+            <div class="popup-body">
+                <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at dolorem eligendi eos
+                    ex incidunt itaque nobis quia quidem, repellendus rerum veritatis. Adipisci atque cum dignissimos et facilis
+                    ipsam neque nostrum odio, quaerat voluptatem. At fuga illo ipsa provident quod? Asperiores error hic illo iste
+                    odit quisquam recusandae reiciendis? Ad dolore iure officia praesentium provident quidem quod sed vel vero
+                    voluptas! Amet aut doloribus, eveniet exercitationem iure nobis officiis quidem sapiente! Accusantium atque,
+                    dignissimos, dolore doloremque ea esse et facere magnam nulla officia reiciendis temporibus veritatis? Aperiam
+                    asperiores atque beatae deserunt, doloremque dolorum eum in, itaque laborum quibusdam quod tempora.
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at dolorem eligendi eos
+                    ex incidunt itaque nobis quia quidem, repellendus rerum veritatis. Adipisci atque cum dignissimos et facilis
+                    ipsam neque nostrum odio, quaerat voluptatem. At fuga illo ipsa provident quod? Asperiores error hic illo iste
+                    odit quisquam recusandae reiciendis? Ad dolore iure officia praesentium provident quidem quod sed vel vero
+                    voluptas! Amet aut doloribus, eveniet exercitationem iure nobis officiis quidem sapiente! Accusantium atque,
+                    dignissimos, dolore doloremque ea esse et facere magnam nulla officia reiciendis temporibus veritatis? Aperiam
+                    asperiores atque beatae deserunt, doloremque dolorum eum in, itaque laborum quibusdam quod tempora.
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="btn btn-border-gray _popupClose" type="button">취소</button>
+                <button class="btn" type="button">확인</button>
+            </div>
         </div>
     </div>
 </div>
-<div class="popup popup-sm _popup" data-popup="popup2" role="dialog" aria-labelledby="popup2Title" aria-modal="true">
-    <div class="popup-content">
-        <div class="popup-head">
-            <span class="title" id="popup2Title">팝업 제목</span>
-            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
-        </div>
-        <div class="popup-body">
-            <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at dolorem eligendi eos
-                ex incidunt itaque nobis quia quidem, repellendus rerum veritatis. Adipisci atque cum dignissimos et facilis
-                ipsam neque nostrum odio, quaerat voluptatem. At fuga illo ipsa provident quod? Asperiores error hic illo iste
-                odit quisquam recusandae reiciendis? Ad dolore iure officia praesentium provident quidem quod sed vel vero
-                voluptas! Amet aut doloribus, eveniet exercitationem iure nobis officiis quidem sapiente! Accusantium atque,
-                dignissimos, dolore doloremque ea esse et facere magnam nulla officia reiciendis temporibus veritatis? Aperiam
-                asperiores atque beatae deserunt, doloremque dolorum eum in, itaque laborum quibusdam quod tempora.
+<div class="popup-wrap _popup" data-popup="popup1" role="dialog" aria-labelledby="popup1Title" aria-modal="true">
+    <div class="popup">
+        <div class="popup-content">
+            <div class="popup-head">
+                <span class="title" id="popup1Title">회사정보 수정요청</span>
+                <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
             </div>
-        </div>
-        <div class="popup-footer">
-            <button class="btn btn-border-gray _popupClose" type="button">취소</button>
-            <button class="btn" type="button">확인</button>
+            <div class="popup-body">
+                <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at dolorem eligendi eos
+                    ex incidunt itaque nobis quia quidem, repellendus rerum veritatis. Adipisci atque cum dignissimos et facilis
+                    ipsam neque nostrum odio, quaerat voluptatem. At fuga illo ipsa provident quod? Asperiores error hic illo iste
+                    odit quisquam recusandae reiciendis? Ad dolore iure officia praesentium provident quidem quod sed vel vero
+                    voluptas! Amet aut doloribus, eveniet exercitationem iure nobis officiis quidem sapiente! Accusantium atque,
+                    dignissimos, dolore doloremque ea esse et facere magnam nulla officia reiciendis temporibus veritatis? Aperiam
+                    asperiores atque beatae deserunt, doloremque dolorum eum in, itaque laborum quibusdam quod tempora.
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="btn btn-border-gray" onclick="front.fn.closePopup()" type="button">닫기</button>
+                <button class="btn _popupClose" type="button">확인</button>
+            </div>
         </div>
     </div>
 </div>
-<div class="popup popup-lg _popup" data-popup="popup3" role="dialog" aria-labelledby="popup3Title" aria-modal="true">
-    <div class="popup-content">
-        <div class="popup-head">
-            <span class="title" id="popup3Title">팝업 제목</span>
-            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
-        </div>
-        <div class="popup-body">
-            <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda autem cum
-                deserunt dolorum error eveniet id impedit ipsum libero, maxime necessitatibus non nulla omnis perferendis quos
-                repellendus sint ut vel veritatis! A accusantium asperiores aspernatur consectetur deleniti dolor ducimus
-                eligendi error hic ipsam iste itaque laboriosam laborum laudantium numquam optio praesentium quae quia rem,
-                repellendus reprehenderit sed sequi unde velit, veritatis voluptate voluptatum! Accusantium dolores fuga fugit
-                impedit molestias, pariatur ut vel. Ab accusamus cumque delectus eius esse eum eveniet iste natus nesciunt nulla
-                omnis, quas ratione voluptatem. Blanditiis consectetur debitis dignissimos enim eum impedit incidunt molestiae
-                officiis totam.
+<div class="popup-wrap _popup" data-popup="popup3" role="dialog" aria-labelledby="popup3Title" aria-modal="true">
+    <div class="popup popup-lg">
+        <div class="popup-content">
+            <div class="popup-head">
+                <span class="title" id="popup3Title">팝업 제목</span>
+                <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
             </div>
-        </div>
-        <div class="popup-footer">
-            <button class="btn btn-border-gray _popupClose" type="button">취소</button>
-            <button class="btn" type="button">확인</button>
+            <div class="popup-body">
+                <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda autem cum
+                    deserunt dolorum error eveniet id impedit ipsum libero, maxime necessitatibus non nulla omnis perferendis quos
+                    repellendus sint ut vel veritatis! A accusantium asperiores aspernatur consectetur deleniti dolor ducimus
+                    eligendi error hic ipsam iste itaque laboriosam laborum laudantium numquam optio praesentium quae quia rem,
+                    repellendus reprehenderit sed sequi unde velit, veritatis voluptate voluptatum! Accusantium dolores fuga fugit
+                    impedit molestias, pariatur ut vel. Ab accusamus cumque delectus eius esse eum eveniet iste natus nesciunt nulla
+                    omnis, quas ratione voluptatem. Blanditiis consectetur debitis dignissimos enim eum impedit incidunt molestiae
+                    officiis totam.
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="btn btn-border-gray _popupClose" type="button">취소</button>
+                <button class="btn" type="button">확인</button>
+            </div>
         </div>
     </div>
 </div>
-<div class="popup popup-lg _popup" data-popup="popup4" role="dialog" aria-labelledby="popup4Title" aria-modal="true">
-    <div class="popup-content">
-        <div class="popup-head">
-            <span class="title" id="popup4Title">팝업 제목</span>
-            <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
-        </div>
-        <div class="popup-body">
-            <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda autem cum
-                deserunt dolorum error eveniet id impedit ipsum libero, maxime necessitatibus non nulla omnis perferendis quos
-                repellendus sint ut vel veritatis! A accusantium asperiores aspernatur consectetur deleniti dolor ducimus
-                eligendi error hic ipsam iste itaque laboriosam laborum laudantium numquam optio praesentium quae quia rem,
-                repellendus reprehenderit sed sequi unde velit, veritatis voluptate voluptatum! Accusantium dolores fuga fugit
-                impedit molestias, pariatur ut vel. Ab accusamus cumque delectus eius esse eum eveniet iste natus nesciunt nulla
-                omnis, quas ratione voluptatem. Blanditiis consectetur debitis dignissimos enim eum impedit incidunt molestiae
-                officiis totam.
+<div class="popup-wrap _popup" data-popup="popup4" role="dialog" aria-labelledby="popup4Title" aria-modal="true">
+    <div class="popup popup-xl">
+        <div class="popup-content">
+            <div class="popup-head">
+                <span class="title" id="popup4Title">팝업 제목</span>
+                <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
             </div>
-        </div>
-        <div class="popup-footer">
-            <button class="btn btn-border-gray _popupClose" type="button">취소</button>
-            <button class="btn" type="button">확인</button>
+            <div class="popup-body">
+                <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda autem cum
+                    deserunt dolorum error eveniet id impedit ipsum libero, maxime necessitatibus non nulla omnis perferendis quos
+                    repellendus sint ut vel veritatis! A accusantium asperiores aspernatur consectetur deleniti dolor ducimus
+                    eligendi error hic ipsam iste itaque laboriosam laborum laudantium numquam optio praesentium quae quia rem,
+                    repellendus reprehenderit sed sequi unde velit, veritatis voluptate voluptatum! Accusantium dolores fuga fugit
+                    impedit molestias, pariatur ut vel. Ab accusamus cumque delectus eius esse eum eveniet iste natus nesciunt nulla
+                    omnis, quas ratione voluptatem. Blanditiis consectetur debitis dignissimos enim eum impedit incidunt molestiae
+                    officiis totam.
+                </div>
+            </div>
+            <div class="popup-footer">
+                <button class="btn btn-border-gray _popupClose" type="button">취소</button>
+                <button class="btn" type="button">확인</button>
+            </div>
         </div>
     </div>
 </div>

@@ -3,11 +3,11 @@ const data = {}
 data.guide = {
     title: '가이드',
     list: [
-        // {
-        //     stateClass: 'complete',
-        //     url: 'guide/accordion',
-        //     page: 'accordion'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'guide/accordion',
+            page: 'accordion'
+        },
         {
             stateClass: 'complete',
             url: 'guide/badge',
@@ -23,26 +23,26 @@ data.guide = {
             url: 'guide/buttons',
             page: 'buttons'
         },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'guide/form',
-        //     page: 'form'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'guide/form',
+            page: 'form'
+        },
         {
             stateClass: 'complete',
             url: 'guide/pagination',
             page: 'pagination'
         },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'guide/popup',
-        //     page: 'popup'
-        // // },
-        // {
-        //     stateClass: 'complete',
-        //     url: 'guide/table',
-        //     page: 'table'
-        // },
+        {
+            stateClass: 'complete',
+            url: 'guide/popup',
+            page: 'popup'
+        },
+        {
+            stateClass: 'complete',
+            url: 'guide/table',
+            page: 'table'
+        },
         {
             stateClass: 'complete',
             url: 'guide/tabs',
