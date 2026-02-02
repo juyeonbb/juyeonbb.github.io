@@ -30,6 +30,21 @@ data.guide = {
         },
         {
             stateClass: 'complete',
+            url: 'guide/icon',
+            page: 'Icon'
+        },
+        {
+            stateClass: 'complete',
+            url: 'guide/image-viewer',
+            page: 'image-viewer'
+        },
+        {
+            stateClass: 'complete',
+            url: 'guide/list',
+            page: 'list'
+        },
+        {
+            stateClass: 'complete',
             url: 'guide/pagination',
             page: 'pagination'
         },
@@ -53,16 +68,6 @@ data.guide = {
         //     url: 'guide/tooltip',
         //     page: 'tooltip'
         // },
-        {
-            stateClass: 'complete',
-            url: 'guide/list',
-            page: 'list'
-        },
-        {
-            stateClass: 'complete',
-            url: 'guide/image-viewer',
-            page: 'image-viewer'
-        },
         {
             stateClass: 'complete',
             url: 'guide/etc',
