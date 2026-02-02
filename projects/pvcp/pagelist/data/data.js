@@ -101,9 +101,14 @@ data.common = {
     title: '공통 페이지',
     list: [
         {
-            stateClass: 'complete',
-            url: 'com/00_서비스점검페이지',
-            page: 'TEST'
+            stateClass: 'working',
+            url: 'com/alert',
+            page: 'Alert 또는 메시지창'
+        },
+        {
+            stateClass: 'working',
+            url: 'com/alert2',
+            page: '확인창'
         },
     ]
 }
@@ -202,6 +207,37 @@ data.archive = {
             stateClass: 'complete',
             url: 'pvCntnts/보훈자료_현충시설_상세2',
             page: '보훈자료 > 현충시설 > 상세'
+        },
+        {
+            stateClass: 'working',
+            url: 'pvCntnts/보훈자료_지도검색_검색결과',
+            page: '보훈자료 > 지도검색 (검색결과 팝업)'
+        },
+        {
+            stateClass: 'working',
+            url: 'pvCntnts/보훈자료_지도검색_검색결과2',
+            page: '보훈자료 > 지도검색 (검색결과 팝업)'
+        },
+    ]
+}
+
+data.exhibition = {
+    title: '행사·전시',
+    list: [
+        {
+            stateClass: 'working',
+            url: 'prgm/행사전시_특별전시',
+            page: '행사전시 > 특별전시'
+        },
+        {
+            stateClass: 'working',
+            url: 'prgm/행사전시_특별전시',
+            page: '행사전시 > 상설전시'
+        },
+        {
+            stateClass: 'working',
+            url: 'prgm/행사전시_특별전시',
+            page: '행사전시 > 디지털 VR 전시'
         },
     ]
 }

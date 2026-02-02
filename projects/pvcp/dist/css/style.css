@@ -4718,6 +4718,9 @@ div.pswp__img--placeholder,
   flex-direction: column;
   gap: 16px;
 }
+.popup .popup-body:last-child {
+  padding-bottom: 40px;
+}
 .popup .popup-footer {
   width: 100%;
   display: flex;
@@ -4738,6 +4741,12 @@ div.pswp__img--placeholder,
 }
 
 @media (max-width: 1280px) {
+  .popup .popup-head {
+    padding-inline: 20px;
+  }
+  .popup .popup-body {
+    padding: 16px 20px 8px;
+  }
   .popup.popup-xl {
     width: calc(100% - 40px);
   }
