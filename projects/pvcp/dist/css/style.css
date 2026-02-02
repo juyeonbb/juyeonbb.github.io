@@ -3093,7 +3093,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1.3px;
   color: #666;
   font-weight: 500;
-  padding: 0 25px;
+  padding: 0 20px;
   transform-origin: center;
 }
 .tab-container .tabs-box .tabs .item.on .tab-button {
@@ -5071,7 +5071,7 @@ div.pswp__img--placeholder,
   background-color: #000;
   color: #fff;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 6px 0;
 }
 
 .fc .fc-daygrid-day-top {

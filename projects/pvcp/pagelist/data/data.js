@@ -226,6 +226,11 @@ data.exhibition = {
     list: [
         {
             stateClass: 'working',
+            url: 'prgm/행사전시',
+            page: '행사전시 종합'
+        },
+        {
+            stateClass: 'working',
             url: 'prgm/행사전시_특별전시',
             page: '행사전시 > 특별전시'
         },

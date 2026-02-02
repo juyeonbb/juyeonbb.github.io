@@ -1826,15 +1826,174 @@
 /*
   행사·전시
 */
+.exhibition-container .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.exhibition-container .section-title {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: -1.5px;
+}
+.exhibition-container .btn-more {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 6px;
+  transition: 0.2s;
+  font-size: 15px;
+  letter-spacing: -0.8px;
+}
+.exhibition-container .btn-more:hover {
+  background-color: #EEF2F7;
+}
+.exhibition-container .btn-more:active {
+  background-color: #D6E0EB;
+}
+.exhibition-container .slider-wrapper {
+  position: relative;
+}
+.exhibition-container .btn-circle-prev, .exhibition-container .btn-circle-next {
+  width: 40px;
+  height: 40px;
+  border-color: #afcad2;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 110px;
+}
+.exhibition-container .btn-circle-prev {
+  left: -60px;
+}
+.exhibition-container .btn-circle-next {
+  right: -60px;
+}
 .exhibition-container .card-list-wrap {
-  padding-bottom: 60px;
+  position: relative;
+  padding-right: 0;
 }
 .exhibition-container .card-list-wrap .card-list {
+  gap: 0;
+}
+.exhibition-container .card-list-wrap .card-list .card-item {
+  flex: none;
+}
+.exhibition-container section ~ section {
+  margin-top: 60px;
+}
+.exhibition-container .content-heading {
+  font-size: 45px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.exhibition-container .event-exhibit-overview {
+  display: flex;
+  gap: 40px;
+}
+.exhibition-container .event-exhibit-overview .calendar-area {
+  flex: 1;
+  min-width: 0;
+}
+.exhibition-container .event-exhibit-overview .highlight-area {
+  width: 400px;
+  flex-shrink: 0;
+  padding-top: 67px;
+}
+.exhibition-container .event-exhibit-overview .highlight-area .title {
+  text-align: center;
+  background-color: #2462D6;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+.exhibition-container .event-exhibit-overview .highlight-area .event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #EEE;
+  border-top: 0;
+  padding: 15px 5px;
+}
+.exhibition-container .event-exhibit-overview .highlight-area .event-list .event-link {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+}
+.exhibition-container .event-exhibit-overview .highlight-area .event-list .event-link:hover {
+  background-color: #EEF2F7;
+}
+.exhibition-container .event-exhibit-overview .highlight-area .event-list .event-link:active {
+  background-color: #D6E0EB;
+}
+.exhibition-container .event-exhibit-overview .highlight-area .event-list .event-title {
+  position: relative;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  font-weight: bold;
+  font-size: 17px;
+  padding-left: 30px;
+}
+.exhibition-container .event-exhibit-overview .highlight-area .event-list .event-title .ico {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.exhibition-container .event-exhibit-overview .highlight-area .event-list .event-meta {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  color: #666;
+  padding-left: 30px;
+}
+
+@media (max-width: 1280px) {
+  .exhibition-container .content-heading {
+    font-size: 32px;
+  }
+  .exhibition-container .event-exhibit-overview {
+    flex-direction: column;
+  }
+  .exhibition-container .event-exhibit-overview .highlight-area {
+    padding-top: 0;
+    width: 100%;
+  }
+}
+.exhibition-sub-container .result-group .result-group-head:only-child {
+  margin-bottom: 20px;
+}
+.exhibition-sub-container .card-list-wrap {
+  padding-bottom: 60px;
+}
+.exhibition-sub-container .card-list-wrap .card-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 60px 30px;
 }
-.exhibition-container .card-list-wrap .no-data {
+.exhibition-sub-container .card-list-wrap .card-list .card-item .card-title {
+  min-height: auto;
+}
+.exhibition-sub-container .card-list-wrap .no-data {
   padding: 130px 0 100px;
+}
+
+@media (max-width: 1280px) {
+  .exhibition-sub-container .card-list-wrap {
+    padding-bottom: 40px;
+  }
+  .exhibition-sub-container .card-list-wrap .card-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+  }
+  .exhibition-sub-container .card-list-wrap .card-list .card-item {
+    min-width: 0;
+  }
 }
 /*# sourceMappingURL=pages.css.map */
