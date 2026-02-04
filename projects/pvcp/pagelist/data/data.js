@@ -209,6 +209,16 @@ data.archive = {
             page: '보훈자료 > 현충시설 > 상세'
         },
         {
+            stateClass: 'complete',
+            url: 'pvCntnts/보훈자료_연표검색',
+            page: '보훈자료 > 연표검색'
+        },
+        {
+            stateClass: 'working',
+            url: 'pvCntnts/보훈자료_지도검색',
+            page: '보훈자료 > 지도검색'
+        },
+        {
             stateClass: 'working',
             url: 'pvCntnts/보훈자료_지도검색_검색결과',
             page: '보훈자료 > 지도검색 (검색결과 팝업)'
@@ -225,24 +235,60 @@ data.exhibition = {
     title: '행사·전시',
     list: [
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'prgm/행사전시',
             page: '행사전시 종합'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'prgm/행사전시_특별전시',
-            page: '행사전시 > 특별전시'
+            page: '행사전시 > 행사 리스트'
         },
         {
-            stateClass: 'working',
-            url: 'prgm/행사전시_특별전시',
-            page: '행사전시 > 상설전시'
+            stateClass: 'complete',
+            url: 'prgm/행사전시_기념행사_상세',
+            page: '행사전시 > 기념행사 > 상세'
         },
         {
-            stateClass: 'working',
-            url: 'prgm/행사전시_특별전시',
-            page: '행사전시 > 디지털 VR 전시'
+            stateClass: 'complete',
+            url: 'prgm/행사전시_특별전시_상세',
+            page: '행사전시 > 특별전시 > 상세'
+        },
+        {
+            stateClass: 'complete',
+            url: 'prgm/행사전시_상설전시_상세',
+            page: '행사전시 > 상설전시 > 상세'
+        },
+    ]
+}
+
+data.education = {
+    title: '체험·교육',
+    list: [
+        {
+            stateClass: 'complete',
+            url: 'actv/체험교육',
+            page: '체험·교육'
+        },
+        {
+            stateClass: 'complete',
+            url: 'actv/체험교육_문화체험행사',
+            page: '체험·교육 > 문화체험행사'
+        },
+        {
+            stateClass: 'complete',
+            url: 'actv/체험교육_문화체험행사_상세',
+            page: '체험·교육 > 문화체험행사 > 상세'
+        },
+        {
+            stateClass: 'complete',
+            url: 'actv/체험교육_온오프라인교육',
+            page: '체험·교육 > 온·오프라인교육'
+        },
+        {
+            stateClass: 'complete',
+            url: 'actv/체험교육_온오프라인교육_상세',
+            page: '체험·교육 > 온·오프라인교육 > 상세'
         },
     ]
 }

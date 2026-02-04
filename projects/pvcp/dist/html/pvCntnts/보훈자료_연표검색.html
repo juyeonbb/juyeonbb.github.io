@@ -200,216 +200,194 @@
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb-list">
                     <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="ico ico-home"></i>홈</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">행사·전시</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">특별전시</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">보훈자료</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">연표검색</a></li>
                 </ol>
             </nav>
-            <div class="exhibition-container">
+            <div class="map-search-container">
                 <div class="inner">
-                    <div class="exhibition-sub">
-                        <div class="search-detail-box">
-                            <div class="search-bar">
-                                <div class="form-keyword">
-                                    <input class="form-input" type="search" title="검색어" placeholder="검색어를 입력하세요" />
-                                </div>
-                                <div class="form-submit">
-                                    <button type="button" class="btn btn-detail">
-                                        <i class="ico ico-magnify"></i>
-                                        <span>검색</span>
-                                    </button>
+                    <div class="search-detail-box">
+                        <div class="search-bar">
+                            <div class="form-keyword">
+                                <input class="form-input" type="search" title="검색어" placeholder="검색어를 입력하세요" />
+                            </div>
+                            <div class="form-submit">
+                                <button type="button" class="btn btn-detail">
+                                    <i class="ico ico-magnify"></i>
+                                    <span>검색</span>
+                                </button>
+                                <button type="button" class="btn btn-border-blue btn-detail _btnSearchDetail" aria-expanded="false" aria-controls="search-detail">
+                                    <i class="ico ico-magnify-plus"></i>
+                                    <span>상세검색</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="search-detail" hidden>
+                            <div class="search-detail-inner">
+                                <div class="search-detail-title">연표검색</div>
+                                <div class="search-detail-form">
+                                    <div class="search-detail-grid">
+                                        <div class="form-group">
+                                            <label class="label">분류</label>
+                                            <select class="form-select" title="분류">
+                                                <option value="0" selected>전체</option>
+                                                <option value="1">독립</option>
+                                                <option value="2">호국</option>
+                                                <option value="3">민주</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label">구분</label>
+                                            <select class="form-select" title="구분">
+                                                <option value="0" selected>전체</option>
+                                                <option value="1">의병</option>
+                                                <option value="2">3.1운동</option>
+                                                <option value="3">국내항일</option>
+                                                <option value="4">학생운동</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="label">연도</label>
+                                            <div class="form-period">
+                                                <select class="form-select" title="연도 시작">
+                                                    <option value="0" selected>선택</option>
+                                                    <option value="1">2025</option>
+                                                    <option value="2">2024</option>
+                                                    <option value="3">2023</option>
+                                                    <option value="4">2022</option>
+                                                </select>
+                                                <span>~</span>
+                                                <select class="form-select" title="연도 끝">
+                                                    <option value="0" selected>선택</option>
+                                                    <option value="1">2025</option>
+                                                    <option value="2">2024</option>
+                                                    <option value="3">2023</option>
+                                                    <option value="4">2022</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group span-3">
+                                            <label class="label">검색어</label>
+                                            <input class="form-input" type="text" title="검색어" />
+                                        </div>
+                                        <div class="search-detail-actions">
+                                            <button type="button" class="btn with-icon">
+                                                <i class="ico ico-magnify"></i>
+                                                <span>검색</span>
+                                            </button>
+                                            <button type="button" class="btn btn-outline-gray with-icon">
+                                                <i class="ico ico-refresh"></i>
+                                                <span>초기화</span>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="result-group">
-                            <div class="result-group-head">
-                                <h3 class="title">특별전시</h3>
-                                <ul class="section-filter" role="radiogroup" aria-label="추천 콘텐츠 필터">
-                                    <li class="item on"><button type="button" role="radio" aria-checked="true">전체</button></li>
-                                    <li class="item"><button type="button" role="radio" aria-checked="false">행사 중</button></li>
-                                    <li class="item"><button type="button" role="radio" aria-checked="false">행사 예정</button></li>
-                                    <li class="item"><button type="button" role="radio" aria-checked="false">행사 종료</button></li>
-                                </ul>
-                            </div>
-                            <div class="result-group-body">
-                                <div class="card-list-wrap">
-                                    <ul class="card-list">
-                                        <li class="card-item">
-                                            <a href="javascript:void(0)" class="card-link"><span class="sr-only">링크 연결</span></a>
-                                            <div class="card-thumb">
-                                                <img src="../../images/@temp/v-thum-1.png" alt="독립의 여정, 오늘로 이어지다 포스터">
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="card-category">
-                                                    <div class="badge current">현재행사</div>
-                                                    <div class="detail">행사</div>
-                                                </div>
-                                                <div class="card-title">독립의 여정, 오늘로 이어지다</div>
-                                                <dl class="card-meta">
-                                                    <div>
-                                                        <dd>2025-11-18 ~ 2026-01-25</dd>
-                                                    </div>
-                                                    <div>
-                                                        <dd>기념관 1층 복합문화공간</dd>
-                                                    </div>
-                                                </dl>
-                                            </div>
-                                        </li>
-                                        <li class="card-item">
-                                            <a href="javascript:void(0)" class="card-link"><span class="sr-only">링크 연결</span></a>
-                                            <div class="card-thumb">
-                                                <img src="../../images/@temp/v-thum-2.png" alt="« Le Voyage vers la Paix », 평화를 향한 여정 포스터">
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="card-category">
-                                                    <div class="badge current">현재행사</div>
-                                                    <div class="detail">교류전시</div>
-                                                </div>
-                                                <div class="card-title">« Le Voyage vers la Paix »,
-                                                    평화를 향한 여정</div>
-                                                <dl class="card-meta">
-                                                    <div>
-                                                        <dd>2025-11-18 ~ 2026-01-25</dd>
-                                                    </div>
-                                                    <div>
-                                                        <dd>주프랑스한국문화원 Centre Culturel
-                                                            Coréen à Paris 1층</dd>
-                                                    </div>
-                                                </dl>
-                                            </div>
-                                        </li>
-                                        <li class="card-item">
-                                            <a href="javascript:void(0)" class="card-link"><span class="sr-only">링크 연결</span></a>
-                                            <div class="card-thumb">
-                                                <img src="../../images/@temp/v-thum-3.png" alt="임시의정원에서 국회로 포스터">
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="card-category">
-                                                    <div class="badge current">현재행사</div>
-                                                    <div class="detail">특별전시</div>
-                                                </div>
-                                                <div class="card-title">임시의정원에서 국회로</div>
-                                                <dl class="card-meta">
-                                                    <div>
-                                                        <dd>2025-11-18 ~ 2026-01-25</dd>
-                                                    </div>
-                                                    <div>
-                                                        <dd>1층 특별전시실</dd>
-                                                    </div>
-                                                </dl>
-                                            </div>
-                                        </li>
-                                        <li class="card-item">
-                                            <a href="javascript:void(0)" class="card-link"><span class="sr-only">링크 연결</span></a>
-                                            <div class="card-thumb">
-                                                <img src="../../images/@temp/v-thum-4.png" alt="광복80년 특별강연 &lt;대일선전포고 84주년 기념 강연과 대담&gt; 포스터">
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="card-category">
-                                                    <div class="badge done">종료행사</div>
-                                                    <div class="detail">상설전시</div>
-                                                </div>
-                                                <div class="card-title">광복80년 특별강연 &lt;대일선전포고 84주년 기념 강연과 대담&gt;</div>
-                                                <dl class="card-meta">
-                                                    <div>
-                                                        <dd>2025-11-18 ~ 2026-01-25</dd>
-                                                    </div>
-                                                    <div>
-                                                        <dd>기념관 지하1층 의정원홀</dd>
-                                                    </div>
-                                                </dl>
-                                            </div>
-                                        </li>
-                                        <li class="card-item">
-                                            <a href="javascript:void(0)" class="card-link"><span class="sr-only">링크 연결</span></a>
-                                            <div class="card-thumb">
-                                                <img src="../../images/@temp/v-thum-1.png" alt="독립의 여정, 오늘로 이어지다 포스터">
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="card-category">
-                                                    <div class="badge current">현재행사</div>
-                                                    <div class="detail">행사</div>
-                                                </div>
-                                                <div class="card-title">독립의 여정, 오늘로 이어지다</div>
-                                                <dl class="card-meta">
-                                                    <div>
-                                                        <dd>2025-11-18 ~ 2026-01-25</dd>
-                                                    </div>
-                                                    <div>
-                                                        <dd>기념관 1층 복합문화공간</dd>
-                                                    </div>
-                                                </dl>
-                                            </div>
-                                        </li>
-                                        <li class="card-item">
-                                            <a href="javascript:void(0)" class="card-link"><span class="sr-only">링크 연결</span></a>
-                                            <div class="card-thumb">
-                                                <img src="../../images/@temp/v-thum-2.png" alt="« Le Voyage vers la Paix », 평화를 향한 여정 포스터">
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="card-category">
-                                                    <div class="badge current">현재행사</div>
-                                                    <div class="detail">교류전시</div>
-                                                </div>
-                                                <div class="card-title">« Le Voyage vers la Paix »,
-                                                    평화를 향한 여정</div>
-                                                <dl class="card-meta">
-                                                    <div>
-                                                        <dd>2025-11-18 ~ 2026-01-25</dd>
-                                                    </div>
-                                                    <div>
-                                                        <dd>주프랑스한국문화원 Centre Culturel
-                                                            Coréen à Paris 1층</dd>
-                                                    </div>
-                                                </dl>
-                                            </div>
-                                        </li>
-                                        <li class="card-item">
-                                            <a href="javascript:void(0)" class="card-link"><span class="sr-only">링크 연결</span></a>
-                                            <div class="card-thumb">
-                                                <img src="../../images/@temp/v-thum-3.png" alt="임시의정원에서 국회로 포스터">
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="card-category">
-                                                    <div class="badge current">현재행사</div>
-                                                    <div class="detail">특별전시</div>
-                                                </div>
-                                                <div class="card-title">임시의정원에서 국회로</div>
-                                                <dl class="card-meta">
-                                                    <div>
-                                                        <dd>2025-11-18 ~ 2026-01-25</dd>
-                                                    </div>
-                                                    <div>
-                                                        <dd>1층 특별전시실</dd>
-                                                    </div>
-                                                </dl>
-                                            </div>
-                                        </li>
-                                        <li class="card-item">
-                                            <a href="javascript:void(0)" class="card-link"><span class="sr-only">링크 연결</span></a>
-                                            <div class="card-thumb">
-                                                <img src="../../images/@temp/v-thum-4.png" alt="광복80년 특별강연 &lt;대일선전포고 84주년 기념 강연과 대담&gt; 포스터">
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="card-category">
-                                                    <div class="badge upcoming">예정행사</div>
-                                                    <div class="detail">행사</div>
-                                                </div>
-                                                <div class="card-title">광복80년 특별강연 &lt;대일선전포고 84주년 기념 강연과 대담&gt;</div>
-                                                <dl class="card-meta">
-                                                    <div>
-                                                        <dd>2025-11-18 ~ 2026-01-25</dd>
-                                                    </div>
-                                                    <div>
-                                                        <dd>기념관 지하1층 의정원홀</dd>
-                                                    </div>
-                                                </dl>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="result-group">
+                        <div class="result-group-head">
+                            <h3 class="title">연표검색</h3>
+                            <span class="count">(<span class="">1,234</span>)</span>
                         </div>
-                        <ul id="pagination" class="pagination"></ul>
+                        <div class="result-group-body">
+                            <div class="table-wrap">
+                                <table class="table table-mo-list table-chronology">
+                                    <caption>000에 대한 표로 제목1,제목2에 대한 내용으로 구성되어 있으며 제목1은 제목1-1,제목1-2,제목1-3으로 구성되어있다.</caption>
+                                    <colgroup>
+                                        <col style="width: 7.5%;">
+                                        <col style="width: 9.3%;">
+                                        <col style="width: 15.6%;">
+                                        <col style="width: 50%;">
+                                        <col style="width: 17.6%;">
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th scope="col" class="align-center">번호</th>
+                                        <th scope="col" class="align-center">분류</th>
+                                        <th scope="col" class="align-center">날짜</th>
+                                        <th scope="col" class="align-center">사건</th>
+                                        <th scope="col" class="align-center">구분</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="align-center">10</td>
+                                        <td class="align-center">독립</td>
+                                        <td class="align-center">1919년 03년 01일</td>
+                                        <td><a class="text-link ellipse" href="javascript:void(0);"><span>3·1운동 시작. 민족대표 33인(4인 불참), 태화관에서 독립선언서 낭독, 시민 2만여명 3·1운동 시작. 민족대표 33인(4인 불참), 태화관에서 독립선언서 낭독, 시민 2만여명</span></a></td>
+                                        <td class="align-center">독립운동</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">9</td>
+                                        <td class="align-center">독립</td>
+                                        <td class="align-center">1919년 03년 01일</td>
+                                        <td><a class="text-link ellipse" href="javascript:void(0);"><span>『조선독립신문』(서울, 윤익선) 간행</span></a></td>
+                                        <td class="align-center">독립운동</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">8</td>
+                                        <td class="align-center">독립</td>
+                                        <td class="align-center">1919년 03년 01일</td>
+                                        <td><a class="text-link ellipse" href="javascript:void(0);"><span>『국민회보』(서울, 제1호) 간행</span></a></td>
+                                        <td class="align-center">독립운동</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">7</td>
+                                        <td class="align-center">기타</td>
+                                        <td class="align-center">1919년 03년 01일</td>
+                                        <td><a class="text-link ellipse" href="javascript:void(0);"><span>모스크바에서 코민테른창립대회 열림(~3.6)</span></a></td>
+                                        <td class="align-center">일본·세계 동향</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">6</td>
+                                        <td class="align-center">독립</td>
+                                        <td class="align-center">1919년 03년 01일</td>
+                                        <td><a class="text-link ellipse" href="javascript:void(0);"><span>고종황제의 국장 거행</span></a></td>
+                                        <td class="align-center">독립운동</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">5</td>
+                                        <td class="align-center">독립</td>
+                                        <td class="align-center">1919년 03년 01일</td>
+                                        <td><a class="text-link ellipse" href="javascript:void(0);"><span>상하이(上海) 프랑스조계 징안쓰로(靜安寺路) 환추중국학생회관(寰球中國學生會館)에 거류민 상하이(上海) 프랑스조계 징안쓰로(靜安寺路) 환추중국학생회관(寰球中國學生會館)에 거류민</span></a></td>
+                                        <td class="align-center">독립운동</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">4</td>
+                                        <td class="align-center">독립</td>
+                                        <td class="align-center">1919년 03년 01일</td>
+                                        <td><a class="text-link ellipse" href="javascript:void(0);"><span>박용만 등, 호놀룰루(Honolulu)에서 대조선독립단(大朝鮮獨立團) 창단</span></a></td>
+                                        <td class="align-center">독립운동</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">3</td>
+                                        <td class="align-center">독립</td>
+                                        <td class="align-center">1919년 03년 01일</td>
+                                        <td><a class="text-link ellipse" href="javascript:void(0);"><span>『자유민보』(서울, 제1호) 간행</span></a></td>
+                                        <td class="align-center">독립운동</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">2</td>
+                                        <td class="align-center">기타</td>
+                                        <td class="align-center">1919년 03년 01일</td>
+                                        <td><a class="text-link ellipse" href="javascript:void(0);"><span>『진민보(震民報)』(서울, 제1호) 간행</span></a></td>
+                                        <td class="align-center">일본·세계 동향</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="align-center">1</td>
+                                        <td class="align-center">독립</td>
+                                        <td class="align-center">1919년 03년 01일</td>
+                                        <td><a class="text-link ellipse" href="javascript:void(0);"><span>서울 동아연초공장 노동자 500여 명 파업</span></a></td>
+                                        <td class="align-center">독립운동</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5" class="no-data"><p class="txt">데이터가 없습니다.</p></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <ul id="pagination" class="pagination"></ul>
 <script>
     // https://josecebe.github.io/twbs-pagination/
     const TOTAL_PAGES = 35;
@@ -444,6 +422,7 @@
         }, 150);
     });
 </script>
+                        </div>
                     </div>
                 </div>
             </div>
