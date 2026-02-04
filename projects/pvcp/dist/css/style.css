@@ -1466,6 +1466,42 @@ button.swiper-pagination-bullet {
   background-image: url(../images/event/ico-flag-2.svg);
 }
 
+.ico-fold {
+  width: 6px;
+  height: 11px;
+  background-image: url(../images/archive/ico-arrow-left.png);
+}
+
+.ico-map-close {
+  width: 10px;
+  height: 10px;
+  background-image: url(../images/archive/ico-map-close.png);
+}
+
+.ico-badge-green {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/archive/btn-sort-green.png);
+}
+
+.ico-badge-blue {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/archive/ico-badge-blue.png);
+}
+
+.ico-badge-red {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/archive/ico-badge-red.png);
+}
+
+.ico-pin {
+  width: 15px;
+  height: 20px;
+  background-image: url(../images/archive/ico-pin.png);
+}
+
 /*
   Layout
 */
@@ -6689,6 +6725,20 @@ div.pswp__img--placeholder,
   }
   .result-group .book-list .item {
     gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .result-group .history-list .item {
+    flex-direction: column;
+  }
+  .result-group .history-list .item .thumb {
+    width: 100%;
+  }
+  .result-group .video-list.video-vertical-list .item {
+    flex-direction: column;
+  }
+  .result-group .video-list.video-vertical-list .item .thumb {
+    width: 100%;
   }
 }
 @media (max-width: 540px) {

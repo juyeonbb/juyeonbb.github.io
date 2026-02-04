@@ -205,7 +205,179 @@
                 </ol>
             </nav>
             <div class="map-search-container">
-                <div class="inner"></div>
+                <div class="inner">
+                    <div class="result-group">
+                        <div class="result-group-head">
+                            <h3 class="title">지도검색</h3>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <div class="map-area" style="background-color: lightpink;"></div>
+                        <div class="map-search-result">
+                            <div class="map-search">
+                                <button type="button" class="btn-fold" aria-expanded="true">
+                                    <i class="ico ico-fold"></i>
+                                    <span class="sr-only">접기</span>
+                                </button>
+                                <form class="map-search-form" action="" role="search">
+                                    <label for="mapSearchKeyword" class="sr-only">검색어</label>
+                                    <div class="search-field">
+                                        <input type="search" id="mapSearchKeyword" class="input-search" placeholder="전투지" value="전투지"/>
+                                        <button type="submit" class="btn-search" aria-label="검색"><i class="ico ico-search"></i></button>
+                                    </div>
+                                    <div class="search-sort">
+                                        <button type="button" class="btn-sort btn-sort-green"><i class="ico ico-badge-green"></i><span>독립</span></button>
+                                        <button type="button" class="btn-sort btn-sort-blue"><i class="ico ico-badge-blue"></i><span>민주</span></button>
+                                        <button type="button" class="btn-sort btn-sort-red"><i class="ico ico-badge-red"></i><span>호국</span></button>
+                                    </div>
+                                </form>
+                                <div class="result-head">
+                                    <div class="result-count"><strong>전투지</strong> 검색결과 <strong>20</strong>건</div>
+                                    <button type="button" class="btn-result-close" aria-label="닫기"><i class="ico ico-map-close"></i></button>
+                                </div>
+                                <div class="result-list-wrap">
+                                    <ul class="result-list">
+                                        <li class="result-item result-item-green">
+                                            <div class="result-content">
+                                                <a href="javascript:void(0);">
+                                                    <div class="result-title"><span class="result-marker">A</span>용산리 전투지</div>
+                                                    <div class="result-address">세종특별자치시 대평동 용산리 15-3</div>
+                                                </a>
+<!--                                                <button type="button" class="btn-pin"><i class="ico ico-pin"><span class="sr-only">위치</span></i></button>-->
+                                            </div>
+                                        </li>
+                                        <li class="result-item result-item-green">
+                                            <div class="result-content">
+                                                <a href="javascript:void(0);">
+                                                    <div class="result-title"><span class="result-marker">B</span>비산리 전투지</div>
+                                                    <div class="result-address">세종특별자치시 대평동 용산리 15-3</div>
+                                                </a>
+<!--                                                <button type="button" class="btn-pin"><i class="ico ico-pin"><span class="sr-only">위치</span></i></button>-->
+                                            </div>
+                                        </li>
+                                        <li class="result-item result-item-blue is-active">
+                                            <div class="result-content">
+                                                <a href="javascript:void(0);">
+                                                    <div class="result-title"><span class="result-marker">C</span>신간회 음성지회 창립대회지</div>
+                                                    <div class="result-address">세종특별자치시 대평동 용산리 15-3</div>
+                                                </a>
+                                                <button type="button" class="btn-pin"><i class="ico ico-pin"><span class="sr-only">위치</span></i></button>
+                                            </div>
+                                        </li>
+                                        <li class="result-item result-item-blue ">
+                                            <div class="result-content">
+                                                <a href="javascript:void(0);">
+                                                    <div class="result-title"><span class="result-marker">D</span>비산리 전투지</div>
+                                                    <div class="result-address">세종특별자치시 대평동 용산리 15-3</div>
+                                                </a>
+<!--                                                <button type="button" class="btn-pin"><i class="ico ico-pin"><span class="sr-only">위치</span></i></button>-->
+                                            </div>
+                                        </li>
+                                        <li class="result-item result-item-red">
+                                            <div class="result-content">
+                                                <a href="javascript:void(0);">
+                                                    <div class="result-title"><span class="result-marker">E</span>금성교 – 대평리 전투지</div>
+                                                    <div class="result-address">세종특별자치시 대평동 용산리 15-3</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="result-item result-item-red">
+                                            <div class="result-content">
+                                                <a href="javascript:void(0);">
+                                                    <div class="result-title"><span class="result-marker">F</span>비산리 전투지</div>
+                                                    <div class="result-address">세종특별자치시 대평동 용산리 15-3</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="result-item result-item-green">
+                                            <div class="result-content">
+                                                <a href="javascript:void(0);">
+                                                    <div class="result-title"><span class="result-marker">A</span>용산리 전투지</div>
+                                                    <div class="result-address">세종특별자치시 대평동 용산리 15-3</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="result-item result-item-green">
+                                            <div class="result-content">
+                                                <a href="javascript:void(0);">
+                                                    <div class="result-title"><span class="result-marker">B</span>비산리 전투지</div>
+                                                    <div class="result-address">세종특별자치시 대평동 용산리 15-3</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="result-item result-item-green">
+                                            <div class="result-content">
+                                                <a href="javascript:void(0);">
+                                                    <div class="result-title"><span class="result-marker">C</span>신간회 음성지회 창립대회지</div>
+                                                    <div class="result-address">세종특별자치시 대평동 용산리 15-3</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="result-item result-item-blue">
+                                            <div class="result-content">
+                                                <a href="javascript:void(0);">
+                                                    <div class="result-title"><span class="result-marker">D</span>비산리 전투지</div>
+                                                    <div class="result-address">세종특별자치시 대평동 용산리 15-3</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="result-item result-item-blue">
+                                            <div class="result-content">
+                                                <a href="javascript:void(0);">
+                                                    <div class="result-title"><span class="result-marker">E</span>금성교 – 대평리 전투지</div>
+                                                    <div class="result-address">세종특별자치시 대평동 용산리 15-3</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <li class="result-item result-item-red">
+                                            <div class="result-content">
+                                                <a href="javascript:void(0);">
+                                                    <div class="result-title"><span class="result-marker">F</span>비산리 전투지</div>
+                                                    <div class="result-address">세종특별자치시 대평동 용산리 15-3</div>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul id="pagination" class="pagination"></ul>
+                                <script>
+                                    // https://josecebe.github.io/twbs-pagination/
+                                    const TOTAL_PAGES = 35;
+                                    const BREAKPOINT = 1280;
+
+                                    function getVisiblePages() {
+                                        return window.innerWidth <= BREAKPOINT ? 5 : 5;
+                                    }
+
+                                    function initPagination() {
+                                        const $pagination = $('#pagination');
+
+                                        $pagination.twbsPagination('destroy');
+
+                                        $pagination.twbsPagination({
+                                            totalPages: TOTAL_PAGES,
+                                            visiblePages: getVisiblePages(),
+                                            first: false,
+                                            prev: `<i class="ico ico-paging-prev"></i><span class="">이전</span>`,
+                                            next: `<span class="">다음</span><i class="ico ico-paging-next"></i>`,
+                                            last: false
+                                        });
+                                    }
+
+                                    initPagination();
+
+                                    let resizeTimer;
+                                    window.addEventListener('resize', () => {``
+                                        clearTimeout(resizeTimer);
+                                        resizeTimer = setTimeout(() => {
+                                            initPagination();
+                                        }, 150);
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- e contents -->
@@ -262,5 +434,44 @@
         </div>
     </div>
 </footer>
+<script>
+    (function ($) {
+        'use strict';
+
+        function setFoldState($panel, isFolded) {
+            const $btn = $panel.find('.btn-fold').first();
+            const $sr = $btn.find('.sr-only').first();
+
+            $panel.toggleClass('is-folded', isFolded);
+            $btn.toggleClass('is-folded', isFolded);
+
+            $btn.attr('aria-expanded', String(!isFolded));
+
+            if ($sr.length) {
+                $sr.text(isFolded ? '펼치기' : '접기');
+            }
+        }
+
+        $(function () {
+            $('.map-search').each(function () {
+                const $panel = $(this);
+                const $btn = $panel.find('.btn-fold').first();
+                const expanded = $btn.attr('aria-expanded') !== 'false';
+                setFoldState($panel, !expanded);
+            });
+        });
+
+        $(document).on('click', '.map-search .btn-fold', function (e) {
+            e.preventDefault();
+
+            const $btn = $(this);
+            const $panel = $btn.closest('.map-search-result');
+            const isFolded = $panel.hasClass('is-folded');
+
+            setFoldState($panel, !isFolded);
+        });
+
+    })(jQuery);
+</script>
 </body>
 </html>
