@@ -101,12 +101,12 @@ data.common = {
     title: '공통 페이지',
     list: [
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'com/alert',
             page: 'Alert 또는 메시지창'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'com/alert2',
             page: '확인창'
         },
