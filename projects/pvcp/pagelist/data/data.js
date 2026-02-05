@@ -219,12 +219,12 @@ data.archive = {
             page: '보훈자료 > 지도검색'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'pvCntnts/보훈자료_지도검색_검색결과',
             page: '보훈자료 > 지도검색 (검색결과 팝업)'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'pvCntnts/보훈자료_지도검색_검색결과2',
             page: '보훈자료 > 지도검색 (검색결과 팝업)'
         },
