@@ -1502,6 +1502,22 @@ button.swiper-pagination-bullet {
   background-image: url(../images/archive/ico-pin.png);
 }
 
+.ico-attach {
+  width: 19px;
+  height: 18px;
+  background-color: currentColor;
+  -webkit-mask: url(../images/common/ico-attach.svg) no-repeat center/contain;
+  mask: url(../images/common/ico-attach.svg) no-repeat center/contain;
+}
+
+.ico-open-new {
+  width: 18px;
+  height: 18px;
+  background-color: currentColor;
+  -webkit-mask: url(../images/common/ico-open-new.svg) no-repeat center/contain;
+  mask: url(../images/common/ico-open-new.svg) no-repeat center/contain;
+}
+
 /*
   Layout
 */
@@ -5817,6 +5833,10 @@ div.pswp__img--placeholder,
   border: 0;
   letter-spacing: -0.8px;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 .card-list-wrap .card-list .card-item .card-category .badge.current {
   background-color: #2462D6;
