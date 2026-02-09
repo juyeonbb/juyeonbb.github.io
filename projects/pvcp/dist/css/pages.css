@@ -2267,6 +2267,8 @@
   height: 460px;
   flex-shrink: 0;
   min-width: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 .exhibition-container .exhibition-main .exhibition-banner .exhibition-visual .exhibition-slide {
   width: 100%;
@@ -2290,6 +2292,7 @@
   letter-spacing: -1.28px;
   color: #003675;
   margin-bottom: 20px;
+  word-break: keep-all;
 }
 .exhibition-container .exhibition-main .exhibition-banner .exhibition-info .info-desc {
   font-size: 17px;

@@ -220,13 +220,13 @@
                                             <img src="../../images/@temp/ex-banner.png" alt="철의 삼각지대 6·25전쟁 중 치열했던 소모전">
                                         </div>
                                         <div class="swiper-slide exhibition-slide">
-                                            <img src="../../images/@temp/ex-banner.png" alt="철의 삼각지대 6·25전쟁 중 치열했던 소모전">
+                                            <img src="../../images/@temp/ex-banner-2.png" alt="6.25전쟁영웅과 함께하는 포스터 또는 홍보물 게시(인증) 이벤트">
                                         </div>
                                         <div class="swiper-slide exhibition-slide">
                                             <img src="../../images/@temp/ex-banner.png" alt="철의 삼각지대 6·25전쟁 중 치열했던 소모전">
                                         </div>
                                         <div class="swiper-slide exhibition-slide">
-                                            <img src="../../images/@temp/ex-banner.png" alt="철의 삼각지대 6·25전쟁 중 치열했던 소모전">
+                                            <img src="../../images/@temp/ex-banner-2.png" alt="6.25전쟁영웅과 함께하는 포스터 또는 홍보물 게시(인증) 이벤트">
                                         </div>
                                     </div>
                                     <button type="button" class="btn-nav btn-nav-prev" aria-label="이전 슬라이드"><img src="../../images/event/slider-prev.svg"/></button>
@@ -234,14 +234,11 @@
                                     <div class="page-num"></div>
                                 </div>
                                 <div class="exhibition-info">
-                                    <h3 class="info-title">
-                                        철의 삼각지대<br>
-                                        6·25전쟁 중 치열했던 소모전
-                                    </h3>
-                                    <p class="info-desc">
-                                        ‘철의 삼각지대(Iron Triangle)’는 6.25 전쟁 당시 중부전선에 위치한 철원, 김화, 평강 세 지역을
-                                        꼭짓점으로 하는 지리상의 삼각지대를 가리키는 군사용어입니다.
-                                    </p>
+                                    <h3 class="info-title">6.25전쟁영웅과 함께하는
+                                        포스터 또는 홍보물 게시(인증)
+                                        이벤트</h3>
+                                    <p class="info-desc">국가보훈부에서 매월 선정하는 6.25전쟁영웅과 함께 하는
+                                        이벤트에 참여해 보세요.</p>
                                     <ul class="info-meta">
                                         <li>
                                             <strong>일시</strong>
@@ -253,16 +250,60 @@
                                         </li>
                                     </ul>
                                     <div class="btn-group">
-                                        <a href="#" class="btn btn-lg with-icon"><span>행사안내 바로가기</span><i class="ico ico-arrow-right-white"></i></a>
+                                        <a href="#" class="btn btn-lg with-icon"><span>이벤트안내 바로가기</span><i class="ico ico-arrow-right-white"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </section>
                         <script>
+                            const exhibitionData = [
+                                {
+                                    title: '철의 삼각지대 6·25전쟁 중 치열했던 소모전',
+                                    desc: '철의 삼각지대 전투 관련 전시 안내입니다.',
+                                    date: '2025-10-01 ~ 2025-12-31',
+                                    place: '전쟁기념관'
+                                },
+                                {
+                                    title: '6.25전쟁영웅과 함께하는 포스터 또는 홍보물 게시(인증) 이벤트',
+                                    desc: '국가보훈부에서 매월 선정하는 6.25전쟁영웅과 함께 하는 이벤트에 참여해 보세요.',
+                                    date: '2025-09-17 ~ 2025-11-16',
+                                    place: '유엔참전용사 디지털 아카이브'
+                                },
+                                {
+                                    title: '철의 삼각지대 특별 전시',
+                                    desc: '전쟁 역사 특별 기획전.',
+                                    date: '2026-01-10 ~ 2026-03-01',
+                                    place: '기획전시관'
+                                }
+                                {
+                                    title: '6.25전쟁영웅 포스터 이벤트',
+                                    desc: '영웅을 기리는 포스터 인증 이벤트입니다.',
+                                    date: '2025-11-01 ~ 2025-12-15',
+                                    place: '온라인 이벤트'
+                                },
+                            ];
+
+                            function updateExhibitionInfo(index) {
+                                const data = exhibitionData[index];
+
+                                const infoBox = document.querySelector('.exhibition-info');
+
+                                infoBox.querySelector('.info-title').innerHTML = data.title;
+                                infoBox.querySelector('.info-desc').innerHTML = data.desc;
+
+                                const metaSpans = infoBox.querySelectorAll('.info-meta span');
+                                metaSpans[0].innerHTML = ' : ' + data.date;
+                                metaSpans[1].innerHTML = ' : ' + data.place;
+                            }
+
                             const exhibitionSwiper = new Swiper('._exhibitionVisual', {
                                 effect: 'fade',
                                 fadeEffect: {
                                     crossFade: true
+                                },
+                                autoplay: {
+                                    delay: 5000,
+                                    disableOnInteraction: false
                                 },
                                 loop: true,
                                 navigation: {
@@ -285,12 +326,12 @@
                                     }
                                 },
                                 on: {
+                                    init: function () {
+                                        updateExhibitionInfo(this.realIndex);
+                                    },
                                     slideChange: function () {
+                                        updateExhibitionInfo(this.realIndex);
                                     }
-                                },
-                                autoplay: {
-                                    delay: 5000,
-                                    disableOnInteraction: false
                                 },
                             });
                         </script>
