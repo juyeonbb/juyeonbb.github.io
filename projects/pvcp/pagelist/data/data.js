@@ -348,3 +348,14 @@ data.info = {
         },
     ]
 }
+
+data.userInfo = {
+    title: '종합포털 소개',
+    list: [
+        {
+            stateClass: 'working',
+            url: 'prtlInt/이용안내_저작권정책',
+            page: '저작권정책'
+        },
+    ]
+}

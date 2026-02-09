@@ -2781,4 +2781,23 @@
     padding: 20px 15px 0;
   }
 }
+/*
+  이용안내
+*/
+.user-guide-container .result-group-head {
+  margin-bottom: 20px;
+}
+.user-guide-container .terms {
+  font-size: 17px;
+}
+.user-guide-container .terms .txt {
+  margin-bottom: 40px;
+}
+.user-guide-container .terms .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 60px;
+}
 /*# sourceMappingURL=pages.css.map */
