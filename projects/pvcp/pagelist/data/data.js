@@ -110,6 +110,11 @@ data.common = {
             url: 'com/alert2',
             page: '확인창'
         },
+        {
+            stateClass: 'complete',
+            url: 'com/유튜브플레이어',
+            page: '유튜브 플레이어 팝업'
+        },
     ]
 }
 

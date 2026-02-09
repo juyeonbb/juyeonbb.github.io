@@ -207,164 +207,151 @@
             <div class="exhibition-container">
                 <div class="inner">
                     <div class="exhibition-main">
-                        <div class="result-group">
-                            <div class="result-group-head">
-                                <h3 class="title">보훈 문화 행사·전시 종합 안내</h3>
-                            </div>
-                        </div>
-                        <section class="event-exhibit-overview">
-                            <div class="calendar-area">
-                                <div id="calendar"></div>
-<script>
-    var isMobile = window.innerWidth < 768;
-
-    const holidayDates = new Set([
-        '2025-10-03', // 개천절
-        '2025-10-07', // 추석
-    ]);
-
-    document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            initialDate: '2025-10-01',
-            locale: 'ko',
-            firstDay: 1,
-            handleWindowResize: true,
-            windowResizeDelay: 100,
-            windowResize: function() {
-                if (window.innerWidth < 768) {
-                    calendar.setOption('height', 'auto');
-                    calendar.setOption('aspectRatio', 0.8);
-                } else {
-                    calendar.setOption('height', 538);
-                    calendar.setOption('aspectRatio', 1.35);
-                }
-            },
-            height: isMobile ? 'auto' : 538,
-            aspectRatio: isMobile ? 0.8 : 1.35,
-
-            headerToolbar: {
-                left: 'prev',
-                center: 'title',
-                right: 'next'
-            },
-
-            titleFormat: function(date) {
-                const year = date.date.year;
-                const month = (date.date.month + 1).toString().padStart(2, '0');
-                return `${year}. ${month}`;
-            },
-
-            dayCellContent: function(info) {
-                var number = info.dayNumberText.replace('일', '');
-                if (number.length < 2) number = '0' + number;
-                return number;
-            },
-
-            dayCellDidMount: function(info) {
-                const y = info.date.getFullYear();
-                const m = String(info.date.getMonth() + 1).padStart(2, '0');
-                const d = String(info.date.getDate()).padStart(2, '0');
-                const key = `${y}-${m}-${d}`;
-
-                if (holidayDates.has(key)) {
-                    info.el.classList.add('is-holiday');
-                }
-            },
-
-            dayHeaderFormat: { weekday: 'short' },
-            fixedWeekCount: false,
-
-            events: [
-                { title: '개천절', start: '2025-10-03', color: 'transparent', textColor: '#dc2347' },
-                { title: '추석', start: '2025-10-07', color: 'transparent', textColor: '#dc2347' },
-                {
-                    title: '호국보훈의 달',
-                    start: '2025-10-10',
-                    url: 'https://www.example.com/event1',
-                    className: 'custom-event'
-                },
-                {
-                    start: '2025-10-24',
-                    display: 'background',
-                    backgroundColor: '#e9ebf5'
-                },
-                {
-                    title: '호국보훈의 달',
-                    start: '2025-10-24',
-                    url: 'https://www.example.com/event1',
-                    className: 'custom-event'
-                },
-                {
-                    title: '호국체험 기념',
-                    start: '2025-10-24',
-                    url: 'https://www.example.com/event1',
-                    className: 'custom-event'
-                },
-            ],
-
-            dayMaxEvents: true,
-        });
-
-        calendar.render();
-    });
-</script>
-                            </div>
-                            <div class="highlight-area">
-                                <h3 class="title">금주의 주요 행사·전시</h3>
-                                <ul class="event-list">
-                                    <li class="event-item">
-                                        <a class="event-link" href="javascript:void(0);">
-                                        <span class="event-title">
-                                            <i class="ico ico-flag-1"></i>
-                                            <span class="txt">군주의 나라에서 국민의 나라로</span>
-                                        </span>
-                                            <span class="event-meta">
-                                            <span class="place">상설전시 | 대한민국임시정부기념관 2층 상설1관</span>
-                                            <span class="period">2022-03-01 ~ 2025-12-31</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                    <li class="event-item">
-                                        <a class="event-link" href="javascript:void(0);">
-                                        <span class="event-title">
-                                            <i class="ico ico-flag-2"></i>
-                                            <span class="txt">독립의 여정, 오늘로 이어지다</span>
-                                        </span>
-                                            <span class="event-meta">
-                                            <span class="place">기념행사 | 대한민국임시정부기념관 1층 복합문화공간</span>
-                                            <span class="period">2022-03-01 ~ 2025-12-31</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                    <li class="event-item">
-                                        <a class="event-link" href="javascript:void(0);">
-                                        <span class="event-title">
-                                            <i class="ico ico-flag-1"></i>
-                                            <span class="txt">군주의 나라에서 국민의 나라로</span>
-                                        </span>
-                                            <span class="event-meta">
-                                            <span class="place">상설전시 | 대한민국임시정부기념관 2층 상설1관</span>
-                                            <span class="period">2022-03-01 ~ 2025-12-31</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                    <li class="event-item">
-                                        <a class="event-link" href="javascript:void(0);">
-                                        <span class="event-title">
-                                            <i class="ico ico-flag-2"></i>
-                                            <span class="txt">기념행사 | 대한민국임시정부기념관 1층 복합문화공간</span>
-                                        </span>
-                                            <span class="event-meta">
-                                            <span class="place">상설전시 | 대한민국임시정부기념관 2층 상설1관</span>
-                                            <span class="period">2022-03-01 ~ 2025-12-31</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                </ul>
+<!--                        <div class="result-group">-->
+<!--                            <div class="result-group-head">-->
+<!--                                <h3 class="title">보훈 문화 행사·전시 종합 안내</h3>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <section class="exhibition-banner">
+                            <div class="exhibition-inner">
+                                <div class="swiper exhibition-visual _exhibitionVisual">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide exhibition-slide">
+                                            <img src="../../images/@temp/ex-banner.png" alt="철의 삼각지대 6·25전쟁 중 치열했던 소모전">
+                                        </div>
+                                        <div class="swiper-slide exhibition-slide">
+                                            <img src="../../images/@temp/ex-banner.png" alt="철의 삼각지대 6·25전쟁 중 치열했던 소모전">
+                                        </div>
+                                        <div class="swiper-slide exhibition-slide">
+                                            <img src="../../images/@temp/ex-banner.png" alt="철의 삼각지대 6·25전쟁 중 치열했던 소모전">
+                                        </div>
+                                        <div class="swiper-slide exhibition-slide">
+                                            <img src="../../images/@temp/ex-banner.png" alt="철의 삼각지대 6·25전쟁 중 치열했던 소모전">
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn-nav btn-nav-prev" aria-label="이전 슬라이드"><img src="../../images/event/slider-prev.svg"/></button>
+                                    <button type="button" class="btn-nav btn-nav-next" aria-label="다음 슬라이드"><img src="../../images/event/slider-next.svg"/></button>
+                                    <div class="page-num"></div>
+                                </div>
+                                <div class="exhibition-info">
+                                    <h3 class="info-title">
+                                        철의 삼각지대<br>
+                                        6·25전쟁 중 치열했던 소모전
+                                    </h3>
+                                    <p class="info-desc">
+                                        ‘철의 삼각지대(Iron Triangle)’는 6.25 전쟁 당시 중부전선에 위치한 철원, 김화, 평강 세 지역을
+                                        꼭짓점으로 하는 지리상의 삼각지대를 가리키는 군사용어입니다.
+                                    </p>
+                                    <ul class="info-meta">
+                                        <li>
+                                            <strong>일시</strong>
+                                            <span> :  2025-09-17 ~ 2025-11-16</span>
+                                        </li>
+                                        <li>
+                                            <strong>장소</strong>
+                                            <span> : 유엔참전용사 디지털 아카이브</span>
+                                        </li>
+                                    </ul>
+                                    <div class="btn-group">
+                                        <a href="#" class="btn btn-lg with-icon"><span>행사안내 바로가기</span><i class="ico ico-arrow-right-white"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </section>
+                        <script>
+                            const exhibitionSwiper = new Swiper('._exhibitionVisual', {
+                                effect: 'fade',
+                                fadeEffect: {
+                                    crossFade: true
+                                },
+                                loop: true,
+                                navigation: {
+                                    nextEl: '.exhibition-banner .btn-nav-next',
+                                    prevEl: '.exhibition-banner .btn-nav-prev'
+                                },
+                                pagination: {
+                                    el: '.exhibition-visual .page-num',
+                                    type: 'fraction',
+                                    currentClass: 'current',
+                                    totalClass: 'total',
+                                    renderFraction: function (currentClass, totalClass) {
+                                        return '<span class="' + currentClass + '"></span><span class="' + totalClass + '"></span>';
+                                    },
+                                    formatFractionCurrent: function (number) {
+                                        return String(number).padStart(2, '0');
+                                    },
+                                    formatFractionTotal: function (number) {
+                                        return String(number).padStart(2, '0');
+                                    }
+                                },
+                                on: {
+                                    slideChange: function () {
+                                    }
+                                },
+                                autoplay: {
+                                    delay: 5000,
+                                    disableOnInteraction: false
+                                },
+                            });
+                        </script>
+                        <!--                        <section class="event-exhibit-overview">-->
+<!--                            <div class="calendar-area">-->
+
+<!--                            </div>-->
+<!--                            <div class="highlight-area">-->
+<!--                                <h3 class="title">금주의 주요 행사·전시</h3>-->
+<!--                                <ul class="event-list">-->
+<!--                                    <li class="event-item">-->
+<!--                                        <a class="event-link" href="javascript:void(0);">-->
+<!--                                        <span class="event-title">-->
+<!--                                            <i class="ico ico-flag-1"></i>-->
+<!--                                            <span class="txt">군주의 나라에서 국민의 나라로</span>-->
+<!--                                        </span>-->
+<!--                                            <span class="event-meta">-->
+<!--                                            <span class="place">상설전시 | 대한민국임시정부기념관 2층 상설1관</span>-->
+<!--                                            <span class="period">2022-03-01 ~ 2025-12-31</span>-->
+<!--                                        </span>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="event-item">-->
+<!--                                        <a class="event-link" href="javascript:void(0);">-->
+<!--                                        <span class="event-title">-->
+<!--                                            <i class="ico ico-flag-2"></i>-->
+<!--                                            <span class="txt">독립의 여정, 오늘로 이어지다</span>-->
+<!--                                        </span>-->
+<!--                                            <span class="event-meta">-->
+<!--                                            <span class="place">기념행사 | 대한민국임시정부기념관 1층 복합문화공간</span>-->
+<!--                                            <span class="period">2022-03-01 ~ 2025-12-31</span>-->
+<!--                                        </span>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="event-item">-->
+<!--                                        <a class="event-link" href="javascript:void(0);">-->
+<!--                                        <span class="event-title">-->
+<!--                                            <i class="ico ico-flag-1"></i>-->
+<!--                                            <span class="txt">군주의 나라에서 국민의 나라로</span>-->
+<!--                                        </span>-->
+<!--                                            <span class="event-meta">-->
+<!--                                            <span class="place">상설전시 | 대한민국임시정부기념관 2층 상설1관</span>-->
+<!--                                            <span class="period">2022-03-01 ~ 2025-12-31</span>-->
+<!--                                        </span>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                    <li class="event-item">-->
+<!--                                        <a class="event-link" href="javascript:void(0);">-->
+<!--                                        <span class="event-title">-->
+<!--                                            <i class="ico ico-flag-2"></i>-->
+<!--                                            <span class="txt">기념행사 | 대한민국임시정부기념관 1층 복합문화공간</span>-->
+<!--                                        </span>-->
+<!--                                            <span class="event-meta">-->
+<!--                                            <span class="place">상설전시 | 대한민국임시정부기념관 2층 상설1관</span>-->
+<!--                                            <span class="period">2022-03-01 ~ 2025-12-31</span>-->
+<!--                                        </span>-->
+<!--                                        </a>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                        </section>-->
                         <section class="section-exhibition _eventSliderWrapper">
                             <div class="inner">
                                 <div class="section-header">

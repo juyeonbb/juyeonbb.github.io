@@ -1518,6 +1518,14 @@ button.swiper-pagination-bullet {
   mask: url(../images/common/ico-open-new.svg) no-repeat center/contain;
 }
 
+.ico-arrow-right-white {
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  -webkit-mask: url(../images/event/arrow-right.svg) no-repeat center/contain;
+  mask: url(../images/event/arrow-right.svg) no-repeat center/contain;
+}
+
 /*
   Layout
 */
@@ -4904,6 +4912,80 @@ div.pswp__img--placeholder,
 @media (max-width: 560px) {
   .popup.popup-sm {
     width: calc(100% - 40px);
+  }
+}
+.popup-video-content {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+.popup-video-content .video-content {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+.popup-video-content .video-content .video-area {
+  aspect-ratio: 680/380;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.popup-video-content .video-content .record-info {
+  margin-bottom: 20px;
+}
+.popup-video-content .video-content .video-info-title {
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: -0.48px;
+  margin-bottom: 5px;
+}
+.popup-video-content .video-content .video-info-content {
+  font-size: 17px;
+  letter-spacing: -0.85px;
+  color: #444;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  padding: 13px 15px;
+  max-height: 102.5px;
+  overflow-y: auto;
+}
+.popup-video-content .result-group .record-info .record-info-item {
+  font-size: 15px;
+}
+.popup-video-content .result-group .record-info .record-info-item + .record-info-item::before {
+  background-color: #ccc;
+  top: 5px;
+}
+.popup-video-content .ai-subtitle {
+  width: 230px;
+  border-radius: 10px;
+  border: solid 1px #dfdfdf;
+  background-color: #fff;
+  padding: 16px;
+  max-height: 580px;
+}
+.popup-video-content .ai-subtitle .ai-sub-title-content {
+  max-height: 512.5px;
+  overflow-y: auto;
+}
+.popup-video-content .ai-subtitle .ai-subtitle-title {
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: -0.43px;
+  margin-bottom: 10px;
+}
+.popup-video-content .ai-subtitle .ai-sub-title-content {
+  font-size: 15px;
+  letter-spacing: -1.13px;
+  color: #444;
+}
+
+@media (max-width: 1000px) {
+  .popup-video-content {
+    flex-direction: column;
+  }
+  .popup-video-content .ai-subtitle {
+    width: 100%;
   }
 }
 /*
