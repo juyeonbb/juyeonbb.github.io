@@ -1532,6 +1532,18 @@ button.swiper-pagination-bullet {
   background-image: url(../images/common/ico-pdf.svg);
 }
 
+.ico-folder {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/common/ico-folder.svg);
+}
+
+.ico-emergency {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/common/ico-emergency.svg);
+}
+
 /*
   Layout
 */
@@ -3303,6 +3315,12 @@ table {
   font-size: 15px;
   text-align: left;
 }
+.table thead th:first-child {
+  border-radius: 4px 0 0 0;
+}
+.table thead th:last-child {
+  border-radius: 0 4px 0 0;
+}
 .table colgroup + tbody tr {
   border-top: 1px solid #d7d9db;
 }
@@ -3389,6 +3407,9 @@ table {
     border-bottom: 0;
     text-align: left !important;
     vertical-align: middle;
+  }
+  .table.table-data tbody td:empty {
+    display: none;
   }
   .table.table-data tbody td:not(.index, .name)::before {
     content: attr(data-label) "";
