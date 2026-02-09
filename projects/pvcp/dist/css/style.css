@@ -3141,6 +3141,63 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
   }
 }
+.ui-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.ui-info-list > li {
+  position: relative;
+  padding-left: 32px;
+  font-size: 17px;
+}
+.ui-info-list > li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ui-info-list > li > .ui-info-list {
+  gap: 8px;
+  margin-top: 16px;
+}
+.ui-info-list > li > .ui-info-list > li {
+  padding-left: 24px;
+  font-size: 17px;
+}
+.ui-info-list > li > .ui-info-list > li > .ui-info-list {
+  margin-top: 12px;
+}
+.ui-info-list > li > .ui-info-list > li > .ui-info-list > li {
+  padding-left: 20px;
+  font-size: 15px;
+}
+.ui-info-list.decimal > li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #222;
+  border-radius: 100%;
+  top: 10px;
+  left: 8px;
+}
+.ui-info-list.dash > li::before {
+  content: "-";
+}
+.ui-info-list.hollow > li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border: 1px solid #222;
+  border-radius: 100%;
+  top: 9.5px;
+  left: 8px;
+}
+.ui-info-list.ordered > li .num {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /*
   Tabs
 */
@@ -4166,7 +4223,6 @@ input::-webkit-search-results-decoration {
   line-height: 20px;
   letter-spacing: -0.7px;
   color: #444;
-  text-transform: uppercase;
 }
 .breadcrumb .breadcrumb-item a {
   display: inline-flex;
