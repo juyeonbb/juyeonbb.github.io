@@ -295,5 +295,30 @@ data.education = {
             url: 'actv/체험교육_온오프라인교육_상세',
             page: '체험·교육 > 온·오프라인교육 > 상세'
         },
+        {
+            stateClass: 'complete',
+            url: 'actv/체험교육_배움자료실',
+            page: '체험·교육 > 배움자료실'
+        },
+        {
+            stateClass: 'complete',
+            url: 'actv/체험교육_배움자료실_상세',
+            page: '체험·교육 > 배움자료실 > 상세'
+        },
+        {
+            stateClass: 'complete',
+            url: 'actv/체험교육_보훈e북',
+            page: '체험·교육 > 보훈e북'
+        },
+        {
+            stateClass: 'complete',
+            url: 'actv/체험교육_이달의영웅',
+            page: '체험·교육 > 이달의 영웅'
+        },
+        {
+            stateClass: 'complete',
+            url: 'actv/체험교육_이달의영웅_상세',
+            page: '체험·교육 > 이달의 영웅 > 상세'
+        },
     ]
 }

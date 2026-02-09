@@ -1526,6 +1526,12 @@ button.swiper-pagination-bullet {
   mask: url(../images/event/arrow-right.svg) no-repeat center/contain;
 }
 
+.ico-pdf {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/common/ico-pdf.svg);
+}
+
 /*
   Layout
 */
@@ -3222,6 +3228,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .section-filter .item {
   position: relative;
+}
+.section-filter .item > * {
   font-size: 24px;
   letter-spacing: -1.2px;
   color: #444;
@@ -5079,6 +5087,10 @@ div.pswp__img--placeholder,
   border-color: #9dd7d7;
   color: #045d5d;
 }
+.badge.badge-blue {
+  border-color: #5fb5f7;
+  color: #096ab3;
+}
 .badge.badge-pink {
   border-color: #ffc6ec;
   color: #a14482;
@@ -5938,6 +5950,20 @@ div.pswp__img--placeholder,
   min-height: 52px;
   margin-bottom: 10px;
 }
+.card-list-wrap .card-list .card-item .card-badge-title {
+  gap: 5px;
+  font-size: 17px;
+  letter-spacing: -0.68px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.card-list-wrap .card-list .card-item .card-badge-title .badge {
+  transform: translateY(-2px);
+  margin-right: 3px;
+}
 .card-list-wrap .card-list .card-item .card-meta {
   display: flex;
   gap: 0;
@@ -6088,8 +6114,9 @@ div.pswp__img--placeholder,
   margin-left: auto;
   padding-bottom: 5px;
 }
-.result-group .result-group-head .section-filter .item {
+.result-group .result-group-head .section-filter .item > * {
   font-size: 17px;
+  letter-spacing: -0.68px;
 }
 .result-group .result-group-head .util {
   display: flex;
