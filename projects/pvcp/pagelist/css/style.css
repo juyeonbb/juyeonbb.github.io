@@ -5981,7 +5981,7 @@ a {
 
 .waiting {
   background: #ffd84c;
-  color: #d0eef5 !important;
+  color: #222 !important;
 }
 .waiting::after {
   content: "대기중";
