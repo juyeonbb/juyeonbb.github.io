@@ -1822,9 +1822,8 @@
   .archive-container .result-group .person-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .archive-container .detail-content .featured-result .featured-result-inner .featured-result-content .featured-meta .row {
-    flex-direction: column;
-    gap: 5px;
+  .archive-container .detail-content .featured-result .featured-result-inner .featured-result-content .featured-meta .row .term {
+    width: auto;
   }
   .archive-container .detail-content .featured-result .featured-result-inner .featured-result-content .featured-meta .row .desc {
     padding-left: 10px;
