@@ -120,6 +120,11 @@ data.common = {
             url: 'com/유튜브플레이어',
             page: '유튜브 플레이어 팝업'
         },
+        {
+            stateClass: 'working',
+            url: 'com/통합검색',
+            page: '통합검색 팝업'
+        },
     ]
 }
 
