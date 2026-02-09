@@ -45,6 +45,11 @@ data.guide = {
         },
         {
             stateClass: 'complete',
+            url: 'guide/textList',
+            page: 'Text list'
+        },
+        {
+            stateClass: 'complete',
             url: 'guide/pagination',
             page: 'pagination'
         },
