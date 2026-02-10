@@ -200,12 +200,87 @@
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb-list">
                     <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="ico ico-home"></i>홈</a></li>
-                    <li class="breadcrumb-item"><a href="javascript:void(0)">통합검색</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">종합포털소개</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">공지사항</a></li>
                 </ol>
             </nav>
-            <div class="map-search-container">
+            <div class="user-guide-container">
                 <div class="inner">
-                    <button class="btn _popupTrigger" data-trigger="popup-search" type="button">통합검색 팝업</button>
+                    <div class="section-content">
+                        <div class="result-group">
+                            <div class="result-group-head">
+                                <h3 class="title">공지사항</h3>
+                                <div class="util">
+                                    <button type="button" class="btn-print"><i class="ico ico-print"></i><span class="sr-only">프린트하기</span></button>
+                                    <div class="drop-wrap _dropdown">
+                                        <button type="button" class="btn-share _dropdownBtn" aria-controls="shareMenu" aria-expanded="false">
+                                            <i class="ico ico-share"></i><span class="sr-only">공유하기</span>
+                                        </button>
+                                        <div class="drop-menu _dropdownMenu" id="shareMenu" hidden="">
+                                            <div class="drop-in">
+                                                <ul class="drop-list">
+                                                    <li class="drop-item">
+                                                        <a href="javascript:void(0);" class="item-link _dropdownItem"><i class="ico ico-kakao"></i>카카오톡</a>
+                                                    </li>
+                                                    <li class="drop-item">
+                                                        <a href="javascript:void(0);" class="item-link _dropdownItem"><i class="ico ico-facebook"></i> 페이스북</a>
+                                                    </li>
+                                                    <li class="drop-item">
+                                                        <a href="javascript:void(0);" class="item-link _dropdownItem"><i class="ico ico-x"></i> X</a>
+                                                    </li>
+                                                    <li class="drop-item">
+                                                        <a href="javascript:void(0);" class="item-link _dropdownItem"><i class="ico ico-url"></i>URL 복사</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="view-detail">
+                            <div class="view-head">
+                                <div class="view-meta">
+                                    <h2 class="view-title">One-Minute 아카이브 숏폼 공모전 예비 당선작 공개검증</h2>
+                                    <dl class="view-summary">
+                                        <div class="summary-item">
+                                            <dd>국제협력담당관</dd>
+                                        </div>
+                                        <div class="summary-item">
+                                            <dd>2025-11-11</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="view-body">
+                                <div class="view-description">
+                                    <div class="content">
+                                        <div class="sample">
+                                            공개검증 : 붙임참조<br/>
+                                            공개검증 기간 : 2025. 12. 15. ~ 2025. 12. 24. (10일)<br/>
+                                            의견제출방법 : 메일(○○○@korea.kr) 제출<br/>
+                                            연락처 : 000-000-0000(국가보훈부 국제협력담당관실 ○○○)
+                                        </div>
+                                        <!-- s 에디터 영역 -->
+                                        <!-- e 에디터 영역 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-nav">
+                                <div class="post-nav-item next">
+                                    <span class="nav-label">이전글 <i class="ico ico-up"></i></span>
+                                    <a href="javascript:void(0);" class="nav-link">4.19혁명 유공자 포상신청 접수 안내</a>
+                                </div>
+                                <div class="post-nav-item prev">
+                                    <span class="nav-label">다음글 <i class="ico ico-down"></i></span>
+                                    <a href="javascript:void(0);" class="nav-link">4.19혁명 유공자 포상신청 접수 안내</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group-outline">
+                        <button class="btn btn-lg btn-border-gray" type="button">목록</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -263,114 +338,5 @@
         </div>
     </div>
 </footer>
-<div class="dim _dim" style="display: block"></div>
-<div class="popup-wrap _popup" data-popup="popup-search" role="dialog" aria-labelledby="popupSearch" aria-modal="true" style="display: block">
-    <div class="popup popup-xl popup-total-search">
-        <div class="popup-content">
-            <div class="popup-head">
-                <span class="title" id="popupSearch">검색어를 입력해주세요</span>
-                <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
-            </div>
-            <div class="popup-body">
-                <div class="popup-search-content">
-                    <div class="search-global">
-                        <input class="form-input" type="search" aria-label="통합검색" placeholder="검색어를 입력하세요">
-                        <button type="button" class="btn-search"><i class="ico ico-search-main"></i><span class="sr-only">검색하기</span></button>
-                    </div>
-                    <ul class="sch-info-list">
-                        <li class="sch-info-item word-popular">
-                            <h3 class="tit">인기검색어</h3>
-                            <ol class="list">
-                                <li>
-                                    <a href="javascript:void(0);" class="ranking-link">
-                                        <span class="ranking-txt">안전보건교육</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="ranking-link">
-                                        <span class="ranking-txt">산업재해조사표</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="ranking-link">
-                                        <span class="ranking-txt">퇴직금계산기</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="ranking-link">
-                                        <span class="ranking-txt">육아휴직급여</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="ranking-link">
-                                        <span class="ranking-txt">실업인정신청</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="ranking-link">
-                                        <span class="ranking-txt">국민내일배움</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="ranking-link">
-                                        <span class="ranking-txt">노사협의회</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="ranking-link">
-                                        <span class="ranking-txt">산업안전보건</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="ranking-link">
-                                        <span class="ranking-txt">국민내일배움카드신청</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="ranking-link">
-                                        <span class="ranking-txt">안전보건교육</span>
-                                    </a>
-                                </li>
-                            </ol>
-                        </li>
-                        <li class="sch-info-item word-lately">
-                            <h3 class="tit">최근검색어</h3>
-                            <ul class="list" aria-live="polite">
-                                <li>
-                                    <a href="javascript:void(0);" class="word-link">
-                                        <span class="word-txt">안전보건교육</span>
-                                    </a>
-                                    <button type="button" class="btn-del">
-                                        <span class="sr-only">삭제</span>
-                                        <i class="ico ico-del"></i>
-                                    </button>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="word-link">
-                                        <span class="word-txt">안전보건교육</span>
-                                    </a>
-                                    <button type="button" class="btn-del">
-                                        <span class="sr-only">삭제</span>
-                                        <i class="ico ico-del"></i>
-                                    </button>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="word-link">
-                                        <span class="word-txt">안전보건교육</span>
-                                    </a>
-                                    <button type="button" class="btn-del">
-                                        <span class="sr-only">삭제</span>
-                                        <i class="ico ico-del"></i>
-                                    </button>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn-del-all">최근검색어 전체 삭제 <i class="ico ico-del"></i></button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
 </html>

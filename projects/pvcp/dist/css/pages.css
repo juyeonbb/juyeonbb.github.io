@@ -3003,4 +3003,87 @@
   justify-content: center;
   margin-bottom: 60px;
 }
+.user-guide-container .view-detail {
+  border-top: 1px solid #666;
+}
+.user-guide-container .view-detail .view-head {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #EEE;
+  padding: 15px 20px;
+}
+.user-guide-container .view-detail .view-head .view-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.user-guide-container .view-detail .view-head .view-title {
+  font-size: 19px;
+  letter-spacing: -0.76px;
+}
+.user-guide-container .view-detail .view-head .view-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 0;
+}
+.user-guide-container .view-detail .view-head .view-summary .summary-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.user-guide-container .view-detail .view-head .view-summary .summary-item + .summary-item::before {
+  content: "|";
+  margin: 0 7px 0 15px;
+  color: #ccc;
+}
+.user-guide-container .view-detail .view-head .view-summary .summary-item dt {
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: -0.68px;
+  color: #444;
+}
+.user-guide-container .view-detail .view-head .view-summary .summary-item dd {
+  font-size: 17px;
+  letter-spacing: -0.68px;
+  color: #666;
+}
+.user-guide-container .view-detail .view-body {
+  padding: 30px 20px;
+}
+.user-guide-container .view-detail .post-nav {
+  border-top: 1px solid #EEE;
+}
+.user-guide-container .view-detail .post-nav .post-nav-item {
+  display: flex;
+  border-bottom: 1px solid #EEE;
+}
+.user-guide-container .view-detail .post-nav .nav-label {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  gap: 5px;
+  padding: 20px;
+}
+.user-guide-container .view-detail .post-nav .nav-link {
+  padding: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.user-guide-container .view-detail .post-nav .nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 1280px) {
+  .user-guide-container .view-detail .view-head .view-summary .summary-item dt {
+    font-size: 15px;
+  }
+  .user-guide-container .view-detail .view-head .view-summary .summary-item dd {
+    font-size: 15px;
+  }
+  .user-guide-container .view-detail .view-head .view-summary .summary-item dd::before {
+    margin: 0 5px;
+  }
+}
 /*# sourceMappingURL=pages.css.map */
