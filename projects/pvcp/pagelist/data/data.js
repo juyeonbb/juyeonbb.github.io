@@ -335,6 +335,11 @@ data.education = {
             url: 'actv/체험교육_이달의영웅_상세',
             page: '체험·교육 > 이달의 영웅 > 상세'
         },
+        {
+            stateClass: 'complete',
+            url: 'actv/체험교육_이달의역사',
+            page: '체험·교육 > 이달의 역사'
+        },
     ]
 }
 

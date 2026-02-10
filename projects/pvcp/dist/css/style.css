@@ -5282,6 +5282,21 @@ div.pswp__img--placeholder,
   background-color: #d6f5d6;
   color: #1e7b1e;
 }
+.badge.badge-blue-filled {
+  border-color: #e7f4fe;
+  background-color: #e7f4fe;
+  color: #1e7b1e;
+}
+.badge.badge-red-filled {
+  border-color: #fdefec;
+  background-color: #fdefec;
+  color: #be2f13;
+}
+.badge.badge-green-filled {
+  border-color: #d6f5d6;
+  background-color: #eaf6ec;
+  color: #1e7b1e;
+}
 .badge.badge-green {
   border-color: #9dd7d7;
   color: #045d5d;
@@ -5563,14 +5578,6 @@ div.pswp__img--placeholder,
   color: #dc2347;
 }
 
-.fc-daygrid-event {
-  background-color: transparent !important;
-  border: none !important;
-  font-size: 12px;
-  padding-left: 5px;
-  white-space: wrap;
-}
-
 .fc .fc-toolbar-title {
   font-size: 24px;
   line-height: 1.5;
@@ -5604,13 +5611,6 @@ div.pswp__img--placeholder,
   color: #fff;
 }
 
-.fc-daygrid-event {
-  background: transparent !important;
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 5px !important;
-}
-
 .custom-event .fc-event-title {
   color: #666 !important;
   font-size: 13px;
@@ -5621,17 +5621,34 @@ div.pswp__img--placeholder,
   align-items: center;
 }
 
-.custom-event .fc-event-title::before {
-  content: "•";
-  display: inline-block;
-}
-
 .fc-day-today {
   background-color: transparent !important;
 }
 
 .fc .is-holiday .fc-daygrid-day-number {
   color: #dc2347;
+}
+
+.fc-daygrid-day-events {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5px;
+}
+
+.fc-daygrid-event.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: 0;
+}
+.fc-daygrid-event.circle.circle-green {
+  background-color: #228738;
+}
+.fc-daygrid-event.circle.circle-blue {
+  background-color: #0b78cb;
+}
+.fc-daygrid-event.circle.circle-red {
+  background-color: #de3412;
 }
 
 @media (max-width: 768px) {
