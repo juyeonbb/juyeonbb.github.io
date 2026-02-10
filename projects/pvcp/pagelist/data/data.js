@@ -190,6 +190,11 @@ data.archive = {
         },
         {
             stateClass: 'complete',
+            url: 'pvData/보훈자료_역사_상세',
+            page: '보훈자료 > 보훈자료 > 역사  > 상세'
+        },
+        {
+            stateClass: 'complete',
             url: 'pvData/보훈자료_사진필름',
             page: '보훈자료 > 사진/필름'
         },
@@ -355,7 +360,7 @@ data.info = {
 }
 
 data.userInfo = {
-    title: '종합포털 소개',
+    title: '이용안내',
     list: [
         {
             stateClass: 'working',

@@ -1354,7 +1354,11 @@
 }
 .archive-container .detail-content .memorial-detail-content {
   display: flex;
-  gap: 60px;
+  gap: 30px;
+}
+.archive-container .detail-content .memorial-detail-content .photo-list {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px 27px;
 }
 .archive-container .detail-content .title-area {
   margin-bottom: 20px;
@@ -1363,6 +1367,20 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+}
+.archive-container .detail-content .title-area .title .badge {
+  transform: translateY(-2px);
+  height: 23px;
+  line-height: 21px;
+  font-size: 15px;
+  padding: 0 8px;
+}
+.archive-container .detail-content .desc-area {
+  margin-bottom: 17px;
+  margin-top: -14px;
+}
+.archive-container .detail-content .desc-area .desc {
+  font-size: 17px;
 }
 .archive-container .detail-content .photo-slider-wrapper {
   margin-bottom: 42px;
@@ -1424,18 +1442,19 @@
   width: 426px;
 }
 .archive-container .detail-content .info-list-wrap {
-  width: 370px;
+  width: 340px;
   flex-shrink: 0;
+  padding: 0 30px;
 }
-.archive-container .detail-content .info-list-wrap .info-list .row {
+.archive-container .detail-content .info-list .row {
   display: flex;
   border-top: 1px dashed #e3e7ee;
   padding: 7px 0;
 }
-.archive-container .detail-content .info-list-wrap .info-list .row:last-child {
+.archive-container .detail-content .info-list .row:last-child {
   border-bottom: 1px dashed #e3e7ee;
 }
-.archive-container .detail-content .info-list-wrap .info-list .row dt {
+.archive-container .detail-content .info-list .row dt {
   position: relative;
   width: 100px;
   padding-left: 20px;
@@ -1445,7 +1464,7 @@
   letter-spacing: -0.75px;
   color: #666;
 }
-.archive-container .detail-content .info-list-wrap .info-list .row dt::before {
+.archive-container .detail-content .info-list .row dt::before {
   content: "";
   width: 3px;
   height: 3px;
@@ -1454,13 +1473,23 @@
   left: 10px;
   top: 8px;
 }
-.archive-container .detail-content .info-list-wrap .info-list .row dd {
+.archive-container .detail-content .info-list .row dd {
   width: calc(100% - 100px);
   line-height: 25px;
   font-size: 17px;
   font-weight: 500;
   letter-spacing: -0.85px;
   color: #444;
+}
+.archive-container .detail-content .info-list.num .row dt {
+  width: 40px;
+  padding-left: 10px;
+}
+.archive-container .detail-content .info-list.num .row dt::before {
+  content: none;
+}
+.archive-container .detail-content .info-list.num .row dd {
+  width: calc(100% - 40px);
 }
 .archive-container .detail-content .history-content {
   flex: 1;
@@ -1615,6 +1644,30 @@
   max-width: 100%;
   object-fit: contain;
 }
+.archive-container .history-view-wrapper {
+  padding: 40px;
+  border: 1px solid #cadaee;
+  border-radius: 20px;
+  background-color: #f6f8f7;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.archive-container .history-view-wrapper .img-viewer-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.archive-container .history-view-wrapper .img-viewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 570px;
+}
+.archive-container .history-view-wrapper .img-viewer img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
 
 .popup-map-result {
   width: 100%;
@@ -1713,6 +1766,10 @@
   .archive-container .detail-content .memorial-detail-content {
     gap: 20px;
   }
+  .archive-container .detail-content .memorial-detail-content .photo-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 20px;
+  }
   .archive-container .detail-content .featured-result .featured-result-inner {
     gap: 20px;
     flex-direction: column;
@@ -1767,6 +1824,7 @@
   }
   .archive-container .detail-content .info-list-wrap {
     width: 100%;
+    padding: 0;
   }
   .archive-container .detail-content .history-content {
     gap: 40px;
@@ -1795,6 +1853,9 @@
   }
   .archive-container .result-group .photo-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .archive-container .history-view-wrapper {
+    padding: 20px;
   }
   .popup-map-result .slider-wrapper {
     padding: 10px;
