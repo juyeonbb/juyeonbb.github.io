@@ -184,7 +184,7 @@
                 <ul class="actions">
 <!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">로그인</a></li>-->
 <!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">회원가입</a></li>-->
-                    <li class="action-item"><a href="javascript:void(0);" class="btn-search"><i class="ico ico-search"></i><em>통합검색</em></a></li>
+                    <li class="action-item"><a href="javascript:void(0);" class="btn-search _popupTrigger" data-trigger="popup-search"><i class="ico ico-search"></i><em>통합검색</em></a></li>
                     <li class="action-item show-pc"><button type="button" class="btn-menu"><span></span><span></span><span></span><em>전체메뉴</em></button></li>
                     <li class="action-item show-mo"><button type="button" class="btn-menu"><span></span><span></span><span></span><em>전체메뉴</em></button></li>
                 </ul>
@@ -193,6 +193,116 @@
     </div>
     <div class="header-mo"></div>
 </header>
+<div class="dim _dim"></div>
+<div class="popup-wrap _popup" data-popup="popup-search" role="dialog" aria-labelledby="popupSearch" aria-modal="true">
+    <div class="popup popup-xl popup-total-search">
+        <div class="popup-content">
+            <div class="popup-head">
+                <span class="title" id="popupSearch">검색어를 입력해주세요</span>
+                <a class="tip-link" href="javascript:void(0);">검색에 어려움이 있으신가요? <i class="ico ico-search-arrow"></i></a>
+                <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-search-content">
+                    <div class="search-global">
+                        <input class="form-input" type="search" title="통합검색" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn-search"><i class="ico ico-search-main"></i><span class="sr-only">검색하기</span></button>
+                    </div>
+                    <ul class="sch-info-list">
+                        <li class="sch-info-item word-popular">
+                            <h3 class="tit">인기검색어</h3>
+                            <ol class="list">
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">보훈문화</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">안중근</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">대한민국임시정부</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">독립운동</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">3.1운동</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">보훈문화</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">안중근</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">김구</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">독립운동</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">3.1운동</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li class="sch-info-item word-lately">
+                            <h3 class="tit">최근검색어</h3>
+                            <ul class="list" aria-live="polite">
+                                <li>
+                                    <a href="javascript:void(0);" class="word-link">
+                                        <span class="word-txt">대한민국임시정부</span>
+                                    </a>
+                                    <button type="button" class="btn-del">
+                                        <span class="sr-only">삭제</span>
+                                        <i class="ico ico-del"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="word-link">
+                                        <span class="word-txt">대한민국임시정부</span>
+                                    </a>
+                                    <button type="button" class="btn-del">
+                                        <span class="sr-only">삭제</span>
+                                        <i class="ico ico-del"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="word-link">
+                                        <span class="word-txt">대한민국임시정부</span>
+                                    </a>
+                                    <button type="button" class="btn-del">
+                                        <span class="sr-only">삭제</span>
+                                        <i class="ico ico-del"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn-del-all">최근검색어 전체 삭제 <i class="ico ico-search-arrow"></i></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <main class="wrap" id="content">
     <div class="container">
         <!-- s contents -->
