@@ -595,6 +595,9 @@
   width: 50%;
   border-bottom: 1px solid #ccc;
 }
+.main-contents .section-notice .box-notice .no-data {
+  padding: 130px 0 100px;
+}
 .main-contents .section-notice .box-event {
   width: calc(50% - 50px);
   margin-left: 50px;
@@ -1546,31 +1549,34 @@
   gap: 40px;
   justify-content: flex-start;
 }
-.archive-container .detail-content .featured-result .featured-result-inner .featured-result-media .img {
+.archive-container .detail-content .featured-result .featured-result-media .img {
   width: 250px;
 }
-.archive-container .detail-content .featured-result .featured-result-inner .featured-result-content {
+.archive-container .detail-content .featured-result .featured-result-content {
   padding: 0;
 }
-.archive-container .detail-content .featured-result .featured-result-inner .featured-result-content .featured-info .title {
+.archive-container .detail-content .featured-result .featured-result-content .featured-info .title {
   font-size: 32px;
 }
-.archive-container .detail-content .featured-result .featured-result-inner .featured-result-content .featured-meta {
+.archive-container .detail-content .featured-result .featured-result-content .featured-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 40px;
   margin-bottom: 0;
 }
-.archive-container .detail-content .featured-result .featured-result-inner .featured-result-content .featured-meta .row {
+.archive-container .detail-content .featured-result .featured-result-content .featured-meta .row {
   width: calc(50% - 20px);
   gap: 20px;
 }
-.archive-container .detail-content .featured-result .featured-result-inner .featured-result-content .featured-meta .row .term {
+.archive-container .detail-content .featured-result .featured-result-content .featured-meta .row .term {
   width: 118px;
   padding-left: 10px;
 }
-.archive-container .detail-content .featured-result .featured-result-inner .featured-result-content .featured-meta .row .term::before {
+.archive-container .detail-content .featured-result .featured-result-content .featured-meta .row .term::before {
   left: 0;
+}
+.archive-container .detail-content .featured-result .featured-result-content .featured-meta .row.row-full {
+  width: 100%;
 }
 .archive-container .detail-content .featured-info-box {
   padding: 0 27px;
@@ -1679,6 +1685,19 @@
   width: 100%;
   object-fit: cover;
 }
+.archive-container .history-wrapper .tab-container .tabs-box .tabs {
+  justify-content: center;
+}
+.archive-container .history-wrapper .tab-container .tabs-box .tabs .item {
+  flex: none;
+  width: 220px;
+}
+.archive-container .history-wrapper .tab-container .tabs-box .tabs .item::after {
+  background-color: #003675;
+}
+.archive-container .history-wrapper .tab-container .tabs-box .tabs .item.on .tab-button {
+  color: #003675;
+}
 
 .popup-map-result {
   width: 100%;
@@ -1785,9 +1804,13 @@
     gap: 20px;
     flex-direction: column;
   }
-  .archive-container .detail-content .featured-result .featured-result-inner .featured-result-media {
+  .archive-container .detail-content .featured-result .featured-result-media {
     display: flex;
     justify-content: center;
+  }
+  .archive-container .history-wrapper .tab-container .tabs-box .tabs .item {
+    flex: 1;
+    width: auto;
   }
   .popup-map-result .slider-wrapper .swiper-slide {
     width: 25%;
@@ -1843,15 +1866,15 @@
   .archive-container .detail-content .featured-result {
     padding: 30px 20px;
   }
-  .archive-container .detail-content .featured-result .featured-result-inner .featured-result-media .img {
+  .archive-container .detail-content .featured-result .featured-result-media .img {
     width: 100%;
     max-width: 250px;
   }
-  .archive-container .detail-content .featured-result .featured-result-inner .featured-result-content .featured-meta {
+  .archive-container .detail-content .featured-result .featured-result-content .featured-meta {
     flex-direction: column;
     gap: 10px;
   }
-  .archive-container .detail-content .featured-result .featured-result-inner .featured-result-content .featured-meta .row {
+  .archive-container .detail-content .featured-result .featured-result-content .featured-meta .row {
     width: 100%;
   }
   .archive-container .detail-content .featured-info-box {
@@ -2662,6 +2685,7 @@
   font-weight: bold;
   letter-spacing: -1.28px;
   margin-bottom: 20px;
+  color: #222;
 }
 .exhibition-container .exhibition-detail .detail-body .detail-poster {
   display: flex;

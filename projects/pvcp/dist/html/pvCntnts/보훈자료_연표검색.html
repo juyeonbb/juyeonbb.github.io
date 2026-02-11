@@ -204,242 +204,208 @@
                     <li class="breadcrumb-item"><a href="javascript:void(0)">연표검색</a></li>
                 </ol>
             </nav>
-            <div class="map-search-container">
+            <div class="archive-container">
                 <div class="inner">
-                    <div class="search-detail-box">
-                        <div class="search-bar">
-                            <div class="form-keyword">
-                                <input class="form-input" type="search" title="검색어" placeholder="검색어를 입력하세요" />
-                            </div>
-                            <div class="form-submit">
-                                <button type="button" class="btn btn-detail">
-                                    <i class="ico ico-magnify"></i>
-                                    <span>검색</span>
-                                </button>
-                                <button type="button" class="btn btn-border-blue btn-detail _btnSearchDetail" aria-expanded="false" aria-controls="search-detail">
-                                    <i class="ico ico-magnify-plus"></i>
-                                    <span>상세검색</span>
-                                </button>
+                    <div class="history-wrapper">
+                        <div class="tab-container">
+                            <div class="tabs-box">
+                                <ul class="tabs" role="tablist">
+                                    <li class="item on">
+                                        <button class="tab-button" type="button" role="tab" aria-selected="true">독립</button>
+                                    </li>
+                                    <li class="item">
+                                        <button class="tab-button" type="button" role="tab" aria-selected="false">호국</button>
+                                    </li>
+                                    <li class="item">
+                                        <button class="tab-button" type="button" role="tab" aria-selected="false">민주</button>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="search-detail" hidden>
-                            <div class="search-detail-inner">
-                                <div class="search-detail-title">연표검색</div>
-                                <div class="search-detail-form">
-                                    <div class="search-detail-grid">
-                                        <div class="form-group">
-                                            <label class="label">분류</label>
-                                            <select class="form-select" title="분류">
-                                                <option value="0" selected>전체</option>
-                                                <option value="1">독립</option>
-                                                <option value="2">호국</option>
-                                                <option value="3">민주</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label">구분</label>
-                                            <select class="form-select" title="구분">
-                                                <option value="0" selected>전체</option>
-                                                <option value="1">의병</option>
-                                                <option value="2">3.1운동</option>
-                                                <option value="3">국내항일</option>
-                                                <option value="4">학생운동</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="label">연도</label>
-                                            <div class="form-period">
-                                                <select class="form-select" title="연도 시작">
-                                                    <option value="0" selected>선택</option>
-                                                    <option value="1">2025</option>
-                                                    <option value="2">2024</option>
-                                                    <option value="3">2023</option>
-                                                    <option value="4">2022</option>
-                                                </select>
-                                                <span>~</span>
-                                                <select class="form-select" title="연도 끝">
-                                                    <option value="0" selected>선택</option>
-                                                    <option value="1">2025</option>
-                                                    <option value="2">2024</option>
-                                                    <option value="3">2023</option>
-                                                    <option value="4">2022</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group span-3">
-                                            <label class="label">검색어</label>
-                                            <input class="form-input" type="text" title="검색어" />
-                                        </div>
-                                        <div class="search-detail-actions">
-                                            <button type="button" class="btn with-icon">
-                                                <i class="ico ico-magnify"></i>
-                                                <span>검색</span>
-                                            </button>
-                                            <button type="button" class="btn btn-outline-gray with-icon">
-                                                <i class="ico ico-refresh"></i>
-                                                <span>초기화</span>
-                                            </button>
-                                        </div>
-                                    </div>
+                        <div class="search-detail-box search-detail-box-multi">
+                            <div class="search-option">
+                                <div class="label">연도</div>
+                                <ul class="option-list">
+                                    <li class="option-list-item on"><a href="javascript:void(0);">전체</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">1910년 이전</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">1910년대</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">1920년대</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">1930년대</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">1940년대</a></li>
+                                </ul>
+                            </div>
+                            <div class="search-bar">
+                                <div class="form-keyword">
+                                    <input class="form-input" type="search" title="검색어" placeholder="찾으시는 독립의 역사를 입력해 주세요" />
+                                </div>
+                                <div class="form-submit">
+                                    <button type="button" class="btn btn-detail">
+                                        <i class="ico ico-magnify"></i>
+                                        <span>검색</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="result-group">
-                        <div class="result-group-head">
-                            <h3 class="title">연표검색</h3>
-                            <span class="count">(<span class="">1,234</span>)</span>
-                        </div>
-                        <div class="result-group-body">
-                            <div class="table-wrap">
-                                <table class="table table-data">
-                                    <caption>000에 대한 표로 제목1,제목2에 대한 내용으로 구성되어 있으며 제목1은 제목1-1,제목1-2,제목1-3으로 구성되어있다.</caption>
-                                    <colgroup>
-                                        <col style="width: 7.5%;">
-                                        <col style="width: 9.3%;">
-                                        <col style="width: 15.6%;">
-                                        <col style="width: 50%;">
-                                        <col style="width: 17.6%;">
-                                    </colgroup>
-                                    <thead>
-                                    <tr>
-                                        <th scope="col" class="align-center">번호</th>
-                                        <th scope="col" class="align-center">분류</th>
-                                        <th scope="col" class="align-center">날짜</th>
-                                        <th scope="col" class="align-center">사건</th>
-                                        <th scope="col" class="align-center">구분</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td data-label="번호" class="align-center">10</td>
-                                        <td data-label="분류" class="align-center">독립</td>
-                                        <td data-label="날짜" class="align-center">1919년 03년 01일</td>
-                                        <td data-label="사건">
-                                            <a class="text-link ellipse" href="javascript:void(0);">
-                                                <span>3·1운동 시작. 민족대표 33인(4인 불참), 태화관에서 독립선언서 낭독, 시민 2만여명...</span>
-                                            </a>
-                                        </td>
-                                        <td data-label="구분" class="align-center">독립운동</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="번호" class="align-center">9</td>
-                                        <td data-label="분류" class="align-center">독립</td>
-                                        <td data-label="날짜" class="align-center">1919년 03년 01일</td>
-                                        <td data-label="사건">
-                                            <a class="text-link ellipse" href="javascript:void(0);">
-                                                <span>『조선독립신문』(서울, 윤익선) 간행</span>
-                                            </a>
-                                        </td>
-                                        <td data-label="구분" class="align-center">독립운동</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="번호" class="align-center">8</td>
-                                        <td data-label="분류" class="align-center">독립</td>
-                                        <td data-label="날짜" class="align-center">1919년 03년 01일</td>
-                                        <td data-label="사건">
-                                            <a class="text-link ellipse" href="javascript:void(0);">
-                                                <span>『국민회보』(서울, 제1호) 간행</span>
-                                            </a>
-                                        </td>
-                                        <td data-label="구분" class="align-center">독립운동</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="번호" class="align-center">7</td>
-                                        <td data-label="분류" class="align-center">기타</td>
-                                        <td data-label="날짜" class="align-center">1919년 03년 01일</td>
-                                        <td data-label="사건">
-                                            <a class="text-link ellipse" href="javascript:void(0);">
-                                                <span>모스크바에서 코민테른창립대회 열림(~3.6)</span>
-                                            </a>
-                                        </td>
-                                        <td data-label="구분" class="align-center">일본·세계 동향</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="번호" class="align-center">6</td>
-                                        <td data-label="분류" class="align-center">독립</td>
-                                        <td data-label="날짜" class="align-center">1919년 03년 01일</td>
-                                        <td data-label="사건">
-                                            <a class="text-link ellipse" href="javascript:void(0);">
-                                                <span>고종황제의 국장 거행</span>
-                                            </a>
-                                        </td>
-                                        <td data-label="구분" class="align-center">독립운동</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="번호" class="align-center">5</td>
-                                        <td data-label="분류" class="align-center">독립</td>
-                                        <td data-label="날짜" class="align-center">1919년 03년 01일</td>
-                                        <td data-label="사건">
-                                            <a class="text-link ellipse" href="javascript:void(0);">
-                                                <span>상하이 프랑스조계 환추중국학생회관 거류민</span>
-                                            </a>
-                                        </td>
-                                        <td data-label="구분" class="align-center">독립운동</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="번호" class="align-center">4</td>
-                                        <td data-label="분류" class="align-center">독립</td>
-                                        <td data-label="날짜" class="align-center">1919년 03년 01일</td>
-                                        <td data-label="사건">
-                                            <a class="text-link ellipse" href="javascript:void(0);">
-                                                <span>박용만 등, 호놀룰루에서 대조선독립단 창단</span>
-                                            </a>
-                                        </td>
-                                        <td data-label="구분" class="align-center">독립운동</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="번호" class="align-center">3</td>
-                                        <td data-label="분류" class="align-center">독립</td>
-                                        <td data-label="날짜" class="align-center">1919년 03년 01일</td>
-                                        <td data-label="사건">
-                                            <a class="text-link ellipse" href="javascript:void(0);">
-                                                <span>『자유민보』(서울, 제1호) 간행</span>
-                                            </a>
-                                        </td>
-                                        <td data-label="구분" class="align-center">독립운동</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="번호" class="align-center">2</td>
-                                        <td data-label="분류" class="align-center">기타</td>
-                                        <td data-label="날짜" class="align-center">1919년 03년 01일</td>
-                                        <td data-label="사건">
-                                            <a class="text-link ellipse" href="javascript:void(0);">
-                                                <span>『진민보』(서울, 제1호) 간행</span>
-                                            </a>
-                                        </td>
-                                        <td data-label="구분" class="align-center">일본·세계 동향</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="번호" class="align-center">1</td>
-                                        <td data-label="분류" class="align-center">독립</td>
-                                        <td data-label="날짜" class="align-center">1919년 03년 01일</td>
-                                        <td data-label="사건">
-                                            <a class="text-link ellipse" href="javascript:void(0);">
-                                                <span>서울 동아연초공장 노동자 500여 명 파업</span>
-                                            </a>
-                                        </td>
-                                        <td data-label="구분" class="align-center">독립운동</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="no-data" colspan="5">
-                                            <div class="txt">데이터가 없습니다.</div>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                        <div class="tab-container">
+                            <div class="tabs-box">
+                                <ul class="tabs" role="tablist">
+                                    <li class="item">
+                                        <button class="tab-button" type="button" role="tab" aria-selected="false">독립</button>
+                                    </li>
+                                    <li class="item on">
+                                        <button class="tab-button" type="button" role="tab" aria-selected="true">호국</button>
+                                    </li>
+                                    <li class="item">
+                                        <button class="tab-button" type="button" role="tab" aria-selected="false">민주</button>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul id="pagination" class="pagination"></ul>
+                        </div>
+                        <div class="search-detail-box search-detail-box-multi">
+                            <div class="search-option">
+                                <div class="label">사건</div>
+                                <ul class="option-list">
+                                    <li class="option-list-item on"><a href="javascript:void(0);">전체</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">6.25전쟁</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">서해수호</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">공통/기타</a></li>
+                                </ul>
+                            </div>
+                            <div class="search-bar">
+                                <div class="form-keyword">
+                                    <input class="form-input" type="search" title="검색어" placeholder="찾으시는 호국의 역사를 입력해 주세요" />
+                                </div>
+                                <div class="form-submit">
+                                    <button type="button" class="btn btn-detail">
+                                        <i class="ico ico-magnify"></i>
+                                        <span>검색</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-container">
+                            <div class="tabs-box">
+                                <ul class="tabs" role="tablist">
+                                    <li class="item">
+                                        <button class="tab-button" type="button" role="tab" aria-selected="false">독립</button>
+                                    </li>
+                                    <li class="item">
+                                        <button class="tab-button" type="button" role="tab" aria-selected="false">호국</button>
+                                    </li>
+                                    <li class="item on">
+                                        <button class="tab-button" type="button" role="tab" aria-selected="true">민주</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-detail-box search-detail-box-multi">
+                            <div class="search-option">
+                                <div class="label">사건</div>
+                                <ul class="option-list">
+                                    <li class="option-list-item on"><a href="javascript:void(0);">전체</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">2.28민주운동</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">3.8민주의거</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">3.15의거</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">4.19혁명</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">5.18민주화 운동</a></li>
+                                    <li class="option-list-item"><a href="javascript:void(0);">공통/기타</a></li>
+                                </ul>
+                            </div>
+                            <div class="search-bar">
+                                <div class="form-keyword">
+                                    <input class="form-input" type="search" title="검색어" placeholder="찾으시는 민주의 역사를 입력해 주세요" />
+                                </div>
+                                <div class="form-submit">
+                                    <button type="button" class="btn btn-detail">
+                                        <i class="ico ico-magnify"></i>
+                                        <span>검색</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-group">
+                            <div class="result-group-head">
+                                <h3 class="title">연표검색</h3>
+                                <span class="count">(<span class="">1,234</span>)</span>
+                            </div>
+                            <div class="result-group-body">
+                                <ul class="history-thumb-list">
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-9.png" alt="13도창의군 결성">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title"><span class="badge badge-green">의병</span> 13도창의군 결성 13도창의군 결성 13도창의군 결성 13도창의군 결성</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-10.png" alt="2.8 독립선언">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title"><span class="badge badge-pink">3.1운동</span> 2.8 독립선언</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-10.png" alt="3.1운동">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title"><span class="badge badge-pink">3.1운동</span> 3.1운동</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/history-1.png" alt="6.10 만세운동">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title"><span class="badge badge-yellow">국내항일</span> 6.10 만세운동</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-9.png" alt="13도창의군 결성">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title"><span class="badge badge-green">의병</span> 13도창의군 결성</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-10.png" alt="2.8 독립선언">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title"><span class="badge badge-pink">3.1운동</span> 2.8 독립선언</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/photo-10.png" alt="3.1운동">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title"><span class="badge badge-pink">3.1운동</span> 3.1운동</div>
+                                        </div>
+                                    </li>
+                                    <li class="item">
+                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                        <div class="thumb">
+                                            <img src="../../images/@temp/history-1.png" alt="6.10 만세운동">
+                                        </div>
+                                        <div class="info">
+                                            <div class="title"><span class="badge badge-yellow">국내항일</span> 6.10 만세운동</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul id="pagination" class="pagination"></ul>
 <script>
     // https://josecebe.github.io/twbs-pagination/
     const TOTAL_PAGES = 35;
@@ -474,7 +440,6 @@
         }, 150);
     });
 </script>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -486,16 +451,29 @@
 <footer class="footer">
     <div class="footer-info">
         <div class="inner">
-            <div class="f-info">
+            <div class="key-info">
+                <b class="call"><i class="ico ico-phone"></i> 대표전화&nbsp;<a href="tel:1577-0606" target="_blank" rel="noopener noreferrer">1577-0606</a></b><span class="time">(상담시간 : 평일 09:00 ~ 18:00, 점심시간 : 12:00 ~ 13:00, 매주 월요일 휴무)</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-links">
+        <div class="inner">
+            <div class="link-content">
                 <div class="logo">
                     <a href="javascript:void(0)"><img src="../../images/common/footer-logo.png" alt="KNA 에듀센터"></a>
                 </div>
-                <div class="info-cs">
+                <div>
+                    <div class="info-links">
+                        <a class="link link-highlight" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">이용안내</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">이용약관</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">저작권정책</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">자주하는질문</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">찾아오시는 길</a>
+                    </div>
                     <div class="address">(30113) 세종특별자치시 도움4로 9 정부세종청사 9동</div>
-                    <div class="key-info"><b>대표전화&nbsp;</b><b>1577-0606</b><span>&nbsp;(상담시간 : 평일 09:00 ~ 18:00, 점심시간 : 12:00 ~ 13:00, 매주 월요일 휴무)</span></div>
+                    <div class="copyright">© Ministry of Patriots and Veterans Affairs. All Rights Reserved.</div>
                 </div>
-            </div>
-            <div class="f-link">
                 <div class="footer-dropdown _footerDropdown">
                     <button type="button" class="btn-select _footerDropdownButton" title="관련사이트 바로가기">관련사이트 바로가기</button>
                     <ul class="dropdown-list">
@@ -504,32 +482,8 @@
                     </ul>
                     <button type="button" class="btn-select-close _footerDropdownCloseButton" title="관련사이트 닫기">관련사이트 바로가기</button>
                 </div>
-                <div class="links">
-                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="새 창 열기">이용안내</a>
-                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="새 창 열기">찾아오시는 길</a>
-                </div>
-                <div class="sns-links">
-                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="네이버 블로그 공유하기"><img src=../../images/common/ico-naver.svg alt="네이버 블로그 공유하기"/></a>
-                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="유투브 공유하기"><img src=../../images/common/ico-youtube.svg alt="유투브 공유하기"/></a>
-                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="인스타그램 공유하기"><img src=../../images/common/ico-instagram.svg alt="인스타그램 공유하기"/></a>
-                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="x 공유하기"><img src=../../images/common/ico-x.svg alt="x 공유하기"/></a>
-                    <a class="link" href="javascript:void(0);" target="_blank" rel="noopener noreferrer" title="페이스북 공유하기"><img src=../../images/common/ico-facebook.svg alt="페이스북 공유하기"/></a>
-                </div>
             </div>
-        </div>
-    </div>
-    <div class="footer-links">
-        <div class="inner">
-            <div class="link-content">
-                <div class="info-links">
-                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">이용약관</a>
-                    <a class="link link-highlight" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
-                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">저작권정책</a>
-                    <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">자주하는질문</a>
-                </div>
-            </div>
-            <div class="copyright">© Ministry of Patriots and Veterans Affairs. All Rights Reserved.</div>
-            <div class="nuri"><img src="../../images/common/ico-footer-nuri.png" alt="국가보훈부"/><span>이 누리집은 국가보훈부 산하기관 누리집입니다.</span></div>
+<!--            <div class="nuri"><img src="../../images/common/ico-footer-nuri.png" alt="국가보훈부"/><span>이 누리집은 국가보훈부 산하기관 누리집입니다.</span></div>-->
         </div>
     </div>
 </footer>
