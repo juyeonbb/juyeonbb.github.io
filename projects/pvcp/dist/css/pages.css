@@ -1607,6 +1607,10 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 30px 60px;
 }
+.archive-container .detail-content .memorial-detail-content {
+  display: flex;
+  gap: 30px;
+}
 .archive-container .detail-content .memorial-detail-content .photo-list {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 30px 27px;
@@ -1717,7 +1721,7 @@
   background-color: #666;
   position: absolute;
   left: 10px;
-  top: 8px;
+  top: 10px;
 }
 .archive-container .detail-content .info-list .row dd {
   width: calc(100% - 100px);
@@ -3667,6 +3671,167 @@
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+.user-guide-container .intro-banner {
+  height: 280px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/userGuide/bg-heading.png);
+  margin-bottom: 60px;
+}
+.user-guide-container .intro-banner.user-guide {
+  background-image: url(../images/userGuide/bg-ug-heading.png);
+  color: #fff;
+}
+.user-guide-container .intro-banner .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.user-guide-container .intro-banner .sub {
+  display: inline-flex;
+  width: fit-content;
+  font-size: 17px;
+  letter-spacing: -0.68px;
+  font-weight: 500;
+  padding: 2px 12px;
+  color: #fff;
+  border-radius: 6px;
+  background-color: rgba(0, 54, 117, 0.7);
+  margin-bottom: 5px;
+  line-height: 26px;
+}
+.user-guide-container .intro-banner .title {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: -1.28px;
+  margin-bottom: 20px;
+}
+.user-guide-container .intro-banner .desc {
+  font-size: 17px;
+  line-height: 1.5;
+  letter-spacing: -0.68px;
+}
+.user-guide-container .intro-view {
+  display: flex;
+  gap: 60px;
+  padding: 30px;
+  border-radius: 20px;
+  border: solid 1px #ddebf5;
+  background-color: #f3f9fe;
+}
+.user-guide-container .intro-view .chapter-nav {
+  width: 240px;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px #a2afc7;
+  background-color: #fff;
+  flex-shrink: 0;
+  min-width: 0;
+}
+.user-guide-container .intro-view .chapter-nav .chapter-list {
+  display: flex;
+  flex-direction: column;
+}
+.user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item {
+  position: relative;
+  border-top: 1px solid #EEE;
+}
+.user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item:first-child {
+  border-top: 0;
+}
+.user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item.is-active {
+  border-top: 0;
+}
+.user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item.is-active .chapter-link {
+  background-color: #2462d6;
+}
+.user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item.is-active .chapter-label {
+  color: #fff;
+  border-color: #fff;
+}
+.user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item.is-active .chapter-title {
+  color: #fff;
+}
+.user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  z-index: 1;
+}
+.user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item .chapter-link {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+  border-radius: 6px;
+  min-height: 120px;
+}
+.user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item .chapter-label {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0 10px;
+  height: 24px;
+  line-height: 22px;
+  border-radius: 61px;
+  border: 1px solid #666;
+  font-size: 15px;
+  letter-spacing: -0.6px;
+  color: #666;
+}
+.user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item .chapter-title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -0.96px;
+  color: #444;
+}
+.user-guide-container .intro-view .chapter-panel {
+  display: none;
+}
+.user-guide-container .intro-view .chapter-panel.is-active {
+  display: block;
+}
+.user-guide-container .intro-view .media-content {
+  flex: 1;
+}
+.user-guide-container .intro-view .media-header {
+  padding-top: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.user-guide-container .intro-view .media-header .media-title {
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: -1.28px;
+}
+.user-guide-container .intro-view .media-header .media-desc {
+  font-size: 19px;
+  letter-spacing: -0.76px;
+}
+.user-guide-container .intro-view .media-video .video {
+  width: 100%;
+  aspect-ratio: 890/500;
+}
+.user-guide-container .intro-view .media-video .video iframe {
+  width: 100%;
+  height: 100%;
+}
+.user-guide-container .user-guide {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.user-guide-container .user-guide .content-title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -0.96px;
+  margin-bottom: 20px;
+}
 
 @media (max-width: 1280px) {
   .user-guide-container .view-detail .view-head .view-summary .summary-item dt {
@@ -3677,6 +3842,57 @@
   }
   .user-guide-container .view-detail .view-head .view-summary .summary-item dd::before {
     margin: 0 5px;
+  }
+  .user-guide-container .intro-view {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+  .user-guide-container .intro-view .chapter-nav {
+    width: 100%;
+  }
+  .user-guide-container .intro-view .chapter-nav .chapter-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item {
+    flex: 1;
+    border-top: 0;
+  }
+  .user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item .chapter-link {
+    padding: 15px;
+  }
+  .user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item .chapter-label {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item .chapter-title {
+    font-size: 20px;
+  }
+  .user-guide-container .intro-view .media-header {
+    padding-top: 0;
+  }
+  .user-guide-container .intro-view .media-header .media-title {
+    font-size: 26px;
+    margin-bottom: 5px;
+  }
+  .user-guide-container .intro-view .media-header .media-desc {
+    font-size: 17px;
+  }
+}
+@media (max-width: 768px) {
+  .user-guide-container .intro-banner {
+    padding: 20px 0;
+    height: auto;
+  }
+  .user-guide-container .intro-banner .title {
+    font-size: 26px;
+  }
+  .user-guide-container .intro-banner .sub, .user-guide-container .intro-banner .desc {
+    font-size: 15px;
+  }
+  .user-guide-container .intro-banner .sub br, .user-guide-container .intro-banner .desc br {
+    display: none;
   }
 }
 /*# sourceMappingURL=pages.css.map */
