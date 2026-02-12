@@ -1599,6 +1599,24 @@ button.swiper-pagination-bullet {
   mask: url(../images/common/ico-arrow-search.svg) no-repeat center/contain;
 }
 
+.ico-xls {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/common/ico-xls.svg);
+}
+
+.ico-ppt {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/common/ico-ppt.svg);
+}
+
+.ico-zip {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/common/ico-zip.svg);
+}
+
 /*
   Layout
 */
