@@ -213,6 +213,37 @@ data.archive = {
             url: 'pvData/보훈자료_사료',
             page: '보훈자료 > 사료 or 도서'
         },
+    ]
+}
+
+data.archiveContents = {
+    title: '보훈콘텐츠',
+    list: [
+        {
+            stateClass: 'complete',
+            url: 'pvCntnts/보훈자료_보훈컨텐츠',
+            page: '보훈자료 > 보훈콘텐츠 > 컬렉션'
+        },
+        {
+            stateClass: 'complete',
+            url: 'pvCntnts/보훈자료_보훈컨텐츠2',
+            page: '보훈자료 > 보훈콘텐츠 > 컬렉션'
+        },
+        {
+            stateClass: 'complete',
+            url: 'pvCntnts/보훈자료_보훈컨텐츠3',
+            page: '보훈자료 > 보훈콘텐츠 > 컬렉션'
+        },
+        {
+            stateClass: 'complete',
+            url: 'pvCntnts/보훈자료_호국의혼',
+            page: '보훈자료 > 보훈컨텐츠 > 호국의 혼'
+        },
+        {
+            stateClass: 'complete',
+            url: 'pvCntnts/보훈자료_독립의길',
+            page: '보훈자료 > 보훈컨텐츠 > 독립의 길'
+        },
         {
             stateClass: 'complete',
             url: 'pvCntnts/보훈자료_현충시설',

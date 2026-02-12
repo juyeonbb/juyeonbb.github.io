@@ -364,7 +364,6 @@
         </div>
     </div>
 </footer>
-<div class="dim _dim"></div>
 <div class="popup-wrap _popup" data-popup="popup-search-result" role="dialog" aria-labelledby="popupHistoryResult" aria-modal="true">
     <div class="popup popup-xl">
         <div class="popup-content">
@@ -498,38 +497,9 @@
     </div>
 </div>
 <script>
-    $(document).ready(function() {
-        let thumbSlider = null;
-
-        $(document).on('click.popup', '._popupTrigger', function () {
-            const target = $(this).data('trigger');
-            const $popup = $(`._popup[data-popup="${target}"]`);
-            const $sliderEl = $popup.find('._thumbSlider');
-
-            if ($sliderEl.length > 0) {
-                if (!thumbSlider) {
-                    thumbSlider = new Swiper('._thumbSlider', {
-                        slidesPerView: 2,
-                        spaceBetween: 10,
-                        observer: true,
-                        observeParents: true,
-                        navigation: {
-                            prevEl: $popup.find('.btn-circle-prev')[0],
-                            nextEl: $popup.find('.btn-circle-next')[0]
-                        },
-                        breakpoints: {
-                            1280: { slidesPerView: 4, spaceBetween: 30 }
-                        }
-                    });
-                }
-                [0, 100, 300].forEach(t => {
-                    setTimeout(() => {
-                        thumbSlider.update();
-                    }, t);
-                });
-            }
-        });
-    });
+    $(document).ready(function () {
+        front.fn.openPopup('popup-search-result','.popup-search-result')
+    })
 </script>
 </body>
 </html>

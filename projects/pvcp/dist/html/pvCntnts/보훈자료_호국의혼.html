@@ -77,10 +77,10 @@
                             <div class="sub-menu" hidden>
                                 <ul class="depth2" role="list">
                                     <li class="depth2-item is-active">
-                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true" aria-current="page">보훈자료</a>
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true">보훈자료</a>
                                         <div class="depth3-menu">
                                             <ul class="depth3">
-                                                <li class="depth3-item"><a href="javascript:void(0);">인물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);" aria-current="page">인물</a></li>
                                                 <li class="depth3-item"><a href="javascript:void(0);">역사</a></li>
                                                 <li class="depth3-item"><a href="javascript:void(0);">사진/필름</a></li>
                                                 <li class="depth3-item"><a href="javascript:void(0);">유물</a></li>
@@ -307,374 +307,50 @@
     <div class="container">
         <!-- s contents -->
         <div class="sub-contents">
-            <div class="archive-search-visual">
-                <div class="archive-search-inner">
-                    <div class="archive-search-title">국가 보훈 통합 자료검색</div>
-                    <div class="archive-search-form">
-                        <form class="search-form" role="search">
-                            <select class="form-select" title="검색 분류">
-                                <option value="all" selected>전체</option>
-                                <option value="person">인물</option>
-                                <option value="history">역사</option>
-                                <option value="video">동영상</option>
-                            </select>
-                            <input class="form-input" type="search" placeholder="검색어를 입력하세요" aria-label="보훈자료 통합 검색"/>
-                            <button type="submit" class="search-submit"><i class="ico ico-magnify-arc"></i><span class="sr-only">검색</span></button>
-                        </form>
-                    </div>
-                    <div class="archive-search-feature">
-                        <button type="button" class="btn-nav btn-nav-prev"><i class="ico ico-arc-nav-prev"></i><span class="sr-only">이전 슬라이드</span></button>
-                        <div class="slider-wrapper">
-                            <div class="swiper event-slider _archiveSlider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                        <div class="img">
-                                            <img src="../../images/@temp/sample-archive.png" alt="한국광복군 그리고 국군"/>
-                                        </div>
-                                        <div class="info">
-                                            <div class="info-title">한국독립운동인명사전</div>
-                                            <div class="info-desc">독립운동에 앞장선 독립운동과 관련 있는 인물들에 대한 정보를
-                                                연도별, 주제별로 열람 하실 수 있습니다.</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                        <div class="img">
-                                            <img src="../../images/@temp/sample-archive.png" alt="한국민족문화대백과사전"/>
-                                        </div>
-                                        <div class="info">
-                                            <div class="info-title">한국민족문화대백과사전</div>
-                                            <div class="info-desc">독립운동에 앞장선 독립운동과 관련 있는 인물들에 대한 정보를
-                                                연도별, 주제별로 열람 하실 수 있습니다.</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                        <div class="img">
-                                            <img src="../../images/@temp/sample-archive.png" alt="한국독립운동정보시스템"/>
-                                        </div>
-                                        <div class="info">
-                                            <div class="info-title">한국독립운동정보시스템</div>
-                                            <div class="info-desc">독립운동에 앞장선 독립운동과 관련 있는 인물들에 대한 정보를
-                                                연도별, 주제별로 열람 하실 수 있습니다.</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                        <div class="img">
-                                            <img src="../../images/@temp/sample-archive.png" alt="국립중앙박물관 표준유물관리시스템"/>
-                                        </div>
-                                        <div class="info">
-                                            <div class="info-title">국립중앙박물관 표준유물관리시스템</div>
-                                            <div class="info-desc">독립운동에 앞장선 독립운동과 관련 있는 인물들에 대한 정보를
-                                                연도별, 주제별로 열람 하실 수 있습니다.</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                        <div class="img">
-                                            <img src="../../images/@temp/sample-archive.png" alt="공훈전자사료관"/>
-                                        </div>
-                                        <div class="info">
-                                            <div class="info-title">공훈전자사료관</div>
-                                            <div class="info-desc">독립운동에 앞장선 독립운동과 관련 있는 인물들에 대한 정보를
-                                                연도별, 주제별로 열람 하실 수 있습니다.</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                        <div class="img">
-                                            <img src="../../images/@temp/sample-archive.png" alt="국립대한민국임시정부기념관"/>
-                                        </div>
-                                        <div class="info">
-                                            <div class="info-title">국립대한민국임시정부기념관</div>
-                                            <div class="info-desc">독립운동에 앞장선 독립운동과 관련 있는 인물들에 대한 정보를
-                                                연도별, 주제별로 열람 하실 수 있습니다.</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                        <div class="img">
-                                            <img src="../../images/@temp/sample-archive.png" alt="독립기념관"/>
-                                        </div>
-                                        <div class="info">
-                                            <div class="info-title">독립기념관</div>
-                                            <div class="info-desc">독립운동에 앞장선 독립운동과 관련 있는 인물들에 대한 정보를
-                                                연도별, 주제별로 열람 하실 수 있습니다.</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button" class="btn-nav btn-nav-next"><i class="ico ico-arc-nav-next"></i><span class="sr-only">다음 슬라이드</span></button>
-                    </div>
-                </div>
-            </div>
-            <script>
-                let archiveSlider = new Swiper('._archiveSlider', {
-                    centeredSlides: true,
-                    autoHeight: true,
-                    effect: 'fade',
-                    loop: true,
-                    autoplay: {
-                        delay: 4000,
-                        disableOnInteraction: false
-                    },
-                    navigation: {
-                        prevEl: '.archive-search-visual .btn-nav-prev',
-                        nextEl: '.archive-search-visual .btn-nav-next'
-                    },
-                });
-            </script>
             <nav class="breadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb-list">
                     <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="ico ico-home"></i>홈</a></li>
                     <li class="breadcrumb-item"><a href="javascript:void(0)">보훈자료</a></li>
-<!--                    <li class="breadcrumb-item"><a href="javascript:void(0)">보훈자료통합</a></li>-->
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">보훈콘텐츠</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">호국의혼</a></li>
                 </ol>
             </nav>
             <div class="archive-container">
                 <div class="inner">
-                    <!-- 인물 -->
-                    <div class="result-group">
-                        <div class="result-group-head">
-                            <h3 class="title">인물</h3>
-                            <span class="count">(<span class="font-weight-medium">130</span>)</span>
-                            <a href="javascript:void(0)" class="btn-more"><span>더보기</span><i class="ico ico-plus"></i></a>
-                        </div>
-                        <div class="result-group-body">
-                            <ul class="person-list">
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-2.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-3.png" alt="이갑성 사진">
-                                            <div class="overlay">
-                                                <div class="name">이갑성</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">이갑성</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/common/img-default-v.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-4.png" alt="전도선 사진">
-                                            <div class="overlay">
-                                                <div class="name">전도선</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">전도선</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-2.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-2.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/common/img-default-v.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-2.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/common/img-default-v.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-3.png" alt="이갑성 사진">
-                                            <div class="overlay">
-                                                <div class="name">이갑성</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">이갑성</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/common/img-default-v.png" alt="유관순 사진">
-                                            <div class="overlay">
-                                                <div class="name">유관순</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">유관순</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="card">
-                                        <div class="thumb">
-                                            <img src="../../images/@temp/feature-3.png" alt="이갑성 사진">
-                                            <div class="overlay">
-                                                <div class="name">이갑성</div>
-                                                <div class="desc">충청남도 천안 출생<br>운동계열 3.1운동</div>
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <span class="name">이갑성</span>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                    <div class="search-detail-box">
+                        <div class="search-bar">
+                            <div class="form-keyword">
+                                <select class="form-select" title="검색 분류">
+                                    <option value="" selected>결과내</option>
+                                    <option value="">장소</option>
+                                </select>
+                                <span class="divider"></span>
+                                <input class="form-input" type="search" title="검색어" placeholder="검색어를 입력하세요" />
+                            </div>
+                            <div class="form-submit">
+                                <button type="button" class="btn btn-detail">
+                                    <i class="ico ico-magnify"></i>
+                                    <span>검색</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <!-- 역사 -->
                     <div class="result-group">
                         <div class="result-group-head">
-                            <h3 class="title">역사</h3>
-                            <span class="count">(<span class="">7</span>)</span>
-                            <a href="javascript:void(0)" class="btn-more"><span>더보기</span><i class="ico ico-plus"></i></a>
-                        </div>
-                        <div class="result-group-body">
-                            <ul class="history-list">
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                    <div class="thumb">
-                                        <img src="../../images/@temp/history-1.png" alt="3.1운동">
-                                    </div>
-                                    <div class="info">
-                                        <div class="title">3.1운동</div>
-                                        <dl class="meta">
-                                            <div class="col">
-                                                <dt class="meta-term">사건연도</dt>
-                                                <dd class="meta-desc">1919년 6월 10일</dd>
-                                            </div>
-                                        </dl>
-                                        <p class="desc">일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한 독립정신과 희생정신을 계승 일제의 강제병합과 일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한
-                                            독립정신과 희생정신을 계승 일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한 독립정신과 …</p>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
-                                    <div class="thumb">
-                                        <img src="../../images/@temp/history-2.png" alt="6.10만세운동 관련 사진">
-                                    </div>
-                                    <div class="info">
-                                        <div class="title">6.10만세운동</div>
-                                        <dl class="meta">
-                                            <div class="col">
-                                                <dt class="meta-term">사건연도</dt>
-                                                <dd class="meta-desc">1919년 6월 10일</dd>
-                                            </div>
-                                        </dl>
-                                        <p class="desc">일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한 독립정신과 희생정신을 계승 일제의 강제병합과 일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한
-                                            독립정신과 희생정신을 계승 일제의 강제병합과 식민지배에 항거한 순국선열의 숭고한 독립정신과 …</p>
-                                    </div>
-                                </li>
+                            <h3 class="title">호국보훈의 달 메시지</h3>
+                            <span class="count">(1,234)</span>
+                            <ul class="section-filter" role="radiogroup" aria-label="호국보훈의 달 메시지 콘텐츠 필터">
+                                <li class="item on"><button type="button" role="radio" aria-checked="true">전체</button></li>
+                                <li class="item"><button type="button" role="radio" aria-checked="false">최신순</button></li>
+                                <li class="item"><button type="button" role="radio" aria-checked="false">인기순</button></li>
                             </ul>
-                        </div>
-                    </div>
-                    <!-- 동영상 -->
-                    <div class="result-group">
-                        <div class="result-group-head">
-                            <h3 class="title">동영상</h3>
-                            <span class="count">(<span class="">1,358</span>)</span>
-                            <a href="javascript:void(0)" class="btn-more"><span>더보기</span><i class="ico ico-plus"></i></a>
                         </div>
                         <div class="result-group-body">
                             <ul class="video-list">
                                 <li class="item">
                                     <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
                                     <div class="thumb">
-                                        <img src="../../images/@temp/video-1.png" alt="안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...">
+                                        <img src="../../images/@temp/video-4.png" alt="">
                                     </div>
                                     <div class="info">
                                         <div class="title">안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...</div>
@@ -688,7 +364,7 @@
                                 <li class="item">
                                     <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
                                     <div class="thumb">
-                                        <img src="../../images/@temp/video-2.png" alt="영상한국사 | 138 일본에서 상영된 안중근 ...">
+                                        <img src="../../images/@temp/video-5.png" alt="영상한국사 | 138 일본에서 상영된 안중근 ...">
                                     </div>
                                     <div class="info">
                                         <div class="title">영상한국사 | 138 일본에서 상영된 안중근 ...</div>
@@ -702,7 +378,7 @@
                                 <li class="item">
                                     <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
                                     <div class="thumb">
-                                        <img src="../../images/@temp/video-3.png" alt="116년 만에 되살아난 안중근 의사 유리건판...">
+                                        <img src="../../images/@temp/video-6.png" alt="116년 만에 되살아난 안중근 의사 유리건판...">
                                     </div>
                                     <div class="info">
                                         <div class="title">116년 만에 되살아난 안중근 의사 유리건판...</div>
@@ -716,7 +392,7 @@
                                 <li class="item">
                                     <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
                                     <div class="thumb">
-                                        <img src="../../images/@temp/video-1.png" alt="안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...">
+                                        <img src="../../images/@temp/video-7.png" alt="안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...">
                                     </div>
                                     <div class="info">
                                         <div class="title">안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...</div>
@@ -730,7 +406,21 @@
                                 <li class="item">
                                     <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
                                     <div class="thumb">
-                                        <img src="../../images/@temp/video-2.png" alt="영상한국사 | 138 일본에서 상영된 안중근 ...">
+                                        <img src="../../images/@temp/video-4.png" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...</div>
+                                        <div class="sub-info">
+                                            <span class="sub-info-item">2025-11-12</span>
+                                            <span class="sub-info-item">23:34</span>
+                                            <span class="sub-info-item">10,359 조회</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                    <div class="thumb">
+                                        <img src="../../images/@temp/video-5.png" alt="영상한국사 | 138 일본에서 상영된 안중근 ...">
                                     </div>
                                     <div class="info">
                                         <div class="title">영상한국사 | 138 일본에서 상영된 안중근 ...</div>
@@ -744,7 +434,7 @@
                                 <li class="item">
                                     <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
                                     <div class="thumb">
-                                        <img src="../../images/@temp/video-3.png" alt="116년 만에 되살아난 안중근 의사 유리건판...">
+                                        <img src="../../images/@temp/video-6.png" alt="116년 만에 되살아난 안중근 의사 유리건판...">
                                     </div>
                                     <div class="info">
                                         <div class="title">116년 만에 되살아난 안중근 의사 유리건판...</div>
@@ -758,7 +448,35 @@
                                 <li class="item">
                                     <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
                                     <div class="thumb">
-                                        <img src="../../images/@temp/video-2.png" alt="영상한국사 | 138 일본에서 상영된 안중근 ...">
+                                        <img src="../../images/@temp/video-7.png" alt="안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...</div>
+                                        <div class="sub-info">
+                                            <span class="sub-info-item">2025-11-12</span>
+                                            <span class="sub-info-item">23:34</span>
+                                            <span class="sub-info-item">10,359 조회</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                    <div class="thumb">
+                                        <img src="../../images/@temp/video-4.png" alt="">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...</div>
+                                        <div class="sub-info">
+                                            <span class="sub-info-item">2025-11-12</span>
+                                            <span class="sub-info-item">23:34</span>
+                                            <span class="sub-info-item">10,359 조회</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                    <div class="thumb">
+                                        <img src="../../images/@temp/video-5.png" alt="영상한국사 | 138 일본에서 상영된 안중근 ...">
                                     </div>
                                     <div class="info">
                                         <div class="title">영상한국사 | 138 일본에서 상영된 안중근 ...</div>
@@ -772,10 +490,24 @@
                                 <li class="item">
                                     <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
                                     <div class="thumb">
-                                        <img src="../../images/@temp/video-3.png" alt="116년 만에 되살아난 안중근 의사 유리건판...">
+                                        <img src="../../images/@temp/video-6.png" alt="116년 만에 되살아난 안중근 의사 유리건판...">
                                     </div>
                                     <div class="info">
                                         <div class="title">116년 만에 되살아난 안중근 의사 유리건판...</div>
+                                        <div class="sub-info">
+                                            <span class="sub-info-item">2025-11-12</span>
+                                            <span class="sub-info-item">23:34</span>
+                                            <span class="sub-info-item">10,359 조회</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:void(0)" class="link"><span class="sr-only">링크 연결</span></a>
+                                    <div class="thumb">
+                                        <img src="../../images/@temp/video-7.png" alt="안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...">
+                                    </div>
+                                    <div class="info">
+                                        <div class="title">안중근 🇰🇷 [국가보훈부 X 파라독스 스튜디...</div>
                                         <div class="sub-info">
                                             <span class="sub-info-item">2025-11-12</span>
                                             <span class="sub-info-item">23:34</span>
@@ -784,6 +516,9 @@
                                     </div>
                                 </li>
                             </ul>
+                            <div class="btn-block-group">
+                                <button type="button" class="btn-more-plus"><i class="ico ico-more-plus"></i><span class="sr-only">더보기</span></button>
+                            </div>
                         </div>
                     </div>
                 </div>
