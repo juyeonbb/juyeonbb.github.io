@@ -6418,6 +6418,9 @@ div.pswp__img--placeholder,
   width: 100%;
   height: auto;
 }
+.card-list-wrap .card-list .card-item .btn {
+  z-index: 2;
+}
 .card-list-wrap .card-list .card-item .card-category {
   display: flex;
   align-items: center;
