@@ -293,7 +293,7 @@ template {
   width: 24px;
   height: 24px;
   background-image: url(../images/common/ico-arrodion.svg);
-  transition: 0.4s ease-in-out;
+  transition: 0.2s ease-in-out;
   transform: translateY(-50%) rotate(0deg);
 }
 .accordion .accordion-item .btn-accordion.active::after {
@@ -325,7 +325,7 @@ template {
 .accordion .accordion-item .accordion-collapse {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+  transition: all 0.2s cubic-bezier(0, 1, 0, 1);
   visibility: hidden;
 }
 .accordion .accordion-item .accordion-body {
@@ -341,7 +341,7 @@ template {
 .accordion .accordion-item.active .accordion-collapse {
   height: auto;
   max-height: 100vh;
-  transition: all 1.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
   visibility: visible;
 }
 .accordion .accordion-item.active .btn-accordion .accordion-title {
