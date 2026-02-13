@@ -1612,6 +1612,7 @@
 .archive-container .detail-content .memorial-detail-content {
   display: flex;
   gap: 30px;
+  padding: 0 30px;
 }
 .archive-container .detail-content .memorial-detail-content .photo-list {
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1899,35 +1900,60 @@
   max-width: 100%;
   object-fit: contain;
 }
-.archive-container .history-view-wrapper {
-  padding: 40px;
-  border: 1px solid #cadaee;
-  border-radius: 20px;
-  background-color: #f6f8f7;
+.archive-container .history-category {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 6.25px 20px;
+  border-radius: 4px;
+  border: solid 1px transparent;
+  font-weight: bold;
+  font-size: 17px;
   margin-bottom: 40px;
   margin-top: 20px;
 }
+.archive-container .history-category.green {
+  border-color: #dbefdf;
+  background-color: #eaf6ec;
+  color: #287439;
+}
+.archive-container .history-category.red {
+  border-color: #fce2dd;
+  background-color: #fdefec;
+  color: #be2f13;
+}
+.archive-container .history-view-wrapper {
+  padding: 0 50px;
+  margin-bottom: 60px;
+}
 .archive-container .history-view-wrapper .img-viewer-wrapper {
   display: flex;
-  gap: 30px;
-  align-items: center;
+  gap: 50px;
 }
 .archive-container .history-view-wrapper .img-viewer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 260px;
-  height: 180px;
-  border: 1px solid #ccc;
-  background-color: #D9D9D9;
+  width: 400px;
+  height: 300px;
+  background-color: #EEE;
+  flex-shrink: 0;
+  min-width: 0;
 }
 .archive-container .history-view-wrapper .img-viewer img {
   display: block;
   max-width: 100%;
   max-height: 100%;
   width: auto;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+}
+.archive-container .history-view-wrapper .info-list-wrap {
+  flex: 1;
+  padding-top: 40px;
+}
+.archive-container .history-view-wrapper + .memorial-detail-content {
+  padding: 0 50px;
 }
 .archive-container .history-wrapper .tab-container .tabs-box .tabs {
   justify-content: center;
@@ -2063,6 +2089,7 @@
   }
   .archive-container .detail-content .memorial-detail-content {
     gap: 20px;
+    padding: 0 15px;
   }
   .archive-container .detail-content .memorial-detail-content .photo-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2079,6 +2106,12 @@
   .archive-container .history-wrapper .tab-container .tabs-box .tabs .item {
     flex: 1;
     width: auto;
+  }
+  .archive-container .history-view-wrapper {
+    padding: 0;
+  }
+  .archive-container .history-view-wrapper .img-viewer-wrapper {
+    gap: 20px;
   }
   .popup-map-result .slider-wrapper .swiper-slide {
     width: 25%;
@@ -2165,12 +2198,19 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px 15px;
   }
-  .archive-container .history-view-wrapper {
-    padding: 20px;
-  }
   .archive-container .history-view-wrapper .img-viewer-wrapper {
     flex-direction: column;
     gap: 20px;
+  }
+  .archive-container .history-view-wrapper .img-viewer-wrapper .img-viewer {
+    margin: 0 auto;
+    max-width: 400px;
+    height: 300px;
+    aspect-ratio: 400/300;
+    width: 100%;
+  }
+  .archive-container .history-view-wrapper + .memorial-detail-content {
+    padding: 0 15px;
   }
   .popup-map-result .slider-wrapper {
     padding: 10px;
