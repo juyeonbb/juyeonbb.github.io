@@ -1,0 +1,59 @@
+/*
+  모의고사 & 오답노트
+*/
+.btn-test-group {
+  display: flex;
+  gap: 10px;
+  padding-top: 25px;
+
+  .learning-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 134px;
+    height: 60px;
+    color: #003170;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 32px;
+    border: 2px solid #003170;
+    background-color: #fff;
+
+    &.learning-btn-mo {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .btn-test-group {
+    position: fixed;
+    width: 100vw;
+    top: calc(100vh - 123px);
+    left: 0;
+    background-color: #2851a1;
+    z-index: 504;
+    padding-top: 0;
+    gap: 0;
+
+    .learning-btn {
+      border-radius: 0;
+      border: 0;
+      color: #fff;
+      background-color: transparent;
+      
+      &:active, &.is-active {
+        background-color: #003170;
+      }
+
+      + .learning-btn {
+        border-left: 1px solid #003170;
+      }
+
+      &.learning-btn-mo {
+        display: flex;
+      }
+    }
+  }
+}

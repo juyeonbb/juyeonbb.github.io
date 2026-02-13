@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="81" height="67.5" viewBox="0 0 81 67.5">
+  <g id="구성_요소_137_1" data-name="구성 요소 137 – 1" transform="translate(1 1)">
+    <g id="그룹_4353" data-name="그룹 4353" transform="translate(12.587 27.195)">
+      <circle id="타원_46" data-name="타원 46" cx="1.508" cy="1.508" r="1.508" fill="#aaa"/>
+      <circle id="타원_47" data-name="타원 47" cx="1.508" cy="1.508" r="1.508" transform="translate(14.608)" fill="#aaa"/>
+      <circle id="타원_48" data-name="타원 48" cx="1.508" cy="1.508" r="1.508" transform="translate(29.217)" fill="#aaa"/>
+    </g>
+    <path id="패스_7016" data-name="패스 7016" d="M316.351,730.778a28.254,28.254,0,0,0-28.423,28.084,27.744,27.744,0,0,0,6.192,17.471l-2.143,15.32,13.4-6.884a28.6,28.6,0,0,0,10.977,2.176,28.086,28.086,0,1,0,0-56.168Z" transform="translate(-287.928 -730.778)" fill="none" stroke="#aaa" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="패스_7017" data-name="패스 7017" d="M320.621,741.517A18.286,18.286,0,0,1,334.935,771.2l1.381,9.983-8.625-4.485a18.3,18.3,0,0,1-21.335-5.419" transform="translate(-259.922 -715.683)" fill="none" stroke="#aaa" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

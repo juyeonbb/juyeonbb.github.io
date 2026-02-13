@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+  <g id="그룹_311" data-name="그룹 311" transform="translate(-1402 -285)">
+    <g id="그룹_308" data-name="그룹 308" transform="translate(-20 13)">
+      <text id="Q" transform="translate(1427 285)" fill="#f68b1f" font-size="12" font-family="Roboto-Medium, Roboto" font-weight="500"><tspan x="0" y="0">Q</tspan></text>
+      <g id="타원_20" data-name="타원 20" transform="translate(1422 272)" fill="none" stroke="#f68b1f" stroke-width="1">
+        <circle cx="9" cy="9" r="9" stroke="none"/>
+        <circle cx="9" cy="9" r="8.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="_992596" data-name="992596" transform="translate(-2.119)">
+    <g id="그룹_2" data-name="그룹 2" transform="translate(7.094 5.054)">
+      <g id="그룹_1" data-name="그룹 1">
+        <path id="패스_1" data-name="패스 1" d="M123.157,78.64a7.227,7.227,0,0,0,4.3-6.791,7.525,7.525,0,0,0-15.049,0,7.227,7.227,0,0,0,4.3,6.791l.058.033.4.684a1.6,1.6,0,0,0-.542,2.127,1.554,1.554,0,0,0,.191.273,1.619,1.619,0,0,0,.1,2.215,1.462,1.462,0,0,0,1.016.41h4.013a1.534,1.534,0,0,0,1.5-1.561,1.609,1.609,0,0,0-.391-1.063,1.608,1.608,0,0,0-.091-2.2,1.491,1.491,0,0,0-.26-.2l.4-.684Zm-1.219,4.691h-4.013a.525.525,0,0,1,0-1.05h4.013a.525.525,0,0,1,0,1.05Zm0-2.1h-4.013a.525.525,0,0,1,0-1.05h4.013a.525.525,0,0,1,0,1.05ZM122.7,77.7l-.2.114a.515.515,0,0,0-.189.188l-.656,1.126h-.22V75.15L123.8,72.68l-.709-.742-2.508,2.624a.538.538,0,0,0-.147.371v4.2h-1v-4.2a.538.538,0,0,0-.147-.371l-2.508-2.624-.709.742,2.361,2.471v3.982h-.22l-.656-1.126a.515.515,0,0,0-.189-.188l-.2-.114a.526.526,0,0,0-.049-.024,6.191,6.191,0,0,1-3.7-5.83,6.523,6.523,0,0,1,13.042,0,6.191,6.191,0,0,1-3.7,5.83A.536.536,0,0,0,122.7,77.7Z" transform="translate(-112.407 -64.435)" fill="#777"/>
+      </g>
+    </g>
+    <g id="그룹_4" data-name="그룹 4" transform="translate(3.9 3.549)">
+      <g id="그룹_3" data-name="그룹 3" transform="translate(0 0)">
+        <rect id="사각형_2" data-name="사각형 2" width="1.003" height="3.365" transform="translate(0 0.897) rotate(-63.435)" fill="#777"/>
+      </g>
+    </g>
+    <g id="그룹_6" data-name="그룹 6" transform="translate(21.759 3.808)">
+      <g id="그룹_5" data-name="그룹 5" transform="translate(0 0)">
+        <rect id="사각형_3" data-name="사각형 3" width="3.365" height="1.003" transform="translate(0 1.065) rotate(-18.446)" fill="#777"/>
+      </g>
+    </g>
+    <g id="그룹_8" data-name="그룹 8" transform="translate(2.119 11.299)">
+      <g id="그룹_7" data-name="그룹 7">
+        <rect id="사각형_4" data-name="사각형 4" width="3.01" height="1.003" fill="#777"/>
+      </g>
+    </g>
+    <g id="그룹_10" data-name="그룹 10" transform="translate(24.109 11.299)">
+      <g id="그룹_9" data-name="그룹 9">
+        <rect id="사각형_5" data-name="사각형 5" width="3.01" height="1.003" fill="#777"/>
+      </g>
+    </g>
+    <g id="그룹_12" data-name="그룹 12" transform="translate(3.901 17.463)">
+      <g id="그룹_11" data-name="그룹 11" transform="translate(0 0)">
+        <rect id="사각형_6" data-name="사각형 6" width="3.365" height="1.003" transform="translate(0 1.505) rotate(-26.565)" fill="#777"/>
+      </g>
+    </g>
+    <g id="그룹_14" data-name="그룹 14" transform="translate(21.878 17.465)">
+      <g id="그룹_13" data-name="그룹 13" transform="translate(0 0)">
+        <rect id="사각형_7" data-name="사각형 7" width="1.003" height="3.365" transform="translate(0 0.897) rotate(-63.435)" fill="#777"/>
+      </g>
+    </g>
+    <g id="그룹_16" data-name="그룹 16" transform="translate(14.117 0)">
+      <g id="그룹_15" data-name="그룹 15">
+        <rect id="사각형_8" data-name="사각형 8" width="1.003" height="2.508" fill="#777"/>
+      </g>
+    </g>
+  </g>
+</svg>

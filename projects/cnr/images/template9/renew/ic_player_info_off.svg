@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+  <g id="그룹_4209" data-name="그룹 4209" transform="translate(-0.616 -0.115)">
+    <g id="타원_35" data-name="타원 35" transform="translate(0.616 0.115)" fill="none" stroke="#777" stroke-width="3">
+      <circle cx="22.5" cy="22.5" r="22.5" stroke="none"/>
+      <circle cx="22.5" cy="22.5" r="21" fill="none"/>
+    </g>
+    <rect id="사각형_600" data-name="사각형 600" width="5" height="16" transform="translate(20.616 18.115)" fill="#777"/>
+    <rect id="사각형_601" data-name="사각형 601" width="5" height="6" transform="translate(20.616 9.115)" fill="#777"/>
+  </g>
+</svg>
