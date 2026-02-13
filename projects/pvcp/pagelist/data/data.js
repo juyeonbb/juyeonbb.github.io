@@ -384,6 +384,11 @@ data.info = {
     list: [
         {
             stateClass: 'complete',
+            url: 'prtlInt/종합포털소개_포털소개',
+            page: '포털소개'
+        },
+        {
+            stateClass: 'complete',
             url: 'prtlInt/종합포털소개_공지사항',
             page: '공지사항'
         },
@@ -403,6 +408,21 @@ data.info = {
 data.userInfo = {
     title: '이용안내',
     list: [
+        {
+            stateClass: 'working',
+            url: 'prtlInt/이용안내',
+            page: '이용안내'
+        },
+        {
+            stateClass: 'working',
+            url: 'prtlInt/이용안내_자주하는질문',
+            page: '자주하는 질문'
+        },
+        {
+            stateClass: 'working',
+            url: 'prtlInt/이용안내_찾아오시는길',
+            page: '찾아오시는 길'
+        },
         {
             stateClass: 'working',
             url: 'prtlInt/이용안내_저작권정책',

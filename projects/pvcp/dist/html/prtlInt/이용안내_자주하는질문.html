@@ -309,80 +309,227 @@
         <nav class="breadcrumb" aria-label="breadcrumb">
             <ol class="breadcrumb-list">
                 <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="ico ico-home"></i>홈</a></li>
-                <li class="breadcrumb-item"><a href="javascript:void(0)">이용안내</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">자주하는 질문</a></li>
             </ol>
         </nav>
         <div class="user-guide-container">
             <div class="inner">
-                <div class="page-title">
-                    <div class="result-group">
-                        <div class="result-group-head">
-                            <h3 class="title">이용안내</h3>
+                <div class="search-detail-box">
+                    <div class="search-bar">
+                        <div class="form-keyword">
+                            <input class="form-input" type="search" title="검색어" placeholder="검색어를 입력하세요" />
+                        </div>
+                        <div class="form-submit">
+                            <button type="button" class="btn btn-detail">
+                                <i class="ico ico-magnify"></i>
+                                <span>검색</span>
+                            </button>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="intro-banner user-guide">
-                <div class="inner">
-                    <div class="title">누리집 이용을 위한 최적의 환경</div>
-                    <div class="desc">국가보훈부 누리집은 다양한 방문자들이 쉽고 편리하게 이용하실 수 있도록<br/>
-                        한국정보문화진흥원과 행정자치부에서 제안하는 ‘웹표준 및 웹 접근성’ 지침을 준수하여,<br/>
-                        누리집을 운영하고 있습니다.</div>
+                <div class="result-group">
+                    <div class="result-group-head">
+                        <h3 class="title">자주하는 질문</h3>
+                    </div>
                 </div>
-            </div>
-            <div class="inner">
-                <div class="user-guide">
-                    <div class="content">
-                        <div class="content-title">지원브라우저</div>
-                        <div class="browser-list">
-                            <div class="browser-item">
-                                <img src="../../images/userGuide/img-edge.svg" alt="엣지"/>
-                                <div class="txt">엣지</div>
-                            </div>
-                            <div class="browser-item">
-                                <img src="../../images/userGuide/img-firefox.svg" alt="파이어폭스"/>
-                                <div class="txt">파이어폭스</div>
-                            </div>
-                            <div class="browser-item">
-                                <img src="../../images/userGuide/img-opera.svg" alt="오페라"/>
-                                <div class="txt">오페라</div>
-                            </div>
-                            <div class="browser-item">
-                                <img src="../../images/userGuide/img-chrome.svg" alt="크롬"/>
-                                <div class="txt">크롬</div>
-                            </div>
-                            <div class="browser-item">
-                                <img src="../../images/userGuide/img-safari.png" alt="사파리"/>
-                                <div class="txt">사파리</div>
-                            </div>
-                        </div>
+                <div class="tab-container">
+                    <div class="tabs-box">
+                        <ul class="tabs" role="tablist">
+                            <li class="item on">
+                                <button class="tab-button" type="button" role="tab" id="tab-1" aria-selected="true" aria-controls="panel-1">전체</button>
+                            </li>
+                            <li class="item">
+                                <button class="tab-button" type="button" role="tab" id="tab-2" aria-selected="false" aria-controls="panel-2">정보/자료</button>
+                            </li>
+                            <li class="item">
+                                <button class="tab-button" type="button" role="tab" id="tab-3" aria-selected="false" aria-controls="panel-3">전시</button>
+                            </li>
+                            <li class="item">
+                                <button class="tab-button" type="button" role="tab" id="tab-4" aria-selected="false" aria-controls="panel-4">행사</button>
+                            </li>
+                            <li class="item">
+                                <button class="tab-button" type="button" role="tab" id="tab-5" aria-selected="false" aria-controls="panel-5">교육</button>
+                            </li>
+                            <li class="item">
+                                <button class="tab-button" type="button" role="tab" id="tab-6" aria-selected="false" aria-controls="panel-6">기타</button>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="content">
-                        <div class="content-title">화면 해상도</div>
-                        <div class="info-gray">
-                            <div class="txt">PC 기준으로 1440*1200에 최적화된 화면입니다.</div>
+                    <div class="tab-content _tabContent">
+                        <div class="tab-panel on" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+                            <div class="accordion">
+                                <div class="accordion-item active">
+                                    <h5 class="accordion-header">
+                                        <button type="button" id="accordionHeaderSample01" class="btn-accordion active" aria-controls="accordionCollapseSample01" aria-expanded="true">
+                                            <span class="ico-acc question"><em aria-hidden="true">Q</em><span class="sr-only">질문</span></span>
+                                            <span class="accordion-title"><strong class="category">정보/자료</strong><span>정보 변경요청은 어떻게 해야 하나요?</span></span>
+                                        </button>
+                                    </h5>
+                                    <div id="accordionCollapseSample01" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample01" role="region">
+                                        <div class="accordion-body">
+                                            <span class="ico-acc answer"><em aria-hidden="true">A</em><span class="sr-only">답변</span></span>
+                                            <span class="accordion-desc">
+                                                        교육프로그램 신청 완료 후 취소나 변경 방법은 다음과 같습니다.<br><br>
+                                                        - 개인/가족교육: 홈페이지 로그인 후 마이페이지에서 취소/변경<br>
+                                                        - 단체교육: 담당자와 유선 협의 후 공문을 통해 취소<br><br>
+                                                        기타 자세한 사항은 독립기념관 교육부(041-560-0268)로 문의 바랍니다.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h5 class="accordion-header">
+                                        <button type="button" id="accordionHeaderSample02" class="btn-accordion" aria-controls="accordionCollapseSample02">
+                                            <span class="ico-acc question"><em aria-hidden="true">Q</em><span class="sr-only">질문</span></span>
+                                            <span class="accordion-title"><strong class="category">교육</strong><span>교육 신청 취소나 변경은 어떻게 해야하나요?</span></span>
+                                        </button>
+                                    </h5>
+                                    <div id="accordionCollapseSample02" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample02">
+                                        <div class="accordion-body">
+                                            <span class="ico-acc answer"><em aria-hidden="true">A</em><span class="sr-only">답변</span></span>
+                                            <span class="accordion-desc">
+                                                        교육프로그램 신청 완료 후 취소나 변경 방법은 다음과 같습니다.<br><br>
+                                                        - 개인/가족교육: 홈페이지 로그인 후 마이페이지에서 취소/변경<br>
+                                                        - 단체교육: 담당자와 유선 협의 후 공문을 통해 취소<br><br>
+                                                        기타 자세한 사항은 독립기념관 교육부(041-560-0268)로 문의 바랍니다.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h5 class="accordion-header">
+                                        <button type="button" id="accordionHeaderSample03" class="btn-accordion" aria-controls="accordionCollapseSample03">
+                                            <span class="ico-acc question"><em aria-hidden="true">Q</em><span class="sr-only">질문</span></span>
+                                            <span class="accordion-title"><strong class="category">교육</strong><span>교육 신청은 어떻게 해야하나요?</span></span>
+                                        </button>
+                                    </h5>
+                                    <div id="accordionCollapseSample03" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample03">
+                                        <div class="accordion-body">
+                                            <span class="ico-acc answer"><em aria-hidden="true">A</em><span class="sr-only">답변</span></span>
+                                            <span class="accordion-desc">
+                                                        교육프로그램 신청 완료 후 취소나 변경 방법은 다음과 같습니다.<br><br>
+                                                        - 개인/가족교육: 홈페이지 로그인 후 마이페이지에서 취소/변경<br>
+                                                        - 단체교육: 담당자와 유선 협의 후 공문을 통해 취소<br><br>
+                                                        기타 자세한 사항은 독립기념관 교육부(041-560-0268)로 문의 바랍니다.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h5 class="accordion-header">
+                                        <button type="button" id="accordionHeaderSample04" class="btn-accordion" aria-controls="accordionCollapseSample04">
+                                            <span class="ico-acc question"><em aria-hidden="true">Q</em><span class="sr-only">질문</span></span>
+                                            <span class="accordion-title"><strong class="category">전시</strong><span>전시 관람 조건이 있나요?</span></span>
+                                        </button>
+                                    </h5>
+                                    <div id="accordionCollapseSample04" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample04">
+                                        <div class="accordion-body">
+                                            <span class="ico-acc answer"><em aria-hidden="true">A</em><span class="sr-only">답변</span></span>
+                                            <span class="accordion-desc">
+                                                        교육프로그램 신청 완료 후 취소나 변경 방법은 다음과 같습니다.<br><br>
+                                                        - 개인/가족교육: 홈페이지 로그인 후 마이페이지에서 취소/변경<br>
+                                                        - 단체교육: 담당자와 유선 협의 후 공문을 통해 취소<br><br>
+                                                        기타 자세한 사항은 독립기념관 교육부(041-560-0268)로 문의 바랍니다.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h5 class="accordion-header">
+                                        <button type="button" id="accordionHeaderSample05" class="btn-accordion" aria-controls="accordionCollapseSample05">
+                                            <span class="ico-acc question"><em aria-hidden="true">Q</em><span class="sr-only">질문</span></span>
+                                            <span class="accordion-title"><strong class="category">행사</strong><span>행사 참여는 어떻게 해야하나요?</span></span>
+                                        </button>
+                                    </h5>
+                                    <div id="accordionCollapseSample05" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample05">
+                                        <div class="accordion-body">
+                                            <span class="ico-acc answer"><em aria-hidden="true">A</em><span class="sr-only">답변</span></span>
+                                            <span class="accordion-desc">
+                                                        교육프로그램 신청 완료 후 취소나 변경 방법은 다음과 같습니다.<br><br>
+                                                        - 개인/가족교육: 홈페이지 로그인 후 마이페이지에서 취소/변경<br>
+                                                        - 단체교육: 담당자와 유선 협의 후 공문을 통해 취소<br><br>
+                                                        기타 자세한 사항은 독립기념관 교육부(041-560-0268)로 문의 바랍니다.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h5 class="accordion-header">
+                                        <button type="button" id="accordionHeaderSample06" class="btn-accordion" aria-controls="accordionCollapseSample06">
+                                            <span class="ico-acc question"><em aria-hidden="true">Q</em><span class="sr-only">질문</span></span>
+                                            <span class="accordion-title"><strong class="category">정보/자료</strong><span>정보 변경요청은 어떻게 해야 하나요?</span></span>
+                                        </button>
+                                    </h5>
+                                    <div id="accordionCollapseSample06" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample06">
+                                        <div class="accordion-body">
+                                            <span class="ico-acc answer"><em aria-hidden="true">A</em><span class="sr-only">답변</span></span>
+                                            <span class="accordion-desc">
+                                                        교육프로그램 신청 완료 후 취소나 변경 방법은 다음과 같습니다.<br><br>
+                                                        - 개인/가족교육: 홈페이지 로그인 후 마이페이지에서 취소/변경<br>
+                                                        - 단체교육: 담당자와 유선 협의 후 공문을 통해 취소<br><br>
+                                                        기타 자세한 사항은 독립기념관 교육부(041-560-0268)로 문의 바랍니다.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h5 class="accordion-header">
+                                        <button type="button" id="accordionHeaderSample07" class="btn-accordion" aria-controls="accordionCollapseSample07">
+                                            <span class="ico-acc question"><em aria-hidden="true">Q</em><span class="sr-only">질문</span></span>
+                                            <span class="accordion-title"><strong class="category">교육</strong><span>교육 신청은 어떻게 해야하나요?</span></span>
+                                        </button>
+                                    </h5>
+                                    <div id="accordionCollapseSample07" class="accordion-collapse collapse" aria-labelledby="accordionHeaderSample07">
+                                        <div class="accordion-body">
+                                            <span class="ico-acc answer"><em aria-hidden="true">A</em><span class="sr-only">답변</span></span>
+                                            <span class="accordion-desc">
+                                                        교육프로그램 신청 완료 후 취소나 변경 방법은 다음과 같습니다.<br><br>
+                                                        - 개인/가족교육: 홈페이지 로그인 후 마이페이지에서 취소/변경<br>
+                                                        - 단체교육: 담당자와 유선 협의 후 공문을 통해 취소<br><br>
+                                                        기타 자세한 사항은 독립기념관 교육부(041-560-0268)로 문의 바랍니다.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul id="pagination" class="pagination"></ul>
+<script>
+    // https://josecebe.github.io/twbs-pagination/
+    const TOTAL_PAGES = 35;
+    const BREAKPOINT = 1280;
+
+    function getVisiblePages() {
+        return window.innerWidth <= BREAKPOINT ? 5 : 10;
+    }
+
+    function initPagination() {
+        const $pagination = $('#pagination');
+
+        $pagination.twbsPagination('destroy');
+
+        $pagination.twbsPagination({
+            totalPages: TOTAL_PAGES,
+            visiblePages: getVisiblePages(),
+            first: false,
+            prev: `<i class="ico ico-paging-prev"></i><span class="">이전</span>`,
+            next: `<span class="">다음</span><i class="ico ico-paging-next"></i>`,
+            last: false
+        });
+    }
+
+    initPagination();
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {``
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            initPagination();
+        }, 150);
+    });
+</script>
                         </div>
-                    </div>
-                    <div class="content">
-                        <div class="content-title">메뉴안내</div>
-                        <dl class="info-list">
-                            <div class="row">
-                                <dt>보훈자료</dt>
-                                <dd>보훈관련 인물, 역사, 시설, 유물 등 다양한 정보와 자료를 제공합니다</dd>
-                            </div>
-                            <div class="row">
-                                <dt>행사전시</dt>
-                                <dd>보훈 문화와 관련한 다양한 행사, 전시 정보를 제공합니다</dd>
-                            </div>
-                            <div class="row">
-                                <dt>체험교육</dt>
-                                <dd>보훈관련 체헝 행사 및 교육 정보를 제공합니다</dd>
-                            </div>
-                            <div class="row">
-                                <dt>종합포털소개</dt>
-                                <dd>보훈 문화 종합포털 소개 및 통계현황 등을 확인할 수 있습니다</dd>
-                            </div>
-                        </dl>
+                        <!--                                <div class="tab-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden="">2 page</div>-->
+                        <!--                                <div class="tab-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden="">3 page</div>-->
                     </div>
                 </div>
             </div>

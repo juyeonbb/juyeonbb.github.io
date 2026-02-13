@@ -15,7 +15,7 @@ html, body {
   position: relative;
   width: 100%;
   height: 100%;
-  font-family: "Pretendard";
+  font-family: "Pretendard GOV";
   color: #222;
   line-height: 1.5;
   word-break: keep-all;
@@ -268,19 +268,22 @@ template {
 .accordion .accordion-item .btn-accordion {
   position: relative;
   display: flex;
+  align-items: center;
   width: 100%;
-  padding: 24px 16px;
+  padding: 20px 50px 20px 24px;
   background-color: #fff;
   text-align: left;
-  font-size: 17px;
+  font-size: 19px;
   border-radius: 10px;
-  gap: 16px;
+  gap: 30px;
 }
 .accordion .accordion-item .btn-accordion .accordion-title {
-  padding-top: 5px;
+  display: flex;
+  gap: 30px;
 }
-.accordion .accordion-item .btn-accordion .accordion-title strong {
-  margin-right: 5px;
+.accordion .accordion-item .btn-accordion .accordion-title .category {
+  font-size: 19px;
+  min-width: 72px;
 }
 .accordion .accordion-item .btn-accordion::after {
   content: "";
@@ -299,21 +302,24 @@ template {
 .accordion .accordion-item .ico-acc {
   flex-shrink: 0;
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   margin-bottom: auto;
-  border-radius: 12px;
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: bold;
   text-align: center;
-  line-height: 30px;
+  line-height: 36px;
+  border-radius: 6px;
+  border: 1px solid transparent;
 }
 .accordion .accordion-item .ico-acc.question {
-  background-color: #ecf2fe;
+  background-color: #ecf4fe;
+  border-color: #256ef4;
   color: #256ef4;
 }
 .accordion .accordion-item .ico-acc.answer {
   background-color: #256ef4;
+  border-color: #256ef4;
   color: #fff;
 }
 .accordion .accordion-item .accordion-collapse {
@@ -325,13 +331,12 @@ template {
 .accordion .accordion-item .accordion-body {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 24px 16px;
-  background-color: #eef2f7;
+  gap: 30px;
+  padding: 20px 24px;
   font-size: 17px;
-}
-.accordion .accordion-item .accordion-body .accordion-desc {
-  padding-top: 5px;
+  border-radius: 10px;
+  background-color: #eef2f7;
+  margin-bottom: 20px;
 }
 .accordion .accordion-item.active .accordion-collapse {
   height: auto;
@@ -341,8 +346,45 @@ template {
 }
 .accordion .accordion-item.active .btn-accordion .accordion-title {
   font-weight: bold;
+  color: #003675;
 }
 
+@media (max-width: 1280px) {
+  .accordion .accordion-item .btn-accordion {
+    gap: 15px;
+    padding: 20px 50px 20px 20px;
+  }
+  .accordion .accordion-item .btn-accordion .accordion-title {
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .accordion .accordion-item .btn-accordion {
+    gap: 15px;
+    padding: 20px 40px 20px 15px;
+  }
+  .accordion .accordion-item .btn-accordion::after {
+    right: 15px;
+  }
+  .accordion .accordion-item .btn-accordion .accordion-title {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 5px;
+    font-size: 17px;
+  }
+  .accordion .accordion-item .ico-acc {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .accordion .accordion-item .accordion-body {
+    padding: 20px 15px;
+    gap: 15px;
+    font-size: 15px;
+  }
+}
 /**
  * Swiper 10.2.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1617,6 +1659,24 @@ button.swiper-pagination-bullet {
   background-image: url(../images/common/ico-zip.svg);
 }
 
+.ico-ug-map {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/userGuide/ico-map.svg);
+}
+
+.ico-ug-time {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/userGuide/ico-time.svg);
+}
+
+.ico-ug-call {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/userGuide/ico-call.svg);
+}
+
 /*
   Layout
 */
@@ -1857,7 +1917,7 @@ button.swiper-pagination-bullet {
 }
 .header .main-menu .sub-menu {
   position: fixed;
-  top: 135px;
+  top: 137px;
   left: 0;
   width: 100%;
   height: 55px;
@@ -2374,6 +2434,9 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width: 768px) {
+  .footer .footer-info .key-info .call {
+    font-size: 28px;
+  }
   .footer .footer-info .key-info .time {
     font-size: 17px;
   }
@@ -3360,7 +3423,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   transition: 0.3s;
   word-break: keep-all;
-  height: 64px;
+  height: 53px;
 }
 .tab-container .tabs-box .tabs .item::before {
   content: "";
@@ -3386,7 +3449,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .tab-container .tabs-box .tabs .item .tab-button {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -3396,7 +3459,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -1.3px;
   color: #666;
   font-weight: 500;
-  padding: 0 20px;
+  padding: 0 20px 15px;
   transform-origin: center;
 }
 .tab-container .tabs-box .tabs .item.on .tab-button {
@@ -3429,7 +3492,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 540px) {
   .tab-container .tabs-box .tabs .item .tab-button {
-    padding: 0 10px;
+    padding: 0 10px 15px;
     font-size: 16px;
   }
   .tab-container .tabs-box .tabs .item.on .tab-button {
@@ -6143,7 +6206,7 @@ div.pswp__img--placeholder,
 .ui-widget-content {
   border: 1px solid #ddd;
   border-radius: 3px;
-  font-family: "Pretendard";
+  font-family: "Pretendard GOV";
   background-color: #fff;
 }
 .ui-widget-content .ui-state-default {
@@ -6156,11 +6219,11 @@ div.pswp__img--placeholder,
 
 .ui-widget-header {
   border: 0;
-  font-family: "Pretendard";
+  font-family: "Pretendard GOV";
 }
 
 .ui-datepicker {
-  font-family: "Pretendard";
+  font-family: "Pretendard GOV";
 }
 .ui-datepicker .ui-datepicker-title {
   margin-top: 10px;
@@ -6172,7 +6235,7 @@ div.pswp__img--placeholder,
 .ui-datepicker .ui-datepicker-title select {
   border: 0;
   border-bottom: 1px solid #222;
-  font-family: "Pretendard";
+  font-family: "Pretendard GOV";
   font-size: 15px;
   font-weight: 500;
 }
@@ -6224,7 +6287,7 @@ div.pswp__img--placeholder,
   justify-content: center;
   padding: 0 5px;
   font-size: 15px;
-  font-family: "Pretendard";
+  font-family: "Pretendard GOV";
   background-image: none;
 }
 .ui-datepicker .ui-datepicker-current.ui-priority-secondary {
@@ -6242,7 +6305,7 @@ div.pswp__img--placeholder,
   padding: 0 5px;
   font-size: 15px;
   font-weight: 400;
-  font-family: "Pretendard";
+  font-family: "Pretendard GOV";
   background-color: #F2F2F2;
   color: #666;
   border: 1px solid #ccc;
