@@ -770,12 +770,16 @@
   .main-contents .section-visual {
     padding-bottom: 40px;
   }
+  .main-contents .section-visual .box-banner .banner-slider .link {
+    aspect-ratio: 400/385;
+  }
   .main-contents .section-visual .box-search {
     width: 100%;
     padding: 0 15px;
   }
   .main-contents .section-visual .box-search .tag-list-wrap {
     padding-left: 0;
+    flex-wrap: wrap;
   }
   .main-contents .section-recommend {
     position: relative;
