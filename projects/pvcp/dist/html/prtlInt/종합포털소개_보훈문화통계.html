@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/swiper.js"></script>
+    <script src="../../js/twbsPagination.js"></script>
+    <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_gnb.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <script src="../../js/popper.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="shortcut icon" href="../../images/common/favicon.ico">
+    <title>보훈문화종합포털</title>
+</head>
+<body>
+<!-- 본문 바로가기 -->
+<div class="skip-nav" id="skip">
+    <a class="view-content" href="#content">본문 바로가기</a>
+</div>
+<!-- 전자정부 누리집 -->
+<div class="mast-head">
+    <div class="inner">
+        <span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+    </div>
+</div>
+<!-- Header // 디자인 대기중 -->
+<header class="header _header">
+    <div class="header-pc">
+        <div class="inner">
+            <div class="utility">
+                <ul class="list">
+                    <li class="item">
+                        <div class="drop-wrap _zoomDropdown _dropdown">
+                            <button type="button" class="drop-btn _btnZoom _dropdownBtn" aria-controls="zoomMenu" aria-expanded="false">
+                                <span>화면크기</span><i class="ico ico-toggle" aria-hidden="true"></i>
+                            </button>
+                            <div class="drop-menu _dropdownMenu" id="zoomMenu" hidden>
+                                <div class="drop-in">
+                                    <ul class="drop-list">
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="0.9"><span class="ex-zoom">가</span>작게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1"><span class="ex-zoom">가</span>보통</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem on" data-zoom="1.1"><span class="ex-zoom">가</span>조금 크게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1.2"><span class="ex-zoom">가</span>크게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1.3"><span class="ex-zoom">가</span>가장 크게</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item"><a class="item-link" href="javascript:void(0);" target="_blank" title="새 창 열기">누리집 소통망(SNS)</a></li>
+                </ul>
+            </div>
+            <div class="branding">
+                <h1 class="logo">
+                    <a href="javascript:void(0);">
+                        <img src="../../images/common/logo.png" alt="보훈문화종합포털">
+                    </a>
+                </h1>
+                <nav class="main-menu">
+                    <ul class="gnb-menu">
+                        <li class="menu-item is-pinned"> <!-- 서브페이지에서 gnb 고정일 경우, is-pinned 클래스 추가 -->
+                            <a href="javascript:void(0);" class="menu-link" aria-haspopup="true" aria-expanded="false">보훈자료</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item is-active">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true">보훈자료</a>
+                                        <div class="depth3-menu">
+                                            <ul class="depth3">
+                                                <li class="depth3-item"><a href="javascript:void(0);" aria-current="page">인물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">역사</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">사진/필름</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">유물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">사료</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">도서</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈콘텐츠</a>
+                                        <div class="depth3-menu" hidden>
+                                            <ul class="depth3">
+                                                <li class="depth3-item"><a href="javascript:void(0);">신규</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">청소년 추천</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">독립의 길</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">호국의 혼</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">민주의 봄</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">현충시설</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">연표검색</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">지도검색</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">행사·전시</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item is-active">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true">기념행사</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">특별 전시</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">상설 전시</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">디지털·VR 전시</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">체험·교육</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">문화·체험 행사</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">온 · 오프라인 교육</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">배움 자료실</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈e북</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">이달의 영웅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">이달의 역사</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">종합포털소개</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">포털  소개</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈의 개념</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈 문화통계</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">공지사항</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보도자료</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="actions">
+                    <!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">로그인</a></li>-->
+                    <!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">회원가입</a></li>-->
+                    <li class="action-item"><a href="javascript:void(0);" class="btn-search _popupTrigger" data-trigger="popup-search"><i class="ico ico-search"></i><em>통합검색</em></a></li>
+                    <li class="action-item show-pc"><button type="button" class="btn-menu"><span></span><span></span><span></span><em>전체메뉴</em></button></li>
+                    <li class="action-item show-mo"><button type="button" class="btn-menu"><span></span><span></span><span></span><em>전체메뉴</em></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-mo"></div>
+</header>
+<div class="dim _dim"></div>
+<div class="popup-wrap _popup" data-popup="popup-search" role="dialog" aria-labelledby="popupSearch" aria-modal="true">
+    <div class="popup popup-xl popup-total-search">
+        <div class="popup-content">
+            <div class="popup-head">
+                <span class="title" id="popupSearch">검색어를 입력해주세요</span>
+                <a class="tip-link" href="javascript:void(0);">검색에 어려움이 있으신가요? <i class="ico ico-search-arrow"></i></a>
+                <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-search-content">
+                    <div class="search-global">
+                        <input class="form-input" type="search" title="통합검색" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn-search"><i class="ico ico-search-main"></i><span class="sr-only">검색하기</span></button>
+                    </div>
+                    <ul class="sch-info-list">
+                        <li class="sch-info-item word-popular">
+                            <h3 class="tit">인기검색어</h3>
+                            <ol class="list">
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">보훈문화</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">안중근</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">대한민국임시정부</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">독립운동</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">3.1운동</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">보훈문화</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">안중근</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">김구</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">독립운동</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">3.1운동</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li class="sch-info-item word-lately">
+                            <h3 class="tit">최근검색어</h3>
+                            <ul class="list" aria-live="polite">
+                                <li>
+                                    <a href="javascript:void(0);" class="word-link">
+                                        <span class="word-txt">대한민국임시정부</span>
+                                    </a>
+                                    <button type="button" class="btn-del">
+                                        <span class="sr-only">삭제</span>
+                                        <i class="ico ico-del"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="word-link">
+                                        <span class="word-txt">대한민국임시정부</span>
+                                    </a>
+                                    <button type="button" class="btn-del">
+                                        <span class="sr-only">삭제</span>
+                                        <i class="ico ico-del"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="word-link">
+                                        <span class="word-txt">대한민국임시정부</span>
+                                    </a>
+                                    <button type="button" class="btn-del">
+                                        <span class="sr-only">삭제</span>
+                                        <i class="ico ico-del"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn-del-all">최근검색어 전체 삭제 <i class="ico ico-search-arrow"></i></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<main class="wrap" id="content">
+    <div class="container">
+        <!-- s contents -->
+        <div class="sub-contents">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="ico ico-home"></i>홈</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">종합포털소개</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">보훈 문화통계</a></li>
+                </ol>
+            </nav>
+            <div class="user-guide-container">
+                <div class="inner">
+                    <div class="intro-statics">
+                        <div class="content-section">
+                            <div class="result-group">
+                                <div class="result-group-head">
+                                    <h3 class="title">관련 인기 검색어</h3>
+                                    <div class="util">
+                                        <select class="form-select" title="검색어 분류">
+                                            <option value="일간" selected>일간</option>
+                                            <option value="주간">주간</option>
+                                            <option value="월간">월간</option>
+                                            <option value="연간">연간</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-slider-wrapper">
+                                <button type="button" class="btn-circle-nav btn-circle-prev _popularChartPrev"><i class="ico ico-slider-prev"></i><span class="sr-only">이전</span></button>
+                                <div class="swiper _popularChartSlider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 12월 11일</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">독립운동</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">3.1만세운동</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">임시정부</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">임시정부기념관</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">독립기념관</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">호국보훈의 달</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">현충원</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">보훈문화</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">호국영웅</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 12월 10일</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">독립운동</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">3.1만세운동</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">임시정부</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">임시정부기념관</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">독립기념관</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">호국보훈의 달</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">현충원</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">보훈문화</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">호국영웅</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 12월 09일</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">독립운동</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">3.1만세운동</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">임시정부</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">임시정부기념관</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">독립기념관</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">호국보훈의 달</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">현충원</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">보훈문화</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">호국영웅</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 12월 08일</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">독립운동</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">3.1만세운동</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">임시정부</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">임시정부기념관</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">독립기념관</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">호국보훈의 달</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">현충원</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">보훈문화</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">호국영웅</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 12월 07일</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">독립운동</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">3.1만세운동</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">임시정부</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">임시정부기념관</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">독립기념관</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">호국보훈의 달</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">현충원</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">보훈문화</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">호국영웅</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-circle-nav btn-circle-next _popularChartNext"><i class="ico ico-slider-next"></i><span class="sr-only">다음</span></button>
+                            </div>
+                            <script>
+                                let popularChartSlider = new Swiper('._popularChartSlider', {
+                                    slidesPerView: 1,
+                                    spaceBetween: 20,
+                                    navigation: {
+                                        prevEl: '.chart-slider-wrapper ._popularChartPrev',
+                                        nextEl: '.chart-slider-wrapper ._popularChartNext'
+                                    },
+                                    breakpoints: {
+                                        768: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 30,
+                                        },
+                                        1280: {
+                                            slidesPerView: 3,
+                                            spaceBetween: 40,
+                                        },
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <div class="content-section">
+                            <div class="result-group">
+                                <div class="result-group-head">
+                                    <h3 class="title">콘텐츠 랭킹</h3>
+                                    <div class="util">
+                                        <select class="form-select" title="검색어 분류">
+                                            <option value="월간" selected>월간</option>
+                                            <option value="연간">연간</option>
+                                            <option value="전체">전체</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-slider-wrapper">
+                                <button type="button" class="btn-circle-nav btn-circle-prev _contentsChartPrev"><i class="ico ico-slider-prev"></i><span class="sr-only">이전</span></button>
+                                <div class="swiper _contentsChartSlider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 12월</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">인천을 만난 김구 | 청년에서 거목으로</span>
+                                                            <span class="val">10,000</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">6.25 전쟁(한국전쟁)</span>
+                                                            <span class="val">8,000</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">3.1 독립만세운동</span>
+                                                            <span class="val">6,000</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">3.1공원(삼일공원)</span>
+                                                            <span class="val">4,000</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">독립기념관</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">호국보훈의 달</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">현충원</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">보훈문화</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">호국영웅</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 11월</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">독립운동</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">3.1만세운동</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">임시정부</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">임시정부기념관</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">독립기념관</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">호국보훈의 달</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">현충원</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">보훈문화</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">호국영웅</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 10월</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">독립운동</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">3.1만세운동</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">임시정부</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">임시정부기념관</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">독립기념관</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">호국보훈의 달</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">현충원</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">보훈문화</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">호국영웅</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 09월</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">독립운동</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">3.1만세운동</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">임시정부</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">임시정부기념관</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">독립기념관</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">호국보훈의 달</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">현충원</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">보훈문화</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">호국영웅</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 08월</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">독립운동</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">3.1만세운동</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">임시정부</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">임시정부기념관</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">독립기념관</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">호국보훈의 달</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">현충원</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">보훈문화</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">호국영웅</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-circle-nav btn-circle-next _contentsChartNext"><i class="ico ico-slider-next"></i><span class="sr-only">다음</span></button>
+                            </div>
+                            <script>
+                                let contentsChartSlider = new Swiper('._contentsChartSlider', {
+                                    slidesPerView: 1,
+                                    spaceBetween: 20,
+                                    navigation: {
+                                        prevEl: '.chart-slider-wrapper ._contentsChartPrev',
+                                        nextEl: '.chart-slider-wrapper ._contentsChartNext'
+                                    },
+                                    breakpoints: {
+                                        768: {
+                                            slidesPerView: 1,
+                                            spaceBetween: 30,
+                                        },
+                                        1280: {
+                                            slidesPerView: 1,
+                                            spaceBetween: 40,
+                                        },
+                                    }
+                                });
+                            </script>
+                        </div>
+                        <div class="content-section">
+                            <div class="result-group">
+                                <div class="result-group-head">
+                                    <h3 class="title">보훈인물 조회수 랭킹</h3>
+                                    <div class="util">
+                                        <select class="form-select" title="검색어 분류">
+                                            <option value="월간" selected>월간</option>
+                                            <option value="연간">연간</option>
+                                            <option value="전체">전체</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-slider-wrapper">
+                                <button type="button" class="btn-circle-nav btn-circle-prev _figureChartPrev"><i class="ico ico-slider-prev"></i><span class="sr-only">이전</span></button>
+                                <div class="swiper _figureChartSlider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 12월</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">유관순</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">김구</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">윤봉길</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">홍범도</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">안창호</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">박은식</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">한용운</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">강우규</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">안윤옥</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 11월</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">유관순</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">김구</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">윤봉길</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">홍범도</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">안창호</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">박은식</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">한용운</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">강우규</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">안윤옥</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 10월</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">유관순</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">김구</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">윤봉길</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">홍범도</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">안창호</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">박은식</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">한용운</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">강우규</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">안윤옥</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 09월</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">유관순</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">김구</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">윤봉길</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">홍범도</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">안창호</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">박은식</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">한용운</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">강우규</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">안윤옥</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="chart-head">2025년 08월</div>
+                                            <div class="chart-body">
+                                                <ol class="keyword-rank-list">
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">1</span>
+                                                            <span class="txt">유관순</span>
+                                                            <span class="val">100</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">2</span>
+                                                            <span class="txt">안중근</span>
+                                                            <span class="val">80</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item item-top">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">3</span>
+                                                            <span class="txt">김구</span>
+                                                            <span class="val">60</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">4</span>
+                                                            <span class="txt">윤봉길</span>
+                                                            <span class="val">50</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">5</span>
+                                                            <span class="txt">홍범도</span>
+                                                            <span class="val">40</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">6</span>
+                                                            <span class="txt">안창호</span>
+                                                            <span class="val">20</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">7</span>
+                                                            <span class="txt">박은식</span>
+                                                            <span class="val">10</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">8</span>
+                                                            <span class="txt">한용운</span>
+                                                            <span class="val">8</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">9</span>
+                                                            <span class="txt">강우규</span>
+                                                            <span class="val">6</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="item">
+                                                        <a href="javascript:void(0)" class="link">
+                                                            <span class="num">10</span>
+                                                            <span class="txt">안윤옥</span>
+                                                            <span class="val">3</span>
+                                                        </a>
+                                                    </li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-circle-nav btn-circle-next _figureChartNext"><i class="ico ico-slider-next"></i><span class="sr-only">다음</span></button>
+                            </div>
+                            <script>
+                                let figureChartSlider = new Swiper('._figureChartSlider', {
+                                    slidesPerView: 1,
+                                    spaceBetween: 20,
+                                    navigation: {
+                                        prevEl: '.chart-slider-wrapper ._figureChartPrev',
+                                        nextEl: '.chart-slider-wrapper ._figureChartNext'
+                                    },
+                                    breakpoints: {
+                                        768: {
+                                            slidesPerView: 2,
+                                            spaceBetween: 30,
+                                        },
+                                        1280: {
+                                            slidesPerView: 3,
+                                            spaceBetween: 40,
+                                        },
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e contents -->
+    </div>
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-info">
+        <div class="inner">
+            <div class="key-info">
+                <b class="call"><i class="ico ico-phone"></i> 대표전화&nbsp;<a href="tel:1577-0606" target="_blank" rel="noopener noreferrer">1577-0606</a></b><span class="time">(상담시간 : 평일 09:00 ~ 18:00, 점심시간 : 12:00 ~ 13:00, 매주 월요일 휴무)</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-links">
+        <div class="inner">
+            <div class="link-content">
+                <div class="logo">
+                    <a href="javascript:void(0)"><img src="../../images/common/footer-logo.png" alt="KNA 에듀센터"></a>
+                </div>
+                <div>
+                    <div class="info-links">
+                        <a class="link link-highlight" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">이용안내</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">이용약관</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">저작권정책</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">자주하는질문</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">찾아오시는 길</a>
+                    </div>
+                    <div class="address">(30113) 세종특별자치시 도움4로 9 정부세종청사 9동</div>
+                    <div class="copyright">© Ministry of Patriots and Veterans Affairs. All Rights Reserved.</div>
+                </div>
+                <div class="footer-dropdown _footerDropdown">
+                    <button type="button" class="btn-select _footerDropdownButton" title="관련사이트 바로가기">관련사이트 바로가기</button>
+                    <ul class="dropdown-list">
+                        <li><a href="https://www.nhis.or.kr/" title="새 창 열기" target="_blank" rel="noopener noreferrer" ><span>국민건강보험</span></a></li>
+                        <li><a href="https://www.nmkpg.go.kr/" title="새 창 열기" target="_blank" rel="noopener noreferrer"><span>국립대한민국임시정부기념관</span></a></li>
+                    </ul>
+                    <button type="button" class="btn-select-close _footerDropdownCloseButton" title="관련사이트 닫기">관련사이트 바로가기</button>
+                </div>
+            </div>
+<!--            <div class="nuri"><img src="../../images/common/ico-footer-nuri.png" alt="국가보훈부"/><span>이 누리집은 국가보훈부 산하기관 누리집입니다.</span></div>-->
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../../js/jquery.js"></script>
+    <script src="../../js/swiper.js"></script>
+    <script src="../../js/twbsPagination.js"></script>
+    <script src="../../js/fullCalendar.js"></script>
+    <script src="../../js/ui_gnb.js"></script>
+    <script src="../../js/ui_common.js"></script>
+    <script src="../../js/popper.js"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="shortcut icon" href="../../images/common/favicon.ico">
+    <title>보훈문화종합포털</title>
+</head>
+<body>
+<!-- 본문 바로가기 -->
+<div class="skip-nav" id="skip">
+    <a class="view-content" href="#content">본문 바로가기</a>
+</div>
+<!-- 전자정부 누리집 -->
+<div class="mast-head">
+    <div class="inner">
+        <span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
+    </div>
+</div>
+<!-- Header // 디자인 대기중 -->
+<header class="header _header">
+    <div class="header-pc">
+        <div class="inner">
+            <div class="utility">
+                <ul class="list">
+                    <li class="item">
+                        <div class="drop-wrap _zoomDropdown _dropdown">
+                            <button type="button" class="drop-btn _btnZoom _dropdownBtn" aria-controls="zoomMenu" aria-expanded="false">
+                                <span>화면크기</span><i class="ico ico-toggle" aria-hidden="true"></i>
+                            </button>
+                            <div class="drop-menu _dropdownMenu" id="zoomMenu" hidden>
+                                <div class="drop-in">
+                                    <ul class="drop-list">
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="0.9"><span class="ex-zoom">가</span>작게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1"><span class="ex-zoom">가</span>보통</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem on" data-zoom="1.1"><span class="ex-zoom">가</span>조금 크게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1.2"><span class="ex-zoom">가</span>크게</a>
+                                        </li>
+                                        <li class="drop-item">
+                                            <a href="javascript:void(0);" class="item-link _zoomItem _dropdownItem" data-zoom="1.3"><span class="ex-zoom">가</span>가장 크게</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item"><a class="item-link" href="javascript:void(0);" target="_blank" title="새 창 열기">누리집 소통망(SNS)</a></li>
+                </ul>
+            </div>
+            <div class="branding">
+                <h1 class="logo">
+                    <a href="javascript:void(0);">
+                        <img src="../../images/common/logo.png" alt="보훈문화종합포털">
+                    </a>
+                </h1>
+                <nav class="main-menu">
+                    <ul class="gnb-menu">
+                        <li class="menu-item is-pinned"> <!-- 서브페이지에서 gnb 고정일 경우, is-pinned 클래스 추가 -->
+                            <a href="javascript:void(0);" class="menu-link" aria-haspopup="true" aria-expanded="false">보훈자료</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item is-active">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true">보훈자료</a>
+                                        <div class="depth3-menu">
+                                            <ul class="depth3">
+                                                <li class="depth3-item"><a href="javascript:void(0);" aria-current="page">인물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">역사</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">사진/필름</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">유물</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">사료</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">도서</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈콘텐츠</a>
+                                        <div class="depth3-menu" hidden>
+                                            <ul class="depth3">
+                                                <li class="depth3-item"><a href="javascript:void(0);">신규</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">청소년 추천</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">독립의 길</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">호국의 혼</a></li>
+                                                <li class="depth3-item"><a href="javascript:void(0);">민주의 봄</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">현충시설</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">연표검색</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">지도검색</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">행사·전시</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item is-active">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="true">기념행사</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">특별 전시</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">상설 전시</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">디지털·VR 전시</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">체험·교육</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">문화·체험 행사</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">온 · 오프라인 교육</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">배움 자료실</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈e북</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">이달의 영웅</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">이달의 역사</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-item">
+                            <a href="javascript:void(0);" class="menu-link">종합포털소개</a>
+                            <div class="sub-menu" hidden>
+                                <ul class="depth2" role="list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">포털  소개</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈의 개념</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보훈 문화통계</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">공지사항</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0);" class="depth2-link" aria-expanded="false">보도자료</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="actions">
+                    <!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">로그인</a></li>-->
+                    <!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">회원가입</a></li>-->
+                    <li class="action-item"><a href="javascript:void(0);" class="btn-search _popupTrigger" data-trigger="popup-search"><i class="ico ico-search"></i><em>통합검색</em></a></li>
+                    <li class="action-item show-pc"><button type="button" class="btn-menu"><span></span><span></span><span></span><em>전체메뉴</em></button></li>
+                    <li class="action-item show-mo"><button type="button" class="btn-menu"><span></span><span></span><span></span><em>전체메뉴</em></button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-mo"></div>
+</header>
+<div class="dim _dim"></div>
+<div class="popup-wrap _popup" data-popup="popup-search" role="dialog" aria-labelledby="popupSearch" aria-modal="true">
+    <div class="popup popup-xl popup-total-search">
+        <div class="popup-content">
+            <div class="popup-head">
+                <span class="title" id="popupSearch">검색어를 입력해주세요</span>
+                <a class="tip-link" href="javascript:void(0);">검색에 어려움이 있으신가요? <i class="ico ico-search-arrow"></i></a>
+                <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-search-content">
+                    <div class="search-global">
+                        <input class="form-input" type="search" title="통합검색" placeholder="검색어를 입력하세요">
+                        <button type="button" class="btn-search"><i class="ico ico-search-main"></i><span class="sr-only">검색하기</span></button>
+                    </div>
+                    <ul class="sch-info-list">
+                        <li class="sch-info-item word-popular">
+                            <h3 class="tit">인기검색어</h3>
+                            <ol class="list">
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">보훈문화</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">안중근</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">대한민국임시정부</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">독립운동</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">3.1운동</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">보훈문화</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">안중근</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">김구</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">독립운동</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="ranking-link">
+                                        <span class="ranking-txt">3.1운동</span>
+                                    </a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li class="sch-info-item word-lately">
+                            <h3 class="tit">최근검색어</h3>
+                            <ul class="list" aria-live="polite">
+                                <li>
+                                    <a href="javascript:void(0);" class="word-link">
+                                        <span class="word-txt">대한민국임시정부</span>
+                                    </a>
+                                    <button type="button" class="btn-del">
+                                        <span class="sr-only">삭제</span>
+                                        <i class="ico ico-del"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="word-link">
+                                        <span class="word-txt">대한민국임시정부</span>
+                                    </a>
+                                    <button type="button" class="btn-del">
+                                        <span class="sr-only">삭제</span>
+                                        <i class="ico ico-del"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="word-link">
+                                        <span class="word-txt">대한민국임시정부</span>
+                                    </a>
+                                    <button type="button" class="btn-del">
+                                        <span class="sr-only">삭제</span>
+                                        <i class="ico ico-del"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn-del-all">최근검색어 전체 삭제 <i class="ico ico-search-arrow"></i></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<main class="wrap" id="content">
+    <div class="container">
+        <!-- s contents -->
+        <div class="sub-contents">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="javascript:void(0)"><i class="ico ico-home"></i>홈</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">종합포털소개</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0)">보훈의 개념</a></li>
+                </ol>
+            </nav>
+            <div class="user-guide-container">
+                <div class="inner">
+                    <div class="page-title">
+                        <div class="result-group">
+                            <div class="result-group-head">
+                                <h3 class="title">보훈의 개념</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-concept">
+                        <div class="honour-box">
+                            <div class="honour-left">
+                                <ul class="honour-word">
+                                    <li class="honour-char">
+                                        <div class="char">護</div>
+                                        <div class="txt">지킬 <b>호</b></div>
+                                    </li>
+                                    <li class="honour-char">
+                                        <div class="char">國</div>
+                                        <div class="txt">나라 <b>국</b></div>
+                                    </li>
+                                    <li class="honour-char">
+                                        <div class="char">報</div>
+                                        <div class="txt">갚을 <b>보</b></div>
+                                    </li>
+                                    <li class="honour-char">
+                                        <div class="char">勳</div>
+                                        <div class="txt">세울 업적 <b>훈</b></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="honour-right">
+                                <div class="desc-small">
+                                    나라를 위해 몸과 마음을 바쳐 지킨 분들의 뜻을 기리고, 그에 보답하다.
+                                </div>
+                                <div class="desc-main">
+                                    나라를 위해 몸과 마음을 바친 분들께<br>
+                                    나라는 잊지 않고 보답함을 약속합니다.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="honour-content">
+                            <div class="content-title">가슴에 새기는 우리의 보훈</div>
+                            <div class="content-sub">보훈(報 勳)이란 공(功)에 보답하는 일.</div>
+                            <div class="content-desc">‘고맙게 해준 데 대한 갚음’ 을 뜻하는 보수(報酬)의 보(報)와 ‘나라를 위해 세운 공로’ 를 뜻하는 공훈(功勳)의 훈(勳)을 결합하여 만든 개념이다.</div>
+                        </div>
+                        <div class="tab-container _tabContainer">
+                            <div class="tabs-box">
+                                <ul class="tabs _tab" role="tablist">
+                                    <li class="item on">
+                                        <button class="tab-button" type="button" role="tab" id="tab-1" aria-selected="true" aria-controls="panel-1">보훈의 의미</button>
+                                    </li>
+                                    <li class="item">
+                                        <button class="tab-button" type="button" role="tab" id="tab-2" aria-selected="false" aria-controls="panel-2">보훈의 필요성</button>
+                                    </li>
+                                    <li class="item">
+                                        <button class="tab-button" type="button" role="tab" id="tab-3" aria-selected="false" aria-controls="panel-3">보훈 문화</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-content _tabContent">
+                                <div class="tab-panel on" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+                                    <div class="desc-box">
+                                        <div class="txt-lg">보훈이란 국가를 위해</div>
+                                        <div class="txt">
+                                            자신의 몸과 마음을 바친 분들의 숭고한 뜻을 기리고 그에 보답한다는 의미입니다. 그분들의 희생과 공헌이 헛되지 않도록 대한민국을 더 많이 사랑하고 더 좋은 나라로 가꿔나가야 합니다.<br/><br/>
+
+                                            고대에는 국가 전쟁 시, 공을 세운 이들을 포상하여 국가와 통치자에 대한 충성심을 유도하기 위해 보훈제도를 활용하였습니다. 보훈의 대상 역시 일반 병사들보다는 전장에서 공을 세운 장수들 위주로 실시되었습니다.<br/><br/>
+
+                                            이후 근대에 이르러 국민을 나라의 주인으로 섬기는 민주주의 이념이 확산되고 세계인들의 의식, 문화수준이 선진화됨에 따라 세계 여러 나라에서는 국가보훈을 나라가 반드시 수행해야 할 의무라는 인식을 갖고 체계적인 제도를 구축하기 시작하였습니다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden="">
+                                    <div class="desc-box">
+                                        <div class="txt-lg">영원히 살아 숨 쉬는, 보훈 정신</div>
+                                        <div class="txt">
+                                            보훈이란 과거의 역사 속에서 선열들의 숭고한 헌신을 현재에 영광스럽게 재현하고, 이를 바탕으로 미래의 공동체 발전의 비전을 제시하는 매우 중요한 일이다.<br/><br/>
+
+                                            보훈의 정신은 우리의 역사 속에서 영원히 살아 숨 쉬는 정신으로서 우리나라와 우리 민족이 세계 여러 나라들과의 치열한 경쟁 속에서 세계로 뻗어 나갈 수 있게 하는 원동력이다.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden="">
+                                    <div class="desc-box">
+                                        <div class="txt-lg">작은 것부터 실천, 보훈 문화</div>
+                                        <div class="txt">
+                                            보훈이라고 하면 언뜻 거창하게 들릴 수 있다. 그러나 우리 주변의 작은 실천에서부터 보훈 문화는 시작된다. 중요한 것은 나라를 위해 헌신하신 분들에 대해 존경심을 갖는 것이다. 그분들이 계시지 않았다면 지금처럼 풍요롭고 자유로운 대한민국이 가능했을까?<br/><br/>
+
+                                            나라를 지키기 위해 전쟁에 참전하고 민주화를 이루기 위해 부당한 권력에 맞선 분들에게 진정으로 감사하는 마음을 갖는다면 그것이 바로 나라를 사랑하는 마음이다. 애국가를 4절까지 부르면서 그 가사에 담긴 의미를 되새겨 보고 무궁화를 가꾸기나 태극기 달기 등을 실천하는 것도 보훈 문화로 가는 지름길이다. 또한 주변의 국립묘지나 현충 시설을 찾아 그분들에게 감사하는 마음을 전하는 것도 좋은 예이다.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e contents -->
+    </div>
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-info">
+        <div class="inner">
+            <div class="key-info">
+                <b class="call"><i class="ico ico-phone"></i> 대표전화&nbsp;<a href="tel:1577-0606" target="_blank" rel="noopener noreferrer">1577-0606</a></b><span class="time">(상담시간 : 평일 09:00 ~ 18:00, 점심시간 : 12:00 ~ 13:00, 매주 월요일 휴무)</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-links">
+        <div class="inner">
+            <div class="link-content">
+                <div class="logo">
+                    <a href="javascript:void(0)"><img src="../../images/common/footer-logo.png" alt="KNA 에듀센터"></a>
+                </div>
+                <div>
+                    <div class="info-links">
+                        <a class="link link-highlight" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">이용안내</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">이용약관</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">개인정보처리방침</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">저작권정책</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">자주하는질문</a>
+                        <a class="link" href="javascript:void(0)" target="_blank" rel="noopener noreferrer">찾아오시는 길</a>
+                    </div>
+                    <div class="address">(30113) 세종특별자치시 도움4로 9 정부세종청사 9동</div>
+                    <div class="copyright">© Ministry of Patriots and Veterans Affairs. All Rights Reserved.</div>
+                </div>
+                <div class="footer-dropdown _footerDropdown">
+                    <button type="button" class="btn-select _footerDropdownButton" title="관련사이트 바로가기">관련사이트 바로가기</button>
+                    <ul class="dropdown-list">
+                        <li><a href="https://www.nhis.or.kr/" title="새 창 열기" target="_blank" rel="noopener noreferrer" ><span>국민건강보험</span></a></li>
+                        <li><a href="https://www.nmkpg.go.kr/" title="새 창 열기" target="_blank" rel="noopener noreferrer"><span>국립대한민국임시정부기념관</span></a></li>
+                    </ul>
+                    <button type="button" class="btn-select-close _footerDropdownCloseButton" title="관련사이트 닫기">관련사이트 바로가기</button>
+                </div>
+            </div>
+<!--            <div class="nuri"><img src="../../images/common/ico-footer-nuri.png" alt="국가보훈부"/><span>이 누리집은 국가보훈부 산하기관 누리집입니다.</span></div>-->
+        </div>
+    </div>
+</footer>
+</body>
+</html>

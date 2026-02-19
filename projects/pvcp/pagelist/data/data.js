@@ -388,6 +388,16 @@ data.info = {
             page: '포털소개'
         },
         {
+            stateClass: 'working',
+            url: 'prtlInt/종합포털소개_보훈의개념',
+            page: '보훈의 개념'
+        },
+        {
+            stateClass: 'working',
+            url: 'prtlInt/종합포털소개_보훈문화통계',
+            page: '보훈 문화통계'
+        },
+        {
             stateClass: 'complete',
             url: 'prtlInt/종합포털소개_공지사항',
             page: '공지사항'
