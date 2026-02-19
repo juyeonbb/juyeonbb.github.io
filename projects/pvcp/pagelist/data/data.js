@@ -380,7 +380,7 @@ data.education = {
 }
 
 data.info = {
-    title: '종합포털 소개',
+    title: '종합포털소개',
     list: [
         {
             stateClass: 'complete',
@@ -403,14 +403,29 @@ data.info = {
             page: '공지사항'
         },
         {
+            stateClass: 'waiting',
+            url: 'prtlInt/종합포털소개_공지사항_상세',
+            page: '공지사항 상세'
+        },
+        {
             stateClass: 'complete',
             url: 'prtlInt/종합포털소개_보도자료',
             page: '보도자료'
         },
         {
+            stateClass: 'waiting',
+            url: 'prtlInt/종합포털소개_공지사항_상세',
+            page: '보도자료 상세(공지사항 상세와 동일)'
+        },
+        {
             stateClass: 'complete',
             url: 'prtlInt/종합포털소개_보도자료',
             page: '자료실 (보도자료와 동일)'
+        },
+        {
+            stateClass: 'waiting',
+            url: 'prtlInt/종합포털소개_공지사항_상세',
+            page: '자료실 상세(공지사항 상세와 동일)'
         },
     ]
 }
