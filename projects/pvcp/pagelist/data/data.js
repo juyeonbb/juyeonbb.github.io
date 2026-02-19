@@ -388,12 +388,12 @@ data.info = {
             page: '포털소개'
         },
         {
-            stateClass: 'working',
+            stateClass: 'waiting',
             url: 'prtlInt/종합포털소개_보훈의개념',
             page: '보훈의 개념'
         },
         {
-            stateClass: 'working',
+            stateClass: 'waiting',
             url: 'prtlInt/종합포털소개_보훈문화통계',
             page: '보훈 문화통계'
         },
@@ -434,22 +434,22 @@ data.userInfo = {
     title: '이용안내',
     list: [
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'prtlInt/이용안내',
             page: '이용안내'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'prtlInt/이용안내_자주하는질문',
             page: '자주하는 질문'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'prtlInt/이용안내_찾아오시는길',
             page: '찾아오시는 길'
         },
         {
-            stateClass: 'working',
+            stateClass: 'complete',
             url: 'prtlInt/이용안내_저작권정책',
             page: '저작권정책'
         },
