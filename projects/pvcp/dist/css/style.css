@@ -4471,6 +4471,7 @@ input::-webkit-search-results-decoration {
   text-align: left;
   white-space: normal;
   transition: 0.2s;
+  border-radius: 6px;
 }
 .file-list .upload-list .upload-list-item .btn-download a:hover, .file-list .upload-list .upload-list-item .btn-download button:hover {
   background-color: #EEF2F7;
