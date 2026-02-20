@@ -4424,6 +4424,64 @@ input::-webkit-search-results-decoration {
   border-radius: 10px;
 }
 
+.file-list {
+  padding: 40px;
+  border-radius: 16px;
+  background-color: #f4f5f6;
+  margin-top: 40px;
+}
+.file-list .file-head {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: -1.2px;
+  margin-bottom: 15px;
+}
+.file-list .upload-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.file-list .upload-list .upload-list-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: 1px solid #e3eaf3;
+  background-color: #fff;
+}
+.file-list .upload-list .upload-list-item .file-name {
+  width: 100%;
+  font-size: 17px;
+  color: #222;
+  word-break: break-all;
+}
+.file-list .upload-list .upload-list-item .file-name .ico {
+  transform: translateY(4px);
+}
+.file-list .upload-list .upload-list-item .btn-download {
+  flex-shrink: 0;
+}
+.file-list .upload-list .upload-list-item .btn-download a, .file-list .upload-list .upload-list-item .btn-download button {
+  padding: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: auto;
+  text-align: left;
+  white-space: normal;
+  transition: 0.2s;
+}
+.file-list .upload-list .upload-list-item .btn-download a:hover, .file-list .upload-list .upload-list-item .btn-download button:hover {
+  background-color: #EEF2F7;
+}
+.file-list .upload-list .upload-list-item .btn-download a:active, .file-list .upload-list .upload-list-item .btn-download button:active {
+  background-color: #D6E0EB;
+}
+.file-list .upload-list .upload-list-item .btn-download a span, .file-list .upload-list .upload-list-item .btn-download button span {
+  padding-top: 2px;
+}
+
 /*
   Breadcrumb
 */

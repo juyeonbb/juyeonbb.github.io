@@ -3617,7 +3617,7 @@
   color: #666;
 }
 .user-guide-container .view-detail .view-body {
-  padding: 30px 20px;
+  padding: 30px 20px 0;
 }
 .user-guide-container .view-detail .post-nav {
   border-top: 1px solid #EEE;

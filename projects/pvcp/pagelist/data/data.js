@@ -403,7 +403,7 @@ data.info = {
             page: '공지사항'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: 'prtlInt/종합포털소개_공지사항_상세',
             page: '공지사항 상세'
         },
@@ -413,7 +413,7 @@ data.info = {
             page: '보도자료'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: 'prtlInt/종합포털소개_공지사항_상세',
             page: '보도자료 상세(공지사항 상세와 동일)'
         },
@@ -423,7 +423,7 @@ data.info = {
             page: '자료실 (보도자료와 동일)'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: 'prtlInt/종합포털소개_공지사항_상세',
             page: '자료실 상세(공지사항 상세와 동일)'
         },
