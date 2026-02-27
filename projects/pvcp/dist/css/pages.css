@@ -8,6 +8,9 @@
 /*
   Config
 */
+.main-contents {
+  overflow: hidden;
+}
 .main-contents .section-title {
   font-size: 32px;
   font-weight: bold;
@@ -1076,6 +1079,7 @@
 */
 .sub-contents {
   padding-top: 54px;
+  overflow: hidden;
 }
 
 /*

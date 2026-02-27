@@ -1681,9 +1681,14 @@ button.swiper-pagination-bullet {
   Layout
 */
 /* layout ------------------------------------------------- */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .wrap {
   position: relative;
-  overflow: hidden;
+  padding-bottom: 100px;
 }
 
 .container {
@@ -1701,6 +1706,7 @@ button.swiper-pagination-bullet {
 @media (max-width: 1280px) {
   .container {
     padding-top: 98px;
+    padding-bottom: 70px;
   }
   .inner {
     padding: 0 15px;
@@ -2190,7 +2196,7 @@ button.swiper-pagination-bullet {
 /* -------------------------------------------------------- */
 /* footer ------------------------------------------------- */
 .footer {
-  margin-top: 100px;
+  margin-top: auto;
 }
 .footer a:focus {
   outline: none;
@@ -2386,9 +2392,6 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 1280px) {
-  .footer {
-    margin-top: 70px;
-  }
   .footer .logo {
     width: 172px;
     height: 32px;
@@ -5285,7 +5288,7 @@ div.pswp__img--placeholder,
 .popup-video-content .video-content {
   flex: 1;
   min-width: 0;
-  width: 100%;
+  width: calc(100% - 460px - 10px);
 }
 .popup-video-content .video-content .video-area {
   aspect-ratio: 680/380;
@@ -5320,7 +5323,7 @@ div.pswp__img--placeholder,
   top: 5px;
 }
 .popup-video-content .ai-subtitle {
-  width: 230px;
+  width: 460px;
   border-radius: 10px;
   border: solid 1px #dfdfdf;
   background-color: #fff;
@@ -6666,7 +6669,7 @@ div.pswp__img--placeholder,
 .result-group {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 .result-group + .result-group {
   border-top: 1px solid #EEE;
