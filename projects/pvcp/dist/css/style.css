@@ -1701,6 +1701,18 @@ button.swiper-pagination-bullet {
   background-image: url(../images/common/ico-acc-plus.png);
 }
 
+.ico-arrow-down {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/archive/ico-arrow-down.svg);
+}
+
+.ico-arrow-up {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/archive/ico-arrow-up.svg);
+}
+
 /*
   Layout
 */

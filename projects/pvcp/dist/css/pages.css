@@ -1203,6 +1203,9 @@
   display: inline-flex;
   font-size: 19px;
 }
+.featured-result .featured-result-inner .featured-result-content .featured-info .actions {
+  margin-left: auto;
+}
 .featured-result .featured-result-inner .featured-result-content .featured-meta {
   margin-bottom: 20px;
 }
@@ -1930,6 +1933,28 @@
 }
 .archive-container .history-wrapper .tab-container .tabs-box .tabs .item.on .tab-button {
   color: #003675;
+}
+.archive-container .btn-txt-fold {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 500;
+  color: #666;
+  letter-spacing: -0.96px;
+  padding: 7px 10px;
+  background-color: #F4F5F6;
+  border-radius: 6px;
+  transition: 0.2s;
+  margin-top: 10px;
+}
+.archive-container .btn-txt-fold:hover {
+  background-color: rgb(232.78, 234.8, 236.82);
+}
+.archive-container .btn-txt-fold:active {
+  background-color: rgb(224.365, 227.15, 229.935);
 }
 
 .popup-map-result {
@@ -3895,7 +3920,6 @@
   aspect-ratio: 1280/500;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 20px;
   border: 1px solid #ccc;
 }
 .user-guide-container .location-guide-wrap .map-wrap img {
@@ -3910,6 +3934,7 @@
   border: solid 1px #ddebf5;
   background-color: #f3f9fe;
   padding: 15px;
+  margin-bottom: 20px;
 }
 .user-guide-container .map-info-list .info-item {
   display: flex;
@@ -3957,6 +3982,34 @@
 }
 .user-guide-container .content-section + .content-section {
   margin-top: 60px;
+}
+.user-guide-container .transit-row {
+  display: flex;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.user-guide-container .transit-row + .transit-row {
+  margin-top: 30px;
+}
+.user-guide-container .transit-row .content-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  width: 240px;
+  background-color: #f9f9f9;
+  margin-bottom: 0;
+  text-align: center;
+  word-break: keep-all;
+  flex-shrink: 0;
+}
+.user-guide-container .transit-row .content-desc {
+  flex: 1;
+  padding: 30px;
+}
+.user-guide-container .transit-row .content-desc b {
+  font-weight: 500;
 }
 .user-guide-container .intro-concept .honour-box {
   display: flex;
@@ -4221,6 +4274,20 @@
   .user-guide-container .map-info-list .info-item + .info-item {
     border-left: 0;
     border-top: 1px dashed #a2afc7;
+  }
+  .user-guide-container .transit-row {
+    flex-direction: column;
+  }
+  .user-guide-container .transit-row .content-title {
+    width: 100%;
+    padding: 20px 15px;
+    gap: 15px;
+  }
+  .user-guide-container .transit-row .content-title .txt {
+    font-size: 20px;
+  }
+  .user-guide-container .transit-row .content-desc {
+    padding: 20px 15px;
   }
 }
 /*# sourceMappingURL=pages.css.map */
