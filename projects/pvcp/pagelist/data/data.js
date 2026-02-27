@@ -393,7 +393,7 @@ data.info = {
             page: '보훈의 개념'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: 'prtlInt/종합포털소개_보훈문화통계',
             page: '보훈 문화통계'
         },

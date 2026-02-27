@@ -4025,60 +4025,94 @@
 .user-guide-container .intro-concept .desc-box .txt {
   font-size: 17px;
 }
+.user-guide-container .intro-statics .content-section {
+  border: 1px solid #e3eaf3;
+  background-color: #f8fafc;
+  border-radius: 20px;
+  padding: 24px 40px 40px;
+}
+.user-guide-container .intro-statics .content-section + .content-section {
+  margin-top: 40px;
+}
+.user-guide-container .intro-statics .result-group-head {
+  margin-bottom: 15px;
+}
+.user-guide-container .intro-statics .result-group-head .title {
+  font-size: 24px;
+  letter-spacing: -1.2px;
+}
+.user-guide-container .intro-statics .result-group-head .form-select {
+  width: 100px;
+}
 .user-guide-container .intro-statics .chart-slider-wrapper {
   position: relative;
 }
-.user-guide-container .intro-statics .btn-circle-nav {
+.user-guide-container .intro-statics .btn-nav {
   position: absolute;
-  width: 50px;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-  border: solid 1px #ccc;
-  background-color: #fff;
   top: 50%;
-  border-radius: 100%;
   transform: translateY(-50%);
   z-index: 2;
+  padding: 5px;
+  transition: 0.2s;
 }
-.user-guide-container .intro-statics .btn-circle-nav.btn-circle-prev {
-  left: -75px;
+.user-guide-container .intro-statics .btn-nav:hover {
+  background-color: #EEF2F7;
 }
-.user-guide-container .intro-statics .btn-circle-nav.btn-circle-next {
-  right: -75px;
+.user-guide-container .intro-statics .btn-nav:active {
+  background-color: #D6E0EB;
+}
+.user-guide-container .intro-statics .btn-nav.btn-prev {
+  left: -29px;
+}
+.user-guide-container .intro-statics .btn-nav.btn-next {
+  right: -29px;
 }
 .user-guide-container .intro-statics .chart-head {
-  background-color: #003675;
+  background-color: #2462d6;
   color: #fff;
   height: 50px;
   line-height: 50px;
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: -0.96px;
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: -0.95px;
   padding: 0 20px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 6px 6px 0 0;
 }
 .user-guide-container .intro-statics .chart-body {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-top: 0;
   padding: 20px;
+  background-color: #fff;
+  border-radius: 0 0 6px 6px;
 }
 .user-guide-container .intro-statics .keyword-rank-list {
-  gap: 20px;
+  gap: 8px;
 }
-.user-guide-container .intro-statics .keyword-rank-list a:hover .txt {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.user-guide-container .intro-statics .keyword-rank-list a:hover {
+  background-color: #eef2f7;
+}
+.user-guide-container .intro-statics .keyword-rank-list .item a {
+  border-radius: 4px;
+  transition: 0.2s;
+  padding: 4.75px 8px;
+}
+.user-guide-container .intro-statics .keyword-rank-list .item .num {
+  font-size: 15px;
+}
+.user-guide-container .intro-statics .keyword-rank-list .item .txt {
+  font-size: 15px;
+  font-weight: 500;
 }
 .user-guide-container .intro-statics .keyword-rank-list .item .val {
   margin-left: auto;
   font-size: 15px;
-  color: #666;
+  color: #777;
 }
 .user-guide-container .intro-statics .keyword-rank-list .item.item-top .txt {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 @media (max-width: 1280px) {
