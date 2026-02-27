@@ -238,3 +238,186 @@
     });
 
 })(jQuery);
+
+// 전체 메뉴
+(function ($) {
+    $(function () {
+        var $body = $('body');
+        var $layer = $('._allmenuLayer');
+        var $dialog = $('._allmenu');
+        var $dim = $('._allMenuDim');
+        var $toggleBtn = $('._openAllMenu');
+
+        var lastFocusEl = null;
+
+        function isOpen() {
+            return $layer.hasClass('is-open');
+        }
+
+        function getFocusable($root) {
+            return $root.find('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])').filter(':visible');
+        }
+
+        function syncAria(opened) {
+            $toggleBtn.attr('aria-expanded', opened ? 'true' : 'false');
+            $dialog.attr('aria-hidden', opened ? 'false' : 'true');
+        }
+
+        function openAllmenu(opener) {
+            if (isOpen()) return;
+
+            lastFocusEl = opener || document.activeElement;
+
+            $layer.addClass('is-open');
+            $body.addClass('scrOff');
+            $dim.stop(true, true).fadeIn(200);
+            $toggleBtn.addClass('is-open');
+
+            syncAria(true);
+
+            var $focusable = getFocusable($dialog);
+            ($focusable.first()[0] || $dialog[0]).focus();
+        }
+
+        function closeAllmenu() {
+            if (!isOpen()) return;
+
+            $layer.removeClass('is-open');
+            $body.removeClass('scrOff');
+            $dim.stop(true, true).fadeOut(200);
+            $toggleBtn.removeClass('is-open');
+
+            syncAria(false);
+
+            if (lastFocusEl && $(lastFocusEl).length) $(lastFocusEl).focus();
+        }
+
+        function toggleAllmenu(btnEl) {
+            isOpen() ? closeAllmenu() : openAllmenu(btnEl);
+        }
+
+        // 토글 버튼
+        $toggleBtn.on('click', function (e) {
+            toggleAllmenu(this);
+        });
+
+        // dim 클릭 닫기
+        $dim.on('click', function () {
+            closeAllmenu();
+        });
+
+        // ESC 닫기 + focus trap
+        $(document).on('keydown.allmenu', function (e) {
+            if (!isOpen()) return;
+
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                closeAllmenu();
+                return;
+            }
+
+            if (e.key === 'Tab') {
+                var $focusable = getFocusable($dialog);
+                if (!$focusable.length) return;
+
+                var first = $focusable.first()[0];
+                var last = $focusable.last()[0];
+
+                if (e.shiftKey && document.activeElement === first) {
+                    e.preventDefault();
+                    last.focus();
+                } else if (!e.shiftKey && document.activeElement === last) {
+                    e.preventDefault();
+                    first.focus();
+                }
+            }
+        });
+
+        // 모바일 전체메뉴
+        $dialog.on('click', '.mo-tab[role="tab"]', function () {
+            var $btn = $(this);
+            var panelId = $btn.attr('aria-controls');
+
+            $btn
+                .addClass('is-active')
+                .attr({ 'aria-selected': 'true', tabindex: '0' })
+                .siblings('.mo-tab')
+                .removeClass('is-active')
+                .attr({ 'aria-selected': 'false', tabindex: '-1' });
+
+            $('#' + panelId).prop('hidden', false).siblings('.mo-panel').prop('hidden', true);
+        });
+
+        // 탭 키보드 이동
+        $dialog.on('keydown', '.mo-left[role="tablist"] .mo-tab', function (e) {
+            var $tabs = $dialog.find('.mo-left .mo-tab');
+            var idx = $tabs.index(this);
+
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                e.preventDefault();
+                $tabs.eq(Math.min(idx + 1, $tabs.length - 1)).focus().trigger('click');
+            }
+            if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                $tabs.eq(Math.max(idx - 1, 0)).focus().trigger('click');
+            }
+            if (e.key === 'Home') {
+                e.preventDefault();
+                $tabs.eq(0).focus().trigger('click');
+            }
+            if (e.key === 'End') {
+                e.preventDefault();
+                $tabs.eq($tabs.length - 1).focus().trigger('click');
+            }
+        });
+
+        // 모바일 아코디언
+        $dialog.on('click', '._accBtn[aria-controls]', function () {
+            var $btn = $(this);
+            var panelId = $btn.attr('aria-controls');
+            var $panel = $dialog.find('#' + panelId);
+
+            if (!$panel.length) return;
+
+            var opened = $btn.attr('aria-expanded') === 'true';
+            var nextOpen = !opened;
+
+            $btn.attr('aria-expanded', String(nextOpen));
+
+            if (nextOpen) {
+                $btn.parent('.acc-item-head').addClass('is-open');
+                $panel.stop(true, true).slideDown(200);
+            } else {
+                $btn.parent('.acc-item-head').removeClass('is-open');
+                $panel.stop(true, true).slideUp(200);
+            }
+
+            $btn.find('.ico').text(nextOpen ? '−' : '+');
+        });
+
+        // 초기 상태 보정
+        $dialog.find('._accBtn[aria-controls]').each(function () {
+            var $btn = $(this);
+            var panelId = $btn.attr('aria-controls');
+            var $panel = $dialog.find('#' + panelId);
+
+            if (!$panel.length) return;
+
+            var expanded = $btn.attr('aria-expanded') === 'true';
+
+            if (expanded) {
+                $panel.show();
+                $btn.parent('.acc-item-head').addClass('is-open');
+                $btn.find('.ico').text('−');
+            } else {
+                $panel.hide();
+                $btn.parent('.acc-item-head').removeClass('is-open');
+                $btn.find('.ico').text('+');
+            }
+        });
+
+        // 초기 상태
+        syncAria(false);
+        $dim.hide();
+    });
+})(jQuery);

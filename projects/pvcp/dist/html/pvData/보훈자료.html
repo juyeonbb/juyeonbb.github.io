@@ -27,7 +27,7 @@
         <span class="nuri-txt">이 누리집은 대한민국 공식 전자정부 누리집입니다.</span>
     </div>
 </div>
-<!-- Header // 디자인 대기중 -->
+<!-- Header -->
 <header class="header _header">
     <div class="header-pc">
         <div class="inner">
@@ -185,13 +185,305 @@
                     <!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">로그인</a></li>-->
                     <!--                    <li class="action-item show-pc"><a href="javascript:void(0);" class="txt-link">회원가입</a></li>-->
                     <li class="action-item"><a href="javascript:void(0);" class="btn-search _popupTrigger" data-trigger="popup-search"><i class="ico ico-search"></i><em>통합검색</em></a></li>
-                    <li class="action-item show-pc"><button type="button" class="btn-menu"><span></span><span></span><span></span><em>전체메뉴</em></button></li>
-                    <li class="action-item show-mo"><button type="button" class="btn-menu"><span></span><span></span><span></span><em>전체메뉴</em></button></li>
+                    <li class="action-item">
+                        <button type="button" class="btn-menu _openAllMenu" aria-expanded="false">
+                            <span></span><span></span><span></span>
+                            <em>전체메뉴</em>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="header-mo"></div>
+    <!-- 전체메뉴 추가 2026.02.27 -->
+    <div class="allmenu-dim _allMenuDim"></div>
+    <div class="allmenu-layer _allmenuLayer">
+        <div class="allmenu _allmenu" role="dialog" aria-modal="true" aria-labelledby="allmenuTitle">
+            <div class="allmenu-inner" role="document">
+                <div class="allmenu-views">
+                    <!-- PC VIEW -->
+                    <nav class="allmenu-pc _allmenuPc" aria-label="전체메뉴 PC 보기">
+                        <ul class="allmenu-grid" role="list">
+                            <!-- 보훈자료 -->
+                            <li class="col" role="listitem">
+                                <a class="col-title" href="javascript:void(0);">보훈자료</a>
+                                <ul class="d2" role="list">
+                                    <li class="d2-item">
+                                        <a class="d2-link" href="javascript:void(0);">보훈자료</a>
+                                        <ul class="d3" role="list">
+                                            <li><a href="javascript:void(0);">인물</a></li>
+                                            <li><a href="javascript:void(0);">역사</a></li>
+                                            <li><a href="javascript:void(0);">사진/필름</a></li>
+                                            <li><a href="javascript:void(0);">유물</a></li>
+                                            <li><a href="javascript:void(0);">사료</a></li>
+                                            <li><a href="javascript:void(0);">도서</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="d2-item">
+                                        <a class="d2-link" href="javascript:void(0);">보훈콘텐츠</a>
+                                        <ul class="d3" role="list">
+                                            <li><a href="javascript:void(0);">신규</a></li>
+                                            <li><a href="javascript:void(0);">청소년 추천</a></li>
+                                            <li><a href="javascript:void(0);">독립의 길</a></li>
+                                            <li><a href="javascript:void(0);">호국의 혼</a></li>
+                                            <li><a href="javascript:void(0);">민주의 봄</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">현충시설</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">연표검색</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">지도검색</a></li>
+                                </ul>
+                            </li>
+                            <!-- 행사·전시 -->
+                            <li class="col" role="listitem">
+                                <a class="col-title" href="javascript:void(0);">행사·전시</a>
+                                <ul class="d2" role="list">
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">기념행사</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">특별 전시</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">상설 전시</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">디지털·VR 전시</a></li>
+                                </ul>
+                            </li>
+                            <!-- 체험·교육 -->
+                            <li class="col" role="listitem">
+                                <a class="col-title" href="javascript:void(0);">체험·교육</a>
+                                <ul class="d2" role="list">
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">문화·체험 행사</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">온 · 오프라인 교육</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">배움 자료실</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">보훈e북</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">이달의 영웅</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">이달의 역사</a></li>
+                                </ul>
+                            </li>
+                            <!-- 종합포털 소개 -->
+                            <li class="col" role="listitem">
+                                <a class="col-title" href="javascript:void(0);">종합포털 소개</a>
+                                <ul class="d2" role="list">
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">종합포털 소개</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">보훈의 개념</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">보훈 문화통계</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">공지사항</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">보도자료</a></li>
+                                </ul>
+                            </li>
+                            <!-- 이용안내 -->
+                            <li class="col" role="listitem">
+                                <a class="col-title" href="javascript:void(0);">이용안내</a>
+                                <ul class="d2" role="list">
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">이용안내</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">자주하는 질문</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">찾아오시는 길</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">이용약관</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">개인정보처리방침</a></li>
+                                    <li class="d2-item"><a class="d2-link" href="javascript:void(0);">저작권정책</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- MOBILE VIEW -->
+                    <nav class="allmenu-mo _allmenuMo" aria-label="전체메뉴 모바일 보기">
+                        <div class="mo-wrap">
+                            <!-- 좌측 1depth 탭 -->
+                            <div class="mo-left" role="tablist" aria-label="1차 메뉴">
+                                <button type="button" class="mo-tab is-active" role="tab" id="moTab-1" aria-controls="moPanel-1" aria-selected="true" tabindex="0">보훈자료</button>
+                                <button type="button" class="mo-tab" role="tab" id="moTab-2" aria-controls="moPanel-2" aria-selected="false" tabindex="-1">행사·전시</button>
+                                <button type="button" class="mo-tab" role="tab" id="moTab-3" aria-controls="moPanel-3" aria-selected="false" tabindex="-1">체험·교육</button>
+                                <button type="button" class="mo-tab" role="tab" id="moTab-4" aria-controls="moPanel-4" aria-selected="false" tabindex="-1">종합포털 소개</button>
+                                <button type="button" class="mo-tab" role="tab" id="moTab-5" aria-controls="moPanel-5" aria-selected="false" tabindex="-1">이용안내</button>
+                            </div>
+                            <!-- 우측 패널들 -->
+                            <div class="mo-right">
+                                <!-- 1) 보훈자료 -->
+                                <div class="mo-panel" role="tabpanel" id="moPanel-1" aria-labelledby="moTab-1">
+                                    <div class="mo-panel-title">보훈자료</div>
+                                    <div class="acc" role="list">
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head is-open">
+                                                <a class="mo-link" href="javascript:void(0);">보훈자료</a>
+                                                <button type="button" class="acc-btn _accBtn" aria-controls="acc-1-1" aria-expanded="true">
+                                                    <span class="ico" aria-hidden="true">−</span>
+                                                </button>
+                                            </div>
+                                            <div class="acc-panel" id="acc-1-1">
+                                                <a href="javascript:void(0);">인물</a>
+                                                <a href="javascript:void(0);">역사</a>
+                                                <a href="javascript:void(0);">사진/필름</a>
+                                                <a href="javascript:void(0);">유물</a>
+                                                <a href="javascript:void(0);">사료</a>
+                                                <a href="javascript:void(0);">도서</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head is-open">
+                                                <a class="mo-link" href="javascript:void(0);">보훈콘텐츠</a>
+                                                <button type="button" class="acc-btn _accBtn" aria-controls="acc-1-2" aria-expanded="true">
+                                                    <span class="ico" aria-hidden="true">−</span>
+                                                </button>
+                                            </div>
+                                            <div class="acc-panel" id="acc-1-2" hidden>
+                                                <a href="javascript:void(0);">신규</a>
+                                                <a href="javascript:void(0);">청소년 추천</a>
+                                                <a href="javascript:void(0);">독립의 길</a>
+                                                <a href="javascript:void(0);">호국의 혼</a>
+                                                <a href="javascript:void(0);">민주의 봄</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">현충시설</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">연표검색</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">지도검색</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2) 행사·전시 -->
+                                <div class="mo-panel" role="tabpanel" id="moPanel-2" aria-labelledby="moTab-2" hidden>
+                                    <div class="mo-panel-title">행사·전시</div>
+                                    <div class="acc" role="list">
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">기념행사</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">특별 전시</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">상설 전시</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">디지털·VR 전시</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 3) 체험·교육 -->
+                                <div class="mo-panel" role="tabpanel" id="moPanel-3" aria-labelledby="moTab-3" hidden>
+                                    <div class="mo-panel-title">체험·교육</div>
+                                    <div class="acc" role="list">
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">문화·체험 행사</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">온·오프라인 교육</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">배움 자료실</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">보훈e북</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">이달의 영웅</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">이달의 역사</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 4) 종합포털 소개 -->
+                                <div class="mo-panel" role="tabpanel" id="moPanel-4" aria-labelledby="moTab-4" hidden>
+                                    <div class="mo-panel-title">종합포털 소개</div>
+                                    <div class="acc" role="list">
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">종합포털 소개</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">보훈의 개념</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">보훈 문화통계</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">공지사항</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">보도자료</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 5) 이용안내 -->
+                                <div class="mo-panel" role="tabpanel" id="moPanel-5" aria-labelledby="moTab-5" hidden>
+                                    <div class="mo-panel-title">이용안내</div>
+                                    <div class="acc" role="list">
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">이용안내</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">자주하는 질문</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">찾아오시는 길</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">이용약관</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">개인정보처리방침</a>
+                                            </div>
+                                        </div>
+                                        <div class="acc-item" role="listitem">
+                                            <div class="acc-item-head">
+                                                <a class="mo-link" href="javascript:void(0);">저작권정책</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 <div class="dim _dim"></div>
 <div class="popup-wrap _popup" data-popup="popup-search" role="dialog" aria-labelledby="popupSearch" aria-modal="true">
