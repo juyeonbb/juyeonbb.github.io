@@ -1677,6 +1677,18 @@ button.swiper-pagination-bullet {
   background-image: url(../images/userGuide/ico-call.svg);
 }
 
+.ico-acc-minus {
+  width: 11px;
+  height: 1px;
+  background-image: url(../images/common/ico-acc-minus.png);
+}
+
+.ico-acc-plus {
+  width: 11px;
+  height: 11px;
+  background-image: url(../images/common/ico-acc-plus.png);
+}
+
 /*
   Layout
 */

@@ -306,7 +306,7 @@
             closeAllmenu();
         });
 
-        // ESC 닫기 + focus trap
+        // ESC 닫기 (웹접근성)
         $(document).on('keydown.allmenu', function (e) {
             if (!isOpen()) return;
 
@@ -387,12 +387,12 @@
             if (nextOpen) {
                 $btn.parent('.acc-item-head').addClass('is-open');
                 $panel.stop(true, true).slideDown(200);
+                $btn.find('.ico').removeClass('ico-acc-plus').addClass('ico-acc-minus');
             } else {
                 $btn.parent('.acc-item-head').removeClass('is-open');
                 $panel.stop(true, true).slideUp(200);
+                $btn.find('.ico').removeClass('ico-acc-minus').addClass('ico-acc-plus');
             }
-
-            $btn.find('.ico').text(nextOpen ? '−' : '+');
         });
 
         // 초기 상태 보정
@@ -408,11 +408,11 @@
             if (expanded) {
                 $panel.show();
                 $btn.parent('.acc-item-head').addClass('is-open');
-                $btn.find('.ico').text('−');
+                $btn.find('.ico').removeClass('ico-acc-plus').addClass('ico-acc-minus');
             } else {
                 $panel.hide();
                 $btn.parent('.acc-item-head').removeClass('is-open');
-                $btn.find('.ico').text('+');
+                $btn.find('.ico').removeClass('ico-acc-minus').addClass('ico-acc-plus');
             }
         });
 
