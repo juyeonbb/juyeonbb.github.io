@@ -752,10 +752,10 @@
         $pagination.twbsPagination({
             totalPages: TOTAL_PAGES,
             visiblePages: getVisiblePages(),
-            first: false,
+            first: `<i class="ico ico-paging-first"></i><span class="">처음</span>`,
             prev: `<i class="ico ico-paging-prev"></i><span class="">이전</span>`,
             next: `<span class="">다음</span><i class="ico ico-paging-next"></i>`,
-            last: false
+            last: `<span class="">끝</span><i class="ico ico-paging-last"></i>`
         });
     }
 

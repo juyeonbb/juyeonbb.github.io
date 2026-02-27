@@ -1383,16 +1383,28 @@ button.swiper-pagination-bullet {
   background-color: #fff;
 }
 
+.ico-paging-first {
+  width: 11px;
+  height: 14px;
+  background-image: url(../images/common/ico-paging-first.svg);
+}
+
 .ico-paging-prev {
-  width: 10.5px;
-  height: 16px;
-  background-image: url(../images/common/ico-paging-prev.png);
+  width: 8px;
+  height: 14px;
+  background-image: url(../images/common/ico-paging-prev.svg);
 }
 
 .ico-paging-next {
-  width: 10.5px;
-  height: 16px;
-  background-image: url(../images/common/ico-paging-next.png);
+  width: 8px;
+  height: 14px;
+  background-image: url(../images/common/ico-paging-next.svg);
+}
+
+.ico-paging-last {
+  width: 11px;
+  height: 14px;
+  background-image: url(../images/common/ico-paging-last.svg);
 }
 
 .ico-magnify {
