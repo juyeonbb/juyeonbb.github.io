@@ -5581,7 +5581,7 @@ div.pswp__img--placeholder,
 .popup-video-content .video-content {
   flex: 1;
   min-width: 0;
-  width: calc(100% - 460px - 10px);
+  width: calc(100% - 360px - 10px);
   transition: width 0.2s;
 }
 .popup-video-content .video-content .video-area {
@@ -5617,7 +5617,7 @@ div.pswp__img--placeholder,
   top: 5px;
 }
 .popup-video-content .ai-subtitle {
-  width: 460px;
+  width: 360px;
   border-radius: 10px;
   border: solid 1px #dfdfdf;
   background-color: #fff;
