@@ -662,6 +662,7 @@
         <div class="popup-content">
             <div class="popup-head">
                 <span class="title" id="popupHistoryResult">인천을 만난 김구🤝 | 청년에서 거목으로 🇰🇷 <span class="color-point">#김구 #국가보훈처 #송가인</span></span>
+                <button type="button" class="btn btn-sm btn-border-gray btn-fold _btnFold">자막닫기</button>
                 <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
             </div>
             <div class="popup-body">
@@ -749,5 +750,17 @@
         </div>
     </div>
 </div>
+<script>
+    // default가 열린 상태
+    $('._btnFold').on('click', function () {
+        if($(this).hasClass('folding')) {
+            $(this).removeClass('folding').text('자막닫기');
+            $('.popup-video-content').removeClass('folding');
+        } else {
+            $(this).addClass('folding').text('자막열기');
+            $('.popup-video-content').addClass('folding');
+        }
+    })
+</script>
 </body>
 </html>
