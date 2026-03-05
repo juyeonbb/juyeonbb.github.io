@@ -1623,8 +1623,8 @@
   padding: 0 30px;
 }
 .archive-container .detail-content .memorial-detail-content .photo-list {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 30px 27px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 30px 45px;
 }
 .archive-container .detail-content .title-area {
   margin-bottom: 20px;
