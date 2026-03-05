@@ -388,7 +388,7 @@ data.info = {
             page: '포털소개'
         },
         {
-            stateClass: 'waiting',
+            stateClass: 'complete',
             url: 'prtlInt/종합포털소개_보훈의개념',
             page: '보훈의 개념'
         },
