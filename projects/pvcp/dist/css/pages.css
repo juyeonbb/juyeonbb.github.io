@@ -1641,6 +1641,19 @@
   font-size: 15px;
   padding: 0 8px;
 }
+.archive-container .detail-content .title-area.title-area-horizontal {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+.archive-container .detail-content .title-area.title-area-horizontal .title {
+  margin-bottom: 0;
+}
+.archive-container .detail-content .title-area.title-area-horizontal .actions {
+  margin-left: auto;
+}
 .archive-container .detail-content .desc-area {
   margin-bottom: 17px;
   margin-top: -14px;
