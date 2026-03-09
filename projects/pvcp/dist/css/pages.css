@@ -1863,16 +1863,13 @@
   letter-spacing: -0.68px;
   color: #444;
 }
-.archive-container .detail-content .featured-info-box .featured-info .meta .row .desc.desc-line .txt {
+.archive-container .detail-content .featured-info-box .featured-info .meta .row .desc .txt {
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  max-height: none;
+  transition: max-height 0.25s ease;
 }
-.archive-container .detail-content .featured-info-box .featured-info .meta .row .desc.desc-line.is-expanded .txt {
-  -webkit-line-clamp: none;
-  overflow: visible;
-  display: block;
+.archive-container .detail-content .featured-info-box .featured-info .meta .row .desc.is-expanded .txt {
+  overflow: hidden;
 }
 .archive-container .detail-content .section-content + .section-content {
   margin-top: 60px;
@@ -1915,7 +1912,7 @@
   border-radius: 4px;
   border: solid 1px transparent;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 27px;
   margin-bottom: 40px;
   margin-top: 20px;
 }
@@ -3283,11 +3280,15 @@
   display: flex;
   justify-content: space-between;
   padding: 30px 20px 0;
+  gap: 20px;
 }
 .exhibition-container .exhibition-detail .detail-body .detail-description {
+  width: calc(100% - 420px - 20px);
   display: flex;
   flex-direction: column;
   gap: 30px;
+  flex-shrink: 0;
+  min-width: 0;
 }
 .exhibition-container .exhibition-detail .detail-body .detail-description .content {
   font-size: 17px;
@@ -3304,9 +3305,12 @@
 }
 .exhibition-container .exhibition-detail .detail-body .detail-poster {
   display: flex;
+  width: 420px;
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  flex-shrink: 0;
+  min-width: 0;
 }
 .exhibition-container .exhibition-detail .detail-body .detail-poster .poster-figure {
   width: 420px;
@@ -3570,7 +3574,11 @@
     padding: 20px 20px 0;
     gap: 30px;
   }
+  .exhibition-container .exhibition-detail .detail-body .detail-description {
+    width: 100%;
+  }
   .exhibition-container .exhibition-detail .detail-body .detail-poster {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
