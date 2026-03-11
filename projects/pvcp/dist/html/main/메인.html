@@ -518,7 +518,7 @@
         <div class="popup-content">
             <div class="popup-head">
                 <span class="title" id="popupSearch">검색어를 입력해주세요</span>
-                <a class="tip-link" href="javascript:void(0);">검색에 어려움이 있으신가요? <i class="ico ico-search-arrow"></i></a>
+<!--                <a class="tip-link" href="javascript:void(0);">검색에 어려움이 있으신가요? <i class="ico ico-search-arrow"></i></a>-->
                 <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
             </div>
             <div class="popup-body">
@@ -720,11 +720,11 @@
                 <div class="inner">
                     <div class="section-header">
                         <h2 class="section-title">추천 콘텐츠</h2>
-                        <ul class="section-filter" role="radiogroup" aria-label="추천 콘텐츠 필터">
-                            <li class="item on"><button type="button" role="radio" aria-checked="true">신규 콘텐츠</button></li>
-                            <li class="item"><button type="button" role="radio" aria-checked="false">독립의 길</button></li>
-                            <li class="item"><button type="button" role="radio" aria-checked="false">호국의 혼</button></li>
-                            <li class="item"><button type="button" role="radio" aria-checked="false">민주의 혼</button></li>
+                        <ul class="section-filter" aria-label="추천 콘텐츠 필터">
+                            <li class="item on"><button type="button">신규 콘텐츠</button></li>
+                            <li class="item"><button type="button">독립의 길</button></li>
+                            <li class="item"><button type="button">호국의 혼</button></li>
+                            <li class="item"><button type="button">민주의 혼</button></li>
                         </ul>
                         <a href="javascript:void(0)" class="btn-more"><span>더보기</span><i class="ico ico-plus"></i></a>
                     </div>
@@ -946,27 +946,11 @@
                 </div>
                 <div class="section-body">
                     <div class="side-category-menu">
-                        <ul class="category-list _categoryList" role="radiogroup">
-                            <li class="category-item is-active">
-                                <button type="button" role="radio" aria-checked="true">
-                                    <span class="text">전체</span>
-                                </button>
-                            </li>
-                            <li class="category-item">
-                                <button type="button" role="radio" aria-checked="false">
-                                    <span class="text">대한민국임시정부기념관</span>
-                                </button>
-                            </li>
-                            <li class="category-item">
-                                <button type="button" role="radio" aria-checked="false">
-                                    <span class="text">독립기념관</span>
-                                </button>
-                            </li>
-                            <li class="category-item">
-                                <button type="button" role="radio" aria-checked="false">
-                                    <span class="text">기타</span>
-                                </button>
-                            </li>
+                        <ul class="category-list _categoryList" aria-label="기관별 콘텐츠 필터">
+                            <li class="category-item is-active"><button type="button">전체</button></li>
+                            <li class="category-item"><button type="button">대한민국임시정부기념관</button></li>
+                            <li class="category-item"><button type="button">독립기념관</button></li>
+                            <li class="category-item"><button type="button">기타</button></li>
                         </ul>
                     </div>
                     <div class="slider-wrapper card-list-wrap">
@@ -1167,25 +1151,12 @@
             </section>
             <script>
                 $(function () {
-                    var $radioGroup = $('._categoryList');
-                    var $buttons = $radioGroup.find('[role="radio"]');
-
-                    function activateRadio($target) {
-                        $buttons.attr('aria-checked', 'false').attr('tabindex', '-1').parent().removeClass('is-active');
-                        $target.attr('aria-checked', 'true').attr('tabindex', '0').parent().addClass('is-active').end().focus();
-                    }
-
-                    $buttons.each(function () {
-                        var $btn = $(this);
-                        if ($btn.attr('aria-checked') === 'true') {
-                            $btn.attr('tabindex', '0');
-                        } else {
-                            $btn.attr('tabindex', '-1');
-                        }
-                    });
+                    var $group = $('._categoryList');
+                    var $buttons = $group.find('button');
 
                     $buttons.on('click', function () {
-                        activateRadio($(this));
+                        $buttons.parent().removeClass('is-active');
+                        $(this).parent().addClass('is-active');
                     });
                 });
 
@@ -1218,12 +1189,12 @@
                 <div class="inner">
                     <div class="section-header">
                         <h2 class="section-title">교육</h2>
-                        <ul class="section-filter" role="radiogroup" aria-label="교육 콘텐츠 필터">
-                            <li class="item on"><button type="button" role="radio" aria-checked="true">전체</button></li>
-                            <li class="item"><button type="button" role="radio" aria-checked="false">독립</button></li>
-                            <li class="item"><button type="button" role="radio" aria-checked="false">호국</button></li>
-                            <li class="item"><button type="button" role="radio" aria-checked="false">보훈</button></li>
-                            <li class="item"><button type="button" role="radio" aria-checked="false">기타</button></li>
+                        <ul class="section-filter" aria-label="교육 콘텐츠 필터">
+                            <li class="item on"><button type="button">전체</button></li>
+                            <li class="item"><button type="button">독립</button></li>
+                            <li class="item"><button type="button">호국</button></li>
+                            <li class="item"><button type="button">보훈</button></li>
+                            <li class="item"><button type="button">기타</button></li>
                         </ul>
                         <a href="javascript:void(0)" class="btn-more"><span>더보기</span><i class="ico ico-plus"></i></a>
                     </div>
@@ -1594,13 +1565,13 @@
                             <div class="tab-container _tabContainer">
                                 <div class="tabs-box">
                                     <ul class="tabs _tab" role="tablist">
-                                        <li class="item on">
+                                        <li class="item on" role="presentation">
                                             <button class="tab-button" type="button" role="tab" id="tab-alert" aria-selected="true" aria-controls="panel-alert">알림</button>
                                         </li>
-                                        <li class="item">
+                                        <li class="item" role="presentation">
                                             <button class="tab-button" type="button" role="tab" id="tab-data" aria-selected="false" aria-controls="panel-data">보도자료</button>
                                         </li>
-                                        <li class="item">
+                                        <li class="item" role="presentation">
                                             <button class="tab-button" type="button" role="tab" id="tab-event" aria-selected="false" aria-controls="panel-event">보훈행사</button>
                                         </li>
                                     </ul>

@@ -11,21 +11,13 @@ let front = (function () {
 
         $(document).on('click', '._skip a', skipNav); // SKIP NAV
 
-        $(document).on('click', '.section-filter[role="radiogroup"] [role="radio"]', function (e) {
-            const $radio = $(e.currentTarget);
-            if ($radio.attr('aria-checked') === 'true') return;
+        // 필터 공통
+        $(document).on('click', '.section-filter button', function (e) {
+            const $button = $(e.currentTarget);
+            const $group = $button.closest('.section-filter');
 
-            const $group = $radio.closest('.section-filter[role="radiogroup"]');
-
-            $group.find('[role="radio"]')
-                .attr('aria-checked', 'false')
-                .closest('.item')
-                .removeClass('on');
-
-            $radio
-                .attr('aria-checked', 'true')
-                .closest('.item')
-                .addClass('on');
+            $group.find('.item').removeClass('on');
+            $button.closest('.item').addClass('on');
         });
 
         // 좋아요 버튼

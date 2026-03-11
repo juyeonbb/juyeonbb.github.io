@@ -1561,24 +1561,6 @@ button.swiper-pagination-bullet {
   background-image: url(../images/archive/ico-map-close.png);
 }
 
-.ico-badge-green {
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/archive/btn-sort-green.png);
-}
-
-.ico-badge-blue {
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/archive/ico-badge-blue.png);
-}
-
-.ico-badge-red {
-  width: 16px;
-  height: 16px;
-  background-image: url(../images/archive/ico-badge-red.png);
-}
-
 .ico-pin {
   width: 15px;
   height: 20px;

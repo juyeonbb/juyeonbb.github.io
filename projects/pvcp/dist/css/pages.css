@@ -1863,14 +1863,6 @@
   letter-spacing: -0.68px;
   color: #444;
 }
-.archive-container .detail-content .featured-info-box .featured-info .meta .row .desc .txt {
-  overflow: hidden;
-  max-height: none;
-  transition: max-height 0.25s ease;
-}
-.archive-container .detail-content .featured-info-box .featured-info .meta .row .desc.is-expanded .txt {
-  overflow: hidden;
-}
 .archive-container .detail-content .section-content + .section-content {
   margin-top: 60px;
 }
@@ -2386,17 +2378,69 @@
   font-size: 15px;
   font-weight: bold;
 }
+.map-search-container .map-container .map-search-form .search-sort .btn-sort .ico {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 2px solid #228738;
+  background-color: transparent;
+  transition: 0.2s;
+}
+.map-search-container .map-container .map-search-form .search-sort .btn-sort .ico::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/archive/ico-sort-check.png);
+  width: 8px;
+  height: 6px;
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+  opacity: 0;
+}
+.map-search-container .map-container .map-search-form .search-sort .btn-sort.active .ico::after {
+  opacity: 1;
+}
 .map-search-container .map-container .map-search-form .search-sort .btn-sort.btn-sort-green {
   background-color: #eaf6ec;
   color: #287439;
+}
+.map-search-container .map-container .map-search-form .search-sort .btn-sort.btn-sort-green .ico {
+  border-color: #228738;
+}
+.map-search-container .map-container .map-search-form .search-sort .btn-sort.btn-sort-green:hover {
+  background-color: #c4f0cb;
+}
+.map-search-container .map-container .map-search-form .search-sort .btn-sort.btn-sort-green.active .ico {
+  background-color: #228738;
 }
 .map-search-container .map-container .map-search-form .search-sort .btn-sort.btn-sort-blue {
   background-color: #e7f4fe;
   color: #0c6cb4;
 }
+.map-search-container .map-container .map-search-form .search-sort .btn-sort.btn-sort-blue .ico {
+  border-color: #0b78cb;
+}
+.map-search-container .map-container .map-search-form .search-sort .btn-sort.btn-sort-blue:hover {
+  background-color: #bfe3ff;
+}
+.map-search-container .map-container .map-search-form .search-sort .btn-sort.btn-sort-blue.active .ico {
+  background-color: #0b78cb;
+}
 .map-search-container .map-container .map-search-form .search-sort .btn-sort.btn-sort-red {
   background-color: #fdefec;
   color: #be2f13;
+}
+.map-search-container .map-container .map-search-form .search-sort .btn-sort.btn-sort-red .ico {
+  border-color: #de3412;
+}
+.map-search-container .map-container .map-search-form .search-sort .btn-sort.btn-sort-red:hover {
+  background-color: #ffddd6;
+}
+.map-search-container .map-container .map-search-form .search-sort .btn-sort.btn-sort-red.active .ico {
+  background-color: #de3412;
 }
 .map-search-container .map-container .map-search-form .search-sort .btn-sort .ico {
   flex-shrink: 0;
@@ -2499,6 +2543,124 @@
 }
 .map-search-container .map-container .result-list .result-item:last-child {
   border-bottom: 1px solid #EEE;
+}
+.map-search-container .map-info-modal {
+  position: relative;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+}
+.map-search-container .map-info-modal::before, .map-search-container .map-info-modal::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+}
+.map-search-container .map-info-modal::before {
+  bottom: -13px;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-top: 13px solid #999;
+}
+.map-search-container .map-info-modal::after {
+  bottom: -12px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid #fff;
+}
+.map-search-container .map-info-modal .modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+}
+.map-search-container .map-info-modal .modal-content {
+  padding: 10px 13px 12px;
+}
+.map-search-container .map-info-modal .modal-title {
+  display: block;
+  margin: 0;
+  padding-right: 34px;
+  font-size: 19px;
+  line-height: 1.2;
+  font-weight: bold;
+  letter-spacing: -0.48px;
+  word-break: keep-all;
+}
+.map-search-container .map-info-modal .modal-address {
+  font-size: 15px;
+  color: #666;
+  word-break: keep-all;
+}
+.map-search-container .map-info-modal .modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+.map-search-container .map-info-modal .modal-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 45px;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+  white-space: nowrap;
+  border: 1px solid #d8edfc;
+  background-color: #e7f4fe;
+}
+.map-search-container .map-info-modal .badge-blue {
+  background-color: #e7f4fe;
+  border-color: #d8edfc;
+  color: #0463ab;
+}
+.map-search-container .map-info-modal .badge-red {
+  background-color: #fdefec;
+  border-color: #fce2dd;
+  color: #be2f13;
+}
+.map-search-container .map-info-modal .badge-green {
+  background-color: #eaf6ec;
+  border-color: #dbefdf;
+  color: #287439;
+}
+.map-search-container .map-info-modal .modal-detail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 24px;
+  padding: 0 10px;
+  border: 1px solid #a2afc7;
+  border-radius: 12px;
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+.map-search-container .map-info-modal .modal-detail .ico {
+  margin-top: -1px;
+  width: 5px;
+  height: 9px;
+  background-image: url(../images/archive/ico-detail-arrow.png);
+}
+.map-search-container .map-info-modal .modal-detail:hover {
+  background-color: #EEF2F7;
+}
+.map-search-container .map-info-modal .modal-detail:active {
+  background-color: #D6E0EB;
 }
 
 @media (max-width: 450px) {

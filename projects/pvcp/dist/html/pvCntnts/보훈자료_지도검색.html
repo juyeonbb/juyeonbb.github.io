@@ -518,7 +518,7 @@
         <div class="popup-content">
             <div class="popup-head">
                 <span class="title" id="popupSearch">검색어를 입력해주세요</span>
-                <a class="tip-link" href="javascript:void(0);">검색에 어려움이 있으신가요? <i class="ico ico-search-arrow"></i></a>
+<!--                <a class="tip-link" href="javascript:void(0);">검색에 어려움이 있으신가요? <i class="ico ico-search-arrow"></i></a>-->
                 <button class="btn-popup-close _popupClose" type="button"><i class="ico ico-popup-close"></i><span class="sr-only">닫기</span></button>
             </div>
             <div class="popup-body">
@@ -656,8 +656,8 @@
                                     </div>
                                     <div class="search-sort">
                                         <button type="button" class="btn-sort btn-sort-green"><i class="ico ico-badge-green"></i><span>독립</span></button>
-                                        <button type="button" class="btn-sort btn-sort-blue"><i class="ico ico-badge-blue"></i><span>민주</span></button>
-                                        <button type="button" class="btn-sort btn-sort-red"><i class="ico ico-badge-red"></i><span>호국</span></button>
+                                        <button type="button" class="btn-sort btn-sort-blue active"><i class="ico ico-badge-blue"></i><span>민주</span></button>
+                                        <button type="button" class="btn-sort btn-sort-red active"><i class="ico ico-badge-red"></i><span>호국</span></button>
                                     </div>
                                 </form>
                                 <div class="result-head">
@@ -806,6 +806,31 @@
                             </div>
                         </div>
                     </div>
+                    <div class="map-info-modal" role="dialog" aria-label="지도 정보">
+                        <button type="button" class="modal-close" aria-label="닫기"><i class="ico ico-map-close"></i></button>
+                        <div class="modal-content">
+                            <strong class="modal-title">신간회 음성지회 창립대회지</strong>
+                            <p class="modal-address">세종특별자치시 대평동 용산리 15-3</p>
+                            <div class="modal-footer">
+                                <span class="modal-badge badge-blue">민주</span>
+<!--                                <span class="modal-badge badge-red">호국</span>-->
+<!--                                <span class="modal-badge badge-green">독립</span>-->
+                                <a href="#none" class="modal-detail">
+                                    <span>상세보기</span>
+                                    <i class="ico" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="../../images/archive/ico-pin-green-1.png" alt=""/>
+                    <img src="../../images/archive/ico-pin-green-2.png" alt=""/>
+                    <img src="../../images/archive/ico-pin-green-3.png" alt=""/>
+                    <img src="../../images/archive/ico-pin-blue-1.png" alt=""/>
+                    <img src="../../images/archive/ico-pin-blue-2.png" alt=""/>
+                    <img src="../../images/archive/ico-pin-blue-3.png" alt=""/>
+                    <img src="../../images/archive/ico-pin-red-1.png" alt=""/>
+                    <img src="../../images/archive/ico-pin-red-2.png" alt=""/>
+                    <img src="../../images/archive/ico-pin-red-3.png" alt=""/>
                 </div>
             </div>
         </div>
@@ -887,6 +912,11 @@
             const isFolded = $panel.hasClass('is-folded');
 
             setFoldState($panel, !isFolded);
+        });
+
+        // btn-sort 클래스 토글 이벤트
+        $(document).on('click', '.search-sort .btn-sort', function () {
+            $(this).toggleClass('active');
         });
 
     })(jQuery);
