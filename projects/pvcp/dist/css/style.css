@@ -5603,19 +5603,21 @@ div.pswp__img--placeholder,
   border-radius: 10px;
   border: solid 1px #dfdfdf;
   background-color: #fff;
-  padding: 16px;
   max-height: 580px;
   transition: 0.2s;
+  padding-bottom: 16px;
 }
 .popup-video-content .ai-subtitle .ai-sub-title-content {
   max-height: 512.5px;
   overflow-y: auto;
+  padding: 0 0 0 16px;
 }
 .popup-video-content .ai-subtitle .ai-subtitle-title {
   font-size: 17px;
   font-weight: bold;
   letter-spacing: -0.43px;
   margin-bottom: 10px;
+  padding: 16px 16px 0;
 }
 .popup-video-content .ai-subtitle .ai-sub-title-content {
   font-size: 15px;

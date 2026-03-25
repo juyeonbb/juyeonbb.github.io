@@ -1720,6 +1720,11 @@
 .archive-container .detail-content .photo-slider-wrapper .photo-slider .swiper-slide:only-child .img {
   width: 426px;
 }
+.archive-container .detail-content .info-list-wrap {
+  width: 360px;
+  flex-shrink: 0;
+  min-width: 0;
+}
 .archive-container .detail-content .info-list .row {
   display: flex;
   border-top: 1px dashed #e3e7ee;
@@ -3858,6 +3863,9 @@
 }
 .user-guide-container .view-detail .view-body {
   padding: 30px 20px 0;
+}
+.user-guide-container .view-detail .view-body .view-description {
+  min-height: 400px;
 }
 .user-guide-container .view-detail .post-nav {
   border-top: 1px solid #EEE;
