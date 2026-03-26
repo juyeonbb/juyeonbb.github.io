@@ -122,6 +122,11 @@ data.common = {
         },
         {
             stateClass: 'complete',
+            url: 'com/숏츠플레이어',
+            page: '숏츠 플레이어 팝업'
+        },
+        {
+            stateClass: 'complete',
             url: 'com/통합검색',
             page: '통합검색 팝업'
         },
