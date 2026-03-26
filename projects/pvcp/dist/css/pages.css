@@ -3861,6 +3861,26 @@
   letter-spacing: -0.68px;
   color: #666;
 }
+.user-guide-container .view-detail .view-part {
+  border-bottom: 1px solid #EEE;
+  padding: 11.75px 20px;
+}
+.user-guide-container .view-detail .view-part dl {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.user-guide-container .view-detail .view-part dl dt {
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: -0.85px;
+}
+.user-guide-container .view-detail .view-part dl dd {
+  font-size: 17px;
+  letter-spacing: -0.85px;
+  color: #444;
+}
 .user-guide-container .view-detail .view-body {
   padding: 30px 20px 0;
 }

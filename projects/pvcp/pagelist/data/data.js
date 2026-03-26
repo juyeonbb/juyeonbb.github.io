@@ -419,8 +419,8 @@ data.info = {
         },
         {
             stateClass: 'complete',
-            url: 'prtlInt/종합포털소개_공지사항_상세',
-            page: '보도자료 상세(공지사항 상세와 동일)'
+            url: 'prtlInt/종합포털소개_보도자료_상세',
+            page: '보도자료 상세'
         },
         {
             stateClass: 'complete',
