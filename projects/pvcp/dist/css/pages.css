@@ -493,6 +493,16 @@
 .main-contents .section-education .section-body {
   position: relative;
 }
+.main-contents .section-education::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 145px;
+  width: 223px;
+  height: 148px;
+  background-image: url(../images/main/bg-section-deco.png);
+  background-size: cover;
+}
 .main-contents .section-meta {
   position: relative;
   padding: 50px 0;
