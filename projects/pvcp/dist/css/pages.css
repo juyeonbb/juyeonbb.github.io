@@ -502,7 +502,9 @@
   position: absolute;
   z-index: 0;
   left: 0;
-  width: 80%;
+  min-width: 1450px;
+  width: calc(100vw - 150px);
+  max-width: 2500px;
   top: 50%;
   height: 100%;
   transform: translateY(-50%);
