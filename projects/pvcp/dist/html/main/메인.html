@@ -650,7 +650,10 @@
                     <div class="slider-control">
                         <button type="button" class="btn-nav btn-prev"><img src="../../images/archive/slider-prev.png" alt="prev"/></button>
                         <button type="button" class="btn-nav btn-next"><img src="../../images/archive/slider-next.png" alt="next"/></button>
-                        <div class="page-num"></div>
+                        <div class="control"> <!-- 추가 -->
+                            <div class="page-num"></div>
+                            <button class="btn-slide-state _btnEventSlideState" type="button"><i class="ico ico-slider-paused-white"></i><span class="sr-only">멈춤</span></button>
+                        </div>
                     </div>
 <!--                    <div class="slider-controls">-->
 <!--                        <button class="btn-arrow-prev" type="button"><i class="ico ico-prev-white"></i><span class="sr-only">이전</span></button>-->
@@ -712,6 +715,16 @@
                     //     }
                     // },
                 });
+
+                $('.section-visual ._btnEventSlideState').on('click', function () {
+                    if (!$(this).hasClass('paused')) {
+                        bannerSlider.autoplay.pause();
+                        $(this).addClass('paused').html(`<i class="ico ico-slider-play-white"></i><span class="sr-only">재생</span>`);
+                    } else {
+                        bannerSlider.autoplay.resume();
+                        $(this).removeClass('paused').html(`<i class="ico ico-slider-paused-white"></i><span class="sr-only">멈춤</span>`);
+                    }
+                })
             </script>
             <!-- e 보훈 문화 통합검색 서비스 -->
 

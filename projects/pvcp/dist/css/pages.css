@@ -223,22 +223,30 @@
   width: 100%;
   height: 100%;
 }
+.main-contents .section-visual .box-banner .slider-control .control {
+  display: inline-flex;
+  align-items: center;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0 20px;
+  margin: 0 0 0 15px;
+}
+.main-contents .section-visual .box-banner .slider-control .control .btn-slide-state {
+  margin-left: 10px;
+}
 .main-contents .section-visual .box-banner .slider-control .page-num {
   display: inline-flex;
   align-items: center;
   width: auto;
   height: 30px;
-  right: 30px;
-  bottom: 30px;
   top: auto;
   left: auto;
-  border-radius: 100px;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 0 20px;
   z-index: 1;
   font-size: 15px;
   letter-spacing: -0.6px;
-  margin: 0 0 0 15px;
+  margin: 0;
 }
 .main-contents .section-visual .box-banner .slider-control .page-num .current {
   color: #fff;
@@ -1094,7 +1102,6 @@
   }
   .main-contents .section-meta .box-map .map .btn-marker {
     font-size: 2.42vw;
-    letter-spacing: -0.1 0.21vw;
     padding: 0.76vw 2.27vw;
     line-height: 3.64vw;
     border-radius: 0.91vw;
@@ -3151,7 +3158,11 @@
   box-shadow: 0 4px 10px 0 rgba(0, 54, 117, 0.1);
   overflow: hidden;
 }
-.exhibition-container .exhibition-main .event-exhibit-overview .highlight-area .title {
+.exhibition-container .exhibition-main .event-exhibit-overview .highlight-area > .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
   text-align: center;
   background-color: #003675;
   color: #fff;
@@ -3161,6 +3172,13 @@
   font-weight: bold;
   letter-spacing: -0.96px;
   padding: 0 10px;
+}
+.exhibition-container .exhibition-main .event-exhibit-overview .highlight-area > .title .btn-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
 }
 .exhibition-container .exhibition-main .event-exhibit-overview .highlight-area .event-list {
   display: flex;
@@ -3354,13 +3372,16 @@
   flex: 1;
   flex-shrink: 0;
   min-width: 0;
-  margin-top: 46px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px 0 rgba(0, 54, 117, 0.1);
   overflow: hidden;
 }
-.exhibition-container .exhibition-sub .event-exhibit-overview .highlight-area .title {
+.exhibition-container .exhibition-sub .event-exhibit-overview .highlight-area > .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
   text-align: center;
   background-color: #003675;
   color: #fff;
@@ -3370,6 +3391,13 @@
   font-weight: bold;
   letter-spacing: -0.96px;
   padding: 0 10px;
+}
+.exhibition-container .exhibition-sub .event-exhibit-overview .highlight-area > .title .btn-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
 }
 .exhibition-container .exhibition-sub .event-exhibit-overview .event-list {
   display: flex;
@@ -3450,6 +3478,35 @@
   font-size: 13px;
   letter-spacing: -0.52px;
   color: #666;
+}
+.exhibition-container .exhibition-sub .event-exhibit-overview .event-list .event-item .btn-prev, .exhibition-container .exhibition-sub .event-exhibit-overview .event-list .event-item .btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.exhibition-container .exhibition-sub .event-exhibit-overview .event-list .event-item .btn-prev {
+  left: 0;
+}
+.exhibition-container .exhibition-sub .event-exhibit-overview .event-list .event-item .btn-next {
+  right: 0;
+}
+.exhibition-container .exhibition-sub .event-exhibit-overview .event-list .event-item .video-container {
+  position: relative;
+  display: none;
+  margin-top: 20px;
+  padding: 0 50px;
+}
+.exhibition-container .exhibition-sub .event-exhibit-overview .event-list .event-item .video-container .video-list {
+  display: flex;
+  gap: normal;
+  grid-template: none;
+}
+.exhibition-container .exhibition-sub .event-exhibit-overview .event-list .event-item.is-active .video-container {
+  display: block;
+}
+.exhibition-container .exhibition-sub .event-exhibit-overview .event-list .event-item.is-active .event-card {
+  outline: 2px solid #2462d6;
+  border-color: transparent;
 }
 .exhibition-container .exhibition-detail {
   border-top: 1px solid #666;
@@ -4092,6 +4149,11 @@
   padding: 20px;
   border-radius: 6px;
   min-height: 120px;
+}
+.user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item .chapter-link:focus {
+  outline: 4px dashed #2462D6;
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 .user-guide-container .intro-view .chapter-nav .chapter-list .chapter-item .chapter-label {
   display: inline-flex;

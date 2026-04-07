@@ -1367,16 +1367,28 @@ button.swiper-pagination-bullet {
   width: 14px;
   height: 14px;
   background-color: currentColor;
-  -webkit-mask: url(../images/common/ico-external-black.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-external-black.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-external-black.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-external-black.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .ico-go-blue {
   width: 24px;
   height: 24px;
   background-color: currentColor;
-  -webkit-mask: url(../images/common/ico-go-blue.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-go-blue.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-go-blue.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-go-blue.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 *:hover > .ico-external {
@@ -1466,32 +1478,56 @@ button.swiper-pagination-bullet {
   width: 19px;
   height: 19px;
   background-color: #1d1d1d;
-  -webkit-mask: url(../images/common/ico-kakao.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-kakao.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-kakao.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-kakao.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .ico-url {
   width: 19px;
   height: 19px;
   background-color: #1d1d1d;
-  -webkit-mask: url(../images/common/ico-url.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-url.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-url.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-url.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .ico-facebook {
   width: 19px;
   height: 19px;
   background-color: #1d1d1d;
-  -webkit-mask: url(../images/common/ico-facebook-sm.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-facebook-sm.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-facebook-sm.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-facebook-sm.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .ico-x {
   width: 19px;
   height: 19px;
   background-color: #1d1d1d;
-  -webkit-mask: url(../images/common/ico-x-sm.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-x-sm.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-x-sm.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-x-sm.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .item-link:hover .ico-kakao {
@@ -1517,24 +1553,42 @@ button.swiper-pagination-bullet {
   width: 8px;
   height: 11px;
   background-color: currentColor;
-  -webkit-mask: url(../images/common/ico-arrow-right.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-arrow-right.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-arrow-right.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-arrow-right.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .ico-download {
   width: 15px;
   height: 15px;
   background-color: currentColor;
-  -webkit-mask: url(../images/common/ico-download.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-download.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-download.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-download.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .ico-popup-close {
   width: 24px;
   height: 24px;
   background-color: currentColor;
-  -webkit-mask: url(../images/common/ico-popup-close.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-popup-close.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-popup-close.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-popup-close.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .ico-flag-1 {
@@ -1571,24 +1625,42 @@ button.swiper-pagination-bullet {
   width: 19px;
   height: 18px;
   background-color: currentColor;
-  -webkit-mask: url(../images/common/ico-attach.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-attach.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-attach.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-attach.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .ico-open-new {
   width: 18px;
   height: 18px;
   background-color: currentColor;
-  -webkit-mask: url(../images/common/ico-open-new.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-open-new.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-open-new.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-open-new.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .ico-arrow-right-white {
   width: 24px;
   height: 24px;
   background-color: currentColor;
-  -webkit-mask: url(../images/event/arrow-right.svg) no-repeat center/contain;
-  mask: url(../images/event/arrow-right.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/event/arrow-right.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/event/arrow-right.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .ico-pdf {
@@ -1631,8 +1703,14 @@ button.swiper-pagination-bullet {
   width: 20px;
   height: 20px;
   background-color: currentColor;
-  -webkit-mask: url(../images/common/ico-arrow-search.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-arrow-search.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-arrow-search.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-arrow-search.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .ico-xls {
@@ -1693,6 +1771,18 @@ button.swiper-pagination-bullet {
   width: 24px;
   height: 24px;
   background-image: url(../images/archive/ico-arrow-up.svg);
+}
+
+.ico-btn-left {
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/event/btn-left.svg);
+}
+
+.ico-btn-right {
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/event/btn-right.svg);
 }
 
 /*
@@ -1992,8 +2082,14 @@ body {
   background-color: #cdd1d5;
 }
 .header .main-menu .sub-menu .depth2 .depth2-item.is-active .depth2-link:not(:only-child)::after {
-  -webkit-mask: url(../images/common/ico-gnb-minus.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-gnb-minus.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-gnb-minus.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-gnb-minus.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 .header .main-menu .sub-menu .depth2 .depth2-item.is-active .depth2-link:not(:only-child):hover::after {
   background-color: #2462D6;
@@ -2033,8 +2129,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #222;
-  -webkit-mask: url(../images/common/ico-gnb-plus.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-gnb-plus.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-gnb-plus.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-gnb-plus.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
   margin-left: 6px;
   transform: translateY(-2px);
   transition: 0.2s;
@@ -4363,8 +4465,14 @@ textarea.form-input:disabled {
   width: 14px;
   height: 12px;
   background-color: transparent;
-  -webkit-mask: url(../images/common/ico-check.svg) no-repeat center/contain;
-  mask: url(../images/common/ico-check.svg) no-repeat center/contain;
+  -webkit-mask-image: url(../images/common/ico-check.svg);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-image: url(../images/common/ico-check.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
   top: 4px;
   left: 3px;
   background-repeat: no-repeat;
