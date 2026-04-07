@@ -489,23 +489,9 @@
 .main-contents .section-education {
   position: relative;
   padding: 50px 0;
-  background-image: url(../images/main/bg-section-edu.png);
-  background-size: 1800px 440px;
-  background-repeat: no-repeat;
-  background-position: right top;
 }
 .main-contents .section-education .section-body {
   position: relative;
-}
-.main-contents .section-education::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 145px;
-  width: 223px;
-  height: 148px;
-  background-image: url(../images/main/bg-section-deco.png);
-  background-size: cover;
 }
 .main-contents .section-meta {
   position: relative;
@@ -516,13 +502,16 @@
   position: absolute;
   z-index: 0;
   left: 0;
-  top: 0;
-  width: 1600px;
-  height: 500px;
-  background-image: url(../images/main/bg-meta.png);
-  background-size: cover;
+  width: 80%;
+  top: 50%;
+  height: 100%;
+  transform: translateY(-50%);
+  background-position: left center;
+  background-size: 290px 315px;
+  background-image: url(../images/main/deco-meta-pc.png);
   background-repeat: no-repeat;
-  background-position: left top;
+  background-color: #f1fafb;
+  border-radius: 0 0 100px 0;
 }
 .main-contents .section-meta .row {
   display: flex;
