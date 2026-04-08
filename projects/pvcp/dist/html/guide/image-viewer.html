@@ -346,9 +346,12 @@
 
                     el.innerHTML = `
                 <div class="pswp__custom-info">
-                  <div class="badges">${badgesHtml}</div>
-                  <h2 class="title">${data.title ?? ''}</h2>
-                  <p class="desc">${data.desc ?? ''}</p>
+                  <div class="info">
+                    <div class="badges">${badgesHtml}</div>
+                    <h2 class="title">${data.title ?? ''}</h2>
+                    <p class="desc">${data.desc ?? ''}</p>
+                 </div>
+                 <div class="mark"><img src="../../images/common/mark-ko.gif" alt="" /></div>
                 </div>
             `;
                 };
